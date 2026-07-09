@@ -1,0 +1,519 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "id": "case-01",
+    "estimatedTime": "18 min",
+    "urgency": "Emergency",
+    "status": "in-progress",
+    "score": null,
+    "chiefComplaint": "My jaw is swollen, and it is getting hard to breathe comfortably."
+  },
+  "patient": {
+    "name": "Amara Johnson",
+    "age": 34,
+    "sex": "Female"
+  },
+  "assets": {
+    "rest": "/patients/case-01/rest.png",
+    "talking": "/patients/case-01/talking.mp4",
+    "examinations": [
+      {
+        "id": "examination-01",
+        "title": "Examination 1",
+        "image": "/patients/case-01/examination/examination-01.jpg",
+        "description": "Extraoral swelling assessment."
+      },
+      {
+        "id": "examination-02",
+        "title": "Examination 2",
+        "image": "/patients/case-01/examination/examination-02.jpg",
+        "description": "Intraoral examination image."
+      }
+    ]
+  },
+  "conversation": {
+    "openingGreeting": "Hello, doctor.",
+    "scripted": [
+      {
+        "id": "greeting-1",
+        "intent": "greeting",
+        "triggers": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon"
+        ],
+        "response": "Hello, doctor.",
+        "requiredFactsCovered": [],
+        "checklistItemId": "greeting"
+      },
+      {
+        "id": "chief_complaint-2",
+        "intent": "chief_complaint",
+        "triggers": [
+          "what brings",
+          "why are you here",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "I'm having pain and swelling on the lower right side.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "chief_complaint-3",
+        "intent": "chief_complaint",
+        "triggers": [
+          "why are you here",
+          "what brings",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "I'm having pain and swelling on the lower right side.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "duration-4",
+        "intent": "duration",
+        "triggers": [
+          "how long",
+          "duration",
+          "how many days",
+          "how many weeks",
+          "for how long"
+        ],
+        "response": "About three days ago.",
+        "requiredFactsCovered": [
+          "duration"
+        ],
+        "checklistItemId": "duration"
+      },
+      {
+        "id": "onset-5",
+        "intent": "onset",
+        "triggers": [
+          "when did it start",
+          "when started",
+          "onset",
+          "first notice",
+          "begin"
+        ],
+        "response": "About three days ago.",
+        "requiredFactsCovered": [
+          "onset"
+        ],
+        "checklistItemId": "onset"
+      },
+      {
+        "id": "airway-6",
+        "intent": "airway",
+        "triggers": [
+          "breathing",
+          "swallow",
+          "swallowing",
+          "lying flat",
+          "airway",
+          "trouble breathing",
+          "trouble swallowing"
+        ],
+        "response": "It feels uncomfortable to breathe, especially when I lie back.",
+        "requiredFactsCovered": [
+          "airway"
+        ],
+        "checklistItemId": "airway"
+      },
+      {
+        "id": "airway-7",
+        "intent": "airway",
+        "triggers": [
+          "swallow",
+          "breathing",
+          "swallowing",
+          "lying flat",
+          "airway",
+          "trouble breathing",
+          "trouble swallowing"
+        ],
+        "response": "Swallowing hurts, and the swelling feels tight under my jaw.",
+        "requiredFactsCovered": [
+          "airway"
+        ],
+        "checklistItemId": "airway"
+      },
+      {
+        "id": "systemic_symptoms-8",
+        "intent": "systemic_symptoms",
+        "triggers": [
+          "fever",
+          "chills",
+          "temperature",
+          "systemic",
+          "feel sick"
+        ],
+        "response": "I have had chills, but I have not checked my temperature.",
+        "requiredFactsCovered": [
+          "systemic_symptoms"
+        ],
+        "checklistItemId": "systemic-symptoms"
+      },
+      {
+        "id": "pain_character-9",
+        "intent": "pain_character",
+        "triggers": [
+          "pain",
+          "hurt",
+          "ache",
+          "severity",
+          "scale",
+          "rate"
+        ],
+        "response": "The pain is sharp and constant, around an eight out of ten.",
+        "requiredFactsCovered": [
+          "pain_character"
+        ],
+        "checklistItemId": "pain-character"
+      },
+      {
+        "id": "medications-10",
+        "intent": "medications",
+        "triggers": [
+          "medication",
+          "medicine",
+          "ibuprofen",
+          "acetaminophen",
+          "painkiller",
+          "antibiotic",
+          "taken"
+        ],
+        "response": "Ibuprofen helped a little at first, but it is not helping much now.",
+        "requiredFactsCovered": [
+          "medications"
+        ],
+        "checklistItemId": "medications"
+      },
+      {
+        "id": "allergies-11",
+        "intent": "allergies",
+        "triggers": [
+          "allerg",
+          "allergy",
+          "allergies",
+          "penicillin"
+        ],
+        "response": "I do not have any medication allergies that I know of.",
+        "requiredFactsCovered": [
+          "allergies"
+        ],
+        "checklistItemId": "allergies"
+      },
+      {
+        "id": "trismus-12",
+        "intent": "trismus",
+        "triggers": [
+          "open",
+          "mouth opening",
+          "trismus",
+          "jaw opening"
+        ],
+        "response": "Opening my mouth all the way is difficult.",
+        "requiredFactsCovered": [
+          "trismus"
+        ],
+        "checklistItemId": "trismus"
+      },
+      {
+        "id": "examination-findings",
+        "intent": "examination",
+        "triggers": [
+          "examination",
+          "exam",
+          "look",
+          "see",
+          "image",
+          "xray",
+          "x-ray",
+          "radiograph",
+          "clinical findings",
+          "findings"
+        ],
+        "response": "Visible lower facial and submandibular swelling on the right side.",
+        "requiredFactsCovered": [
+          "examinationFindings"
+        ],
+        "checklistItemId": "examination-findings"
+      },
+      {
+        "id": "direct-diagnosis",
+        "intent": "diagnosis",
+        "triggers": [
+          "diagnosis",
+          "diagnose",
+          "what is it",
+          "what do you think it is",
+          "differential",
+          "impression"
+        ],
+        "response": "The working diagnosis is Odontogenic infection with concern for deep space involvement.",
+        "requiredFactsCovered": [
+          "diagnosis"
+        ],
+        "checklistItemId": "diagnosis"
+      }
+    ]
+  },
+  "patientChecklist": [
+    {
+      "id": "greeting",
+      "label": "Opened the encounter respectfully",
+      "triggers": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "chief-complaint",
+      "label": "Asked what brought the patient in",
+      "triggers": [
+        "what brings",
+        "why are you here",
+        "main problem",
+        "chief complaint",
+        "what is bothering you"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "duration",
+      "label": "Asked how long symptoms have been present",
+      "triggers": [
+        "how long",
+        "duration",
+        "how many days",
+        "how many weeks",
+        "for how long"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "onset",
+      "label": "Asked when symptoms started",
+      "triggers": [
+        "when did it start",
+        "when started",
+        "onset",
+        "first notice",
+        "begin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "airway",
+      "label": "Asked about airway, breathing, swallowing, or lying flat",
+      "triggers": [
+        "breathing",
+        "swallow",
+        "swallowing",
+        "lying flat",
+        "airway",
+        "trouble breathing",
+        "trouble swallowing"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "systemic-symptoms",
+      "label": "Asked about fever, chills, or systemic symptoms",
+      "triggers": [
+        "fever",
+        "chills",
+        "temperature",
+        "systemic",
+        "feel sick"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pain-character",
+      "label": "Asked about pain severity or character",
+      "triggers": [
+        "pain",
+        "hurt",
+        "ache",
+        "severity",
+        "scale",
+        "rate"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medications",
+      "label": "Asked about home medications or pain relief tried",
+      "triggers": [
+        "medication",
+        "medicine",
+        "ibuprofen",
+        "acetaminophen",
+        "painkiller",
+        "antibiotic",
+        "taken"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "allergies",
+      "label": "Asked about medication allergies",
+      "triggers": [
+        "allerg",
+        "allergy",
+        "allergies",
+        "penicillin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "trismus",
+      "label": "Asked about mouth opening limitation",
+      "triggers": [
+        "open",
+        "mouth opening",
+        "trismus",
+        "jaw opening"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "examination-findings",
+      "label": "Reviewed available examination findings",
+      "triggers": [
+        "examination",
+        "exam",
+        "look",
+        "see",
+        "image",
+        "xray",
+        "x-ray",
+        "radiograph",
+        "clinical findings",
+        "findings"
+      ],
+      "weight": 1
+    }
+  ],
+  "clinicalChecklist": [
+    {
+      "id": "clinical-1",
+      "label": "Assesses airway, breathing, swallowing, and ability to lie flat",
+      "weight": 3
+    },
+    {
+      "id": "clinical-2",
+      "label": "Clarifies onset, duration, progression, and severity of swelling",
+      "weight": 2
+    },
+    {
+      "id": "clinical-3",
+      "label": "Asks about fever/chills and systemic illness",
+      "weight": 2
+    },
+    {
+      "id": "clinical-4",
+      "label": "Reviews analgesic use, antibiotics, and allergies",
+      "weight": 2
+    },
+    {
+      "id": "clinical-5",
+      "label": "Recognizes emergency referral risk for deep space infection",
+      "weight": 3
+    }
+  ],
+  "supportingInfo": {
+    "history": {
+      "onset": "The swelling became noticeable yesterday evening.",
+      "duration": "The pain started about three days ago.",
+      "pain": "Sharp, constant lower-right jaw pain rated eight out of ten.",
+      "medications": "Ibuprofen helped briefly but is no longer helping much.",
+      "allergies": "No known medication allergies.",
+      "medicalHistory": "Reports chills and discomfort breathing when lying back.",
+      "dentalHistory": "Had a filling on the lower right side a few years ago.",
+      "socialHistory": "Can drink small sips but chewing is too painful."
+    },
+    "hpiFacts": [
+      "Lower-right jaw pain began about three days ago.",
+      "Swelling became noticeably worse yesterday evening.",
+      "Pain is sharp, constant, and rated 8/10.",
+      "Swallowing is painful.",
+      "Breathing feels uncomfortable when lying back.",
+      "Ibuprofen provided only brief relief.",
+      "Mouth opening is limited."
+    ],
+    "redFlags": [
+      "Breathing discomfort when supine",
+      "Painful swallowing",
+      "Rapidly progressive submandibular swelling",
+      "Chills/systemic symptoms",
+      "Trismus/limited mouth opening"
+    ],
+    "examinationFindings": [
+      "Visible lower facial and submandibular swelling on the right side.",
+      "Tenderness over the lower right posterior region.",
+      "Limited opening reported by patient.",
+      "Intraoral image supports odontogenic source assessment."
+    ],
+    "expectedQuestions": [
+      "When did the pain and swelling begin?",
+      "Has the swelling changed or spread?",
+      "Are you having trouble breathing, swallowing, or lying flat?",
+      "Do you have fever or chills?",
+      "Can you open your mouth normally?",
+      "What medications have you taken?",
+      "Do you have medication allergies?",
+      "Any recent dental work or problems on that tooth?"
+    ],
+    "diagnosis": "Odontogenic infection with concern for deep space involvement.",
+    "differentialDiagnosis": [
+      "Ludwig angina/deep neck space infection",
+      "Acute apical abscess",
+      "Pericoronitis with fascial space spread",
+      "Cellulitis of odontogenic origin"
+    ],
+    "managementExpectations": [
+      "Treat airway compromise risk as urgent/emergent.",
+      "Refer for emergency evaluation/oral surgery when red flags are present.",
+      "Avoid definitive dental treatment until airway and infection risk are stabilized.",
+      "Document red flags, allergies, medications, and escalation rationale."
+    ],
+    "learningObjectives": [
+      "Identify red flags for spreading odontogenic infection.",
+      "Prioritize airway and emergency referral concerns.",
+      "Elicit onset, progression, systemic symptoms, and medication history."
+    ],
+    "reportData": {
+      "keyFindings": [
+        "Progressive swelling",
+        "Supine breathing discomfort",
+        "Painful swallowing",
+        "Trismus concern"
+      ],
+      "criticalMisses": [
+        "Failure to ask airway or swallowing questions",
+        "Treating as routine dental pain"
+      ],
+      "idealSummary": "Patient presents with progressive lower-right odontogenic infection symptoms and airway-related red flags requiring urgent escalation."
+    },
+    "evaluation": {
+      "patientChecklistWeight": 0.6,
+      "clinicalChecklistWeight": 0.4,
+      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
+    }
+  }
+}

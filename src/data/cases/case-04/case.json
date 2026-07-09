@@ -1,0 +1,627 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "id": "case-04",
+    "estimatedTime": "12 min",
+    "urgency": "Routine",
+    "status": "completed",
+    "score": 72,
+    "chiefComplaint": "It really hurts when I bite down, but my face does not look swollen."
+  },
+  "patient": {
+    "name": "Noah Patel",
+    "age": 38,
+    "sex": "Male"
+  },
+  "assets": {
+    "rest": "/patients/case-04/rest.png",
+    "talking": "/patients/case-04/talking.mp4",
+    "examinations": [
+      {
+        "id": "examination-01",
+        "title": "Examination 1",
+        "image": "/patients/case-04/examination/examination-01.png",
+        "description": "Bite-related pain examination image."
+      }
+    ]
+  },
+  "conversation": {
+    "openingGreeting": "Hello.",
+    "scripted": [
+      {
+        "id": "greeting-1",
+        "intent": "greeting",
+        "triggers": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon"
+        ],
+        "response": "Hello.",
+        "requiredFactsCovered": [],
+        "checklistItemId": "greeting"
+      },
+      {
+        "id": "chief_complaint-2",
+        "intent": "chief_complaint",
+        "triggers": [
+          "what brings",
+          "why are you here",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "It hurts when I bite down, but my face is not swollen.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "chief_complaint-3",
+        "intent": "chief_complaint",
+        "triggers": [
+          "why are you here",
+          "what brings",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "It hurts when I bite down, but my face is not swollen.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "duration-4",
+        "intent": "duration",
+        "triggers": [
+          "how long",
+          "duration",
+          "how many days",
+          "how many weeks",
+          "for how long"
+        ],
+        "response": "It started after I bit something hard last week.",
+        "requiredFactsCovered": [
+          "duration"
+        ],
+        "checklistItemId": "duration"
+      },
+      {
+        "id": "onset-5",
+        "intent": "onset",
+        "triggers": [
+          "when did it start",
+          "when started",
+          "onset",
+          "first notice",
+          "begin"
+        ],
+        "response": "It started after I bit something hard last week.",
+        "requiredFactsCovered": [
+          "onset"
+        ],
+        "checklistItemId": "onset"
+      },
+      {
+        "id": "biting_pain-6",
+        "intent": "biting_pain",
+        "triggers": [
+          "bite",
+          "biting",
+          "chew",
+          "chewing",
+          "pressure"
+        ],
+        "response": "It is a quick, sharp pain when pressure hits the tooth.",
+        "requiredFactsCovered": [
+          "biting_pain"
+        ],
+        "checklistItemId": "biting-pain"
+      },
+      {
+        "id": "thermal_sensitivity-7",
+        "intent": "thermal_sensitivity",
+        "triggers": [
+          "cold",
+          "hot",
+          "temperature",
+          "sensitive",
+          "sensitivity",
+          "thermal"
+        ],
+        "response": "Cold does not bother it much.",
+        "requiredFactsCovered": [
+          "thermal_sensitivity"
+        ],
+        "checklistItemId": "thermal-sensitivity"
+      },
+      {
+        "id": "swelling-8",
+        "intent": "swelling",
+        "triggers": [
+          "swelling",
+          "swollen",
+          "cheek",
+          "face",
+          "jaw swelling"
+        ],
+        "response": "I do not have fever or swelling.",
+        "requiredFactsCovered": [
+          "swelling"
+        ],
+        "checklistItemId": "swelling"
+      },
+      {
+        "id": "dental_history-9",
+        "intent": "dental_history",
+        "triggers": [
+          "filling",
+          "crown",
+          "dental history",
+          "previous treatment",
+          "cavity"
+        ],
+        "response": "I had a large filling on that tooth years ago.",
+        "requiredFactsCovered": [
+          "dental_history"
+        ],
+        "checklistItemId": "dental-history"
+      },
+      {
+        "id": "bruxism-10",
+        "intent": "bruxism",
+        "triggers": [
+          "grind",
+          "grinding",
+          "clench",
+          "clenching"
+        ],
+        "response": "I do grind my teeth at night sometimes.",
+        "requiredFactsCovered": [
+          "bruxism"
+        ],
+        "checklistItemId": "bruxism"
+      },
+      {
+        "id": "drainage-11",
+        "intent": "drainage",
+        "triggers": [
+          "drainage",
+          "taste",
+          "pus",
+          "bad taste",
+          "discharge"
+        ],
+        "response": "I have not noticed drainage or a bad taste.",
+        "requiredFactsCovered": [
+          "drainage"
+        ],
+        "checklistItemId": "drainage"
+      },
+      {
+        "id": "patient_goals-12",
+        "intent": "patient_goals",
+        "triggers": [
+          "save",
+          "lose the tooth",
+          "goal",
+          "worried"
+        ],
+        "response": "I would like to avoid losing the tooth if possible.",
+        "requiredFactsCovered": [
+          "patient_goals"
+        ],
+        "checklistItemId": "patient-goals"
+      },
+      {
+        "id": "examination-findings",
+        "intent": "examination",
+        "triggers": [
+          "examination",
+          "exam",
+          "look",
+          "see",
+          "image",
+          "xray",
+          "x-ray",
+          "radiograph",
+          "clinical findings",
+          "findings"
+        ],
+        "response": "Bite-related examination image available.",
+        "requiredFactsCovered": [
+          "examinationFindings"
+        ],
+        "checklistItemId": "examination-findings"
+      },
+      {
+        "id": "direct-diagnosis",
+        "intent": "diagnosis",
+        "triggers": [
+          "diagnosis",
+          "diagnose",
+          "what is it",
+          "what do you think it is",
+          "differential",
+          "impression"
+        ],
+        "response": "The working diagnosis is Possible cracked tooth or occlusal trauma.",
+        "requiredFactsCovered": [
+          "diagnosis"
+        ],
+        "checklistItemId": "diagnosis"
+      },
+      {
+        "id": "pain_character-standard",
+        "intent": "pain_character",
+        "triggers": [
+          "pain",
+          "hurt",
+          "ache",
+          "severity",
+          "scale",
+          "rate"
+        ],
+        "response": "Quick, sharp pain when pressure hits one tooth.",
+        "requiredFactsCovered": [
+          "pain"
+        ],
+        "checklistItemId": "pain-character"
+      },
+      {
+        "id": "allergies-standard",
+        "intent": "allergies",
+        "triggers": [
+          "allerg",
+          "allergy",
+          "allergies",
+          "penicillin"
+        ],
+        "response": "No allergy information reported.",
+        "requiredFactsCovered": [
+          "allergies"
+        ],
+        "checklistItemId": "allergies"
+      },
+      {
+        "id": "medications-standard",
+        "intent": "medications",
+        "triggers": [
+          "medication",
+          "medicine",
+          "ibuprofen",
+          "acetaminophen",
+          "painkiller",
+          "antibiotic",
+          "taken"
+        ],
+        "response": "Over-the-counter pain medicine is enough unless chewing there.",
+        "requiredFactsCovered": [
+          "medications"
+        ],
+        "checklistItemId": "medications"
+      },
+      {
+        "id": "systemic_symptoms-standard",
+        "intent": "systemic_symptoms",
+        "triggers": [
+          "fever",
+          "chills",
+          "temperature",
+          "systemic",
+          "feel sick"
+        ],
+        "response": "No fever or swelling reported.",
+        "requiredFactsCovered": [
+          "systemicSymptoms"
+        ],
+        "checklistItemId": "systemic-symptoms"
+      }
+    ]
+  },
+  "patientChecklist": [
+    {
+      "id": "greeting",
+      "label": "Opened the encounter respectfully",
+      "triggers": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "chief-complaint",
+      "label": "Asked what brought the patient in",
+      "triggers": [
+        "what brings",
+        "why are you here",
+        "main problem",
+        "chief complaint",
+        "what is bothering you"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "duration",
+      "label": "Asked how long symptoms have been present",
+      "triggers": [
+        "how long",
+        "duration",
+        "how many days",
+        "how many weeks",
+        "for how long"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "onset",
+      "label": "Asked when symptoms started",
+      "triggers": [
+        "when did it start",
+        "when started",
+        "onset",
+        "first notice",
+        "begin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "biting-pain",
+      "label": "Asked about biting, chewing, or tapping pain",
+      "triggers": [
+        "bite",
+        "biting",
+        "chew",
+        "chewing",
+        "pressure"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "thermal-sensitivity",
+      "label": "Asked about pain with hot or cold",
+      "triggers": [
+        "cold",
+        "hot",
+        "temperature",
+        "sensitive",
+        "sensitivity",
+        "thermal"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "swelling",
+      "label": "Asked about swelling or spread",
+      "triggers": [
+        "swelling",
+        "swollen",
+        "cheek",
+        "face",
+        "jaw swelling"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "dental-history",
+      "label": "Asked about prior dental treatment",
+      "triggers": [
+        "filling",
+        "crown",
+        "dental history",
+        "previous treatment",
+        "cavity"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "bruxism",
+      "label": "Asked about grinding or clenching",
+      "triggers": [
+        "grind",
+        "grinding",
+        "clench",
+        "clenching"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "drainage",
+      "label": "Asked about drainage, pus, or bad taste",
+      "triggers": [
+        "drainage",
+        "taste",
+        "pus",
+        "bad taste",
+        "discharge"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "patient-goals",
+      "label": "Asked about patient goals or desire to save the tooth",
+      "triggers": [
+        "save",
+        "lose the tooth",
+        "goal",
+        "worried"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "examination-findings",
+      "label": "Reviewed available examination findings",
+      "triggers": [
+        "examination",
+        "exam",
+        "look",
+        "see",
+        "image",
+        "xray",
+        "x-ray",
+        "radiograph",
+        "clinical findings",
+        "findings"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pain-character",
+      "label": "Asked about pain severity or character",
+      "triggers": [
+        "pain",
+        "hurt",
+        "ache",
+        "severity",
+        "scale",
+        "rate"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "allergies",
+      "label": "Asked about medication allergies",
+      "triggers": [
+        "allerg",
+        "allergy",
+        "allergies",
+        "penicillin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medications",
+      "label": "Asked about home medications or pain relief tried",
+      "triggers": [
+        "medication",
+        "medicine",
+        "ibuprofen",
+        "acetaminophen",
+        "painkiller",
+        "antibiotic",
+        "taken"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "systemic-symptoms",
+      "label": "Asked about fever, chills, or systemic symptoms",
+      "triggers": [
+        "fever",
+        "chills",
+        "temperature",
+        "systemic",
+        "feel sick"
+      ],
+      "weight": 1
+    }
+  ],
+  "clinicalChecklist": [
+    {
+      "id": "clinical-1",
+      "label": "Characterizes bite-provoked pain pattern",
+      "weight": 3
+    },
+    {
+      "id": "clinical-2",
+      "label": "Screens for infection symptoms despite routine appearance",
+      "weight": 2
+    },
+    {
+      "id": "clinical-3",
+      "label": "Asks about restorations and hard-biting event",
+      "weight": 2
+    },
+    {
+      "id": "clinical-4",
+      "label": "Assesses thermal and spontaneous pain",
+      "weight": 2
+    },
+    {
+      "id": "clinical-5",
+      "label": "Considers cracked tooth/occlusal trauma differential",
+      "weight": 3
+    }
+  ],
+  "supportingInfo": {
+    "history": {
+      "onset": "Pain started after biting something hard last week.",
+      "duration": "Symptoms have been present for about one week.",
+      "pain": "Quick, sharp pain when pressure hits one tooth.",
+      "medications": "Over-the-counter pain medicine is enough unless chewing there.",
+      "allergies": "No allergy information reported.",
+      "medicalHistory": "No fever or swelling reported.",
+      "dentalHistory": "Large filling on that tooth years ago; sometimes grinds teeth.",
+      "socialHistory": "Wants to avoid losing the tooth."
+    },
+    "hpiFacts": [
+      "Pain began after biting something hard last week.",
+      "Pain is quick and sharp with pressure.",
+      "Pain stops when biting pressure stops.",
+      "Cold does not significantly bother the tooth.",
+      "No swelling, fever, drainage, or bad taste.",
+      "Large filling exists on the tooth.",
+      "Patient sometimes grinds teeth at night."
+    ],
+    "redFlags": [
+      "No current infection red flags reported",
+      "Escalation needed if swelling, fever, spontaneous pain, or drainage develops"
+    ],
+    "examinationFindings": [
+      "Bite-related examination image available.",
+      "History localizes pain to one restored tooth.",
+      "Symptoms are pressure-provoked rather than spontaneous.",
+      "No facial swelling reported."
+    ],
+    "expectedQuestions": [
+      "What were you biting when pain started?",
+      "Is pain only on biting or also spontaneous?",
+      "Does cold or heat trigger lingering pain?",
+      "Any swelling, fever, drainage, or bad taste?",
+      "Does the tooth have a filling or crown?",
+      "Do you grind or clench at night?",
+      "Can you localize the pain to one tooth?"
+    ],
+    "diagnosis": "Possible cracked tooth or occlusal trauma.",
+    "differentialDiagnosis": [
+      "Cracked tooth syndrome",
+      "Occlusal trauma/high restoration",
+      "Reversible pulpitis",
+      "Symptomatic apical periodontitis"
+    ],
+    "managementExpectations": [
+      "Perform focused bite testing and restoration assessment.",
+      "Assess pulpal vitality and periapical status.",
+      "Avoid unnecessary infection treatment if red flags are absent.",
+      "Discuss protective restoration or occlusal adjustment depending on findings."
+    ],
+    "learningObjectives": [
+      "Explore bite-provoked pain patterns.",
+      "Differentiate cracked tooth symptoms from acute infection.",
+      "Ask about restorations, parafunction, and localized symptoms."
+    ],
+    "reportData": {
+      "keyFindings": [
+        "Sharp bite pain",
+        "Large restoration",
+        "Bruxism history",
+        "No swelling or fever"
+      ],
+      "criticalMisses": [
+        "Not distinguishing bite pain from infection",
+        "Not asking about restoration or grinding"
+      ],
+      "idealSummary": "Patient has localized pressure-provoked pain most consistent with cracked tooth or occlusal trauma rather than acute infection."
+    },
+    "evaluation": {
+      "patientChecklistWeight": 0.6,
+      "clinicalChecklistWeight": 0.4,
+      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
+    }
+  }
+}

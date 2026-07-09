@@ -1,0 +1,628 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "id": "case-03",
+    "estimatedTime": "15 min",
+    "urgency": "Urgent",
+    "status": "not-started",
+    "score": null,
+    "chiefComplaint": "I cannot chew on this side because the pain and swelling are too much."
+  },
+  "patient": {
+    "name": "Elena Garcia",
+    "age": 52,
+    "sex": "Female"
+  },
+  "assets": {
+    "rest": "/patients/case-03/rest.png",
+    "talking": "/patients/case-03/talking.mp4",
+    "examinations": [
+      {
+        "id": "examination-01",
+        "title": "Examination 1",
+        "image": "/patients/case-03/examination/examination-01.jpg",
+        "description": "Periodontal and swelling assessment image."
+      }
+    ]
+  },
+  "conversation": {
+    "openingGreeting": "Hi, doctor.",
+    "scripted": [
+      {
+        "id": "greeting-1",
+        "intent": "greeting",
+        "triggers": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon"
+        ],
+        "response": "Hi, doctor.",
+        "requiredFactsCovered": [],
+        "checklistItemId": "greeting"
+      },
+      {
+        "id": "chief_complaint-2",
+        "intent": "chief_complaint",
+        "triggers": [
+          "what brings",
+          "why are you here",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "I cannot chew on the left side because the gum is swollen.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "chief_complaint-3",
+        "intent": "chief_complaint",
+        "triggers": [
+          "why are you here",
+          "what brings",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "I cannot chew on the left side because the gum is swollen.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "duration-4",
+        "intent": "duration",
+        "triggers": [
+          "how long",
+          "duration",
+          "how many days",
+          "how many weeks",
+          "for how long"
+        ],
+        "response": "The soreness started about a week ago, and the swelling became obvious two days ago.",
+        "requiredFactsCovered": [
+          "duration"
+        ],
+        "checklistItemId": "duration"
+      },
+      {
+        "id": "onset-5",
+        "intent": "onset",
+        "triggers": [
+          "when did it start",
+          "when started",
+          "onset",
+          "first notice",
+          "begin"
+        ],
+        "response": "It started as soreness about a week ago.",
+        "requiredFactsCovered": [
+          "onset"
+        ],
+        "checklistItemId": "onset"
+      },
+      {
+        "id": "food_trapping-6",
+        "intent": "food_trapping",
+        "triggers": [
+          "food",
+          "trapped",
+          "stuck",
+          "between teeth"
+        ],
+        "response": "Food gets trapped around that back tooth.",
+        "requiredFactsCovered": [
+          "food_trapping"
+        ],
+        "checklistItemId": "food-trapping"
+      },
+      {
+        "id": "biting_pain-7",
+        "intent": "biting_pain",
+        "triggers": [
+          "bite",
+          "biting",
+          "chew",
+          "chewing",
+          "pressure"
+        ],
+        "response": "The pain is worse when I bite down.",
+        "requiredFactsCovered": [
+          "biting_pain"
+        ],
+        "checklistItemId": "biting-pain"
+      },
+      {
+        "id": "medical_history-8",
+        "intent": "medical_history",
+        "triggers": [
+          "diabetes",
+          "medical history",
+          "pregnant",
+          "pregnancy",
+          "health conditions"
+        ],
+        "response": "I have diabetes, and my blood sugar has been higher this week.",
+        "requiredFactsCovered": [
+          "medical_history"
+        ],
+        "checklistItemId": "medical-history"
+      },
+      {
+        "id": "social_history-9",
+        "intent": "social_history",
+        "triggers": [
+          "smoke",
+          "smoking",
+          "tobacco",
+          "alcohol"
+        ],
+        "response": "I do not smoke.",
+        "requiredFactsCovered": [
+          "social_history"
+        ],
+        "checklistItemId": "social-history"
+      },
+      {
+        "id": "periodontal_bleeding-10",
+        "intent": "periodontal_bleeding",
+        "triggers": [
+          "bleed",
+          "bleeding",
+          "gums bleed",
+          "brushing"
+        ],
+        "response": "My gums bleed when I brush that area.",
+        "requiredFactsCovered": [
+          "periodontal_bleeding"
+        ],
+        "checklistItemId": "periodontal-bleeding"
+      },
+      {
+        "id": "mobility-11",
+        "intent": "mobility",
+        "triggers": [
+          "loose",
+          "mobility",
+          "moving",
+          "wiggle"
+        ],
+        "response": "The tooth feels a little loose.",
+        "requiredFactsCovered": [
+          "mobility"
+        ],
+        "checklistItemId": "mobility"
+      },
+      {
+        "id": "airway-12",
+        "intent": "airway",
+        "triggers": [
+          "breathing",
+          "swallow",
+          "swallowing",
+          "lying flat",
+          "airway",
+          "trouble breathing",
+          "trouble swallowing"
+        ],
+        "response": "I do not have trouble breathing or swallowing.",
+        "requiredFactsCovered": [
+          "airway"
+        ],
+        "checklistItemId": "airway"
+      },
+      {
+        "id": "examination-findings",
+        "intent": "examination",
+        "triggers": [
+          "examination",
+          "exam",
+          "look",
+          "see",
+          "image",
+          "xray",
+          "x-ray",
+          "radiograph",
+          "clinical findings",
+          "findings"
+        ],
+        "response": "Periodontal/swelling examination image available.",
+        "requiredFactsCovered": [
+          "examinationFindings"
+        ],
+        "checklistItemId": "examination-findings"
+      },
+      {
+        "id": "direct-diagnosis",
+        "intent": "diagnosis",
+        "triggers": [
+          "diagnosis",
+          "diagnose",
+          "what is it",
+          "what do you think it is",
+          "differential",
+          "impression"
+        ],
+        "response": "The working diagnosis is Periodontal abscess with systemic risk considerations.",
+        "requiredFactsCovered": [
+          "diagnosis"
+        ],
+        "checklistItemId": "diagnosis"
+      },
+      {
+        "id": "pain_character-standard",
+        "intent": "pain_character",
+        "triggers": [
+          "pain",
+          "hurt",
+          "ache",
+          "severity",
+          "scale",
+          "rate"
+        ],
+        "response": "Dull ache most of the day, worse when biting.",
+        "requiredFactsCovered": [
+          "pain"
+        ],
+        "checklistItemId": "pain-character"
+      },
+      {
+        "id": "allergies-standard",
+        "intent": "allergies",
+        "triggers": [
+          "allerg",
+          "allergy",
+          "allergies",
+          "penicillin"
+        ],
+        "response": "No medication allergy provided.",
+        "requiredFactsCovered": [
+          "allergies"
+        ],
+        "checklistItemId": "allergies"
+      },
+      {
+        "id": "medications-standard",
+        "intent": "medications",
+        "triggers": [
+          "medication",
+          "medicine",
+          "ibuprofen",
+          "acetaminophen",
+          "painkiller",
+          "antibiotic",
+          "taken"
+        ],
+        "response": "Warm salt water rinses help briefly.",
+        "requiredFactsCovered": [
+          "medications"
+        ],
+        "checklistItemId": "medications"
+      },
+      {
+        "id": "systemic_symptoms-standard",
+        "intent": "systemic_symptoms",
+        "triggers": [
+          "fever",
+          "chills",
+          "temperature",
+          "systemic",
+          "feel sick"
+        ],
+        "response": "Has diabetes and reports higher blood sugar this week.",
+        "requiredFactsCovered": [
+          "systemicSymptoms"
+        ],
+        "checklistItemId": "systemic-symptoms"
+      }
+    ]
+  },
+  "patientChecklist": [
+    {
+      "id": "greeting",
+      "label": "Opened the encounter respectfully",
+      "triggers": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "chief-complaint",
+      "label": "Asked what brought the patient in",
+      "triggers": [
+        "what brings",
+        "why are you here",
+        "main problem",
+        "chief complaint",
+        "what is bothering you"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "duration",
+      "label": "Asked how long symptoms have been present",
+      "triggers": [
+        "how long",
+        "duration",
+        "how many days",
+        "how many weeks",
+        "for how long"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "onset",
+      "label": "Asked when symptoms started",
+      "triggers": [
+        "when did it start",
+        "when started",
+        "onset",
+        "first notice",
+        "begin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "food-trapping",
+      "label": "Asked about food trapping",
+      "triggers": [
+        "food",
+        "trapped",
+        "stuck",
+        "between teeth"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "biting-pain",
+      "label": "Asked about biting, chewing, or tapping pain",
+      "triggers": [
+        "bite",
+        "biting",
+        "chew",
+        "chewing",
+        "pressure"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medical-history",
+      "label": "Asked about relevant medical history",
+      "triggers": [
+        "diabetes",
+        "medical history",
+        "pregnant",
+        "pregnancy",
+        "health conditions"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "social-history",
+      "label": "Asked about social history",
+      "triggers": [
+        "smoke",
+        "smoking",
+        "tobacco",
+        "alcohol"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "periodontal-bleeding",
+      "label": "Asked about gum bleeding",
+      "triggers": [
+        "bleed",
+        "bleeding",
+        "gums bleed",
+        "brushing"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "mobility",
+      "label": "Asked whether the tooth feels loose",
+      "triggers": [
+        "loose",
+        "mobility",
+        "moving",
+        "wiggle"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "airway",
+      "label": "Asked about airway, breathing, swallowing, or lying flat",
+      "triggers": [
+        "breathing",
+        "swallow",
+        "swallowing",
+        "lying flat",
+        "airway",
+        "trouble breathing",
+        "trouble swallowing"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "examination-findings",
+      "label": "Reviewed available examination findings",
+      "triggers": [
+        "examination",
+        "exam",
+        "look",
+        "see",
+        "image",
+        "xray",
+        "x-ray",
+        "radiograph",
+        "clinical findings",
+        "findings"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pain-character",
+      "label": "Asked about pain severity or character",
+      "triggers": [
+        "pain",
+        "hurt",
+        "ache",
+        "severity",
+        "scale",
+        "rate"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "allergies",
+      "label": "Asked about medication allergies",
+      "triggers": [
+        "allerg",
+        "allergy",
+        "allergies",
+        "penicillin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medications",
+      "label": "Asked about home medications or pain relief tried",
+      "triggers": [
+        "medication",
+        "medicine",
+        "ibuprofen",
+        "acetaminophen",
+        "painkiller",
+        "antibiotic",
+        "taken"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "systemic-symptoms",
+      "label": "Asked about fever, chills, or systemic symptoms",
+      "triggers": [
+        "fever",
+        "chills",
+        "temperature",
+        "systemic",
+        "feel sick"
+      ],
+      "weight": 1
+    }
+  ],
+  "clinicalChecklist": [
+    {
+      "id": "clinical-1",
+      "label": "Explores periodontal symptoms: bleeding, food trapping, mobility",
+      "weight": 3
+    },
+    {
+      "id": "clinical-2",
+      "label": "Identifies diabetes as a risk modifier",
+      "weight": 3
+    },
+    {
+      "id": "clinical-3",
+      "label": "Screens for systemic/spreading infection red flags",
+      "weight": 3
+    },
+    {
+      "id": "clinical-4",
+      "label": "Asks about smoking and oral hygiene contributors",
+      "weight": 1
+    },
+    {
+      "id": "clinical-5",
+      "label": "Differentiates periodontal abscess from pulpal source",
+      "weight": 2
+    }
+  ],
+  "supportingInfo": {
+    "history": {
+      "onset": "Soreness started about a week ago.",
+      "duration": "Swelling became obvious two days ago.",
+      "pain": "Dull ache most of the day, worse when biting.",
+      "medications": "Warm salt water rinses help briefly.",
+      "allergies": "No medication allergy provided.",
+      "medicalHistory": "Has diabetes and reports higher blood sugar this week.",
+      "dentalHistory": "Food gets trapped around the back tooth and gums bleed there.",
+      "socialHistory": "Does not smoke."
+    },
+    "hpiFacts": [
+      "Soreness began about one week ago.",
+      "Swelling became obvious two days ago.",
+      "Pain worsens with biting and chewing.",
+      "Food traps around the back tooth.",
+      "Gums bleed when brushing the area.",
+      "Tooth feels slightly loose.",
+      "Diabetes is present and blood sugar has been higher this week."
+    ],
+    "redFlags": [
+      "Diabetes with suspected infection",
+      "Worsening swelling",
+      "Possible tooth mobility",
+      "Escalation needed if fever, spreading swelling, dysphagia, or dyspnea appears"
+    ],
+    "examinationFindings": [
+      "Periodontal/swelling examination image available.",
+      "History suggests localized periodontal abscess around posterior tooth.",
+      "Bleeding and food trapping suggest periodontal pocket or local irritant.",
+      "No reported breathing or swallowing difficulty."
+    ],
+    "expectedQuestions": [
+      "When did soreness and swelling begin?",
+      "Does food get trapped around the tooth?",
+      "Does the gum bleed or drain?",
+      "Does the tooth feel loose?",
+      "Do you have diabetes and how is your blood sugar?",
+      "Any fever, spreading swelling, breathing, or swallowing problems?",
+      "Do you smoke?",
+      "Have you taken antibiotics or pain medication?"
+    ],
+    "diagnosis": "Periodontal abscess with systemic risk considerations.",
+    "differentialDiagnosis": [
+      "Periodontal abscess",
+      "Acute apical abscess with periodontal drainage",
+      "Pericoronitis",
+      "Vertical root fracture"
+    ],
+    "managementExpectations": [
+      "Assess glycemic control and infection severity.",
+      "Plan periodontal evaluation, drainage/debridement, and source control.",
+      "Escalate if systemic involvement or spreading infection is present.",
+      "Give oral hygiene and follow-up expectations."
+    ],
+    "learningObjectives": [
+      "Connect periodontal symptoms with medical risk factors.",
+      "Ask about diabetes control and infection progression.",
+      "Assess mobility, bleeding, and local irritants."
+    ],
+    "reportData": {
+      "keyFindings": [
+        "Diabetes",
+        "Localized gum swelling",
+        "Food trapping",
+        "Bleeding and mobility"
+      ],
+      "criticalMisses": [
+        "Ignoring diabetes risk",
+        "Not asking periodontal-specific questions"
+      ],
+      "idealSummary": "Patient presentation supports periodontal abscess with diabetes increasing infection risk and follow-up importance."
+    },
+    "evaluation": {
+      "patientChecklistWeight": 0.6,
+      "clinicalChecklistWeight": 0.4,
+      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
+    }
+  }
+}

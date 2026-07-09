@@ -1,0 +1,14 @@
+{
+  "id": "case-01",
+  "name": "Ludwig's Angina",
+  "patientName": "Robert Carter",
+  "age": 52,
+  "urgency": "emergency",
+
+  "assets": {
+    "rest": "/patients/case-01/rest.png",
+    "talking": "/patients/case-01/talking.mp4",
+    "extraoral": "/patients/case-01/examination/extraoral.jpg",
+    "radiograph": "/patients/case-01/examination/radiograph.jpg"
+  }
+}

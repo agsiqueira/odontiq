@@ -1,0 +1,580 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "id": "case-02",
+    "estimatedTime": "16 min",
+    "urgency": "Urgent",
+    "status": "not-started",
+    "score": null,
+    "chiefComplaint": "My tooth pain is intense, and my cheek feels swollen and hot."
+  },
+  "patient": {
+    "name": "Marcus Lee",
+    "age": 41,
+    "sex": "Male"
+  },
+  "assets": {
+    "rest": "/patients/case-02/rest.png",
+    "talking": "/patients/case-02/talking.mp4",
+    "examinations": [
+      {
+        "id": "examination-01",
+        "title": "Examination 1",
+        "image": "/patients/case-02/examination/examination-01.png",
+        "description": "Focused dental examination image."
+      }
+    ]
+  },
+  "conversation": {
+    "openingGreeting": "Hello.",
+    "scripted": [
+      {
+        "id": "greeting-1",
+        "intent": "greeting",
+        "triggers": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon"
+        ],
+        "response": "Hello.",
+        "requiredFactsCovered": [],
+        "checklistItemId": "greeting"
+      },
+      {
+        "id": "chief_complaint-2",
+        "intent": "chief_complaint",
+        "triggers": [
+          "what brings",
+          "why are you here",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "My upper tooth has been throbbing, and my cheek feels hot.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "chief_complaint-3",
+        "intent": "chief_complaint",
+        "triggers": [
+          "why are you here",
+          "what brings",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "My upper tooth has been throbbing, and my cheek feels hot.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "duration-4",
+        "intent": "duration",
+        "triggers": [
+          "how long",
+          "duration",
+          "how many days",
+          "how many weeks",
+          "for how long"
+        ],
+        "response": "It became intense last night.",
+        "requiredFactsCovered": [
+          "duration"
+        ],
+        "checklistItemId": "duration"
+      },
+      {
+        "id": "onset-5",
+        "intent": "onset",
+        "triggers": [
+          "when did it start",
+          "when started",
+          "onset",
+          "first notice",
+          "begin"
+        ],
+        "response": "It became intense last night.",
+        "requiredFactsCovered": [
+          "onset"
+        ],
+        "checklistItemId": "onset"
+      },
+      {
+        "id": "thermal_sensitivity-6",
+        "intent": "thermal_sensitivity",
+        "triggers": [
+          "cold",
+          "hot",
+          "temperature",
+          "sensitive",
+          "sensitivity",
+          "thermal"
+        ],
+        "response": "Cold water makes it ache for a long time.",
+        "requiredFactsCovered": [
+          "thermal_sensitivity"
+        ],
+        "checklistItemId": "thermal-sensitivity"
+      },
+      {
+        "id": "biting_pain-7",
+        "intent": "biting_pain",
+        "triggers": [
+          "bite",
+          "biting",
+          "chew",
+          "chewing",
+          "pressure"
+        ],
+        "response": "Biting on that tooth makes the pain shoot up.",
+        "requiredFactsCovered": [
+          "biting_pain"
+        ],
+        "checklistItemId": "biting-pain"
+      },
+      {
+        "id": "swelling-8",
+        "intent": "swelling",
+        "triggers": [
+          "swelling",
+          "swollen",
+          "cheek",
+          "face",
+          "jaw swelling"
+        ],
+        "response": "My cheek started swelling this morning.",
+        "requiredFactsCovered": [
+          "swelling"
+        ],
+        "checklistItemId": "swelling"
+      },
+      {
+        "id": "drainage-9",
+        "intent": "drainage",
+        "triggers": [
+          "taste",
+          "drainage",
+          "pus",
+          "bad taste",
+          "discharge"
+        ],
+        "response": "I have a bad taste in my mouth sometimes.",
+        "requiredFactsCovered": [
+          "drainage"
+        ],
+        "checklistItemId": "drainage"
+      },
+      {
+        "id": "medications-10",
+        "intent": "medications",
+        "triggers": [
+          "medication",
+          "medicine",
+          "ibuprofen",
+          "acetaminophen",
+          "painkiller",
+          "antibiotic",
+          "taken"
+        ],
+        "response": "I took acetaminophen, but it only dulled the pain.",
+        "requiredFactsCovered": [
+          "medications"
+        ],
+        "checklistItemId": "medications"
+      },
+      {
+        "id": "allergies-11",
+        "intent": "allergies",
+        "triggers": [
+          "allerg",
+          "allergy",
+          "allergies",
+          "penicillin"
+        ],
+        "response": "I am not allergic to penicillin.",
+        "requiredFactsCovered": [
+          "allergies"
+        ],
+        "checklistItemId": "allergies"
+      },
+      {
+        "id": "airway-12",
+        "intent": "airway",
+        "triggers": [
+          "breathing",
+          "swallow",
+          "swallowing",
+          "lying flat",
+          "airway",
+          "trouble breathing",
+          "trouble swallowing"
+        ],
+        "response": "I do not have trouble breathing or swallowing.",
+        "requiredFactsCovered": [
+          "airway"
+        ],
+        "checklistItemId": "airway"
+      },
+      {
+        "id": "examination-findings",
+        "intent": "examination",
+        "triggers": [
+          "examination",
+          "exam",
+          "look",
+          "see",
+          "image",
+          "xray",
+          "x-ray",
+          "radiograph",
+          "clinical findings",
+          "findings"
+        ],
+        "response": "Focused exam image available for the painful upper tooth area.",
+        "requiredFactsCovered": [
+          "examinationFindings"
+        ],
+        "checklistItemId": "examination-findings"
+      },
+      {
+        "id": "direct-diagnosis",
+        "intent": "diagnosis",
+        "triggers": [
+          "diagnosis",
+          "diagnose",
+          "what is it",
+          "what do you think it is",
+          "differential",
+          "impression"
+        ],
+        "response": "The working diagnosis is Acute apical abscess associated with symptomatic tooth pain.",
+        "requiredFactsCovered": [
+          "diagnosis"
+        ],
+        "checklistItemId": "diagnosis"
+      },
+      {
+        "id": "pain_character-standard",
+        "intent": "pain_character",
+        "triggers": [
+          "pain",
+          "hurt",
+          "ache",
+          "severity",
+          "scale",
+          "rate"
+        ],
+        "response": "Throbbing upper tooth pain rated seven out of ten.",
+        "requiredFactsCovered": [
+          "pain"
+        ],
+        "checklistItemId": "pain-character"
+      },
+      {
+        "id": "systemic_symptoms-standard",
+        "intent": "systemic_symptoms",
+        "triggers": [
+          "fever",
+          "chills",
+          "temperature",
+          "systemic",
+          "feel sick"
+        ],
+        "response": "Feels run down but has not noticed fever.",
+        "requiredFactsCovered": [
+          "systemicSymptoms"
+        ],
+        "checklistItemId": "systemic-symptoms"
+      }
+    ]
+  },
+  "patientChecklist": [
+    {
+      "id": "greeting",
+      "label": "Opened the encounter respectfully",
+      "triggers": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "chief-complaint",
+      "label": "Asked what brought the patient in",
+      "triggers": [
+        "what brings",
+        "why are you here",
+        "main problem",
+        "chief complaint",
+        "what is bothering you"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "duration",
+      "label": "Asked how long symptoms have been present",
+      "triggers": [
+        "how long",
+        "duration",
+        "how many days",
+        "how many weeks",
+        "for how long"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "onset",
+      "label": "Asked when symptoms started",
+      "triggers": [
+        "when did it start",
+        "when started",
+        "onset",
+        "first notice",
+        "begin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "thermal-sensitivity",
+      "label": "Asked about pain with hot or cold",
+      "triggers": [
+        "cold",
+        "hot",
+        "temperature",
+        "sensitive",
+        "sensitivity",
+        "thermal"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "biting-pain",
+      "label": "Asked about biting, chewing, or tapping pain",
+      "triggers": [
+        "bite",
+        "biting",
+        "chew",
+        "chewing",
+        "pressure"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "swelling",
+      "label": "Asked about swelling or spread",
+      "triggers": [
+        "swelling",
+        "swollen",
+        "cheek",
+        "face",
+        "jaw swelling"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "drainage",
+      "label": "Asked about drainage, pus, or bad taste",
+      "triggers": [
+        "taste",
+        "drainage",
+        "pus",
+        "bad taste",
+        "discharge"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medications",
+      "label": "Asked about home medications or pain relief tried",
+      "triggers": [
+        "medication",
+        "medicine",
+        "ibuprofen",
+        "acetaminophen",
+        "painkiller",
+        "antibiotic",
+        "taken"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "allergies",
+      "label": "Asked about medication allergies",
+      "triggers": [
+        "allerg",
+        "allergy",
+        "allergies",
+        "penicillin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "airway",
+      "label": "Asked about airway, breathing, swallowing, or lying flat",
+      "triggers": [
+        "breathing",
+        "swallow",
+        "swallowing",
+        "lying flat",
+        "airway",
+        "trouble breathing",
+        "trouble swallowing"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "examination-findings",
+      "label": "Reviewed available examination findings",
+      "triggers": [
+        "examination",
+        "exam",
+        "look",
+        "see",
+        "image",
+        "xray",
+        "x-ray",
+        "radiograph",
+        "clinical findings",
+        "findings"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pain-character",
+      "label": "Asked about pain severity or character",
+      "triggers": [
+        "pain",
+        "hurt",
+        "ache",
+        "severity",
+        "scale",
+        "rate"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "systemic-symptoms",
+      "label": "Asked about fever, chills, or systemic symptoms",
+      "triggers": [
+        "fever",
+        "chills",
+        "temperature",
+        "systemic",
+        "feel sick"
+      ],
+      "weight": 1
+    }
+  ],
+  "clinicalChecklist": [
+    {
+      "id": "clinical-1",
+      "label": "Characterizes thermal and biting symptoms",
+      "weight": 2
+    },
+    {
+      "id": "clinical-2",
+      "label": "Screens for spreading infection red flags",
+      "weight": 3
+    },
+    {
+      "id": "clinical-3",
+      "label": "Asks about swelling, drainage, and bad taste",
+      "weight": 2
+    },
+    {
+      "id": "clinical-4",
+      "label": "Reviews analgesics, antibiotics, and allergies",
+      "weight": 2
+    },
+    {
+      "id": "clinical-5",
+      "label": "Identifies likely acute apical abscess and urgency",
+      "weight": 3
+    }
+  ],
+  "supportingInfo": {
+    "history": {
+      "onset": "The pain became intense last night.",
+      "duration": "Symptoms worsened over the last day.",
+      "pain": "Throbbing upper tooth pain rated seven out of ten.",
+      "medications": "Acetaminophen only dulled the pain.",
+      "allergies": "No penicillin allergy reported.",
+      "medicalHistory": "Feels run down but has not noticed fever.",
+      "dentalHistory": "No prior treatment on the painful tooth.",
+      "socialHistory": "No difficulty breathing or swallowing."
+    },
+    "hpiFacts": [
+      "Upper tooth throbbing became intense last night.",
+      "Cheek feels swollen and hot.",
+      "Cold causes lingering ache.",
+      "Biting produces sharp pain.",
+      "Bad taste occurs intermittently.",
+      "Acetaminophen only dulled the pain.",
+      "No breathing or swallowing difficulty."
+    ],
+    "redFlags": [
+      "Facial swelling",
+      "Possible drainage/bad taste",
+      "Feeling run down",
+      "Escalation needed if fever, dysphagia, dyspnea, or spreading swelling develops"
+    ],
+    "examinationFindings": [
+      "Focused exam image available for the painful upper tooth area.",
+      "History supports odontogenic infection with localized facial swelling.",
+      "No reported trismus, dyspnea, or dysphagia."
+    ],
+    "expectedQuestions": [
+      "Which tooth hurts and when did it become severe?",
+      "Is there swelling, drainage, or a bad taste?",
+      "Does cold, heat, or biting change the pain?",
+      "Any fever, chills, trouble breathing, or trouble swallowing?",
+      "What pain medicine have you taken?",
+      "Any antibiotic use or medication allergies?",
+      "Has this tooth had prior treatment?"
+    ],
+    "diagnosis": "Acute apical abscess associated with symptomatic tooth pain.",
+    "differentialDiagnosis": [
+      "Acute apical abscess",
+      "Symptomatic irreversible pulpitis with apical periodontitis",
+      "Periodontal abscess",
+      "Maxillary sinus-related dental pain"
+    ],
+    "managementExpectations": [
+      "Assess infection spread and systemic involvement.",
+      "Plan urgent dental evaluation for source control.",
+      "Consider antibiotics only when swelling/systemic involvement supports use.",
+      "Give return precautions for fever, dysphagia, dyspnea, or worsening swelling."
+    ],
+    "learningObjectives": [
+      "Differentiate pulpal and periapical symptoms.",
+      "Assess swelling, drainage, and systemic involvement.",
+      "Ask targeted medication and allergy questions."
+    ],
+    "reportData": {
+      "keyFindings": [
+        "Throbbing upper tooth pain",
+        "Facial swelling",
+        "Lingering cold pain",
+        "Biting pain"
+      ],
+      "criticalMisses": [
+        "No red flag screen",
+        "No allergy/medication review"
+      ],
+      "idealSummary": "Patient has urgent odontogenic infection symptoms with localized facial swelling and no current airway symptoms."
+    },
+    "evaluation": {
+      "patientChecklistWeight": 0.6,
+      "clinicalChecklistWeight": 0.4,
+      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
+    }
+  }
+}

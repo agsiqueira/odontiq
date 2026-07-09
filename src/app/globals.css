@@ -1,26 +1,293 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --color-brand: #2f6eb5;
+  --color-action: #3fa66b;
+  --color-retry: #d79a28;
+  --color-emergency: #c84d4d;
+  --color-background: #f6f8fa;
+  --color-surface: #ffffff;
+  --color-border: #e4e8ec;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --elevation-subtle: 0 8px 24px rgba(31, 41, 55, 0.06);
+  --background: var(--color-background);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-action);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-surface);
+  --secondary-foreground: var(--color-brand);
+  --muted: #f0f3f6;
+  --muted-foreground: var(--color-text-secondary);
+  --accent: #eef3f8;
+  --accent-foreground: var(--color-brand);
+  --destructive: var(--color-emergency);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-brand);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.conversation-panel {
+  --encounter-conversation-height: max(
+    3.5rem,
+    calc(
+      var(--encounter-visual-height, 100dvh) -
+        var(--encounter-patient-bottom, 20rem) -
+        var(--encounter-controls-height, 15.25rem)
+    )
+  );
+  bottom: var(--encounter-controls-height, 15.25rem);
+  height: var(--encounter-conversation-height);
+  max-height: var(--encounter-conversation-height);
+}
+
+.conversation-scroll {
+  flex: 1 1 auto;
+  max-height: var(--encounter-conversation-height, 12rem);
+  min-height: 0;
+}
+
+.encounter-root[data-typing-mode="true"] .encounter-voice-mode,
+.encounter-root[data-typing-mode="true"] .encounter-keyboard-switch {
+  display: none;
+}
+
+.encounter-root[data-typing-mode="true"] .encounter-typing-mode {
+  display: block;
+}
+
+.encounter-root[data-typing-mode="true"] .encounter-microphone-switch {
+  display: inline-flex;
+}
+
+.encounter-root[data-input-focused="true"] .encounter-controls {
+  padding-top: 0.75rem;
+}
+
+.encounter-root[data-input-focused="true"] .encounter-controls .conversation-toggle,
+.encounter-root[data-input-focused="true"] .encounter-controls a[href^="/mentor/"] {
+  display: none;
+}
+
+.encounter-root[data-input-focused="true"] .conversation-panel {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .encounter-root {
+    position: fixed;
+    inset: 0;
+    height: var(--encounter-vh, 100dvh);
+    min-height: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  .encounter-root .encounter-stage {
+    padding-top: calc((min(100vw, 30rem) - 2rem) * 0.5625 + 4.75rem);
+    height: var(--encounter-vh, 100dvh);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .encounter-root .encounter-header {
+    position: fixed;
+    inset-inline: 0;
+    top: var(--vv-top, 0px);
+    z-index: 110;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.75rem 1rem 0.5rem;
+    background: var(--color-background);
+  }
+
+  .encounter-root .encounter-patient-layer {
+    position: fixed;
+    inset-inline: 0;
+    top: calc(var(--vv-top, 0px) + 3.25rem);
+    z-index: 100;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.5rem 1rem 0.5rem;
+    background: var(--color-background);
+    pointer-events: none;
+  }
+
+  .encounter-root .encounter-patient-layer .encounter-patient-viewport {
+    pointer-events: none;
+  }
+
+  .encounter-root .encounter-controls {
+    position: absolute;
+    z-index: 80;
+  }
+
+  .encounter-root[data-input-focused="true"] .encounter-stage {
+    padding-bottom: 17rem;
+  }
+
+  .encounter-root[data-typing-mode="true"] {
+    overflow-y: auto;
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-stage {
+    height: auto;
+    padding-bottom: 0;
+    padding-top: calc(var(--vv-top, 0px) + 3.75rem);
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-patient-layer {
+    position: static;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-patient-viewport {
+    max-height: min(36vh, 14rem);
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-controls {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 80;
+    margin-top: 0;
+    max-height: calc(
+      var(--encounter-visual-height, 100dvh) -
+        var(--encounter-patient-bottom, 18rem) - 0.75rem
+    );
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-controls a[href^="/mentor/"] {
+    display: inline-flex;
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-typing-row {
+    grid-template-columns: minmax(0, 1fr) 3rem;
+    align-items: center;
+  }
+
+  .encounter-root[data-typing-mode="true"] .encounter-controls > .mt-3 {
+    margin-top: 0.75rem;
+  }
+
 }

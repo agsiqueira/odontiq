@@ -1,0 +1,564 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "id": "case-05",
+    "estimatedTime": "14 min",
+    "urgency": "Urgent",
+    "status": "completed",
+    "score": 64,
+    "chiefComplaint": "The pain wakes me up at night, and I cannot get comfortable."
+  },
+  "patient": {
+    "name": "Sofia Williams",
+    "age": 27,
+    "sex": "Female"
+  },
+  "assets": {
+    "rest": "/patients/case-05/rest.png",
+    "talking": "/patients/case-05/talking.mp4",
+    "examinations": [
+      {
+        "id": "examination-01",
+        "title": "Examination 1",
+        "image": "/patients/case-05/examination/examination-01.jpg",
+        "description": "Focused image of the painful tooth area."
+      }
+    ]
+  },
+  "conversation": {
+    "openingGreeting": "Hi.",
+    "scripted": [
+      {
+        "id": "greeting-1",
+        "intent": "greeting",
+        "triggers": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon"
+        ],
+        "response": "Hi.",
+        "requiredFactsCovered": [],
+        "checklistItemId": "greeting"
+      },
+      {
+        "id": "chief_complaint-2",
+        "intent": "chief_complaint",
+        "triggers": [
+          "what brings",
+          "why are you here",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "The pain wakes me up at night and keeps pulsing.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "chief_complaint-3",
+        "intent": "chief_complaint",
+        "triggers": [
+          "why are you here",
+          "what brings",
+          "main problem",
+          "chief complaint",
+          "what is bothering you"
+        ],
+        "response": "The pain wakes me up at night and keeps pulsing.",
+        "requiredFactsCovered": [
+          "chief_complaint"
+        ],
+        "checklistItemId": "chief-complaint"
+      },
+      {
+        "id": "duration-4",
+        "intent": "duration",
+        "triggers": [
+          "how long",
+          "duration",
+          "how many days",
+          "how many weeks",
+          "for how long"
+        ],
+        "response": "It started as sensitivity about two weeks ago.",
+        "requiredFactsCovered": [
+          "duration"
+        ],
+        "checklistItemId": "duration"
+      },
+      {
+        "id": "onset-5",
+        "intent": "onset",
+        "triggers": [
+          "when did it start",
+          "when started",
+          "onset",
+          "first notice",
+          "begin"
+        ],
+        "response": "It started as sensitivity about two weeks ago.",
+        "requiredFactsCovered": [
+          "onset"
+        ],
+        "checklistItemId": "onset"
+      },
+      {
+        "id": "thermal_sensitivity-6",
+        "intent": "thermal_sensitivity",
+        "triggers": [
+          "hot",
+          "cold",
+          "temperature",
+          "sensitive",
+          "sensitivity",
+          "thermal"
+        ],
+        "response": "Hot drinks make it worse.",
+        "requiredFactsCovered": [
+          "thermal_sensitivity"
+        ],
+        "checklistItemId": "thermal-sensitivity"
+      },
+      {
+        "id": "thermal_sensitivity-7",
+        "intent": "thermal_sensitivity",
+        "triggers": [
+          "cold",
+          "hot",
+          "temperature",
+          "sensitive",
+          "sensitivity",
+          "thermal"
+        ],
+        "response": "Cold water sometimes calms it for a short time.",
+        "requiredFactsCovered": [
+          "thermal_sensitivity"
+        ],
+        "checklistItemId": "thermal-sensitivity"
+      },
+      {
+        "id": "radiation-8",
+        "intent": "radiation",
+        "triggers": [
+          "ear",
+          "radiate",
+          "spread",
+          "travels"
+        ],
+        "response": "The pain spreads toward my ear.",
+        "requiredFactsCovered": [
+          "radiation"
+        ],
+        "checklistItemId": "radiation"
+      },
+      {
+        "id": "swelling-9",
+        "intent": "swelling",
+        "triggers": [
+          "swelling",
+          "swollen",
+          "cheek",
+          "face",
+          "jaw swelling"
+        ],
+        "response": "I do not see swelling on my face.",
+        "requiredFactsCovered": [
+          "swelling"
+        ],
+        "checklistItemId": "swelling"
+      },
+      {
+        "id": "medications-10",
+        "intent": "medications",
+        "triggers": [
+          "medication",
+          "medicine",
+          "ibuprofen",
+          "acetaminophen",
+          "painkiller",
+          "antibiotic",
+          "taken"
+        ],
+        "response": "I have been taking ibuprofen to get through the day.",
+        "requiredFactsCovered": [
+          "medications"
+        ],
+        "checklistItemId": "medications"
+      },
+      {
+        "id": "medical_history-11",
+        "intent": "medical_history",
+        "triggers": [
+          "pregnant",
+          "medical history",
+          "diabetes",
+          "pregnancy",
+          "health conditions"
+        ],
+        "response": "I am not pregnant.",
+        "requiredFactsCovered": [
+          "medical_history"
+        ],
+        "checklistItemId": "medical-history"
+      },
+      {
+        "id": "allergies-12",
+        "intent": "allergies",
+        "triggers": [
+          "allerg",
+          "allergy",
+          "allergies",
+          "penicillin"
+        ],
+        "response": "I do not have any known medication allergies.",
+        "requiredFactsCovered": [
+          "allergies"
+        ],
+        "checklistItemId": "allergies"
+      },
+      {
+        "id": "examination-findings",
+        "intent": "examination",
+        "triggers": [
+          "examination",
+          "exam",
+          "look",
+          "see",
+          "image",
+          "xray",
+          "x-ray",
+          "radiograph",
+          "clinical findings",
+          "findings"
+        ],
+        "response": "Focused painful-tooth examination image available.",
+        "requiredFactsCovered": [
+          "examinationFindings"
+        ],
+        "checklistItemId": "examination-findings"
+      },
+      {
+        "id": "direct-diagnosis",
+        "intent": "diagnosis",
+        "triggers": [
+          "diagnosis",
+          "diagnose",
+          "what is it",
+          "what do you think it is",
+          "differential",
+          "impression"
+        ],
+        "response": "The working diagnosis is Symptomatic irreversible pulpitis.",
+        "requiredFactsCovered": [
+          "diagnosis"
+        ],
+        "checklistItemId": "diagnosis"
+      },
+      {
+        "id": "pain_character-standard",
+        "intent": "pain_character",
+        "triggers": [
+          "pain",
+          "hurt",
+          "ache",
+          "severity",
+          "scale",
+          "rate"
+        ],
+        "response": "Pulsing pain that reaches nine out of ten at night.",
+        "requiredFactsCovered": [
+          "pain"
+        ],
+        "checklistItemId": "pain-character"
+      },
+      {
+        "id": "systemic_symptoms-standard",
+        "intent": "systemic_symptoms",
+        "triggers": [
+          "fever",
+          "chills",
+          "temperature",
+          "systemic",
+          "feel sick"
+        ],
+        "response": "Not pregnant; no breathing or swallowing issues.",
+        "requiredFactsCovered": [
+          "systemicSymptoms"
+        ],
+        "checklistItemId": "systemic-symptoms"
+      }
+    ]
+  },
+  "patientChecklist": [
+    {
+      "id": "greeting",
+      "label": "Opened the encounter respectfully",
+      "triggers": [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "chief-complaint",
+      "label": "Asked what brought the patient in",
+      "triggers": [
+        "what brings",
+        "why are you here",
+        "main problem",
+        "chief complaint",
+        "what is bothering you"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "duration",
+      "label": "Asked how long symptoms have been present",
+      "triggers": [
+        "how long",
+        "duration",
+        "how many days",
+        "how many weeks",
+        "for how long"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "onset",
+      "label": "Asked when symptoms started",
+      "triggers": [
+        "when did it start",
+        "when started",
+        "onset",
+        "first notice",
+        "begin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "thermal-sensitivity",
+      "label": "Asked about pain with hot or cold",
+      "triggers": [
+        "hot",
+        "cold",
+        "temperature",
+        "sensitive",
+        "sensitivity",
+        "thermal"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "radiation",
+      "label": "Asked whether pain radiates",
+      "triggers": [
+        "ear",
+        "radiate",
+        "spread",
+        "travels"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "swelling",
+      "label": "Asked about swelling or spread",
+      "triggers": [
+        "swelling",
+        "swollen",
+        "cheek",
+        "face",
+        "jaw swelling"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medications",
+      "label": "Asked about home medications or pain relief tried",
+      "triggers": [
+        "medication",
+        "medicine",
+        "ibuprofen",
+        "acetaminophen",
+        "painkiller",
+        "antibiotic",
+        "taken"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "medical-history",
+      "label": "Asked about relevant medical history",
+      "triggers": [
+        "pregnant",
+        "medical history",
+        "diabetes",
+        "pregnancy",
+        "health conditions"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "allergies",
+      "label": "Asked about medication allergies",
+      "triggers": [
+        "allerg",
+        "allergy",
+        "allergies",
+        "penicillin"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "examination-findings",
+      "label": "Reviewed available examination findings",
+      "triggers": [
+        "examination",
+        "exam",
+        "look",
+        "see",
+        "image",
+        "xray",
+        "x-ray",
+        "radiograph",
+        "clinical findings",
+        "findings"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "pain-character",
+      "label": "Asked about pain severity or character",
+      "triggers": [
+        "pain",
+        "hurt",
+        "ache",
+        "severity",
+        "scale",
+        "rate"
+      ],
+      "weight": 1
+    },
+    {
+      "id": "systemic-symptoms",
+      "label": "Asked about fever, chills, or systemic symptoms",
+      "triggers": [
+        "fever",
+        "chills",
+        "temperature",
+        "systemic",
+        "feel sick"
+      ],
+      "weight": 1
+    }
+  ],
+  "clinicalChecklist": [
+    {
+      "id": "clinical-1",
+      "label": "Identifies spontaneous/nocturnal pain pattern",
+      "weight": 3
+    },
+    {
+      "id": "clinical-2",
+      "label": "Asks thermal trigger and relief questions",
+      "weight": 3
+    },
+    {
+      "id": "clinical-3",
+      "label": "Screens for swelling and systemic red flags",
+      "weight": 2
+    },
+    {
+      "id": "clinical-4",
+      "label": "Reviews pregnancy, medications, and allergies",
+      "weight": 2
+    },
+    {
+      "id": "clinical-5",
+      "label": "Recognizes likely irreversible pulpitis and urgent dental need",
+      "weight": 2
+    }
+  ],
+  "supportingInfo": {
+    "history": {
+      "onset": "Sensitivity started about two weeks ago.",
+      "duration": "Pain is now spontaneous and wakes the patient at night.",
+      "pain": "Pulsing pain that reaches nine out of ten at night.",
+      "medications": "Ibuprofen is used to get through the day.",
+      "allergies": "No known medication allergies.",
+      "medicalHistory": "Not pregnant; no breathing or swallowing issues.",
+      "dentalHistory": "Known cavity in the area with postponed treatment.",
+      "socialHistory": "Needs help sleeping and wants treatment guidance."
+    },
+    "hpiFacts": [
+      "Sensitivity began about two weeks ago.",
+      "Pain is now spontaneous and wakes patient at night.",
+      "Hot drinks worsen pain.",
+      "Cold water temporarily calms pain.",
+      "Pain radiates toward the ear.",
+      "No facial swelling reported.",
+      "Known cavity in the area with postponed treatment."
+    ],
+    "redFlags": [
+      "Severe nocturnal pain",
+      "Spontaneous pulpal pain",
+      "Escalation needed if swelling, fever, dysphagia, or dyspnea develops"
+    ],
+    "examinationFindings": [
+      "Focused painful-tooth examination image available.",
+      "History supports pulpal inflammation with thermal triggers.",
+      "No facial swelling or airway symptoms reported.",
+      "Known untreated caries supports odontogenic source."
+    ],
+    "expectedQuestions": [
+      "When did sensitivity begin and how has it changed?",
+      "Does pain wake you at night?",
+      "Do hot or cold drinks affect the pain?",
+      "Does cold relieve or worsen the pain?",
+      "Does pain radiate to the ear or jaw?",
+      "Any swelling, fever, breathing, or swallowing problems?",
+      "Are you pregnant?",
+      "Any medication allergies or analgesics taken?"
+    ],
+    "diagnosis": "Symptomatic irreversible pulpitis.",
+    "differentialDiagnosis": [
+      "Symptomatic irreversible pulpitis",
+      "Acute apical periodontitis",
+      "Cracked tooth",
+      "Referred otalgia from odontogenic pain"
+    ],
+    "managementExpectations": [
+      "Plan urgent endodontic or definitive dental evaluation.",
+      "Provide analgesic guidance within scope and medical safety.",
+      "Avoid antibiotics when swelling/systemic infection is absent.",
+      "Give return precautions for swelling, fever, dysphagia, or dyspnea."
+    ],
+    "learningObjectives": [
+      "Identify spontaneous and lingering thermal pain patterns.",
+      "Ask about pregnancy, allergies, and analgesic use.",
+      "Connect chief complaint to urgent endodontic evaluation."
+    ],
+    "reportData": {
+      "keyFindings": [
+        "Nocturnal spontaneous pain",
+        "Heat sensitivity",
+        "Cold temporary relief",
+        "Known untreated cavity"
+      ],
+      "criticalMisses": [
+        "Missing pregnancy/allergy review",
+        "Prescribing antibiotics without infection signs"
+      ],
+      "idealSummary": "Patient presentation is most consistent with symptomatic irreversible pulpitis requiring urgent definitive dental care."
+    },
+    "evaluation": {
+      "patientChecklistWeight": 0.6,
+      "clinicalChecklistWeight": 0.4,
+      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
+    }
+  }
+}
