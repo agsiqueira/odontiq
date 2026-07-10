@@ -22,6 +22,11 @@ export type CaseData = {
     age: number;
     sex: string;
   };
+  voicePreference?: {
+    provider: "navigator";
+    voiceId: string;
+    speed?: number;
+  };
   assets: {
     rest: string;
     talking: string;

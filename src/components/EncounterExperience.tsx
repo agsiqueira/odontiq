@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useReducer, useRef } from "react";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 import {
   ChevronLeft,
   ImageIcon,
@@ -10,6 +10,7 @@ import {
   Mic,
   Send,
   Settings,
+  Square,
   Stethoscope,
   X,
 } from "lucide-react";
@@ -26,6 +27,8 @@ import {
   type ConversationMessage,
   type ConversationRole,
 } from "@/lib/conversationEngine";
+import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
+import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
 
 type EncounterExperienceProps = {
   patientCase: OdontIQCase;
@@ -223,6 +226,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     initialEncounterState,
   );
   const inputRef = useRef<HTMLInputElement>(null);
+  const voiceSubmitRef = useRef<(transcript: string) => void>(() => {});
   const keepFocusedModeForExamination = useRef(false);
   const fullViewportHeight = useRef(0);
   const messageSequence = useRef(0);
@@ -230,11 +234,24 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const isTypingMode = state.communicationMode === "text";
   const isInputFocused = state.isInputFocused;
   const isExaminationSheetOpen = state.activePanel === "examination";
-  const isSpeaking = state.isSpeaking;
+  const speechPlayback = useSpeechSynthesisPlayback({
+    caseId: patientCase.id,
+  });
+  const isGeneratingPatientResponse = state.isSpeaking;
+  const isSpeaking = isGeneratingPatientResponse || speechPlayback.isSpeaking;
   const selectedExamination = patientCase.assets.examinations.find(
     (image) => image.id === state.selectedExaminationId,
   );
   const isConversationOpen = state.activePanel === "conversation";
+
+  const handleFinalVoiceTranscript = useCallback((transcript: string) => {
+    voiceSubmitRef.current(transcript);
+  }, []);
+
+  const speechRecognition = useSpeechRecognition({
+    onFinalTranscript: handleFinalVoiceTranscript,
+  });
+  const voiceInputMessage = speechRecognition.error?.message;
 
   const createConversationMessage = (
     role: ConversationRole,
@@ -291,8 +308,12 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const submitStudentMessage = async (studentMessage: string) => {
     const text = studentMessage.trim();
 
-    if (!text || isSpeaking) {
+    if (!text || isGeneratingPatientResponse) {
       return;
+    }
+
+    if (speechPlayback.isSpeaking) {
+      speechPlayback.stop();
     }
 
     const studentConversationMessage = createConversationMessage(
@@ -351,6 +372,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         type: "appendMessage",
         message: patientConversationMessage,
       });
+      speechPlayback.speak(patientConversationMessage.text);
       dispatch({
         type: "recordEvent",
         event: createEncounterEvent("patient_response_generated", {
@@ -370,6 +392,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   };
 
   const switchToTypingMode = () => {
+    speechRecognition.stopListening();
     dispatch({ type: "switchToText" });
     dispatch({
       type: "recordEvent",
@@ -381,6 +404,30 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     keepFocusedModeForExamination.current = false;
     dispatch({ type: "switchToVoice" });
   };
+
+  const toggleVoiceInput = () => {
+    if (!speechRecognition.isSupported) {
+      return;
+    }
+
+    if (speechPlayback.isSpeaking) {
+      speechPlayback.stop();
+    }
+
+    dispatch({
+      type: "recordEvent",
+      event: createEncounterEvent("voice_placeholder_used", {
+        action: speechRecognition.isListening ? "stop" : "start",
+      }),
+    });
+    speechRecognition.toggleListening();
+  };
+
+  useEffect(() => {
+    voiceSubmitRef.current = (transcript: string) => {
+      void submitStudentMessage(transcript);
+    };
+  });
 
   const openExaminationSheet = () => {
     if (isInputFocused) {
@@ -584,22 +631,41 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
           </p>
         ) : null}
 
-        <div className="encounter-voice-mode grid place-items-center">
+        {!state.responseError && voiceInputMessage ? (
+          <p
+            role="status"
+            className="mb-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-3 text-sm font-medium text-[var(--color-text-secondary)]"
+          >
+            {voiceInputMessage}
+          </p>
+        ) : null}
+
+        <div className="encounter-voice-mode grid min-h-[7.25rem] grid-rows-[6rem_1.25rem] place-items-center">
           <button
             type="button"
-            aria-label="Start microphone input"
-            disabled={isSpeaking}
-            onClick={() => {
-              dispatch({
-                type: "recordEvent",
-                event: createEncounterEvent("voice_placeholder_used"),
-              });
-              submitStudentMessage("(Voice input placeholder)");
-            }}
-            className="inline-flex size-24 touch-manipulation items-center justify-center rounded-full bg-[var(--color-action)] text-white shadow-[0_10px_24px_rgba(63,166,107,0.22)]"
+            aria-label={
+              speechRecognition.isListening
+                ? "Stop listening"
+                : "Start voice input"
+            }
+            disabled={
+              isGeneratingPatientResponse || !speechRecognition.isSupported
+            }
+            onClick={toggleVoiceInput}
+            className="inline-flex size-24 touch-manipulation items-center justify-center rounded-full bg-[var(--color-action)] text-white shadow-[0_10px_24px_rgba(63,166,107,0.22)] disabled:opacity-45"
           >
-            <Mic className="size-10" />
+            {speechRecognition.isListening ? (
+              <Square className="size-9" />
+            ) : (
+              <Mic className="size-10" />
+            )}
           </button>
+          <p
+            aria-live="polite"
+            className="h-5 text-sm font-medium text-[var(--color-brand)]"
+          >
+            {speechRecognition.isListening ? "Listening..." : ""}
+          </p>
         </div>
 
         <div className="encounter-typing-mode hidden">
@@ -625,7 +691,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
               type="button"
               data-encounter-send
               aria-label="Send question"
-              disabled={isSpeaking}
+              disabled={isGeneratingPatientResponse}
               onPointerDown={(event) => {
                 event.preventDefault();
               }}

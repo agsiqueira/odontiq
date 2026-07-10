@@ -13,6 +13,11 @@
     "age": 34,
     "sex": "Female"
   },
+  "voicePreference": {
+    "provider": "navigator",
+    "voiceId": "am_adam",
+    "speed": 0.95
+  },
   "assets": {
     "rest": "/patients/case-01/rest.png",
     "talking": "/patients/case-01/talking.mp4",
