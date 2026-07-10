@@ -101,19 +101,9 @@ function buildNavigatorRequest(
     messages: [
       {
         role: "system",
-        content:
-          "You are the odontIQ conversation gateway. Return only the patient response text for the current dental consultation turn.",
+        content: input.systemPrompt,
       },
-      {
-        role: "user",
-        content: JSON.stringify({
-          encounterId: input.encounterId,
-          caseId: input.caseId,
-          conversation: input.conversation,
-          coveredChecklistItems: input.coveredChecklistItems,
-          message: input.message,
-        }),
-      },
+      ...input.messages,
     ],
   };
 }
