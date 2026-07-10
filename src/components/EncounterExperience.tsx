@@ -23,7 +23,6 @@ import {
   type LocalEncounterSummary,
 } from "@/lib/localEncounter";
 import {
-  sendMessage,
   type ConversationMessage,
   type ConversationRole,
 } from "@/lib/conversationEngine";
@@ -58,6 +57,7 @@ type EncounterState = {
   selectedExaminationId?: string;
   isSpeaking: boolean;
   isInputFocused: boolean;
+  responseError?: string;
   messages: ConversationMessage[];
   coveredFacts: string[];
   coveredChecklistItems: string[];
@@ -77,6 +77,7 @@ type EncounterAction =
   | { type: "startSpeaking" }
   | { type: "stopSpeaking" }
   | { type: "setInputFocused"; focused: boolean }
+  | { type: "setResponseError"; error?: string }
   | { type: "appendMessage"; message: ConversationMessage }
   | {
       type: "applyCoverage";
@@ -90,11 +91,28 @@ const initialEncounterState: EncounterState = {
   activePanel: "controls",
   isSpeaking: false,
   isInputFocused: false,
+  responseError: undefined,
   messages: [],
   coveredFacts: [],
   coveredChecklistItems: [],
   encounterEvents: [],
 };
+
+const patientResponseErrorMessage =
+  "The AI patient response could not be generated. Please try again.";
+
+type ConversationApiResponse =
+  | {
+      success: true;
+      provider: string;
+      response: string;
+      encounterId: string;
+    }
+  | {
+      success: false;
+      provider?: string;
+      error?: string;
+    };
 
 function appendUnique(currentItems: string[], nextItems: string[] = []) {
   return Array.from(new Set([...currentItems, ...nextItems]));
@@ -170,6 +188,11 @@ function encounterReducer(
       return {
         ...state,
         isInputFocused: action.focused,
+      };
+    case "setResponseError":
+      return {
+        ...state,
+        responseError: action.error,
       };
     case "appendMessage":
       return {
@@ -265,7 +288,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     );
   };
 
-  const submitStudentMessage = (studentMessage: string) => {
+  const submitStudentMessage = async (studentMessage: string) => {
     const text = studentMessage.trim();
 
     if (!text || isSpeaking) {
@@ -276,16 +299,13 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       "student",
       text,
     );
-    const engineResponse = sendMessage(
-      patientCase.id,
-      text,
-      state.messages,
-    );
+    const conversationHistory = state.messages;
 
     dispatch({
       type: "appendMessage",
       message: studentConversationMessage,
     });
+    dispatch({ type: "setResponseError", error: undefined });
     dispatch({
       type: "recordEvent",
       event: createEncounterEvent("student_message_sent", {
@@ -294,21 +314,37 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         text,
       }),
     });
-    dispatch({
-      type: "applyCoverage",
-      facts: engineResponse.requiredFactsCovered,
-      checklistItemId: engineResponse.checklistItemId,
-    });
     dispatch({ type: "startSpeaking" });
 
     if (responseTimer.current) {
       window.clearTimeout(responseTimer.current);
+      responseTimer.current = null;
     }
 
-    responseTimer.current = window.setTimeout(() => {
+    try {
+      const response = await fetch("/api/conversation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          encounterId: patientCase.id,
+          caseId: patientCase.id,
+          userMessage: text,
+          message: text,
+          conversation: conversationHistory,
+          coveredChecklistItems: state.coveredChecklistItems,
+        }),
+      });
+      const data: unknown = await response.json().catch(() => undefined);
+
+      if (!response.ok || !isSuccessfulConversationResponse(data)) {
+        throw new Error("Conversation request failed");
+      }
+
       const patientConversationMessage = createConversationMessage(
         "patient",
-        engineResponse.patientMessage,
+        data.response,
       );
 
       dispatch({
@@ -319,15 +355,18 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         type: "recordEvent",
         event: createEncounterEvent("patient_response_generated", {
           messageId: patientConversationMessage.id,
-          matchedConversationId: engineResponse.matchedConversationId,
-          matchedIntent: engineResponse.matchedIntent,
-          requiredFactsCovered: engineResponse.requiredFactsCovered,
-          checklistItemId: engineResponse.checklistItemId,
+          provider: data.provider,
+          encounterId: data.encounterId,
         }),
       });
+    } catch {
+      dispatch({
+        type: "setResponseError",
+        error: patientResponseErrorMessage,
+      });
+    } finally {
       dispatch({ type: "stopSpeaking" });
-      responseTimer.current = null;
-    }, engineResponse.delay);
+    }
   };
 
   const switchToTypingMode = () => {
@@ -535,6 +574,15 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
           <span aria-hidden="true">{isConversationOpen ? "▼ " : "▲ "}</span>
           Conversation
         </a>
+
+        {state.responseError ? (
+          <p
+            role="alert"
+            className="mb-3 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700"
+          >
+            {state.responseError}
+          </p>
+        ) : null}
 
         <div className="encounter-voice-mode grid place-items-center">
           <button
@@ -751,5 +799,23 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         </section>
       ) : null}
     </main>
+  );
+}
+
+function isSuccessfulConversationResponse(
+  response: unknown,
+): response is Extract<ConversationApiResponse, { success: true }> {
+  if (!response || typeof response !== "object") {
+    return false;
+  }
+
+  const candidate = response as Record<string, unknown>;
+
+  return (
+    candidate.success === true &&
+    typeof candidate.provider === "string" &&
+    typeof candidate.response === "string" &&
+    candidate.response.trim().length > 0 &&
+    typeof candidate.encounterId === "string"
   );
 }
