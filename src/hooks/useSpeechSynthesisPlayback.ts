@@ -2,7 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-type SpeechSynthesisStatus = "unsupported" | "idle" | "speaking" | "error";
+type SpeechSynthesisStatus =
+  | "unsupported"
+  | "idle"
+  | "preparing"
+  | "speaking"
+  | "error";
 
 type UseSpeechSynthesisPlaybackOptions = {
   caseId: string;
@@ -33,6 +38,7 @@ export function useSpeechSynthesisPlayback({
     useState<SpeechSynthesisStatus>("unsupported");
 
   const isSupported = status !== "unsupported";
+  const isPreparingSpeech = status === "preparing";
   const isSpeaking = status === "speaking";
 
   useEffect(() => {
@@ -88,7 +94,7 @@ export function useSpeechSynthesisPlayback({
         !("speechSynthesis" in window) ||
         !("SpeechSynthesisUtterance" in window)
       ) {
-        setStatus("unsupported");
+        setStatus("error");
         return;
       }
 
@@ -106,6 +112,14 @@ export function useSpeechSynthesisPlayback({
       }
 
       utteranceRef.current = utterance;
+
+      utterance.onstart = () => {
+        if (playbackIdRef.current !== playbackId) {
+          return;
+        }
+
+        setStatus("speaking");
+      };
 
       utterance.onend = () => {
         if (playbackIdRef.current !== playbackId) {
@@ -126,7 +140,6 @@ export function useSpeechSynthesisPlayback({
       };
 
       try {
-        setStatus("speaking");
         window.speechSynthesis.speak(utterance);
       } catch {
         utteranceRef.current = null;
@@ -153,6 +166,15 @@ export function useSpeechSynthesisPlayback({
       audioRef.current = audio;
 
       await new Promise<void>((resolve, reject) => {
+        audio.onplaying = () => {
+          if (playbackIdRef.current !== playbackId) {
+            return;
+          }
+
+          setStatus("speaking");
+          resolve();
+        };
+
         audio.onended = () => {
           if (playbackIdRef.current === playbackId) {
             cleanupAudio();
@@ -170,8 +192,13 @@ export function useSpeechSynthesisPlayback({
           reject(new Error("Navigator audio playback failed."));
         };
 
-        setStatus("speaking");
-        void audio.play().then(resolve).catch(reject);
+        void audio.play().catch((error: unknown) => {
+          if (playbackIdRef.current === playbackId) {
+            cleanupAudio();
+          }
+
+          reject(error);
+        });
       });
     },
     [cleanupAudio],
@@ -190,6 +217,7 @@ export function useSpeechSynthesisPlayback({
 
       const playbackId = playbackIdRef.current + 1;
       playbackIdRef.current = playbackId;
+      setStatus("preparing");
 
       const controller = new AbortController();
       abortControllerRef.current = controller;
@@ -257,6 +285,7 @@ export function useSpeechSynthesisPlayback({
 
   return {
     isSpeaking,
+    isPreparingSpeech,
     isSupported,
     replay,
     speak,

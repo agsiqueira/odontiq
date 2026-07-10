@@ -231,6 +231,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const fullViewportHeight = useRef(0);
   const messageSequence = useRef(0);
   const responseTimer = useRef<number | null>(null);
+  const talkingVideoRef = useRef<HTMLVideoElement>(null);
   const isTypingMode = state.communicationMode === "text";
   const isInputFocused = state.isInputFocused;
   const isExaminationSheetOpen = state.activePanel === "examination";
@@ -238,7 +239,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     caseId: patientCase.id,
   });
   const isGeneratingPatientResponse = state.isSpeaking;
-  const isSpeaking = isGeneratingPatientResponse || speechPlayback.isSpeaking;
+  const isPatientAudioPlaying = speechPlayback.isSpeaking;
   const selectedExamination = patientCase.assets.examinations.find(
     (image) => image.id === state.selectedExaminationId,
   );
@@ -252,6 +253,32 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     onFinalTranscript: handleFinalVoiceTranscript,
   });
   const voiceInputMessage = speechRecognition.error?.message;
+
+  useEffect(() => {
+    const talkingVideo = talkingVideoRef.current;
+
+    if (!talkingVideo) {
+      return;
+    }
+
+    if (isPatientAudioPlaying) {
+      try {
+        talkingVideo.currentTime = 0;
+      } catch {
+        // Some browsers block seeking until metadata is loaded.
+      }
+
+      void talkingVideo.play().catch(() => undefined);
+    } else {
+      talkingVideo.pause();
+
+      try {
+        talkingVideo.currentTime = 0;
+      } catch {
+        // Keep the current frame if seeking is not available yet.
+      }
+    }
+  }, [isPatientAudioPlaying]);
 
   const createConversationMessage = (
     role: ConversationRole,
@@ -554,26 +581,29 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
             data-encounter-patient-viewport
             className="encounter-patient-viewport relative aspect-video overflow-hidden rounded-2xl border border-[var(--color-border)] bg-black shadow-[var(--elevation-subtle)]"
           >
-            {isSpeaking ? (
-              <video
-                src={patientCase.assets.talking}
-                aria-label={`${patientCase.patientName} speaking`}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="size-full object-cover"
-              />
-            ) : (
-              <Image
-                src={patientCase.assets.rest}
-                alt={`${patientCase.patientName} at rest`}
-                fill
-                priority
-                sizes="(max-width: 480px) 100vw, 480px"
-                className="object-cover"
-              />
-            )}
+            <Image
+              src={patientCase.assets.rest}
+              alt={`${patientCase.patientName} at rest`}
+              fill
+              priority
+              sizes="(max-width: 480px) 100vw, 480px"
+              className={`object-cover transition-opacity duration-200 ${
+                isPatientAudioPlaying ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <video
+              ref={talkingVideoRef}
+              src={patientCase.assets.talking}
+              poster={patientCase.assets.rest}
+              aria-label={`${patientCase.patientName} speaking`}
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className={`absolute inset-0 size-full object-cover transition-opacity duration-200 ${
+                isPatientAudioPlaying ? "opacity-100" : "opacity-0"
+              }`}
+            />
           </div>
         </section>
       </div>
