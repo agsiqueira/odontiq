@@ -6,6 +6,8 @@ import type {
   ConversationGatewayRequest,
 } from "@/lib/ai";
 import { loadCase, type CaseData } from "@/data/cases";
+import { buildPatientDisclosureState } from "@/lib/patientDisclosure";
+import type { PatientDisclosureState } from "@/lib/patientDisclosure";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
@@ -60,7 +62,14 @@ export async function POST(request: Request) {
 
     const providerInput: ConversationGatewayInput = {
       ...payload,
-      systemPrompt: buildPatientSystemPrompt(patientCase),
+      systemPrompt: buildPatientSystemPrompt(
+        patientCase,
+        buildPatientDisclosureState({
+          caseData: patientCase,
+          conversation: payload.conversation,
+          latestStudentMessage: payload.message,
+        }),
+      ),
       messages: buildChatTranscript(payload),
     };
 
@@ -105,18 +114,30 @@ function isConversationRequest(
   );
 }
 
-function buildPatientSystemPrompt(patientCase: CaseData) {
+function buildPatientSystemPrompt(
+  patientCase: CaseData,
+  disclosureState: PatientDisclosureState,
+) {
   return [
     PATIENT_ROLE_SYSTEM_PROMPT,
     "",
-    "Prompt context with patient-known facts only:",
-    JSON.stringify(buildSanitizedPatientContext(patientCase), null, 2),
+    "Use visibleFacts.allowedThisTurn as the only source for new patient facts in this response.",
+    "visibleFacts.alreadyDisclosed may be used only to preserve continuity; do not add extra details from it unless the student asks a direct follow-up.",
+    "If visibleFacts.allowedThisTurn is empty, answer naturally without adding clinical facts. For diagnosis, interpretation, or plan questions, use the restricted response in turnPolicy.",
+    "",
+    "Visible patient facts for this turn (source of truth):",
+    JSON.stringify(
+      buildSanitizedPatientContext(patientCase, disclosureState),
+      null,
+      2,
+    ),
   ].join("\n");
 }
 
-function buildSanitizedPatientContext(patientCase: CaseData) {
-  const history = patientCase.supportingInfo.history;
-
+function buildSanitizedPatientContext(
+  patientCase: CaseData,
+  disclosureState: PatientDisclosureState,
+) {
   return {
     patientProfile: {
       name: patientCase.patient.name,
@@ -124,20 +145,31 @@ function buildSanitizedPatientContext(patientCase: CaseData) {
       sex: patientCase.patient.sex,
       communicationStyle: "brief, natural, cooperative, and concerned as appropriate for the complaint",
     },
-    chiefComplaint: patientCase.metadata.chiefComplaint,
-    openingGreeting: patientCase.conversation.openingGreeting,
-    patientKnownHistory: {
-      onset: history.onset,
-      duration: history.duration,
-      pain: history.pain,
-      medications: history.medications,
-      allergies: history.allergies,
-      medicalHistory: history.medicalHistory,
-      dentalHistory: history.dentalHistory,
-      socialHistory: history.socialHistory,
+    openingGreeting: shouldIncludeOpeningGreeting(disclosureState)
+      ? patientCase.conversation.openingGreeting
+      : undefined,
+    visibleFacts: {
+      alreadyDisclosed: disclosureState.alreadyDisclosed,
+      allowedThisTurn: disclosureState.allowedThisTurn,
     },
-    patientKnownSymptomFacts: patientCase.supportingInfo.hpiFacts,
+    turnPolicy: {
+      latestTopics: disclosureState.latestTopics,
+      isBroadQuestion: disclosureState.isBroadQuestion,
+      asksRestrictedClinicalInterpretation:
+        disclosureState.asksRestrictedClinicalInterpretation,
+      restrictedClinicalInterpretationResponse:
+        "I don't know, that's why I'm here.",
+    },
   };
+}
+
+function shouldIncludeOpeningGreeting(disclosureState: PatientDisclosureState) {
+  return (
+    disclosureState.alreadyDisclosed.length === 0 &&
+    disclosureState.allowedThisTurn.length === 0 &&
+    disclosureState.latestTopics.length === 0 &&
+    !disclosureState.asksRestrictedClinicalInterpretation
+  );
 }
 
 function buildChatTranscript(
