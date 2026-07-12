@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: odontiq
+    runtime: node
+    rootDir: .
+    buildCommand: npm ci && npx prisma generate && npm run build
+    preDeployCommand: npx prisma migrate deploy
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: AI_PROVIDER
+        value: navigator
+      - key: NAVIGATOR_API_KEY
+        sync: false
+      - key: NAVIGATOR_BASE
+        sync: false
+      - key: NAVIGATOR_MODEL
+        sync: false

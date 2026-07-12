@@ -16,9 +16,15 @@
     "validate:explicit-semantic-evidence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateExplicitSemanticEvidence.ts",
     "validate:completed-encounter-storage": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedEncounterStorage.ts",
     "validate:home-progression": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateHomeProgression.ts",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:studio": "prisma studio",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@prisma/client": "^5.22.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",
@@ -39,6 +45,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "prisma": "^5.22.0"
   }
 }

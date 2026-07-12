@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum EncounterStatus {
+  ACTIVE
+  PAUSED
+  COMPLETED
+}
+
+enum ReportGenerationStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETE
+  FAILED
+}
+
+enum ArtifactIntegrityStatus {
+  PENDING
+  VALID
+  INVALID
+}
+
+model User {
+  id                String             @id @default(uuid())
+  clerkUserId       String             @unique
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  encounters        Encounter[]
+  completedAttempts CompletedAttempt[]
+}
+
+model Encounter {
+  id                String             @id @default(uuid())
+  userId            String
+  caseId            String
+  status            EncounterStatus    @default(ACTIVE)
+  version           Int                @default(1)
+  encounterData     Json
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  completedAttempts CompletedAttempt[]
+
+  @@index([userId, caseId, createdAt])
+}
+
+model CompletedAttempt {
+  id                String                    @id @default(uuid())
+  attemptId         String
+  userId            String
+  encounterId       String
+  caseId            String
+  generationStatus  ReportGenerationStatus    @default(PENDING)
+  generationError   String?
+  integrityStatus   ArtifactIntegrityStatus   @default(PENDING)
+  percentage        Float?
+  passed            Boolean                   @default(false)
+  completedAt       DateTime?
+  createdAt         DateTime                  @default(now())
+  updatedAt         DateTime                  @updatedAt
+  user              User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  encounter         Encounter                 @relation(fields: [encounterId], references: [id], onDelete: Cascade)
+  facultyEvaluation FacultyEvaluation?
+  facultyScore      FacultyScore?
+  facultyReport     FacultyReport?
+
+  @@unique([userId, attemptId])
+  @@index([userId, caseId, createdAt])
+  @@index([generationStatus])
+  @@index([encounterId])
+}
+
+model FacultyEvaluation {
+  id                 String           @id @default(uuid())
+  completedAttemptId String           @unique
+  data               Json
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  completedAttempt   CompletedAttempt @relation(fields: [completedAttemptId], references: [id], onDelete: Cascade)
+}
+
+model FacultyScore {
+  id                 String           @id @default(uuid())
+  completedAttemptId String           @unique
+  data               Json
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  completedAttempt   CompletedAttempt @relation(fields: [completedAttemptId], references: [id], onDelete: Cascade)
+}
+
+model FacultyReport {
+  id                 String           @id @default(uuid())
+  completedAttemptId String           @unique
+  data               Json
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  completedAttempt   CompletedAttempt @relation(fields: [completedAttemptId], references: [id], onDelete: Cascade)
+}
