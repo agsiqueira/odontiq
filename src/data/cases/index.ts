@@ -6,11 +6,27 @@ import case05 from "./case-05/case.json";
 
 export type CaseStatus = "not-started" | "in-progress" | "completed";
 export type CaseUrgency = "Routine" | "Urgent" | "Emergency";
+export type EvaluatorDomain =
+  | "communication"
+  | "history"
+  | "examination"
+  | "reasoning"
+  | "management";
+
+type ChecklistItem = {
+  id: string;
+  label: string;
+  domain: EvaluatorDomain;
+  triggers?: string[];
+  weight: number;
+  critical?: boolean;
+};
 
 export type CaseData = {
   metadata: {
     schemaVersion: "1.0";
     id: string;
+    title: string;
     estimatedTime: string;
     urgency: CaseUrgency;
     status: CaseStatus;
@@ -24,8 +40,19 @@ export type CaseData = {
   };
   voicePreference?: {
     provider: "navigator";
-    voiceId: string;
+    voiceId?: string;
+    preferredVoiceId?: string;
+    fallbackVoices?: Array<{
+      voiceId: string;
+      speed: number;
+    }>;
     speed?: number;
+    gender?: "male" | "female" | "nonbinary" | "unspecified";
+    ageGroup?: "child" | "young_adult" | "adult" | "older";
+    bodyHabitus?: "heavier_set" | "average" | "slender" | "unspecified";
+    tone?: string;
+    speakingStyle?: string;
+    demeanor?: string[];
   };
   assets: {
     rest: string;
@@ -48,17 +75,8 @@ export type CaseData = {
       checklistItemId?: string;
     }>;
   };
-  patientChecklist: Array<{
-    id: string;
-    label: string;
-    triggers: string[];
-    weight: number;
-  }>;
-  clinicalChecklist: Array<{
-    id: string;
-    label: string;
-    weight: number;
-  }>;
+  patientChecklist: ChecklistItem[];
+  clinicalChecklist: ChecklistItem[];
   supportingInfo: {
     history: {
       onset: string;
@@ -77,6 +95,10 @@ export type CaseData = {
     diagnosis: string;
     differentialDiagnosis: string[];
     managementExpectations: string[];
+    requiredInvestigations: string[];
+    treatmentExpectations: string[];
+    referralExpectations: string[];
+    safetyNettingExpectations: string[];
     learningObjectives: string[];
     reportData: {
       keyFindings: string[];

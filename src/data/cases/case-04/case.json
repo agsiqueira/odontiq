@@ -6,12 +6,18 @@
     "urgency": "Routine",
     "status": "completed",
     "score": 72,
-    "chiefComplaint": "It really hurts when I bite down, but my face does not look swollen."
+    "chiefComplaint": "It really hurts when I bite down, but my face does not look swollen.",
+    "title": "Pain When Biting After a Large Restoration"
   },
   "patient": {
     "name": "Noah Patel",
     "age": 38,
     "sex": "Male"
+  },
+  "voicePreference": {
+    "provider": "navigator",
+    "voiceId": "am_michael",
+    "speed": 1.1
   },
   "assets": {
     "rest": "/patients/case-04/rest.png",
@@ -332,7 +338,8 @@
         "good morning",
         "good afternoon"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "communication"
     },
     {
       "id": "chief-complaint",
@@ -344,7 +351,8 @@
         "chief complaint",
         "what is bothering you"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "duration",
@@ -356,7 +364,8 @@
         "how many weeks",
         "for how long"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "onset",
@@ -368,7 +377,8 @@
         "first notice",
         "begin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "biting-pain",
@@ -380,7 +390,8 @@
         "chewing",
         "pressure"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "thermal-sensitivity",
@@ -393,7 +404,8 @@
         "sensitivity",
         "thermal"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "swelling",
@@ -405,7 +417,8 @@
         "face",
         "jaw swelling"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "dental-history",
@@ -417,7 +430,8 @@
         "previous treatment",
         "cavity"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "bruxism",
@@ -428,7 +442,8 @@
         "clench",
         "clenching"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "drainage",
@@ -440,7 +455,8 @@
         "bad taste",
         "discharge"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "patient-goals",
@@ -451,7 +467,8 @@
         "goal",
         "worried"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "communication"
     },
     {
       "id": "examination-findings",
@@ -468,7 +485,8 @@
         "clinical findings",
         "findings"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "examination"
     },
     {
       "id": "pain-character",
@@ -481,7 +499,8 @@
         "scale",
         "rate"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "allergies",
@@ -492,7 +511,8 @@
         "allergies",
         "penicillin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "medications",
@@ -506,7 +526,8 @@
         "antibiotic",
         "taken"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "systemic-symptoms",
@@ -518,34 +539,40 @@
         "systemic",
         "feel sick"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     }
   ],
   "clinicalChecklist": [
     {
       "id": "clinical-1",
       "label": "Characterizes bite-provoked pain pattern",
-      "weight": 3
+      "weight": 3,
+      "domain": "history"
     },
     {
       "id": "clinical-2",
       "label": "Screens for infection symptoms despite routine appearance",
-      "weight": 2
+      "weight": 2,
+      "domain": "history"
     },
     {
       "id": "clinical-3",
       "label": "Asks about restorations and hard-biting event",
-      "weight": 2
+      "weight": 2,
+      "domain": "history"
     },
     {
       "id": "clinical-4",
       "label": "Assesses thermal and spontaneous pain",
-      "weight": 2
+      "weight": 2,
+      "domain": "history"
     },
     {
       "id": "clinical-5",
       "label": "Considers cracked tooth/occlusal trauma differential",
-      "weight": 3
+      "weight": 3,
+      "domain": "reasoning"
     }
   ],
   "supportingInfo": {
@@ -622,6 +649,18 @@
       "patientChecklistWeight": 0.6,
       "clinicalChecklistWeight": 0.4,
       "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    }
+    },
+    "requiredInvestigations": [
+      "Perform focused bite testing and restoration assessment.",
+      "Assess pulpal vitality and periapical status."
+    ],
+    "treatmentExpectations": [
+      "Avoid unnecessary infection treatment if red flags are absent.",
+      "Discuss protective restoration or occlusal adjustment depending on findings."
+    ],
+    "referralExpectations": [],
+    "safetyNettingExpectations": [
+      "Escalation needed if swelling, fever, spontaneous pain, or drainage develops."
+    ]
   }
 }

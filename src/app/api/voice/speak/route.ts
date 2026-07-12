@@ -100,8 +100,13 @@ function resolveVoicePreference(caseData: CaseData): ResolvedVoicePreference {
     };
   }
 
+  const configuredVoiceId =
+    trimVoiceId(caseVoicePreference.preferredVoiceId) ??
+    trimVoiceId(caseVoicePreference.voiceId) ??
+    defaultVoiceId;
+
   return {
-    voiceId: caseVoicePreference.voiceId.trim() || defaultVoiceId,
+    voiceId: configuredVoiceId,
     speed:
       typeof caseVoicePreference.speed === "number" &&
       Number.isFinite(caseVoicePreference.speed) &&
@@ -109,6 +114,11 @@ function resolveVoicePreference(caseData: CaseData): ResolvedVoicePreference {
         ? caseVoicePreference.speed
         : defaultSpeed,
   };
+}
+
+function trimVoiceId(voiceId: string | undefined) {
+  const trimmedVoiceId = voiceId?.trim();
+  return trimmedVoiceId ? trimmedVoiceId : undefined;
 }
 
 function statusForNavigatorSpeechError(error: NavigatorSpeechError) {

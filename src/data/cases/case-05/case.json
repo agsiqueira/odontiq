@@ -6,12 +6,18 @@
     "urgency": "Urgent",
     "status": "completed",
     "score": 64,
-    "chiefComplaint": "The pain wakes me up at night, and I cannot get comfortable."
+    "chiefComplaint": "The pain wakes me up at night, and I cannot get comfortable.",
+    "title": "Persistent Toothache with Temperature Sensitivity"
   },
   "patient": {
     "name": "Sofia Williams",
     "age": 27,
     "sex": "Female"
+  },
+  "voicePreference": {
+    "provider": "navigator",
+    "voiceId": "af_heart",
+    "speed": 0.88
   },
   "assets": {
     "rest": "/patients/case-05/rest.png",
@@ -302,7 +308,8 @@
         "good morning",
         "good afternoon"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "communication"
     },
     {
       "id": "chief-complaint",
@@ -314,7 +321,8 @@
         "chief complaint",
         "what is bothering you"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "duration",
@@ -326,7 +334,8 @@
         "how many weeks",
         "for how long"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "onset",
@@ -338,7 +347,8 @@
         "first notice",
         "begin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "thermal-sensitivity",
@@ -351,7 +361,8 @@
         "sensitivity",
         "thermal"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "radiation",
@@ -362,7 +373,8 @@
         "spread",
         "travels"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "swelling",
@@ -374,7 +386,8 @@
         "face",
         "jaw swelling"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "medications",
@@ -388,7 +401,8 @@
         "antibiotic",
         "taken"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "medical-history",
@@ -400,7 +414,8 @@
         "pregnancy",
         "health conditions"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "allergies",
@@ -411,7 +426,8 @@
         "allergies",
         "penicillin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "examination-findings",
@@ -428,7 +444,8 @@
         "clinical findings",
         "findings"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "examination"
     },
     {
       "id": "pain-character",
@@ -441,7 +458,8 @@
         "scale",
         "rate"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "systemic-symptoms",
@@ -453,34 +471,42 @@
         "systemic",
         "feel sick"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     }
   ],
   "clinicalChecklist": [
     {
       "id": "clinical-1",
       "label": "Identifies spontaneous/nocturnal pain pattern",
-      "weight": 3
+      "weight": 3,
+      "domain": "history"
     },
     {
       "id": "clinical-2",
       "label": "Asks thermal trigger and relief questions",
-      "weight": 3
+      "weight": 3,
+      "domain": "history"
     },
     {
       "id": "clinical-3",
       "label": "Screens for swelling and systemic red flags",
-      "weight": 2
+      "weight": 2,
+      "domain": "history",
+      "critical": true
     },
     {
       "id": "clinical-4",
       "label": "Reviews pregnancy, medications, and allergies",
-      "weight": 2
+      "weight": 2,
+      "domain": "history",
+      "critical": true
     },
     {
       "id": "clinical-5",
       "label": "Recognizes likely irreversible pulpitis and urgent dental need",
-      "weight": 2
+      "weight": 2,
+      "domain": "reasoning"
     }
   ],
   "supportingInfo": {
@@ -559,6 +585,20 @@
       "patientChecklistWeight": 0.6,
       "clinicalChecklistWeight": 0.4,
       "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    }
+    },
+    "requiredInvestigations": [
+      "Review focused painful-tooth examination image."
+    ],
+    "treatmentExpectations": [
+      "Plan urgent endodontic or definitive dental evaluation.",
+      "Provide analgesic guidance within scope and medical safety.",
+      "Avoid antibiotics when swelling/systemic infection is absent."
+    ],
+    "referralExpectations": [
+      "Plan urgent endodontic or definitive dental evaluation."
+    ],
+    "safetyNettingExpectations": [
+      "Give return precautions for swelling, fever, dysphagia, or dyspnea."
+    ]
   }
 }

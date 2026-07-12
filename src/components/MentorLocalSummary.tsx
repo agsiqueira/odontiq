@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import {
-  LAST_ENCOUNTER_STORAGE_KEY,
+  readCompletedEncounterAttempt,
   type LocalEncounterSummary,
 } from "@/lib/localEncounter";
 import { evaluateEncounter } from "@/lib/checklistEvaluation";
@@ -18,12 +18,14 @@ type MentorLocalSummaryProps = {
   caseId: string;
   patientName: string;
   checklistItems: MentorChecklistItem[];
+  attemptId: string;
 };
 
 export function MentorLocalSummary({
   caseId,
   patientName,
   checklistItems,
+  attemptId,
 }: MentorLocalSummaryProps) {
   const [summary, setSummary] = useState<LocalEncounterSummary | null>(null);
 
@@ -33,13 +35,13 @@ export function MentorLocalSummary({
     }
 
     const readTimer = window.setTimeout(() => {
-      setSummary(readLocalEncounter(caseId));
+      setSummary(readCompletedEncounterAttempt(caseId, attemptId));
     }, 0);
 
     return () => {
       window.clearTimeout(readTimer);
     };
-  }, [caseId]);
+  }, [attemptId, caseId]);
 
   const studentQuestionCount =
     summary?.conversationHistory.filter((message) => message.role === "student")
@@ -152,26 +154,4 @@ function ChecklistRows({
       })}
     </div>
   );
-}
-
-function readLocalEncounter(caseId: string) {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  const storedSummary = window.localStorage.getItem(
-    LAST_ENCOUNTER_STORAGE_KEY,
-  );
-
-  if (!storedSummary) {
-    return null;
-  }
-
-  try {
-    const parsedSummary = JSON.parse(storedSummary) as LocalEncounterSummary;
-
-    return parsedSummary.caseId === caseId ? parsedSummary : null;
-  } catch {
-    return null;
-  }
 }

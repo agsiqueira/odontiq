@@ -6,12 +6,18 @@
     "urgency": "Urgent",
     "status": "not-started",
     "score": null,
-    "chiefComplaint": "My tooth pain is intense, and my cheek feels swollen and hot."
+    "chiefComplaint": "My tooth pain is intense, and my cheek feels swollen and hot.",
+    "title": "Severe Tooth Pain with Facial Swelling"
   },
   "patient": {
     "name": "Marcus Lee",
     "age": 41,
     "sex": "Male"
+  },
+  "voicePreference": {
+    "provider": "navigator",
+    "voiceId": "am_liam",
+    "speed": 1.04
   },
   "assets": {
     "rest": "/patients/case-02/rest.png",
@@ -304,7 +310,8 @@
         "good morning",
         "good afternoon"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "communication"
     },
     {
       "id": "chief-complaint",
@@ -316,7 +323,8 @@
         "chief complaint",
         "what is bothering you"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "duration",
@@ -328,7 +336,8 @@
         "how many weeks",
         "for how long"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "onset",
@@ -340,7 +349,8 @@
         "first notice",
         "begin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "thermal-sensitivity",
@@ -353,7 +363,8 @@
         "sensitivity",
         "thermal"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "biting-pain",
@@ -365,7 +376,8 @@
         "chewing",
         "pressure"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "swelling",
@@ -377,7 +389,8 @@
         "face",
         "jaw swelling"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "drainage",
@@ -389,7 +402,8 @@
         "bad taste",
         "discharge"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "medications",
@@ -403,7 +417,8 @@
         "antibiotic",
         "taken"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "allergies",
@@ -414,7 +429,8 @@
         "allergies",
         "penicillin"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "airway",
@@ -428,7 +444,9 @@
         "trouble breathing",
         "trouble swallowing"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history",
+      "critical": true
     },
     {
       "id": "examination-findings",
@@ -445,7 +463,8 @@
         "clinical findings",
         "findings"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "examination"
     },
     {
       "id": "pain-character",
@@ -458,7 +477,8 @@
         "scale",
         "rate"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     },
     {
       "id": "systemic-symptoms",
@@ -470,34 +490,42 @@
         "systemic",
         "feel sick"
       ],
-      "weight": 1
+      "weight": 1,
+      "domain": "history"
     }
   ],
   "clinicalChecklist": [
     {
       "id": "clinical-1",
       "label": "Characterizes thermal and biting symptoms",
-      "weight": 2
+      "weight": 2,
+      "domain": "history"
     },
     {
       "id": "clinical-2",
       "label": "Screens for spreading infection red flags",
-      "weight": 3
+      "weight": 3,
+      "domain": "history",
+      "critical": true
     },
     {
       "id": "clinical-3",
       "label": "Asks about swelling, drainage, and bad taste",
-      "weight": 2
+      "weight": 2,
+      "domain": "history"
     },
     {
       "id": "clinical-4",
       "label": "Reviews analgesics, antibiotics, and allergies",
-      "weight": 2
+      "weight": 2,
+      "domain": "management"
     },
     {
       "id": "clinical-5",
       "label": "Identifies likely acute apical abscess and urgency",
-      "weight": 3
+      "weight": 3,
+      "domain": "reasoning",
+      "critical": true
     }
   ],
   "supportingInfo": {
@@ -575,6 +603,19 @@
       "patientChecklistWeight": 0.6,
       "clinicalChecklistWeight": 0.4,
       "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    }
+    },
+    "requiredInvestigations": [
+      "Review focused dental examination image for the painful upper tooth area."
+    ],
+    "treatmentExpectations": [
+      "Plan urgent dental evaluation for source control.",
+      "Consider antibiotics only when swelling/systemic involvement supports use."
+    ],
+    "referralExpectations": [
+      "Assess infection spread and systemic involvement."
+    ],
+    "safetyNettingExpectations": [
+      "Give return precautions for fever, dysphagia, dyspnea, or worsening swelling."
+    ]
   }
 }

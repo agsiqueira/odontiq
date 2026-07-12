@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# generated development artifacts
+/dev-output/
+
 # next.js
 /.next/
 /out/

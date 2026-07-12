@@ -2,6 +2,7 @@ import {
   CASE_DATA,
   type CaseStatus,
   type CaseUrgency,
+  type EvaluatorDomain,
 } from "@/data/cases";
 
 export type { CaseStatus, CaseUrgency };
@@ -12,9 +13,23 @@ export type CaseExamination = {
   file: string;
 };
 
+export type CasePatientChecklistItem = {
+  id: string;
+  label: string;
+  domain: EvaluatorDomain;
+  triggers?: string[];
+};
+
+export type CaseClinicalChecklistItem = {
+  id: string;
+  label: string;
+  domain: EvaluatorDomain;
+};
+
 export type OdontIQCase = {
   id: string;
   patientName: string;
+  title: string;
   age: number;
   estimatedTime: string;
   urgency: CaseUrgency;
@@ -26,11 +41,14 @@ export type OdontIQCase = {
     talking: string;
     examinations: CaseExamination[];
   };
+  patientChecklist: CasePatientChecklistItem[];
+  clinicalChecklist: CaseClinicalChecklistItem[];
 };
 
 export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
   id: caseData.metadata.id,
   patientName: caseData.patient.name,
+  title: caseData.metadata.title,
   age: caseData.patient.age,
   estimatedTime: caseData.metadata.estimatedTime,
   urgency: caseData.metadata.urgency,
@@ -46,47 +64,19 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
       file: examination.image,
     })),
   },
+  patientChecklist: caseData.patientChecklist.map((item) => ({
+    id: item.id,
+    label: item.label,
+    domain: item.domain,
+    triggers: item.triggers,
+  })),
+  clinicalChecklist: caseData.clinicalChecklist.map((item) => ({
+    id: item.id,
+    label: item.label,
+    domain: item.domain,
+  })),
 }));
 
 export function getCaseById(caseId: string) {
   return CASES.find((patientCase) => patientCase.id === caseId);
-}
-
-export function getRecommendedCase() {
-  const unfinished = CASES.find(
-    (patientCase) => patientCase.status === "in-progress"
-  );
-
-  if (unfinished) {
-    return {
-      patientCase: unfinished,
-      label: "Continue Consultation",
-      message: undefined,
-    };
-  }
-
-  const nextPatient = CASES.find(
-    (patientCase) => patientCase.status === "not-started"
-  );
-
-  if (nextPatient) {
-    return {
-      patientCase: nextPatient,
-      label: "Next Patient",
-      message: undefined,
-    };
-  }
-
-  const lowestScorePatient = CASES.reduce((lowest, patientCase) => {
-    const currentScore = patientCase.score ?? 100;
-    const lowestScore = lowest.score ?? 100;
-    return currentScore < lowestScore ? patientCase : lowest;
-  }, CASES[0]);
-
-  return {
-    patientCase: lowestScorePatient,
-    label: "Recommended Retry",
-    message:
-      "You completed all patient cases. This patient has the greatest opportunity for improvement.",
-  };
 }

@@ -6,6 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export:rubric-calibration": "node scripts/exportRubricCalibration.mjs",
+    "validate:rubrics": "node scripts/validateFacultyRubrics.mjs",
+    "validate:canonical-pdf": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalFacultyPdf.ts",
+    "validate:canonical-report-generation": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalReportGeneration.ts",
+    "validate:post-semantic-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePostSemanticMergeRetry.ts",
+    "validate:immediate-mentor": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateImmediateMentorTransition.ts",
+    "validate:faculty-scoring": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFacultyScoring.ts",
+    "validate:explicit-semantic-evidence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateExplicitSemanticEvidence.ts",
+    "validate:completed-encounter-storage": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedEncounterStorage.ts",
+    "validate:home-progression": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateHomeProgression.ts",
     "lint": "eslint"
   },
   "dependencies": {

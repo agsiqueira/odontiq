@@ -19,6 +19,8 @@ export function getAIProvider(): AIProvider {
 
 export type {
   AIProvider,
+  AIProviderResponse,
+  AITextGenerationInput,
   ConversationGatewayInput,
   ConversationGatewayOutput,
 } from "@/lib/ai/provider";

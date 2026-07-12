@@ -29,10 +29,24 @@ export type ConversationGatewayOutput = {
 
 export type AIProviderResponse = {
   text: string;
+  diagnostics?: {
+    provider: string;
+    status?: number;
+    contentType?: string;
+  };
+};
+
+export type AITextGenerationInput = {
+  systemPrompt: string;
+  messages: ConversationChatMessage[];
+  temperature?: number;
+  maxTokens?: number;
+  stop?: string[];
 };
 
 export interface AIProvider {
   name: string;
+  generateText(input: AITextGenerationInput): Promise<AIProviderResponse>;
   generateConversationResponse(
     input: ConversationGatewayInput,
   ): Promise<AIProviderResponse>;

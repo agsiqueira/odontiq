@@ -1,13 +1,16 @@
 import { getAIProvider } from "@/lib/ai";
 import type {
   AIProvider,
-  ConversationChatMessage,
   ConversationGatewayInput,
-  ConversationGatewayRequest,
 } from "@/lib/ai";
+import type {
+  ConversationChatMessage,
+  ConversationGatewayRequest,
+} from "@/lib/ai/provider";
 import { loadCase, type CaseData } from "@/data/cases";
 import { buildPatientDisclosureState } from "@/lib/patientDisclosure";
 import type { PatientDisclosureState } from "@/lib/patientDisclosure";
+import { NavigatorProviderError } from "@/lib/ai/navigatorProvider";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
@@ -29,7 +32,7 @@ Maintain the patient's identity, tone, and communication style consistently.
 
 Return only the patient response text.`;
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<Response> {
   let payload: unknown;
 
   try {
@@ -84,6 +87,17 @@ export async function POST(request: Request) {
       encounterId: payload.encounterId,
     });
   } catch (error) {
+    if (process.env.NODE_ENV !== "production") {
+      console.error("Conversation provider request failed.", {
+        provider: provider?.name ?? "unknown",
+        category:
+          error instanceof NavigatorProviderError ? error.category : "unknown",
+        status: error instanceof NavigatorProviderError ? error.status : undefined,
+        contentType:
+          error instanceof NavigatorProviderError ? error.contentType : undefined,
+        message: error instanceof Error ? error.message : "Conversation failed",
+      });
+    }
     return Response.json(
       {
         success: false,
@@ -117,7 +131,7 @@ function isConversationRequest(
 function buildPatientSystemPrompt(
   patientCase: CaseData,
   disclosureState: PatientDisclosureState,
-) {
+): string {
   return [
     PATIENT_ROLE_SYSTEM_PROMPT,
     "",
@@ -163,7 +177,9 @@ function buildSanitizedPatientContext(
   };
 }
 
-function shouldIncludeOpeningGreeting(disclosureState: PatientDisclosureState) {
+function shouldIncludeOpeningGreeting(
+  disclosureState: PatientDisclosureState,
+): boolean {
   return (
     disclosureState.alreadyDisclosed.length === 0 &&
     disclosureState.allowedThisTurn.length === 0 &&
