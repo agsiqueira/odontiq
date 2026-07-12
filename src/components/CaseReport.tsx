@@ -10,13 +10,13 @@ import {
   ArrowLeft,
   Download,
   Home,
-  RotateCcw,
 } from "lucide-react";
 import { Component, useCallback, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import { FacultyCaseReport } from "@/components/FacultyCaseReport";
+import { RetryCaseButton } from "@/components/RetryCaseButton";
 import {
   readCompletedEncounterAttempt,
   type LocalEncounterSummary,
@@ -711,16 +711,7 @@ function ReportNavigation({ caseId }: { caseId: string }) {
           Return to Mentor
         </Link>
       </Button>
-      <Button
-        asChild
-        variant="outline"
-        className="h-11 rounded-xl bg-[var(--color-surface)]"
-      >
-        <Link href={`/encounter/${caseId}`}>
-          <RotateCcw className="size-4" />
-          Retry Case
-        </Link>
-      </Button>
+      <RetryCaseButton caseId={caseId} />
       <Button
         asChild
         variant="outline"

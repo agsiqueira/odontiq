@@ -7,10 +7,10 @@ import {
   CheckCircle2,
   ChevronDown,
   Home,
-  RotateCcw,
   Download,
 } from "lucide-react";
 
+import { RetryCaseButton } from "@/components/RetryCaseButton";
 import { Button } from "@/components/ui/button";
 import type {
   FacultyReport,
@@ -605,16 +605,7 @@ function ReportNavigation({
           Back to Mentor
         </Link>
       </Button>
-      <Button
-        asChild
-        variant="outline"
-        className="h-11 rounded-xl bg-[var(--color-surface)]"
-      >
-        <Link href={`/encounter/${caseId}`}>
-          <RotateCcw className="size-4" />
-          Retry Case
-        </Link>
-      </Button>
+      <RetryCaseButton caseId={caseId} />
       <Button
         asChild
         variant="outline"

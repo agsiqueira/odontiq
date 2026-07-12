@@ -25,6 +25,7 @@ export type LocalEncounterEvent = {
 
 export type LocalEncounterSummary = {
   caseId: string;
+  serverEncounterId?: string;
   conversationHistory: ConversationMessage[];
   coveredFacts: string[];
   coveredChecklistItems: string[];

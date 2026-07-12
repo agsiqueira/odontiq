@@ -149,6 +149,15 @@ type ConversationApiResponse =
       error?: string;
     };
 
+type ServerEncounterResponse = {
+  id: string;
+  caseId: string;
+  status: "ACTIVE" | "COMPLETED";
+  version: number;
+  createdAt: string;
+  updatedAt: string;
+};
+
 function appendUnique(currentItems: string[], nextItems: string[] = []) {
   return Array.from(new Set([...currentItems, ...nextItems]));
 }
@@ -296,6 +305,9 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const [draftQuestion, setDraftQuestion] = useState("");
   const [isPauseDialogOpen, setIsPauseDialogOpen] = useState(false);
   const [isCompleting, setIsCompleting] = useState(false);
+  const [serverEncounterId, setServerEncounterId] = useState<string>();
+  const [encounterSyncError, setEncounterSyncError] = useState<string>();
+  const [isSyncingEncounter, setIsSyncingEncounter] = useState(false);
   const [mentorIntervention, setMentorIntervention] =
     useState<MentorInterventionState>(initialMentorInterventionState);
   const [facultyRubricEvaluation, setFacultyRubricEvaluation] =
@@ -314,6 +326,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const lastSnapshotStatus = useRef<"in-progress" | "paused">("in-progress");
   const hasRestoredSnapshot = useRef(false);
   const isCompletingRef = useRef(false);
+  const isSyncingEncounterRef = useRef(false);
   const isInputFocused = state.isInputFocused;
   const isTypingMode = isInputFocused;
   const isExaminationSheetOpen = state.activePanel === "examination";
@@ -432,6 +445,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
       return {
         caseId: patientCase.id,
+        serverEncounterId,
         conversationHistory: snapshotState.messages,
         coveredFacts: snapshotState.coveredFacts,
         coveredChecklistItems: snapshotState.coveredChecklistItems,
@@ -475,6 +489,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       facultyRubricEvaluation,
       mentorIntervention,
       patientCase.id,
+      serverEncounterId,
       state,
     ],
   );
@@ -510,12 +525,48 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     [buildEncounterSnapshot],
   );
 
+  const syncServerEncounter = useCallback(async () => {
+    if (isSyncingEncounterRef.current) return;
+    isSyncingEncounterRef.current = true;
+    setIsSyncingEncounter(true);
+    setEncounterSyncError(undefined);
+
+    try {
+      const response = await fetch("/api/encounters/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ caseId: patientCase.id }),
+      });
+      const payload: unknown = await response.json().catch(() => undefined);
+      if (!response.ok || !isServerEncounterResponse(payload)) {
+        throw new Error("encounter_sync_failed");
+      }
+      setServerEncounterId(payload.id);
+    } catch {
+      setEncounterSyncError(
+        "Encounter sync was interrupted. Your work is saved locally.",
+      );
+    } finally {
+      isSyncingEncounterRef.current = false;
+      setIsSyncingEncounter(false);
+    }
+  }, [patientCase.id]);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void syncServerEncounter();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [syncServerEncounter]);
+
   const saveLocalEncounterSummary = (finishEvent: EncounterEvent) => {
     const encounterEvents = [...state.encounterEvents, finishEvent];
     const completedAt = finishEvent.timestamp;
     const localSummary: CompletedEncounterAttempt = {
       attemptId: createCompletedEncounterAttemptId(),
       caseId: patientCase.id,
+      serverEncounterId,
       conversationHistory: state.messages,
       coveredFacts: state.coveredFacts,
       coveredChecklistItems: state.coveredChecklistItems,
@@ -563,6 +614,9 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         return;
       }
 
+      if (snapshot.serverEncounterId) {
+        setServerEncounterId(snapshot.serverEncounterId);
+      }
       const now = Date.now();
       const nowIso = new Date(now).toISOString();
       const pausedAt = snapshot.timers.pausedAt
@@ -914,12 +968,21 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     router.push("/home");
   };
 
-  const completeConsultation = () => {
+  const completeConsultation = async () => {
     if (isCompletingRef.current) {
       return;
     }
     isCompletingRef.current = true;
     setIsCompleting(true);
+
+    if (!serverEncounterId) {
+      setEncounterSyncError(
+        "The encounter must sync before it can be completed. Please retry sync.",
+      );
+      isCompletingRef.current = false;
+      setIsCompleting(false);
+      return;
+    }
     const finishEvent = createEncounterEvent("finish_consultation_clicked", {
       coveredFacts: state.coveredFacts,
       coveredChecklistItems: state.coveredChecklistItems,
@@ -939,18 +1002,40 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       speechRecognition.toggleListening();
     }
 
-    dispatch({
-      type: "recordEvent",
-      event: finishEvent,
-    });
-    const completedAttempt = saveLocalEncounterSummary(finishEvent);
-    router.push(
-      `/mentor/${patientCase.id}?attemptId=${encodeURIComponent(completedAttempt.attemptId)}`,
-    );
+    try {
+      const response = await fetch(
+        `/api/encounters/${encodeURIComponent(serverEncounterId)}/complete`,
+        { method: "POST" },
+      );
+      const payload: unknown = await response.json().catch(() => undefined);
+      if (
+        !response.ok ||
+        !isServerEncounterResponse(payload) ||
+        payload.id !== serverEncounterId ||
+        payload.status !== "COMPLETED"
+      ) {
+        throw new Error("encounter_completion_sync_failed");
+      }
+
+      dispatch({
+        type: "recordEvent",
+        event: finishEvent,
+      });
+      const completedAttempt = saveLocalEncounterSummary(finishEvent);
+      router.push(
+        `/mentor/${patientCase.id}?attemptId=${encodeURIComponent(completedAttempt.attemptId)}`,
+      );
+    } catch {
+      setEncounterSyncError(
+        "Encounter completion could not be synced. Your work is saved locally; please try again.",
+      );
+      isCompletingRef.current = false;
+      setIsCompleting(false);
+    }
   };
 
   const requestFinishConsultation = () => {
-    completeConsultation();
+    void completeConsultation();
   };
 
   const dismissMentorGuidanceCard = () => {
@@ -968,6 +1053,22 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     >
       <EncounterKeyboardFocus />
       <div className="mx-auto flex h-dvh min-h-0 w-full max-w-[30rem] flex-col px-4 pb-3 pt-4">
+        {encounterSyncError ? (
+          <div
+            role="alert"
+            className="mb-2 flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900"
+          >
+            <span>{encounterSyncError}</span>
+            <button
+              type="button"
+              className="shrink-0 font-semibold underline underline-offset-2"
+              onClick={() => void syncServerEncounter()}
+              disabled={isSyncingEncounter}
+            >
+              {isSyncingEncounter ? "Syncing..." : "Retry sync"}
+            </button>
+          </div>
+        ) : null}
         <header className="encounter-header flex items-center justify-between gap-3">
           <Button asChild variant="ghost" size="icon-lg" className="rounded-full">
             <Link href="/home" aria-label="Back to home">
@@ -1329,5 +1430,20 @@ function isSuccessfulConversationResponse(
     typeof candidate.response === "string" &&
     candidate.response.trim().length > 0 &&
     typeof candidate.encounterId === "string"
+  );
+}
+
+function isServerEncounterResponse(
+  value: unknown,
+): value is ServerEncounterResponse {
+  if (!value || typeof value !== "object") return false;
+  const candidate = value as Partial<ServerEncounterResponse>;
+  return (
+    typeof candidate.id === "string" &&
+    typeof candidate.caseId === "string" &&
+    (candidate.status === "ACTIVE" || candidate.status === "COMPLETED") &&
+    typeof candidate.version === "number" &&
+    typeof candidate.createdAt === "string" &&
+    typeof candidate.updatedAt === "string"
   );
 }

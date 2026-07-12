@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 
 import { AppShell } from "@/components/AppShell";
 import { MentorGeneratedDebrief } from "@/components/MentorGeneratedDebrief";
-import { MentorReturnToConsultation } from "@/components/MentorReturnToConsultation";
 import { Button } from "@/components/ui/button";
 import { loadCase } from "@/data/cases";
 import { getCaseById } from "@/lib/cases";
@@ -46,8 +45,7 @@ export default async function MentorPage({ params, searchParams }: MentorPagePro
         </div>
       </section>
 
-      <div className="mt-2 grid shrink-0 gap-2 sm:grid-cols-2">
-        <MentorReturnToConsultation caseId={patientCase.id} attemptId={attemptId} />
+      <div className="mt-2 flex shrink-0 justify-end">
         <Button
           asChild
           size="lg"

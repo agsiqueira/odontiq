@@ -2,8 +2,7 @@ import "server-only";
 
 import { auth } from "@clerk/nextjs/server";
 
-import { db } from "@/lib/db";
-import { resolveAppUserByClerkId } from "@/lib/resolveAppUser";
+import { userService } from "@/lib/persistence/services";
 
 export async function requireAppUser() {
   const clerkAuth = await auth();
@@ -12,5 +11,5 @@ export async function requireAppUser() {
     return clerkAuth.redirectToSignIn();
   }
 
-  return resolveAppUserByClerkId(db.user, clerkAuth.userId);
+  return userService.resolveAuthenticatedUser(clerkAuth.userId);
 }

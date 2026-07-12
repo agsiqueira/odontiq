@@ -9,9 +9,14 @@ import { FACULTY_RUBRIC_VERSION } from "../src/lib/facultyRubric/evaluation/stat
 import type { FacultyRubricEvaluationState } from "../src/lib/facultyRubric/evaluation/state";
 import { facultyRubrics } from "../src/lib/facultyRubric/caseRubrics";
 import {
+  createCompletedEncounterAttemptId,
   readCompletedEncounterAttempt,
+  readEncounterSnapshot,
+  removeEncounterSnapshot,
   writeCompletedEncounterAttempt,
+  writeEncounterSnapshot,
   type CompletedEncounterAttempt,
+  type LocalEncounterSnapshot,
 } from "../src/lib/localEncounter";
 
 const values = new Map<string, string>();
@@ -173,5 +178,53 @@ const mentorSource = await readFile(
 );
 assert(mentorSource.includes("ensureCanonicalFacultyArtifacts({ caseId, attemptId })"));
 assert(mentorSource.includes("void generateDebrief({ summary, controller })"));
+
+const finishedHistory = createSummary("completed-history");
+persist(finishedHistory);
+const activeSnapshot: LocalEncounterSnapshot = {
+  caseId,
+  conversationHistory: [],
+  coveredFacts: [],
+  coveredChecklistItems: [],
+  encounterEvents: [],
+  examinationsViewed: [],
+  savedAt: "2026-07-12T17:00:00.000Z",
+  lifecycleStatus: "in-progress",
+  currentView: {
+    communicationMode: "text",
+    activePanel: "conversation",
+  },
+  timers: {
+    activeDurationMs: 0,
+    pausedDurationMs: 0,
+  },
+  metadata: {
+    createdAt: "2026-07-12T17:00:00.000Z",
+    updatedAt: "2026-07-12T17:00:00.000Z",
+  },
+};
+writeEncounterSnapshot(activeSnapshot);
+removeEncounterSnapshot(caseId);
+assert.equal(readEncounterSnapshot(caseId), null, "Retry must not restore a prior snapshot.");
+assert(
+  readCompletedEncounterAttempt(caseId, finishedHistory.attemptId),
+  "Clearing retry state must preserve completed-attempt history.",
+);
+assert.notEqual(
+  createCompletedEncounterAttemptId(),
+  createCompletedEncounterAttemptId(),
+  "A newly completed retry must receive a new attempt ID.",
+);
+
+const mentorPageSource = await readFile("src/app/mentor/[caseId]/page.tsx", "utf8");
+const retrySource = await readFile("src/components/RetryCaseButton.tsx", "utf8");
+assert(!mentorPageSource.includes("ReturnToConsultation"));
+assert(!mentorPageSource.includes("Return to Consultation"));
+assert(retrySource.includes("removeEncounterSnapshot(caseId)"));
+assert(
+  retrySource.indexOf("removeEncounterSnapshot(caseId)") <
+    retrySource.indexOf("router.push"),
+  "Retry must clear resumable state before opening a new encounter.",
+);
 
 console.log("Immediate mentor transition validation passed.");

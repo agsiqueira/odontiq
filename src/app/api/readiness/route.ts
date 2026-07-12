@@ -1,4 +1,4 @@
-import { db } from "@/lib/db";
+import { readinessService } from "@/lib/persistence/services/readiness";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -19,7 +19,7 @@ export async function GET() {
   }
 
   try {
-    await db.$queryRaw`SELECT 1`;
+    await readinessService.checkDatabaseConnection();
     return Response.json({ status: "ready", database: "reachable" }, { status: 200 });
   } catch {
     return Response.json(
