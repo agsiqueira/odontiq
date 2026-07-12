@@ -26,6 +26,7 @@ export type LocalEncounterEvent = {
 export type LocalEncounterSummary = {
   caseId: string;
   serverEncounterId?: string;
+  serverEncounterRevision?: number;
   conversationHistory: ConversationMessage[];
   coveredFacts: string[];
   coveredChecklistItems: string[];
@@ -208,6 +209,19 @@ export function removeEncounterSnapshot(caseId: string) {
     ENCOUNTER_SNAPSHOTS_STORAGE_KEY,
     JSON.stringify(snapshots),
   );
+}
+
+export function writeEncounterSnapshotServerRevision(
+  caseId: string,
+  serverEncounterId: string,
+  serverEncounterRevision: number,
+) {
+  const snapshot = readEncounterSnapshot(caseId);
+  if (!snapshot || snapshot.serverEncounterId !== serverEncounterId) return;
+  writeEncounterSnapshot({
+    ...snapshot,
+    serverEncounterRevision,
+  });
 }
 
 function isEncounterSnapshotIndex(

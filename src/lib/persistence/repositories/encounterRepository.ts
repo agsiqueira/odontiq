@@ -64,6 +64,26 @@ export class EncounterRepository {
 
     return this.findOwnedById(userId, encounterId);
   }
+
+  async updateDocumentIfRevision(
+    userId: string,
+    encounterId: string,
+    revision: number,
+    encounterData: unknown,
+  ) {
+    const jsonDocument = JSON.parse(
+      JSON.stringify(encounterData),
+    ) as Prisma.InputJsonValue;
+    const result = await db.encounter.updateMany({
+      where: { id: encounterId, userId, version: revision },
+      data: {
+        encounterData: jsonDocument,
+        version: { increment: 1 },
+      },
+    });
+    if (result.count === 0) return null;
+    return this.findOwnedById(userId, encounterId);
+  }
 }
 
 export const encounterRepository = new EncounterRepository();

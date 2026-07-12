@@ -29,11 +29,18 @@ import {
   type MentorInterventionState,
   writeCompletedEncounterAttempt,
   writeEncounterSnapshot,
+  writeEncounterSnapshotServerRevision,
 } from "@/lib/localEncounter";
 import {
   type FacultyRubricEvaluationState,
 } from "@/lib/facultyRubric/evaluation/state";
 import { createFacultyGenerationAttempt } from "@/lib/facultyRubric/report/clientGeneration";
+import { buildEncounterDocument } from "@/lib/encounter/encounterDocumentBuilder";
+import { persistCompletedAttemptToServer } from "@/lib/persistence/completedAttemptClient";
+import {
+  EncounterSyncService,
+  type EncounterSyncState,
+} from "@/lib/persistence/services/encounterSyncService";
 import {
   type ConversationMessage,
   type ConversationRole,
@@ -308,6 +315,8 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const [serverEncounterId, setServerEncounterId] = useState<string>();
   const [encounterSyncError, setEncounterSyncError] = useState<string>();
   const [isSyncingEncounter, setIsSyncingEncounter] = useState(false);
+  const [encounterSyncStatus, setEncounterSyncStatus] =
+    useState<EncounterSyncState["status"]>("idle");
   const [mentorIntervention, setMentorIntervention] =
     useState<MentorInterventionState>(initialMentorInterventionState);
   const [facultyRubricEvaluation, setFacultyRubricEvaluation] =
@@ -327,6 +336,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const hasRestoredSnapshot = useRef(false);
   const isCompletingRef = useRef(false);
   const isSyncingEncounterRef = useRef(false);
+  const serverEncounterRevisionRef = useRef(1);
+  const encounterSyncServiceRef = useRef<EncounterSyncService | undefined>(
+    undefined,
+  );
   const isInputFocused = state.isInputFocused;
   const isTypingMode = isInputFocused;
   const isExaminationSheetOpen = state.activePanel === "examination";
@@ -446,6 +459,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       return {
         caseId: patientCase.id,
         serverEncounterId,
+        serverEncounterRevision: serverEncounterRevisionRef.current,
         conversationHistory: snapshotState.messages,
         coveredFacts: snapshotState.coveredFacts,
         coveredChecklistItems: snapshotState.coveredChecklistItems,
@@ -525,6 +539,22 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     [buildEncounterSnapshot],
   );
 
+  const handleEncounterSyncState = useCallback((syncState: EncounterSyncState) => {
+    serverEncounterRevisionRef.current = syncState.revision;
+    setEncounterSyncStatus(syncState.status);
+    if (syncState.status === "conflict") {
+      setEncounterSyncError(
+        "This encounter changed on the server. Your local work is preserved and was not overwritten.",
+      );
+    } else if (syncState.status === "network-error") {
+      setEncounterSyncError(
+        "Encounter sync was interrupted. Your work is saved locally.",
+      );
+    } else if (syncState.status === "synced") {
+      setEncounterSyncError(undefined);
+    }
+  }, []);
+
   const syncServerEncounter = useCallback(async () => {
     if (isSyncingEncounterRef.current) return;
     isSyncingEncounterRef.current = true;
@@ -541,7 +571,54 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       if (!response.ok || !isServerEncounterResponse(payload)) {
         throw new Error("encounter_sync_failed");
       }
+      const cachedSnapshot = readEncounterSnapshot(patientCase.id);
+      const initialRevision =
+        cachedSnapshot?.serverEncounterId === payload.id &&
+        typeof cachedSnapshot.serverEncounterRevision === "number"
+          ? cachedSnapshot.serverEncounterRevision
+          : payload.version;
+      encounterSyncServiceRef.current?.destroy();
+      const syncService = new EncounterSyncService({
+        encounterId: payload.id,
+        revision: initialRevision,
+        onStateChange: (syncState) => {
+          handleEncounterSyncState(syncState);
+          writeEncounterSnapshotServerRevision(
+            patientCase.id,
+            payload.id,
+            syncState.revision,
+          );
+        },
+      });
+      encounterSyncServiceRef.current = syncService;
+      serverEncounterRevisionRef.current = initialRevision;
       setServerEncounterId(payload.id);
+      if (!cachedSnapshot) {
+        const serverDocument = await syncService.load();
+        if (serverDocument) {
+          encounterCreatedAt.current = serverDocument.createdAt;
+          accumulatedActiveMs.current = serverDocument.timing.activeDurationMs;
+          accumulatedPausedMs.current = serverDocument.timing.pausedDurationMs;
+          activeSegmentStartedAt.current = Date.now();
+          messageSequence.current = serverDocument.messages.length;
+          dispatch({
+            type: "restoreEncounter",
+            state: {
+              communicationMode: "voice",
+              activePanel: "controls",
+              isSpeaking: false,
+              isInputFocused: false,
+              responseError: undefined,
+              messages: serverDocument.messages,
+              coveredFacts: serverDocument.disclosedFacts,
+              coveredChecklistItems: serverDocument.checklistCoverage.itemIds,
+              coverageEvidence: serverDocument.checklistCoverage.evidence,
+              encounterEvents:
+                serverDocument.lifecycleEvents as EncounterEvent[],
+            },
+          });
+        }
+      }
     } catch {
       setEncounterSyncError(
         "Encounter sync was interrupted. Your work is saved locally.",
@@ -550,7 +627,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       isSyncingEncounterRef.current = false;
       setIsSyncingEncounter(false);
     }
-  }, [patientCase.id]);
+  }, [handleEncounterSyncState, patientCase.id]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -560,13 +637,21 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     return () => window.clearTimeout(timer);
   }, [syncServerEncounter]);
 
-  const saveLocalEncounterSummary = (finishEvent: EncounterEvent) => {
+  useEffect(() => {
+    return () => encounterSyncServiceRef.current?.destroy();
+  }, []);
+
+  const saveLocalEncounterSummary = (
+    finishEvent: EncounterEvent,
+    attemptId: string,
+  ) => {
     const encounterEvents = [...state.encounterEvents, finishEvent];
     const completedAt = finishEvent.timestamp;
     const localSummary: CompletedEncounterAttempt = {
-      attemptId: createCompletedEncounterAttemptId(),
+      attemptId,
       caseId: patientCase.id,
       serverEncounterId,
+      serverEncounterRevision: serverEncounterRevisionRef.current,
       conversationHistory: state.messages,
       coveredFacts: state.coveredFacts,
       coveredChecklistItems: state.coveredChecklistItems,
@@ -588,7 +673,29 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       },
     };
 
+    const encounterDocument = buildEncounterDocument({
+      serverEncounterId,
+      caseId: patientCase.id,
+      attemptId: localSummary.attemptId,
+      encounterVersion: serverEncounterRevisionRef.current,
+      messages: state.messages,
+      examinationIds: localSummary.examinationsViewed,
+      lifecycleEvents: encounterEvents,
+      disclosedFacts: state.coveredFacts,
+      coveredChecklistItemIds: state.coveredChecklistItems,
+      coverageEvidence: state.coverageEvidence,
+      activeDurationMs: localSummary.activeDurationMs,
+      pausedDurationMs: localSummary.pausedDurationMs,
+      startedAt: encounterCreatedAt.current ?? undefined,
+      completedAt,
+      createdAt: localSummary.metadata?.createdAt ?? completedAt,
+      updatedAt: completedAt,
+    });
+
     writeCompletedEncounterAttempt(localSummary);
+    void persistCompletedAttemptToServer(localSummary).catch(() => {
+      // The local completed-attempt cache remains available for a later retry.
+    });
     if (process.env.NODE_ENV !== "production") {
       console.info("Canonical faculty completion persistence diagnostics.", {
         caseId: patientCase.id,
@@ -597,6 +704,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         scoreGenerated: false,
         reportConstructed: false,
         persistenceSucceeded: true,
+        encounterDocumentSchemaVersion: encounterDocument.schemaVersion,
       });
     }
     removeEncounterSnapshot(patientCase.id);
@@ -616,6 +724,9 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
       if (snapshot.serverEncounterId) {
         setServerEncounterId(snapshot.serverEncounterId);
+      }
+      if (typeof snapshot.serverEncounterRevision === "number") {
+        serverEncounterRevisionRef.current = snapshot.serverEncounterRevision;
       }
       const now = Date.now();
       const nowIso = new Date(now).toISOString();
@@ -699,6 +810,42 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       window.clearTimeout(timer);
     };
   }, [draftQuestion, saveEncounterSnapshot, state]);
+
+  useEffect(() => {
+    if (!serverEncounterId || !hasRestoredSnapshot.current) return;
+    const timer = window.setTimeout(() => {
+      const updatedAt = new Date().toISOString();
+      encounterSyncServiceRef.current?.schedule(
+        buildEncounterDocument({
+          serverEncounterId,
+          caseId: patientCase.id,
+          encounterVersion: serverEncounterRevisionRef.current,
+          messages: state.messages,
+          examinationIds: getViewedExaminationIds(state.encounterEvents),
+          lifecycleEvents: state.encounterEvents,
+          disclosedFacts: state.coveredFacts,
+          coveredChecklistItemIds: state.coveredChecklistItems,
+          coverageEvidence: state.coverageEvidence,
+          activeDurationMs: getActiveDurationMs(),
+          pausedDurationMs: accumulatedPausedMs.current,
+          startedAt: encounterCreatedAt.current ?? undefined,
+          createdAt: encounterCreatedAt.current ?? updatedAt,
+          updatedAt,
+        }),
+      );
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [
+    getActiveDurationMs,
+    getViewedExaminationIds,
+    patientCase.id,
+    serverEncounterId,
+    state.coverageEvidence,
+    state.coveredChecklistItems,
+    state.coveredFacts,
+    state.encounterEvents,
+    state.messages,
+  ]);
 
   const submitStudentMessage = async (studentMessage: string) => {
     const text = studentMessage.trim();
@@ -989,6 +1136,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       coverageEvidence: state.coverageEvidence,
       mentorIntervention,
     });
+    const completedAttemptId = createCompletedEncounterAttemptId();
 
     if (speechPlayback.isSpeaking) {
       speechPlayback.stop();
@@ -1003,6 +1151,29 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     }
 
     try {
+      const syncService = encounterSyncServiceRef.current;
+      if (!syncService) throw new Error("encounter_sync_unavailable");
+      const completedAt = finishEvent.timestamp;
+      await syncService.flush(
+        buildEncounterDocument({
+          serverEncounterId,
+          caseId: patientCase.id,
+          attemptId: completedAttemptId,
+          encounterVersion: serverEncounterRevisionRef.current,
+          messages: state.messages,
+          examinationIds: getViewedExaminationIds(state.encounterEvents),
+          lifecycleEvents: [...state.encounterEvents, finishEvent],
+          disclosedFacts: state.coveredFacts,
+          coveredChecklistItemIds: state.coveredChecklistItems,
+          coverageEvidence: state.coverageEvidence,
+          activeDurationMs: getActiveDurationMs(),
+          pausedDurationMs: accumulatedPausedMs.current,
+          startedAt: encounterCreatedAt.current ?? undefined,
+          completedAt,
+          createdAt: encounterCreatedAt.current ?? completedAt,
+          updatedAt: completedAt,
+        }),
+      );
       const response = await fetch(
         `/api/encounters/${encodeURIComponent(serverEncounterId)}/complete`,
         { method: "POST" },
@@ -1021,14 +1192,19 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         type: "recordEvent",
         event: finishEvent,
       });
-      const completedAttempt = saveLocalEncounterSummary(finishEvent);
+      const completedAttempt = saveLocalEncounterSummary(
+        finishEvent,
+        completedAttemptId,
+      );
       router.push(
         `/mentor/${patientCase.id}?attemptId=${encodeURIComponent(completedAttempt.attemptId)}`,
       );
     } catch {
-      setEncounterSyncError(
-        "Encounter completion could not be synced. Your work is saved locally; please try again.",
-      );
+      if (encounterSyncServiceRef.current?.getState().status !== "conflict") {
+        setEncounterSyncError(
+          "Encounter completion could not be synced. Your work is saved locally; please try again.",
+        );
+      }
       isCompletingRef.current = false;
       setIsCompleting(false);
     }
@@ -1062,10 +1238,18 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
             <button
               type="button"
               className="shrink-0 font-semibold underline underline-offset-2"
-              onClick={() => void syncServerEncounter()}
-              disabled={isSyncingEncounter}
+              onClick={() => {
+                const syncService = encounterSyncServiceRef.current;
+                if (syncService) void syncService.retry().catch(() => undefined);
+                else void syncServerEncounter();
+              }}
+              disabled={isSyncingEncounter || encounterSyncStatus === "conflict"}
             >
-              {isSyncingEncounter ? "Syncing..." : "Retry sync"}
+              {encounterSyncStatus === "conflict"
+                ? "Conflict detected"
+                : isSyncingEncounter
+                  ? "Syncing..."
+                  : "Retry sync"}
             </button>
           </div>
         ) : null}

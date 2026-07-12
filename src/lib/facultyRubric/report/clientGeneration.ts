@@ -8,6 +8,7 @@ import {
 } from "../../localEncounter";
 import { validatePersistedFacultyArtifacts } from "./artifactIntegrity";
 import { buildFacultyReport } from "./builder";
+import { persistCompletedAttemptToServer } from "../../persistence/completedAttemptClient";
 
 const GENERATION_LEASE_MS = 60_000;
 const inFlightByCase = new Map<
@@ -275,4 +276,7 @@ function hasValidCanonicalArtifacts(summary: CompletedEncounterAttempt) {
 
 function writeCompletedSummary(summary: CompletedEncounterAttempt) {
   writeCompletedEncounterAttempt(summary);
+  void persistCompletedAttemptToServer(summary).catch(() => {
+    // Local artifacts remain authoritative for the current UI until server-backed reads ship.
+  });
 }

@@ -1,4 +1,5 @@
 import type { PersistedEncounter } from "@/lib/persistence/repositories/encounterRepository";
+import type { EncounterDocument } from "@/lib/encounter/encounterDocument";
 
 export type EncounterRepositoryContract = {
   findActiveByUserAndCase(
@@ -14,9 +15,16 @@ export type EncounterRepositoryContract = {
     userId: string,
     encounterId: string,
   ): Promise<PersistedEncounter | null>;
+  updateDocumentIfRevision(
+    userId: string,
+    encounterId: string,
+    revision: number,
+    encounterData: EncounterDocument,
+  ): Promise<PersistedEncounter | null>;
 };
 
 export class EncounterNotFoundError extends Error {}
+export class EncounterRevisionConflictError extends Error {}
 
 export class EncounterService {
   constructor(
@@ -49,5 +57,37 @@ export class EncounterService {
     const completed = await this.encounters.markCompleted(userId, encounterId);
     if (!completed) throw new EncounterNotFoundError();
     return completed;
+  }
+
+  async getOwnedEncounter(userId: string, encounterId: string) {
+    const encounter = await this.encounters.findOwnedById(userId, encounterId);
+    if (!encounter) throw new EncounterNotFoundError();
+    return encounter;
+  }
+
+  async updateEncounterDocument(
+    userId: string,
+    encounterId: string,
+    revision: number,
+    document: EncounterDocument,
+  ) {
+    const owned = await this.getOwnedEncounter(userId, encounterId);
+    if (owned.version !== revision) throw new EncounterRevisionConflictError();
+    if (
+      document.caseId !== owned.caseId ||
+      document.serverEncounterId !== owned.id
+    ) {
+      throw new EncounterNotFoundError();
+    }
+
+    const nextRevision = revision + 1;
+    const updated = await this.encounters.updateDocumentIfRevision(
+      userId,
+      encounterId,
+      revision,
+      { ...document, encounterVersion: nextRevision },
+    );
+    if (!updated) throw new EncounterRevisionConflictError();
+    return updated;
   }
 }

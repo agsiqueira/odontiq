@@ -7,6 +7,7 @@ import {
   type EncounterRepositoryContract,
 } from "../src/lib/persistence/services/encounterService";
 import type { PersistedEncounter } from "../src/lib/persistence/repositories/encounterRepository";
+import type { EncounterDocument } from "../src/lib/encounter/encounterDocument";
 
 class ActiveConflict extends Error {}
 
@@ -66,6 +67,20 @@ class MemoryEncounterRepository implements EncounterRepositoryContract {
       encounter.status = "COMPLETED";
       encounter.updatedAt = new Date();
     }
+    return encounter;
+  }
+
+  async updateDocumentIfRevision(
+    userId: string,
+    encounterId: string,
+    revision: number,
+    encounterData: EncounterDocument,
+  ) {
+    const encounter = await this.findOwnedById(userId, encounterId);
+    if (!encounter || encounter.version !== revision) return null;
+    encounter.encounterData = JSON.parse(JSON.stringify(encounterData));
+    encounter.version += 1;
+    encounter.updatedAt = new Date();
     return encounter;
   }
 }
