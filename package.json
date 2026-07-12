@@ -16,6 +16,7 @@
     "validate:explicit-semantic-evidence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateExplicitSemanticEvidence.ts",
     "validate:completed-encounter-storage": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedEncounterStorage.ts",
     "validate:home-progression": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateHomeProgression.ts",
+    "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
     "lint": "eslint",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
