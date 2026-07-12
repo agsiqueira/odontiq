@@ -1,4 +1,7 @@
+import { SignOutButton } from "@clerk/nextjs";
+
 import { AppShell } from "@/components/AppShell";
+import { Button } from "@/components/ui/button";
 
 export default function SettingsPage() {
   return (
@@ -25,6 +28,11 @@ export default function SettingsPage() {
           <span className="font-semibold">Role</span>
           <span className="text-sm text-[var(--color-text-secondary)]">Student</span>
         </div>
+        <SignOutButton redirectUrl="/login">
+          <Button type="button" variant="outline" className="h-12 w-full rounded-xl">
+            Sign out
+          </Button>
+        </SignOutButton>
       </section>
     </AppShell>
   );
