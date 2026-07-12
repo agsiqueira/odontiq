@@ -21,6 +21,7 @@
     "validate:encounter-document": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterDocument.ts",
     "validate:encounter-sync": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterSync.ts",
     "validate:completed-attempt-persistence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedAttemptPersistence.ts",
+    "validate:server-backed-dashboards": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateServerBackedDashboards.ts",
     "lint": "eslint",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",

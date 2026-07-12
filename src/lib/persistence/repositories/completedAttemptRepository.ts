@@ -46,6 +46,13 @@ export class CompletedAttemptRepository {
     });
   }
 
+  listByUser(userId: string) {
+    return db.completedAttempt.findMany({
+      where: { userId },
+      orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+    });
+  }
+
   async persistBundle(input: PersistAttemptBundle) {
     return db.$transaction(async (tx) => {
       const attempt = await tx.completedAttempt.upsert({

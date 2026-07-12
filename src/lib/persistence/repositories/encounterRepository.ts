@@ -31,6 +31,13 @@ export class EncounterRepository {
     });
   }
 
+  findLatestActiveByUser(userId: string) {
+    return db.encounter.findFirst({
+      where: { userId, status: EncounterStatus.ACTIVE },
+      orderBy: { updatedAt: "desc" },
+    });
+  }
+
   async createActive(userId: string, caseId: string) {
     try {
       return await db.encounter.create({

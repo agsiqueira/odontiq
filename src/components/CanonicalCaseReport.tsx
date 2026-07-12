@@ -17,6 +17,11 @@ import {
 } from "@/lib/localEncounter";
 
 type Status = "checking" | "generating" | "ready" | "missing" | "error";
+type ServerReportArtifacts = {
+  evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
+  score: CompletedEncounterAttempt["facultyRubricScore"] | null;
+  report: CompletedEncounterAttempt["facultyReport"] | null;
+};
 
 export function CanonicalCaseReport({
   caseId,
@@ -41,12 +46,48 @@ export function CanonicalCaseReport({
       : null;
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
+    let cancelled = false;
+    const load = async () => {
       if (!attemptId) {
         setStatus("missing");
         return;
       }
-      const candidate = readCompletedEncounterAttempt(caseId, attemptId);
+      let candidate: CompletedEncounterAttempt | null = null;
+      try {
+        const response = await fetch(
+          `/api/reports/${encodeURIComponent(attemptId)}`,
+        );
+        const payload: unknown = await response.json().catch(() => undefined);
+        if (!response.ok || !isServerReportArtifacts(payload)) throw new Error();
+        if (payload.evaluation && payload.score && payload.report) {
+          candidate = {
+            attemptId,
+            caseId,
+            conversationHistory: [],
+            coveredFacts: [],
+            coveredChecklistItems: [],
+            encounterEvents: [],
+            examinationsViewed: [],
+            savedAt: payload.report.reportMetadata.generatedAt,
+            lifecycleStatus: "completed",
+            facultyRubricEvaluation: payload.evaluation,
+            facultyRubricScore: payload.score,
+            facultyReport: payload.report,
+            facultyReportGeneration: {
+              status: "complete",
+              attemptId,
+              startedAt: payload.report.reportMetadata.generatedAt,
+              updatedAt: payload.report.reportMetadata.generatedAt,
+            },
+          };
+        }
+      } catch {
+        candidate = readCompletedEncounterAttempt(caseId, attemptId);
+      }
+      if (!candidate) {
+        candidate = readCompletedEncounterAttempt(caseId, attemptId);
+      }
+      if (cancelled) return;
       if (!candidate) {
         setStatus("missing");
         return;
@@ -75,8 +116,11 @@ export function CanonicalCaseReport({
       } catch {
         setStatus("error");
       }
-    }, 0);
-    return () => window.clearTimeout(timer);
+    };
+    void load();
+    return () => {
+      cancelled = true;
+    };
   }, [attemptId, caseId]);
 
   const retry = useCallback(async () => {
@@ -179,4 +223,8 @@ export function CanonicalCaseReport({
       ) : null}
     </section>
   );
+}
+
+function isServerReportArtifacts(value: unknown): value is ServerReportArtifacts {
+  return Boolean(value && typeof value === "object" && "evaluation" in value);
 }

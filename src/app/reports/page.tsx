@@ -27,6 +27,16 @@ type ReportCard = {
   attemptId?: string;
 };
 
+type DashboardAttempt = {
+  caseId: string;
+  latestAttemptId: string;
+  generationStatus: "PENDING" | "IN_PROGRESS" | "COMPLETE" | "FAILED";
+  integrityStatus: "PENDING" | "VALID" | "INVALID";
+  percentage: number | null;
+  passed: boolean;
+  completedAt: string | null;
+};
+
 const statusDetails: Record<
   ReportCardStatus,
   { label: string; action: string; rank: number; badgeClassName: string }
@@ -70,12 +80,30 @@ const statusDetails: Record<
 
 export default function ReportsPage() {
   const [cards, setCards] = useState<ReportCard[] | null>(null);
+  const [isCached, setIsCached] = useState(false);
 
   useEffect(() => {
-    const refresh = () => setCards(readReportCards());
-    refresh();
-    window.addEventListener("storage", refresh);
-    return () => window.removeEventListener("storage", refresh);
+    let cancelled = false;
+    const refresh = async () => {
+      try {
+        const response = await fetch("/api/reports/dashboard");
+        const payload: unknown = await response.json().catch(() => undefined);
+        if (!response.ok || !isDashboardAttempts(payload)) throw new Error();
+        if (!cancelled) {
+          setCards(reportCardsFromDashboard(payload));
+          setIsCached(false);
+        }
+      } catch {
+        if (!cancelled) {
+          setCards(readCachedReportCards());
+          setIsCached(true);
+        }
+      }
+    };
+    void refresh();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const completed = cards?.filter((card) => card.status === "completed").length ?? 0;
@@ -91,6 +119,11 @@ export default function ReportsPage() {
         <p className="text-base leading-7 text-[var(--color-text-secondary)]">
           Continue where you left off or review previous reports.
         </p>
+        {isCached ? (
+          <span className="mt-2 inline-flex rounded-full border border-[var(--color-border)] px-2 py-0.5 text-xs text-[var(--color-text-secondary)]">
+            Cached
+          </span>
+        ) : null}
       </section>
 
       <section
@@ -189,7 +222,7 @@ function ReportCaseCard({ card }: { card: ReportCard }) {
   );
 }
 
-function readReportCards(): ReportCard[] {
+function readCachedReportCards(): ReportCard[] {
   const snapshots = readEncounterSnapshots();
   const completedStore = readCompletedEncounterStore();
   return CASES.map((patientCase) => {
@@ -202,6 +235,58 @@ function readReportCards(): ReportCard[] {
     }
     return { patientCase, status: "not-started" as const };
   }).sort(compareReportCards);
+}
+
+function reportCardsFromDashboard(attempts: DashboardAttempt[]): ReportCard[] {
+  const byCase = new Map(attempts.map((attempt) => [attempt.caseId, attempt]));
+  return CASES.map((patientCase) => {
+    const attempt = byCase.get(patientCase.id);
+    if (!attempt) return { patientCase, status: "not-started" as const };
+    const completedAt = attempt.completedAt ?? undefined;
+    if (
+      attempt.generationStatus === "COMPLETE" &&
+      attempt.integrityStatus === "VALID"
+    ) {
+      return {
+        patientCase,
+        status: "completed" as const,
+        completedAt,
+        score: attempt.percentage ?? undefined,
+        attemptId: attempt.latestAttemptId,
+      };
+    }
+    if (
+      attempt.generationStatus === "PENDING" ||
+      attempt.generationStatus === "IN_PROGRESS"
+    ) {
+      return {
+        patientCase,
+        status: "generating" as const,
+        completedAt,
+        attemptId: attempt.latestAttemptId,
+      };
+    }
+    return {
+      patientCase,
+      status: "interrupted" as const,
+      completedAt,
+      attemptId: attempt.latestAttemptId,
+    };
+  }).sort(compareReportCards);
+}
+
+function isDashboardAttempts(value: unknown): value is DashboardAttempt[] {
+  return (
+    Array.isArray(value) &&
+    value.every(
+      (attempt) =>
+        Boolean(attempt) &&
+        typeof attempt === "object" &&
+        typeof (attempt as DashboardAttempt).caseId === "string" &&
+        typeof (attempt as DashboardAttempt).latestAttemptId === "string" &&
+        typeof (attempt as DashboardAttempt).generationStatus === "string",
+    )
+  );
 }
 
 function cardFromCompletedSummary(
