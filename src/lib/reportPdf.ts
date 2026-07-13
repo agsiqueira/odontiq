@@ -292,8 +292,15 @@ export class PdfDocument {
 
   addLabelValue(label: string, value: string) {
     this.ensureBlockSpace(24);
-    this.addText(label, 8, "bold", TEXT_DARK, 11);
-    this.addText(value, 10, "regular", TEXT_DARK, 14);
+    this.addText(label, {
+      size: 8,
+      bold: true,
+      lineHeight: 11,
+    });
+    this.addText(value, {
+      size: 10,
+      lineHeight: 14,
+    });
     this.addGap(2);
   }
 
