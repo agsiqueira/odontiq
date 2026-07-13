@@ -17,7 +17,10 @@ export type HomeProgressionRepositoryContract = {
 };
 
 export type HomeEncounterRepositoryContract = {
-  findLatestActiveByUser(userId: string): Promise<ActiveEncounter | null>;
+  findActiveByUserAndCase(
+    userId: string,
+    caseId: string,
+  ): Promise<ActiveEncounter | null>;
 };
 
 export class HomeProgressionService {
@@ -28,10 +31,18 @@ export class HomeProgressionService {
   ) {}
 
   async getProgression(userId: string) {
-    const [attempts, activeEncounter] = await Promise.all([
+    const [attempts, activeEncountersByCase] = await Promise.all([
       this.attempts.listByUser(userId),
-      this.encounters.findLatestActiveByUser(userId),
+      Promise.all(
+        this.caseIds.map((caseId) =>
+          this.encounters.findActiveByUserAndCase(userId, caseId),
+        ),
+      ),
     ]);
+    const activeEncounters = activeEncountersByCase
+      .filter((encounter): encounter is ActiveEncounter => Boolean(encounter))
+      .sort((left, right) => right.updatedAt.getTime() - left.updatedAt.getTime());
+    const activeEncounter = activeEncounters[0] ?? null;
     const completedCases = this.caseIds.filter((caseId) =>
       attempts.some(
         (attempt) =>
@@ -52,6 +63,7 @@ export class HomeProgressionService {
           caseId: activeEncounter.caseId,
           updatedAt: activeEncounter.updatedAt.toISOString(),
         },
+        activeEncounters: activeEncounters.map(toActiveEncounterResponse),
         completedCases,
         currentStatus: "resume" as const,
       };
@@ -68,6 +80,7 @@ export class HomeProgressionService {
             : ("start" as const),
         },
         activeEncounter: null,
+        activeEncounters: [],
         completedCases,
         currentStatus: "recommend" as const,
       };
@@ -75,8 +88,17 @@ export class HomeProgressionService {
     return {
       recommendedCase: null,
       activeEncounter: null,
+      activeEncounters: [],
       completedCases,
       currentStatus: "complete" as const,
     };
   }
+}
+
+function toActiveEncounterResponse(encounter: ActiveEncounter) {
+  return {
+    id: encounter.id,
+    caseId: encounter.caseId,
+    updatedAt: encounter.updatedAt.toISOString(),
+  };
 }

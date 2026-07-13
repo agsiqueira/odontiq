@@ -70,7 +70,7 @@ async function main() {
 
   const progression = new HomeProgressionService(
     { async listByUser() { return attempts; } },
-    { async findLatestActiveByUser() { return null; } },
+    { async findActiveByUserAndCase() { return null; } },
     ["case-01", "case-02", "case-03", "case-04", "case-05"],
   );
   const next = await progression.getProgression("user-1");
@@ -81,19 +81,23 @@ async function main() {
   const activeProgression = new HomeProgressionService(
     { async listByUser() { return attempts; } },
     {
-      async findLatestActiveByUser() {
-        return {
-          id: "active-1",
-          caseId: "case-04",
-          updatedAt: new Date("2026-07-12T13:00:00.000Z"),
-        };
+      async findActiveByUserAndCase(_userId: string, caseId: string) {
+        return caseId === "case-04"
+          ? {
+              id: "active-1",
+              caseId,
+              updatedAt: new Date("2026-07-12T13:00:00.000Z"),
+            }
+          : null;
       },
     },
     ["case-01", "case-02", "case-03", "case-04", "case-05"],
   );
-  assert.equal(
-    (await activeProgression.getProgression("user-1")).currentStatus,
-    "resume",
+  const activeResult = await activeProgression.getProgression("user-1");
+  assert.equal(activeResult.currentStatus, "resume");
+  assert.deepEqual(
+    activeResult.activeEncounters.map((encounter) => encounter.caseId),
+    ["case-04"],
   );
 
   const reportsPage = await readFile("src/app/reports/page.tsx", "utf8");
@@ -105,11 +109,17 @@ async function main() {
     "src/components/HomeProgressionCard.tsx",
     "utf8",
   );
+  const casesComponent = await readFile(
+    "src/components/CasesCarousel.tsx",
+    "utf8",
+  );
   assert(reportsPage.includes('fetch("/api/reports/dashboard")'));
   assert(reportsPage.includes("readCachedReportCards()"));
   assert(reportComponent.includes("/api/reports/${encodeURIComponent(attemptId)}"));
   assert(reportComponent.includes("readCompletedEncounterAttempt"));
   assert(homeComponent.includes('fetch("/api/home/progression")'));
+  assert(casesComponent.includes('fetch("/api/home/progression")'));
+  assert(casesComponent.includes('preferredAction: activeCaseIds.has(patientCase.id)'));
   assert(homeComponent.includes("getHomeProgression"));
 
   console.log("Server-backed dashboard validation passed.");

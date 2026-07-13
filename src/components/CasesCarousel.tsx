@@ -27,9 +27,24 @@ export function CasesCarousel({ cases }: CasesCarouselProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
+    let cancelled = false;
+    const load = async () => {
       const snapshots = readEncounterSnapshots();
       const completedStore = readCompletedEncounterStore();
+      const activeCaseIds = await fetch("/api/home/progression")
+        .then(async (response) => {
+          if (!response.ok) return new Set<string>();
+          const payload = (await response.json()) as {
+            activeEncounters?: Array<{ caseId?: unknown }>;
+          };
+          return new Set(
+            (payload.activeEncounters ?? [])
+              .map((encounter) => encounter.caseId)
+              .filter((caseId): caseId is string => typeof caseId === "string"),
+          );
+        })
+        .catch(() => new Set<string>());
+      if (cancelled) return;
       setPresentations(
         Object.fromEntries(
           cases.map((patientCase) => [
@@ -38,12 +53,18 @@ export function CasesCarousel({ cases }: CasesCarouselProps) {
               patientCase,
               snapshot: snapshots[patientCase.id],
               attempts: completedStore[patientCase.id] ?? [],
+              preferredAction: activeCaseIds.has(patientCase.id)
+                ? "resume"
+                : undefined,
             }),
           ]),
         ),
       );
-    }, 0);
-    return () => window.clearTimeout(timer);
+    };
+    void load();
+    return () => {
+      cancelled = true;
+    };
   }, [cases]);
 
   function scrollToPatient(index: number) {
