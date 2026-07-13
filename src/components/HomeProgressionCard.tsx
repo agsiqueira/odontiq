@@ -103,7 +103,6 @@ export function HomeProgressionCard() {
         eyebrow="Continue Learning"
         contextLabel={isResume ? "Resume where you left off" : "Recommended next step"}
         caseLabel={formatCaseNumber(patientCase.id)}
-        summary={patientCase.title}
         statusLabel={
           isResume
             ? "In Progress"
