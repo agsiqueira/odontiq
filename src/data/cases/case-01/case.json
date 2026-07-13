@@ -16,7 +16,7 @@
   },
   "voicePreference": {
     "provider": "navigator",
-    "gender": "male",
+    "gender": "female",
     "ageGroup": "older",
     "bodyHabitus": "heavier_set",
     "tone": "deep",
@@ -27,7 +27,7 @@
       "friendly",
       "slightly_uncomfortable"
     ],
-    "preferredVoiceId": "am_onyx",
+    "preferredVoiceId": "af_sarah",
     "fallbackVoices": [
       {
         "voiceId": "am_michael",
