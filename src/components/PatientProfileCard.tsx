@@ -39,14 +39,21 @@ export function PatientProfileCard({
   return (
     <article
       className={cn(
-        "h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]",
+        "rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]",
         compact ? "p-4" : "p-6",
         className
       )}
     >
       <Link
         href={presentation.href}
-        className={cn("flex flex-col", compact ? "h-[24.75rem]" : "h-[31rem]")}
+        className={cn(
+          "flex flex-col",
+          compact
+            ? eyebrow || contextLabel
+              ? "min-h-[28.75rem]"
+              : "min-h-[24.75rem]"
+            : "min-h-[31rem]",
+        )}
       >
         {eyebrow ? (
           <p className="text-sm font-semibold text-[var(--color-brand)]">
