@@ -108,7 +108,7 @@ export function PatientProfileCard({
 
         <blockquote
           className={cn(
-            "font-semibold leading-tight text-[var(--color-text-primary)]",
+            "min-h-[3.75em] font-semibold leading-tight text-[var(--color-text-primary)]",
             compact ? "mt-4 text-xl" : "mt-8 text-2xl"
           )}
         >
