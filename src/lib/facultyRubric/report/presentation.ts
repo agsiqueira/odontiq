@@ -5,6 +5,7 @@ import {
   buildFacultyComparisonSections,
   type FacultyComparisonSection,
 } from "./comparison";
+import { getCaseDisplayLabel } from "../../caseDisplay";
 
 export type CanonicalFacultyReportCriterion =
   NonNullable<LocalEncounterSummary["facultyReport"]>["criterionResults"][number] & {
@@ -16,6 +17,9 @@ export type CanonicalFacultyReportPresentation = {
   caseId: string;
   caseTitle: string;
   patientName: string;
+  studentName?: string;
+  caseLabel: string;
+  attemptId?: string;
   completedAt?: string;
   report: NonNullable<LocalEncounterSummary["facultyReport"]>;
   criteria: CanonicalFacultyReportCriterion[];
@@ -26,6 +30,10 @@ export function buildCanonicalFacultyReportPresentation(
   summary: LocalEncounterSummary,
   patientName: string,
   caseTitle: string,
+  metadata: {
+    studentName?: string;
+    attemptId?: string;
+  } = {},
 ): CanonicalFacultyReportPresentation | null {
   const evaluation = summary.facultyRubricEvaluation;
   const score = summary.facultyRubricScore;
@@ -110,6 +118,9 @@ export function buildCanonicalFacultyReportPresentation(
     caseId: summary.caseId,
     caseTitle,
     patientName,
+    studentName: metadata.studentName,
+    caseLabel: getCaseDisplayLabel(summary.caseId),
+    attemptId: metadata.attemptId,
     completedAt: summary.metadata?.completedAt ?? summary.savedAt,
     report,
     criteria,

@@ -1,5 +1,6 @@
 "use client";
 
+import { useUser } from "@clerk/nextjs";
 import { useCallback, useEffect, useState } from "react";
 
 import { FacultyCaseReport } from "@/components/FacultyCaseReport";
@@ -11,6 +12,7 @@ import {
   generateCanonicalFacultyPdfBlob,
 } from "@/lib/facultyRubric/report/pdf";
 import { buildCanonicalFacultyReportPresentation } from "@/lib/facultyRubric/report/presentation";
+import { getStudentDisplayName } from "@/lib/facultyRubric/report/displayContent";
 import {
   readCompletedEncounterAttempt,
   type CompletedEncounterAttempt,
@@ -35,6 +37,7 @@ export function CanonicalCaseReport({
   const [isRetrying, setIsRetrying] = useState(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [pdfError, setPdfError] = useState("");
+  const { user } = useUser();
   const patientCase = getCaseById(caseId);
   const presentation =
     summary && patientCase
@@ -42,6 +45,10 @@ export function CanonicalCaseReport({
           summary,
           patientCase.patientName,
           patientCase.openingStatement,
+          {
+            studentName: user ? getStudentDisplayName(user) : undefined,
+            attemptId: summary.attemptId,
+          },
         )
       : null;
 
@@ -186,6 +193,9 @@ export function CanonicalCaseReport({
         attemptId={summary.attemptId}
         caseTitle={patientCase.openingStatement}
         patientName={patientCase.patientName}
+        studentName={presentation.studentName}
+        caseLabel={presentation.caseLabel}
+        completedAt={presentation.completedAt}
         facultyReport={presentation.report}
         onDownloadPdf={() => void downloadPdf()}
         isDownloadingPdf={isDownloadingPdf}

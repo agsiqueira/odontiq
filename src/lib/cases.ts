@@ -80,3 +80,5 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
 export function getCaseById(caseId: string) {
   return CASES.find((patientCase) => patientCase.id === caseId);
 }
+
+export { getCaseDisplayLabel } from "./caseDisplay";

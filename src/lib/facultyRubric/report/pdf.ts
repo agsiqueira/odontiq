@@ -1,5 +1,6 @@
 import { PdfDocument } from "../../reportPdf";
 import type { CanonicalFacultyReportPresentation } from "./presentation";
+import { formatFacultyReportDate } from "./displayContent";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
   formatFacultyReportPercent,
@@ -11,6 +12,7 @@ export async function generateCanonicalFacultyPdfBlob(
   model: CanonicalFacultyReportPresentation,
 ) {
   const pdf = new PdfDocument();
+
   const report = model.report;
   pdf.addText(FACULTY_REPORT_DISPLAY_TITLES.report, {
     size: 11,
@@ -22,6 +24,16 @@ export async function generateCanonicalFacultyPdfBlob(
   pdf.addParagraph(model.patientName, { color: [0.38, 0.43, 0.46] });
   pdf.addGap(8);
   pdf.addParagraph(report.overallResult.message);
+  pdf.addSubheading(`${model.caseLabel} — ${model.caseTitle}`);
+  pdf.addLabelValue("Student", model.studentName ?? "Unavailable");
+  pdf.addLabelValue("Case", `${model.caseLabel} — ${model.caseTitle}`);
+  pdf.addLabelValue("Patient", model.patientName);
+  pdf.addLabelValue("Completed", formatFacultyReportDate(model.completedAt));
+  if (model.attemptId) {
+    pdf.addLabelValue("Submission", model.attemptId);
+  }
+  pdf.addGap(8);
+
   pdf.addMetrics([
     {
       label: "Overall",

@@ -264,8 +264,6 @@ export class PdfDocument {
   addSectionHeadingWithFirstContent(title: string, firstContentHeight: number) {
     this.ensureBlockSpace(40 + firstContentHeight);
     this.addGap(10);
-    this.drawRect(MARGIN_X, this.y, 26, 3, BRAND_BLUE);
-    this.y += 10;
     this.addText(title, {
       size: 15,
       bold: true,
@@ -290,6 +288,13 @@ export class PdfDocument {
       color: BRAND_BLUE,
       lineHeight: 15,
     });
+  }
+
+  addLabelValue(label: string, value: string) {
+    this.ensureBlockSpace(24);
+    this.addText(label, 8, "bold", TEXT_DARK, 11);
+    this.addText(value, 10, "regular", TEXT_DARK, 14);
+    this.addGap(2);
   }
 
   addMetrics(
