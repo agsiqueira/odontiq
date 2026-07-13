@@ -3,29 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Clock } from "lucide-react";
-import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import type { OdontIQCase } from "@/lib/cases";
-import {
-  readEncounterSnapshot,
-  type LocalEncounterSnapshot,
-} from "@/lib/localEncounter";
+import type { PatientCardPresentation } from "@/lib/patientCardPresentation";
 import { cn } from "@/lib/utils";
 
 type PatientProfileCardProps = {
-  patientCase: OdontIQCase;
-  href: string;
+  presentation: PatientCardPresentation;
   className?: string;
   showPhoto?: boolean;
   showDetails?: boolean;
   compact?: boolean;
-  buttonLabel?: string;
   eyebrow?: string;
   contextLabel?: string;
-  caseLabel?: string;
-  summary?: string;
-  statusLabel?: string;
 };
 
 const urgencyStyles = {
@@ -36,35 +26,15 @@ const urgencyStyles = {
 };
 
 export function PatientProfileCard({
-  patientCase,
-  href,
+  presentation,
   className,
   showPhoto = true,
   showDetails = true,
   compact = false,
-  buttonLabel = "Start Consultation",
   eyebrow,
   contextLabel,
-  caseLabel,
-  summary,
-  statusLabel,
 }: PatientProfileCardProps) {
-  const [savedSnapshot, setSavedSnapshot] =
-    useState<LocalEncounterSnapshot | null>(null);
-  const canResume =
-    savedSnapshot?.lifecycleStatus === "paused" ||
-    savedSnapshot?.lifecycleStatus === "in-progress";
-  const resolvedButtonLabel = canResume ? "Resume Case" : buttonLabel;
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setSavedSnapshot(readEncounterSnapshot(patientCase.id));
-    }, 0);
-
-    return () => {
-      window.clearTimeout(timer);
-    };
-  }, [patientCase.id]);
+  const { patientCase } = presentation;
 
   return (
     <article
@@ -75,7 +45,7 @@ export function PatientProfileCard({
       )}
     >
       <Link
-        href={href}
+        href={presentation.href}
         className={cn("flex flex-col", compact ? "min-h-[24.75rem]" : "min-h-[31rem]")}
       >
         {eyebrow ? (
@@ -122,36 +92,19 @@ export function PatientProfileCard({
           >
             {patientCase.patientName}
           </h2>
-          {caseLabel ? (
-            <p className="mt-2 text-sm font-semibold text-[var(--color-text-secondary)]">
-              {caseLabel}
-            </p>
-          ) : (
-            <p className={cn("text-[var(--color-text-secondary)]", compact ? "mt-2 text-base" : "mt-3 text-xl")}>
-              {patientCase.age} years old
-            </p>
-          )}
+          <p className="mt-2 text-sm font-semibold text-[var(--color-text-secondary)]">
+            {presentation.caseLabel}
+          </p>
         </div>
 
-        {summary ? (
-          <p
-            className={cn(
-              "font-semibold leading-tight text-[var(--color-text-primary)]",
-              compact ? "mt-4 text-xl" : "mt-8 text-2xl",
-            )}
-          >
-            {summary}
-          </p>
-        ) : (
-          <blockquote
-            className={cn(
-              "font-semibold leading-tight text-[var(--color-text-primary)]",
-              compact ? "mt-4 text-xl" : "mt-8 text-2xl"
-            )}
-          >
-            &ldquo;{patientCase.openingStatement}&rdquo;
-          </blockquote>
-        )}
+        <blockquote
+          className={cn(
+            "font-semibold leading-tight text-[var(--color-text-primary)]",
+            compact ? "mt-4 text-xl" : "mt-8 text-2xl"
+          )}
+        >
+          &ldquo;{presentation.openingStatement}&rdquo;
+        </blockquote>
 
         {showDetails ? (
           <p
@@ -169,26 +122,24 @@ export function PatientProfileCard({
             <span
               className={cn(
                 "rounded-full px-4 py-2 text-sm font-semibold",
-                urgencyStyles[patientCase.urgency]
+                urgencyStyles[presentation.urgency]
               )}
             >
-              {patientCase.urgency}
+              {presentation.urgency}
             </span>
-            {canResume || statusLabel ? (
-              <span className="rounded-full bg-[color-mix(in_srgb,var(--color-action)_12%,white)] px-4 py-2 text-sm font-semibold text-[var(--color-action)]">
-                {canResume ? "In Progress" : statusLabel}
-              </span>
-            ) : null}
+            <span className="rounded-full bg-[color-mix(in_srgb,var(--color-action)_12%,white)] px-4 py-2 text-sm font-semibold text-[var(--color-action)]">
+              {presentation.statusLabel}
+            </span>
           </div>
           <span className="flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-secondary)]">
             <Clock className="size-4" />
-            {patientCase.estimatedTime}
+            {presentation.duration}
           </span>
         </div>
 
-        {canResume ? (
+        {presentation.lastUpdated ? (
           <p className="mt-3 text-xs font-semibold text-[var(--color-text-secondary)]">
-            Last updated {formatSavedAt(savedSnapshot.savedAt)}
+            Last updated {formatSavedAt(presentation.lastUpdated)}
           </p>
         ) : null}
 
@@ -201,7 +152,7 @@ export function PatientProfileCard({
             compact ? "h-12" : "h-14"
           )}
         >
-          <span>{resolvedButtonLabel}</span>
+          <span>{presentation.actionLabel}</span>
         </Button>
       </Link>
     </article>

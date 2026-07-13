@@ -10,8 +10,10 @@ import { CASES } from "@/lib/cases";
 import { getHomeProgression, type HomeProgression } from "@/lib/homeProgression";
 import {
   readCompletedEncounterStore,
+  readEncounterSnapshot,
   readEncounterSnapshots,
 } from "@/lib/localEncounter";
+import { buildPatientCardPresentation } from "@/lib/patientCardPresentation";
 
 export function HomeProgressionCard() {
   const [progression, setProgression] = useState<HomeProgression | null>(null);
@@ -82,11 +84,12 @@ export function HomeProgressionCard() {
 
   const isResume = progression.kind === "resume";
   const patientCase = progression.patientCase;
-  const actionLabel = isResume
-    ? "Resume Case"
-    : progression.action === "retry"
-      ? "Retry Case"
-      : "Start Case";
+  const cardPresentation = buildPatientCardPresentation({
+    patientCase,
+    snapshot: readEncounterSnapshot(patientCase.id),
+    attempts: readCompletedEncounterStore()[patientCase.id] ?? [],
+    preferredAction: isResume ? "resume" : progression.action,
+  });
 
   return (
     <div>
@@ -96,21 +99,11 @@ export function HomeProgressionCard() {
         </p>
       ) : null}
       <PatientProfileCard
-        patientCase={patientCase}
-        href={`/encounter/${patientCase.id}`}
+        presentation={cardPresentation}
         compact
         showDetails={false}
         eyebrow="Continue Learning"
         contextLabel={isResume ? "Resume where you left off" : "Recommended next step"}
-        caseLabel={formatCaseNumber(patientCase.id)}
-        statusLabel={
-          isResume
-            ? "In Progress"
-            : progression.action === "retry"
-              ? "Not Passed"
-              : "Not Started"
-        }
-        buttonLabel={actionLabel}
       />
     </div>
   );
@@ -158,9 +151,4 @@ function isServerProgression(value: unknown): value is ServerProgression {
       "currentStatus" in value &&
       "completedCases" in value,
   );
-}
-
-function formatCaseNumber(caseId: string) {
-  const number = Number(caseId.match(/\d+/)?.[0]);
-  return Number.isFinite(number) ? `Case ${number}` : caseId;
 }

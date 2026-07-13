@@ -1,11 +1,19 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { PatientProfileCard } from "@/components/PatientProfileCard";
 import { Button } from "@/components/ui/button";
 import type { OdontIQCase } from "@/lib/cases";
+import {
+  readCompletedEncounterStore,
+  readEncounterSnapshots,
+} from "@/lib/localEncounter";
+import {
+  buildPatientCardPresentation,
+  type PatientCardPresentation,
+} from "@/lib/patientCardPresentation";
 
 type CasesCarouselProps = {
   cases: OdontIQCase[];
@@ -13,7 +21,30 @@ type CasesCarouselProps = {
 
 export function CasesCarousel({ cases }: CasesCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [presentations, setPresentations] = useState<
+    Record<string, PatientCardPresentation> | null
+  >(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const snapshots = readEncounterSnapshots();
+      const completedStore = readCompletedEncounterStore();
+      setPresentations(
+        Object.fromEntries(
+          cases.map((patientCase) => [
+            patientCase.id,
+            buildPatientCardPresentation({
+              patientCase,
+              snapshot: snapshots[patientCase.id],
+              attempts: completedStore[patientCase.id] ?? [],
+            }),
+          ]),
+        ),
+      );
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [cases]);
 
   function scrollToPatient(index: number) {
     const nextIndex = Math.min(Math.max(index, 0), cases.length - 1);
@@ -53,17 +84,23 @@ export function CasesCarousel({ cases }: CasesCarouselProps) {
         onScroll={handleScroll}
         className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {cases.map((patientCase) => (
-          <PatientProfileCard
-            key={patientCase.id}
-            patientCase={patientCase}
-            href={`/encounter/${patientCase.id}`}
-            className="w-full shrink-0 snap-center"
-            compact
-            showDetails={false}
-            buttonLabel="Start Consultation"
-          />
-        ))}
+        {cases.map((patientCase) => {
+          const presentation = presentations?.[patientCase.id];
+          return presentation ? (
+            <PatientProfileCard
+              key={patientCase.id}
+              presentation={presentation}
+              className="w-full shrink-0 snap-center"
+              compact
+              showDetails={false}
+            />
+          ) : (
+            <div
+              key={patientCase.id}
+              className="h-[28.75rem] w-full shrink-0 snap-center animate-pulse rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]"
+            />
+          );
+        })}
       </div>
 
       <div className="mt-4 hidden justify-center gap-3 sm:flex">
