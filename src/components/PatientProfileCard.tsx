@@ -39,7 +39,7 @@ export function PatientProfileCard({
   return (
     <article
       className={cn(
-        "rounded-2xl border border-[rgba(15,23,42,0.06)] bg-[color-mix(in_srgb,var(--color-background)_95%,white)] shadow-[0_10px_30px_rgba(15,23,42,0.08)]",
+        "rounded-2xl border border-[rgba(15,23,42,0.06)] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]",
         compact ? "p-4" : "p-6",
         className
       )}
