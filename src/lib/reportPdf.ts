@@ -304,6 +304,182 @@ export class PdfDocument {
     this.addGap(2);
   }
 
+  addMetadataPanel(items: Array<{ label: string; value: string }>) {
+    const columnWidth = CONTENT_WIDTH / 2;
+    const rows = Array.from({ length: Math.ceil(items.length / 2) }, (_, index) =>
+      items.slice(index * 2, index * 2 + 2),
+    );
+    const rowHeights = rows.map((row) =>
+      Math.max(
+        34,
+        ...row.map(
+          (item) =>
+            14 + wrapText(item.value, 9, columnWidth - 28).length * 13,
+        ),
+      ),
+    );
+    const height = rowHeights.reduce((total, value) => total + value, 0) + 16;
+    this.ensureBlockSpace(height + 8);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, LIGHT_BLUE);
+    let rowY = this.y + 12;
+    rows.forEach((row, rowIndex) => {
+      row.forEach((item, columnIndex) => {
+        const x = MARGIN_X + columnIndex * columnWidth + 14;
+        this.writeText(item.label.toUpperCase(), x, rowY, {
+          size: 7,
+          bold: true,
+          color: MUTED,
+        });
+        wrapText(item.value, 9, columnWidth - 28).forEach((line, lineIndex) => {
+          this.writeText(line, x, rowY + 14 + lineIndex * 13, {
+            size: 9,
+            color: TEXT,
+          });
+        });
+      });
+      rowY += rowHeights[rowIndex];
+    });
+    this.y += height + 8;
+  }
+
+  addStatusPanel(label: string, detail: string) {
+    const detailLines = wrapText(detail, 9, CONTENT_WIDTH - 28);
+    const height = Math.max(42, 27 + detailLines.length * 13);
+    this.ensureBlockSpace(height + 8);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, LIGHT_BLUE);
+    this.writeText(label, MARGIN_X + 14, this.y + 15, {
+      size: 10,
+      bold: true,
+      color: BRAND_BLUE,
+    });
+    detailLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, this.y + 29 + index * 13, {
+        size: 9,
+        color: MUTED,
+      });
+    });
+    this.y += height + 8;
+  }
+
+  addComparisonCard(input: {
+    title: string;
+    expected: string;
+    student: string;
+    result: string;
+    evidence: string;
+  }) {
+    const titleLines = wrapText(input.title, 11, CONTENT_WIDTH - 28);
+    const evidenceLines = wrapText(
+      `Evidence: ${input.evidence}`,
+      9,
+      CONTENT_WIDTH - 28,
+    );
+    const height =
+      18 + titleLines.length * 15 + 30 + evidenceLines.length * 13 + 12;
+    this.ensureBlockSpace(height + 6);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, [0.97, 0.98, 0.98]);
+    let contentY = this.y + 14;
+    titleLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, contentY + index * 15, {
+        size: 11,
+        bold: true,
+        color: TEXT,
+      });
+    });
+    contentY += titleLines.length * 15 + 7;
+    const third = (CONTENT_WIDTH - 28) / 3;
+    [
+      ["EXPECTED", input.expected],
+      ["STUDENT", input.student],
+      ["RESULT", input.result],
+    ].forEach(([label, value], index) => {
+      const x = MARGIN_X + 14 + third * index;
+      this.writeText(label, x, contentY, {
+        size: 7,
+        bold: true,
+        color: MUTED,
+      });
+      this.writeText(value, x, contentY + 13, {
+        size: 9,
+        bold: index === 2,
+        color: index === 2 ? BRAND_BLUE : TEXT,
+      });
+    });
+    contentY += 32;
+    evidenceLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, contentY + index * 13, {
+        size: 9,
+        color: MUTED,
+      });
+    });
+    this.y += height + 6;
+  }
+
+  addCompetencyCard(input: {
+    title: string;
+    percentage: string;
+    detail: string;
+    narrative: string;
+  }) {
+    const titleLines = wrapText(input.title, 11, CONTENT_WIDTH - 110);
+    const narrativeLines = wrapText(input.narrative, 9, CONTENT_WIDTH - 28);
+    const height =
+      18 + Math.max(titleLines.length * 15, 20) + 15 + narrativeLines.length * 13;
+    this.ensureBlockSpace(height + 6);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, [0.97, 0.98, 0.98]);
+    titleLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, this.y + 16 + index * 15, {
+        size: 11,
+        bold: true,
+        color: TEXT,
+      });
+    });
+    this.writeText(input.percentage, MARGIN_X + CONTENT_WIDTH - 74, this.y + 17, {
+      size: 13,
+      bold: true,
+      color: BRAND_BLUE,
+    });
+    const detailY = this.y + 19 + Math.max(titleLines.length * 15, 20);
+    this.writeText(input.detail, MARGIN_X + 14, detailY, {
+      size: 8,
+      bold: true,
+      color: MUTED,
+    });
+    narrativeLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, detailY + 15 + index * 13, {
+        size: 9,
+        color: TEXT,
+      });
+    });
+    this.y += height + 6;
+  }
+
+  addPanelItem(title: string, badge?: string) {
+    const badgeWidth = badge ? Math.min(160, Math.max(44, badge.length * 4.6 + 16)) : 0;
+    const titleWidth = CONTENT_WIDTH - 28 - (badgeWidth ? badgeWidth + 12 : 0);
+    const titleLines = wrapText(title, 9, titleWidth);
+    const height = Math.max(34, 18 + titleLines.length * 13);
+    this.ensureBlockSpace(height + 5);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, [0.97, 0.98, 0.98]);
+    titleLines.forEach((line, index) => {
+      this.writeText(line, MARGIN_X + 14, this.y + 17 + index * 13, {
+        size: 9,
+        bold: true,
+        color: TEXT,
+      });
+    });
+    if (badge) {
+      const badgeX = MARGIN_X + CONTENT_WIDTH - badgeWidth - 12;
+      this.drawRect(badgeX, this.y + 9, badgeWidth, 17, LIGHT_BLUE);
+      this.writeText(badge, badgeX + 8, this.y + 20, {
+        size: 7,
+        bold: true,
+        color: BRAND_BLUE,
+      });
+    }
+    this.y += height + 5;
+  }
+
   addMetrics(
     metrics: Array<{ label: string; value: string; description?: string }>,
   ) {

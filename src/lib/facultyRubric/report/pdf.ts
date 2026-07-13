@@ -1,11 +1,13 @@
 import { PdfDocument } from "../../reportPdf";
 import type { CanonicalFacultyReportPresentation } from "./presentation";
-import { formatFacultyReportDate } from "./displayContent";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
+  formatFacultyReportDate,
+  formatFacultyReportFilenameTimestamp,
   formatFacultyReportPercent,
   getCriticalSafetyDisplayMessage,
   getCriticalSafetyDisplayTitle,
+  sanitizeFacultyReportFilenamePart,
 } from "./displayContent";
 
 export async function generateCanonicalFacultyPdfBlob(
@@ -15,23 +17,21 @@ export async function generateCanonicalFacultyPdfBlob(
 
   const report = model.report;
   pdf.addText(FACULTY_REPORT_DISPLAY_TITLES.report, {
-    size: 11,
+    size: 20,
     bold: true,
     color: [0.16, 0.33, 0.36],
-    lineHeight: 15,
+    lineHeight: 25,
   });
-  pdf.addText(model.caseTitle, { size: 20, bold: true, lineHeight: 25 });
-  pdf.addParagraph(model.patientName, { color: [0.38, 0.43, 0.46] });
-  pdf.addGap(8);
+  pdf.addMetadataPanel([
+    { label: "Student", value: model.studentName ?? "Unavailable" },
+    { label: "Case", value: `${model.caseLabel} — ${model.caseTitle}` },
+    { label: "Patient", value: model.patientName },
+    { label: "Completed", value: formatFacultyReportDate(model.completedAt) },
+    ...(model.attemptId
+      ? [{ label: "Submission", value: model.attemptId }]
+      : []),
+  ]);
   pdf.addParagraph(report.overallResult.message);
-  pdf.addSubheading(`${model.caseLabel} — ${model.caseTitle}`);
-  pdf.addLabelValue("Student", model.studentName ?? "Unavailable");
-  pdf.addLabelValue("Case", `${model.caseLabel} — ${model.caseTitle}`);
-  pdf.addLabelValue("Patient", model.patientName);
-  pdf.addLabelValue("Completed", formatFacultyReportDate(model.completedAt));
-  if (model.attemptId) {
-    pdf.addLabelValue("Submission", model.attemptId);
-  }
   pdf.addGap(8);
 
   pdf.addMetrics([
@@ -46,22 +46,18 @@ export async function generateCanonicalFacultyPdfBlob(
       description: "earned",
     },
   ]);
-  pdf.addParagraph(report.overallResult.label, { bold: true });
-  pdf.addParagraph("Required score: 84%", { size: 9, color: [0.38, 0.43, 0.46] });
+  pdf.addStatusPanel(report.overallResult.label, "Required score: 84%");
 
   for (const section of model.comparisonSections) {
     pdf.addSectionHeading(section.title);
     for (const row of section.rows) {
-      pdf.ensureBlockSpace(62);
-      pdf.addSubheading(row.itemName);
-      pdf.addParagraph(
-        `Expected: ${row.expected} | Student: ${row.student} | Result: ${row.result}`,
-        { bold: true },
-      );
-      pdf.addParagraph(`Evidence: ${row.evidence.join("; ") || "-"}`, {
-        color: [0.38, 0.43, 0.46],
+      pdf.addComparisonCard({
+        title: row.itemName,
+        expected: row.expected,
+        student: row.student,
+        result: row.result,
+        evidence: row.evidence.join("; ") || "-",
       });
-      pdf.addGap(4);
     }
   }
 
@@ -95,16 +91,14 @@ export async function generateCanonicalFacultyPdfBlob(
   pdf.addSectionHeading(FACULTY_REPORT_DISPLAY_TITLES.competencySummary);
   for (const competency of report.competencyScores) {
     if (competency.possiblePoints <= 0) continue;
-    pdf.ensureBlockSpace(64);
-    pdf.addSubheading(competency.title);
-    pdf.addParagraph(
-      `${formatFacultyReportPercent(competency.percentage)} | ${formatCompetencyStatus(
+    pdf.addCompetencyCard({
+      title: competency.title,
+      percentage: formatFacultyReportPercent(competency.percentage),
+      detail: `${formatCompetencyStatus(
         competency.statusLabel,
       )} | ${competency.earnedPoints}/${competency.possiblePoints} points`,
-      { bold: true },
-    );
-    pdf.addParagraph(competency.summaryMessage);
-    pdf.addGap(5);
+      narrative: competency.summaryMessage,
+    });
   }
 
   pdf.addSectionHeading(FACULTY_REPORT_DISPLAY_TITLES.strengths);
@@ -119,11 +113,19 @@ export async function generateCanonicalFacultyPdfBlob(
 export function buildCanonicalFacultyPdfFilename(
   model: CanonicalFacultyReportPresentation,
 ) {
-  return `odontiq-${slug(model.caseId)}-${slug(model.patientName)}-faculty-report.pdf`;
-}
+  const caseNumber = model.caseId.match(/\d+/)?.[0];
+  const filenameCaseLabel = caseNumber
+    ? `case-${caseNumber.padStart(2, "0")}`
+    : model.caseLabel;
+  const parts = [
+    "odontiq",
+    model.studentName ?? "student",
+    filenameCaseLabel,
+    model.patientName,
+    formatFacultyReportFilenameTimestamp(model.completedAt),
+  ].map(sanitizeFacultyReportFilenamePart);
 
-function slug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return `${parts.filter(Boolean).join("-")}.pdf`;
 }
 
 function addGroupedStrengths(
@@ -150,13 +152,12 @@ function addGroupedStrengths(
   for (const [competency, items] of groups) {
     pdf.addSubheading(competencyTitle(competency));
     for (const item of items) {
-      pdf.addParagraph(item.title, { indent: 12 });
-      if (criterionById.get(item.criterionId)?.critical) {
-        pdf.addParagraph("Critical strength", {
-          color: [0.16, 0.33, 0.36],
-          indent: 12,
-        });
-      }
+      pdf.addPanelItem(
+        item.title,
+        criterionById.get(item.criterionId)?.critical
+          ? "Critical strength"
+          : undefined,
+      );
     }
   }
 }
@@ -187,24 +188,21 @@ function addGroupedImprovements(
   for (const [competency, items] of groups) {
     pdf.addSubheading(competencyTitle(competency));
     for (const item of items) {
-      pdf.ensureBlockSpace(42);
-      pdf.addParagraph(item.title, { bold: true, indent: 12 });
-      pdf.addParagraph(
+      pdf.addPanelItem(
+        item.title,
         item.status === "uncertain"
           ? "Uncertain - No credit awarded"
           : "Not Met",
-        { color: [0.52, 0.33, 0.03], indent: 12 },
       );
       if (criterionById.get(item.criterionId)?.critical) {
         pdf.addParagraph("Critical", {
           color: [0.52, 0.33, 0.03],
-          indent: 12,
         });
       }
       if (item.status === "uncertain") {
         pdf.addParagraph(
           "This item could not be verified clearly from the encounter and received no credit.",
-          { color: [0.38, 0.43, 0.46], indent: 12 },
+          { color: [0.38, 0.43, 0.46] },
         );
       }
     }

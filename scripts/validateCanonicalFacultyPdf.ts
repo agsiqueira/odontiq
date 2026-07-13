@@ -70,6 +70,10 @@ for (const rubric of facultyRubrics) {
     summary,
     patientName,
     caseTitle,
+    {
+      studentName: "Bruna Smith",
+      attemptId: `attempt-${rubric.caseId}`,
+    },
   );
 
   assert(presentation, `Canonical presentation unavailable for ${rubric.caseId}.`);
@@ -109,8 +113,12 @@ for (const rubric of facultyRubrics) {
   const pdfText = new TextDecoder().decode(await blob.arrayBuffer());
   for (const expectedText of [
     "Faculty Rubric Report",
+    "Bruna Smith",
+    presentation.caseLabel,
     caseTitle,
     patientName,
+    "COMPLETED",
+    "SUBMISSION",
     report.overallResult.message,
     "Competency Summary",
     "Strengths",
@@ -136,7 +144,11 @@ for (const rubric of facultyRubrics) {
     !pdfText.includes("Criterion Results"),
     "Production PDF must not add a PDF-only criterion appendix.",
   );
-  assert(buildCanonicalFacultyPdfFilename(presentation).endsWith("-faculty-report.pdf"));
+  const filename = buildCanonicalFacultyPdfFilename(presentation);
+  assert.match(
+    filename,
+    /^odontiq-bruna-smith-case-\d{2}-validation-patient-case-\d+-\d{8}-\d{6}\.pdf$/,
+  );
 
   const criticalCriterion = supportedCriteria.find(
     (criterion) => criterion.critical,
