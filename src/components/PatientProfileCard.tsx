@@ -39,14 +39,14 @@ export function PatientProfileCard({
   return (
     <article
       className={cn(
-        "rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]",
+        "h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]",
         compact ? "p-4" : "p-6",
         className
       )}
     >
       <Link
         href={presentation.href}
-        className={cn("flex flex-col", compact ? "min-h-[24.75rem]" : "min-h-[31rem]")}
+        className={cn("flex flex-col", compact ? "h-[24.75rem]" : "h-[31rem]")}
       >
         {eyebrow ? (
           <p className="text-sm font-semibold text-[var(--color-brand)]">
@@ -62,21 +62,21 @@ export function PatientProfileCard({
           <div
             className={cn(
               "grid place-items-center",
-              compact ? "mb-4" : "mb-6",
+              compact ? "mb-5" : "mb-7",
               eyebrow || contextLabel ? "mt-4" : undefined,
             )}
           >
             <div
               className={cn(
                 "relative overflow-hidden rounded-full border border-[var(--color-border)] bg-[color-mix(in_srgb,var(--color-brand)_12%,white)]",
-                compact ? "size-20" : "size-28"
+                compact ? "size-[5.75rem]" : "size-32"
               )}
             >
               <Image
                 src={patientCase.assets.rest}
                 alt={`${patientCase.patientName} portrait`}
                 fill
-                sizes={compact ? "80px" : "112px"}
+                sizes={compact ? "92px" : "128px"}
                 className="object-cover"
               />
             </div>
@@ -148,7 +148,7 @@ export function PatientProfileCard({
           size="lg"
           className={cn(
             "w-full rounded-xl bg-[var(--color-action)] text-base font-semibold text-white hover:bg-[color-mix(in_srgb,var(--color-action)_88%,black)]",
-            showDetails ? "mt-auto" : "mt-10",
+            "mt-auto",
             compact ? "h-12" : "h-14"
           )}
         >
