@@ -28,6 +28,9 @@ import {
 } from "@/lib/facultyRubric/report/displayContent";
 
 type FacultyCaseReportProps = {
+  studentName?: string;
+  caseLabel?: string;
+  completedAt?: string;
   caseId: string;
   attemptId?: string;
   caseTitle: string;
@@ -53,6 +56,9 @@ const competencyOrder = [
 ];
 
 export function FacultyCaseReport({
+  studentName,
+  caseLabel,
+  completedAt,
   caseId,
   attemptId,
   caseTitle,
@@ -64,6 +70,9 @@ export function FacultyCaseReport({
   pdfError,
   comparisonSections = [],
 }: FacultyCaseReportProps) {
+  void studentName;
+  void caseLabel;
+  void completedAt;
   const criterionById = new Map(
     facultyReport.criterionResults.map((criterion) => [
       criterion.criterionId,
