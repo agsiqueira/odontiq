@@ -20,6 +20,12 @@ import type {
   FacultyReportStrength,
 } from "@/lib/facultyRubric/report";
 import type { FacultyComparisonSection } from "@/lib/facultyRubric/report/comparison";
+import {
+  FACULTY_REPORT_DISPLAY_TITLES,
+  formatFacultyReportPercent,
+  getCriticalSafetyDisplayMessage,
+  getCriticalSafetyDisplayTitle,
+} from "@/lib/facultyRubric/report/displayContent";
 
 type FacultyCaseReportProps = {
   caseId: string;
@@ -86,7 +92,7 @@ export function FacultyCaseReport({
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="min-w-0">
             <p className="text-sm font-semibold text-[var(--color-brand)]">
-              Faculty Rubric Report
+              {FACULTY_REPORT_DISPLAY_TITLES.report}
             </p>
             {modeSwitcher ? <div className="mt-3">{modeSwitcher}</div> : null}
             <h1 className="mt-2 break-words text-2xl font-semibold leading-tight sm:text-3xl">
@@ -103,7 +109,7 @@ export function FacultyCaseReport({
           <div className="grid gap-3 sm:grid-cols-3 lg:w-[25rem] lg:grid-cols-1">
             <ResultMetric
               label="Overall"
-              value={formatPercent(facultyReport.overallScore.percentage)}
+              value={formatFacultyReportPercent(facultyReport.overallScore.percentage)}
             />
             <ResultMetric
               label="Required"
@@ -134,11 +140,11 @@ export function FacultyCaseReport({
       ))}
 
       {facultyReport.criticalSafetySummary.message ? (
-        <CollapsibleReportCard title="Critical Safety">
+        <CollapsibleReportCard title={FACULTY_REPORT_DISPLAY_TITLES.criticalSafety}>
           <Notice
             tone="danger"
-            title={getCriticalSafetyTitle(facultyReport)}
-            message={`${facultyReport.criticalSafetySummary.message} Critical warnings are shown separately from the numeric score and do not imply an automatic failure or score cap.`}
+            title={getCriticalSafetyDisplayTitle(facultyReport)}
+            message={getCriticalSafetyDisplayMessage(facultyReport)}
           />
           <CriterionSummaryList
             items={facultyReport.criticalSafetyItems.map((item) => ({
@@ -155,7 +161,7 @@ export function FacultyCaseReport({
       ) : null}
 
       {facultyReport.uncertaintySummary.message ? (
-        <ReportCard title="Uncertainty Notice">
+        <ReportCard title={FACULTY_REPORT_DISPLAY_TITLES.uncertainty}>
           <Notice
             tone="warning"
             title={`${facultyReport.uncertaintySummary.uncertainItemCount} ${pluralize(
@@ -167,7 +173,7 @@ export function FacultyCaseReport({
         </ReportCard>
       ) : null}
 
-      <CollapsibleReportCard title="Competency Summary">
+      <CollapsibleReportCard title={FACULTY_REPORT_DISPLAY_TITLES.competencySummary}>
         <div className="grid gap-3 lg:grid-cols-2">
           {assessedCompetencies.map((competency) => (
             <section
@@ -185,7 +191,7 @@ export function FacultyCaseReport({
                 </div>
                 <div className="shrink-0 space-y-2 sm:text-right">
                   <p className="text-xl font-semibold">
-                    {formatPercent(competency.percentage)}
+                    {formatFacultyReportPercent(competency.percentage)}
                   </p>
                   <StatusBadge
                     tone={getCompetencyTone(competency.statusLabel)}
@@ -201,11 +207,11 @@ export function FacultyCaseReport({
         </div>
       </CollapsibleReportCard>
 
-      <CollapsibleReportCard title="Strengths">
+      <CollapsibleReportCard title={FACULTY_REPORT_DISPLAY_TITLES.strengths}>
         <GroupedStrengthList groups={groupedStrengths} />
       </CollapsibleReportCard>
 
-      <CollapsibleReportCard title="Areas for Improvement">
+      <CollapsibleReportCard title={FACULTY_REPORT_DISPLAY_TITLES.improvements}>
         <GroupedImprovementList groups={groupedImprovements} />
       </CollapsibleReportCard>
 
@@ -721,17 +727,6 @@ function getCriterionTone(status: string): StatusTone {
     return "neutral";
   }
   return "danger";
-}
-
-function getCriticalSafetyTitle(facultyReport: FacultyReport) {
-  if (facultyReport.criticalSafetySummary.status === "critical-uncertain") {
-    return "Critical uncertainty";
-  }
-  return "Critical miss";
-}
-
-function formatPercent(value: number | null) {
-  return value === null ? "Unavailable" : `${value}%`;
 }
 
 function formatCompetencyStatus(value: FacultyReportCompetencyStatus) {

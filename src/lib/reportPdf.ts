@@ -292,6 +292,36 @@ export class PdfDocument {
     });
   }
 
+  addMetrics(
+    metrics: Array<{ label: string; value: string; description?: string }>,
+  ) {
+    const height = 58;
+    this.ensureBlockSpace(height + 10);
+    this.addGap(6);
+    this.drawRect(MARGIN_X, this.y, CONTENT_WIDTH, height, LIGHT_BLUE);
+    const columnWidth = CONTENT_WIDTH / metrics.length;
+    metrics.forEach((metric, index) => {
+      const x = MARGIN_X + index * columnWidth + 14;
+      this.writeText(metric.label, x, this.y + 14, {
+        size: 8,
+        bold: true,
+        color: MUTED,
+      });
+      this.writeText(metric.value, x, this.y + 31, {
+        size: 16,
+        bold: true,
+        color: BRAND_BLUE,
+      });
+      if (metric.description) {
+        this.writeText(metric.description, x, this.y + 46, {
+          size: 8,
+          color: MUTED,
+        });
+      }
+    });
+    this.y += height + 8;
+  }
+
   addParagraph(text: string, options: PdfTextOptions = {}) {
     this.addText(text, {
       size: 10,

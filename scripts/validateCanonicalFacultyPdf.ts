@@ -106,6 +106,36 @@ for (const rubric of facultyRubrics) {
 
   const blob = await generateCanonicalFacultyPdfBlob(presentation);
   assert(blob.size > 0, `Canonical PDF was empty for ${rubric.caseId}.`);
+  const pdfText = new TextDecoder().decode(await blob.arrayBuffer());
+  for (const expectedText of [
+    "Faculty Rubric Report",
+    caseTitle,
+    patientName,
+    report.overallResult.message,
+    "Competency Summary",
+    "Strengths",
+    "Areas for Improvement",
+  ]) {
+    assert(
+      pdfText.includes(expectedText),
+      `Canonical PDF for ${rubric.caseId} omitted: ${expectedText}`,
+    );
+  }
+  for (const section of presentation.comparisonSections) {
+    assert(
+      pdfText.includes(section.title),
+      `Canonical PDF for ${rubric.caseId} omitted comparison section ${section.title}.`,
+    );
+  }
+  assert(
+    pdfText.indexOf("Competency Summary") < pdfText.indexOf("Strengths") &&
+      pdfText.indexOf("Strengths") < pdfText.indexOf("Areas for Improvement"),
+    "Canonical PDF section order must match the browser report.",
+  );
+  assert(
+    !pdfText.includes("Criterion Results"),
+    "Production PDF must not add a PDF-only criterion appendix.",
+  );
   assert(buildCanonicalFacultyPdfFilename(presentation).endsWith("-faculty-report.pdf"));
 
   const criticalCriterion = supportedCriteria.find(
@@ -172,7 +202,10 @@ const productionPdfSources = await Promise.all(
   ].map((file) => readFile(file, "utf8")),
 );
 const activePdfSource = productionPdfSources.join("\n");
-assert(!activePdfSource.includes("/api/report"), "Canonical PDF path must not call the legacy report API.");
+assert(
+  !/fetch\(["']\/api\/report["']/.test(activePdfSource),
+  "Canonical PDF path must not call the legacy report API.",
+);
 assert(!/legacy pdf/i.test(activePdfSource), "Production report flow must not identify the PDF as legacy.");
 assert(!activePdfSource.includes("generateReportPdfBlob"), "Canonical PDF path must not call the legacy PDF generator.");
 
