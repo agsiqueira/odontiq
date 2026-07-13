@@ -39,7 +39,7 @@ export function PatientProfileCard({
   return (
     <article
       className={cn(
-        "rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]",
+        "rounded-2xl border border-[rgba(15,23,42,0.06)] bg-[color-mix(in_srgb,var(--color-background)_95%,white)] shadow-[0_10px_30px_rgba(15,23,42,0.08)]",
         compact ? "p-4" : "p-6",
         className
       )}
@@ -73,19 +73,21 @@ export function PatientProfileCard({
               eyebrow || contextLabel ? "mt-4" : undefined,
             )}
           >
-            <div
-              className={cn(
-                "relative overflow-hidden rounded-full border border-[var(--color-border)] bg-[color-mix(in_srgb,var(--color-brand)_12%,white)]",
-                compact ? "size-[5.75rem]" : "size-32"
-              )}
-            >
-              <Image
-                src={patientCase.assets.rest}
-                alt={`${patientCase.patientName} portrait`}
-                fill
-                sizes={compact ? "92px" : "128px"}
-                className="object-cover"
-              />
+            <div className="rounded-full border-2 border-[rgba(255,255,255,0.9)] bg-white p-1 shadow-[0_4px_12px_rgba(15,23,42,0.08)]">
+              <div
+                className={cn(
+                  "relative overflow-hidden rounded-full bg-[color-mix(in_srgb,var(--color-brand)_12%,white)]",
+                  compact ? "size-[5.75rem]" : "size-32"
+                )}
+              >
+                <Image
+                  src={patientCase.assets.rest}
+                  alt={`${patientCase.patientName} portrait`}
+                  fill
+                  sizes={compact ? "92px" : "128px"}
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         ) : null}
