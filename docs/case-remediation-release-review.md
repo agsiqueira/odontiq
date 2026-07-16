@@ -78,7 +78,7 @@ The complete sweep also exposed one stale test assumption in `validatePostSemant
 
 - `src/data/canonicalCaseSpecs/case-01.ts` through `case-05.ts`
 - `src/data/canonicalCaseSpecs/helpers.ts`, `index.ts`, and `schema.ts`
-- `docs/faculty-specifications/case-01-ludwigs.docx` through `5-irreversible pulpitis.docx`
+- the five Word specifications under `docs/faculty-specifications/`, from `case-01-ludwigs.docx` through `case-05-irreversible-pulpitis.docx`
 
 ### Case remediation
 
