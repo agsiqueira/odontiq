@@ -2,6 +2,7 @@ import { PdfDocument } from "../../reportPdf";
 import type { CanonicalFacultyReportPresentation } from "./presentation";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
+  formatEncounterTranscriptTimestamp,
   formatFacultyReportDate,
   formatFacultyReportFilenameTimestamp,
   formatFacultyReportPercent,
@@ -225,7 +226,9 @@ function addEncounterTranscript(
   }
 
   transcript.forEach((message, index) => {
-    pdf.addParagraph(message.role === "student" ? "Provider:" : "Patient:", {
+    const role = message.role === "student" ? "Provider" : "Patient";
+    const timestamp = formatEncounterTranscriptTimestamp(message.timestamp);
+    pdf.addParagraph(timestamp ? `${role} - ${timestamp}` : role, {
       bold: true,
     });
     pdf.addParagraph(message.text, {

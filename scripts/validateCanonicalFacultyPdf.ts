@@ -10,6 +10,7 @@ import {
   buildCanonicalFacultyPdfFilename,
   generateCanonicalFacultyPdfBlob,
 } from "../src/lib/facultyRubric/report/pdf";
+import { formatEncounterTranscriptTimestamp } from "../src/lib/facultyRubric/report/displayContent";
 import { buildCanonicalFacultyReportPresentation } from "../src/lib/facultyRubric/report/presentation";
 import { scoreFacultyRubricEvaluations } from "../src/lib/facultyRubric/scoring";
 import type { LocalEncounterSummary } from "../src/lib/localEncounter";
@@ -142,9 +143,9 @@ for (const rubric of facultyRubrics) {
     "Strengths",
     "Areas for Improvement",
     "Encounter Transcript",
-    "Provider:",
+    `Provider - ${formatEncounterTranscriptTimestamp("2026-07-12T11:58:00.000Z")}`,
     "Hello, what brings you in today?",
-    "Patient:",
+    `Patient - ${formatEncounterTranscriptTimestamp("2026-07-12T11:58:01.000Z")}`,
     "My tooth has been hurting for three days.",
   ]) {
     assert(
@@ -166,7 +167,7 @@ for (const rubric of facultyRubrics) {
   assert(
     pdfText.indexOf("Areas for Improvement") <
       pdfText.indexOf("Encounter Transcript") &&
-      pdfText.indexOf("Provider:") < pdfText.indexOf("Patient:"),
+      pdfText.indexOf("Provider -") < pdfText.indexOf("Patient -"),
     "Encounter transcript must follow improvements and preserve message order.",
   );
   if (rubric.caseId === "case-01") {
@@ -275,6 +276,23 @@ assert(
   facultyScreenSource.indexOf("FACULTY_REPORT_DISPLAY_TITLES.improvements") <
     facultyScreenSource.indexOf("<EncounterTranscript messages={transcript}"),
   "Browser transcript must render immediately after Areas for Improvement.",
+);
+assert(
+  facultyScreenSource.includes(
+    "<CollapsibleReportCard\n        title={FACULTY_REPORT_DISPLAY_TITLES.encounterTranscript}",
+  ),
+  "Browser transcript must reuse the canonical collapsible report card.",
+);
+assert(
+  facultyScreenSource.includes(
+    "formatEncounterTranscriptTimestamp(message.timestamp)",
+  ),
+  "Browser transcript must render each stored message timestamp.",
+);
+assert(
+  facultyScreenSource.includes("aria-expanded={isOpen}") &&
+    facultyScreenSource.includes("aria-controls={contentId}"),
+  "Collapsible report cards must expose expansion state and controlled content.",
 );
 
 console.log("Canonical faculty PDF validation passed for all five cases.");

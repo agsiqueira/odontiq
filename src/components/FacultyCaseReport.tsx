@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useId, useState } from "react";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -23,6 +24,7 @@ import type { FacultyComparisonSection } from "@/lib/facultyRubric/report/compar
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
+  formatEncounterTranscriptTimestamp,
   formatFacultyReportPercent,
   getCriticalSafetyDisplayMessage,
   getCriticalSafetyDisplayTitle,
@@ -227,9 +229,11 @@ export function FacultyCaseReport({
         <GroupedImprovementList groups={groupedImprovements} />
       </CollapsibleReportCard>
 
-      <ReportCard title={FACULTY_REPORT_DISPLAY_TITLES.encounterTranscript}>
+      <CollapsibleReportCard
+        title={FACULTY_REPORT_DISPLAY_TITLES.encounterTranscript}
+      >
         <EncounterTranscript messages={transcript} />
-      </ReportCard>
+      </CollapsibleReportCard>
 
       {process.env.NODE_ENV !== "production" ? (
         <ReportCard title="Development details">
@@ -288,7 +292,10 @@ function EncounterTranscript({ messages }: { messages: ConversationMessage[] }) 
       {messages.map((message) => (
         <li key={message.id} className="py-4 first:pt-0 last:pb-0">
           <p className="text-sm font-semibold text-[var(--color-text-primary)]">
-            {message.role === "student" ? "Provider" : "Patient"}:
+            {message.role === "student" ? "Provider" : "Patient"}
+            {formatEncounterTranscriptTimestamp(message.timestamp)
+              ? ` · ${formatEncounterTranscriptTimestamp(message.timestamp)}`
+              : ""}
           </p>
           <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-6 text-[var(--color-text-secondary)]">
             {message.text}
@@ -356,13 +363,25 @@ function CollapsibleReportCard({
   title: string;
   children: React.ReactNode;
 }) {
+  const contentId = useId();
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <details className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-5 [&::-webkit-details-marker]:hidden">
+    <details
+      className="group rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--elevation-subtle)]"
+      onToggle={(event) => setIsOpen(event.currentTarget.open)}
+    >
+      <summary
+        aria-controls={contentId}
+        aria-expanded={isOpen}
+        className="flex cursor-pointer list-none items-center justify-between gap-3 p-5 [&::-webkit-details-marker]:hidden"
+      >
         <h2 className="text-lg font-semibold leading-tight">{title}</h2>
         <ChevronDown className="size-5 shrink-0 text-[var(--color-text-secondary)] transition-transform group-open:rotate-180" />
       </summary>
-      <div className="px-5 pb-5">{children}</div>
+      <div id={contentId} className="px-5 pb-5">
+        {children}
+      </div>
     </details>
   );
 }
