@@ -2,7 +2,7 @@
 
 Date: 2026-07-16  
 Scope: audit only; no remediation implemented  
-Canonical source: the five numbered `.docx` files in `case-specs/`
+Canonical source: the five faculty-authored `.docx` files in `docs/faculty-specifications/`
 
 ## Remediation status (historical-baseline addendum)
 
@@ -16,11 +16,11 @@ The stabilization commands include all five focused case validators, canonical p
 
 The repository does not contain one combined specification document. It contains five numbered Word documents, one per case, so this audit treats that complete set as the intended clinical source of truth:
 
-1. `case-specs/1-Ludwigs.docx`
-2. `case-specs/2-systemic infection unstable.docx`
-3. `case-specs/3-oral abcsess.docx`
-4. `case-specs/4-Necrotic pulp with acute apical periodontitis .docx`
-5. `case-specs/5-irreversible pulpitis.docx`
+1. `docs/faculty-specifications/case-01-ludwigs.docx`
+2. `docs/faculty-specifications/case-02-systemic-infection.docx`
+3. `docs/faculty-specifications/case-03-periapical-abscess.docx`
+4. `docs/faculty-specifications/case-04-necrotic-pulp-with-acute-apical-periodontitis.docx`
+5. `docs/faculty-specifications/case-05-irreversible-pulpitis.docx`
 
 All paragraphs, tables, headers/footers, footnotes/endnotes, and accessible Word comments were checked. The documents contain no populated tables, footnotes, or endnotes. Word comments are clinically important: they contain vital signs, examination findings, and, for Case 2, laboratory and CT results. Those comments were included in the canonical records below.
 
@@ -468,3 +468,5 @@ The schema should distinguish “not specified” from a negative finding, disti
 - Images embedded in the Word documents were not interpreted as independent clinical evidence; the accessible surrounding text/comments defined the findings.
 - No external LLM was called. Conceptual tests are deterministic static analysis of prompts, facts, matching, and scoring paths.
 - At audit start, the worktree already contained modified implementation files from the preceding Case 5 task: `package.json`, Case 5 JSON, `conversationEngine.ts`, `patientDisclosure.ts`, and an untracked Case-5 validation script. This audit did not modify those files. The only file created by this audit is `docs/case-spec-audit.md`.
+
+

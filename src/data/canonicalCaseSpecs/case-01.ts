@@ -3,7 +3,7 @@ import { defineCanonicalCase } from "./schema";
 
 export const canonicalCase01 = defineCanonicalCase({ schemaVersion: 1,
   identity: { caseId: "case-01", age: 52, setting: "emergency department", location: "left mandibular molar", displayName: "Amara Johnson", displayNameStatus: "implementation-metadata", gender: { status: "implementation-metadata", value: "Female" } },
-  sources: { wordDocument: "case-specs/1-Ludwigs.docx", auditDocument: "docs/case-spec-audit.md" },
+  sources: { wordDocument: "docs/faculty-specifications/case-01-ludwigs.docx", auditDocument: "docs/case-spec-audit.md" },
   facts: [
     fact({id:"c1.chief",category:"chief-complaint",statement:"Dental pain with swelling and trouble breathing.",value:"dental pain with swelling and trouble breathing",disclosureRequirement:"opening-only",rubricRequired:true,implementationMatchers:["swollen","breathe"]}),
     fact({id:"c1.location",category:"location",statement:"The source is a left mandibular molar.",value:"left mandibular molar",precision:"exact",rubricRequired:true,implementationMatchers:["left","lower"]}),
@@ -28,3 +28,4 @@ export const canonicalCase01 = defineCanonicalCase({ schemaVersion: 1,
     fact({id:"c1.diagnosis",category:"diagnosis",statement:"The diagnosis is Ludwig's angina.",value:"Ludwig's angina",precision:"exact",patientKnowledge:"unknown",disclosureRequirement:"clinician-inference-only",rubricRequired:true,implementationMatchers:["ludwig"]}),
     fact({id:"c1.management",category:"management",statement:"Airway maintenance, admission, IV therapy, CT and OMFS consultation are required.",value:"airway emergency management",patientKnowledge:"not-applicable",disclosureRequirement:"clinician-inference-only",rubricRequired:true,implementationMatchers:["airway","admission","iv","ct","omfs"]}),
   ], facultyReview: [] });
+

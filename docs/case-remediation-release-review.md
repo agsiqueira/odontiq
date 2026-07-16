@@ -78,7 +78,7 @@ The complete sweep also exposed one stale test assumption in `validatePostSemant
 
 - `src/data/canonicalCaseSpecs/case-01.ts` through `case-05.ts`
 - `src/data/canonicalCaseSpecs/helpers.ts`, `index.ts`, and `schema.ts`
-- `case-specs/1-Ludwigs.docx` through `5-irreversible pulpitis.docx`
+- `docs/faculty-specifications/case-01-ludwigs.docx` through `5-irreversible pulpitis.docx`
 
 ### Case remediation
 
@@ -138,3 +138,4 @@ Description: Aligns runtime case data, disclosure, structured examinations/diagn
 ## 15. Release recommendation
 
 **Ready with faculty follow-up.** The implementation is technically release-ready, and remaining questions are documented calibration matters rather than runtime blockers.
+
