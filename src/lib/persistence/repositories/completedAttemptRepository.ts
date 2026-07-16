@@ -32,6 +32,7 @@ export class CompletedAttemptRepository {
     return db.completedAttempt.findUnique({
       where: { userId_attemptId: { userId, attemptId } },
       include: {
+        encounter: { select: { encounterData: true } },
         facultyEvaluation: true,
         facultyScore: true,
         facultyReport: true,

@@ -107,6 +107,8 @@ export async function generateCanonicalFacultyPdfBlob(
   pdf.addSectionHeading(FACULTY_REPORT_DISPLAY_TITLES.improvements);
   addGroupedImprovements(pdf, report);
 
+  addEncounterTranscript(pdf, model.transcript);
+
   return pdf.toBlob();
 }
 
@@ -207,6 +209,33 @@ function addGroupedImprovements(
       }
     }
   }
+}
+
+function addEncounterTranscript(
+  pdf: PdfDocument,
+  transcript: CanonicalFacultyReportPresentation["transcript"],
+) {
+  pdf.addSectionHeading(FACULTY_REPORT_DISPLAY_TITLES.encounterTranscript);
+
+  if (transcript.length === 0) {
+    pdf.addParagraph("No transcript was recorded.", {
+      color: [0.38, 0.43, 0.46],
+    });
+    return;
+  }
+
+  transcript.forEach((message, index) => {
+    pdf.addParagraph(message.role === "student" ? "Provider:" : "Patient:", {
+      bold: true,
+    });
+    pdf.addParagraph(message.text, {
+      color: [0.38, 0.43, 0.46],
+      indent: 12,
+    });
+    if (index < transcript.length - 1) {
+      pdf.addGap(6);
+    }
+  });
 }
 
 function groupByCompetency<T extends { competency: string }>(items: T[]) {

@@ -321,6 +321,7 @@ export function CaseReport({ caseId, attemptId }: CaseReportProps) {
           caseTitle={report.case.title}
           patientName={report.case.patientName}
           facultyReport={facultyPreviewSummary.facultyReport}
+          transcript={facultyPreviewSummary.conversationHistory}
           modeSwitcher={reportModeSwitcher}
         />
       </FacultyReportRenderBoundary>

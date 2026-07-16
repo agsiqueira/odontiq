@@ -6,6 +6,7 @@ import {
   type FacultyComparisonSection,
 } from "./comparison";
 import { getCaseDisplayLabel } from "../../caseDisplay";
+import type { ConversationMessage } from "../../conversationEngine";
 
 export type CanonicalFacultyReportCriterion =
   NonNullable<LocalEncounterSummary["facultyReport"]>["criterionResults"][number] & {
@@ -22,6 +23,7 @@ export type CanonicalFacultyReportPresentation = {
   attemptId?: string;
   completedAt?: string;
   report: NonNullable<LocalEncounterSummary["facultyReport"]>;
+  transcript: ConversationMessage[];
   criteria: CanonicalFacultyReportCriterion[];
   comparisonSections: FacultyComparisonSection[];
 };
@@ -123,6 +125,7 @@ export function buildCanonicalFacultyReportPresentation(
     attemptId: metadata.attemptId,
     completedAt: summary.metadata?.completedAt ?? summary.savedAt,
     report,
+    transcript: summary.conversationHistory.map((message) => ({ ...message })),
     criteria,
     comparisonSections,
   };

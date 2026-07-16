@@ -17,12 +17,14 @@ import {
   readCompletedEncounterAttempt,
   type CompletedEncounterAttempt,
 } from "@/lib/localEncounter";
+import type { ConversationMessage } from "@/lib/conversationEngine";
 
 type Status = "checking" | "generating" | "ready" | "missing" | "error";
 type ServerReportArtifacts = {
   evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
   score: CompletedEncounterAttempt["facultyRubricScore"] | null;
   report: CompletedEncounterAttempt["facultyReport"] | null;
+  transcript: ConversationMessage[];
 };
 
 export function CanonicalCaseReport({
@@ -70,7 +72,7 @@ export function CanonicalCaseReport({
           candidate = {
             attemptId,
             caseId,
-            conversationHistory: [],
+            conversationHistory: payload.transcript,
             coveredFacts: [],
             coveredChecklistItems: [],
             encounterEvents: [],
@@ -201,6 +203,7 @@ export function CanonicalCaseReport({
         isDownloadingPdf={isDownloadingPdf}
         pdfError={pdfError}
         comparisonSections={presentation.comparisonSections}
+        transcript={presentation.transcript}
       />
     );
   }
@@ -236,5 +239,11 @@ export function CanonicalCaseReport({
 }
 
 function isServerReportArtifacts(value: unknown): value is ServerReportArtifacts {
-  return Boolean(value && typeof value === "object" && "evaluation" in value);
+  return Boolean(
+    value &&
+      typeof value === "object" &&
+      "evaluation" in value &&
+      "transcript" in value &&
+      Array.isArray((value as { transcript?: unknown }).transcript),
+  );
 }

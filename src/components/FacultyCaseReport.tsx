@@ -20,6 +20,7 @@ import type {
   FacultyReportStrength,
 } from "@/lib/facultyRubric/report";
 import type { FacultyComparisonSection } from "@/lib/facultyRubric/report/comparison";
+import type { ConversationMessage } from "@/lib/conversationEngine";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
   formatFacultyReportPercent,
@@ -41,6 +42,7 @@ type FacultyCaseReportProps = {
   isDownloadingPdf?: boolean;
   pdfError?: string;
   comparisonSections?: FacultyComparisonSection[];
+  transcript: ConversationMessage[];
 };
 
 type StatusTone = "success" | "warning" | "danger" | "neutral";
@@ -69,6 +71,7 @@ export function FacultyCaseReport({
   isDownloadingPdf = false,
   pdfError,
   comparisonSections = [],
+  transcript,
 }: FacultyCaseReportProps) {
   void studentName;
   void caseLabel;
@@ -224,6 +227,10 @@ export function FacultyCaseReport({
         <GroupedImprovementList groups={groupedImprovements} />
       </CollapsibleReportCard>
 
+      <ReportCard title={FACULTY_REPORT_DISPLAY_TITLES.encounterTranscript}>
+        <EncounterTranscript messages={transcript} />
+      </ReportCard>
+
       {process.env.NODE_ENV !== "production" ? (
         <ReportCard title="Development details">
           <details className="rounded-xl border border-[var(--color-border)] bg-white p-4">
@@ -264,6 +271,31 @@ export function FacultyCaseReport({
         <ReportNavigation caseId={caseId} attemptId={attemptId} />
       </ReportCard>
     </div>
+  );
+}
+
+function EncounterTranscript({ messages }: { messages: ConversationMessage[] }) {
+  if (messages.length === 0) {
+    return (
+      <p className="text-sm text-[var(--color-text-secondary)]">
+        No transcript was recorded.
+      </p>
+    );
+  }
+
+  return (
+    <ol className="divide-y divide-[var(--color-border)]">
+      {messages.map((message) => (
+        <li key={message.id} className="py-4 first:pt-0 last:pb-0">
+          <p className="text-sm font-semibold text-[var(--color-text-primary)]">
+            {message.role === "student" ? "Provider" : "Patient"}:
+          </p>
+          <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-6 text-[var(--color-text-secondary)]">
+            {message.text}
+          </p>
+        </li>
+      ))}
+    </ol>
   );
 }
 

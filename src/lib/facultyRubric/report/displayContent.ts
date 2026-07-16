@@ -7,6 +7,7 @@ export const FACULTY_REPORT_DISPLAY_TITLES = {
   competencySummary: "Competency Summary",
   strengths: "Strengths",
   improvements: "Areas for Improvement",
+  encounterTranscript: "Encounter Transcript",
 } as const;
 
 export function getCriticalSafetyDisplayTitle(report: FacultyReport) {

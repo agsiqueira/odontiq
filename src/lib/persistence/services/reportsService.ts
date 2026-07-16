@@ -9,6 +9,7 @@ type DashboardAttempt = {
 };
 
 type ReportAttempt = DashboardAttempt & {
+  encounter: { encounterData: unknown };
   facultyEvaluation: { data: unknown } | null;
   facultyScore: { data: unknown } | null;
   facultyReport: { data: unknown } | null;
@@ -49,10 +50,16 @@ export class ReportsService {
   async getReport(userId: string, attemptId: string) {
     const attempt = await this.attempts.findOwnedByAttemptId(userId, attemptId);
     if (!attempt) throw new ReportAttemptNotFoundError();
+    const encounterDocument = isEncounterDocument(attempt.encounter.encounterData)
+      ? attempt.encounter.encounterData
+      : undefined;
+
     return {
       evaluation: attempt.facultyEvaluation?.data ?? null,
       score: attempt.facultyScore?.data ?? null,
       report: attempt.facultyReport?.data ?? null,
+      transcript: encounterDocument?.messages.map((message) => ({ ...message })) ?? [],
     };
   }
 }
+import { isEncounterDocument } from "../../encounter/encounterDocument";

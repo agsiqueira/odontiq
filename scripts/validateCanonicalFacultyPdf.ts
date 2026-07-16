@@ -47,7 +47,20 @@ for (const rubric of facultyRubrics) {
   });
   const summary: LocalEncounterSummary = {
     caseId: rubric.caseId,
-    conversationHistory: [],
+    conversationHistory: [
+      {
+        id: "provider-opening",
+        role: "student",
+        text: "Hello, what brings you in today?",
+        timestamp: "2026-07-12T11:58:00.000Z",
+      },
+      {
+        id: "patient-opening",
+        role: "patient",
+        text: "My tooth has been hurting for three days.",
+        timestamp: "2026-07-12T11:58:01.000Z",
+      },
+    ],
     coveredFacts: [],
     coveredChecklistItems: [],
     encounterEvents: [],
@@ -78,6 +91,11 @@ for (const rubric of facultyRubrics) {
 
   assert(presentation, `Canonical presentation unavailable for ${rubric.caseId}.`);
   assert.equal(presentation.report, report, "Presentation must retain the persisted report object.");
+  assert.deepEqual(
+    presentation.transcript,
+    summary.conversationHistory,
+    "Presentation must retain every stored transcript message in order.",
+  );
   assert.equal(presentation.report.overallScore.percentage, score.percentage);
   assert.equal(presentation.report.overallScore.earnedPoints, score.earnedPoints);
   assert.equal(presentation.report.overallScore.possiblePoints, score.possiblePoints);
@@ -123,6 +141,11 @@ for (const rubric of facultyRubrics) {
     "Competency Summary",
     "Strengths",
     "Areas for Improvement",
+    "Encounter Transcript",
+    "Provider:",
+    "Hello, what brings you in today?",
+    "Patient:",
+    "My tooth has been hurting for three days.",
   ]) {
     assert(
       pdfText.includes(expectedText),
@@ -140,6 +163,33 @@ for (const rubric of facultyRubrics) {
       pdfText.indexOf("Strengths") < pdfText.indexOf("Areas for Improvement"),
     "Canonical PDF section order must match the browser report.",
   );
+  assert(
+    pdfText.indexOf("Areas for Improvement") <
+      pdfText.indexOf("Encounter Transcript") &&
+      pdfText.indexOf("Provider:") < pdfText.indexOf("Patient:"),
+    "Encounter transcript must follow improvements and preserve message order.",
+  );
+  if (rubric.caseId === "case-01") {
+    const longTranscript = Array.from({ length: 80 }, (_, index) => ({
+      id: `long-transcript-${index + 1}`,
+      role: index % 2 === 0 ? ("student" as const) : ("patient" as const),
+      text: `Transcript message ${index + 1}.`,
+      timestamp: new Date(Date.parse(generatedAt) + index * 1000).toISOString(),
+    }));
+    const longBlob = await generateCanonicalFacultyPdfBlob({
+      ...presentation,
+      transcript: longTranscript,
+    });
+    const longPdfText = new TextDecoder().decode(await longBlob.arrayBuffer());
+    assert(longPdfText.includes("Transcript message 1."));
+    assert(longPdfText.includes("Transcript message 80."));
+    const regularPageCount = Number(pdfText.match(/\/Count (\d+)/)?.[1] ?? 0);
+    const longPageCount = Number(longPdfText.match(/\/Count (\d+)/)?.[1] ?? 0);
+    assert(
+      longPageCount > regularPageCount,
+      "Long transcripts must paginate without truncation.",
+    );
+  }
   assert(
     !pdfText.includes("Criterion Results"),
     "Production PDF must not add a PDF-only criterion appendix.",
@@ -214,11 +264,17 @@ const productionPdfSources = await Promise.all(
   ].map((file) => readFile(file, "utf8")),
 );
 const activePdfSource = productionPdfSources.join("\n");
+const facultyScreenSource = productionPdfSources[1];
 assert(
   !/fetch\(["']\/api\/report["']/.test(activePdfSource),
   "Canonical PDF path must not call the legacy report API.",
 );
 assert(!/legacy pdf/i.test(activePdfSource), "Production report flow must not identify the PDF as legacy.");
 assert(!activePdfSource.includes("generateReportPdfBlob"), "Canonical PDF path must not call the legacy PDF generator.");
+assert(
+  facultyScreenSource.indexOf("FACULTY_REPORT_DISPLAY_TITLES.improvements") <
+    facultyScreenSource.indexOf("<EncounterTranscript messages={transcript}"),
+  "Browser transcript must render immediately after Areas for Improvement.",
+);
 
 console.log("Canonical faculty PDF validation passed for all five cases.");

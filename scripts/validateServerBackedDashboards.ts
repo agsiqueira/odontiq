@@ -45,6 +45,34 @@ async function main() {
       if (attemptId !== "case-1-newest") return null;
       return {
         ...attempts[0],
+        encounter: {
+          encounterData: {
+            schemaVersion: 1,
+            caseId: "case-01",
+            encounterVersion: 1,
+            messages: [
+              {
+                id: "student-1",
+                role: "student",
+                text: "What brings you in?",
+                timestamp: "2026-07-12T11:59:00.000Z",
+              },
+              {
+                id: "patient-1",
+                role: "patient",
+                text: "My tooth hurts.",
+                timestamp: "2026-07-12T11:59:01.000Z",
+              },
+            ],
+            examinations: [],
+            lifecycleEvents: [],
+            disclosedFacts: [],
+            checklistCoverage: { itemIds: [], evidence: [] },
+            timing: { activeDurationMs: 1, pausedDurationMs: 0 },
+            createdAt: "2026-07-12T11:58:00.000Z",
+            updatedAt: "2026-07-12T12:00:00.000Z",
+          },
+        },
         facultyEvaluation: { data: { status: "complete" } },
         facultyScore: { data: { percentage: 90 } },
         facultyReport: { data: { caseId: "case-01" } },
@@ -62,6 +90,20 @@ async function main() {
     evaluation: { status: "complete" },
     score: { percentage: 90 },
     report: { caseId: "case-01" },
+    transcript: [
+      {
+        id: "student-1",
+        role: "student",
+        text: "What brings you in?",
+        timestamp: "2026-07-12T11:59:00.000Z",
+      },
+      {
+        id: "patient-1",
+        role: "patient",
+        text: "My tooth hurts.",
+        timestamp: "2026-07-12T11:59:01.000Z",
+      },
+    ],
   });
   await assert.rejects(
     () => reports.getReport("user-2", "not-owned"),
