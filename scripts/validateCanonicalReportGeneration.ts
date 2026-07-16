@@ -66,7 +66,7 @@ assert.equal(parsedRejected.results.length, 0);
 assert(parsedRejected.issues.length > 0);
 
 const acceptedSemanticEvaluations = supportedCriterionIds
-  .slice(0, 18)
+  .slice(0, -3)
   .map((criterionId) => ({
     caseId,
     criterionId,
@@ -77,7 +77,7 @@ const acceptedSemanticEvaluations = supportedCriterionIds
     evaluationMethod: "ai-semantic" as const,
     evaluatedAt: "2026-07-12T12:00:02.000Z",
   }));
-const rejectedSemanticItems = supportedCriterionIds.slice(18).map(
+const rejectedSemanticItems = supportedCriterionIds.slice(-3).map(
   (criterionId, index) => ({
     criterionId,
     code:
@@ -86,7 +86,7 @@ const rejectedSemanticItems = supportedCriterionIds.slice(18).map(
         : "met-without-evidence",
   }),
 );
-assert.equal(acceptedSemanticEvaluations.length, 18);
+assert.equal(acceptedSemanticEvaluations.length, supportedCriterionIds.length - 3);
 assert.equal(rejectedSemanticItems.length, 3);
 
 const completedEvaluations = normalizeBidirectionalEvaluations({
@@ -97,7 +97,7 @@ const completedEvaluations = normalizeBidirectionalEvaluations({
     evaluatedAt: "2026-07-12T12:00:02.000Z",
   }),
 });
-assert.equal(completedEvaluations.length, 21);
+assert.equal(completedEvaluations.length, supportedCriterionIds.length);
 const completedValidation = validateFacultyCriterionEvaluations(
   completedEvaluations,
 );
@@ -149,7 +149,7 @@ const report = buildFacultyReport({
   score,
   generatedAt: "2026-07-12T12:01:00.000Z",
 });
-assert.equal(report.criterionResults.length, 21);
+assert.equal(report.criterionResults.length, supportedCriterionIds.length);
 const summary: LocalEncounterSummary = {
   ...encounter,
   coveredFacts: [],

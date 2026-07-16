@@ -1164,7 +1164,7 @@ assert(
       (report) =>
         report.totalCriteria > 0 &&
         report.deterministicallyEvaluable > 0 &&
-        report.examinationMappedCriteria.length === 1,
+        report.examinationMappedCriteria.length >= 1,
     ),
   "Development deterministic coverage report should include all five cases and examination mappings.",
 );

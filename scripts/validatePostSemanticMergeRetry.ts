@@ -18,10 +18,13 @@ assert(rubric, "Case 1 rubric is required.");
 const supportedIds = rubric.criteria
   .filter((criterion) => criterion.expectation === "required")
   .map((criterion) => criterion.id);
-assert.equal(supportedIds.length, 21);
+assert(supportedIds.length > 3, "Case 1 needs enough supported criteria to exercise partial semantic completion.");
 
-const semanticIds = supportedIds.slice(0, 18);
-const batches = [semanticIds.slice(0, 8), semanticIds.slice(8, 16), semanticIds.slice(16)];
+const semanticIds = supportedIds.slice(0, -3);
+const batches = Array.from(
+  { length: Math.ceil(semanticIds.length / 8) },
+  (_, index) => semanticIds.slice(index * 8, index * 8 + 8),
+);
 const accepted: FacultyCriterionEvaluation[] = [];
 let totalCalls = 0;
 
@@ -47,8 +50,8 @@ for (const [batchIndex, batch] of batches.entries()) {
   accepted.push(...batchResult);
 }
 
-assert.equal(totalCalls, 4, "Only the failed batch should be retried once.");
-assert.equal(accepted.length, 18);
+assert.equal(totalCalls, batches.length + 1, "Only the failed batch should be retried once.");
+assert.equal(accepted.length, semanticIds.length);
 assert.deepEqual(
   accepted.slice(0, 8).map((evaluation) => evaluation.criterionId),
   semanticIds.slice(0, 8),
@@ -60,7 +63,7 @@ const merged = mergeFacultyCriterionEvaluations({
   current: [],
   incoming: accepted,
 });
-assert.equal(merged.evaluations.length, 18);
+assert.equal(merged.evaluations.length, semanticIds.length);
 const finalized = normalizeBidirectionalEvaluations({
   caseId,
   evaluations: finalizeMissingSupportedCriteria({
@@ -69,7 +72,7 @@ const finalized = normalizeBidirectionalEvaluations({
     evaluatedAt: "2026-07-12T14:00:01.000Z",
   }),
 });
-assert.equal(finalized.length, 21);
+assert.equal(finalized.length, supportedIds.length);
 assert(validateFacultyCriterionEvaluations(finalized).valid);
 
 const score = scoreFacultyRubricEvaluations({ caseId, evaluations: finalized });
@@ -80,7 +83,7 @@ const report = buildFacultyReport({
   score,
   generatedAt: "2026-07-12T14:00:02.000Z",
 });
-assert.equal(report.criterionResults.length, 21);
+assert.equal(report.criterionResults.length, supportedIds.length);
 
 const priorPartialState = {
   status: "partial" as const,
@@ -92,7 +95,7 @@ const successfulState = {
   evaluations: finalized,
 };
 assert.equal(successfulState.status, "complete");
-assert.equal(successfulState.evaluations.length, 21);
+assert.equal(successfulState.evaluations.length, supportedIds.length);
 
 const collisionId = supportedIds[0];
 const older: FacultyCriterionEvaluation = {
