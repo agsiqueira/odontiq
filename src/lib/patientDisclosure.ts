@@ -21,12 +21,25 @@ export type PatientDisclosureFact = {
   text: string;
 };
 
+export type ProviderMessageIntent =
+  | "question"
+  | "instruction"
+  | "diagnosis_explanation"
+  | "treatment_plan"
+  | "medication_plan"
+  | "disposition_plan"
+  | "patient_education"
+  | "reassurance"
+  | "closing"
+  | "other";
+
 export type PatientDisclosureState = {
   alreadyDisclosed: PatientDisclosureFact[];
   allowedThisTurn: PatientDisclosureFact[];
   latestTopics: PatientDisclosureTopic[];
   isBroadQuestion: boolean;
   asksRestrictedClinicalInterpretation: boolean;
+  providerMessageIntent: ProviderMessageIntent;
 };
 
 type InternalFact = PatientDisclosureFact & {
@@ -40,6 +53,27 @@ const BROAD_QUESTION_PATTERN =
 
 const RESTRICTED_INTERPRETATION_PATTERN =
   /\b(diagnos|diagnosis|differential|impression|what is it|what do you think it is|treatment plan|management plan|care plan|what'?s the plan|what is the plan|what should i do|what do we do|should i prescribe|should i refer|procedure|refer|referral)\b/i;
+
+const QUESTION_PATTERN =
+  /^(?:who|what|when|where|why|how|which|do|does|did|are|is|was|were|can|could|would|will|have|has|had|tell me|describe)\b/i;
+const COMPREHENSION_QUESTION_PATTERN =
+  /^(?:(?:do|can) you understand|does that make sense|is that clear)\b/i;
+const DISPOSITION_PLAN_PATTERN =
+  /\b(admit|admitted|admission|hospital|discharge|go home|send you home|refer|referral|oral surgeon|follow[- ]?up|come back|return in|see you again)\b/i;
+const MEDICATION_PLAN_PATTERN =
+  /\b(prescrib|antibiotic|pain medication|pain medicine|start you on|medication plan|take .+ (?:days?|times?))\b/i;
+const TREATMENT_PLAN_PATTERN =
+  /\b(treatment|procedure|extract|extraction|remove the tooth|removed|root canal|drain|incision|operate|surgery)\b/i;
+const DIAGNOSIS_EXPLANATION_PATTERN =
+  /\b(diagnos|appears? to be|caused by|this is (?:an?|the)|you have|infection|condition)\b/i;
+const REASSURANCE_PATTERN =
+  /\b(youll be (?:all right|okay)|do not worry|dont worry|well take care of you|this should help|reassur)\b/i;
+const CLOSING_PATTERN =
+  /\b(thank you for coming|thats all|were all done|take care|see you (?:soon|next|then)|goodbye)\b/i;
+const INSTRUCTION_PATTERN =
+  /^(?:please\s+)?(?:take|use|avoid|call|return|come back|keep|rinse|stop|start|continue|do not|don'?t|make sure)\b/i;
+const EDUCATION_PATTERN =
+  /\b(the reason|this means|because|what to expect|it is important|you should know)\b/i;
 
 const TOPIC_ALIASES: Record<PatientDisclosureTopic, string[]> = {
   chief_complaint: [
@@ -222,6 +256,7 @@ export function buildPatientDisclosureState({
     isBroadQuestion: latestClassification.isBroadQuestion,
     asksRestrictedClinicalInterpretation:
       latestClassification.asksRestrictedClinicalInterpretation,
+    providerMessageIntent: latestClassification.providerMessageIntent,
   };
 }
 
@@ -374,20 +409,57 @@ function dedupeFacts(facts: InternalFact[]) {
 
 function classifyQuestion(question: string) {
   const normalizedQuestion = normalizeText(question);
+  const providerMessageIntent = classifyProviderMessageIntent(question);
   const topics = new Set<PatientDisclosureTopic>();
 
-  for (const [topic, aliases] of Object.entries(TOPIC_ALIASES)) {
-    if (aliases.some((alias) => matchesAlias(normalizedQuestion, alias))) {
-      topics.add(topic as PatientDisclosureTopic);
+  if (providerMessageIntent === "question") {
+    for (const [topic, aliases] of Object.entries(TOPIC_ALIASES)) {
+      if (aliases.some((alias) => matchesAlias(normalizedQuestion, alias))) {
+        topics.add(topic as PatientDisclosureTopic);
+      }
     }
   }
 
   return {
     topics: refineTopics(normalizedQuestion, topics),
-    isBroadQuestion: BROAD_QUESTION_PATTERN.test(normalizedQuestion),
+    isBroadQuestion:
+      providerMessageIntent === "question" &&
+      BROAD_QUESTION_PATTERN.test(normalizedQuestion),
     asksRestrictedClinicalInterpretation:
+      providerMessageIntent === "question" &&
+      !COMPREHENSION_QUESTION_PATTERN.test(question.trim()) &&
       RESTRICTED_INTERPRETATION_PATTERN.test(normalizedQuestion),
+    providerMessageIntent,
   };
+}
+
+export function classifyProviderMessageIntent(
+  message: string,
+): ProviderMessageIntent {
+  const trimmedMessage = message.trim();
+  const normalizedMessage = normalizeText(message);
+
+  if (
+    !/^do not\b/i.test(trimmedMessage) &&
+    (trimmedMessage.endsWith("?") || QUESTION_PATTERN.test(trimmedMessage))
+  ) {
+    return "question";
+  }
+  if (CLOSING_PATTERN.test(normalizedMessage)) return "closing";
+  if (REASSURANCE_PATTERN.test(normalizedMessage)) return "reassurance";
+  if (DISPOSITION_PLAN_PATTERN.test(normalizedMessage)) {
+    return "disposition_plan";
+  }
+  if (MEDICATION_PLAN_PATTERN.test(normalizedMessage)) {
+    return "medication_plan";
+  }
+  if (TREATMENT_PLAN_PATTERN.test(normalizedMessage)) return "treatment_plan";
+  if (DIAGNOSIS_EXPLANATION_PATTERN.test(normalizedMessage)) {
+    return "diagnosis_explanation";
+  }
+  if (INSTRUCTION_PATTERN.test(trimmedMessage)) return "instruction";
+  if (EDUCATION_PATTERN.test(normalizedMessage)) return "patient_education";
+  return "other";
 }
 
 function refineTopics(
