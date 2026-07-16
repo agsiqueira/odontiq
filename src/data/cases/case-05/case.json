@@ -24,6 +24,33 @@
     "talking": "/patients/case-05/talking-v3.mp4",
     "examinations": [
       {
+        "id": "vital-signs",
+        "title": "Vital Signs",
+        "type": "vital-signs",
+        "findings": [
+          {
+            "label": "Temperature",
+            "value": "36.9°C (98.4°F)"
+          },
+          {
+            "label": "Heart Rate",
+            "value": "82 bpm"
+          },
+          {
+            "label": "Blood Pressure",
+            "value": "122/76 mmHg"
+          },
+          {
+            "label": "Respiratory Rate",
+            "value": "14 breaths/min"
+          },
+          {
+            "label": "Oxygen Saturation",
+            "value": "99% on room air"
+          }
+        ]
+      },
+      {
         "id": "examination-01",
         "title": "Examination 1",
         "image": "/patients/case-05/examination/examination-01.jpg",

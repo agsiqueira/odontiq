@@ -1580,7 +1580,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
             </div>
           ) : (
             <div
-              className="size-full overflow-auto pt-20"
+              className="flex size-full items-center justify-center overflow-hidden px-[5vw] pb-[5vh] pt-[calc(5rem+5vh)]"
               style={{ touchAction: "pinch-zoom" }}
             >
               <Image
@@ -1589,8 +1589,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                 width={1600}
                 height={1200}
                 unoptimized
-                className="mx-auto block min-h-full max-w-none object-contain"
-                style={{ width: "140vw" }}
+                className="block h-auto max-h-full w-auto max-w-full object-contain"
               />
             </div>
           )}
