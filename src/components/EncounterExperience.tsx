@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import {
+  Activity,
   ChevronLeft,
   ImageIcon,
   Settings,
@@ -350,7 +351,14 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const isGeneratingPatientResponse = state.isSpeaking;
   const isPatientAudioPlaying = speechPlayback.isSpeaking;
   const selectedExamination = patientCase.assets.examinations.find(
-    (image) => image.id === state.selectedExaminationId,
+    (examination) => examination.id === state.selectedExaminationId,
+  );
+  const orderedExaminations = [...patientCase.assets.examinations].sort(
+    (first, second) => {
+      if (first.id === "vital-signs") return -1;
+      if (second.id === "vital-signs") return 1;
+      return 0;
+    },
   );
   const isConversationOpen = true;
 
@@ -1452,17 +1460,19 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
           {patientCase.assets.examinations.length > 0 ? (
             <div className="space-y-3">
-              {patientCase.assets.examinations.map((image) => (
+              {orderedExaminations.map((examination) => (
                 <button
-                  key={image.id}
+                  key={examination.id}
                   type="button"
-                  data-examination-id={image.id}
+                  data-examination-id={examination.id}
                   onClick={() => {
                     const examinationViewedEvent = createEncounterEvent(
                       "examination_viewed",
                       {
-                        examinationId: image.id,
-                        label: image.label,
+                        examinationId: examination.id,
+                        label: examination.label,
+                        caseId: patientCase.id,
+                        action: "viewed",
                       },
                     );
                     const encounterEvents = [
@@ -1481,7 +1491,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
                     dispatch({
                       type: "openViewer",
-                      examinationId: image.id,
+                      examinationId: examination.id,
                     });
                     dispatch({
                       type: "recordEvent",
@@ -1500,8 +1510,14 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                   }}
                   className="flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 text-left font-semibold text-[var(--color-text-primary)]"
                 >
-                  <ImageIcon className="size-5 text-[var(--color-brand)]" />
-                  {image.label}
+                  {examination.type === "vital-signs" ? (
+                    <Activity className="size-5 text-[var(--color-brand)]" />
+                  ) : (
+                    <ImageIcon className="size-5 text-[var(--color-brand)]" />
+                  )}
+                  {examination.type === "vital-signs"
+                    ? "Vital Signs"
+                    : examination.label}
                 </button>
               ))}
             </div>
@@ -1539,20 +1555,45 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
               <X className="size-5" />
             </button>
           </div>
-          <div
-            className="size-full overflow-auto pt-20"
-            style={{ touchAction: "pinch-zoom" }}
-          >
-            <Image
-              src={selectedExamination.file}
-              alt={selectedExamination.label}
-              width={1600}
-              height={1200}
-              unoptimized
-              className="mx-auto block min-h-full max-w-none object-contain"
-              style={{ width: "140vw" }}
-            />
-          </div>
+          {selectedExamination.type === "vital-signs" ? (
+            <div className="flex size-full items-start justify-center overflow-auto bg-[var(--color-background)] px-4 pb-8 pt-24 sm:items-center sm:pt-20">
+              <div className="w-full max-w-xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-7">
+                <h2 className="mb-5 text-xl font-semibold text-[var(--color-text-primary)] sm:text-2xl">
+                  {selectedExamination.label}
+                </h2>
+                <dl className="divide-y divide-[var(--color-border)]">
+                  {selectedExamination.findings.map((finding) => (
+                    <div
+                      key={finding.label}
+                      className="grid gap-1 py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-baseline sm:gap-8"
+                    >
+                      <dt className="font-medium text-[var(--color-text-secondary)]">
+                        {finding.label}
+                      </dt>
+                      <dd className="font-semibold text-[var(--color-text-primary)] sm:text-right">
+                        {finding.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          ) : (
+            <div
+              className="size-full overflow-auto pt-20"
+              style={{ touchAction: "pinch-zoom" }}
+            >
+              <Image
+                src={selectedExamination.file}
+                alt={selectedExamination.label}
+                width={1600}
+                height={1200}
+                unoptimized
+                className="mx-auto block min-h-full max-w-none object-contain"
+                style={{ width: "140vw" }}
+              />
+            </div>
+          )}
         </section>
       ) : null}
     </main>

@@ -7,11 +7,22 @@ import {
 
 export type { CaseStatus, CaseUrgency };
 
-export type CaseExamination = {
-  id: string;
-  label: string;
-  file: string;
-};
+export type CaseExamination =
+  | {
+      id: string;
+      label: string;
+      type: "image";
+      file: string;
+    }
+  | {
+      id: string;
+      label: string;
+      type: "vital-signs";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
+    };
 
 export type CasePatientChecklistItem = {
   id: string;
@@ -58,11 +69,49 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
   assets: {
     rest: caseData.assets.rest,
     talking: caseData.assets.talking,
-    examinations: caseData.assets.examinations.map((examination) => ({
-      id: examination.id,
-      label: examination.title,
-      file: examination.image,
-    })),
+    examinations: caseData.assets.examinations.flatMap(
+      (examination): CaseExamination[] => {
+        if (
+          examination.type === "vital-signs" &&
+          examination.id === "vital-signs" &&
+          examination.title.trim() &&
+          Array.isArray(examination.findings) &&
+          examination.findings.length > 0 &&
+          examination.findings.every(
+            (finding) => finding.label.trim() && finding.value.trim(),
+          )
+        ) {
+          return [
+            {
+              id: examination.id,
+              label: examination.title,
+              type: "vital-signs",
+              findings: examination.findings.map((finding) => ({
+                ...finding,
+              })),
+            },
+          ];
+        }
+
+        if (
+          examination.type !== "vital-signs" &&
+          examination.id.trim() &&
+          examination.title.trim() &&
+          examination.image.trim()
+        ) {
+          return [
+            {
+              id: examination.id,
+              label: examination.title,
+              type: "image",
+              file: examination.image,
+            },
+          ];
+        }
+
+        return [];
+      },
+    ),
   },
   patientChecklist: caseData.patientChecklist.map((item) => ({
     id: item.id,

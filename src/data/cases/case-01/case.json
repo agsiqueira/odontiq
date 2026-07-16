@@ -45,6 +45,33 @@
     "talking": "/patients/case-01/talking-v3.mp4",
     "examinations": [
       {
+        "id": "vital-signs",
+        "title": "Vital Signs (on arrival)",
+        "type": "vital-signs",
+        "findings": [
+          {
+            "label": "Temperature",
+            "value": "38.6°C (101.5°F)"
+          },
+          {
+            "label": "Heart Rate",
+            "value": "112 bpm"
+          },
+          {
+            "label": "Blood Pressure",
+            "value": "142/86 mmHg"
+          },
+          {
+            "label": "Respiratory Rate",
+            "value": "24 breaths/min"
+          },
+          {
+            "label": "Oxygen Saturation",
+            "value": "94% on room air"
+          }
+        ]
+      },
+      {
         "id": "examination-01",
         "title": "Examination 1",
         "image": "/patients/case-01/examination/examination-01.jpg",

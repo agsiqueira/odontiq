@@ -22,6 +22,24 @@ type ChecklistItem = {
   critical?: boolean;
 };
 
+export type CaseExaminationData =
+  | {
+      id: string;
+      title: string;
+      type?: "image";
+      image: string;
+      description: string;
+    }
+  | {
+      id: string;
+      title: string;
+      type: "vital-signs";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
+    };
+
 export type CaseData = {
   metadata: {
     schemaVersion: "1.0";
@@ -57,12 +75,7 @@ export type CaseData = {
   assets: {
     rest: string;
     talking: string;
-    examinations: Array<{
-      id: string;
-      title: string;
-      image: string;
-      description: string;
-    }>;
+    examinations: CaseExaminationData[];
   };
   conversation: {
     openingGreeting: string;
