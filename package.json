@@ -17,6 +17,7 @@
     "validate:completed-encounter-storage": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedEncounterStorage.ts",
     "validate:home-progression": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateHomeProgression.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
+    "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",
     "validate:encounter-persistence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterPersistence.ts",
     "validate:encounter-document": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterDocument.ts",
     "validate:encounter-sync": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterSync.ts",

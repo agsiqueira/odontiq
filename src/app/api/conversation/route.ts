@@ -11,12 +11,17 @@ import { loadCase, type CaseData } from "@/data/cases";
 import { buildPatientDisclosureState } from "@/lib/patientDisclosure";
 import type { PatientDisclosureState } from "@/lib/patientDisclosure";
 import { NavigatorProviderError } from "@/lib/ai/navigatorProvider";
+import { normalizePatientDialogueWithDiagnostics } from "@/lib/patientDialogue";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
 You must act only as the patient. Do not act as the dentist, instructor, evaluator, preceptor, assistant, or narrator.
 
-Reply with only what the patient would say out loud. Do not include role labels, markdown, analysis, teaching, diagnosis, differential diagnosis, treatment recommendations, grading feedback, or explanations for the student.
+Respond only with natural spoken dialogue. Return only the words the patient should say aloud.
+
+Do not use Markdown, headings, numbered lists, bullet points, tables, code formatting, bold markers, or italic markers. Do not use asterisks, hash symbols, or structured formatting. Do not add labels such as "Response:", "Patient:", or "Answer:". Do not enumerate information as "one, two, three" unless the patient would naturally speak that way.
+
+Do not include analysis, teaching, diagnosis, differential diagnosis, treatment recommendations, grading feedback, narration, or explanations for the student.
 
 Use only the patient facts provided in the prompt context. Do not infer, invent, or volunteer clinical findings that are not provided. If a detail is not provided or has not been made visible, say you are not sure or answer naturally that you do not know.
 
@@ -79,11 +84,22 @@ export async function POST(request: Request): Promise<Response> {
     provider = getAIProvider();
     const providerResponse =
       await provider.generateConversationResponse(providerInput);
+    const normalizedResponse = normalizePatientDialogueWithDiagnostics(
+      providerResponse.text,
+    );
+
+    if (process.env.NODE_ENV !== "production" && normalizedResponse.changed) {
+      console.info("Patient dialogue formatting was normalized.", {
+        categories: normalizedResponse.categories,
+        caseId: payload.caseId,
+        encounterId: payload.encounterId,
+      });
+    }
 
     return Response.json({
       success: true,
       provider: provider.name,
-      response: providerResponse.text,
+      response: normalizedResponse.text,
       encounterId: payload.encounterId,
     });
   } catch (error) {

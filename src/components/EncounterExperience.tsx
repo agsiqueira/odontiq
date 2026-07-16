@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
@@ -19,6 +18,7 @@ import { InteractionCharacterStage } from "@/components/InteractionCharacterStag
 import { InteractionComposer } from "@/components/InteractionComposer";
 import { InteractionConversation } from "@/components/InteractionConversation";
 import { InteractionExperienceShell } from "@/components/InteractionExperienceShell";
+import { ZoomableExaminationImage } from "@/components/ZoomableExaminationImage";
 import type { OdontIQCase } from "@/lib/cases";
 import {
   createCompletedEncounterAttemptId,
@@ -1579,19 +1579,11 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
               </div>
             </div>
           ) : (
-            <div
-              className="flex size-full items-center justify-center overflow-hidden px-[5vw] pb-[5vh] pt-[calc(5rem+5vh)]"
-              style={{ touchAction: "pinch-zoom" }}
-            >
-              <Image
-                src={selectedExamination.file}
-                alt={selectedExamination.label}
-                width={1600}
-                height={1200}
-                unoptimized
-                className="block h-auto max-h-full w-auto max-w-full object-contain"
-              />
-            </div>
+            <ZoomableExaminationImage
+              key={selectedExamination.id}
+              src={selectedExamination.file}
+              alt={selectedExamination.label}
+            />
           )}
         </section>
       ) : null}
