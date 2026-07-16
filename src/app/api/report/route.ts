@@ -420,7 +420,7 @@ function buildStructuredReport({
     clinicalReasoning: {
       expectedDiagnosis: caseData.supportingInfo.diagnosis,
       differentialDiagnosis: caseData.supportingInfo.differentialDiagnosis,
-      supportingFindings: caseData.supportingInfo.reportData.keyFindings,
+      supportingFindings: normalizeStringList(request.coveredFacts),
       keyRedFlags: caseData.supportingInfo.redFlags,
     },
     management: {

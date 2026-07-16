@@ -1,631 +1,116 @@
 {
-  "metadata": {
-    "schemaVersion": "1.0",
-    "id": "case-05",
-    "estimatedTime": "14 min",
-    "urgency": "Urgent",
-    "status": "completed",
-    "score": 64,
-    "chiefComplaint": "The pain wakes me up at night, and I cannot get comfortable.",
-    "title": "Persistent Toothache with Temperature Sensitivity"
-  },
-  "patient": {
-    "name": "Sofia Williams",
-    "age": 27,
-    "sex": "Female"
-  },
-  "voicePreference": {
-    "provider": "navigator",
-    "voiceId": "af_heart",
-    "speed": 0.88
-  },
-  "assets": {
-    "rest": "/patients/case-05/case-05-sofia-williams-v3.png",
-    "talking": "/patients/case-05/talking-v3.mp4",
-    "examinations": [
-      {
-        "id": "vital-signs",
-        "title": "Vital Signs",
-        "type": "vital-signs",
-        "findings": [
-          {
-            "label": "Temperature",
-            "value": "36.9°C (98.4°F)"
-          },
-          {
-            "label": "Heart Rate",
-            "value": "82 bpm"
-          },
-          {
-            "label": "Blood Pressure",
-            "value": "122/76 mmHg"
-          },
-          {
-            "label": "Respiratory Rate",
-            "value": "14 breaths/min"
-          },
-          {
-            "label": "Oxygen Saturation",
-            "value": "99% on room air"
-          }
-        ]
-      },
-      {
-        "id": "examination-01",
-        "title": "Examination 1",
-        "image": "/patients/case-05/examination/examination-01.jpg",
-        "description": "Focused image of the painful tooth area."
-      }
-    ]
-  },
-  "conversation": {
-    "openingGreeting": "Hi.",
-    "scripted": [
-      {
-        "id": "greeting-1",
-        "intent": "greeting",
-        "triggers": [
-          "hello",
-          "hi",
-          "good morning",
-          "good afternoon"
-        ],
-        "response": "Hi.",
-        "requiredFactsCovered": [],
-        "checklistItemId": "greeting"
-      },
-      {
-        "id": "chief_complaint-2",
-        "intent": "chief_complaint",
-        "triggers": [
-          "what brings",
-          "why are you here",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "The pain wakes me up at night and keeps pulsing.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "chief_complaint-3",
-        "intent": "chief_complaint",
-        "triggers": [
-          "why are you here",
-          "what brings",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "The pain wakes me up at night and keeps pulsing.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "duration-4",
-        "intent": "duration",
-        "triggers": [
-          "how long",
-          "duration",
-          "how many days",
-          "how many weeks",
-          "for how long"
-        ],
-        "response": "It started as sensitivity about two weeks ago.",
-        "requiredFactsCovered": [
-          "duration"
-        ],
-        "checklistItemId": "duration"
-      },
-      {
-        "id": "onset-5",
-        "intent": "onset",
-        "triggers": [
-          "when did it start",
-          "when started",
-          "onset",
-          "first notice",
-          "begin"
-        ],
-        "response": "It started as sensitivity about two weeks ago.",
-        "requiredFactsCovered": [
-          "onset"
-        ],
-        "checklistItemId": "onset"
-      },
-      {
-        "id": "thermal_sensitivity-6",
-        "intent": "thermal_sensitivity",
-        "triggers": [
-          "hot",
-          "cold",
-          "temperature",
-          "sensitive",
-          "sensitivity",
-          "thermal"
-        ],
-        "response": "Hot drinks make it worse.",
-        "requiredFactsCovered": [
-          "thermal_sensitivity"
-        ],
-        "checklistItemId": "thermal-sensitivity"
-      },
-      {
-        "id": "thermal_sensitivity-7",
-        "intent": "thermal_sensitivity",
-        "triggers": [
-          "cold",
-          "hot",
-          "temperature",
-          "sensitive",
-          "sensitivity",
-          "thermal"
-        ],
-        "response": "Cold water sometimes calms it for a short time.",
-        "requiredFactsCovered": [
-          "thermal_sensitivity"
-        ],
-        "checklistItemId": "thermal-sensitivity"
-      },
-      {
-        "id": "radiation-8",
-        "intent": "radiation",
-        "triggers": [
-          "ear",
-          "radiate",
-          "spread",
-          "travels"
-        ],
-        "response": "The pain spreads toward my ear.",
-        "requiredFactsCovered": [
-          "radiation"
-        ],
-        "checklistItemId": "radiation"
-      },
-      {
-        "id": "swelling-9",
-        "intent": "swelling",
-        "triggers": [
-          "swelling",
-          "swollen",
-          "cheek",
-          "face",
-          "jaw swelling"
-        ],
-        "response": "I do not see swelling on my face.",
-        "requiredFactsCovered": [
-          "swelling"
-        ],
-        "checklistItemId": "swelling"
-      },
-      {
-        "id": "medications-10",
-        "intent": "medications",
-        "triggers": [
-          "medication",
-          "medicine",
-          "ibuprofen",
-          "acetaminophen",
-          "painkiller",
-          "antibiotic",
-          "taken"
-        ],
-        "response": "I have been taking ibuprofen to get through the day.",
-        "requiredFactsCovered": [
-          "medications"
-        ],
-        "checklistItemId": "medications"
-      },
-      {
-        "id": "medical_history-11",
-        "intent": "medical_history",
-        "triggers": [
-          "pregnant",
-          "medical history",
-          "diabetes",
-          "pregnancy",
-          "health conditions"
-        ],
-        "response": "I am not pregnant.",
-        "requiredFactsCovered": [
-          "medical_history"
-        ],
-        "checklistItemId": "medical-history"
-      },
-      {
-        "id": "allergies-12",
-        "intent": "allergies",
-        "triggers": [
-          "allerg",
-          "allergy",
-          "allergies",
-          "penicillin"
-        ],
-        "response": "I do not have any known medication allergies.",
-        "requiredFactsCovered": [
-          "allergies"
-        ],
-        "checklistItemId": "allergies"
-      },
-      {
-        "id": "examination-findings",
-        "intent": "examination",
-        "triggers": [
-          "examination",
-          "exam",
-          "look",
-          "see",
-          "image",
-          "xray",
-          "x-ray",
-          "radiograph",
-          "clinical findings",
-          "findings"
-        ],
-        "response": "Focused painful-tooth examination image available.",
-        "requiredFactsCovered": [
-          "examinationFindings"
-        ],
-        "checklistItemId": "examination-findings"
-      },
-      {
-        "id": "direct-diagnosis",
-        "intent": "diagnosis",
-        "triggers": [
-          "diagnosis",
-          "diagnose",
-          "what is it",
-          "what do you think it is",
-          "differential",
-          "impression"
-        ],
-        "response": "The working diagnosis is Symptomatic irreversible pulpitis.",
-        "requiredFactsCovered": [
-          "diagnosis"
-        ],
-        "checklistItemId": "diagnosis"
-      },
-      {
-        "id": "pain_character-standard",
-        "intent": "pain_character",
-        "triggers": [
-          "pain",
-          "hurt",
-          "ache",
-          "severity",
-          "scale",
-          "rate"
-        ],
-        "response": "Pulsing pain that reaches nine out of ten at night.",
-        "requiredFactsCovered": [
-          "pain"
-        ],
-        "checklistItemId": "pain-character"
-      },
-      {
-        "id": "systemic_symptoms-standard",
-        "intent": "systemic_symptoms",
-        "triggers": [
-          "fever",
-          "chills",
-          "temperature",
-          "systemic",
-          "feel sick"
-        ],
-        "response": "Not pregnant; no breathing or swallowing issues.",
-        "requiredFactsCovered": [
-          "systemicSymptoms"
-        ],
-        "checklistItemId": "systemic-symptoms"
-      }
-    ]
-  },
-  "patientChecklist": [
-    {
-      "id": "greeting",
-      "label": "Opened the encounter respectfully",
-      "triggers": [
-        "hello",
-        "hi",
-        "good morning",
-        "good afternoon"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "chief-complaint",
-      "label": "Asked what brought the patient in",
-      "triggers": [
-        "what brings",
-        "why are you here",
-        "main problem",
-        "chief complaint",
-        "what is bothering you"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "duration",
-      "label": "Asked how long symptoms have been present",
-      "triggers": [
-        "how long",
-        "duration",
-        "how many days",
-        "how many weeks",
-        "for how long"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "onset",
-      "label": "Asked when symptoms started",
-      "triggers": [
-        "when did it start",
-        "when started",
-        "onset",
-        "first notice",
-        "begin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "thermal-sensitivity",
-      "label": "Asked about pain with hot or cold",
-      "triggers": [
-        "hot",
-        "cold",
-        "temperature",
-        "sensitive",
-        "sensitivity",
-        "thermal"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "radiation",
-      "label": "Asked whether pain radiates",
-      "triggers": [
-        "ear",
-        "radiate",
-        "spread",
-        "travels"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "swelling",
-      "label": "Asked about swelling or spread",
-      "triggers": [
-        "swelling",
-        "swollen",
-        "cheek",
-        "face",
-        "jaw swelling"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medications",
-      "label": "Asked about home medications or pain relief tried",
-      "triggers": [
-        "medication",
-        "medicine",
-        "ibuprofen",
-        "acetaminophen",
-        "painkiller",
-        "antibiotic",
-        "taken"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medical-history",
-      "label": "Asked about relevant medical history",
-      "triggers": [
-        "pregnant",
-        "medical history",
-        "diabetes",
-        "pregnancy",
-        "health conditions"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "allergies",
-      "label": "Asked about medication allergies",
-      "triggers": [
-        "allerg",
-        "allergy",
-        "allergies",
-        "penicillin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "examination-findings",
-      "label": "Reviewed available examination findings",
-      "triggers": [
-        "examination",
-        "exam",
-        "look",
-        "see",
-        "image",
-        "xray",
-        "x-ray",
-        "radiograph",
-        "clinical findings",
-        "findings"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    },
-    {
-      "id": "pain-character",
-      "label": "Asked about pain severity or character",
-      "triggers": [
-        "pain",
-        "hurt",
-        "ache",
-        "severity",
-        "scale",
-        "rate"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "systemic-symptoms",
-      "label": "Asked about fever, chills, or systemic symptoms",
-      "triggers": [
-        "fever",
-        "chills",
-        "temperature",
-        "systemic",
-        "feel sick"
-      ],
-      "weight": 1,
-      "domain": "history"
-    }
+  "metadata":{"schemaVersion":"1.0","id":"case-05","estimatedTime":"14 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"This tooth pain won't go away, and it keeps waking me up at night. I just want to sleep.","title":"Symptomatic Irreversible Pulpitis"},
+  "patient":{"name":"Sofia Williams","age":32,"sex":"Female"},
+  "voicePreference":{"provider":"navigator","voiceId":"af_heart","speed":0.88},
+  "assets":{"rest":"/patients/case-05/case-05-sofia-williams-v3.png","talking":"/patients/case-05/talking-v3.mp4","examinations":[
+    {"id":"vital-signs","title":"Vital Signs","type":"vital-signs","findings":[{"label":"Temperature","value":"36.9°C (98.4°F)"},{"label":"Heart Rate","value":"82 bpm"},{"label":"Blood Pressure","value":"122/76 mmHg"},{"label":"Respiratory Rate","value":"14 breaths/min"},{"label":"Oxygen Saturation","value":"99% on room air"}]},
+    {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Location and tooth","value":"Large cavity involving the left mandibular first molar"},{"label":"Cold test","value":"Cold provokes worse pain that persists after the stimulus is removed; no exact duration documented"},{"label":"Biting and percussion","value":"Slight tenderness with biting and percussion"},{"label":"Gingiva","value":"No swelling, no fluctuance, and no purulence"},{"label":"Palpation","value":"No gingival palpation pain"},{"label":"Floor of mouth and uvula","value":"Floor of mouth soft and normal; uvula midline"},{"label":"Airway","value":"Patent with normal voice, no drooling, and no compromise"}]},
+    {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-05/examination/examination-01.jpg","description":"Left mandibular first molar and surrounding gingiva assessment."}
+  ]},
+  "conversation":{"openingGreeting":"Hi. This tooth pain won't go away, and it keeps waking me up at night.","scripted":[
+    {"id":"c5-greeting","intent":"greeting","triggers":["hello","hi","good morning","good afternoon"],"response":"Hi.","requiredFactsCovered":[],"checklistItemId":"greeting"},
+    {"id":"c5-chief","intent":"chief_complaint","triggers":["what brings","why are you here","main problem","chief complaint","what is bothering you"],"response":"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep.","requiredFactsCovered":["chief_complaint"],"checklistItemId":"chief-complaint"},
+    {"id":"c5-location","intent":"location","triggers":["where does it hurt","which tooth","what tooth","what side","upper or lower"],"response":"It is in the lower-left tooth area. I cannot tell you the formal tooth number.","requiredFactsCovered":["location"],"checklistItemId":"location"},
+    {"id":"c5-duration","intent":"duration","triggers":["how long","duration","how many days","when did it start"],"response":"It has been worsening for four days.","requiredFactsCovered":["duration"],"checklistItemId":"duration"},
+    {"id":"c5-current-pain","intent":"current_pain","triggers":["is it constant","constant now","all the time","constant pain"],"response":"Yes, it is constant now and will not go away.","requiredFactsCovered":["constant-pain"],"checklistItemId":"pain-character"},
+    {"id":"c5-quality","intent":"pain_quality","triggers":["what does it feel like","describe the pain","pain quality","deep","throbbing"],"response":"It feels deep and throbbing.","requiredFactsCovered":["pain-quality"],"checklistItemId":"pain-character"},
+    {"id":"c5-severity","intent":"pain_severity","triggers":["how bad","pain scale","rate your pain","out of ten","severity"],"response":"It is a nine out of ten.","requiredFactsCovered":["severity"],"checklistItemId":"pain-character"},
+    {"id":"c5-spontaneous","intent":"spontaneous_pain","triggers":["hurt on its own","without touching","spontaneous","unprovoked","starts by itself"],"response":"Yes, it starts hurting on its own even when nothing is touching it.","requiredFactsCovered":["spontaneous"],"checklistItemId":"spontaneous-pain"},
+    {"id":"c5-nocturnal","intent":"nocturnal_pain","triggers":["wake you at night","wakes you","night pain","sleep","sleeping"],"response":"Yes, it frequently wakes me at night and keeps me from sleeping.","requiredFactsCovered":["nocturnal"],"checklistItemId":"nocturnal-pain"},
+    {"id":"c5-cold","intent":"thermal_cold","triggers":["does cold make it hurt","cold drink","cold water","cold sensitivity"],"response":"Cold drinks make it hurt more.","requiredFactsCovered":["thermal-trigger"],"checklistItemId":"thermal-sensitivity"},
+    {"id":"c5-lingering","intent":"thermal_lingering","triggers":["linger","lingering","after the cold","after cold","cold is gone","cold is removed","stop right away","stop immediately","how long after cold","pain last after","after drinking cold"],"response":"It doesn't stop right away. It keeps hurting for a little while after the cold is gone.","requiredFactsCovered":["thermal-lingering"],"checklistItemId":"thermal-lingering"},
+    {"id":"c5-chewing","intent":"biting","triggers":["does chewing hurt","chewing uncomfortable","chew on it"],"response":"Chewing on that side is uncomfortable.","requiredFactsCovered":["chewing"],"checklistItemId":"biting-pain"},
+    {"id":"c5-biting","intent":"biting","triggers":["does biting hurt","does tapping hurt","bite","biting","tap","tapping","percussion"],"response":"Biting or tapping the tooth is slightly uncomfortable.","requiredFactsCovered":["biting"],"checklistItemId":"biting-pain"},
+    {"id":"c5-swelling","intent":"facial_swelling","triggers":["swelling","swollen","face swollen","facial swelling","gum swelling"],"response":"No, I have not had facial or gum swelling.","requiredFactsCovered":["no-swelling"],"checklistItemId":"swelling"},
+    {"id":"c5-drainage","intent":"drainage","triggers":["drainage","pus","discharge","bad taste","purulence"],"response":"No, I have not noticed pus or drainage.","requiredFactsCovered":["no-drainage"],"checklistItemId":"drainage"},
+    {"id":"c5-fever","intent":"fever","triggers":["fever","feverish","temperature","chills"],"response":"No, I have not had a fever.","requiredFactsCovered":["no-fever"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c5-swallowing","intent":"swallowing","triggers":["trouble swallowing","difficulty swallowing","dysphagia"],"response":"No, I have no trouble swallowing.","requiredFactsCovered":["swallowing"],"checklistItemId":"airway"},
+    {"id":"c5-voice","intent":"voice_change","triggers":["voice change","voice different","muffled voice"],"response":"No, my voice has not changed.","requiredFactsCovered":["voice"],"checklistItemId":"airway"},
+    {"id":"c5-breathing","intent":"breathing","triggers":["trouble breathing","difficulty breathing","short of breath","dyspnea"],"response":"No, I have no trouble breathing.","requiredFactsCovered":["breathing"],"checklistItemId":"airway"},
+    {"id":"c5-drooling","intent":"drooling","triggers":["drooling","drool","saliva"],"response":"No, I am not drooling.","requiredFactsCovered":["drooling"],"checklistItemId":"airway"},
+    {"id":"c5-medication","intent":"medications","triggers":["what have you taken","medication","pain medicine","ibuprofen","advil","motrin"],"response":"I have taken ibuprofen 400 mg as needed, but it has not relieved the pain enough.","requiredFactsCovered":["medications"],"checklistItemId":"medications"},
+    {"id":"c5-allergies","intent":"allergies","triggers":["allergy","allergies","allergic","penicillin"],"response":"I have no known drug allergies and no penicillin allergy.","requiredFactsCovered":["allergies"],"checklistItemId":"allergies"},
+    {"id":"c5-medical","intent":"medical_history","triggers":["medical history","health conditions","medical problems","overall health"],"response":"I am otherwise healthy.","requiredFactsCovered":["medical-history"],"checklistItemId":"medical-history"},
+    {"id":"c5-dental-history","intent":"dental_visit_history","triggers":["last see a dentist","last dental visit","when dentist","dentist years ago"],"response":"I last saw a dentist about five years ago, when I had an upper tooth extracted. I have had cavities before.","requiredFactsCovered":["dental-history"],"checklistItemId":"dental-history"},
+    {"id":"c5-smoking","intent":"smoking","triggers":["smoke","smoking","tobacco","cigarette"],"response":"I smoke about half a pack of cigarettes per day.","requiredFactsCovered":["smoking"],"checklistItemId":"social-history"},
+    {"id":"c5-goal","intent":"patient_goal","triggers":["save the tooth","keep the tooth","lose the tooth","want to save","patient goal"],"response":"Yes, I want to save the tooth if possible.","requiredFactsCovered":["patient-goals"],"checklistItemId":"patient-goals"},
+    {"id":"c5-access","intent":"dental_access","triggers":["arrange dental treatment","dental appointment","see a dentist","dental insurance","afford","access"],"response":"I am unemployed, do not have dental insurance, and cannot afford care easily, so arranging treatment may take time.","requiredFactsCovered":["access"],"checklistItemId":"dental-access"},
+    {"id":"c5-exam","intent":"examination","triggers":["examination","exam","look","image","clinical findings"],"response":"The examination findings are available in the examination viewer.","requiredFactsCovered":["examinationFindings"],"checklistItemId":"examination-findings"}
+  ]},
+  "patientChecklist":[
+    {"id":"greeting","label":"Opened the encounter respectfully","triggers":["hello","hi","good morning","good afternoon"],"weight":1,"domain":"communication"},
+    {"id":"chief-complaint","label":"Asked what brought the patient in","triggers":["what brings","why are you here","chief complaint"],"weight":1,"domain":"history"},
+    {"id":"location","label":"Asked where the pain is located","triggers":["where","which tooth","what side"],"weight":1,"domain":"history"},
+    {"id":"duration","label":"Asked about the four-day course","triggers":["how long","duration","days"],"weight":1,"domain":"history"},
+    {"id":"pain-character","label":"Asked about constant deep throbbing 9/10 pain","triggers":["constant","feel like","deep","throbbing","scale","severity"],"weight":1,"domain":"history"},
+    {"id":"spontaneous-pain","label":"Asked about spontaneous pain","triggers":["on its own","without touching","spontaneous"],"weight":1,"domain":"history"},
+    {"id":"nocturnal-pain","label":"Asked about nocturnal pain and sleep disruption","triggers":["night","wake","sleep"],"weight":1,"domain":"history"},
+    {"id":"thermal-sensitivity","label":"Asked whether cold worsens pain","triggers":["cold","thermal"],"weight":1,"domain":"history"},
+    {"id":"thermal-lingering","label":"Asked whether pain persists after cold removal","triggers":["linger","after cold","cold is gone","stop immediately"],"weight":1,"domain":"history"},
+    {"id":"biting-pain","label":"Asked about chewing, biting, or tapping discomfort","triggers":["chew","bite","tap","percussion"],"weight":1,"domain":"history"},
+    {"id":"swelling","label":"Asked about facial or gingival swelling","triggers":["swelling","swollen"],"weight":1,"domain":"history"},
+    {"id":"drainage","label":"Asked about pus or drainage","triggers":["pus","drainage","bad taste"],"weight":1,"domain":"history"},
+    {"id":"systemic-symptoms","label":"Asked about fever","triggers":["fever","temperature"],"weight":1,"domain":"history"},
+    {"id":"airway","label":"Asked about swallowing, voice, breathing, or drooling","triggers":["swallowing","voice","breathing","drooling"],"weight":1,"domain":"history"},
+    {"id":"medications","label":"Asked about ibuprofen use and relief","triggers":["taken","ibuprofen","advil","motrin"],"weight":1,"domain":"history"},
+    {"id":"allergies","label":"Asked about medication or penicillin allergy","triggers":["allergy","allergic","penicillin"],"weight":1,"domain":"history"},
+    {"id":"medical-history","label":"Asked about relevant medical history","triggers":["medical history","health conditions"],"weight":1,"domain":"history"},
+    {"id":"dental-history","label":"Asked about last dental care and prior extraction","triggers":["last dentist","dental visit","extraction"],"weight":1,"domain":"history"},
+    {"id":"social-history","label":"Asked about smoking, alcohol, or drugs","triggers":["smoke","alcohol","drugs"],"weight":1,"domain":"history"},
+    {"id":"dental-access","label":"Asked about affordability, insurance, or dental access","triggers":["afford","insurance","appointment","access"],"weight":1,"domain":"communication"},
+    {"id":"patient-goals","label":"Asked whether the patient wants to save the tooth","triggers":["save","keep","lose the tooth"],"weight":1,"domain":"communication"},
+    {"id":"examination-findings","label":"Reviewed available examination findings","triggers":["examination","exam","image","findings"],"weight":1,"domain":"examination"}
   ],
-  "clinicalChecklist": [
-    {
-      "id": "clinical-1",
-      "label": "Identifies spontaneous/nocturnal pain pattern",
-      "weight": 3,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-2",
-      "label": "Asks thermal trigger and relief questions",
-      "weight": 3,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-3",
-      "label": "Screens for swelling and systemic red flags",
-      "weight": 2,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-4",
-      "label": "Reviews pregnancy, medications, and allergies",
-      "weight": 2,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-5",
-      "label": "Recognizes likely irreversible pulpitis and urgent dental need",
-      "weight": 2,
-      "domain": "reasoning"
-    }
+  "clinicalChecklist":[
+    {"id":"clinical-1","label":"Characterizes spontaneous, constant, nocturnal, deep throbbing 9/10 pain","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-2","label":"Separates cold trigger from lingering response","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-3","label":"Screens infection and airway negatives","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-4","label":"Elicits medication, allergy, smoking, access, and tooth-saving context","weight":2,"domain":"history"},
+    {"id":"clinical-5","label":"Diagnoses symptomatic irreversible pulpitis and plans urgent definitive care","weight":3,"domain":"reasoning","critical":true}
   ],
-  "supportingInfo": {
-    "history": {
-      "onset": "Sensitivity started about two weeks ago.",
-      "duration": "Pain is now spontaneous and wakes the patient at night.",
-      "pain": "Pulsing pain that reaches nine out of ten at night.",
-      "medications": "Ibuprofen is used to get through the day.",
-      "allergies": "No known medication allergies.",
-      "medicalHistory": "Not pregnant; no breathing or swallowing issues.",
-      "dentalHistory": "Known cavity in the area with postponed treatment.",
-      "socialHistory": "Needs help sleeping and wants treatment guidance."
-    },
-    "hpiFacts": [
-      "Sensitivity began about two weeks ago.",
-      "Pain is now spontaneous and wakes patient at night.",
-      "Hot drinks worsen pain.",
-      "Cold water temporarily calms pain.",
-      "Pain radiates toward the ear.",
-      "No facial swelling reported.",
-      "Known cavity in the area with postponed treatment."
+  "supportingInfo":{
+    "patientFacts":[
+      {"id":"c5.duration","topic":"onset_duration","text":"The pain has worsened over four days.","questionIntents":["duration"]},
+      {"id":"c5.location","topic":"location","text":"The pain is in the lower-left tooth area; the patient is unsure of the formal tooth number.","questionIntents":["location"]},
+      {"id":"c5.constant","topic":"pain","text":"The pain is now constant.","questionIntents":["current_pain"],"canonicalFactIds":["c5.pain"]},
+      {"id":"c5.quality","topic":"pain","text":"The pain feels deep and throbbing.","questionIntents":["pain_quality"],"canonicalFactIds":["c5.pain"]},
+      {"id":"c5.severity","topic":"pain","text":"The pain is severe, rated 9/10 (nine out of ten).","questionIntents":["pain_severity"],"canonicalFactIds":["c5.pain"]},
+      {"id":"c5.spontaneous","topic":"pain","text":"The pain occurs spontaneously without anything touching the tooth.","questionIntents":["spontaneous_pain"]},
+      {"id":"c5.nocturnal","topic":"pain","text":"The pain wakes the patient at night and interrupts sleep.","questionIntents":["nocturnal_pain"]},
+      {"id":"c5.cold","topic":"pain","text":"Cold drinks worsen the pain.","questionIntents":["thermal"]},
+      {"id":"c5.lingering","topic":"pain","text":"The pain does not stop immediately after the cold is removed; it lingers for a little while afterward.","questionIntents":["thermal"]},
+      {"id":"c5.chewing","topic":"pain","text":"Chewing on the affected side is uncomfortable.","questionIntents":["biting"]},
+      {"id":"c5.biting","topic":"pain","text":"There is slight biting and percussion discomfort.","questionIntents":["biting"]},
+      {"id":"c5.no-swelling","topic":"swelling","text":"The patient has no facial or gingival swelling.","questionIntents":["facial_swelling"],"canonicalFactIds":["c5.no-infection"]},
+      {"id":"c5.no-drainage","topic":"medical_history","text":"The patient has no pus or drainage.","questionIntents":["drainage"],"canonicalFactIds":["c5.no-infection"]},
+      {"id":"c5.no-fever","topic":"medical_history","text":"The patient has no fever.","questionIntents":["fever"],"canonicalFactIds":["c5.no-infection"]},
+      {"id":"c5.swallowing","topic":"medical_history","text":"The patient has no difficulty swallowing.","questionIntents":["swallowing"],"canonicalFactIds":["c5.no-airway"]},
+      {"id":"c5.voice","topic":"medical_history","text":"The patient has no voice change.","questionIntents":["voice_change"]},
+      {"id":"c5.breathing","topic":"medical_history","text":"The patient has no difficulty breathing.","questionIntents":["breathing"],"canonicalFactIds":["c5.no-airway"]},
+      {"id":"c5.drooling","topic":"medical_history","text":"The patient is not drooling.","questionIntents":["drooling"]},
+      {"id":"c5.med","topic":"medications","text":"The patient takes ibuprofen 400 mg as needed, without adequate relief.","questionIntents":["medications"]},
+      {"id":"c5.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
+      {"id":"c5.healthy","topic":"medical_history","text":"The patient is otherwise healthy with no known opioid-use history and no ibuprofen contraindication.","questionIntents":["medical_conditions"]},
+      {"id":"c5.smoking","topic":"social_history","text":"The patient smokes approximately half-pack per day.","questionIntents":["smoking"]},
+      {"id":"c5.dental-history","topic":"dental_history","text":"The last dental visit was approximately five years ago for an upper-tooth extraction; the patient has a history of cavities.","questionIntents":["dental_visit_history"]},
+      {"id":"c5.access","topic":"dental_history","text":"Unemployment, lack of insurance, and inability to afford care create a dental access barrier; arranging treatment may take time.","questionIntents":["dental_access"]},
+      {"id":"c5.goal","topic":"dental_history","text":"The patient wants to save tooth if possible.","questionIntents":["patient_goal"]}
     ],
-    "redFlags": [
-      "Severe nocturnal pain",
-      "Spontaneous pulpal pain",
-      "Escalation needed if swelling, fever, dysphagia, or dyspnea develops"
-    ],
-    "examinationFindings": [
-      "Focused painful-tooth examination image available.",
-      "History supports pulpal inflammation with thermal triggers.",
-      "No facial swelling or airway symptoms reported.",
-      "Known untreated caries supports odontogenic source."
-    ],
-    "expectedQuestions": [
-      "When did sensitivity begin and how has it changed?",
-      "Does pain wake you at night?",
-      "Do hot or cold drinks affect the pain?",
-      "Does cold relieve or worsen the pain?",
-      "Does pain radiate to the ear or jaw?",
-      "Any swelling, fever, breathing, or swallowing problems?",
-      "Are you pregnant?",
-      "Any medication allergies or analgesics taken?"
-    ],
-    "diagnosis": "Symptomatic irreversible pulpitis.",
-    "differentialDiagnosis": [
-      "Symptomatic irreversible pulpitis",
-      "Acute apical periodontitis",
-      "Cracked tooth",
-      "Referred otalgia from odontogenic pain"
-    ],
-    "managementExpectations": [
-      "Plan urgent endodontic or definitive dental evaluation.",
-      "Provide analgesic guidance within scope and medical safety.",
-      "Avoid antibiotics when swelling/systemic infection is absent.",
-      "Give return precautions for swelling, fever, dysphagia, or dyspnea."
-    ],
-    "learningObjectives": [
-      "Identify spontaneous and lingering thermal pain patterns.",
-      "Ask about pregnancy, allergies, and analgesic use.",
-      "Connect chief complaint to urgent endodontic evaluation."
-    ],
-    "reportData": {
-      "keyFindings": [
-        "Nocturnal spontaneous pain",
-        "Heat sensitivity",
-        "Cold temporary relief",
-        "Known untreated cavity"
-      ],
-      "criticalMisses": [
-        "Missing pregnancy/allergy review",
-        "Prescribing antibiotics without infection signs"
-      ],
-      "idealSummary": "Patient presentation is most consistent with symptomatic irreversible pulpitis requiring urgent definitive dental care."
-    },
-    "evaluation": {
-      "patientChecklistWeight": 0.6,
-      "clinicalChecklistWeight": 0.4,
-      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    },
-    "requiredInvestigations": [
-      "Review focused painful-tooth examination image."
-    ],
-    "treatmentExpectations": [
-      "Plan urgent endodontic or definitive dental evaluation.",
-      "Provide analgesic guidance within scope and medical safety.",
-      "Avoid antibiotics when swelling/systemic infection is absent."
-    ],
-    "referralExpectations": [
-      "Plan urgent endodontic or definitive dental evaluation."
-    ],
-    "safetyNettingExpectations": [
-      "Give return precautions for swelling, fever, dysphagia, or dyspnea."
-    ]
+    "history":{"onset":"Cold initially provoked the pain; it progressed over four days to spontaneous, constant pain.","duration":"Four days of worsening lower-left dental pain.","pain":"Constant deep throbbing 9/10 pain with spontaneous and nocturnal episodes, sleep interruption, cold worsening and qualitative lingering after cold removal, uncomfortable chewing, and slight biting/percussion discomfort.","medications":"Ibuprofen 400 mg as needed without adequate relief.","allergies":"No known drug allergies and no penicillin allergy.","medicalHistory":"Otherwise healthy; no opioid-use history and no ibuprofen contraindication.","dentalHistory":"History of cavities; unsure which exact tooth hurts; last dentist approximately five years ago for an upper-tooth extraction.","socialHistory":"Smokes approximately half-pack per day; occasional alcohol; no illicit drugs; unemployed without insurance and unable to afford care easily; wants to save the tooth."},
+    "hpiFacts":["Four days of worsening lower-left dental pain.","Cold drinks worsen the pain.","The pain does not stop immediately after the cold is removed; it lingers for a little while afterward.","Pain is spontaneous, constant, deep, throbbing, severe, and 9/10.","Pain wakes the patient at night and interrupts sleep.","Chewing is uncomfortable with slight biting and percussion discomfort.","No fever, no facial or gingival swelling, no drainage, and no pus.","No dysphagia, voice change, dyspnea, or drooling."],
+    "redFlags":["Severe spontaneous and nocturnal pain with sleep disruption","No current abscess, spreading infection, or airway compromise","Return for new swelling, fever, drainage, dysphagia, dyspnea, voice change, or drooling"],
+    "examinationFindings":["Large cavity on the left mandibular first molar","Cold-provoked pain that persists qualitatively after cold removal","Slight biting and percussion tenderness","No swelling, fluctuance, purulence, or palpation pain","Soft normal floor of mouth, midline uvula, normal voice, no drooling, and patent airway"],
+    "expectedQuestions":["Where is the pain and how long has it been present?","Is it spontaneous, constant, deep, throbbing, severe, or nocturnal?","Does cold worsen it and does it stop immediately afterward?","Does chewing, biting, or tapping hurt?","Any swelling, drainage, pus, fever, swallowing, voice, breathing, or drooling problems?","What analgesic has been taken?","When was the last dental visit?","Do smoking, unemployment, insurance, or affordability affect access?","Does the patient want to save the tooth?"],
+    "diagnosis":"Symptomatic irreversible pulpitis involving the left mandibular first molar.",
+    "differentialDiagnosis":["Reversible pulpitis","Periapical abscess","Dentin hypersensitivity","Temporomandibular joint-related pain"],
+    "managementExpectations":["Offer appropriate analgesia and local anesthesia or dental block; the patient may decline the block.","Explain that antibiotics are not currently indicated without infection.","Arrange definitive dental care within approximately 72 hours.","Discuss root-canal treatment or extraction based on dental evaluation and the patient's desire to save the tooth.","Address unemployment, insurance, affordability, and delayed access.","Provide return precautions for new infection or airway signs."],
+    "requiredInvestigations":["Review structured oral examination and cold-response findings."],
+    "treatmentExpectations":["Appropriate analgesia.","Offer local anesthesia or dental block; patient may decline.","Urgent root-canal treatment or extraction after dental evaluation.","No antibiotics for the current noninfected presentation."],
+    "referralExpectations":["Definitive dental care within approximately 72 hours.","Practical access planning for an uninsured, unemployed patient."],
+    "safetyNettingExpectations":["Seek reassessment for swelling, fever, drainage, dysphagia, dyspnea, voice change, drooling, or systemic illness."],
+    "learningObjectives":["Recognize symptomatic irreversible pulpitis from spontaneous/nocturnal pain and lingering cold response.","Keep cold trigger and persistence separately elicitable without inventing a duration.","Avoid antibiotics and plan urgent definitive care around access barriers and the tooth-saving goal."],
+    "reportData":{"keyFindings":["Four-day lower-left constant deep throbbing 9/10 pain","Spontaneous nocturnal pain with sleep interruption","Cold-triggered pain with qualitative lingering after cold removal","Chewing discomfort and slight biting/percussion tenderness","No fever, swelling, drainage, abscess, or airway compromise","Ibuprofen 400 mg as needed with inadequate relief","Financial and insurance access barriers with desire to save the tooth"],"criticalMisses":["Failing to separate cold provocation from lingering response","Missing spontaneous or nocturnal pain","Diagnosing abscess or systemic infection","Prescribing antibiotics without infection signs","Ignoring access barriers or the tooth-saving goal"],"idealSummary":"A healthy 32-year-old with four days of worsening lower-left pain that is now spontaneous, constant, deep, throbbing, 9/10, and nocturnal with sleep disruption, worsened by cold and lingering qualitatively after cold removal, with a large cavity and slight biting/percussion tenderness but no infection or airway findings, consistent with symptomatic irreversible pulpitis requiring urgent definitive dental care rather than antibiotics."},
+    "facultyReview":[{"id":"c5-unsupported-additions","status":"pending","question":"Confirm that unsupported additions remain excluded unless separately approved."}],
+    "evaluation":{"patientChecklistWeight":0.6,"clinicalChecklistWeight":0.4,"totalScore":"weightedAverage(patientChecklist, clinicalChecklist)"}
   }
 }

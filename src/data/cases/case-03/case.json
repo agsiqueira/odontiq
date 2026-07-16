@@ -1,699 +1,102 @@
 {
-  "metadata": {
-    "schemaVersion": "1.0",
-    "id": "case-03",
-    "estimatedTime": "15 min",
-    "urgency": "Urgent",
-    "status": "not-started",
-    "score": null,
-    "chiefComplaint": "I cannot chew on this side because the pain and swelling are too much.",
-    "title": "Periodontal Swelling in a Patient with Diabetes"
-  },
-  "patient": {
-    "name": "Elena Garcia",
-    "age": 52,
-    "sex": "Female"
-  },
-  "voicePreference": {
-    "provider": "navigator",
-    "voiceId": "af_bella",
-    "speed": 1
-  },
-  "assets": {
-    "rest": "/patients/case-03/case-03-elena-garcia-v3.png",
-    "talking": "/patients/case-03/talking-v3.mp4",
-    "examinations": [
-      {
-        "id": "vital-signs",
-        "title": "Vital Signs",
-        "type": "vital-signs",
-        "findings": [
-          {
-            "label": "Temperature",
-            "value": "37.2°C (99°F)"
-          },
-          {
-            "label": "Heart Rate",
-            "value": "96 bpm"
-          },
-          {
-            "label": "Blood Pressure",
-            "value": "128/78 mmHg"
-          },
-          {
-            "label": "Respiratory Rate",
-            "value": "16 breaths/min"
-          },
-          {
-            "label": "Oxygen Saturation",
-            "value": "98% on room air"
-          }
-        ]
-      },
-      {
-        "id": "examination-01",
-        "title": "Examination 1",
-        "image": "/patients/case-03/examination/examination-01.jpg",
-        "description": "Periodontal and swelling assessment image."
-      }
-    ]
-  },
-  "conversation": {
-    "openingGreeting": "Hi, doctor.",
-    "scripted": [
-      {
-        "id": "greeting-1",
-        "intent": "greeting",
-        "triggers": [
-          "hello",
-          "hi",
-          "good morning",
-          "good afternoon"
-        ],
-        "response": "Hi, doctor.",
-        "requiredFactsCovered": [],
-        "checklistItemId": "greeting"
-      },
-      {
-        "id": "chief_complaint-2",
-        "intent": "chief_complaint",
-        "triggers": [
-          "what brings",
-          "why are you here",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "I cannot chew on the left side because the gum is swollen.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "chief_complaint-3",
-        "intent": "chief_complaint",
-        "triggers": [
-          "why are you here",
-          "what brings",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "I cannot chew on the left side because the gum is swollen.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "duration-4",
-        "intent": "duration",
-        "triggers": [
-          "how long",
-          "duration",
-          "how many days",
-          "how many weeks",
-          "for how long"
-        ],
-        "response": "The soreness started about a week ago, and the swelling became obvious two days ago.",
-        "requiredFactsCovered": [
-          "duration"
-        ],
-        "checklistItemId": "duration"
-      },
-      {
-        "id": "onset-5",
-        "intent": "onset",
-        "triggers": [
-          "when did it start",
-          "when started",
-          "onset",
-          "first notice",
-          "begin"
-        ],
-        "response": "It started as soreness about a week ago.",
-        "requiredFactsCovered": [
-          "onset"
-        ],
-        "checklistItemId": "onset"
-      },
-      {
-        "id": "food_trapping-6",
-        "intent": "food_trapping",
-        "triggers": [
-          "food",
-          "trapped",
-          "stuck",
-          "between teeth"
-        ],
-        "response": "Food gets trapped around that back tooth.",
-        "requiredFactsCovered": [
-          "food_trapping"
-        ],
-        "checklistItemId": "food-trapping"
-      },
-      {
-        "id": "biting_pain-7",
-        "intent": "biting_pain",
-        "triggers": [
-          "bite",
-          "biting",
-          "chew",
-          "chewing",
-          "pressure"
-        ],
-        "response": "The pain is worse when I bite down.",
-        "requiredFactsCovered": [
-          "biting_pain"
-        ],
-        "checklistItemId": "biting-pain"
-      },
-      {
-        "id": "medical_history-8",
-        "intent": "medical_history",
-        "triggers": [
-          "diabetes",
-          "medical history",
-          "pregnant",
-          "pregnancy",
-          "health conditions"
-        ],
-        "response": "I have diabetes, and my blood sugar has been higher this week.",
-        "requiredFactsCovered": [
-          "medical_history"
-        ],
-        "checklistItemId": "medical-history"
-      },
-      {
-        "id": "social_history-9",
-        "intent": "social_history",
-        "triggers": [
-          "smoke",
-          "smoking",
-          "tobacco",
-          "alcohol"
-        ],
-        "response": "I do not smoke.",
-        "requiredFactsCovered": [
-          "social_history"
-        ],
-        "checklistItemId": "social-history"
-      },
-      {
-        "id": "periodontal_bleeding-10",
-        "intent": "periodontal_bleeding",
-        "triggers": [
-          "bleed",
-          "bleeding",
-          "gums bleed",
-          "brushing"
-        ],
-        "response": "My gums bleed when I brush that area.",
-        "requiredFactsCovered": [
-          "periodontal_bleeding"
-        ],
-        "checklistItemId": "periodontal-bleeding"
-      },
-      {
-        "id": "mobility-11",
-        "intent": "mobility",
-        "triggers": [
-          "loose",
-          "mobility",
-          "moving",
-          "wiggle"
-        ],
-        "response": "The tooth feels a little loose.",
-        "requiredFactsCovered": [
-          "mobility"
-        ],
-        "checklistItemId": "mobility"
-      },
-      {
-        "id": "airway-12",
-        "intent": "airway",
-        "triggers": [
-          "breathing",
-          "swallow",
-          "swallowing",
-          "lying flat",
-          "airway",
-          "trouble breathing",
-          "trouble swallowing"
-        ],
-        "response": "I do not have trouble breathing or swallowing.",
-        "requiredFactsCovered": [
-          "airway"
-        ],
-        "checklistItemId": "airway"
-      },
-      {
-        "id": "examination-findings",
-        "intent": "examination",
-        "triggers": [
-          "examination",
-          "exam",
-          "look",
-          "see",
-          "image",
-          "xray",
-          "x-ray",
-          "radiograph",
-          "clinical findings",
-          "findings"
-        ],
-        "response": "Periodontal/swelling examination image available.",
-        "requiredFactsCovered": [
-          "examinationFindings"
-        ],
-        "checklistItemId": "examination-findings"
-      },
-      {
-        "id": "direct-diagnosis",
-        "intent": "diagnosis",
-        "triggers": [
-          "diagnosis",
-          "diagnose",
-          "what is it",
-          "what do you think it is",
-          "differential",
-          "impression"
-        ],
-        "response": "The working diagnosis is Periodontal abscess with systemic risk considerations.",
-        "requiredFactsCovered": [
-          "diagnosis"
-        ],
-        "checklistItemId": "diagnosis"
-      },
-      {
-        "id": "pain_character-standard",
-        "intent": "pain_character",
-        "triggers": [
-          "pain",
-          "hurt",
-          "ache",
-          "severity",
-          "scale",
-          "rate"
-        ],
-        "response": "Dull ache most of the day, worse when biting.",
-        "requiredFactsCovered": [
-          "pain"
-        ],
-        "checklistItemId": "pain-character"
-      },
-      {
-        "id": "allergies-standard",
-        "intent": "allergies",
-        "triggers": [
-          "allerg",
-          "allergy",
-          "allergies",
-          "penicillin"
-        ],
-        "response": "No medication allergy provided.",
-        "requiredFactsCovered": [
-          "allergies"
-        ],
-        "checklistItemId": "allergies"
-      },
-      {
-        "id": "medications-standard",
-        "intent": "medications",
-        "triggers": [
-          "medication",
-          "medicine",
-          "ibuprofen",
-          "acetaminophen",
-          "painkiller",
-          "antibiotic",
-          "taken"
-        ],
-        "response": "Warm salt water rinses help briefly.",
-        "requiredFactsCovered": [
-          "medications"
-        ],
-        "checklistItemId": "medications"
-      },
-      {
-        "id": "systemic_symptoms-standard",
-        "intent": "systemic_symptoms",
-        "triggers": [
-          "fever",
-          "chills",
-          "temperature",
-          "systemic",
-          "feel sick"
-        ],
-        "response": "Has diabetes and reports higher blood sugar this week.",
-        "requiredFactsCovered": [
-          "systemicSymptoms"
-        ],
-        "checklistItemId": "systemic-symptoms"
-      }
-    ]
-  },
-  "patientChecklist": [
-    {
-      "id": "greeting",
-      "label": "Opened the encounter respectfully",
-      "triggers": [
-        "hello",
-        "hi",
-        "good morning",
-        "good afternoon"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "chief-complaint",
-      "label": "Asked what brought the patient in",
-      "triggers": [
-        "what brings",
-        "why are you here",
-        "main problem",
-        "chief complaint",
-        "what is bothering you"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "duration",
-      "label": "Asked how long symptoms have been present",
-      "triggers": [
-        "how long",
-        "duration",
-        "how many days",
-        "how many weeks",
-        "for how long"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "onset",
-      "label": "Asked when symptoms started",
-      "triggers": [
-        "when did it start",
-        "when started",
-        "onset",
-        "first notice",
-        "begin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "food-trapping",
-      "label": "Asked about food trapping",
-      "triggers": [
-        "food",
-        "trapped",
-        "stuck",
-        "between teeth"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "biting-pain",
-      "label": "Asked about biting, chewing, or tapping pain",
-      "triggers": [
-        "bite",
-        "biting",
-        "chew",
-        "chewing",
-        "pressure"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medical-history",
-      "label": "Asked about relevant medical history",
-      "triggers": [
-        "diabetes",
-        "medical history",
-        "pregnant",
-        "pregnancy",
-        "health conditions"
-      ],
-      "weight": 1,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "social-history",
-      "label": "Asked about social history",
-      "triggers": [
-        "smoke",
-        "smoking",
-        "tobacco",
-        "alcohol"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "periodontal-bleeding",
-      "label": "Asked about gum bleeding",
-      "triggers": [
-        "bleed",
-        "bleeding",
-        "gums bleed",
-        "brushing"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "mobility",
-      "label": "Asked whether the tooth feels loose",
-      "triggers": [
-        "loose",
-        "mobility",
-        "moving",
-        "wiggle"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    },
-    {
-      "id": "airway",
-      "label": "Asked about airway, breathing, swallowing, or lying flat",
-      "triggers": [
-        "breathing",
-        "swallow",
-        "swallowing",
-        "lying flat",
-        "airway",
-        "trouble breathing",
-        "trouble swallowing"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "examination-findings",
-      "label": "Reviewed available examination findings",
-      "triggers": [
-        "examination",
-        "exam",
-        "look",
-        "see",
-        "image",
-        "xray",
-        "x-ray",
-        "radiograph",
-        "clinical findings",
-        "findings"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    },
-    {
-      "id": "pain-character",
-      "label": "Asked about pain severity or character",
-      "triggers": [
-        "pain",
-        "hurt",
-        "ache",
-        "severity",
-        "scale",
-        "rate"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "allergies",
-      "label": "Asked about medication allergies",
-      "triggers": [
-        "allerg",
-        "allergy",
-        "allergies",
-        "penicillin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medications",
-      "label": "Asked about home medications or pain relief tried",
-      "triggers": [
-        "medication",
-        "medicine",
-        "ibuprofen",
-        "acetaminophen",
-        "painkiller",
-        "antibiotic",
-        "taken"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "systemic-symptoms",
-      "label": "Asked about fever, chills, or systemic symptoms",
-      "triggers": [
-        "fever",
-        "chills",
-        "temperature",
-        "systemic",
-        "feel sick"
-      ],
-      "weight": 1,
-      "domain": "history"
-    }
+  "metadata":{"schemaVersion":"1.0","id":"case-03","estimatedTime":"15 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"My tooth hurts all the time, and I can't chew on it.","title":"Right Mandibular Periapical Abscess"},
+  "patient":{"name":"Elena Garcia","age":25,"sex":"Female"},
+  "voicePreference":{"provider":"navigator","voiceId":"af_bella","speed":1},
+  "assets":{"rest":"/patients/case-03/case-03-elena-garcia-v3.png","talking":"/patients/case-03/talking-v3.mp4","examinations":[
+    {"id":"vital-signs","title":"Vital Signs","type":"vital-signs","findings":[{"label":"Temperature","value":"37.2°C (99°F)"},{"label":"Heart Rate","value":"96 bpm"},{"label":"Blood Pressure","value":"128/78 mmHg"},{"label":"Respiratory Rate","value":"16 breaths/min"},{"label":"Oxygen Saturation","value":"98% on room air"}]},
+    {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Face","value":"Mild right mandibular facial swelling without erythema extending to the neck"},{"label":"Dentition","value":"Poor dentition; crown on the right mandibular first molar/posterior tooth"},{"label":"Affected tooth","value":"Marked tooth, percussion, and biting tenderness"},{"label":"Cold test","value":"No cold pain response (cold-negative)"},{"label":"Gingiva","value":"Localized swelling with fluctuance, purulence/drainage, and palpation tenderness"},{"label":"Floor of mouth","value":"Soft and not elevated"},{"label":"Airway","value":"Patent; no stridor, voice change, or airway compromise"}]},
+    {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-03/examination/examination-01.jpg","description":"Right mandibular posterior tooth and localized intraoral swelling assessment."}
+  ]},
+  "conversation":{"openingGreeting":"Hi, doctor. My tooth hurts all the time, and I can't chew on it.","scripted":[
+    {"id":"c3-greeting","intent":"greeting","triggers":["hello","hi","good morning","good afternoon"],"response":"Hi, doctor.","requiredFactsCovered":[],"checklistItemId":"greeting"},
+    {"id":"c3-chief","intent":"chief_complaint","triggers":["what brings","why are you here","main problem","chief complaint","what is bothering you"],"response":"My lower-right back tooth hurts all the time, and I can't chew on it.","requiredFactsCovered":["chief_complaint"],"checklistItemId":"chief-complaint"},
+    {"id":"c3-duration","intent":"duration","triggers":["how long","duration","how many days","when did it start","onset"],"response":"It has been getting worse for three days.","requiredFactsCovered":["duration"],"checklistItemId":"duration"},
+    {"id":"c3-location","intent":"location","triggers":["where does it hurt","which tooth","what tooth","what side","upper or lower"],"response":"It is the back tooth on the lower-right side of my jaw.","requiredFactsCovered":["location"],"checklistItemId":"location"},
+    {"id":"c3-quality","intent":"pain_quality","triggers":["what does the pain feel like","describe the pain","pain quality","throbbing"],"response":"It is constant and throbbing.","requiredFactsCovered":["pain-quality"],"checklistItemId":"pain-quality"},
+    {"id":"c3-severity","intent":"pain_severity","triggers":["how bad","pain scale","rate your pain","out of ten","severity"],"response":"It is an eight out of ten.","requiredFactsCovered":["pain-severity"],"checklistItemId":"pain-severity"},
+    {"id":"c3-radiation","intent":"radiation","triggers":["travel anywhere","radiate","go anywhere","right ear"],"response":"It travels toward my right ear.","requiredFactsCovered":["radiation"],"checklistItemId":"radiation"},
+    {"id":"c3-biting","intent":"biting","triggers":["bite","biting","chew","chewing","pressure"],"response":"Yes. Biting or chewing on that tooth causes sharp, severe pain.","requiredFactsCovered":["biting-pain"],"checklistItemId":"biting-pain"},
+    {"id":"c3-swelling","intent":"facial_swelling","triggers":["face swollen","facial swelling","puffy","cheek swelling"],"response":"The lower-right side of my face feels a little puffy.","requiredFactsCovered":["swelling"],"checklistItemId":"swelling"},
+    {"id":"c3-fever","intent":"fever","triggers":["fever","feverish","temperature","chills"],"response":"No, I have not had a fever.","requiredFactsCovered":["no-fever"],"checklistItemId":"fever"},
+    {"id":"c3-mouth-opening","intent":"mouth_opening","triggers":["open your mouth","opening your mouth","trismus"],"response":"I can open my mouth normally.","requiredFactsCovered":["mouth-opening"],"checklistItemId":"mouth-opening"},
+    {"id":"c3-breathing","intent":"breathing","triggers":["trouble breathing","difficulty breathing","short of breath","dyspnea"],"response":"No, I have no trouble breathing.","requiredFactsCovered":["breathing"],"checklistItemId":"airway"},
+    {"id":"c3-swallowing","intent":"swallowing","triggers":["trouble swallowing","difficulty swallowing","dysphagia"],"response":"No, I have no trouble swallowing.","requiredFactsCovered":["swallowing"],"checklistItemId":"airway"},
+    {"id":"c3-voice","intent":"voice_change","triggers":["voice change","voice different","muffled voice"],"response":"No, my voice has not changed.","requiredFactsCovered":["voice"],"checklistItemId":"airway"},
+    {"id":"c3-medical","intent":"medical_history","triggers":["medical history","health conditions","medical problems","stomach ulcers","diabetes"],"response":"I have stomach ulcers, but otherwise I am healthy. I do not have diabetes.","requiredFactsCovered":["medical-history"],"checklistItemId":"medical-history"},
+    {"id":"c3-medications","intent":"medications","triggers":["what medications","what medicine","what do you take","regular medications","pepcid"],"response":"I take Pepcid as needed.","requiredFactsCovered":["medications"],"checklistItemId":"medications"},
+    {"id":"c3-ibuprofen","intent":"ibuprofen_tolerance","triggers":["ibuprofen bother","advil bother","motrin bother","ibuprofen upset","nsaid tolerance"],"response":"Ibuprofen, Advil, or Motrin upsets my stomach because of my ulcers, so I do not tolerate it well.","requiredFactsCovered":["ibuprofen-intolerance"],"checklistItemId":"medications"},
+    {"id":"c3-allergies","intent":"allergies","triggers":["allergy","allergies","allergic","penicillin"],"response":"I do not have any known drug allergies, including penicillin.","requiredFactsCovered":["allergies"],"checklistItemId":"allergies"},
+    {"id":"c3-crown","intent":"dental_history","triggers":["crown","cap on the tooth","dental work"],"response":"I have had a lot of dental work, and that lower-right back tooth has a crown.","requiredFactsCovered":["crown"],"checklistItemId":"dental-history"},
+    {"id":"c3-root-canal","intent":"root_canal_history","triggers":["root canal","nerve removed"],"response":"I am not sure. I know it has a crown, but I do not remember whether it had a root canal.","requiredFactsCovered":["root-canal-uncertain"],"checklistItemId":"dental-history"},
+    {"id":"c3-cold","intent":"thermal","triggers":["cold hurt","cold sensitivity","drink something cold","cold pain"],"response":"Cold drinks do not make it hurt.","requiredFactsCovered":["cold-history"],"checklistItemId":"cold"},
+    {"id":"c3-smoking","intent":"smoking","triggers":["smoke","smoking","tobacco","cigarette"],"response":"No, I do not smoke.","requiredFactsCovered":["smoking"],"checklistItemId":"social-history"},
+    {"id":"c3-dental-access","intent":"dental_access","triggers":["dentist","appointment","follow up","dental appointment"],"response":"I called my dentist a couple of days ago and have an appointment next week.","requiredFactsCovered":["appointment"],"checklistItemId":"dental-history"},
+    {"id":"c3-exam","intent":"examination","triggers":["examination","exam","look","image","clinical findings"],"response":"The examination findings are available in the examination viewer.","requiredFactsCovered":["examinationFindings"],"checklistItemId":"examination-findings"}
+  ]},
+  "patientChecklist":[
+    {"id":"greeting","label":"Opened the encounter respectfully","triggers":["hello","hi","good morning","good afternoon"],"weight":1,"domain":"communication"},
+    {"id":"chief-complaint","label":"Asked what brought the patient in","triggers":["what brings","why are you here","chief complaint"],"weight":1,"domain":"history"},
+    {"id":"duration","label":"Asked about the three-day course","triggers":["how long","when did it start","duration"],"weight":1,"domain":"history"},
+    {"id":"location","label":"Asked which tooth or side hurts","triggers":["where","which tooth","what side"],"weight":1,"domain":"history"},
+    {"id":"pain-quality","label":"Asked about pain quality and constancy","triggers":["feel like","constant","throbbing"],"weight":1,"domain":"history"},
+    {"id":"pain-severity","label":"Asked pain severity","triggers":["how bad","scale","out of ten","severity"],"weight":1,"domain":"history"},
+    {"id":"radiation","label":"Asked whether pain travels","triggers":["travel","radiate","go anywhere"],"weight":1,"domain":"history"},
+    {"id":"biting-pain","label":"Asked about biting or chewing pain","triggers":["bite","biting","chew","chewing"],"weight":1,"domain":"history"},
+    {"id":"fever","label":"Asked about fever","triggers":["fever","temperature"],"weight":1,"domain":"history"},
+    {"id":"mouth-opening","label":"Asked about mouth opening or trismus","triggers":["open your mouth","trismus"],"weight":1,"domain":"history"},
+    {"id":"airway","label":"Asked about breathing, swallowing, and voice changes","triggers":["breathing","swallowing","voice"],"weight":1,"domain":"history","critical":true},
+    {"id":"medical-history","label":"Asked about medical conditions including ulcers","triggers":["medical history","health conditions","ulcers"],"weight":1,"domain":"history"},
+    {"id":"medications","label":"Asked about Pepcid and ibuprofen tolerance","triggers":["medications","pepcid","ibuprofen","advil","motrin"],"weight":1,"domain":"history"},
+    {"id":"allergies","label":"Asked about medication or penicillin allergy","triggers":["allergy","allergic","penicillin"],"weight":1,"domain":"history"},
+    {"id":"dental-history","label":"Asked about crown, root canal history, and dental follow-up","triggers":["crown","root canal","dental work","dentist"],"weight":1,"domain":"history"},
+    {"id":"social-history","label":"Asked about smoking, alcohol, or drugs","triggers":["smoke","alcohol","drugs"],"weight":1,"domain":"history"},
+    {"id":"examination-findings","label":"Reviewed available examination findings","triggers":["examination","exam","image","findings"],"weight":1,"domain":"examination"}
   ],
-  "clinicalChecklist": [
-    {
-      "id": "clinical-1",
-      "label": "Explores periodontal symptoms: bleeding, food trapping, mobility",
-      "weight": 3,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-2",
-      "label": "Identifies diabetes as a risk modifier",
-      "weight": 3,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-3",
-      "label": "Screens for systemic/spreading infection red flags",
-      "weight": 3,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-4",
-      "label": "Asks about smoking and oral hygiene contributors",
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-5",
-      "label": "Differentiates periodontal abscess from pulpal source",
-      "weight": 2,
-      "domain": "reasoning"
-    }
+  "clinicalChecklist":[
+    {"id":"clinical-1","label":"Characterizes constant throbbing 8/10 right mandibular pain and radiation","weight":2,"domain":"history"},
+    {"id":"clinical-2","label":"Recognizes ulcer history and ibuprofen intolerance","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-3","label":"Screens fever, airway, swallowing, voice, and trismus red flags","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-4","label":"Recognizes fluctuant purulent periapical abscess findings","weight":3,"domain":"examination","critical":true},
+    {"id":"clinical-5","label":"Diagnoses a right mandibular periapical abscess","weight":3,"domain":"reasoning","critical":true}
   ],
-  "supportingInfo": {
-    "history": {
-      "onset": "Soreness started about a week ago.",
-      "duration": "Swelling became obvious two days ago.",
-      "pain": "Dull ache most of the day, worse when biting.",
-      "medications": "Warm salt water rinses help briefly.",
-      "allergies": "No medication allergy provided.",
-      "medicalHistory": "Has diabetes and reports higher blood sugar this week.",
-      "dentalHistory": "Food gets trapped around the back tooth and gums bleed there.",
-      "socialHistory": "Does not smoke."
-    },
-    "hpiFacts": [
-      "Soreness began about one week ago.",
-      "Swelling became obvious two days ago.",
-      "Pain worsens with biting and chewing.",
-      "Food traps around the back tooth.",
-      "Gums bleed when brushing the area.",
-      "Tooth feels slightly loose.",
-      "Diabetes is present and blood sugar has been higher this week."
+  "supportingInfo":{
+    "patientFacts":[
+      {"id":"c3.location","topic":"location","text":"The painful tooth is a right mandibular posterior tooth.","questionIntents":["location"]},
+      {"id":"c3.duration","topic":"onset_duration","text":"The pain has progressively worsened for three days.","questionIntents":["duration"]},
+      {"id":"c3.pain-quality","topic":"pain","text":"The pain is constant and throbbing.","questionIntents":["current_pain","pain_quality"],"canonicalFactIds":["c3.pain"]},
+      {"id":"c3.pain-severity","topic":"pain","text":"The pain is severe, rated 8/10.","questionIntents":["pain_severity"],"canonicalFactIds":["c3.pain"]},
+      {"id":"c3.radiation","topic":"pain","text":"The pain radiates toward the right ear.","questionIntents":["radiation"]},
+      {"id":"c3.biting","topic":"pain","text":"Biting and chewing on the affected tooth cause severe pain.","questionIntents":["biting"]},
+      {"id":"c3.swelling","topic":"swelling","text":"The lower-right side of the face feels mildly puffy.","questionIntents":["facial_swelling"]},
+      {"id":"c3.no-fever","topic":"medical_history","text":"The patient has not had a fever.","questionIntents":["fever"]},
+      {"id":"c3.mouth-opening","topic":"medical_history","text":"The patient can open the mouth normally and has no trismus.","questionIntents":["mouth_opening"]},
+      {"id":"c3.breathing","topic":"medical_history","text":"The patient has no difficulty breathing.","questionIntents":["breathing"]},
+      {"id":"c3.swallowing","topic":"medical_history","text":"The patient has no difficulty swallowing.","questionIntents":["swallowing"]},
+      {"id":"c3.voice","topic":"medical_history","text":"The patient has no voice change.","questionIntents":["voice_change"]},
+      {"id":"c3.ulcers","topic":"medical_history","text":"The patient has stomach ulcers but is otherwise healthy and does not have diabetes.","questionIntents":["medical_conditions"]},
+      {"id":"c3.pepcid","topic":"medications","text":"The patient takes Pepcid as needed.","questionIntents":["medications"]},
+      {"id":"c3.ibuprofen","topic":"medications","text":"Ibuprofen upsets the patient's stomach in the context of stomach ulcers and is poorly tolerated.","questionIntents":["ibuprofen_tolerance"]},
+      {"id":"c3.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
+      {"id":"c3.crown","topic":"dental_history","text":"The affected right mandibular posterior tooth has a crown.","questionIntents":["root_canal_history"]},
+      {"id":"c3.rct","topic":"dental_history","text":"The patient is not sure whether the crowned tooth previously had root-canal treatment.","questionIntents":["root_canal_history"]},
+      {"id":"c3.smoking","topic":"social_history","text":"The patient does not smoke.","questionIntents":["smoking"]},
+      {"id":"c3.appointment","topic":"dental_history","text":"The patient has a dental appointment scheduled for next week.","questionIntents":["dental_access"]}
     ],
-    "redFlags": [
-      "Diabetes with suspected infection",
-      "Worsening swelling",
-      "Possible tooth mobility",
-      "Escalation needed if fever, spreading swelling, dysphagia, or dyspnea appears"
-    ],
-    "examinationFindings": [
-      "Periodontal/swelling examination image available.",
-      "History suggests localized periodontal abscess around posterior tooth.",
-      "Bleeding and food trapping suggest periodontal pocket or local irritant.",
-      "No reported breathing or swallowing difficulty."
-    ],
-    "expectedQuestions": [
-      "When did soreness and swelling begin?",
-      "Does food get trapped around the tooth?",
-      "Does the gum bleed or drain?",
-      "Does the tooth feel loose?",
-      "Do you have diabetes and how is your blood sugar?",
-      "Any fever, spreading swelling, breathing, or swallowing problems?",
-      "Do you smoke?",
-      "Have you taken antibiotics or pain medication?"
-    ],
-    "diagnosis": "Periodontal abscess with systemic risk considerations.",
-    "differentialDiagnosis": [
-      "Periodontal abscess",
-      "Acute apical abscess with periodontal drainage",
-      "Pericoronitis",
-      "Vertical root fracture"
-    ],
-    "managementExpectations": [
-      "Assess glycemic control and infection severity.",
-      "Plan periodontal evaluation, drainage/debridement, and source control.",
-      "Escalate if systemic involvement or spreading infection is present.",
-      "Give oral hygiene and follow-up expectations."
-    ],
-    "learningObjectives": [
-      "Connect periodontal symptoms with medical risk factors.",
-      "Ask about diabetes control and infection progression.",
-      "Assess mobility, bleeding, and local irritants."
-    ],
-    "reportData": {
-      "keyFindings": [
-        "Diabetes",
-        "Localized gum swelling",
-        "Food trapping",
-        "Bleeding and mobility"
-      ],
-      "criticalMisses": [
-        "Ignoring diabetes risk",
-        "Not asking periodontal-specific questions"
-      ],
-      "idealSummary": "Patient presentation supports periodontal abscess with diabetes increasing infection risk and follow-up importance."
-    },
-    "evaluation": {
-      "patientChecklistWeight": 0.6,
-      "clinicalChecklistWeight": 0.4,
-      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    },
-    "requiredInvestigations": [
-      "Review periodontal/swelling examination image."
-    ],
-    "treatmentExpectations": [
-      "Plan periodontal evaluation, drainage/debridement, and source control.",
-      "Give oral hygiene and follow-up expectations."
-    ],
-    "referralExpectations": [
-      "Assess glycemic control and infection severity.",
-      "Escalate if systemic involvement or spreading infection is present."
-    ],
-    "safetyNettingExpectations": [
-      "Give oral hygiene and follow-up expectations."
-    ]
+    "history":{"onset":"Progressively worsening for three days.","duration":"Three days.","pain":"Constant throbbing severe 8/10 right mandibular pain radiating to the right ear; biting and chewing worsen it.","medications":"Pepcid as needed; ibuprofen upsets the stomach and is poorly tolerated.","allergies":"No known drug allergies, including penicillin.","medicalHistory":"Stomach ulcers; otherwise healthy; no diabetes and no known opioid-use history.","dentalHistory":"Extensive dental work; crown on affected right mandibular posterior tooth; uncertain prior root canal; dentist appointment next week.","socialHistory":"Non-smoker; occasional alcohol; no illicit drugs."},
+    "hpiFacts":["Three days of progressive right mandibular posterior tooth pain.","Constant throbbing severe 8/10 pain radiating toward the right ear.","Biting and chewing cause severe pain.","Mild right mandibular facial puffiness.","No fever, dyspnea, dysphagia, voice change, or trismus."],
+    "redFlags":["Localized fluctuant purulent intraoral abscess","Marked percussion, biting, and palpation tenderness","Monitor for spreading swelling, fever, dysphagia, dyspnea, drooling, neck pain, or voice change"],
+    "examinationFindings":["Mild right mandibular facial swelling","Poor dentition and crown on the right mandibular first molar/posterior tooth","Marked tooth, percussion, and biting tenderness","Cold-negative response","Gingival fluctuance, purulence/drainage, and palpation tenderness","Soft non-elevated floor of mouth","Patent airway without stridor or voice change","Temperature 37.2°C; heart rate 96; blood pressure 128/78; respiratory rate 16; SpO2 98%"],
+    "expectedQuestions":["Where is the pain and how long has it been present?","Is it constant, throbbing, severe, or radiating?","Does biting or chewing worsen it?","Any fever, breathing, swallowing, voice, or mouth-opening problems?","What medical conditions and medications do you have?","Does ibuprofen upset your stomach?","Does the tooth have a crown or prior root canal?","Do you smoke?"],
+    "diagnosis":"Right mandibular posterior-tooth periapical abscess.",
+    "differentialDiagnosis":["Necrotic pulp with acute apical periodontitis","Irreversible pulpitis","Temporomandibular joint-related pain"],
+    "managementExpectations":["Offer clinically appropriate mandibular local anesthesia or dental block.","Perform incision and drainage or appropriate source control.","Prescribe antibiotic therapy as canonically indicated.","Prefer acetaminophen conceptually because ibuprofen is poorly tolerated; exact dose, interval, and maximum require faculty review.","Arrange definitive dental follow-up and explain that ED drainage or antibiotics do not replace definitive dental care.","Provide safety-net instructions for worsening swelling, fever, dysphagia, dyspnea, voice change, or other progression."],
+    "requiredInvestigations":["Review structured oral and head examination findings."],
+    "treatmentExpectations":["Mandibular dental anesthesia appropriate to the tooth location.","Incision and drainage or appropriate source control.","Antibiotic therapy as canonically indicated.","Acetaminophen preferred without an unapproved dose; avoid ibuprofen because of ulcer history and intolerance."],
+    "referralExpectations":["Keep the scheduled dental appointment next week or obtain earlier definitive dental care if available.","Explain that temporary ED treatment does not eliminate the need for definitive dental treatment."],
+    "safetyNettingExpectations":["Return for worsening facial swelling, fever, difficulty swallowing or breathing, drooling, neck symptoms, or voice change."],
+    "learningObjectives":["Differentiate a right mandibular periapical abscess from the prior incorrect periodontal scenario.","Recognize fluctuant purulent and cold-negative findings without treating examination viewing as recognition.","Plan mandibular anesthesia, source control, medication-safe analgesia, antibiotics, and definitive follow-up."],
+    "reportData":{"keyFindings":["Three-day constant throbbing 8/10 right mandibular pain radiating to the right ear","Severe biting and chewing pain","Stomach ulcers with ibuprofen intolerance and Pepcid PRN","Fluctuant purulent periapical abscess with marked percussion and palpation tenderness","Cold-negative response and crown with uncertain prior root canal"],"criticalMisses":["Diagnosing a periodontal rather than periapical abscess","Recommending ibuprofen despite ulcers and intolerance","Using a maxillary-only anesthesia context","Failing to offer drainage/source control or definitive dental follow-up"],"idealSummary":"A 25-year-old otherwise healthy patient with stomach ulcers presents with three days of constant throbbing 8/10 right mandibular posterior tooth pain radiating to the right ear, severe biting pain, mild facial swelling, and a fluctuant purulent cold-negative periapical abscess, requiring appropriate mandibular anesthesia, incision and drainage/source control, antibiotic therapy, acetaminophen preference without an unapproved dose, safety netting, and definitive dental follow-up."},
+    "facultyReview":[{"id":"c3-acetaminophen-dose","status":"pending","question":"Confirm a safe acetaminophen dose, interval, and maximum daily amount before any exact schedule is taught or scored."}],
+    "evaluation":{"patientChecklistWeight":0.6,"clinicalChecklistWeight":0.4,"totalScore":"weightedAverage(patientChecklist, clinicalChecklist)"}
   }
 }

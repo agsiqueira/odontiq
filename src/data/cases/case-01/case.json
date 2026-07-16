@@ -1,605 +1,100 @@
 {
-  "metadata": {
-    "schemaVersion": "1.0",
-    "id": "case-01",
-    "estimatedTime": "18 min",
-    "urgency": "Emergency",
-    "status": "in-progress",
-    "score": null,
-    "chiefComplaint": "My jaw is swollen, and it is getting hard to breathe comfortably.",
-    "title": "Facial Swelling with Airway Risk"
-  },
-  "patient": {
-    "name": "Amara Johnson",
-    "age": 34,
-    "sex": "Female"
-  },
-  "voicePreference": {
-    "provider": "navigator",
-    "gender": "female",
-    "ageGroup": "older",
-    "bodyHabitus": "heavier_set",
-    "tone": "deep",
-    "speakingStyle": "calm_deliberate",
-    "demeanor": [
-      "calm",
-      "cooperative",
-      "friendly",
-      "slightly_uncomfortable"
-    ],
-    "preferredVoiceId": "af_sarah",
-    "fallbackVoices": [
-      {
-        "voiceId": "am_michael",
-        "speed": 0.92
-      },
-      {
-        "voiceId": "am_adam",
-        "speed": 0.9
-      }
-    ],
-    "speed": 0.8
-  },
+  "metadata": { "schemaVersion": "1.0", "id": "case-01", "estimatedTime": "18 min", "urgency": "Emergency", "status": "in-progress", "score": null, "chiefComplaint": "I have a bad toothache, my jaw is swollen, and I am having trouble swallowing and breathing when I lie down.", "title": "Ludwig's Angina with Impending Airway Compromise" },
+  "patient": { "name": "Amara Johnson", "age": 52, "sex": "Female" },
+  "voicePreference": { "provider": "navigator", "gender": "female", "ageGroup": "adult", "bodyHabitus": "heavier_set", "tone": "strained", "speakingStyle": "short_muffled", "demeanor": ["ill", "anxious", "cooperative", "prefers_upright"], "preferredVoiceId": "af_sarah", "fallbackVoices": [{ "voiceId": "am_michael", "speed": 0.92 }, { "voiceId": "am_adam", "speed": 0.9 }], "speed": 0.8 },
   "assets": {
-    "rest": "/patients/case-01/case-01-amara-johnson-v3.png",
-    "talking": "/patients/case-01/talking-v3.mp4",
+    "rest": "/patients/case-01/case-01-amara-johnson-v3.png", "talking": "/patients/case-01/talking-v3.mp4",
     "examinations": [
-      {
-        "id": "vital-signs",
-        "title": "Vital Signs (on arrival)",
-        "type": "vital-signs",
-        "findings": [
-          {
-            "label": "Temperature",
-            "value": "38.6°C (101.5°F)"
-          },
-          {
-            "label": "Heart Rate",
-            "value": "112 bpm"
-          },
-          {
-            "label": "Blood Pressure",
-            "value": "142/86 mmHg"
-          },
-          {
-            "label": "Respiratory Rate",
-            "value": "24 breaths/min"
-          },
-          {
-            "label": "Oxygen Saturation",
-            "value": "94% on room air"
-          }
-        ]
-      },
-      {
-        "id": "examination-01",
-        "title": "Examination 1",
-        "image": "/patients/case-01/examination/examination-01.jpg",
-        "description": "Extraoral swelling assessment."
-      },
-      {
-        "id": "examination-02",
-        "title": "Examination 2",
-        "image": "/patients/case-01/examination/examination-02.jpg",
-        "description": "Intraoral examination image."
-      }
+      { "id": "vital-signs", "title": "Vital Signs (on arrival)", "type": "vital-signs", "findings": [{"label":"Temperature","value":"38.6°C (101.5°F)"},{"label":"Heart Rate","value":"112 bpm"},{"label":"Blood Pressure","value":"142/86 mmHg"},{"label":"Respiratory Rate","value":"24 breaths/min"},{"label":"Oxygen Saturation","value":"94% on room air"}] },
+      { "id": "airway-examination", "title": "Airway and Head-and-Neck Examination", "type": "clinical-findings", "findings": [{"label":"General appearance","value":"Ill-appearing, anxious, and sitting upright; unable to tolerate lying flat"},{"label":"Submandibular and sublingual spaces","value":"Marked bilateral swelling with induration and tenderness"},{"label":"Floor of mouth","value":"Tense and board-like"},{"label":"Tongue","value":"Elevated and posteriorly displaced"},{"label":"Voice and secretions","value":"Muffled voice with drooling"},{"label":"Breathing","value":"Increased work of breathing with mild inspiratory stridor"},{"label":"External fluctuance","value":"No discrete fluctuance appreciated"},{"label":"Cardiovascular","value":"Tachycardic with regular rhythm"}] },
+      { "id": "dental-examination", "title": "Oral and Dental Examination", "type": "clinical-findings", "findings": [{"label":"Dentition","value":"Poor dentition"},{"label":"Dental source","value":"Obvious decay of a left mandibular molar"}] },
+      { "id": "examination-01", "title": "Extraoral Examination Image", "image": "/patients/case-01/examination/examination-01.jpg", "description": "Extraoral swelling assessment." },
+      { "id": "examination-02", "title": "Intraoral Examination Image", "image": "/patients/case-01/examination/examination-02.jpg", "description": "Intraoral examination image." }
     ]
   },
-  "conversation": {
-    "openingGreeting": "Hello, doctor.",
-    "scripted": [
-      {
-        "id": "greeting-1",
-        "intent": "greeting",
-        "triggers": [
-          "hello",
-          "hi",
-          "good morning",
-          "good afternoon"
-        ],
-        "response": "Hello, doctor.",
-        "requiredFactsCovered": [],
-        "checklistItemId": "greeting"
-      },
-      {
-        "id": "chief_complaint-2",
-        "intent": "chief_complaint",
-        "triggers": [
-          "what brings",
-          "why are you here",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "I'm having pain and swelling on the lower right side.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "chief_complaint-3",
-        "intent": "chief_complaint",
-        "triggers": [
-          "why are you here",
-          "what brings",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "I'm having pain and swelling on the lower right side.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "duration-4",
-        "intent": "duration",
-        "triggers": [
-          "how long",
-          "duration",
-          "how many days",
-          "how many weeks",
-          "for how long"
-        ],
-        "response": "About three days ago.",
-        "requiredFactsCovered": [
-          "duration"
-        ],
-        "checklistItemId": "duration"
-      },
-      {
-        "id": "onset-5",
-        "intent": "onset",
-        "triggers": [
-          "when did it start",
-          "when started",
-          "onset",
-          "first notice",
-          "begin"
-        ],
-        "response": "About three days ago.",
-        "requiredFactsCovered": [
-          "onset"
-        ],
-        "checklistItemId": "onset"
-      },
-      {
-        "id": "airway-6",
-        "intent": "airway",
-        "triggers": [
-          "breathing",
-          "swallow",
-          "swallowing",
-          "lying flat",
-          "airway",
-          "trouble breathing",
-          "trouble swallowing"
-        ],
-        "response": "It feels uncomfortable to breathe, especially when I lie back.",
-        "requiredFactsCovered": [
-          "airway"
-        ],
-        "checklistItemId": "airway"
-      },
-      {
-        "id": "airway-7",
-        "intent": "airway",
-        "triggers": [
-          "swallow",
-          "breathing",
-          "swallowing",
-          "lying flat",
-          "airway",
-          "trouble breathing",
-          "trouble swallowing"
-        ],
-        "response": "Swallowing hurts, and the swelling feels tight under my jaw.",
-        "requiredFactsCovered": [
-          "airway"
-        ],
-        "checklistItemId": "airway"
-      },
-      {
-        "id": "systemic_symptoms-8",
-        "intent": "systemic_symptoms",
-        "triggers": [
-          "fever",
-          "chills",
-          "temperature",
-          "systemic",
-          "feel sick"
-        ],
-        "response": "I have had chills, but I have not checked my temperature.",
-        "requiredFactsCovered": [
-          "systemic_symptoms"
-        ],
-        "checklistItemId": "systemic-symptoms"
-      },
-      {
-        "id": "pain_character-9",
-        "intent": "pain_character",
-        "triggers": [
-          "pain",
-          "hurt",
-          "ache",
-          "severity",
-          "scale",
-          "rate"
-        ],
-        "response": "The pain is sharp and constant, around an eight out of ten.",
-        "requiredFactsCovered": [
-          "pain_character"
-        ],
-        "checklistItemId": "pain-character"
-      },
-      {
-        "id": "medications-10",
-        "intent": "medications",
-        "triggers": [
-          "medication",
-          "medicine",
-          "ibuprofen",
-          "acetaminophen",
-          "painkiller",
-          "antibiotic",
-          "taken"
-        ],
-        "response": "Ibuprofen helped a little at first, but it is not helping much now.",
-        "requiredFactsCovered": [
-          "medications"
-        ],
-        "checklistItemId": "medications"
-      },
-      {
-        "id": "allergies-11",
-        "intent": "allergies",
-        "triggers": [
-          "allerg",
-          "allergy",
-          "allergies",
-          "penicillin"
-        ],
-        "response": "I do not have any medication allergies that I know of.",
-        "requiredFactsCovered": [
-          "allergies"
-        ],
-        "checklistItemId": "allergies"
-      },
-      {
-        "id": "trismus-12",
-        "intent": "trismus",
-        "triggers": [
-          "open",
-          "mouth opening",
-          "trismus",
-          "jaw opening"
-        ],
-        "response": "Opening my mouth all the way is difficult.",
-        "requiredFactsCovered": [
-          "trismus"
-        ],
-        "checklistItemId": "trismus"
-      },
-      {
-        "id": "examination-findings",
-        "intent": "examination",
-        "triggers": [
-          "examination",
-          "exam",
-          "look",
-          "see",
-          "image",
-          "xray",
-          "x-ray",
-          "radiograph",
-          "clinical findings",
-          "findings"
-        ],
-        "response": "Visible lower facial and submandibular swelling on the right side.",
-        "requiredFactsCovered": [
-          "examinationFindings"
-        ],
-        "checklistItemId": "examination-findings"
-      },
-      {
-        "id": "direct-diagnosis",
-        "intent": "diagnosis",
-        "triggers": [
-          "diagnosis",
-          "diagnose",
-          "what is it",
-          "what do you think it is",
-          "differential",
-          "impression"
-        ],
-        "response": "The working diagnosis is Odontogenic infection with concern for deep space involvement.",
-        "requiredFactsCovered": [
-          "diagnosis"
-        ],
-        "checklistItemId": "diagnosis"
-      }
-    ]
-  },
+  "conversation": { "openingGreeting": "Please help me. My jaw is swollen, and I cannot lie back.", "scripted": [
+    {"id":"c1-greeting","intent":"greeting","triggers":["hello","hi","good morning","good afternoon"],"response":"Hello... please help me.","requiredFactsCovered":[],"checklistItemId":"greeting"},
+    {"id":"c1-chief-complaint","intent":"chief_complaint","triggers":["what brings you in","why are you here","chief complaint"],"response":"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.","requiredFactsCovered":["chief_complaint"],"checklistItemId":"chief-complaint"},
+    {"id":"c1-duration","intent":"duration","triggers":["how long has the pain been present","how many days"],"response":"The tooth pain has been getting worse for four days.","requiredFactsCovered":["duration"],"checklistItemId":"duration"},
+    {"id":"c1-onset","intent":"onset","triggers":["when did it start","when did the pain start"],"response":"It started gradually as a dull toothache, then got worse quickly.","requiredFactsCovered":["onset"],"checklistItemId":"onset"},
+    {"id":"c1-swallowing","intent":"swallowing","triggers":["trouble swallowing","difficulty swallowing","swallowing"],"response":"Yes. It is very hard to swallow.","requiredFactsCovered":["dysphagia"],"checklistItemId":"airway"},
+    {"id":"c1-swallow-liquids","intent":"swallowing_liquids","triggers":["swallow liquids","swallow water","drink liquids"],"response":"No, I cannot swallow liquids normally.","requiredFactsCovered":["swallowing_liquids"],"checklistItemId":"airway"},
+    {"id":"c1-breathing","intent":"breathing","triggers":["trouble breathing","difficulty breathing","short of breath"],"response":"Yes. I feel short of breath.","requiredFactsCovered":["dyspnea"],"checklistItemId":"airway"},
+    {"id":"c1-positional-breathing","intent":"positional_breathing","triggers":["breathing worse when you lie down","lie flat","lying flat"],"response":"It gets worse when I lie flat. I feel like I am choking, so I have to sit up.","requiredFactsCovered":["positional_dyspnea"],"checklistItemId":"airway"},
+    {"id":"c1-voice","intent":"voice_change","triggers":["voice changed","voice change","muffled voice"],"response":"Yes. My voice sounds muffled.","requiredFactsCovered":["muffled_voice"],"checklistItemId":"airway"},
+    {"id":"c1-drooling","intent":"drooling","triggers":["are you drooling","drooling","saliva"],"response":"Yes. I cannot stop drooling.","requiredFactsCovered":["drooling"],"checklistItemId":"airway"},
+    {"id":"c1-noisy-breathing","intent":"noisy_breathing","triggers":["noisy breathing","noise when you breathe","stridor"],"response":"Yes, my breathing has started making a slight noise.","requiredFactsCovered":["noisy_breathing"],"checklistItemId":"airway"},
+    {"id":"c1-fever","intent":"systemic_symptoms","triggers":["have you had a fever","do you have a fever","fever"],"response":"Yes. I have felt very hot, but I did not have a thermometer at home.","requiredFactsCovered":["fever"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c1-chills","intent":"systemic_symptoms","triggers":["any chills","chills"],"response":"Yes, I have had chills.","requiredFactsCovered":["chills"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c1-medical-history","intent":"medical_history","triggers":["medical conditions","medical problems","health conditions"],"response":"I have type 2 diabetes and high blood pressure.","requiredFactsCovered":["medical_conditions"],"checklistItemId":"medical-history"},
+    {"id":"c1-medications","intent":"medications","triggers":["what medications do you take","what medicine do you take","regular medications"],"response":"I take metformin and lisinopril.","requiredFactsCovered":["medications"],"checklistItemId":"medications"},
+    {"id":"c1-allergies","intent":"allergies","triggers":["allergic to penicillin","medication allergies","allergies"],"response":"I do not have any drug allergies that I know of, including penicillin.","requiredFactsCovered":["allergies"],"checklistItemId":"allergies"},
+    {"id":"c1-smoking","intent":"social_history","triggers":["do you smoke","smoking","tobacco"],"response":"I smoke about one pack a day.","requiredFactsCovered":["smoking"],"checklistItemId":"social-history"},
+    {"id":"c1-access","intent":"dental_history","triggers":["why have you not had the tooth removed","why has it not been treated","afford","insurance"],"response":"I do not have insurance, and I cannot afford the extraction.","requiredFactsCovered":["access_barrier"],"checklistItemId":"dental-history"},
+    {"id":"c1-pain","intent":"pain_character","triggers":["describe the pain","how bad is the pain","pain scale"],"response":"It began as a dull ache and is now eight out of ten despite pain medicine from the store.","requiredFactsCovered":["pain_character"],"checklistItemId":"pain-character"}
+  ]},
   "patientChecklist": [
-    {
-      "id": "greeting",
-      "label": "Opened the encounter respectfully",
-      "triggers": [
-        "hello",
-        "hi",
-        "good morning",
-        "good afternoon"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "chief-complaint",
-      "label": "Asked what brought the patient in",
-      "triggers": [
-        "what brings",
-        "why are you here",
-        "main problem",
-        "chief complaint",
-        "what is bothering you"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "duration",
-      "label": "Asked how long symptoms have been present",
-      "triggers": [
-        "how long",
-        "duration",
-        "how many days",
-        "how many weeks",
-        "for how long"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "onset",
-      "label": "Asked when symptoms started",
-      "triggers": [
-        "when did it start",
-        "when started",
-        "onset",
-        "first notice",
-        "begin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "airway",
-      "label": "Asked about airway, breathing, swallowing, or lying flat",
-      "triggers": [
-        "breathing",
-        "swallow",
-        "swallowing",
-        "lying flat",
-        "airway",
-        "trouble breathing",
-        "trouble swallowing"
-      ],
-      "weight": 1,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "systemic-symptoms",
-      "label": "Asked about fever, chills, or systemic symptoms",
-      "triggers": [
-        "fever",
-        "chills",
-        "temperature",
-        "systemic",
-        "feel sick"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "pain-character",
-      "label": "Asked about pain severity or character",
-      "triggers": [
-        "pain",
-        "hurt",
-        "ache",
-        "severity",
-        "scale",
-        "rate"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medications",
-      "label": "Asked about home medications or pain relief tried",
-      "triggers": [
-        "medication",
-        "medicine",
-        "ibuprofen",
-        "acetaminophen",
-        "painkiller",
-        "antibiotic",
-        "taken"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "allergies",
-      "label": "Asked about medication allergies",
-      "triggers": [
-        "allerg",
-        "allergy",
-        "allergies",
-        "penicillin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "trismus",
-      "label": "Asked about mouth opening limitation",
-      "triggers": [
-        "open",
-        "mouth opening",
-        "trismus",
-        "jaw opening"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "examination-findings",
-      "label": "Reviewed available examination findings",
-      "triggers": [
-        "examination",
-        "exam",
-        "look",
-        "see",
-        "image",
-        "xray",
-        "x-ray",
-        "radiograph",
-        "clinical findings",
-        "findings"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    }
+    {"id":"greeting","label":"Opened the encounter respectfully","triggers":["hello","hi","good morning","good afternoon"],"weight":1,"domain":"communication"},
+    {"id":"chief-complaint","label":"Asked what brought the patient in","triggers":["what brings","why are you here","chief complaint"],"weight":1,"domain":"history"},
+    {"id":"duration","label":"Asked about the four-day course","triggers":["how long","how many days","duration"],"weight":1,"domain":"history"},
+    {"id":"onset","label":"Asked about onset and progression","triggers":["when did it start","onset","progress"],"weight":1,"domain":"history"},
+    {"id":"airway","label":"Assessed breathing, swallowing, voice, drooling, and positional airway symptoms","triggers":["breathing","swallow","voice","drool","lying flat","noisy breathing"],"weight":1,"domain":"history","critical":true},
+    {"id":"systemic-symptoms","label":"Asked about fever, chills, or systemic illness","triggers":["fever","chills","temperature","feel sick"],"weight":1,"domain":"history"},
+    {"id":"pain-character","label":"Asked about pain severity or character","triggers":["pain","severity","scale","dull"],"weight":1,"domain":"history"},
+    {"id":"medical-history","label":"Asked about relevant medical conditions","triggers":["medical history","medical conditions","diabetes","hypertension"],"weight":1,"domain":"history"},
+    {"id":"medications","label":"Asked about regular and home medications","triggers":["medication","medicine","metformin","lisinopril","ibuprofen","acetaminophen","antibiotic"],"weight":1,"domain":"history"},
+    {"id":"allergies","label":"Asked about medication or penicillin allergy","triggers":["allerg","penicillin"],"weight":1,"domain":"history"},
+    {"id":"social-history","label":"Asked about smoking","triggers":["smoke","smoking","tobacco"],"weight":1,"domain":"history"},
+    {"id":"dental-history","label":"Asked about the dental source and access barrier","triggers":["dentist","tooth treated","tooth removed","extraction","insurance","afford"],"weight":1,"domain":"history"},
+    {"id":"examination-findings","label":"Reviewed available structured examination findings","triggers":["examination","exam","findings"],"weight":1,"domain":"examination"}
   ],
   "clinicalChecklist": [
-    {
-      "id": "clinical-1",
-      "label": "Assesses airway, breathing, swallowing, and ability to lie flat",
-      "weight": 3,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-2",
-      "label": "Clarifies onset, duration, progression, and severity of swelling",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-3",
-      "label": "Asks about fever/chills and systemic illness",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-4",
-      "label": "Reviews analgesic use, antibiotics, and allergies",
-      "weight": 2,
-      "domain": "management"
-    },
-    {
-      "id": "clinical-5",
-      "label": "Recognizes emergency referral risk for deep space infection",
-      "weight": 3,
-      "domain": "reasoning",
-      "critical": true
-    }
+    {"id":"clinical-1","label":"Assesses breathing, swallowing, drooling, voice, stridor, and ability to lie flat","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-2","label":"Clarifies dental source, four-day course, and rapid swelling progression","weight":2,"domain":"history"},
+    {"id":"clinical-3","label":"Asks about fever, chills, and systemic illness","weight":2,"domain":"history"},
+    {"id":"clinical-4","label":"Reviews conditions, medications, antibiotics, and allergies","weight":2,"domain":"management"},
+    {"id":"clinical-5","label":"Recognizes Ludwig's angina with life-threatening airway risk","weight":3,"domain":"reasoning","critical":true}
   ],
   "supportingInfo": {
-    "history": {
-      "onset": "The swelling became noticeable yesterday evening.",
-      "duration": "The pain started about three days ago.",
-      "pain": "Sharp, constant lower-right jaw pain rated eight out of ten.",
-      "medications": "Ibuprofen helped briefly but is no longer helping much.",
-      "allergies": "No known medication allergies.",
-      "medicalHistory": "Reports chills and discomfort breathing when lying back.",
-      "dentalHistory": "Had a filling on the lower right side a few years ago.",
-      "socialHistory": "Can drink small sips but chewing is too painful."
-    },
-    "hpiFacts": [
-      "Lower-right jaw pain began about three days ago.",
-      "Swelling became noticeably worse yesterday evening.",
-      "Pain is sharp, constant, and rated 8/10.",
-      "Swallowing is painful.",
-      "Breathing feels uncomfortable when lying back.",
-      "Ibuprofen provided only brief relief.",
-      "Mouth opening is limited."
+    "patientFacts": [
+      {"id":"c1.pain","topic":"pain","text":"The pain began as a dull toothache and progressed to 8/10 despite over-the-counter analgesics; the exact drug and dose are not known.","questionIntents":["pain"]},
+      {"id":"c1.duration","topic":"onset_duration","text":"The left lower molar pain has worsened over four days.","questionIntents":["duration"]},
+      {"id":"c1.location","topic":"location","text":"The bad tooth is a decayed left mandibular molar.","questionIntents":["location"]},
+      {"id":"c1.swelling-location","topic":"swelling","text":"The swelling is bilateral under the jaw and under the tongue.","questionIntents":["swelling_location"]},
+      {"id":"c1.swelling-progression","topic":"swelling","text":"The swelling has progressed rapidly.","questionIntents":["swelling_progression"]},
+      {"id":"c1.dysphagia","topic":"medical_history","text":"Swallowing is very difficult.","questionIntents":["swallowing"]},
+      {"id":"c1.liquids","topic":"medical_history","text":"The patient cannot swallow liquids normally.","questionIntents":["swallowing_liquids"]},
+      {"id":"c1.dyspnea","topic":"medical_history","text":"The patient feels short of breath.","questionIntents":["breathing"]},
+      {"id":"c1.dyspnea-supine","topic":"medical_history","text":"Breathing becomes worse when lying flat, with a choking sensation, so the patient must sit upright.","questionIntents":["positional_breathing"]},
+      {"id":"c1.drooling","topic":"medical_history","text":"The patient is drooling.","questionIntents":["drooling"]},
+      {"id":"c1.voice","topic":"medical_history","text":"The patient's voice sounds muffled.","questionIntents":["voice_change"]},
+      {"id":"c1.noisy-breathing","topic":"medical_history","text":"The patient's breathing has started making a slight noise.","questionIntents":["noisy_breathing"]},
+      {"id":"c1.tongue","topic":"medical_history","text":"The patient feels the tongue is pushed upward.","questionIntents":["tongue_position"]},
+      {"id":"c1.fever","topic":"medical_history","text":"The patient has felt feverish and very hot but did not measure a temperature at home.","questionIntents":["fever"]},
+      {"id":"c1.chills","topic":"medical_history","text":"The patient has had chills.","questionIntents":["chills"]},
+      {"id":"c1.conditions","topic":"medical_history","text":"The patient has type 2 diabetes and hypertension.","questionIntents":["medical_conditions"]},
+      {"id":"c1.metformin","topic":"medications","text":"The patient takes metformin.","questionIntents":["medications"]},
+      {"id":"c1.lisinopril","topic":"medications","text":"The patient takes lisinopril.","questionIntents":["medications"]},
+      {"id":"c1.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
+      {"id":"c1.smoking","topic":"social_history","text":"The patient smokes about one pack per day.","questionIntents":["smoking"]},
+      {"id":"c1.access","topic":"dental_history","text":"The patient has no insurance and cannot afford the needed extraction.","questionIntents":["dental_access"]}
+      ,{"id":"c1.cold","topic":"pain","text":"The tooth has occasionally been sensitive to cold.","questionIntents":["thermal"]}
+      ,{"id":"c1.biting","topic":"pain","text":"Pressure from biting has occasionally made the tooth hurt.","questionIntents":["biting"]}
     ],
-    "redFlags": [
-      "Breathing discomfort when supine",
-      "Painful swallowing",
-      "Rapidly progressive submandibular swelling",
-      "Chills/systemic symptoms",
-      "Trismus/limited mouth opening"
-    ],
-    "examinationFindings": [
-      "Visible lower facial and submandibular swelling on the right side.",
-      "Tenderness over the lower right posterior region.",
-      "Limited opening reported by patient.",
-      "Intraoral image supports odontogenic source assessment."
-    ],
-    "expectedQuestions": [
-      "When did the pain and swelling begin?",
-      "Has the swelling changed or spread?",
-      "Are you having trouble breathing, swallowing, or lying flat?",
-      "Do you have fever or chills?",
-      "Can you open your mouth normally?",
-      "What medications have you taken?",
-      "Do you have medication allergies?",
-      "Any recent dental work or problems on that tooth?"
-    ],
-    "diagnosis": "Odontogenic infection with concern for deep space involvement.",
-    "differentialDiagnosis": [
-      "Ludwig angina/deep neck space infection",
-      "Acute apical abscess",
-      "Pericoronitis with fascial space spread",
-      "Cellulitis of odontogenic origin"
-    ],
-    "managementExpectations": [
-      "Treat airway compromise risk as urgent/emergent.",
-      "Refer for emergency evaluation/oral surgery when red flags are present.",
-      "Avoid definitive dental treatment until airway and infection risk are stabilized.",
-      "Document red flags, allergies, medications, and escalation rationale."
-    ],
-    "learningObjectives": [
-      "Identify red flags for spreading odontogenic infection.",
-      "Prioritize airway and emergency referral concerns.",
-      "Elicit onset, progression, systemic symptoms, and medication history."
-    ],
-    "reportData": {
-      "keyFindings": [
-        "Progressive swelling",
-        "Supine breathing discomfort",
-        "Painful swallowing",
-        "Trismus concern"
-      ],
-      "criticalMisses": [
-        "Failure to ask airway or swallowing questions",
-        "Treating as routine dental pain"
-      ],
-      "idealSummary": "Patient presents with progressive lower-right odontogenic infection symptoms and airway-related red flags requiring urgent escalation."
-    },
-    "evaluation": {
-      "patientChecklistWeight": 0.6,
-      "clinicalChecklistWeight": 0.4,
-      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    },
-    "requiredInvestigations": [
-      "Review available extraoral and intraoral examination findings."
-    ],
-    "treatmentExpectations": [
-      "Avoid definitive dental treatment until airway and infection risk are stabilized."
-    ],
-    "referralExpectations": [
-      "Treat airway compromise risk as urgent/emergent.",
-      "Refer for emergency evaluation/oral surgery when red flags are present."
-    ],
-    "safetyNettingExpectations": [
-      "Document red flags, allergies, medications, and escalation rationale."
-    ]
+    "history": {"onset":"The toothache began gradually and then worsened quickly.","duration":"Four days of worsening dental pain; swallowing and breathing symptoms progressed over approximately 12 hours.","pain":"Dull left lower molar pain progressed to 8/10 despite unspecified over-the-counter analgesics.","medications":"Takes metformin and lisinopril; exact over-the-counter analgesic and dose are not known.","allergies":"No known drug allergies and no penicillin allergy.","medicalHistory":"Type 2 diabetes and hypertension; no known opioid-use history and no ibuprofen contraindication.","dentalHistory":"Poor dentition with a decayed left mandibular molar that needs extraction.","socialHistory":"Smokes about one pack per day; no alcohol or illicit drug use; no insurance and cannot afford extraction."},
+    "hpiFacts": ["Four days of worsening left lower molar pain.","Rapidly progressive swelling under the jaw and tongue.","Dysphagia and dyspnea developed over approximately 12 hours.","Dull pain progressed to 8/10 despite unspecified over-the-counter analgesics.","Drooling and muffled voice are present.","Cannot lie flat because of choking and breathlessness.","Fever and chills are present.","The patient feels the tongue is pushed upward."],
+    "redFlags": ["Impending airway compromise","Dyspnea worse when supine","Dysphagia and inability to swallow normally","Drooling and muffled voice","Mild inspiratory stridor and increased work of breathing","Rapidly progressive bilateral submandibular and sublingual swelling","Elevated and posteriorly displaced tongue","Fever and tachycardia"],
+    "examinationFindings": ["Ill-appearing, anxious, and upright","Marked bilateral submandibular and sublingual swelling with induration","Tense, board-like floor of mouth","Elevated and posteriorly displaced tongue","Drooling and muffled voice","Mild inspiratory stridor with increased work of breathing","No discrete external fluctuance","Poor dentition with obvious decay of a left mandibular molar","Tachycardia"],
+    "expectedQuestions": ["Are you having trouble swallowing or swallowing liquids?","Are you having trouble breathing, especially when lying flat?","Has your voice changed, are you drooling, or is breathing noisy?","Do you have fever or chills?","Where is the swelling and how quickly has it progressed?","What medical conditions and medications do you have?","Do you have medication or penicillin allergies?","Do you smoke?","Why has the tooth not been extracted?"],
+    "diagnosis":"Ludwig's angina with impending airway compromise.",
+    "differentialDiagnosis":["Deep neck-space abscess","Epiglottitis","Peritonsillar abscess","Angioedema"],
+    "managementExpectations":["Immediate airway assessment and protection with early escalation for advanced airway management.","Keep the patient upright, provide oxygen, and begin continuous monitoring.","Establish IV access; provide IV fluids when appropriate, IV analgesia, and IV broad-spectrum antibiotics.","Admit the patient and consult OMFS plus an appropriate airway specialist.","Obtain laboratory testing and CT imaging only when safe and without delaying airway management.","Arrange definitive dental source control after stabilization.","Do not discharge with oral antibiotics as adequate treatment."],
+    "requiredInvestigations":["Continuous airway and physiologic monitoring.","Laboratory testing after immediate airway priorities are addressed.","CT imaging only when safe and without delaying airway management."],
+    "treatmentExpectations":["Upright positioning, oxygen, and immediate airway-focused escalation.","IV access, fluids when appropriate, IV analgesia, and IV broad-spectrum antibiotics.","Definitive dental source control after stabilization."],
+    "referralExpectations":["Hospital admission.","Urgent OMFS consultation and appropriate airway-specialist involvement."],
+    "safetyNettingExpectations":["Routine discharge or oral antibiotics alone are unsafe in this life-threatening airway emergency."],
+    "learningObjectives":["Recognize Ludwig's angina and impending airway compromise.","Elicit granular airway, systemic, medical, medication, and access history.","Prioritize airway protection, emergency consultation, IV therapy, admission, and source control."],
+    "reportData":{"keyFindings":["Four-day left mandibular dental source","Rapid bilateral submandibular and sublingual swelling","Dysphagia, supine dyspnea, drooling, muffled voice, and tongue elevation","Fever, tachycardia, stridor, and increased work of breathing","Type 2 diabetes and hypertension","Cost barrier to extraction"],"criticalMisses":["Failure to assess or protect the airway","Failure to ask about swallowing, breathing, positional worsening, drooling, or voice change","Treating Ludwig's angina as routine dental pain","Routine discharge or oral antibiotics without admission and specialist escalation"],"idealSummary":"A 52-year-old with four days of worsening left mandibular dental pain and rapidly progressive bilateral submandibular/sublingual swelling, with dysphagia, supine dyspnea, drooling, muffled voice, tongue elevation, fever, tachycardia, stridor, and increased work of breathing consistent with Ludwig's angina and impending airway compromise requiring immediate airway-focused escalation, IV therapy, admission, OMFS/airway consultation, and source control after stabilization."},
+    "evaluation":{"patientChecklistWeight":0.6,"clinicalChecklistWeight":0.4,"totalScore":"weightedAverage(patientChecklist, clinicalChecklist)"}
   }
 }

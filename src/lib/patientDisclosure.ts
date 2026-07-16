@@ -1,5 +1,5 @@
-import type { CaseData } from "@/data/cases";
-import type { ConversationMessage } from "@/lib/conversationEngine";
+import type { CaseData } from "../data/cases";
+import type { ConversationMessage } from "./conversationEngine";
 
 export type PatientDisclosureTopic =
   | "chief_complaint"
@@ -42,10 +42,57 @@ export type PatientDisclosureState = {
   providerMessageIntent: ProviderMessageIntent;
 };
 
-type InternalFact = PatientDisclosureFact & {
+export type InternalFact = PatientDisclosureFact & {
   aliases: string[];
   broadEligible: boolean;
   order: number;
+  questionIntents: string[];
+  canonicalFactIds?: string[];
+};
+
+const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
+  breathing: /\b(breath|breathing|short of breath|dyspnea)\b/i,
+  positional_breathing: /\b(lie|lying|lay|flat|recline|back)\b.*\b(breath\w*|chok\w*)|\b(breath\w*|chok\w*)\b.*\b(lie|lying|lay|flat|recline|back)\b/i,
+  swallowing: /\b(swallow|swallowing|dysphagia)\b/i,
+  swallowing_liquids: /\b(swallow|swallowing)\b.*\b(liquid|water|drink|sip)|\b(liquid|water|drink|sip)\b.*\b(swallow|swallowing)\b/i,
+  drooling: /\b(drool|drooling|saliva)\b/i,
+  voice_change: /\b(voice|muffled|speaking|speech|sound different)\b/i,
+  noisy_breathing: /\b(stridor|noisy breathing|noise when.*breath|breath.*noise)\b/i,
+  fever: /\b(fever|feverish|temperature)\b/i,
+  chills: /\b(chill|chills|shiver|shivering)\b/i,
+  systemic_illness: /\b(feel sick|feeling sick|weak|fatigue|unwell|systemic)\b/i,
+  swelling_location: /\b(where|location|side|under.*jaw|submandibular|sublingual)\b.*\b(swell|swelling)|\b(swell|swelling)\b.*\b(where|location|side|under.*jaw|submandibular|sublingual)\b/i,
+  swelling_progression: /\b(swell|swelling)\b.*\b(worse|worsen|spread|progress|change|fast|quick)|\b(worse|worsen|spread|progress|change|fast|quick)\b.*\b(swell|swelling)\b/i,
+  medical_conditions: /\b(medical|health)\b.*\b(history|condition|problem)|\b(diabetes|hypertension|high blood pressure)\b/i,
+  medications: /\b(medication|medicine|meds|what do you take|taking)\b/i,
+  allergies: /\b(allerg|penicillin)\b/i,
+  smoking: /\b(smok|smoking|tobacco|cigarette)\b/i,
+  dental_access: /\b(afford|cost|insurance|why.*(?:treated|removed|extracted)|dentist|appointment|access)\b/i,
+  tongue_position: /\b(tongue)\b.*\b(push|pushed|up|elevat|back|posterior)|\b(push|pushed|elevat|posterior)\b.*\b(tongue)\b/i,
+  thermal: /\b(cold|hot|heat|thermal|temperature sensitivity)\b/i,
+  biting: /\b(bite|biting|chew|chewing|tap|tapping|pressure)\b/i,
+  pain_quality: /\b(what.*feel|describe.*pain|quality|throbb|sharp|dull|aching)\b/i,
+  pain_severity: /\b(how bad|how severe|severity|scale|rate|out of ten|\/10)\b/i,
+  radiation: /\b(travel|radiat|spread anywhere|go anywhere|ear)\b/i,
+  ibuprofen_tolerance: /\b(ibuprofen|advil|motrin|nsaid)\b.*\b(bother|upset|stomach|tolerat|reaction)|\b(bother|upset|stomach|tolerat|reaction)\b.*\b(ibuprofen|advil|motrin|nsaid)\b/i,
+  root_canal_history: /\b(root canal|nerve removed|had.*crown|crown.*history)\b/i,
+  symptom_sequence: /\b(stop|stopped|went away|come back|came back|return|returned|before|earlier episode)\b/i,
+  hard_object_injury: /\b(bite|bit|biting)\b.*\b(hard|object|food|something)|\b(hard|object|food|something)\b.*\b(bite|bit|biting)\b/i,
+  allergy_reaction: /\b(reaction|what happens|hives|rash|anaphylaxis)\b/i,
+  drainage: /\b(pus|purulence|drain|drainage|discharge|bad taste|sinus tract)\b/i,
+  patient_goal: /\b(save|keep|lose|losing|goal|want.*tooth)\b/i,
+  cold_current: /\b(cold)\b.*\b(now|still|currently|anymore)|\b(now|still|currently|anymore)\b.*\b(cold)\b/i,
+  cold_prior: /\b(cold)\b.*\b(before|earlier|used to|previously)|\b(before|earlier|used to|previously)\b.*\b(cold)\b/i,
+  spontaneous_pain: /\b(on its own|without.*touch|nothing touching|spontaneous(?:ly)?|unprovoked|starts by itself)\b/i,
+  nocturnal_pain: /\b(wake|wakes|waking|night|sleep|sleeping)\b/i,
+  dental_visit_history: /\b(last|when)\b.*\b(dentist|dental visit)|\b(dentist|dental visit)\b.*\b(last|when|years? ago)\b/i,
+  current_pain: /\b(constant|all the time|continuous|does it stop|pain now)\b/i,
+  temperature_checked: /\b(check|checked|measure|measured|thermometer)\b.*\b(temperature|fever)|\b(temperature|fever)\b.*\b(check|checked|measure|measured|thermometer)\b/i,
+  mouth_opening: /\b(open|opening)\b.*\b(mouth|jaw)|\b(trismus)\b/i,
+  facial_swelling: /\b(cheek|face|facial)\b.*\b(swell|swelling|puffy)|\b(swell|swelling|puffy)\b.*\b(cheek|face|facial)\b/i,
+  pain: /\b(pain|hurt|ache|severity|scale|rate)\b/i,
+  duration: /\b(how long|duration|when.*start|days?|hours?)\b/i,
+  location: /\b(where|which tooth|what tooth|side|left|right|upper|lower)\b/i,
 };
 
 const BROAD_QUESTION_PATTERN =
@@ -232,17 +279,14 @@ export function buildPatientDisclosureState({
   latestStudentMessage: string;
 }): PatientDisclosureState {
   const facts = extractPatientFacts(caseData);
-  const disclosedFactIds = inferDisclosedFactIds({
-    facts,
-    questions: conversation
-      .filter((message) => message.role === "student")
-      .map((message) => message.text),
-  });
+  const disclosedFactIds = inferDisclosedFactIds({ facts, conversation });
   const latestClassification = classifyQuestion(latestStudentMessage);
   const allowedFacts = selectAllowedFacts({
+    caseId: caseData.metadata.id,
     facts,
     classification: latestClassification,
     disclosedFactIds,
+    question: latestStudentMessage,
   });
   const allowedFactIds = new Set(allowedFacts.map((fact) => fact.id));
   const alreadyDisclosed = facts.filter(
@@ -260,7 +304,7 @@ export function buildPatientDisclosureState({
   };
 }
 
-function extractPatientFacts(caseData: CaseData): InternalFact[] {
+export function extractPatientFacts(caseData: CaseData): InternalFact[] {
   const history = caseData.supportingInfo.history;
   const facts: InternalFact[] = [];
 
@@ -270,6 +314,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: caseData.metadata.chiefComplaint,
     order: 0,
     broadEligible: true,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.pain",
@@ -277,6 +322,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.pain,
     order: 10,
     broadEligible: true,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.onset",
@@ -284,6 +330,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.onset,
     order: 20,
     broadEligible: true,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.duration",
@@ -291,6 +338,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.duration,
     order: 21,
     broadEligible: true,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.medications",
@@ -298,6 +346,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.medications,
     order: 50,
     broadEligible: false,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.allergies",
@@ -305,6 +354,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.allergies,
     order: 60,
     broadEligible: false,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.medicalHistory",
@@ -312,6 +362,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.medicalHistory,
     order: 70,
     broadEligible: false,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.dentalHistory",
@@ -319,6 +370,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.dentalHistory,
     order: 80,
     broadEligible: false,
+    questionIntents: [],
   });
   addFact(facts, {
     id: "history.socialHistory",
@@ -326,6 +378,7 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
     text: history.socialHistory,
     order: 90,
     broadEligible: false,
+    questionIntents: [],
   });
 
   caseData.supportingInfo.hpiFacts.forEach((text, index) => {
@@ -341,13 +394,33 @@ function extractPatientFacts(caseData: CaseData): InternalFact[] {
       text,
       order: 100 + index,
       broadEligible: BROAD_TOPIC_ORDER.includes(topic),
+      questionIntents: [],
     });
   });
 
-  return dedupeFacts(facts).sort((left, right) => left.order - right.order);
+  caseData.supportingInfo.patientFacts?.forEach((fact, index) => {
+    addFact(facts, {
+      ...fact,
+      order: 200 + index,
+      broadEligible: fact.broadEligible ?? false,
+    });
+  });
+
+  const structuredTopics = new Set<PatientDisclosureTopic>(
+    caseData.supportingInfo.patientFacts?.map((fact) => fact.topic) ?? [],
+  );
+
+  return dedupeFacts(
+    facts.filter(
+      (fact) =>
+        !structuredTopics.has(fact.topic) ||
+        (!fact.id.startsWith("history.") && !fact.id.startsWith("hpiFacts.")),
+    ),
+  )
+    .sort((left, right) => left.order - right.order);
 }
 
-function topicFromPatientFact(text: string): PatientDisclosureTopic | undefined {
+export function topicFromPatientFact(text: string): PatientDisclosureTopic | undefined {
   const normalizedText = normalizeText(text);
 
   if (
@@ -407,7 +480,7 @@ function dedupeFacts(facts: InternalFact[]) {
   return uniqueFacts;
 }
 
-function classifyQuestion(question: string) {
+export function classifyQuestion(question: string) {
   const normalizedQuestion = normalizeText(question);
   const providerMessageIntent = classifyProviderMessageIntent(question);
   const topics = new Set<PatientDisclosureTopic>();
@@ -422,6 +495,12 @@ function classifyQuestion(question: string) {
 
   return {
     topics: refineTopics(normalizedQuestion, topics),
+    questionIntents:
+      providerMessageIntent === "question"
+        ? refineQuestionIntents(Object.entries(QUESTION_INTENT_PATTERNS)
+            .filter(([, pattern]) => pattern.test(normalizedQuestion))
+            .map(([intent]) => intent))
+        : [],
     isBroadQuestion:
       providerMessageIntent === "question" &&
       BROAD_QUESTION_PATTERN.test(normalizedQuestion),
@@ -431,6 +510,27 @@ function classifyQuestion(question: string) {
       RESTRICTED_INTERPRETATION_PATTERN.test(normalizedQuestion),
     providerMessageIntent,
   };
+}
+
+function refineQuestionIntents(intents: string[]) {
+  const refined = new Set(intents);
+  if (refined.has("positional_breathing")) refined.delete("breathing");
+  if (refined.has("noisy_breathing")) refined.delete("breathing");
+  if (refined.has("swallowing_liquids")) refined.delete("swallowing");
+  if (refined.has("temperature_checked")) refined.delete("fever");
+  if (refined.has("location")) refined.delete("pain");
+  if (refined.has("biting")) refined.delete("pain");
+  if (refined.has("pain_quality")) refined.delete("pain");
+  if (refined.has("pain_severity")) refined.delete("pain");
+  if (refined.has("ibuprofen_tolerance")) refined.delete("medications");
+  if (refined.has("allergy_reaction")) refined.delete("allergies");
+  if (refined.has("cold_current") || refined.has("cold_prior")) {
+    refined.delete("symptom_sequence");
+  }
+  if (refined.has("hard_object_injury")) refined.delete("biting");
+  if (refined.has("spontaneous_pain")) refined.delete("pain");
+  if (refined.has("nocturnal_pain")) refined.delete("pain");
+  return Array.from(refined);
 }
 
 export function classifyProviderMessageIntent(
@@ -486,17 +586,49 @@ function refineTopics(
   return Array.from(topics);
 }
 
-function selectAllowedFacts({
+export function selectAllowedFacts({
+  caseId,
   facts,
   classification,
   disclosedFactIds,
+  question,
 }: {
+  caseId: string;
   facts: InternalFact[];
   classification: ReturnType<typeof classifyQuestion>;
   disclosedFactIds: Set<string>;
+  question: string;
 }) {
   if (classification.asksRestrictedClinicalInterpretation) {
     return [];
+  }
+
+  const caseSpecificFacts =
+    classification.providerMessageIntent === "question"
+      ? selectCaseSpecificAllowedFacts({
+          caseId,
+          facts: facts.filter((fact) => !disclosedFactIds.has(fact.id)),
+          question,
+        })
+      : undefined;
+
+  if (caseSpecificFacts) {
+    return caseSpecificFacts;
+  }
+
+  const prerequisiteFacts = facts.filter(
+    (fact) =>
+      fact.questionIntents.length > 0 &&
+      fact.questionIntents.some((intent) =>
+        classification.questionIntents.includes(intent),
+      ) &&
+      !disclosedFactIds.has(fact.id),
+  );
+
+  if (prerequisiteFacts.length > 0) {
+    return classification.isBroadQuestion
+      ? prerequisiteFacts.slice(0, 1)
+      : prerequisiteFacts;
   }
 
   if (classification.topics.length > 0) {
@@ -522,27 +654,105 @@ function selectAllowedFacts({
   return [];
 }
 
-function inferDisclosedFactIds({
-  facts,
-  questions,
-}: {
-  facts: InternalFact[];
-  questions: string[];
-}) {
+function inferDisclosedFactIds({ facts, conversation }: { facts: InternalFact[]; conversation: ConversationMessage[] }) {
   const disclosedFactIds = new Set<string>();
 
-  for (const question of questions) {
-    const classification = classifyQuestion(question);
-    const allowedFacts = selectAllowedFacts({
-      facts,
-      classification,
-      disclosedFactIds,
-    });
-
-    allowedFacts.forEach((fact) => disclosedFactIds.add(fact.id));
+  for (const message of conversation.filter((item) => item.role === "patient")) {
+    for (const fact of facts) {
+      if (patientResponseSupportsFact(message.text, fact.text)) {
+        disclosedFactIds.add(fact.id);
+      }
+    }
   }
 
   return disclosedFactIds;
+}
+
+function patientResponseSupportsFact(response: string, factText: string) {
+  const ignored = new Set(["the", "a", "an", "and", "or", "is", "are", "it", "my", "i", "to", "of", "for", "when", "that"]);
+  const factTokens = normalizeText(factText).split(" ").filter((token) => token.length > 2 && !ignored.has(token));
+  const responseTokens = new Set(normalizeText(response).split(" "));
+  const overlap = factTokens.filter((token) => responseTokens.has(token)).length;
+  return factTokens.length > 0 && overlap / factTokens.length >= 0.5;
+}
+
+function selectCaseSpecificAllowedFacts({
+  caseId,
+  facts,
+  question,
+}: {
+  caseId: string;
+  facts: InternalFact[];
+  question: string;
+}): InternalFact[] | undefined {
+  if (caseId === "case-03") {
+    const normalizedQuestion = normalizeText(question);
+    if (/\bwhat medications? did you take\b|\bwhat did you take\b/.test(normalizedQuestion)) {
+      return facts.filter((fact) => fact.id === "c3.pepcid" || fact.id === "c3.ibuprofen");
+    }
+    if (/\b(ibuprofen|advil|motrin|nsaid)\b/.test(normalizedQuestion)) {
+      return facts.filter((fact) => fact.id === "c3.ibuprofen");
+    }
+    if (/\b(medication|medications|medicine|meds|what do you take|taking)\b/.test(normalizedQuestion)) {
+      return facts.filter((fact) => fact.id === "c3.pepcid");
+    }
+  }
+
+  if (caseId !== "case-05") {
+    return undefined;
+  }
+
+  const normalizedQuestion = normalizeText(question);
+  if (/\bwhat makes (?:the )?pain worse\b/.test(normalizedQuestion)) {
+    return facts.filter((fact) => ["c5.cold", "c5.chewing", "c5.biting"].includes(fact.id));
+  }
+  if (/\bchew(?:ing)?\b/.test(normalizedQuestion) && !/\b(bite|biting|tap|tapping|percussion)\b/.test(normalizedQuestion)) {
+    return facts.filter((fact) => fact.id === "c5.chewing");
+  }
+  if (/\b(bite|biting|tap|tapping|percussion)\b/.test(normalizedQuestion)) {
+    return facts.filter((fact) => fact.id === "c5.biting");
+  }
+  if (/\bhow many\b.*\b(seconds?|minutes?)\b|\bhow long\b.*\b(?:last|keep hurting)\b/.test(normalizedQuestion)) {
+    return facts.filter((fact) => fact.id === "c5.lingering");
+  }
+  const asksAboutThermalResponse =
+    /\b(cold|chilly|chilled|hot|heat|temperature|thermal|sensitive|sensitivity)\b/.test(
+      normalizedQuestion,
+    ) || /\bwhat makes (?:the )?pain worse\b/.test(normalizedQuestion);
+
+  if (!asksAboutThermalResponse) {
+    return undefined;
+  }
+
+  const asksAboutLingeringColdPain =
+    /\b(linger|lingering)\b/.test(normalizedQuestion) ||
+    /\bafter (?:the )?cold\b/.test(normalizedQuestion) ||
+    /\bcold (?:is|has been) (?:gone|removed)\b/.test(normalizedQuestion) ||
+    /\bstop(?:s|ped|ping)? (?:as soon|immediately|right away)\b/.test(
+      normalizedQuestion,
+    ) ||
+    /\bkeep(?:s|ing)? (?:hurting|going)\b/.test(normalizedQuestion) ||
+    (/\bhow long\b/.test(normalizedQuestion) &&
+      /\b(cold|temperature|stimulus)\b/.test(normalizedQuestion));
+  const asksWhatColdDoes =
+    /\bwhat happens\b/.test(normalizedQuestion) &&
+    /\bcold\b/.test(normalizedQuestion);
+  const mentionsCold = /\bcold\b/.test(normalizedQuestion);
+  const mentionsHot = /\b(hot|heat)\b/.test(normalizedQuestion);
+
+  if (asksAboutLingeringColdPain) {
+    return facts.filter((fact) => fact.id === "c5.lingering");
+  }
+  if (asksWhatColdDoes) {
+    return facts.filter((fact) => ["c5.cold", "c5.lingering"].includes(fact.id));
+  }
+  if (mentionsCold) {
+    return facts.filter((fact) => fact.id === "c5.cold");
+  }
+  if (mentionsHot) {
+    return [];
+  }
+  return facts.filter((fact) => fact.id === "c5.cold");
 }
 
 function addFact(

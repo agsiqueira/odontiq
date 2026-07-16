@@ -38,6 +38,24 @@ export type CaseExaminationData =
         label: string;
         value: string;
       }>;
+    }
+  | {
+      id: string;
+      title: string;
+      type: "clinical-findings";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
+    }
+  | {
+      id: string;
+      title: string;
+      type: "diagnostic-results";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
     };
 
 export type CaseData = {
@@ -91,6 +109,24 @@ export type CaseData = {
   patientChecklist: ChecklistItem[];
   clinicalChecklist: ChecklistItem[];
   supportingInfo: {
+    patientFacts?: Array<{
+      id: string;
+      topic:
+        | "chief_complaint"
+        | "pain"
+        | "onset_duration"
+        | "location"
+        | "swelling"
+        | "medications"
+        | "allergies"
+        | "medical_history"
+        | "dental_history"
+        | "social_history";
+      text: string;
+      questionIntents: string[];
+      broadEligible?: boolean;
+      canonicalFactIds?: string[];
+    }>;
     history: {
       onset: string;
       duration: string;

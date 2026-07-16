@@ -22,6 +22,24 @@ export type CaseExamination =
         label: string;
         value: string;
       }>;
+    }
+  | {
+      id: string;
+      label: string;
+      type: "clinical-findings";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
+    }
+  | {
+      id: string;
+      label: string;
+      type: "diagnostic-results";
+      findings: Array<{
+        label: string;
+        value: string;
+      }>;
     };
 
 export type CasePatientChecklistItem = {
@@ -72,8 +90,9 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
     examinations: caseData.assets.examinations.flatMap(
       (examination): CaseExamination[] => {
         if (
-          examination.type === "vital-signs" &&
-          examination.id === "vital-signs" &&
+          (examination.type === "vital-signs" ||
+            examination.type === "clinical-findings" ||
+            examination.type === "diagnostic-results") &&
           examination.title.trim() &&
           Array.isArray(examination.findings) &&
           examination.findings.length > 0 &&
@@ -85,7 +104,7 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
             {
               id: examination.id,
               label: examination.title,
-              type: "vital-signs",
+              type: examination.type,
               findings: examination.findings.map((finding) => ({
                 ...finding,
               })),
@@ -95,6 +114,8 @@ export const CASES: OdontIQCase[] = CASE_DATA.map((caseData) => ({
 
         if (
           examination.type !== "vital-signs" &&
+          examination.type !== "clinical-findings" &&
+          examination.type !== "diagnostic-results" &&
           examination.id.trim() &&
           examination.title.trim() &&
           examination.image.trim()

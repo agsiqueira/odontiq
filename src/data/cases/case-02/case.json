@@ -1,648 +1,94 @@
 {
-  "metadata": {
-    "schemaVersion": "1.0",
-    "id": "case-02",
-    "estimatedTime": "16 min",
-    "urgency": "Urgent",
-    "status": "not-started",
-    "score": null,
-    "chiefComplaint": "My tooth pain is intense, and my cheek feels swollen and hot.",
-    "title": "Severe Tooth Pain with Facial Swelling"
-  },
-  "patient": {
-    "name": "Marcus Lee",
-    "age": 41,
-    "sex": "Male"
-  },
-  "voicePreference": {
-    "provider": "navigator",
-    "voiceId": "am_liam",
-    "speed": 1.04
-  },
-  "assets": {
-    "rest": "/patients/case-02/case-02-marcus-lee-v3.png",
-    "talking": "/patients/case-02/talking-v3.mp4",
-    "examinations": [
-      {
-        "id": "vital-signs",
-        "title": "Vital Signs (on arrival)",
-        "type": "vital-signs",
-        "findings": [
-          {
-            "label": "Temperature",
-            "value": "38.4°C (101.1°F)"
-          },
-          {
-            "label": "Heart Rate",
-            "value": "108 bpm"
-          },
-          {
-            "label": "Blood Pressure",
-            "value": "132/80 mmHg"
-          },
-          {
-            "label": "Respiratory Rate",
-            "value": "18 breaths/min"
-          },
-          {
-            "label": "Oxygen Saturation",
-            "value": "98% on room air"
-          }
-        ]
-      },
-      {
-        "id": "examination-01",
-        "title": "Examination 1",
-        "image": "/patients/case-02/examination/examination-01.png",
-        "description": "Focused dental examination image."
-      }
-    ]
-  },
-  "conversation": {
-    "openingGreeting": "Hello.",
-    "scripted": [
-      {
-        "id": "greeting-1",
-        "intent": "greeting",
-        "triggers": [
-          "hello",
-          "hi",
-          "good morning",
-          "good afternoon"
-        ],
-        "response": "Hello.",
-        "requiredFactsCovered": [],
-        "checklistItemId": "greeting"
-      },
-      {
-        "id": "chief_complaint-2",
-        "intent": "chief_complaint",
-        "triggers": [
-          "what brings",
-          "why are you here",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "My upper tooth has been throbbing, and my cheek feels hot.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "chief_complaint-3",
-        "intent": "chief_complaint",
-        "triggers": [
-          "why are you here",
-          "what brings",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "My upper tooth has been throbbing, and my cheek feels hot.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "duration-4",
-        "intent": "duration",
-        "triggers": [
-          "how long",
-          "duration",
-          "how many days",
-          "how many weeks",
-          "for how long"
-        ],
-        "response": "It became intense last night.",
-        "requiredFactsCovered": [
-          "duration"
-        ],
-        "checklistItemId": "duration"
-      },
-      {
-        "id": "onset-5",
-        "intent": "onset",
-        "triggers": [
-          "when did it start",
-          "when started",
-          "onset",
-          "first notice",
-          "begin"
-        ],
-        "response": "It became intense last night.",
-        "requiredFactsCovered": [
-          "onset"
-        ],
-        "checklistItemId": "onset"
-      },
-      {
-        "id": "thermal_sensitivity-6",
-        "intent": "thermal_sensitivity",
-        "triggers": [
-          "cold",
-          "hot",
-          "temperature",
-          "sensitive",
-          "sensitivity",
-          "thermal"
-        ],
-        "response": "Cold water makes it ache for a long time.",
-        "requiredFactsCovered": [
-          "thermal_sensitivity"
-        ],
-        "checklistItemId": "thermal-sensitivity"
-      },
-      {
-        "id": "biting_pain-7",
-        "intent": "biting_pain",
-        "triggers": [
-          "bite",
-          "biting",
-          "chew",
-          "chewing",
-          "pressure"
-        ],
-        "response": "Biting on that tooth makes the pain shoot up.",
-        "requiredFactsCovered": [
-          "biting_pain"
-        ],
-        "checklistItemId": "biting-pain"
-      },
-      {
-        "id": "swelling-8",
-        "intent": "swelling",
-        "triggers": [
-          "swelling",
-          "swollen",
-          "cheek",
-          "face",
-          "jaw swelling"
-        ],
-        "response": "My cheek started swelling this morning.",
-        "requiredFactsCovered": [
-          "swelling"
-        ],
-        "checklistItemId": "swelling"
-      },
-      {
-        "id": "drainage-9",
-        "intent": "drainage",
-        "triggers": [
-          "taste",
-          "drainage",
-          "pus",
-          "bad taste",
-          "discharge"
-        ],
-        "response": "I have a bad taste in my mouth sometimes.",
-        "requiredFactsCovered": [
-          "drainage"
-        ],
-        "checklistItemId": "drainage"
-      },
-      {
-        "id": "medications-10",
-        "intent": "medications",
-        "triggers": [
-          "medication",
-          "medicine",
-          "ibuprofen",
-          "acetaminophen",
-          "painkiller",
-          "antibiotic",
-          "taken"
-        ],
-        "response": "I took acetaminophen, but it only dulled the pain.",
-        "requiredFactsCovered": [
-          "medications"
-        ],
-        "checklistItemId": "medications"
-      },
-      {
-        "id": "allergies-11",
-        "intent": "allergies",
-        "triggers": [
-          "allerg",
-          "allergy",
-          "allergies",
-          "penicillin"
-        ],
-        "response": "I am not allergic to penicillin.",
-        "requiredFactsCovered": [
-          "allergies"
-        ],
-        "checklistItemId": "allergies"
-      },
-      {
-        "id": "airway-12",
-        "intent": "airway",
-        "triggers": [
-          "breathing",
-          "swallow",
-          "swallowing",
-          "lying flat",
-          "airway",
-          "trouble breathing",
-          "trouble swallowing"
-        ],
-        "response": "I do not have trouble breathing or swallowing.",
-        "requiredFactsCovered": [
-          "airway"
-        ],
-        "checklistItemId": "airway"
-      },
-      {
-        "id": "examination-findings",
-        "intent": "examination",
-        "triggers": [
-          "examination",
-          "exam",
-          "look",
-          "see",
-          "image",
-          "xray",
-          "x-ray",
-          "radiograph",
-          "clinical findings",
-          "findings"
-        ],
-        "response": "Focused exam image available for the painful upper tooth area.",
-        "requiredFactsCovered": [
-          "examinationFindings"
-        ],
-        "checklistItemId": "examination-findings"
-      },
-      {
-        "id": "direct-diagnosis",
-        "intent": "diagnosis",
-        "triggers": [
-          "diagnosis",
-          "diagnose",
-          "what is it",
-          "what do you think it is",
-          "differential",
-          "impression"
-        ],
-        "response": "The working diagnosis is Acute apical abscess associated with symptomatic tooth pain.",
-        "requiredFactsCovered": [
-          "diagnosis"
-        ],
-        "checklistItemId": "diagnosis"
-      },
-      {
-        "id": "pain_character-standard",
-        "intent": "pain_character",
-        "triggers": [
-          "pain",
-          "hurt",
-          "ache",
-          "severity",
-          "scale",
-          "rate"
-        ],
-        "response": "Throbbing upper tooth pain rated seven out of ten.",
-        "requiredFactsCovered": [
-          "pain"
-        ],
-        "checklistItemId": "pain-character"
-      },
-      {
-        "id": "systemic_symptoms-standard",
-        "intent": "systemic_symptoms",
-        "triggers": [
-          "fever",
-          "chills",
-          "temperature",
-          "systemic",
-          "feel sick"
-        ],
-        "response": "Feels run down but has not noticed fever.",
-        "requiredFactsCovered": [
-          "systemicSymptoms"
-        ],
-        "checklistItemId": "systemic-symptoms"
-      }
-    ]
-  },
-  "patientChecklist": [
-    {
-      "id": "greeting",
-      "label": "Opened the encounter respectfully",
-      "triggers": [
-        "hello",
-        "hi",
-        "good morning",
-        "good afternoon"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "chief-complaint",
-      "label": "Asked what brought the patient in",
-      "triggers": [
-        "what brings",
-        "why are you here",
-        "main problem",
-        "chief complaint",
-        "what is bothering you"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "duration",
-      "label": "Asked how long symptoms have been present",
-      "triggers": [
-        "how long",
-        "duration",
-        "how many days",
-        "how many weeks",
-        "for how long"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "onset",
-      "label": "Asked when symptoms started",
-      "triggers": [
-        "when did it start",
-        "when started",
-        "onset",
-        "first notice",
-        "begin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "thermal-sensitivity",
-      "label": "Asked about pain with hot or cold",
-      "triggers": [
-        "cold",
-        "hot",
-        "temperature",
-        "sensitive",
-        "sensitivity",
-        "thermal"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "biting-pain",
-      "label": "Asked about biting, chewing, or tapping pain",
-      "triggers": [
-        "bite",
-        "biting",
-        "chew",
-        "chewing",
-        "pressure"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "swelling",
-      "label": "Asked about swelling or spread",
-      "triggers": [
-        "swelling",
-        "swollen",
-        "cheek",
-        "face",
-        "jaw swelling"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "drainage",
-      "label": "Asked about drainage, pus, or bad taste",
-      "triggers": [
-        "taste",
-        "drainage",
-        "pus",
-        "bad taste",
-        "discharge"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medications",
-      "label": "Asked about home medications or pain relief tried",
-      "triggers": [
-        "medication",
-        "medicine",
-        "ibuprofen",
-        "acetaminophen",
-        "painkiller",
-        "antibiotic",
-        "taken"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "allergies",
-      "label": "Asked about medication allergies",
-      "triggers": [
-        "allerg",
-        "allergy",
-        "allergies",
-        "penicillin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "airway",
-      "label": "Asked about airway, breathing, swallowing, or lying flat",
-      "triggers": [
-        "breathing",
-        "swallow",
-        "swallowing",
-        "lying flat",
-        "airway",
-        "trouble breathing",
-        "trouble swallowing"
-      ],
-      "weight": 1,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "examination-findings",
-      "label": "Reviewed available examination findings",
-      "triggers": [
-        "examination",
-        "exam",
-        "look",
-        "see",
-        "image",
-        "xray",
-        "x-ray",
-        "radiograph",
-        "clinical findings",
-        "findings"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    },
-    {
-      "id": "pain-character",
-      "label": "Asked about pain severity or character",
-      "triggers": [
-        "pain",
-        "hurt",
-        "ache",
-        "severity",
-        "scale",
-        "rate"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "systemic-symptoms",
-      "label": "Asked about fever, chills, or systemic symptoms",
-      "triggers": [
-        "fever",
-        "chills",
-        "temperature",
-        "systemic",
-        "feel sick"
-      ],
-      "weight": 1,
-      "domain": "history"
-    }
+  "metadata": {"schemaVersion":"1.0","id":"case-02","estimatedTime":"16 min","urgency":"Emergency","status":"not-started","score":null,"chiefComplaint":"I have severe pain in my upper-right tooth, I feel feverish, weak, and sick, and it has gotten much worse.","title":"Upper-Right Odontogenic Abscess with Cellulitis and Systemic Infection"},
+  "patient": {"name":"Marcus Lee","age":21,"sex":"Male"},
+  "voicePreference": {"provider":"navigator","voiceId":"am_liam","speed":1.04},
+  "assets": {"rest":"/patients/case-02/case-02-marcus-lee-v3.png","talking":"/patients/case-02/talking-v3.mp4","examinations":[
+    {"id":"vital-signs","title":"Vital Signs (on arrival)","type":"vital-signs","findings":[{"label":"Temperature","value":"38.4°C (101.1°F)"},{"label":"Heart Rate","value":"108 bpm"},{"label":"Blood Pressure","value":"132/80 mmHg"},{"label":"Respiratory Rate","value":"18 breaths/min"},{"label":"Oxygen Saturation","value":"98% on room air"}]},
+    {"id":"oral-examination","title":"Oral and Facial Examination","type":"clinical-findings","findings":[{"label":"Upper-right gingiva","value":"Erythematous, swollen, and tender"},{"label":"Involved upper-right molar","value":"Markedly tender to touch and percussion"},{"label":"Cheek","value":"Increasing right cheek swelling"},{"label":"Mouth opening","value":"Uncomfortable but possible"},{"label":"Voice and secretions","value":"Normal voice; no drooling"},{"label":"Airway and breathing","value":"No airway distress; non-labored breathing"},{"label":"Cardiovascular","value":"Mild tachycardia"},{"label":"Dentition","value":"Poor dentition with no recent dental care"}]},
+    {"id":"laboratory-results","title":"Laboratory Results","type":"diagnostic-results","findings":[{"label":"WBC","value":"14.8 ×10⁹/L"},{"label":"Differential","value":"Neutrophil predominant leukocytosis"},{"label":"Lactate","value":"Normal"},{"label":"Basic metabolic panel","value":"Within normal limits"}]},
+    {"id":"ct-face","title":"CT Face with IV Contrast","type":"diagnostic-results","findings":[{"label":"Dental source","value":"Periapical abscess of the upper-right molar"},{"label":"Associated finding","value":"Surrounding facial cellulitis"},{"label":"Deep spaces","value":"No deep-space involvement"}]},
+    {"id":"examination-01","title":"Focused Dental Examination Image","image":"/patients/case-02/examination/examination-01.png","description":"Focused upper-right dental examination image."}
+  ]},
+  "conversation": {"openingGreeting":"Hello... I feel really sick.","scripted":[
+    {"id":"c2-greeting","intent":"greeting","triggers":["hello","hi","good morning","good afternoon"],"response":"Hello... I feel really sick.","requiredFactsCovered":[],"checklistItemId":"greeting"},
+    {"id":"c2-chief","intent":"chief_complaint","triggers":["what brings you in","why are you here","chief complaint"],"response":"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.","requiredFactsCovered":["chief_complaint"],"checklistItemId":"chief-complaint"},
+    {"id":"c2-duration","intent":"duration","triggers":["how long has this been going on","how many days","duration"],"response":"It has been getting worse for seven days.","requiredFactsCovered":["duration"],"checklistItemId":"duration"},
+    {"id":"c2-location","intent":"location","triggers":["where is the pain","which tooth","what side"],"response":"It is the back tooth on the upper-right side.","requiredFactsCovered":["location"],"checklistItemId":"location"},
+    {"id":"c2-current-pain","intent":"current_pain","triggers":["is the pain constant now","pain all the time","does the pain stop"],"response":"It is constant now, severe and throbbing, about eight out of ten.","requiredFactsCovered":["current_pain"],"checklistItemId":"pain-character"},
+    {"id":"c2-historical-thermal","intent":"thermal_history","triggers":["did hot or cold bother it earlier","hot or cold","cold earlier"],"response":"Earlier in the week, hot and cold triggered it. Now it hurts constantly.","requiredFactsCovered":["thermal_history"],"checklistItemId":"thermal-sensitivity"},
+    {"id":"c2-biting","intent":"biting_pain","triggers":["hurt to chew","chewing","biting","touch the tooth","tap the tooth"],"response":"Yes. Chewing hurts, and now I can barely touch the tooth.","requiredFactsCovered":["biting_pain"],"checklistItemId":"biting-pain"},
+    {"id":"c2-swelling","intent":"facial_swelling","triggers":["cheek swelling","facial swelling","is your face swollen"],"response":"Yes. My right cheek has become more swollen over about the last day.","requiredFactsCovered":["swelling"],"checklistItemId":"swelling"},
+    {"id":"c2-fever","intent":"fever","triggers":["have you had a fever","do you have a fever","fever"],"response":"Yes. I have felt feverish and hot.","requiredFactsCovered":["fever"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c2-temperature","intent":"temperature_checked","triggers":["checked your temperature","measure your temperature","thermometer"],"response":"No, I did not check it myself.","requiredFactsCovered":["temperature_checked"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c2-chills","intent":"chills","triggers":["any chills","chills"],"response":"Yes, I have had chills.","requiredFactsCovered":["chills"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c2-systemic","intent":"systemic_illness","triggers":["feel weak or sick","weakness","fatigue","feel ill"],"response":"I feel weak, tired, and sick.","requiredFactsCovered":["systemic_illness"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c2-medication","intent":"medications","triggers":["what medication did you take","what medicine","ibuprofen","motrin","advil"],"response":"I take ibuprofen, 400 milligrams as needed, about every six hours.","requiredFactsCovered":["medications"],"checklistItemId":"medications"},
+    {"id":"c2-allergy","intent":"allergies","triggers":["allergic to penicillin","medication allergies","allergies"],"response":"I have no known drug allergies, and I am not allergic to penicillin.","requiredFactsCovered":["allergies"],"checklistItemId":"allergies"},
+    {"id":"c2-breathing","intent":"breathing","triggers":["trouble breathing","difficulty breathing","short of breath"],"response":"No, I am not having trouble breathing.","requiredFactsCovered":["airway_negative"],"checklistItemId":"airway"},
+    {"id":"c2-liquids","intent":"swallowing_liquids","triggers":["swallow liquids","swallow water","drink liquids"],"response":"Yes, I can swallow liquids.","requiredFactsCovered":["airway_negative"],"checklistItemId":"airway"},
+    {"id":"c2-voice","intent":"voice_change","triggers":["voice changed","voice change","muffled voice"],"response":"No, my voice has not changed.","requiredFactsCovered":["airway_negative"],"checklistItemId":"airway"},
+    {"id":"c2-drooling","intent":"drooling","triggers":["are you drooling","drooling","saliva"],"response":"No, I am not drooling.","requiredFactsCovered":["airway_negative"],"checklistItemId":"airway"},
+    {"id":"c2-mouth-opening","intent":"mouth_opening","triggers":["open your mouth","mouth opening","trismus"],"response":"I can open my mouth, but it is uncomfortable.","requiredFactsCovered":["mouth_opening"],"checklistItemId":"airway"},
+    {"id":"c2-access","intent":"dental_access","triggers":["last saw a dentist","lost medicaid","dental care","insurance"],"response":"I have not seen a dentist since I lost Medicaid last year.","requiredFactsCovered":["access_barrier"],"checklistItemId":"dental-history"}
+  ]},
+  "patientChecklist":[
+    {"id":"greeting","label":"Opened the encounter respectfully","triggers":["hello","hi","good morning","good afternoon"],"weight":1,"domain":"communication"},
+    {"id":"chief-complaint","label":"Asked what brought the patient in","triggers":["what brings","why are you here","chief complaint"],"weight":1,"domain":"history"},
+    {"id":"duration","label":"Asked about the seven-day progression","triggers":["how long","how many days","duration"],"weight":1,"domain":"history"},
+    {"id":"location","label":"Asked which tooth and side hurts","triggers":["where","which tooth","what side"],"weight":1,"domain":"history"},
+    {"id":"thermal-sensitivity","label":"Asked about earlier hot or cold provocation","triggers":["cold","hot","thermal"],"weight":1,"domain":"history"},
+    {"id":"biting-pain","label":"Asked about chewing, touching, or percussion pain","triggers":["bite","chew","touch","tap","percussion"],"weight":1,"domain":"history"},
+    {"id":"swelling","label":"Asked about facial swelling and progression","triggers":["swelling","swollen","cheek","face"],"weight":1,"domain":"history"},
+    {"id":"medications","label":"Asked about ibuprofen or home medication use","triggers":["medication","medicine","ibuprofen","motrin","advil"],"weight":1,"domain":"history"},
+    {"id":"allergies","label":"Asked about medication or penicillin allergy","triggers":["allerg","penicillin"],"weight":1,"domain":"history"},
+    {"id":"airway","label":"Asked targeted breathing, swallowing, voice, drooling, or mouth-opening questions","triggers":["breathing","swallow","voice","drool","open your mouth"],"weight":1,"domain":"history","critical":true},
+    {"id":"systemic-symptoms","label":"Asked about fever, chills, weakness, fatigue, or systemic illness","triggers":["fever","chills","weak","fatigue","feel sick"],"weight":1,"domain":"history"},
+    {"id":"dental-history","label":"Asked about dental care and Medicaid access","triggers":["dentist","dental care","medicaid","insurance"],"weight":1,"domain":"history"},
+    {"id":"pain-character","label":"Asked about current pain character and severity","triggers":["pain","constant","throbbing","severity","scale"],"weight":1,"domain":"history"},
+    {"id":"examination-findings","label":"Reviewed available examination or diagnostic results","triggers":["examination","exam","results","labs","ct"],"weight":1,"domain":"examination"}
   ],
-  "clinicalChecklist": [
-    {
-      "id": "clinical-1",
-      "label": "Characterizes thermal and biting symptoms",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-2",
-      "label": "Screens for spreading infection red flags",
-      "weight": 3,
-      "domain": "history",
-      "critical": true
-    },
-    {
-      "id": "clinical-3",
-      "label": "Asks about swelling, drainage, and bad taste",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-4",
-      "label": "Reviews analgesics, antibiotics, and allergies",
-      "weight": 2,
-      "domain": "management"
-    },
-    {
-      "id": "clinical-5",
-      "label": "Identifies likely acute apical abscess and urgency",
-      "weight": 3,
-      "domain": "reasoning",
-      "critical": true
-    }
+  "clinicalChecklist":[
+    {"id":"clinical-1","label":"Characterizes earlier thermal symptoms and current constant chewing pain","weight":2,"domain":"history"},
+    {"id":"clinical-2","label":"Elicits fever, chills, weakness, fatigue, swelling, and airway red flags","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-3","label":"Reviews structured oral, facial, vital-sign, laboratory, and CT findings","weight":2,"domain":"examination"},
+    {"id":"clinical-4","label":"Reviews medication, antibiotics, allergies, and source-control needs","weight":2,"domain":"management"},
+    {"id":"clinical-5","label":"Recognizes systemic odontogenic infection with cellulitis as an emergency","weight":3,"domain":"reasoning","critical":true}
   ],
   "supportingInfo": {
-    "history": {
-      "onset": "The pain became intense last night.",
-      "duration": "Symptoms worsened over the last day.",
-      "pain": "Throbbing upper tooth pain rated seven out of ten.",
-      "medications": "Acetaminophen only dulled the pain.",
-      "allergies": "No penicillin allergy reported.",
-      "medicalHistory": "Feels run down but has not noticed fever.",
-      "dentalHistory": "No prior treatment on the painful tooth.",
-      "socialHistory": "No difficulty breathing or swallowing."
-    },
-    "hpiFacts": [
-      "Upper tooth throbbing became intense last night.",
-      "Cheek feels swollen and hot.",
-      "Cold causes lingering ache.",
-      "Biting produces sharp pain.",
-      "Bad taste occurs intermittently.",
-      "Acetaminophen only dulled the pain.",
-      "No breathing or swallowing difficulty."
+    "patientFacts":[
+      {"id":"c2.duration","topic":"onset_duration","text":"The upper-right dental pain has worsened over seven days.","questionIntents":["duration"]},
+      {"id":"c2.location","topic":"location","text":"The painful tooth is an upper-right back molar.","questionIntents":["location"]},
+      {"id":"c2.current-pain","topic":"pain","text":"The pain is now constant, severe, throbbing, and 8/10.","questionIntents":["current_pain","pain"]},
+      {"id":"c2.thermal-history","topic":"pain","text":"Earlier in the illness, hot and cold triggered the pain; it has now become constant.","questionIntents":["thermal"]},
+      {"id":"c2.biting","topic":"pain","text":"Chewing is painful, and the involved tooth is extremely painful to touch.","questionIntents":["biting"]},
+      {"id":"c2.swelling","topic":"swelling","text":"The right cheek swelling has increased over approximately 24 hours.","questionIntents":["facial_swelling","swelling_progression"]},
+      {"id":"c2.fever","topic":"medical_history","text":"The patient has felt feverish and hot.","questionIntents":["fever"]},
+      {"id":"c2.temperature-unknown","topic":"medical_history","text":"The patient did not measure a temperature personally.","questionIntents":["temperature_checked"]},
+      {"id":"c2.chills","topic":"medical_history","text":"The patient has had chills.","questionIntents":["chills"]},
+      {"id":"c2.weak","topic":"medical_history","text":"The patient feels weak, fatigued, and systemically ill.","questionIntents":["systemic_illness"]},
+      {"id":"c2.med","topic":"medications","text":"The patient takes ibuprofen 400 mg as needed, approximately every six hours.","questionIntents":["medications"]},
+      {"id":"c2.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
+      {"id":"c2.breathing-negative","topic":"medical_history","text":"The patient has no difficulty breathing.","questionIntents":["breathing"],"canonicalFactIds":["c2.airway-negative"]},
+      {"id":"c2.liquids-positive","topic":"medical_history","text":"The patient can swallow liquids.","questionIntents":["swallowing_liquids"],"canonicalFactIds":["c2.airway-negative"]},
+      {"id":"c2.voice-negative","topic":"medical_history","text":"The patient's voice has not changed.","questionIntents":["voice_change"],"canonicalFactIds":["c2.airway-negative"]},
+      {"id":"c2.drooling-negative","topic":"medical_history","text":"The patient is not drooling.","questionIntents":["drooling"],"canonicalFactIds":["c2.airway-negative"]},
+      {"id":"c2.mouth-opening","topic":"medical_history","text":"The patient can open the mouth, although it is uncomfortable.","questionIntents":["mouth_opening"]},
+      {"id":"c2.access","topic":"dental_history","text":"The patient has not seen a dentist since losing Medicaid last year.","questionIntents":["dental_access"]}
     ],
-    "redFlags": [
-      "Facial swelling",
-      "Possible drainage/bad taste",
-      "Feeling run down",
-      "Escalation needed if fever, dysphagia, dyspnea, or spreading swelling develops"
-    ],
-    "examinationFindings": [
-      "Focused exam image available for the painful upper tooth area.",
-      "History supports odontogenic infection with localized facial swelling.",
-      "No reported trismus, dyspnea, or dysphagia."
-    ],
-    "expectedQuestions": [
-      "Which tooth hurts and when did it become severe?",
-      "Is there swelling, drainage, or a bad taste?",
-      "Does cold, heat, or biting change the pain?",
-      "Any fever, chills, trouble breathing, or trouble swallowing?",
-      "What pain medicine have you taken?",
-      "Any antibiotic use or medication allergies?",
-      "Has this tooth had prior treatment?"
-    ],
-    "diagnosis": "Acute apical abscess associated with symptomatic tooth pain.",
-    "differentialDiagnosis": [
-      "Acute apical abscess",
-      "Symptomatic irreversible pulpitis with apical periodontitis",
-      "Periodontal abscess",
-      "Maxillary sinus-related dental pain"
-    ],
-    "managementExpectations": [
-      "Assess infection spread and systemic involvement.",
-      "Plan urgent dental evaluation for source control.",
-      "Consider antibiotics only when swelling/systemic involvement supports use.",
-      "Give return precautions for fever, dysphagia, dyspnea, or worsening swelling."
-    ],
-    "learningObjectives": [
-      "Differentiate pulpal and periapical symptoms.",
-      "Assess swelling, drainage, and systemic involvement.",
-      "Ask targeted medication and allergy questions."
-    ],
-    "reportData": {
-      "keyFindings": [
-        "Throbbing upper tooth pain",
-        "Facial swelling",
-        "Lingering cold pain",
-        "Biting pain"
-      ],
-      "criticalMisses": [
-        "No red flag screen",
-        "No allergy/medication review"
-      ],
-      "idealSummary": "Patient has urgent odontogenic infection symptoms with localized facial swelling and no current airway symptoms."
-    },
-    "evaluation": {
-      "patientChecklistWeight": 0.6,
-      "clinicalChecklistWeight": 0.4,
-      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    },
-    "requiredInvestigations": [
-      "Review focused dental examination image for the painful upper tooth area."
-    ],
-    "treatmentExpectations": [
-      "Plan urgent dental evaluation for source control.",
-      "Consider antibiotics only when swelling/systemic involvement supports use."
-    ],
-    "referralExpectations": [
-      "Assess infection spread and systemic involvement."
-    ],
-    "safetyNettingExpectations": [
-      "Give return precautions for fever, dysphagia, dyspnea, or worsening swelling."
-    ]
+    "history":{"onset":"Pain started with hot and cold provocation and worsened throughout the week.","duration":"Seven days of worsening upper-right dental pain; cheek swelling and systemic symptoms increased over approximately 24 hours.","pain":"Initially hot/cold-provoked, now constant, severe, throbbing, and 8/10 with painful chewing and touch.","medications":"Ibuprofen 400 mg as needed approximately every six hours.","allergies":"No known drug allergies and no penicillin allergy.","medicalHistory":"Otherwise healthy; no known opioid-use history and no ibuprofen contraindication.","dentalHistory":"Poor dentition, untreated cavities, and no recent dental care since losing Medicaid.","socialHistory":"Smokes approximately half a pack per day; rare alcohol use; no illicit drug use."},
+    "hpiFacts":["Seven days of worsening upper-right molar pain.","Earlier hot/cold provocation progressed to constant severe throbbing 8/10 pain.","Chewing and touching the tooth are very painful.","Increasing right cheek swelling over approximately 24 hours.","Fever, chills, fatigue, weakness, and systemic illness are present.","Mouth opening is uncomfortable but possible.","No drooling, voice change, dyspnea, or inability to swallow liquids."],
+    "redFlags":["Fever and mild tachycardia","Neutrophilic leukocytosis","Facial cellulitis","Systemic illness","Risk of progression despite no current deep-space involvement"],
+    "examinationFindings":["Upper-right gingival erythema, swelling, and tenderness","Marked upper-right molar touch and percussion tenderness","Increasing right cheek swelling","Uncomfortable but possible mouth opening","Normal voice, no drooling, and no airway distress","Temperature 38.4°C and heart rate 108","WBC 14.8 with neutrophil predominance","Normal lactate and BMP","CT-confirmed upper-right periapical abscess with facial cellulitis and no deep-space involvement"],
+    "expectedQuestions":["How has the pain changed over seven days?","Did hot or cold trigger it earlier, and is it constant now?","Does chewing or touching the tooth hurt?","Have you had fever, chills, weakness, or fatigue?","Has the cheek swelling increased?","Can you breathe, swallow liquids, speak normally, and open your mouth?","What medication have you taken and do you have allergies?","When did you last receive dental care?"],
+    "diagnosis":"Upper-right odontogenic periapical abscess with facial cellulitis and systemic infection.",
+    "differentialDiagnosis":["Facial cellulitis","Early deep-space infection","Osteomyelitis"],
+    "managementExpectations":["Obtain CBC, BMP, lactate, and CT imaging.","Provide IV fluids, analgesia, and antipyretic treatment.","Start IV ampicillin-sulbactam or a faculty-approved equivalent.","Consult OMFS or an appropriate specialist and consider admission.","Arrange definitive dental treatment and source control within approximately 72 hours.","Explain that antibiotics alone do not definitively treat the tooth."],
+    "requiredInvestigations":["CBC with differential","Basic metabolic panel","Lactate","CT face with IV contrast"],
+    "treatmentExpectations":["IV fluids, analgesia, and antipyretic therapy.","IV ampicillin-sulbactam or faculty-approved equivalent.","Definitive dental source control within approximately 72 hours."],
+    "referralExpectations":["OMFS or appropriate specialist consultation.","Consider hospital admission based on the emergency systemic-infection context."],
+    "safetyNettingExpectations":["Do not treat antibiotics alone as definitive dental care.","Escalate for worsening swelling, swallowing difficulty, breathing difficulty, drooling, voice change, or other deep-space signs."],
+    "learningObjectives":["Recognize cellulitis and systemic infection in an odontogenic abscess.","Interpret structured laboratory and CT results without conflating viewing with recognition.","Plan emergency IV treatment, consultation, possible admission, and timely source control."],
+    "reportData":{"keyFindings":["Seven-day upper-right dental pain progression","Current constant severe throbbing 8/10 pain","Fever, chills, fatigue, weakness, and facial swelling","Temperature 38.4°C and heart rate 108","WBC 14.8 with neutrophilic leukocytosis","Normal lactate and BMP","CT-confirmed periapical abscess with facial cellulitis and no deep-space involvement"],"criticalMisses":["Failure to recognize systemic infection or emergency severity","Failure to assess airway and deep-space red flags","Failure to review laboratory or CT results","Routine discharge with oral antibiotics alone","Failure to arrange specialist input and definitive source control"],"idealSummary":"A 21-year-old with seven days of worsening upper-right molar pain that progressed from thermal provocation to constant severe throbbing 8/10 pain, with increasing cheek swelling, fever, chills, fatigue, weakness, temperature 38.4°C, heart rate 108, WBC 14.8 with neutrophilia, and CT-confirmed periapical abscess with facial cellulitis but no deep-space involvement, requiring emergency IV treatment, specialist consultation, possible admission, and definitive dental source control."},
+    "evaluation":{"patientChecklistWeight":0.6,"clinicalChecklistWeight":0.4,"totalScore":"weightedAverage(patientChecklist, clinicalChecklist)"}
   }
 }

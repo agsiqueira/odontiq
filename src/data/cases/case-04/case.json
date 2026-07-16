@@ -1,693 +1,110 @@
 {
-  "metadata": {
-    "schemaVersion": "1.0",
-    "id": "case-04",
-    "estimatedTime": "12 min",
-    "urgency": "Routine",
-    "status": "completed",
-    "score": 72,
-    "chiefComplaint": "It really hurts when I bite down, but my face does not look swollen.",
-    "title": "Pain When Biting After a Large Restoration"
-  },
-  "patient": {
-    "name": "Noah Patel",
-    "age": 38,
-    "sex": "Male"
-  },
-  "voicePreference": {
-    "provider": "navigator",
-    "voiceId": "am_michael",
-    "speed": 1.1
-  },
-  "assets": {
-    "rest": "/patients/case-04/case-04-noah-patel-v3.png",
-    "talking": "/patients/case-04/talking-v3.mp4",
-    "examinations": [
-      {
-        "id": "vital-signs",
-        "title": "Vital Signs",
-        "type": "vital-signs",
-        "findings": [
-          {
-            "label": "Temperature",
-            "value": "36.7°C (98.1°F)"
-          },
-          {
-            "label": "Heart Rate",
-            "value": "84 bpm"
-          },
-          {
-            "label": "Blood Pressure",
-            "value": "124/78 mmHg"
-          },
-          {
-            "label": "Respiratory Rate",
-            "value": "14 breaths/min"
-          },
-          {
-            "label": "Oxygen Saturation",
-            "value": "99% on room air"
-          }
-        ]
-      },
-      {
-        "id": "examination-01",
-        "title": "Examination 1",
-        "image": "/patients/case-04/examination/examination-01.png",
-        "description": "Bite-related pain examination image."
-      }
-    ]
-  },
-  "conversation": {
-    "openingGreeting": "Hello.",
-    "scripted": [
-      {
-        "id": "greeting-1",
-        "intent": "greeting",
-        "triggers": [
-          "hello",
-          "hi",
-          "good morning",
-          "good afternoon"
-        ],
-        "response": "Hello.",
-        "requiredFactsCovered": [],
-        "checklistItemId": "greeting"
-      },
-      {
-        "id": "chief_complaint-2",
-        "intent": "chief_complaint",
-        "triggers": [
-          "what brings",
-          "why are you here",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "It hurts when I bite down, but my face is not swollen.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "chief_complaint-3",
-        "intent": "chief_complaint",
-        "triggers": [
-          "why are you here",
-          "what brings",
-          "main problem",
-          "chief complaint",
-          "what is bothering you"
-        ],
-        "response": "It hurts when I bite down, but my face is not swollen.",
-        "requiredFactsCovered": [
-          "chief_complaint"
-        ],
-        "checklistItemId": "chief-complaint"
-      },
-      {
-        "id": "duration-4",
-        "intent": "duration",
-        "triggers": [
-          "how long",
-          "duration",
-          "how many days",
-          "how many weeks",
-          "for how long"
-        ],
-        "response": "It started after I bit something hard last week.",
-        "requiredFactsCovered": [
-          "duration"
-        ],
-        "checklistItemId": "duration"
-      },
-      {
-        "id": "onset-5",
-        "intent": "onset",
-        "triggers": [
-          "when did it start",
-          "when started",
-          "onset",
-          "first notice",
-          "begin"
-        ],
-        "response": "It started after I bit something hard last week.",
-        "requiredFactsCovered": [
-          "onset"
-        ],
-        "checklistItemId": "onset"
-      },
-      {
-        "id": "biting_pain-6",
-        "intent": "biting_pain",
-        "triggers": [
-          "bite",
-          "biting",
-          "chew",
-          "chewing",
-          "pressure"
-        ],
-        "response": "It is a quick, sharp pain when pressure hits the tooth.",
-        "requiredFactsCovered": [
-          "biting_pain"
-        ],
-        "checklistItemId": "biting-pain"
-      },
-      {
-        "id": "thermal_sensitivity-7",
-        "intent": "thermal_sensitivity",
-        "triggers": [
-          "cold",
-          "hot",
-          "temperature",
-          "sensitive",
-          "sensitivity",
-          "thermal"
-        ],
-        "response": "Cold does not bother it much.",
-        "requiredFactsCovered": [
-          "thermal_sensitivity"
-        ],
-        "checklistItemId": "thermal-sensitivity"
-      },
-      {
-        "id": "swelling-8",
-        "intent": "swelling",
-        "triggers": [
-          "swelling",
-          "swollen",
-          "cheek",
-          "face",
-          "jaw swelling"
-        ],
-        "response": "I do not have fever or swelling.",
-        "requiredFactsCovered": [
-          "swelling"
-        ],
-        "checklistItemId": "swelling"
-      },
-      {
-        "id": "dental_history-9",
-        "intent": "dental_history",
-        "triggers": [
-          "filling",
-          "crown",
-          "dental history",
-          "previous treatment",
-          "cavity"
-        ],
-        "response": "I had a large filling on that tooth years ago.",
-        "requiredFactsCovered": [
-          "dental_history"
-        ],
-        "checklistItemId": "dental-history"
-      },
-      {
-        "id": "bruxism-10",
-        "intent": "bruxism",
-        "triggers": [
-          "grind",
-          "grinding",
-          "clench",
-          "clenching"
-        ],
-        "response": "I do grind my teeth at night sometimes.",
-        "requiredFactsCovered": [
-          "bruxism"
-        ],
-        "checklistItemId": "bruxism"
-      },
-      {
-        "id": "drainage-11",
-        "intent": "drainage",
-        "triggers": [
-          "drainage",
-          "taste",
-          "pus",
-          "bad taste",
-          "discharge"
-        ],
-        "response": "I have not noticed drainage or a bad taste.",
-        "requiredFactsCovered": [
-          "drainage"
-        ],
-        "checklistItemId": "drainage"
-      },
-      {
-        "id": "patient_goals-12",
-        "intent": "patient_goals",
-        "triggers": [
-          "save",
-          "lose the tooth",
-          "goal",
-          "worried"
-        ],
-        "response": "I would like to avoid losing the tooth if possible.",
-        "requiredFactsCovered": [
-          "patient_goals"
-        ],
-        "checklistItemId": "patient-goals"
-      },
-      {
-        "id": "examination-findings",
-        "intent": "examination",
-        "triggers": [
-          "examination",
-          "exam",
-          "look",
-          "see",
-          "image",
-          "xray",
-          "x-ray",
-          "radiograph",
-          "clinical findings",
-          "findings"
-        ],
-        "response": "Bite-related examination image available.",
-        "requiredFactsCovered": [
-          "examinationFindings"
-        ],
-        "checklistItemId": "examination-findings"
-      },
-      {
-        "id": "direct-diagnosis",
-        "intent": "diagnosis",
-        "triggers": [
-          "diagnosis",
-          "diagnose",
-          "what is it",
-          "what do you think it is",
-          "differential",
-          "impression"
-        ],
-        "response": "The working diagnosis is Possible cracked tooth or occlusal trauma.",
-        "requiredFactsCovered": [
-          "diagnosis"
-        ],
-        "checklistItemId": "diagnosis"
-      },
-      {
-        "id": "pain_character-standard",
-        "intent": "pain_character",
-        "triggers": [
-          "pain",
-          "hurt",
-          "ache",
-          "severity",
-          "scale",
-          "rate"
-        ],
-        "response": "Quick, sharp pain when pressure hits one tooth.",
-        "requiredFactsCovered": [
-          "pain"
-        ],
-        "checklistItemId": "pain-character"
-      },
-      {
-        "id": "allergies-standard",
-        "intent": "allergies",
-        "triggers": [
-          "allerg",
-          "allergy",
-          "allergies",
-          "penicillin"
-        ],
-        "response": "No allergy information reported.",
-        "requiredFactsCovered": [
-          "allergies"
-        ],
-        "checklistItemId": "allergies"
-      },
-      {
-        "id": "medications-standard",
-        "intent": "medications",
-        "triggers": [
-          "medication",
-          "medicine",
-          "ibuprofen",
-          "acetaminophen",
-          "painkiller",
-          "antibiotic",
-          "taken"
-        ],
-        "response": "Over-the-counter pain medicine is enough unless chewing there.",
-        "requiredFactsCovered": [
-          "medications"
-        ],
-        "checklistItemId": "medications"
-      },
-      {
-        "id": "systemic_symptoms-standard",
-        "intent": "systemic_symptoms",
-        "triggers": [
-          "fever",
-          "chills",
-          "temperature",
-          "systemic",
-          "feel sick"
-        ],
-        "response": "No fever or swelling reported.",
-        "requiredFactsCovered": [
-          "systemicSymptoms"
-        ],
-        "checklistItemId": "systemic-symptoms"
-      }
-    ]
-  },
-  "patientChecklist": [
-    {
-      "id": "greeting",
-      "label": "Opened the encounter respectfully",
-      "triggers": [
-        "hello",
-        "hi",
-        "good morning",
-        "good afternoon"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "chief-complaint",
-      "label": "Asked what brought the patient in",
-      "triggers": [
-        "what brings",
-        "why are you here",
-        "main problem",
-        "chief complaint",
-        "what is bothering you"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "duration",
-      "label": "Asked how long symptoms have been present",
-      "triggers": [
-        "how long",
-        "duration",
-        "how many days",
-        "how many weeks",
-        "for how long"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "onset",
-      "label": "Asked when symptoms started",
-      "triggers": [
-        "when did it start",
-        "when started",
-        "onset",
-        "first notice",
-        "begin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "biting-pain",
-      "label": "Asked about biting, chewing, or tapping pain",
-      "triggers": [
-        "bite",
-        "biting",
-        "chew",
-        "chewing",
-        "pressure"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "thermal-sensitivity",
-      "label": "Asked about pain with hot or cold",
-      "triggers": [
-        "cold",
-        "hot",
-        "temperature",
-        "sensitive",
-        "sensitivity",
-        "thermal"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "swelling",
-      "label": "Asked about swelling or spread",
-      "triggers": [
-        "swelling",
-        "swollen",
-        "cheek",
-        "face",
-        "jaw swelling"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "dental-history",
-      "label": "Asked about prior dental treatment",
-      "triggers": [
-        "filling",
-        "crown",
-        "dental history",
-        "previous treatment",
-        "cavity"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "bruxism",
-      "label": "Asked about grinding or clenching",
-      "triggers": [
-        "grind",
-        "grinding",
-        "clench",
-        "clenching"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "drainage",
-      "label": "Asked about drainage, pus, or bad taste",
-      "triggers": [
-        "drainage",
-        "taste",
-        "pus",
-        "bad taste",
-        "discharge"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "patient-goals",
-      "label": "Asked about patient goals or desire to save the tooth",
-      "triggers": [
-        "save",
-        "lose the tooth",
-        "goal",
-        "worried"
-      ],
-      "weight": 1,
-      "domain": "communication"
-    },
-    {
-      "id": "examination-findings",
-      "label": "Reviewed available examination findings",
-      "triggers": [
-        "examination",
-        "exam",
-        "look",
-        "see",
-        "image",
-        "xray",
-        "x-ray",
-        "radiograph",
-        "clinical findings",
-        "findings"
-      ],
-      "weight": 1,
-      "domain": "examination"
-    },
-    {
-      "id": "pain-character",
-      "label": "Asked about pain severity or character",
-      "triggers": [
-        "pain",
-        "hurt",
-        "ache",
-        "severity",
-        "scale",
-        "rate"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "allergies",
-      "label": "Asked about medication allergies",
-      "triggers": [
-        "allerg",
-        "allergy",
-        "allergies",
-        "penicillin"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "medications",
-      "label": "Asked about home medications or pain relief tried",
-      "triggers": [
-        "medication",
-        "medicine",
-        "ibuprofen",
-        "acetaminophen",
-        "painkiller",
-        "antibiotic",
-        "taken"
-      ],
-      "weight": 1,
-      "domain": "history"
-    },
-    {
-      "id": "systemic-symptoms",
-      "label": "Asked about fever, chills, or systemic symptoms",
-      "triggers": [
-        "fever",
-        "chills",
-        "temperature",
-        "systemic",
-        "feel sick"
-      ],
-      "weight": 1,
-      "domain": "history"
-    }
+  "metadata":{"schemaVersion":"1.0","id":"case-04","estimatedTime":"12 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"My left lower tooth hurts really badly when I bite, and it is hard to chew.","title":"Necrotic Pulp with Acute Apical Periodontitis"},
+  "patient":{"name":"Noah Patel","age":38,"sex":"Male"},
+  "voicePreference":{"provider":"navigator","voiceId":"am_michael","speed":1.1},
+  "assets":{"rest":"/patients/case-04/case-04-noah-patel-v3.png","talking":"/patients/case-04/talking-v3.mp4","examinations":[
+    {"id":"vital-signs","title":"Vital Signs","type":"vital-signs","findings":[{"label":"Temperature","value":"36.7°C (98.1°F)"},{"label":"Heart Rate","value":"84 bpm"},{"label":"Blood Pressure","value":"124/78 mmHg"},{"label":"Respiratory Rate","value":"14 breaths/min"},{"label":"Oxygen Saturation","value":"99% on room air"}]},
+    {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Location and tooth","value":"Left mandibular first molar with a large old filling/deep caries"},{"label":"Cold test","value":"No current response to cold stimulus"},{"label":"Percussion and biting","value":"Marked tenderness to percussion and biting pressure"},{"label":"Gingiva","value":"Mild erythema and tenderness; no swelling and no fluctuance"},{"label":"Drainage","value":"No pus, no purulence, and no sinus tract"},{"label":"Floor of mouth","value":"Soft and not elevated"},{"label":"Airway","value":"Patent with normal voice, no drooling, and no compromise"}]},
+    {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-04/examination/examination-01.png","description":"Left mandibular first molar and surrounding gingiva assessment."}
+  ]},
+  "conversation":{"openingGreeting":"Hello. My left lower tooth hurts really badly when I bite.","scripted":[
+    {"id":"c4-greeting","intent":"greeting","triggers":["hello","hi","good morning","good afternoon"],"response":"Hello.","requiredFactsCovered":[],"checklistItemId":"greeting"},
+    {"id":"c4-chief","intent":"chief_complaint","triggers":["what brings","why are you here","main problem","chief complaint","what is bothering you"],"response":"My left lower back tooth hurts really badly when I bite, and it is hard to chew.","requiredFactsCovered":["chief_complaint"],"checklistItemId":"chief-complaint"},
+    {"id":"c4-location","intent":"location","triggers":["where does it hurt","which tooth","what tooth","what side","upper or lower"],"response":"It is the first big molar on the lower-left side.","requiredFactsCovered":["location"],"checklistItemId":"location"},
+    {"id":"c4-duration","intent":"duration","triggers":["how long","duration","how many days","for how long"],"response":"This returned pain has been getting worse for five days, especially over the last 48 hours.","requiredFactsCovered":["duration"],"checklistItemId":"duration"},
+    {"id":"c4-sequence","intent":"symptom_sequence","triggers":["stop and come back","stopped and returned","went away","came back","pain before","earlier episode"],"response":"The tooth hurt severely about a week ago, then the pain stopped. It returned and has worsened over the last five days.","requiredFactsCovered":["sequence"],"checklistItemId":"onset"},
+    {"id":"c4-onset","intent":"onset","triggers":["how did it start","when did it start","onset","what happened first"],"response":"It hurt badly about a week ago, stopped, and then returned. I think an old filling may have broken or failed.","requiredFactsCovered":["sequence","filling"],"checklistItemId":"onset"},
+    {"id":"c4-hard-object","intent":"hard_object_injury","triggers":["bite something hard","bit something hard","hard food","hard object"],"response":"No, I do not remember biting a hard object. I only think the old filling may have broken or failed.","requiredFactsCovered":["no-hard-object"],"checklistItemId":"onset"},
+    {"id":"c4-current-pain","intent":"current_pain","triggers":["is the pain constant","all the time","does it stop","pain now"],"response":"Yes, the pain is constant now.","requiredFactsCovered":["constant-pain"],"checklistItemId":"pain-character"},
+    {"id":"c4-severity","intent":"pain_severity","triggers":["how bad","pain scale","rate your pain","out of ten","severity"],"response":"It is a seven out of ten.","requiredFactsCovered":["severity"],"checklistItemId":"pain-character"},
+    {"id":"c4-biting","intent":"biting","triggers":["does biting hurt","bite","biting","chew","chewing","tap","tapping"],"response":"Biting, chewing, or tapping that tooth causes sharp, severe pain.","requiredFactsCovered":["biting-pain"],"checklistItemId":"biting-pain"},
+    {"id":"c4-cold-prior","intent":"cold_prior","triggers":["cold hurt before","cold earlier","used to hurt with cold","previous cold pain"],"response":"Cold hurt the tooth earlier in the illness.","requiredFactsCovered":["cold-prior"],"checklistItemId":"thermal-sensitivity"},
+    {"id":"c4-cold-current","intent":"cold_current","triggers":["cold still affect","cold now","currently cold","cold anymore"],"response":"Cold does not cause pain now, although it did earlier.","requiredFactsCovered":["cold-current"],"checklistItemId":"thermal-sensitivity"},
+    {"id":"c4-swelling","intent":"facial_swelling","triggers":["swelling","swollen","face swollen","facial swelling"],"response":"No, I have not had any swelling.","requiredFactsCovered":["no-swelling"],"checklistItemId":"swelling"},
+    {"id":"c4-drainage","intent":"drainage","triggers":["drainage","pus","discharge","bad taste","sinus tract"],"response":"No, I have not noticed pus, drainage, or a bad taste.","requiredFactsCovered":["no-drainage"],"checklistItemId":"drainage"},
+    {"id":"c4-fever","intent":"fever","triggers":["fever","feverish","temperature","chills"],"response":"No, I have not had fever or chills.","requiredFactsCovered":["no-fever"],"checklistItemId":"systemic-symptoms"},
+    {"id":"c4-swallowing","intent":"swallowing","triggers":["trouble swallowing","difficulty swallowing","dysphagia"],"response":"No, I have no trouble swallowing.","requiredFactsCovered":["swallowing"],"checklistItemId":"airway"},
+    {"id":"c4-drooling","intent":"drooling","triggers":["drooling","drool","saliva"],"response":"No, I am not drooling.","requiredFactsCovered":["drooling"],"checklistItemId":"airway"},
+    {"id":"c4-breathing","intent":"breathing","triggers":["trouble breathing","difficulty breathing","short of breath","dyspnea"],"response":"No, I have no trouble breathing.","requiredFactsCovered":["breathing"],"checklistItemId":"airway"},
+    {"id":"c4-allergy","intent":"allergies","triggers":["allergic to penicillin","penicillin allergy","any allergies","medication allergy"],"response":"Yes, I am allergic to penicillin.","requiredFactsCovered":["penicillin-allergy"],"checklistItemId":"allergies"},
+    {"id":"c4-allergy-reaction","intent":"allergy_reaction","triggers":["what reaction","what happens","reaction to penicillin","hives","rash"],"response":"Penicillin gives me hives.","requiredFactsCovered":["hives"],"checklistItemId":"allergy-reaction"},
+    {"id":"c4-medication","intent":"medications","triggers":["what have you taken","pain medicine","pain medication","ibuprofen","advil","motrin"],"response":"I have taken ibuprofen 400 mg as needed, but it has not relieved the pain enough.","requiredFactsCovered":["medications"],"checklistItemId":"medications"},
+    {"id":"c4-dental-history","intent":"dental_history","triggers":["filling","old filling","cavity","dental work","last dentist"],"response":"That lower-left first molar has a large old filling that may have broken. My last dental visit was about five years ago.","requiredFactsCovered":["dental-history"],"checklistItemId":"dental-history"},
+    {"id":"c4-goal","intent":"patient_goal","triggers":["save the tooth","keep the tooth","lose the tooth","want to save","patient goal"],"response":"Yes, I want to save the tooth if possible.","requiredFactsCovered":["patient-goals"],"checklistItemId":"patient-goals"},
+    {"id":"c4-access","intent":"dental_access","triggers":["dental appointment","see a dentist","dental insurance","access","afford"],"response":"I do not have dental insurance, so getting prompt dental care will take time to figure out.","requiredFactsCovered":["access"],"checklistItemId":"dental-access"},
+    {"id":"c4-smoking","intent":"smoking","triggers":["smoke","smoking","tobacco","cigarette"],"response":"I smoke about one pack per day.","requiredFactsCovered":["smoking"],"checklistItemId":"social-history"},
+    {"id":"c4-exam","intent":"examination","triggers":["examination","exam","look","image","clinical findings"],"response":"The examination findings are available in the examination viewer.","requiredFactsCovered":["examinationFindings"],"checklistItemId":"examination-findings"}
+  ]},
+  "patientChecklist":[
+    {"id":"greeting","label":"Opened the encounter respectfully","triggers":["hello","hi","good morning","good afternoon"],"weight":1,"domain":"communication"},
+    {"id":"chief-complaint","label":"Asked what brought the patient in","triggers":["what brings","why are you here","chief complaint"],"weight":1,"domain":"history"},
+    {"id":"location","label":"Asked which tooth or side hurts","triggers":["where","which tooth","what side"],"weight":1,"domain":"history"},
+    {"id":"duration","label":"Asked about the five-day course","triggers":["how long","duration","days"],"weight":1,"domain":"history"},
+    {"id":"onset","label":"Asked about pain stopping, returning, and the old filling","triggers":["start","stopped","returned","came back","filling"],"weight":1,"domain":"history"},
+    {"id":"pain-character","label":"Asked about constant pain and severity","triggers":["constant","how bad","scale","severity"],"weight":1,"domain":"history"},
+    {"id":"biting-pain","label":"Asked about biting, chewing, or tapping pain","triggers":["bite","chew","tap"],"weight":1,"domain":"history"},
+    {"id":"thermal-sensitivity","label":"Distinguished historical cold pain from current response","triggers":["cold","thermal"],"weight":1,"domain":"history"},
+    {"id":"swelling","label":"Asked about swelling","triggers":["swelling","swollen"],"weight":1,"domain":"history"},
+    {"id":"drainage","label":"Asked about pus or drainage","triggers":["pus","drainage","bad taste"],"weight":1,"domain":"history"},
+    {"id":"systemic-symptoms","label":"Asked about fever or chills","triggers":["fever","chills"],"weight":1,"domain":"history"},
+    {"id":"airway","label":"Asked about swallowing, drooling, or breathing","triggers":["swallowing","drooling","breathing"],"weight":1,"domain":"history"},
+    {"id":"allergies","label":"Asked about penicillin allergy","triggers":["allergy","allergic","penicillin"],"weight":1,"domain":"history","critical":true},
+    {"id":"allergy-reaction","label":"Asked about the penicillin reaction","triggers":["reaction","what happens","hives"],"weight":1,"domain":"history","critical":true},
+    {"id":"medications","label":"Asked about ibuprofen use and relief","triggers":["taken","ibuprofen","advil","motrin"],"weight":1,"domain":"history"},
+    {"id":"dental-history","label":"Asked about the old filling and last dental visit","triggers":["filling","cavity","last dentist"],"weight":1,"domain":"history"},
+    {"id":"dental-access","label":"Asked about dental insurance or access","triggers":["insurance","appointment","see a dentist","access"],"weight":1,"domain":"communication"},
+    {"id":"patient-goals","label":"Asked whether the patient wants to save the tooth","triggers":["save","keep","lose the tooth"],"weight":1,"domain":"communication"},
+    {"id":"social-history","label":"Asked about smoking, alcohol, or drugs","triggers":["smoke","alcohol","drugs"],"weight":1,"domain":"history"},
+    {"id":"examination-findings","label":"Reviewed available examination findings","triggers":["examination","exam","image","findings"],"weight":1,"domain":"examination"}
   ],
-  "clinicalChecklist": [
-    {
-      "id": "clinical-1",
-      "label": "Characterizes bite-provoked pain pattern",
-      "weight": 3,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-2",
-      "label": "Screens for infection symptoms despite routine appearance",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-3",
-      "label": "Asks about restorations and hard-biting event",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-4",
-      "label": "Assesses thermal and spontaneous pain",
-      "weight": 2,
-      "domain": "history"
-    },
-    {
-      "id": "clinical-5",
-      "label": "Considers cracked tooth/occlusal trauma differential",
-      "weight": 3,
-      "domain": "reasoning"
-    }
+  "clinicalChecklist":[
+    {"id":"clinical-1","label":"Characterizes the five-day constant pain, sequence, severity, and biting aggravation","weight":3,"domain":"history"},
+    {"id":"clinical-2","label":"Elicits negative infection and airway symptoms","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-3","label":"Elicits penicillin allergy, hives, ibuprofen use, and access barriers","weight":3,"domain":"history","critical":true},
+    {"id":"clinical-4","label":"Recognizes loss of cold response with percussion and biting tenderness","weight":3,"domain":"examination","critical":true},
+    {"id":"clinical-5","label":"Diagnoses necrotic pulp with acute apical periodontitis","weight":3,"domain":"reasoning","critical":true}
   ],
-  "supportingInfo": {
-    "history": {
-      "onset": "Pain started after biting something hard last week.",
-      "duration": "Symptoms have been present for about one week.",
-      "pain": "Quick, sharp pain when pressure hits one tooth.",
-      "medications": "Over-the-counter pain medicine is enough unless chewing there.",
-      "allergies": "No allergy information reported.",
-      "medicalHistory": "No fever or swelling reported.",
-      "dentalHistory": "Large filling on that tooth years ago; sometimes grinds teeth.",
-      "socialHistory": "Wants to avoid losing the tooth."
-    },
-    "hpiFacts": [
-      "Pain began after biting something hard last week.",
-      "Pain is quick and sharp with pressure.",
-      "Pain stops when biting pressure stops.",
-      "Cold does not significantly bother the tooth.",
-      "No swelling, fever, drainage, or bad taste.",
-      "Large filling exists on the tooth.",
-      "Patient sometimes grinds teeth at night."
+  "supportingInfo":{
+    "patientFacts":[
+      {"id":"c4.location","topic":"location","text":"The painful tooth is the left mandibular first molar.","questionIntents":["location"]},
+      {"id":"c4.duration","topic":"onset_duration","text":"The returned pain has worsened over five days, especially during the last 48 hours.","questionIntents":["duration"]},
+      {"id":"c4.sequence","topic":"onset_duration","text":"Severe pain occurred about a week ago, stopped, then returned and worsened.","questionIntents":["symptom_sequence"]},
+      {"id":"c4.filling","topic":"dental_history","text":"A large old filling on the left mandibular first molar may have broken or failed.","questionIntents":["symptom_sequence"]},
+      {"id":"c4.no-hard-object","topic":"trauma_injury","text":"The patient does not recall biting a hard object or having a definite injury.","questionIntents":["hard_object_injury"]},
+      {"id":"c4.constant","topic":"pain","text":"The current pain is constant.","questionIntents":["current_pain"],"canonicalFactIds":["c4.pain"]},
+      {"id":"c4.severity","topic":"pain","text":"The pain is rated 7/10.","questionIntents":["pain_severity"],"canonicalFactIds":["c4.pain"]},
+      {"id":"c4.biting","topic":"pain","text":"Biting, chewing, and tapping cause sharp severe pain.","questionIntents":["biting"]},
+      {"id":"c4.cold-prior","topic":"pain","text":"Cold hurt previously, earlier in the illness.","questionIntents":["cold_prior"]},
+      {"id":"c4.cold-now","topic":"pain","text":"Cold does not cause pain now; formal absent response is an examination finding.","questionIntents":["cold_current"]},
+      {"id":"c4.no-swelling","topic":"swelling","text":"The patient has no swelling.","questionIntents":["facial_swelling"],"canonicalFactIds":["c4.no-infection"]},
+      {"id":"c4.no-drainage","topic":"medical_history","text":"The patient has no pus or drainage.","questionIntents":["drainage"],"canonicalFactIds":["c4.no-infection"]},
+      {"id":"c4.no-fever","topic":"medical_history","text":"The patient has no fever or chills.","questionIntents":["fever"],"canonicalFactIds":["c4.no-infection"]},
+      {"id":"c4.swallowing","topic":"medical_history","text":"The patient has no difficulty swallowing.","questionIntents":["swallowing"]},
+      {"id":"c4.drooling","topic":"medical_history","text":"The patient is not drooling.","questionIntents":["drooling"]},
+      {"id":"c4.breathing","topic":"medical_history","text":"The patient has no difficulty breathing.","questionIntents":["breathing"]},
+      {"id":"c4.penicillin","topic":"allergies","text":"The patient is allergic to penicillin.","questionIntents":["allergies"],"canonicalFactIds":["c4.allergy"]},
+      {"id":"c4.hives","topic":"allergies","text":"Penicillin causes hives.","questionIntents":["allergy_reaction"],"canonicalFactIds":["c4.allergy"]},
+      {"id":"c4.medication","topic":"medications","text":"The patient has taken ibuprofen 400 mg as needed without adequate relief.","questionIntents":["medications"]},
+      {"id":"c4.healthy","topic":"medical_history","text":"The patient is otherwise healthy with no known opioid-use history and no ibuprofen contraindication.","questionIntents":["medical_conditions"]},
+      {"id":"c4.smoking","topic":"social_history","text":"The patient smokes approximately one pack per day.","questionIntents":["smoking"]},
+      {"id":"c4.goal","topic":"dental_history","text":"The patient wants to save the tooth if possible.","questionIntents":["patient_goal"]},
+      {"id":"c4.access","topic":"dental_history","text":"The patient has no dental insurance, so prompt dental access will take time to arrange.","questionIntents":["dental_access"]}
     ],
-    "redFlags": [
-      "No current infection red flags reported",
-      "Escalation needed if swelling, fever, spontaneous pain, or drainage develops"
-    ],
-    "examinationFindings": [
-      "Bite-related examination image available.",
-      "History localizes pain to one restored tooth.",
-      "Symptoms are pressure-provoked rather than spontaneous.",
-      "No facial swelling reported."
-    ],
-    "expectedQuestions": [
-      "What were you biting when pain started?",
-      "Is pain only on biting or also spontaneous?",
-      "Does cold or heat trigger lingering pain?",
-      "Any swelling, fever, drainage, or bad taste?",
-      "Does the tooth have a filling or crown?",
-      "Do you grind or clench at night?",
-      "Can you localize the pain to one tooth?"
-    ],
-    "diagnosis": "Possible cracked tooth or occlusal trauma.",
-    "differentialDiagnosis": [
-      "Cracked tooth syndrome",
-      "Occlusal trauma/high restoration",
-      "Reversible pulpitis",
-      "Symptomatic apical periodontitis"
-    ],
-    "managementExpectations": [
-      "Perform focused bite testing and restoration assessment.",
-      "Assess pulpal vitality and periapical status.",
-      "Avoid unnecessary infection treatment if red flags are absent.",
-      "Discuss protective restoration or occlusal adjustment depending on findings."
-    ],
-    "learningObjectives": [
-      "Explore bite-provoked pain patterns.",
-      "Differentiate cracked tooth symptoms from acute infection.",
-      "Ask about restorations, parafunction, and localized symptoms."
-    ],
-    "reportData": {
-      "keyFindings": [
-        "Sharp bite pain",
-        "Large restoration",
-        "Bruxism history",
-        "No swelling or fever"
-      ],
-      "criticalMisses": [
-        "Not distinguishing bite pain from infection",
-        "Not asking about restoration or grinding"
-      ],
-      "idealSummary": "Patient has localized pressure-provoked pain most consistent with cracked tooth or occlusal trauma rather than acute infection."
-    },
-    "evaluation": {
-      "patientChecklistWeight": 0.6,
-      "clinicalChecklistWeight": 0.4,
-      "totalScore": "weightedAverage(patientChecklist, clinicalChecklist)"
-    },
-    "requiredInvestigations": [
-      "Perform focused bite testing and restoration assessment.",
-      "Assess pulpal vitality and periapical status."
-    ],
-    "treatmentExpectations": [
-      "Avoid unnecessary infection treatment if red flags are absent.",
-      "Discuss protective restoration or occlusal adjustment depending on findings."
-    ],
-    "referralExpectations": [],
-    "safetyNettingExpectations": [
-      "Escalation needed if swelling, fever, spontaneous pain, or drainage develops."
-    ]
+    "history":{"onset":"Severe pain occurred about a week ago, stopped, and then returned; an old filling may have broken or failed.","duration":"Five days of worsening returned pain, intensified during the last 48 hours.","pain":"Constant 7/10 pain with sharp severe biting, chewing, and tapping pain; ibuprofen has not provided adequate relief.","medications":"Ibuprofen 400 mg as needed without adequate relief.","allergies":"Penicillin allergy causing hives.","medicalHistory":"Otherwise healthy; no opioid-use history and no ibuprofen contraindication.","dentalHistory":"Large old filling/deep caries on the left mandibular first molar; last dental visit about five years ago.","socialHistory":"Smokes approximately one pack per day; occasional alcohol; no illicit drugs; no dental insurance and wants to save the tooth."},
+    "hpiFacts":["Five days of worsening left mandibular first-molar pain after a prior severe episode stopped and returned.","Possible broken or failing old filling.","Constant 7/10 pain with sharp biting and chewing pain.","Cold caused pain earlier but no longer causes pain now.","No swelling, no drainage, no fever, no chills, no dysphagia, no drooling, and no dyspnea."],
+    "redFlags":["No current swelling, drainage, fever, or systemic illness","No airway compromise","Return for new swelling, fever, drainage, spreading infection, swallowing or breathing difficulty"],
+    "examinationFindings":["Large old filling/deep caries on the left mandibular first molar","No current response to cold testing","Marked percussion and biting tenderness","Mild gingival erythema and tenderness","No swelling, fluctuance, pus, or sinus tract","Soft floor of mouth and patent airway"],
+    "expectedQuestions":["Where is the pain and how long has it been present?","Did severe pain stop and return?","Is the current pain constant and how severe is it?","Does biting, chewing, or tapping hurt?","Did cold hurt earlier and does it hurt now?","Any swelling, drainage, fever, chills, swallowing, drooling, or breathing problems?","Are you allergic to penicillin and what reaction occurs?","What analgesic have you taken?","Can you obtain dental care and do you want to save the tooth?"],
+    "diagnosis":"Necrotic pulp with acute apical periodontitis of the left mandibular first molar.",
+    "differentialDiagnosis":["Irreversible pulpitis","Periapical abscess","Temporomandibular joint-related pain"],
+    "managementExpectations":["Offer appropriate analgesia and local anesthesia or a dental block; the patient may decline the block.","Arrange urgent definitive dental treatment, ideally within approximately 72 hours.","Discuss root-canal treatment or extraction depending on dental evaluation and the patient's desire to save the tooth.","Explain that antibiotics are not currently indicated without swelling, drainage, fever, or systemic infection.","Provide reassessment and return precautions rather than requiring an unapproved delayed antibiotic prescription.","Address lack of dental insurance and access difficulty."],
+    "requiredInvestigations":["Review structured oral examination and cold-test findings."],
+    "treatmentExpectations":["Appropriate analgesia.","Offer local anesthesia or dental block; patient may decline.","Urgent definitive root-canal treatment or extraction after dental evaluation.","No routine antibiotics for the current presentation."],
+    "referralExpectations":["Urgent dental follow-up within approximately 72 hours.","Access planning for a patient without dental insurance."],
+    "safetyNettingExpectations":["Seek reassessment for fever, swelling, drainage, spreading infection, systemic illness, dysphagia, or dyspnea."],
+    "learningObjectives":["Connect prior severe pain cessation, absent cold response, and current percussion pain with pulpal necrosis and acute apical periodontitis.","Distinguish historical cold pain from clinician-observed current absent response.","Avoid routine antibiotics and plan definitive tooth-saving or extraction care."],
+    "reportData":{"keyFindings":["Five-day constant 7/10 left mandibular first-molar pain after prior severe pain stopped and returned","Sharp biting, chewing, and percussion pain","Historical cold pain with current absent cold response","Penicillin allergy with hives","No current swelling, drainage, fever, or systemic infection","No dental insurance and desire to save the tooth"],"criticalMisses":["Diagnosing cracked tooth or occlusal trauma as the primary condition","Missing necrotic pulp with acute apical periodontitis","Treating historical cold pain as current vitality","Recommending routine antibiotics without infection signs","Ignoring penicillin hives, access barriers, or the tooth-saving goal"],"idealSummary":"A healthy 38-year-old with five days of constant 7/10 left mandibular first-molar pain after a prior severe episode stopped and returned, possible failure of a large old filling, historical cold pain but no current cold response, and marked biting/percussion tenderness without swelling, drainage, fever, or systemic infection, consistent with necrotic pulp and acute apical periodontitis requiring urgent definitive dental care rather than routine antibiotics."},
+    "facultyReview":[{"id":"c4-delayed-antibiotic","status":"pending","question":"Should future teaching include a delayed antibiotic prescription, or only reassessment and return precautions if infection signs develop? The delayed prescription remains unscored."}],
+    "evaluation":{"patientChecklistWeight":0.6,"clinicalChecklistWeight":0.4,"totalScore":"weightedAverage(patientChecklist, clinicalChecklist)"}
   }
 }

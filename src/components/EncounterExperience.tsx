@@ -1510,7 +1510,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                   }}
                   className="flex min-h-14 w-full touch-manipulation items-center gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 text-left font-semibold text-[var(--color-text-primary)]"
                 >
-                  {examination.type === "vital-signs" ? (
+                  {examination.type === "vital-signs" || examination.type === "clinical-findings" || examination.type === "diagnostic-results" ? (
                     <Activity className="size-5 text-[var(--color-brand)]" />
                   ) : (
                     <ImageIcon className="size-5 text-[var(--color-brand)]" />
@@ -1555,7 +1555,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
               <X className="size-5" />
             </button>
           </div>
-          {selectedExamination.type === "vital-signs" ? (
+          {selectedExamination.type === "vital-signs" || selectedExamination.type === "clinical-findings" || selectedExamination.type === "diagnostic-results" ? (
             <div className="flex size-full items-start justify-center overflow-auto bg-[var(--color-background)] px-4 pb-8 pt-24 sm:items-center sm:pt-20">
               <div className="w-full max-w-xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-7">
                 <h2 className="mb-5 text-xl font-semibold text-[var(--color-text-primary)] sm:text-2xl">

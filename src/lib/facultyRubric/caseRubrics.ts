@@ -90,6 +90,7 @@ function interpretation({
   critical = false,
   legacyClinicalChecklistIds,
   evaluationMode = "clinical-statement",
+  facultyNotes,
 }: {
   id: string;
   name: string;
@@ -99,6 +100,7 @@ function interpretation({
   critical?: boolean;
   legacyClinicalChecklistIds?: string[];
   evaluationMode?: FacultyRubricEvaluationMode;
+  facultyNotes?: string;
 }) {
   return criterion({
     id,
@@ -113,6 +115,7 @@ function interpretation({
     critical,
     legacyClinicalChecklistIds,
     reportLabel: title,
+    facultyNotes,
   });
 }
 
@@ -125,6 +128,7 @@ function recommendation({
   acceptedConcepts,
   legacyClinicalChecklistIds,
   expectedValue = false,
+  facultyNotes,
 }: {
   id: string;
   name: string;
@@ -134,6 +138,7 @@ function recommendation({
   acceptedConcepts?: string[];
   legacyClinicalChecklistIds?: string[];
   expectedValue?: boolean;
+  facultyNotes?: string;
 }) {
   return criterion({
     id,
@@ -149,6 +154,7 @@ function recommendation({
     legacyClinicalChecklistIds,
     reportLabel: title,
     expectedValue,
+    facultyNotes,
   });
 }
 
@@ -173,6 +179,50 @@ function reviewedAvailableExamination({
     critical: false,
     legacyPatientChecklistIds,
     reportLabel: "Reviewed available examination findings",
+  });
+}
+
+function recognizedExaminationFinding({
+  id,
+  name,
+  title,
+  acceptedConcepts,
+  critical = false,
+}: {
+  id: string;
+  name: string;
+  title: string;
+  acceptedConcepts: string[];
+  critical?: boolean;
+}) {
+  return criterion({
+    id,
+    name,
+    title,
+    description: `Correctly identified the structured examination finding: ${title}. Opening an examination asset alone does not satisfy this criterion.`,
+    competency: "examination",
+    evaluationMode: "clinical-statement",
+    expectation: "required",
+    source: "faculty-clinical-checklist",
+    acceptedConcepts,
+    critical,
+    reportLabel: title,
+  });
+}
+
+function recognizedClinicalFinding({ id, name, title, acceptedConcepts, critical = false }: { id: string; name: string; title: string; acceptedConcepts: string[]; critical?: boolean }) {
+  return criterion({
+    id,
+    name,
+    title,
+    description: `Correctly recognized the clinical finding: ${title}.`,
+    competency: "clinical-findings",
+    evaluationMode: "clinical-statement",
+    expectation: "required",
+    source: "faculty-clinical-checklist",
+    acceptedConcepts,
+    critical,
+    reportLabel: title,
   });
 }
 
@@ -220,6 +270,35 @@ const case01Criteria: FacultyRubricCriterion[] = [
     legacyClinicalChecklistIds: ["clinical-4"],
   }),
   finding({
+    id: "C1-IG-007",
+    name: "asked-about-positional-breathing",
+    title: "Asked About Positional Breathing Difficulty",
+    critical: true,
+    acceptedConcepts: ["breathing worse lying flat", "cannot lie flat", "supine dyspnea"],
+  }),
+  finding({
+    id: "C1-IG-008",
+    name: "asked-about-drooling",
+    title: "Asked About Drooling",
+    critical: true,
+    acceptedConcepts: ["drooling", "difficulty handling secretions"],
+  }),
+  finding({
+    id: "C1-IG-009",
+    name: "asked-about-medical-conditions",
+    title: "Asked About Relevant Medical Conditions",
+    acceptedConcepts: ["diabetes", "hypertension", "medical conditions"],
+    legacyPatientChecklistIds: ["medical-history"],
+    legacyClinicalChecklistIds: ["clinical-4"],
+  }),
+  finding({
+    id: "C1-IG-010",
+    name: "asked-about-dental-source-and-progression",
+    title: "Asked About Dental Source and Swelling Progression",
+    acceptedConcepts: ["left mandibular molar", "swelling progression", "rapidly worsening swelling"],
+    legacyClinicalChecklistIds: ["clinical-2"],
+  }),
+  finding({
     id: "C1-CF-001",
     name: "elicited-difficulty-breathing",
     title: "Elicited Difficulty Breathing",
@@ -262,6 +341,20 @@ const case01Criteria: FacultyRubricCriterion[] = [
     legacyClinicalChecklistIds: ["clinical-1"],
     acceptedConcepts: ["voice change", "muffled voice"],
   }),
+  finding({
+    id: "C1-CF-006",
+    name: "elicited-drooling",
+    title: "Elicited Drooling",
+    critical: true,
+    acceptedConcepts: ["drooling", "cannot handle secretions"],
+  }),
+  finding({
+    id: "C1-CF-007",
+    name: "elicited-positional-dyspnea",
+    title: "Elicited Positional Dyspnea",
+    critical: true,
+    acceptedConcepts: ["worse lying flat", "cannot lie flat", "choking when supine"],
+  }),
   neutralFinding("C1-CF-N01", "trismus-neutral", "Trismus"),
   neutralFinding("C1-CF-N02", "periorbital-swelling-neutral", "Periorbital Swelling"),
   neutralFinding(
@@ -278,11 +371,12 @@ const case01Criteria: FacultyRubricCriterion[] = [
   ),
   interpretation({
     id: "C1-CI-001",
-    name: "recognized-airway-patent",
-    title: "Recognized Airway Is Patent",
-    description: "Recognized whether the airway is patent in the case state.",
-    expectedValue: true,
+    name: "recognized-impending-airway-compromise",
+    title: "Recognized Impending Airway Compromise",
+    description: "Recognized that the airway is threatened and requires immediate protection; the prior reassuring 'patent airway' wording is not retained.",
+    expectedValue: "impending airway compromise",
     critical: true,
+    facultyNotes: "The prior 'airway is patent' wording was potentially reassuring despite impending compromise and should receive explicit faculty confirmation before any future reuse.",
   }),
   interpretation({
     id: "C1-CI-002",
@@ -292,6 +386,21 @@ const case01Criteria: FacultyRubricCriterion[] = [
     expectedValue: "emergency",
     critical: true,
     legacyClinicalChecklistIds: ["clinical-5"],
+  }),
+  interpretation({
+    id: "C1-CI-003",
+    name: "diagnosed-ludwigs-angina",
+    title: "Diagnosed Ludwig's Angina",
+    description: "Recognized the canonical diagnosis of Ludwig's angina.",
+    expectedValue: "Ludwig's angina",
+    critical: true,
+  }),
+  interpretation({
+    id: "C1-CI-004",
+    name: "considered-airway-differentials",
+    title: "Considered Appropriate Airway Differentials",
+    description: "Considered deep neck-space abscess, epiglottitis, peritonsillar abscess, or angioedema.",
+    expectedValue: ["deep neck-space abscess", "epiglottitis", "peritonsillar abscess", "angioedema"],
   }),
   recommendation({
     id: "C1-MP-001",
@@ -326,14 +435,16 @@ const case01Criteria: FacultyRubricCriterion[] = [
     critical: true,
     acceptedConcepts: ["ampicillin-sulbactam", "clindamycin", "allergy alternative"],
     legacyClinicalChecklistIds: ["clinical-4"],
+    facultyNotes: "The Word source requires IV broad-spectrum antibiotics but does not specify a single regimen; exact drug-level scoring remains a faculty decision.",
   }),
   recommendation({
     id: "C1-MP-005",
     name: "recommended-ct-with-iv-contrast",
     title: "Recommended CT With IV Contrast",
-    description: "Recommended CT imaging with IV contrast.",
+    description: "Recommended CT imaging only when safe and without delaying airway management.",
     critical: true,
     acceptedConcepts: ["CT with IV contrast", "contrast CT"],
+    facultyNotes: "The Word source says CT scan without specifying contrast; exact contrast requirements remain pending faculty confirmation, and imaging must not delay airway management.",
   }),
   recommendation({
     id: "C1-MP-006",
@@ -343,6 +454,37 @@ const case01Criteria: FacultyRubricCriterion[] = [
     acceptedConcepts: ["systemic analgesia", "pain control", "analgesics"],
   }),
   recommendation({
+    id: "C1-MP-008",
+    name: "recommended-upright-oxygen-monitoring",
+    title: "Recommended Upright Positioning, Oxygen, and Monitoring",
+    description: "Recommended upright positioning, oxygen, and continuous monitoring.",
+    critical: true,
+    acceptedConcepts: ["upright positioning", "oxygen", "continuous monitoring"],
+  }),
+  recommendation({
+    id: "C1-MP-009",
+    name: "recommended-advanced-airway-escalation",
+    title: "Escalated Early for Advanced Airway Management",
+    description: "Escalated early to an appropriate airway specialist for advanced airway management.",
+    critical: true,
+    acceptedConcepts: ["advanced airway", "anesthesia consult", "ENT consult", "airway specialist"],
+  }),
+  recommendation({
+    id: "C1-MP-010",
+    name: "recommended-admission",
+    title: "Recommended Hospital Admission",
+    description: "Recommended admission rather than routine discharge.",
+    critical: true,
+    acceptedConcepts: ["hospital admission", "admit", "do not discharge"],
+  }),
+  recommendation({
+    id: "C1-MP-011",
+    name: "recommended-source-control-after-stabilization",
+    title: "Recommended Dental Source Control After Stabilization",
+    description: "Recommended definitive dental source control after airway stabilization.",
+    acceptedConcepts: ["source control", "extract after stabilization", "definitive dental treatment after stabilization"],
+  }),
+  recommendation({
     id: "C1-MP-007",
     name: "considered-npo-or-operating-room",
     title: "Considered NPO or Operating Room Management",
@@ -350,6 +492,11 @@ const case01Criteria: FacultyRubricCriterion[] = [
     acceptedConcepts: ["NPO", "operating room", "OR management"],
   }),
   reviewedAvailableExamination({ id: "C1-EX-001" }),
+  recognizedExaminationFinding({ id: "C1-EX-002", name: "recognized-bilateral-deep-space-induration", title: "Recognized Bilateral Submandibular and Sublingual Induration", acceptedConcepts: ["bilateral submandibular induration", "bilateral sublingual induration", "bilateral deep-space swelling"], critical: true }),
+  recognizedExaminationFinding({ id: "C1-EX-003", name: "recognized-board-like-floor", title: "Recognized Board-like Floor of Mouth", acceptedConcepts: ["board-like floor of mouth", "tense floor of mouth"], critical: true }),
+  recognizedExaminationFinding({ id: "C1-EX-004", name: "recognized-tongue-elevation", title: "Recognized Elevated or Posteriorly Displaced Tongue", acceptedConcepts: ["elevated tongue", "posterior tongue displacement"], critical: true }),
+  recognizedExaminationFinding({ id: "C1-EX-005", name: "recognized-respiratory-distress", title: "Recognized Stridor or Increased Work of Breathing", acceptedConcepts: ["stridor", "increased work of breathing", "respiratory distress"], critical: true }),
+  recognizedExaminationFinding({ id: "C1-EX-006", name: "recognized-fever-tachycardia", title: "Recognized Fever and Tachycardia", acceptedConcepts: ["38.6", "fever", "heart rate 112", "tachycardia"], critical: true }),
 ];
 
 const case02Criteria: FacultyRubricCriterion[] = [
@@ -380,6 +527,7 @@ const case02Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["thermal-sensitivity"],
     legacyClinicalChecklistIds: ["clinical-1"],
+    facultyNotes: "The Word checklist asks whether lingering was assessed, but the case narrative does not specify a lingering answer. Current versus historical lingering remains pending faculty confirmation.",
   }),
   shared("askedAboutBitingPain", {
     id: "C2-IG-005",
@@ -395,6 +543,9 @@ const case02Criteria: FacultyRubricCriterion[] = [
     legacyPatientChecklistIds: ["medications"],
     legacyClinicalChecklistIds: ["clinical-4"],
   }),
+  finding({ id: "C2-IG-007", name: "asked-about-seven-day-progression", title: "Asked About Seven-Day Symptom Progression", acceptedConcepts: ["seven days", "one week", "progression"] }),
+  finding({ id: "C2-IG-008", name: "asked-about-chills-weakness-fatigue", title: "Asked About Chills, Weakness, or Fatigue", acceptedConcepts: ["chills", "weakness", "fatigue", "feeling sick"] }),
+  finding({ id: "C2-IG-009", name: "asked-about-airway-red-flags", title: "Asked About Airway and Swallowing Red Flags", acceptedConcepts: ["difficulty breathing", "swallow liquids", "voice change", "drooling", "mouth opening"], legacyPatientChecklistIds: ["airway"], legacyClinicalChecklistIds: ["clinical-2"] }),
   shared("offeredDentalAnesthesia", {
     id: "C2-PC-001",
     weight: 1,
@@ -448,20 +599,22 @@ const case02Criteria: FacultyRubricCriterion[] = [
     legacyPatientChecklistIds: ["swelling"],
     legacyClinicalChecklistIds: ["clinical-3"],
   }),
-  finding({
+  recognizedClinicalFinding({
     id: "C2-CF-004",
-    name: "elicited-tachycardia-over-100",
-    title: "Elicited Tachycardia Greater Than 100 BPM",
+    name: "recognized-tachycardia-over-100",
+    title: "Recognized Tachycardia Greater Than 100 BPM",
     critical: true,
-    legacyClinicalChecklistIds: ["clinical-2"],
+    acceptedConcepts: ["heart rate 108", "tachycardia"],
   }),
-  finding({
+  recognizedClinicalFinding({
     id: "C2-CF-005",
-    name: "elicited-sirs-criteria",
-    title: "Elicited SIRS Criteria",
+    name: "recognized-systemic-infection-findings",
+    title: "Recognized Systemic Infection Findings",
     critical: true,
-    legacyClinicalChecklistIds: ["clinical-2"],
+    acceptedConcepts: ["systemic infection", "fever and tachycardia", "neutrophilic leukocytosis"],
   }),
+  finding({ id: "C2-CF-006", name: "elicited-chills-and-weakness", title: "Elicited Chills, Weakness, and Fatigue", acceptedConcepts: ["chills", "weakness", "fatigue", "systemically ill"] }),
+  finding({ id: "C2-CF-007", name: "elicited-negative-airway-screen", title: "Elicited Negative Airway and Swallowing Screen", acceptedConcepts: ["no dyspnea", "can swallow liquids", "normal voice", "no drooling"] }),
   interpretation({
     id: "C2-CI-001",
     name: "recognized-emergency-urgency",
@@ -471,6 +624,9 @@ const case02Criteria: FacultyRubricCriterion[] = [
     critical: true,
     legacyClinicalChecklistIds: ["clinical-5"],
   }),
+  interpretation({ id: "C2-CI-002", name: "diagnosed-systemic-odontogenic-infection", title: "Diagnosed Odontogenic Abscess with Cellulitis and Systemic Infection", description: "Recognized the complete canonical diagnosis rather than a localized-only abscess.", expectedValue: "odontogenic abscess with cellulitis and systemic infection", critical: true }),
+  interpretation({ id: "C2-CI-003", name: "recognized-no-deep-space-involvement", title: "Recognized No Deep-Space Involvement on CT", description: "Correctly interpreted the CT as showing cellulitis without deep-space involvement.", expectedValue: "no deep-space involvement", critical: true }),
+  interpretation({ id: "C2-CI-004", name: "recognized-progression-risk", title: "Recognized Risk of Infection Progression", description: "Recognized progression risk despite the current absence of deep-space involvement.", expectedValue: "risk of progression" }),
   recommendation({
     id: "C2-MP-001",
     name: "recommended-omfs-admission-consult",
@@ -478,6 +634,10 @@ const case02Criteria: FacultyRubricCriterion[] = [
     description: "Recommended OMFS or surgeon consultation for admission.",
     critical: true,
   }),
+  recommendation({ id: "C2-MP-007", name: "recommended-lactate", title: "Recommended Lactate Testing", description: "Recommended lactate testing in the systemic-infection evaluation.", acceptedConcepts: ["lactate"] }),
+  recommendation({ id: "C2-MP-008", name: "recommended-fluids-antipyretics", title: "Recommended IV Fluids and Antipyretic Treatment", description: "Recommended IV fluids and treatment of fever.", acceptedConcepts: ["IV fluids", "antipyretic", "treat fever"] }),
+  recommendation({ id: "C2-MP-009", name: "recommended-possible-admission", title: "Considered Hospital Admission", description: "Considered hospital admission in the emergency systemic-infection context.", critical: true, acceptedConcepts: ["admission", "admit", "hospitalize"] }),
+  recommendation({ id: "C2-MP-010", name: "recommended-source-control-72-hours", title: "Recommended Definitive Dental Source Control Within 72 Hours", description: "Recommended definitive dental treatment or source control within approximately 72 hours.", critical: true, acceptedConcepts: ["source control", "dental treatment within 72 hours", "definitive dental care"] }),
   recommendation({
     id: "C2-MP-002",
     name: "recommended-cbc-bmp",
@@ -518,6 +678,13 @@ const case02Criteria: FacultyRubricCriterion[] = [
     description: "Recommended systemic analgesia.",
   }),
   reviewedAvailableExamination({ id: "C2-EX-001" }),
+  recognizedExaminationFinding({ id: "C2-EX-002", name: "recognized-fever-tachycardia", title: "Recognized Fever and Tachycardia", acceptedConcepts: ["38.4", "heart rate 108", "fever", "tachycardia"], critical: true }),
+  recognizedExaminationFinding({ id: "C2-EX-003", name: "recognized-oral-facial-findings", title: "Recognized Upper-Right Gingival and Cheek Findings", acceptedConcepts: ["upper-right gingival erythema", "gingival swelling", "cheek swelling", "gingival tenderness"] }),
+  recognizedExaminationFinding({ id: "C2-EX-004", name: "recognized-tooth-tenderness", title: "Recognized Marked Touch and Percussion Tenderness", acceptedConcepts: ["tender to touch", "percussion tenderness"] }),
+  recognizedExaminationFinding({ id: "C2-EX-005", name: "recognized-wbc-neutrophilia", title: "Recognized WBC 14.8 with Neutrophilia", acceptedConcepts: ["WBC 14.8", "neutrophilic leukocytosis", "neutrophil predominant"] }),
+  recognizedExaminationFinding({ id: "C2-EX-006", name: "recognized-normal-lactate-bmp", title: "Recognized Normal Lactate and BMP", acceptedConcepts: ["normal lactate", "normal BMP", "normal basic metabolic panel"] }),
+  recognizedExaminationFinding({ id: "C2-EX-007", name: "recognized-ct-abscess-cellulitis", title: "Recognized CT Abscess and Facial Cellulitis", acceptedConcepts: ["periapical abscess", "facial cellulitis", "surrounding cellulitis"], critical: true }),
+  recognizedExaminationFinding({ id: "C2-EX-008", name: "recognized-ct-no-deep-space", title: "Recognized No Deep-Space Involvement", acceptedConcepts: ["no deep-space involvement", "no deep space involvement"], critical: true }),
 ];
 
 const case03Criteria: FacultyRubricCriterion[] = [
@@ -525,7 +692,7 @@ const case03Criteria: FacultyRubricCriterion[] = [
     id: "C3-IG-001",
     weight: 1,
     critical: false,
-    legacyPatientChecklistIds: ["systemic-symptoms"],
+    legacyPatientChecklistIds: ["fever"],
     legacyClinicalChecklistIds: ["clinical-3"],
   }),
   shared("askedAboutPenicillinAllergy", {
@@ -558,6 +725,9 @@ const case03Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["medications"],
   }),
+  finding({ id: "C3-IG-007", name: "elicited-ulcer-and-nsaid-history", title: "Elicited Ulcer History and NSAID Intolerance", acceptedConcepts: ["stomach ulcers", "ibuprofen upsets stomach", "NSAID intolerance"], legacyClinicalChecklistIds: ["clinical-2"] }),
+  finding({ id: "C3-IG-008", name: "elicited-radiation", title: "Elicited Radiation Toward the Right Ear", acceptedConcepts: ["right ear", "radiates to the right ear"] }),
+  finding({ id: "C3-IG-009", name: "elicited-airway-and-trismus-negatives", title: "Elicited Airway, Swallowing, Voice, and Trismus Negatives", acceptedConcepts: ["no difficulty breathing", "no difficulty swallowing", "no voice change", "no trismus"], legacyClinicalChecklistIds: ["clinical-3"] }),
   shared("offeredDentalAnesthesia", {
     id: "C3-PC-001",
     weight: 1,
@@ -579,10 +749,11 @@ const case03Criteria: FacultyRubricCriterion[] = [
   }),
   recommendation({
     id: "C3-MP-002",
-    name: "recommended-ibuprofen",
-    title: "Recommended Ibuprofen",
-    description: "Recommended ibuprofen for pain control when appropriate.",
-    acceptedConcepts: ["ibuprofen", "NSAID"],
+    name: "preferred-acetaminophen-with-dose-review",
+    title: "Preferred Acetaminophen and Avoided Ibuprofen",
+    description: "Preferred acetaminophen conceptually because of ulcer history and ibuprofen intolerance, without requiring an unapproved dose.",
+    acceptedConcepts: ["acetaminophen", "Tylenol", "avoid ibuprofen", "NSAID intolerance"],
+    facultyNotes: "Exact acetaminophen dose, interval, and maximum daily amount remain pending faculty review; do not score a specific schedule.",
   }),
   shared("recommendedPromptDentalFollowUp", {
     id: "C3-MP-003",
@@ -590,6 +761,9 @@ const case03Criteria: FacultyRubricCriterion[] = [
     critical: false,
     provisionalWeight: true,
   }),
+  recommendation({ id: "C3-MP-004", name: "recommended-antibiotic", title: "Recommended Canonical Antibiotic Therapy", description: "Recommended antibiotic therapy for the canonical abscess scenario without inventing an escalation regimen.", acceptedConcepts: ["antibiotic", "antibiotic therapy"] }),
+  recommendation({ id: "C3-MP-005", name: "explained-temporary-ed-care", title: "Explained ED Treatment Is Temporary", description: "Explained that drainage or antibiotics do not replace definitive dental treatment.", acceptedConcepts: ["temporary", "does not replace dental treatment", "still need a dentist", "definitive dental care"] }),
+  recommendation({ id: "C3-MP-006", name: "provided-safety-net", title: "Provided Abscess Safety-Net Instructions", description: "Advised return for worsening swelling, fever, swallowing or breathing difficulty, or voice change.", acceptedConcepts: ["worsening swelling", "fever", "difficulty swallowing", "difficulty breathing", "voice change"] }),
   criterion({
     id: "C3-CF-001",
     name: "airway-compromise-none-expected",
@@ -632,6 +806,7 @@ const case03Criteria: FacultyRubricCriterion[] = [
     description: "Recognized the case as urgent rather than routine.",
     expectedValue: "urgent",
   }),
+  interpretation({ id: "C3-CI-004", name: "diagnosed-right-mandibular-periapical-abscess", title: "Diagnosed Right Mandibular Periapical Abscess", description: "Identified the primary diagnosis and canonical mandibular location without periodontal framing.", expectedValue: "right mandibular periapical abscess", legacyClinicalChecklistIds: ["clinical-5"] }),
   interpretation({
     id: "C3-CI-002",
     name: "recognized-local-intraoral-abscess",
@@ -649,47 +824,57 @@ const case03Criteria: FacultyRubricCriterion[] = [
   }),
   criterion({
     id: "C3-PD-001",
-    name: "rejected-inferior-alveolar-block",
-    title: "Rejected Inferior Alveolar Nerve Block for Mandibular Teeth",
-    description: "Selected no inferior alveolar nerve block for the maxillary case context.",
-    competency: "procedural-decision",
-    evaluationMode: "procedural-choice",
-    expectation: "required",
-    expectedValue: false,
-    source: "faculty-clinical-checklist",
-    reportLabel: "Selected the appropriate anesthesia approach for tooth location",
-  }),
-  criterion({
-    id: "C3-PD-002",
-    name: "selected-maxillary-infiltration",
-    title: "Selected Infiltration Anesthesia for Maxillary Teeth",
-    description: "Selected infiltration anesthesia for maxillary teeth.",
+    name: "selected-mandibular-anesthesia",
+    title: "Selected Appropriate Mandibular Anesthesia",
+    description: "Selected a clinically appropriate dental block or local anesthesia approach for a right mandibular posterior tooth.",
     competency: "procedural-decision",
     evaluationMode: "procedural-choice",
     expectation: "required",
     expectedValue: true,
     source: "faculty-clinical-checklist",
-    reportLabel: "Selected maxillary infiltration anesthesia",
+    acceptedConcepts: ["inferior alveolar nerve block", "mandibular block", "dental block", "local anesthesia"],
+    reportLabel: "Selected an appropriate mandibular anesthesia approach",
+  }),
+  criterion({
+    id: "C3-PD-002",
+    name: "localized-procedure-to-right-mandible",
+    title: "Localized the Procedure to the Right Mandibular Tooth",
+    description: "Localized anesthesia and drainage to the right mandibular posterior tooth rather than a maxillary site.",
+    competency: "procedural-decision",
+    evaluationMode: "procedural-choice",
+    expectation: "required",
+    expectedValue: true,
+    source: "faculty-clinical-checklist",
+    acceptedConcepts: ["right mandibular", "lower right", "mandibular posterior tooth"],
+    reportLabel: "Localized the procedure to the right mandibular tooth",
   }),
   criterion({
     id: "C3-PD-003",
     name: "selected-recommended-local-anesthetic-concept",
     title: "Selected Recommended Local Anesthetic Concept",
     description:
-      "Represented the faculty-source anesthetic formulation as an accepted supporting concept pending scoring calibration.",
+      "Accepted a clinically appropriate mandibular local-anesthetic strategy without requiring one exact technique or formulation.",
     competency: "procedural-decision",
     evaluationMode: "procedural-choice",
     expectation: "required",
     source: "faculty-clinical-checklist",
     acceptedConcepts: [
+      "inferior alveolar nerve block",
+      "mandibular block",
+      "local anesthesia",
       "2% lidocaine with 1:100,000 epinephrine",
       "0.5% bupivacaine with 1:200,000 epinephrine",
     ],
     reportLabel: "Chose an appropriate local anesthetic strategy",
     facultyNotes:
-      "Faculty should confirm whether exact formulation is a scored criterion or supporting concept.",
+      "Exact formulation remains a supporting concept pending faculty calibration; the canonical source does not require one exclusive mandibular technique.",
   }),
   reviewedAvailableExamination({ id: "C3-EX-001" }),
+  recognizedExaminationFinding({ id: "C3-EX-002", name: "recognized-right-mandibular-localization", title: "Recognized Right Mandibular Localization", acceptedConcepts: ["right mandibular", "lower-right posterior tooth", "right mandibular first molar"] }),
+  recognizedExaminationFinding({ id: "C3-EX-003", name: "recognized-fluctuance-purulence", title: "Recognized Fluctuance and Purulence", acceptedConcepts: ["fluctuance", "purulence", "purulent drainage"], critical: true }),
+  recognizedExaminationFinding({ id: "C3-EX-004", name: "recognized-percussion-biting-palpation", title: "Recognized Percussion, Biting, and Palpation Tenderness", acceptedConcepts: ["percussion tenderness", "biting tenderness", "palpation tenderness"] }),
+  recognizedExaminationFinding({ id: "C3-EX-005", name: "recognized-cold-negative", title: "Recognized Negative Cold Response", acceptedConcepts: ["no cold response", "cold-negative", "negative cold test"] }),
+  recognizedExaminationFinding({ id: "C3-EX-006", name: "recognized-safe-floor-airway", title: "Recognized Soft Floor and Patent Airway", acceptedConcepts: ["soft floor of mouth", "floor of mouth not elevated", "no stridor", "patent airway", "no voice change"] }),
 ];
 
 const case04Criteria: FacultyRubricCriterion[] = [
@@ -712,6 +897,7 @@ const case04Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["thermal-sensitivity"],
     legacyClinicalChecklistIds: ["clinical-4"],
+    facultyNotes: "Assess historical patient-reported cold pain separately from the current examination response.",
   }),
   shared("askedAboutLingeringColdPain", {
     id: "C4-IG-004",
@@ -719,6 +905,7 @@ const case04Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["thermal-sensitivity"],
     legacyClinicalChecklistIds: ["clinical-4"],
+    facultyNotes: "Use this follow-up to assess current loss of cold response; do not imply current lingering sensitivity.",
   }),
   shared("askedAboutBitingPain", {
     id: "C4-IG-005",
@@ -733,6 +920,11 @@ const case04Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["medications"],
   }),
+  finding({ id: "C4-IG-007", name: "elicited-five-day-sequence", title: "Elicited Five-Day Course and Stop-Return Sequence", acceptedConcepts: ["five days", "stopped then returned", "pain returned", "last 48 hours"], legacyClinicalChecklistIds: ["clinical-1"] }),
+  finding({ id: "C4-IG-008", name: "elicited-constant-seven-of-ten-pain", title: "Elicited Constant 7/10 Pain", acceptedConcepts: ["constant pain", "7/10", "seven out of ten"], legacyClinicalChecklistIds: ["clinical-1"] }),
+  finding({ id: "C4-IG-009", name: "elicited-penicillin-hives", title: "Elicited Penicillin Hives Reaction", acceptedConcepts: ["penicillin causes hives", "hives from penicillin"], legacyPatientChecklistIds: ["allergy-reaction"], legacyClinicalChecklistIds: ["clinical-3"] }),
+  finding({ id: "C4-IG-010", name: "elicited-negative-infection-screen", title: "Elicited Negative Infection and Airway Screen", acceptedConcepts: ["no swelling", "no drainage", "no fever", "no difficulty swallowing", "no difficulty breathing"], legacyClinicalChecklistIds: ["clinical-2"] }),
+  finding({ id: "C4-IG-011", name: "elicited-access-and-tooth-goal", title: "Elicited Dental Access Barrier and Tooth-Saving Goal", acceptedConcepts: ["no dental insurance", "access will take time", "wants to save the tooth"], legacyPatientChecklistIds: ["dental-access", "patient-goals"] }),
   shared("offeredDentalAnesthesia", {
     id: "C4-PC-001",
     weight: 1,
@@ -763,6 +955,7 @@ const case04Criteria: FacultyRubricCriterion[] = [
     source: "faculty-clinical-checklist",
     acceptedConcepts: ["fever", "swelling", "spreading infection", "systemic illness"],
     reportLabel: "Explained when antibiotics would become indicated",
+    facultyNotes: "Delayed-prescription language remains pending faculty review and is not required or scored; assess reassessment and return precautions only.",
   }),
   shared("recommendedPromptDentalFollowUp", {
     id: "C4-MP-001",
@@ -770,6 +963,9 @@ const case04Criteria: FacultyRubricCriterion[] = [
     critical: false,
     provisionalWeight: true,
   }),
+  recommendation({ id: "C4-MP-002", name: "recommended-appropriate-analgesia", title: "Recommended Appropriate Analgesia", description: "Recommended an appropriate analgesic plan for severe dental pain.", acceptedConcepts: ["ibuprofen", "acetaminophen", "analgesia", "pain control"] }),
+  recommendation({ id: "C4-MP-003", name: "recommended-definitive-pulpal-treatment", title: "Recommended Root Canal or Extraction", description: "Recommended urgent definitive dental treatment with root-canal treatment or extraction based on dental evaluation.", acceptedConcepts: ["root canal", "endodontic treatment", "extraction", "definitive dental treatment"], critical: true }),
+  recommendation({ id: "C4-MP-004", name: "planned-around-access-barrier", title: "Addressed Dental Access Barrier", description: "Developed a practical urgent follow-up plan for a patient without dental insurance.", acceptedConcepts: ["dental access", "no insurance", "low-cost clinic", "urgent dental clinic", "financial assistance"] }),
   shared("askedAboutDentalFollowUpAccess", {
     id: "C4-PC-005",
     weight: 1,
@@ -812,10 +1008,10 @@ const case04Criteria: FacultyRubricCriterion[] = [
   }),
   finding({
     id: "C4-CF-003",
-    name: "elicited-spontaneous-unprovoked-pain",
-    title: "Elicited Spontaneous Unprovoked Pain",
+    name: "elicited-constant-current-pain",
+    title: "Elicited Constant Current Pain",
     legacyClinicalChecklistIds: ["clinical-4"],
-    acceptedConcepts: ["spontaneous pain", "unprovoked pain"],
+    acceptedConcepts: ["constant pain", "pain all the time", "unprovoked pain"],
   }),
   interpretation({
     id: "C4-CI-001",
@@ -824,6 +1020,8 @@ const case04Criteria: FacultyRubricCriterion[] = [
     description: "Recognized the case as urgent.",
     expectedValue: "urgent",
   }),
+  interpretation({ id: "C4-CI-005", name: "recognized-acute-apical-periodontitis", title: "Recognized Acute Apical Periodontitis", description: "Connected marked percussion and biting tenderness with acute apical periodontitis.", expectedValue: "acute apical periodontitis", legacyClinicalChecklistIds: ["clinical-5"] }),
+  interpretation({ id: "C4-CI-006", name: "recognized-no-current-abscess-or-systemic-infection", title: "Recognized No Current Abscess or Systemic Infection", description: "Recognized that swelling, fluctuance, purulence, fever, and systemic infection are absent and routine antibiotics are not indicated.", expectedValue: false, legacyClinicalChecklistIds: ["clinical-2"] }),
   interpretation({
     id: "C4-CI-002",
     name: "recognized-necrotic-pulp",
@@ -834,10 +1032,10 @@ const case04Criteria: FacultyRubricCriterion[] = [
   }),
   interpretation({
     id: "C4-CI-003",
-    name: "recognized-cold-pain-not-lingering",
-    title: "Recognized Cold Pain Is Not Exaggerated or Lingering",
-    description: "Recognized that exaggerated or lingering cold pain is not expected.",
-    expectedValue: false,
+    name: "recognized-loss-of-vitality-pattern",
+    title: "Recognized the Loss-of-Vitality Pattern",
+    description: "Connected prior severe cold pain that stopped with the current absent cold response and ongoing percussion pain.",
+    expectedValue: true,
     legacyClinicalChecklistIds: ["clinical-4"],
   }),
   interpretation({
@@ -850,20 +1048,25 @@ const case04Criteria: FacultyRubricCriterion[] = [
   }),
   criterion({
     id: "C4-PD-001",
-    name: "selected-maxillary-infiltration-if-supported",
-    title: "Selected Maxillary Infiltration When Supported",
-    description:
-      "Encoded the faculty-source maxillary infiltration choice as provisional because the repository case data must confirm the tooth-location assumption before active scoring.",
+    name: "offered-appropriate-mandibular-local-anesthesia",
+    title: "Offered Appropriate Mandibular Local Anesthesia",
+    description: "Offered a clinically appropriate dental block or local anesthesia for a left mandibular first molar; the patient may decline.",
     competency: "procedural-decision",
     evaluationMode: "procedural-choice",
     expectation: "required",
     source: "faculty-clinical-checklist",
     expectedValue: true,
+    acceptedConcepts: ["inferior alveolar nerve block", "mandibular block", "dental block", "local anesthesia"],
     reportLabel: "Selected the tooth-location appropriate anesthetic approach",
-    facultyNotes:
-      "Faculty/source clarification needed before this becomes active scoring.",
+    facultyNotes: "Credit the offer even if the standardized patient declines the block.",
   }),
   reviewedAvailableExamination({ id: "C4-EX-001" }),
+  recognizedExaminationFinding({ id: "C4-EX-002", name: "recognized-left-mandibular-location", title: "Recognized Left Mandibular First-Molar Location", acceptedConcepts: ["left mandibular first molar", "lower-left first molar", "left mandibular posterior tooth"] }),
+  recognizedExaminationFinding({ id: "C4-EX-003", name: "recognized-no-cold-response", title: "Recognized Absent Current Cold Response", acceptedConcepts: ["no response to cold", "absent cold response", "cold-negative"], critical: true }),
+  recognizedExaminationFinding({ id: "C4-EX-004", name: "recognized-percussion-biting-tenderness", title: "Recognized Marked Percussion and Biting Tenderness", acceptedConcepts: ["percussion tenderness", "biting tenderness", "tender to percussion"] }),
+  recognizedExaminationFinding({ id: "C4-EX-005", name: "recognized-large-filling-deep-caries", title: "Recognized Large Filling or Deep Caries", acceptedConcepts: ["large old filling", "deep caries", "deep carious lesion"] }),
+  recognizedExaminationFinding({ id: "C4-EX-006", name: "recognized-no-abscess-findings", title: "Recognized No Abscess Findings", acceptedConcepts: ["no swelling", "no fluctuance", "no purulence", "no pus", "no sinus tract"] }),
+  recognizedExaminationFinding({ id: "C4-EX-007", name: "recognized-soft-floor-patent-airway", title: "Recognized Soft Floor and Patent Airway", acceptedConcepts: ["soft floor of mouth", "patent airway", "normal voice", "no drooling"] }),
 ];
 
 const case05Criteria: FacultyRubricCriterion[] = [
@@ -899,8 +1102,8 @@ const case05Criteria: FacultyRubricCriterion[] = [
     id: "C5-IG-005",
     weight: 1,
     critical: false,
-    provisionalWeight: true,
-    facultyNotes: "No clear legacy Case 5 biting-pain checklist item exists.",
+    legacyPatientChecklistIds: ["biting-pain"],
+    legacyClinicalChecklistIds: ["clinical-1"],
   }),
   shared("askedAboutHomeMedicationUse", {
     id: "C5-IG-006",
@@ -909,6 +1112,11 @@ const case05Criteria: FacultyRubricCriterion[] = [
     legacyPatientChecklistIds: ["medications"],
     legacyClinicalChecklistIds: ["clinical-4"],
   }),
+  finding({ id: "C5-IG-007", name: "elicited-four-day-lower-left-course", title: "Elicited Four-Day Lower-Left Course", acceptedConcepts: ["four days", "lower-left", "lower left"], legacyClinicalChecklistIds: ["clinical-1"] }),
+  finding({ id: "C5-IG-008", name: "elicited-constant-deep-throbbing-nine-of-ten", title: "Elicited Constant Deep Throbbing 9/10 Pain", acceptedConcepts: ["constant", "deep", "throbbing", "9/10", "nine out of ten"], legacyPatientChecklistIds: ["pain-character"], legacyClinicalChecklistIds: ["clinical-1"] }),
+  finding({ id: "C5-IG-009", name: "elicited-spontaneous-nocturnal-pain", title: "Elicited Spontaneous Nocturnal Pain and Sleep Disruption", acceptedConcepts: ["spontaneous pain", "wakes at night", "sleep disruption", "cannot sleep"], legacyPatientChecklistIds: ["spontaneous-pain", "nocturnal-pain"], legacyClinicalChecklistIds: ["clinical-1"] }),
+  finding({ id: "C5-IG-010", name: "elicited-negative-infection-airway-screen", title: "Elicited Negative Infection and Airway Screen", acceptedConcepts: ["no fever", "no swelling", "no drainage", "no difficulty swallowing", "no difficulty breathing"], legacyPatientChecklistIds: ["swelling", "drainage", "systemic-symptoms", "airway"], legacyClinicalChecklistIds: ["clinical-3"] }),
+  finding({ id: "C5-IG-011", name: "elicited-access-smoking-and-goal", title: "Elicited Smoking, Access Barrier, and Tooth-Saving Goal", acceptedConcepts: ["half a pack", "no insurance", "cannot afford", "wants to save the tooth"], legacyPatientChecklistIds: ["social-history", "dental-access", "patient-goals"], legacyClinicalChecklistIds: ["clinical-4"] }),
   shared("offeredDentalAnesthesia", {
     id: "C5-PC-001",
     weight: 1,
@@ -933,6 +1141,10 @@ const case05Criteria: FacultyRubricCriterion[] = [
     critical: false,
     provisionalWeight: true,
   }),
+  recommendation({ id: "C5-MP-002", name: "recommended-appropriate-analgesia", title: "Recommended Appropriate Analgesia", description: "Recommended an appropriate analgesic plan for severe pulpal pain.", acceptedConcepts: ["ibuprofen", "acetaminophen", "analgesia", "pain control"] }),
+  recommendation({ id: "C5-MP-003", name: "recommended-root-canal-or-extraction", title: "Recommended Root Canal or Extraction", description: "Recommended urgent definitive dental treatment with root-canal treatment or extraction based on dental evaluation.", acceptedConcepts: ["root canal", "endodontic treatment", "extraction", "definitive dental treatment"], critical: true }),
+  recommendation({ id: "C5-MP-004", name: "planned-around-financial-access-barrier", title: "Addressed Financial and Insurance Barriers", description: "Developed a practical urgent dental plan around unemployment, lack of insurance, and affordability barriers.", acceptedConcepts: ["no insurance", "unemployed", "cannot afford", "low-cost clinic", "financial assistance", "dental access"] }),
+  recommendation({ id: "C5-MP-005", name: "provided-infection-safety-net", title: "Provided Infection and Airway Safety Net", description: "Advised reassessment for swelling, fever, drainage, swallowing or breathing difficulty, voice change, or drooling.", acceptedConcepts: ["swelling", "fever", "drainage", "difficulty swallowing", "difficulty breathing", "voice change", "drooling"] }),
   shared("askedAboutDentalFollowUpAccess", {
     id: "C5-PC-004",
     weight: 1,
@@ -981,6 +1193,7 @@ const case05Criteria: FacultyRubricCriterion[] = [
     legacyClinicalChecklistIds: ["clinical-1"],
     acceptedConcepts: ["throbbing pain"],
   }),
+  finding({ id: "C5-CF-005", name: "elicited-nocturnal-sleep-disruption", title: "Elicited Nocturnal Pain and Sleep Disruption", acceptedConcepts: ["wakes at night", "cannot sleep", "sleep disruption", "nocturnal pain"], legacyClinicalChecklistIds: ["clinical-1"] }),
   finding({
     id: "C5-CF-004",
     name: "elicited-spontaneous-unprovoked-pain",
@@ -996,6 +1209,7 @@ const case05Criteria: FacultyRubricCriterion[] = [
     description: "Recognized the case as urgent.",
     expectedValue: "urgent",
   }),
+  interpretation({ id: "C5-CI-006", name: "recognized-no-current-abscess-or-systemic-infection", title: "Recognized No Current Abscess or Systemic Infection", description: "Recognized the absence of swelling, purulence, fever, and systemic illness and therefore no current antibiotic indication.", expectedValue: false, legacyClinicalChecklistIds: ["clinical-3"] }),
   interpretation({
     id: "C5-CI-002",
     name: "recognized-irreversible-pulpitis",
@@ -1057,17 +1271,23 @@ const case05Criteria: FacultyRubricCriterion[] = [
       "Faculty should confirm whether exact formulation is a scored criterion or supporting concept.",
   }),
   reviewedAvailableExamination({ id: "C5-EX-001" }),
+  recognizedExaminationFinding({ id: "C5-EX-002", name: "recognized-left-mandibular-cavity", title: "Recognized Large Left Mandibular First-Molar Cavity", acceptedConcepts: ["large cavity", "left mandibular first molar", "lower-left first molar"] }),
+  recognizedExaminationFinding({ id: "C5-EX-003", name: "recognized-cold-provocation", title: "Recognized Cold-Provoked Pain", acceptedConcepts: ["cold worsens pain", "cold-provoked pain", "pain with cold"] }),
+  recognizedExaminationFinding({ id: "C5-EX-004", name: "recognized-lingering-cold-response", title: "Recognized Lingering Pain After Cold Removal", acceptedConcepts: ["lingers after cold", "does not stop immediately", "persists after cold removal"], critical: true }),
+  recognizedExaminationFinding({ id: "C5-EX-005", name: "recognized-slight-biting-percussion", title: "Recognized Slight Biting and Percussion Tenderness", acceptedConcepts: ["slight biting tenderness", "slight percussion tenderness", "slight biting and percussion"] }),
+  recognizedExaminationFinding({ id: "C5-EX-006", name: "recognized-no-abscess-findings", title: "Recognized No Swelling or Purulence", acceptedConcepts: ["no swelling", "no fluctuance", "no purulence", "no abscess"] }),
+  recognizedExaminationFinding({ id: "C5-EX-007", name: "recognized-normal-airway-findings", title: "Recognized Normal Airway-Related Findings", acceptedConcepts: ["soft floor of mouth", "midline uvula", "normal voice", "no drooling", "patent airway"] }),
 ];
 
 export const facultyRubrics = [
   {
     caseId: "case-01",
-    title: "Facial Swelling with Airway Risk",
+    title: "Ludwig's Angina with Impending Airway Compromise",
     criteria: case01Criteria,
   },
   {
     caseId: "case-02",
-    title: "Severe Tooth Pain with Facial Swelling",
+    title: "Upper-Right Odontogenic Abscess with Cellulitis and Systemic Infection",
     criteria: case02Criteria,
   },
   {
@@ -1082,7 +1302,7 @@ export const facultyRubrics = [
   },
   {
     caseId: "case-05",
-    title: "Persistent Toothache with Temperature Sensitivity",
+    title: "Symptomatic Irreversible Pulpitis of the Left Mandibular First Molar",
     criteria: case05Criteria,
   },
 ] satisfies FacultyRubric[];
