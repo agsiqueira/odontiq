@@ -120,8 +120,8 @@ export class NavigatorProvider implements AIProvider {
       systemPrompt: input.systemPrompt,
       messages: input.messages,
       temperature: 0.4,
-      maxTokens: 250,
-      stop: ["\nuser", "\nUser", "\nassistant", "\nAssistant"],
+      maxTokens: 120,
+      stop: ["\n\n", "turnPolicy.", "visibleFacts.", "Instruction "],
     });
   }
 }

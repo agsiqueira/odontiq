@@ -11,6 +11,22 @@ export const COMPLETED_ENCOUNTERS_STORAGE_KEY = "odontiq:completedEncounters";
 export const ENCOUNTER_SNAPSHOTS_STORAGE_KEY = "odontiq:encounterSnapshots";
 export const MAX_COMPLETED_ATTEMPTS_PER_CASE = 10;
 
+let activeStorageUserId: string | null = null;
+
+export function setLocalEncounterUserScope(clerkUserId: string | null) {
+  activeStorageUserId = clerkUserId;
+  if (typeof window === "undefined" || !clerkUserId) return;
+  discardUnscopedLegacyStorage();
+}
+
+export function getCompletedEncounterStorageKey(clerkUserId: string) {
+  return `odontiq:${encodeURIComponent(clerkUserId)}:completedEncounters`;
+}
+
+export function getEncounterSnapshotStorageKey(clerkUserId: string) {
+  return `odontiq:${encodeURIComponent(clerkUserId)}:encounterSnapshots`;
+}
+
 export type EncounterLifecycleStatus =
   | "not-started"
   | "in-progress"
@@ -54,8 +70,16 @@ export type LocalEncounterSummary = {
   };
 };
 
+export type AttemptPersistenceState = {
+  status: "pending-sync" | "synced" | "conflict";
+  attempts: number;
+  updatedAt: string;
+  lastError?: string;
+};
+
 export type CompletedEncounterAttempt = LocalEncounterSummary & {
   attemptId: string;
+  persistence: AttemptPersistenceState;
 };
 
 export type CompletedEncounterStore = Record<
@@ -109,12 +133,27 @@ export function createCompletedEncounterAttemptId() {
 }
 
 export function readCompletedEncounterStore(): CompletedEncounterStore {
-  if (typeof window === "undefined") return {};
-  const stored = window.localStorage.getItem(COMPLETED_ENCOUNTERS_STORAGE_KEY);
+  if (typeof window === "undefined" || !activeStorageUserId) return {};
+  const stored = window.localStorage.getItem(completedStorageKey());
   if (!stored) return {};
   try {
     const parsed = JSON.parse(stored) as unknown;
-    return isCompletedEncounterStore(parsed) ? parsed : {};
+    return isCompletedEncounterStore(parsed)
+      ? Object.fromEntries(
+          Object.entries(parsed).map(([caseId, attempts]) => [
+            caseId,
+            attempts.map((attempt) => ({
+              ...attempt,
+              persistence: attempt.persistence ?? {
+                status: "pending-sync" as const,
+                attempts: 0,
+                updatedAt: attempt.savedAt,
+                lastError: "legacy_sync_state_unknown",
+              },
+            })),
+          ]),
+        )
+      : {};
   } catch {
     return {};
   }
@@ -133,7 +172,7 @@ export function readCompletedEncounterAttempt(
 export function writeCompletedEncounterAttempt(
   attempt: CompletedEncounterAttempt,
 ) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !activeStorageUserId) return;
   const store = readCompletedEncounterStore();
   const attempts = [...(store[attempt.caseId] ?? [])];
   const existingIndex = attempts.findIndex(
@@ -144,12 +183,12 @@ export function writeCompletedEncounterAttempt(
 
   const untrimmedStore = { ...store, [attempt.caseId]: attempts };
   window.localStorage.setItem(
-    COMPLETED_ENCOUNTERS_STORAGE_KEY,
+    completedStorageKey(),
     JSON.stringify(untrimmedStore),
   );
   if (attempts.length > MAX_COMPLETED_ATTEMPTS_PER_CASE) {
     window.localStorage.setItem(
-      COMPLETED_ENCOUNTERS_STORAGE_KEY,
+      completedStorageKey(),
       JSON.stringify({
         ...untrimmedStore,
         [attempt.caseId]: attempts.slice(0, MAX_COMPLETED_ATTEMPTS_PER_CASE),
@@ -159,12 +198,12 @@ export function writeCompletedEncounterAttempt(
 }
 
 export function readEncounterSnapshots(): EncounterSnapshotIndex {
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || !activeStorageUserId) {
     return {};
   }
 
   const storedSnapshots = window.localStorage.getItem(
-    ENCOUNTER_SNAPSHOTS_STORAGE_KEY,
+    snapshotStorageKey(),
   );
 
   if (!storedSnapshots) {
@@ -185,7 +224,7 @@ export function readEncounterSnapshot(caseId: string) {
 }
 
 export function writeEncounterSnapshot(snapshot: LocalEncounterSnapshot) {
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || !activeStorageUserId) {
     return;
   }
 
@@ -193,20 +232,20 @@ export function writeEncounterSnapshot(snapshot: LocalEncounterSnapshot) {
 
   snapshots[snapshot.caseId] = snapshot;
   window.localStorage.setItem(
-    ENCOUNTER_SNAPSHOTS_STORAGE_KEY,
+    snapshotStorageKey(),
     JSON.stringify(snapshots),
   );
 }
 
 export function removeEncounterSnapshot(caseId: string) {
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || !activeStorageUserId) {
     return;
   }
 
   const snapshots = readEncounterSnapshots();
   delete snapshots[caseId];
   window.localStorage.setItem(
-    ENCOUNTER_SNAPSHOTS_STORAGE_KEY,
+    snapshotStorageKey(),
     JSON.stringify(snapshots),
   );
 }
@@ -249,8 +288,25 @@ function isCompletedEncounterStore(
           typeof (attempt as Partial<CompletedEncounterAttempt>).attemptId ===
             "string" &&
           typeof (attempt as Partial<CompletedEncounterAttempt>).savedAt ===
-            "string",
+            "string" &&
+          ((attempt as Partial<CompletedEncounterAttempt>).persistence ===
+            undefined ||
+            isAttemptPersistenceState(
+              (attempt as Partial<CompletedEncounterAttempt>).persistence,
+            )),
       ),
+  );
+}
+
+function isAttemptPersistenceState(
+  value: unknown,
+): value is AttemptPersistenceState {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const state = value as Partial<AttemptPersistenceState>;
+  return (
+    ["pending-sync", "synced", "conflict"].includes(state.status ?? "") &&
+    typeof state.attempts === "number" &&
+    typeof state.updatedAt === "string"
   );
 }
 
@@ -275,4 +331,17 @@ function isEncounterSnapshot(value: unknown): value is LocalEncounterSnapshot {
     Boolean(snapshot.timers) &&
     Boolean(snapshot.metadata)
   );
+}
+
+function completedStorageKey() {
+  return getCompletedEncounterStorageKey(activeStorageUserId ?? "");
+}
+
+function snapshotStorageKey() {
+  return getEncounterSnapshotStorageKey(activeStorageUserId ?? "");
+}
+
+function discardUnscopedLegacyStorage() {
+  window.localStorage.removeItem(COMPLETED_ENCOUNTERS_STORAGE_KEY);
+  window.localStorage.removeItem(ENCOUNTER_SNAPSHOTS_STORAGE_KEY);
 }

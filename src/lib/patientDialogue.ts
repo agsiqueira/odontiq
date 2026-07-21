@@ -5,6 +5,7 @@ export type PatientDialogueFormattingCategory =
   | "emphasis"
   | "code"
   | "label"
+  | "outer-quotes"
   | "spacing";
 
 export type PatientDialogueNormalizationResult = {
@@ -20,6 +21,23 @@ const HEADING = /^\s{0,3}#{1,6}\s*(.*?)\s*$/;
 
 export function normalizePatientDialogue(text: string): string {
   return normalizePatientDialogueWithDiagnostics(text).text;
+}
+
+const OUTER_QUOTE_PAIRS = new Map<string, string>([
+  ['"', '"'],
+  ["'", "'"],
+  ["“", "”"],
+  ["‘", "’"],
+]);
+
+export function normalizeOuterPatientQuoteWrapper(text: string): string {
+  const trimmed = text.trim();
+  if (trimmed.length < 2) return trimmed;
+  const expectedClosingQuote = OUTER_QUOTE_PAIRS.get(trimmed[0]);
+  if (!expectedClosingQuote || trimmed.at(-1) !== expectedClosingQuote) {
+    return trimmed;
+  }
+  return trimmed.slice(1, -1).trim();
 }
 
 export function normalizePatientDialogueWithDiagnostics(
@@ -99,7 +117,9 @@ export function normalizePatientDialogueWithDiagnostics(
     .split(/\n\s*\n+/)
     .map((paragraph) => paragraph.split("\n").filter(Boolean).join(" ").trim())
     .filter(Boolean);
-  const normalized = paragraphs.join("\n\n");
+  const dialogue = paragraphs.join("\n\n");
+  const normalized = normalizeOuterPatientQuoteWrapper(dialogue);
+  if (normalized !== dialogue) categories.add("outer-quotes");
 
   if (normalizedNewlines.trim() !== normalized) {
     if (/\n{3,}|^\s|\s$/.test(normalizedNewlines)) {

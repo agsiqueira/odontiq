@@ -1,5 +1,6 @@
 import "server-only";
 
+import { Prisma } from "@prisma/client";
 import { db } from "@/lib/persistence/repositories/prisma";
 
 export type AppUser = {
@@ -18,12 +19,18 @@ export class UserRepository {
     return db.user.findUnique({ where: { clerkUserId } });
   }
 
-  upsertByClerkUserId(clerkUserId: string): Promise<AppUser> {
-    return db.user.upsert({
-      where: { clerkUserId },
-      update: {},
-      create: { clerkUserId },
-    });
+  async createByClerkUserId(clerkUserId: string): Promise<AppUser> {
+    try {
+      return await db.user.create({ data: { clerkUserId } });
+    } catch (error) {
+      if (
+        error instanceof Prisma.PrismaClientKnownRequestError &&
+        error.code === "P2002"
+      ) {
+        return db.user.findUniqueOrThrow({ where: { clerkUserId } });
+      }
+      throw error;
+    }
   }
 }
 

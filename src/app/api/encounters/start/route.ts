@@ -20,13 +20,17 @@ export async function POST(request: Request) {
     return Response.json({ error: "invalid_case" }, { status: 400 });
   }
 
-  const user = await requireAppUser();
-  const encounter = await encounterService.getOrCreateActiveEncounter(
-    user.id,
-    caseId,
+  const fresh = Boolean(
+    body && typeof body === "object" && "fresh" in body &&
+      (body as { fresh?: unknown }).fresh === true,
   );
 
-  return Response.json(toEncounterResponse(encounter));
+  const user = await requireAppUser();
+  const encounter = fresh
+    ? await encounterService.startFreshEncounter(user.id, caseId)
+    : await encounterService.getOrCreateActiveEncounter(user.id, caseId);
+
+  return Response.json({ ...toEncounterResponse(encounter), fresh });
 }
 
 function toEncounterResponse(encounter: {

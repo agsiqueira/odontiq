@@ -61,6 +61,18 @@ class MemoryEncounterRepository implements EncounterRepositoryContract {
     return operation;
   }
 
+  async pauseActiveByUserAndCase(userId: string, caseId: string) {
+    let count = 0;
+    for (const encounter of this.encounters) {
+      if (encounter.userId === userId && encounter.caseId === caseId && encounter.status === "ACTIVE") {
+        encounter.status = "PAUSED";
+        encounter.updatedAt = new Date();
+        count += 1;
+      }
+    }
+    return count;
+  }
+
   async markCompleted(userId: string, encounterId: string) {
     const encounter = await this.findOwnedById(userId, encounterId);
     if (encounter?.status === "ACTIVE") {
@@ -124,6 +136,11 @@ async function main() {
   assert.notEqual(retry.id, first.id);
   assert.equal(first.status, "COMPLETED");
   assert.equal(repository.encounters.length, 2);
+
+  const fresh = await service.startFreshEncounter("user-1", "case-01");
+  assert.notEqual(fresh.id, retry.id);
+  assert.equal(retry.status, "PAUSED");
+  assert.equal(completed.status, "COMPLETED", "completed attempts remain untouched");
 
   const encounterSource = await readFile(
     "src/components/EncounterExperience.tsx",

@@ -679,6 +679,11 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         updatedAt: completedAt,
         completedAt,
       },
+      persistence: {
+        status: "pending-sync",
+        attempts: 0,
+        updatedAt: completedAt,
+      },
     };
 
     const encounterDocument = buildEncounterDocument({
@@ -1130,14 +1135,6 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     isCompletingRef.current = true;
     setIsCompleting(true);
 
-    if (!serverEncounterId) {
-      setEncounterSyncError(
-        "The encounter must sync before it can be completed. Please retry sync.",
-      );
-      isCompletingRef.current = false;
-      setIsCompleting(false);
-      return;
-    }
     const finishEvent = createEncounterEvent("finish_consultation_clicked", {
       coveredFacts: state.coveredFacts,
       coveredChecklistItems: state.coveredChecklistItems,
@@ -1156,6 +1153,32 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
     if (speechRecognition.isListening) {
       speechRecognition.toggleListening();
+    }
+
+    const completeLocallyAndShowFeedback = () => {
+      dispatch({
+        type: "recordEvent",
+        event: finishEvent,
+      });
+      const completedAttempt = saveLocalEncounterSummary(
+        finishEvent,
+        completedAttemptId,
+      );
+      router.push(
+        `/mentor/${patientCase.id}?attemptId=${encodeURIComponent(completedAttempt.attemptId)}`,
+      );
+    };
+
+    if (!serverEncounterId) {
+      console.warn("Local completion fallback activated.", {
+        event: "local_completion_fallback_activated",
+        caseId: patientCase.id,
+        attemptId: completedAttemptId,
+        correlationId: completedAttemptId,
+        reason: "server_encounter_unavailable",
+      });
+      completeLocallyAndShowFeedback();
+      return;
     }
 
     try {
@@ -1196,25 +1219,25 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         throw new Error("encounter_completion_sync_failed");
       }
 
-      dispatch({
-        type: "recordEvent",
-        event: finishEvent,
-      });
-      const completedAttempt = saveLocalEncounterSummary(
-        finishEvent,
-        completedAttemptId,
-      );
-      router.push(
-        `/mentor/${patientCase.id}?attemptId=${encodeURIComponent(completedAttempt.attemptId)}`,
-      );
+      completeLocallyAndShowFeedback();
     } catch {
-      if (encounterSyncServiceRef.current?.getState().status !== "conflict") {
+      if (encounterSyncServiceRef.current?.getState().status === "conflict") {
         setEncounterSyncError(
-          "Encounter completion could not be synced. Your work is saved locally; please try again.",
+          "This encounter changed on the server. Your local work is preserved and was not overwritten.",
         );
+        isCompletingRef.current = false;
+        setIsCompleting(false);
+        return;
       }
-      isCompletingRef.current = false;
-      setIsCompleting(false);
+
+      console.warn("Local completion fallback activated.", {
+        event: "local_completion_fallback_activated",
+        caseId: patientCase.id,
+        attemptId: completedAttemptId,
+        correlationId: completedAttemptId,
+        reason: "server_completion_unavailable",
+      });
+      completeLocallyAndShowFeedback();
     }
   };
 
@@ -1231,6 +1254,8 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
   return (
     <main
+      data-testid="encounter-root"
+      data-server-encounter-id={serverEncounterId}
       data-typing-mode={isTypingMode ? "true" : "false"}
       data-input-focused={isInputFocused ? "true" : "false"}
       className="encounter-root min-h-dvh bg-[var(--color-background)] text-[var(--color-text-primary)]"

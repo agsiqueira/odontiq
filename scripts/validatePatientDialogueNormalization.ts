@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   normalizePatientDialogue,
   normalizePatientDialogueWithDiagnostics,
+  normalizeOuterPatientQuoteWrapper,
 } from "../src/lib/patientDialogue";
 
 const cases = [
@@ -73,3 +74,26 @@ assert.deepEqual(
 console.log(
   `Patient dialogue normalization validation passed (${cases.length} cases).`,
 );
+
+const quoteCases: Array<[string, string]> = [
+  ['"My tooth hurts."', "My tooth hurts."],
+  ["'My tooth hurts.'", "My tooth hurts."],
+  ["“My tooth hurts.”", "My tooth hurts."],
+  ["‘My tooth hurts.’", "My tooth hurts."],
+  ['   "My tooth hurts."   ', "My tooth hurts."],
+  ['My wife said, "Go to the dentist."', 'My wife said, "Go to the dentist."'],
+  ['He called it the "worst pain ever."', 'He called it the "worst pain ever."'],
+  ["I said 'yes' when they asked.", "I said 'yes' when they asked."],
+  ['"My tooth hurts.', '"My tooth hurts.'],
+  ['My tooth hurts."', 'My tooth hurts."'],
+  ['""', ""],
+  ['"\'My tooth hurts.\'"', "'My tooth hurts.'"],
+];
+for (const [input, expected] of quoteCases) {
+  assert.equal(normalizeOuterPatientQuoteWrapper(input), expected, input);
+}
+
+const quotedDiagnostic = normalizePatientDialogueWithDiagnostics(' "My tooth hurts." ');
+assert.equal(quotedDiagnostic.text, "My tooth hurts.");
+assert(quotedDiagnostic.categories.includes("outer-quotes"));
+console.log(`Patient outer-quote normalization passed (${quoteCases.length} cases).`);

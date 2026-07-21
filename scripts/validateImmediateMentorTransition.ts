@@ -13,6 +13,7 @@ import {
   readCompletedEncounterAttempt,
   readEncounterSnapshot,
   removeEncounterSnapshot,
+  setLocalEncounterUserScope,
   writeCompletedEncounterAttempt,
   writeEncounterSnapshot,
   type CompletedEncounterAttempt,
@@ -33,6 +34,7 @@ const localStorage = {
 Object.assign(globalThis, {
   window: { localStorage, setTimeout },
 });
+setLocalEncounterUserScope("validation-user");
 
 const rubric = facultyRubrics.find((item) => item.caseId === "case-01");
 if (!rubric) throw new Error("Case 1 rubric is required.");
@@ -59,6 +61,7 @@ const completeEvaluation: FacultyRubricEvaluationState = {
 };
 
 function createSummary(attemptId = `attempt-${Date.now()}`): CompletedEncounterAttempt {
+  const savedAt = new Date().toISOString();
   return {
     attemptId,
     caseId,
@@ -67,8 +70,13 @@ function createSummary(attemptId = `attempt-${Date.now()}`): CompletedEncounterA
     coveredChecklistItems: [],
     encounterEvents: [],
     examinationsViewed: [],
-    savedAt: new Date().toISOString(),
+    savedAt,
     lifecycleStatus: "completed",
+    persistence: {
+      status: "pending-sync",
+      attempts: 0,
+      updatedAt: savedAt,
+    },
     facultyReportGeneration: createFacultyGenerationAttempt("pending"),
   };
 }

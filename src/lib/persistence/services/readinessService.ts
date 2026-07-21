@@ -3,9 +3,19 @@ export type ReadinessRepositoryContract = {
 };
 
 export class ReadinessService {
-  constructor(private readonly readiness: ReadinessRepositoryContract) {}
+  constructor(
+    private readonly readiness: ReadinessRepositoryContract,
+    private readonly circuit = new DatabaseCircuitBreaker(),
+  ) {}
 
   checkDatabaseConnection() {
-    return this.readiness.checkDatabaseConnection();
+    return executeIdempotentDatabaseRead({
+      operation: () => this.readiness.checkDatabaseConnection(),
+      circuit: this.circuit,
+    });
   }
 }
+import {
+  DatabaseCircuitBreaker,
+  executeIdempotentDatabaseRead,
+} from "../databaseResilience";

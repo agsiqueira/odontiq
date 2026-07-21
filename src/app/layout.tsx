@@ -1,5 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
+import { LocalEncounterStorageScope } from "@/components/LocalEncounterStorageScope";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>{children}</ClerkProvider>
+        <ClerkProvider>
+          <LocalEncounterStorageScope>{children}</LocalEncounterStorageScope>
+        </ClerkProvider>
       </body>
     </html>
   );

@@ -85,7 +85,11 @@ function InteractionMessageBubble({
   const isStudent = message.role === "student";
 
   return (
-    <div className={cn(isStudent && "ml-auto max-w-[92%]")}>
+    <div
+      className={cn(isStudent && "ml-auto max-w-[92%]")}
+      data-testid={`${message.role}-message`}
+      data-message-id={message.id}
+    >
       {hideLabel ? null : (
         <p
           className={cn(

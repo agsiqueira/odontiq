@@ -59,6 +59,14 @@ export class EncounterRepository {
     }
   }
 
+  async pauseActiveByUserAndCase(userId: string, caseId: string) {
+    const result = await db.encounter.updateMany({
+      where: { userId, caseId, status: EncounterStatus.ACTIVE },
+      data: { status: EncounterStatus.PAUSED },
+    });
+    return result.count;
+  }
+
   async markCompleted(userId: string, encounterId: string) {
     await db.encounter.updateMany({
       where: {

@@ -2,9 +2,11 @@ import assert from "node:assert/strict";
 
 import {
   COMPLETED_ENCOUNTERS_STORAGE_KEY,
+  getCompletedEncounterStorageKey,
   MAX_COMPLETED_ATTEMPTS_PER_CASE,
   readCompletedEncounterAttempt,
   readCompletedEncounterStore,
+  setLocalEncounterUserScope,
   writeCompletedEncounterAttempt,
   type CompletedEncounterAttempt,
 } from "../src/lib/localEncounter";
@@ -25,6 +27,7 @@ const localStorage = {
   },
 };
 Object.assign(globalThis, { window: { localStorage } });
+setLocalEncounterUserScope("clerk-user-one");
 
 function attempt(
   caseId: string,
@@ -42,6 +45,11 @@ function attempt(
     examinationsViewed: [],
     savedAt: timestamp,
     lifecycleStatus: "completed",
+    persistence: {
+      status: "pending-sync",
+      attempts: 0,
+      updatedAt: timestamp,
+    },
     facultyReportGeneration: {
       status: generationStatus,
       attemptId: `generation-${attemptId}`,
@@ -105,6 +113,30 @@ assert.equal(
   "Dashboard-style newest selection must use the first retained attempt.",
 );
 assert.equal(readCompletedEncounterStore()["case-02"][0].attemptId, "01");
-assert(values.has(COMPLETED_ENCOUNTERS_STORAGE_KEY));
+assert(values.has(getCompletedEncounterStorageKey("clerk-user-one")));
+
+setLocalEncounterUserScope("clerk-user-two");
+assert.equal(
+  readCompletedEncounterAttempt("case-01"),
+  null,
+  "a second authenticated user must not read the first user's attempts",
+);
+writeCompletedEncounterAttempt(attempt("case-04", "user-two"));
+setLocalEncounterUserScope("clerk-user-one");
+assert.equal(readCompletedEncounterAttempt("case-01")?.attemptId, "11");
+assert.equal(readCompletedEncounterAttempt("case-04"), null);
+
+const legacyAttempt = attempt("case-05", "legacy");
+values.set(
+  COMPLETED_ENCOUNTERS_STORAGE_KEY,
+  JSON.stringify({ "case-05": [legacyAttempt] }),
+);
+setLocalEncounterUserScope("legacy-owner");
+assert.equal(
+  readCompletedEncounterAttempt("case-05"),
+  null,
+  "unowned legacy data must not be assigned to the next authenticated user",
+);
+assert.equal(values.has(COMPLETED_ENCOUNTERS_STORAGE_KEY), false);
 
 console.log("Completed encounter storage validation passed.");

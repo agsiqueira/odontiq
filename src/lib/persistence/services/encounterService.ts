@@ -11,6 +11,7 @@ export type EncounterRepositoryContract = {
     encounterId: string,
   ): Promise<PersistedEncounter | null>;
   createActive(userId: string, caseId: string): Promise<PersistedEncounter>;
+  pauseActiveByUserAndCase(userId: string, caseId: string): Promise<number>;
   markCompleted(
     userId: string,
     encounterId: string,
@@ -47,6 +48,11 @@ export class EncounterService {
       if (concurrent) return concurrent;
       throw error;
     }
+  }
+
+  async startFreshEncounter(userId: string, caseId: string) {
+    await this.encounters.pauseActiveByUserAndCase(userId, caseId);
+    return this.encounters.createActive(userId, caseId);
   }
 
   async completeEncounter(userId: string, encounterId: string) {
