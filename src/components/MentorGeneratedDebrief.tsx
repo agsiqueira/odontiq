@@ -19,7 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useMentorSpeechPlayback } from "@/hooks/useMentorSpeechPlayback";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
-import { ensureCanonicalFacultyArtifacts } from "@/lib/facultyRubric/report/clientGeneration";
+import { persistCompletedAttemptToServer } from "@/lib/persistence/completedAttemptClient";
 
 type DebriefOutput = {
   summary: string;
@@ -128,9 +128,14 @@ export function MentorGeneratedDebrief({
 
   useEffect(() => {
     if (!attemptId) return;
-    void ensureCanonicalFacultyArtifacts({ caseId, attemptId }).catch(() => {
-      // Faculty report generation remains retryable and must not block the mentor.
-    });
+    const summary = readCompletedEncounterAttempt(caseId, attemptId);
+    if (summary?.persistence.status === "pending-sync") {
+      void persistCompletedAttemptToServer(summary)
+        .then((synced) => setLocalSummary(synced))
+        .catch(() => {
+          // The visible pending state remains available for a later retry.
+        });
+    }
   }, [attemptId, caseId]);
 
   useEffect(() => {
@@ -426,6 +431,16 @@ export function MentorGeneratedDebrief({
       }
       conversationFooter={
         <div className="px-5 pb-2">
+          {localSummary.persistence.status !== "synced" ? (
+            <p
+              role="status"
+              className="mb-2 rounded-lg bg-amber-50 px-3 py-2 text-xs font-medium text-amber-800"
+            >
+              {localSummary.persistence.status === "conflict"
+                ? "This attempt is saved on this device, but a server conflict needs resolution. Server data was not overwritten."
+                : "This attempt is saved on this device and is pending secure server synchronization."}
+            </p>
+          ) : null}
           {isSending ? (
             <p className="mt-1 px-1 text-xs font-medium text-[var(--color-text-secondary)]">
               Mentor is thinking...

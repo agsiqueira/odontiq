@@ -80,7 +80,7 @@ export function validateFacultyReport(input: {
     if (scoreCompetency.percentage !== matchingScore.percentage) {
       errors.push(`Competency percentage mismatch: ${scoreCompetency.competency}`);
     }
-    if (matchingScore.rawPercentage !== scoreCompetency.percentage) {
+    if (!equalNumber(matchingScore.rawPercentage, scoreCompetency.percentage)) {
       errors.push(`Competency raw percentage mismatch: ${scoreCompetency.competency}`);
     }
     const expectedStatus = getCompetencyStatus(scoreCompetency.percentage);
@@ -220,7 +220,7 @@ export function validateFacultyReport(input: {
     if (score.percentage !== input.score.percentage) {
       errors.push("Overall percentage does not match scorer output.");
     }
-    if (score.rawPercentage !== input.score.rawPercentage) {
+    if (!equalNumber(score.rawPercentage, input.score.rawPercentage)) {
       errors.push("Overall raw percentage does not match scorer output.");
     }
     if (input.report.passStatus !== input.score.passStatus) {
@@ -242,6 +242,11 @@ export function validateFacultyReport(input: {
     valid: errors.length === 0,
     errors,
   };
+}
+
+function equalNumber(left: number | null, right: number | null) {
+  if (left === null || right === null) return left === right;
+  return Math.abs(left - right) <= 1e-9;
 }
 
 function findDuplicates(values: string[]): string[] {

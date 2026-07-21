@@ -159,7 +159,7 @@ async function runCanonicalFacultyGeneration({
     facultyReport: undefined,
     facultyReportGeneration: attempt,
   };
-  writeCompletedSummary(startedSummary);
+  await writeCompletedSummary(startedSummary);
 
   try {
     const evaluation = await evaluate(startedSummary);
@@ -210,7 +210,7 @@ async function runCanonicalFacultyGeneration({
         updatedAt: new Date().toISOString(),
       },
     };
-    writeCompletedSummary(completedSummary);
+    await writeCompletedSummary(completedSummary);
     return { status: "complete", summary: completedSummary };
   } catch (error) {
     const latest =
@@ -232,7 +232,7 @@ async function runCanonicalFacultyGeneration({
           error: message,
         },
       };
-      writeCompletedSummary(failedSummary);
+      await writeCompletedSummary(failedSummary);
       return { status: "failed", summary: failedSummary, error: message };
     }
     return { status: "in-progress", summary: latest };
@@ -274,9 +274,7 @@ function hasValidCanonicalArtifacts(summary: CompletedEncounterAttempt) {
   );
 }
 
-function writeCompletedSummary(summary: CompletedEncounterAttempt) {
+async function writeCompletedSummary(summary: CompletedEncounterAttempt) {
   writeCompletedEncounterAttempt(summary);
-  void persistCompletedAttemptToServer(summary).catch(() => {
-    // Local artifacts remain authoritative for the current UI until server-backed reads ship.
-  });
+  await persistCompletedAttemptToServer(summary);
 }

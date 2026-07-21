@@ -6,7 +6,6 @@ import { useCallback, useEffect, useState } from "react";
 import { FacultyCaseReport } from "@/components/FacultyCaseReport";
 import { Button } from "@/components/ui/button";
 import { getCaseById } from "@/lib/cases";
-import { ensureCanonicalFacultyArtifacts } from "@/lib/facultyRubric/report/clientGeneration";
 import {
   buildCanonicalFacultyPdfFilename,
   generateCanonicalFacultyPdfBlob,
@@ -18,6 +17,7 @@ import {
   type CompletedEncounterAttempt,
 } from "@/lib/localEncounter";
 import type { ConversationMessage } from "@/lib/conversationEngine";
+import { persistCompletedAttemptToServer } from "@/lib/persistence/completedAttemptClient";
 
 type Status = "checking" | "generating" | "ready" | "missing" | "error";
 type ServerReportArtifacts = {
@@ -63,11 +63,21 @@ export function CanonicalCaseReport({
       }
       let candidate: CompletedEncounterAttempt | null = null;
       try {
-        const response = await fetch(
+        let response = await fetch(
           `/api/reports/${encodeURIComponent(attemptId)}`,
         );
-        const payload: unknown = await response.json().catch(() => undefined);
+        let payload: unknown = await response.json().catch(() => undefined);
         if (!response.ok || !isServerReportArtifacts(payload)) throw new Error();
+        if (!payload.evaluation || !payload.score || !payload.report) {
+          const local = readCompletedEncounterAttempt(caseId, attemptId);
+          if (local?.persistence.status === "pending-sync") {
+            await persistCompletedAttemptToServer(local);
+          }
+          setStatus("generating");
+          response = await fetch(`/api/reports/${encodeURIComponent(attemptId)}`, { method: "POST" });
+          payload = await response.json().catch(() => undefined);
+          if (!response.ok || !isServerReportArtifacts(payload)) throw new Error("server_report_generation_failed");
+        }
         if (payload.evaluation && payload.score && payload.report) {
           candidate = {
             attemptId,
@@ -79,6 +89,11 @@ export function CanonicalCaseReport({
             examinationsViewed: [],
             savedAt: payload.report.reportMetadata.generatedAt,
             lifecycleStatus: "completed",
+            persistence: {
+              status: "synced",
+              attempts: 0,
+              updatedAt: payload.report.reportMetadata.generatedAt,
+            },
             facultyRubricEvaluation: payload.evaluation,
             facultyRubricScore: payload.score,
             facultyReport: payload.report,
@@ -114,11 +129,7 @@ export function CanonicalCaseReport({
           generationStatus === "pending" ||
           generationStatus === "in-progress"
         ) {
-          setStatus("generating");
-          void ensureCanonicalFacultyArtifacts({ caseId, attemptId }).then((result) => {
-            setSummary(result.summary);
-            setStatus(result.status === "complete" ? "ready" : "error");
-          }).catch(() => setStatus("error"));
+          setStatus("error");
         } else {
           setStatus("error");
         }
@@ -137,13 +148,12 @@ export function CanonicalCaseReport({
     setIsRetrying(true);
     try {
       setStatus("generating");
-      const result = await ensureCanonicalFacultyArtifacts({
-        caseId,
-        attemptId: summary.attemptId,
-        forceRetry: true,
-      });
-      setSummary(result.summary);
-      setStatus(result.status === "complete" ? "ready" : "error");
+      const response = await fetch(`/api/reports/${encodeURIComponent(summary.attemptId)}`, { method: "POST" });
+      const payload: unknown = await response.json().catch(() => undefined);
+      if (!response.ok || !isServerReportArtifacts(payload) || !payload.evaluation || !payload.score || !payload.report) {
+        throw new Error("server_report_retry_failed");
+      }
+      window.location.reload();
     } catch (error) {
       if (process.env.NODE_ENV !== "production") {
         console.error("Canonical faculty report retry failed.", {
@@ -213,14 +223,18 @@ export function CanonicalCaseReport({
       <h1 className="text-xl font-semibold">
         {status === "missing"
           ? "No completed encounter"
-          : status === "generating"
+          : status === "checking"
+            ? "Checking report"
+            : status === "generating"
             ? "Generating report"
             : "Report unavailable"}
       </h1>
       <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
         {status === "missing"
           ? "Finish this consultation before opening its report."
-          : status === "generating"
+          : status === "checking"
+            ? "Loading the latest persisted report state."
+            : status === "generating"
             ? "Your canonical faculty report is still being generated."
             : "Report generation was interrupted. Please try again."}
       </p>

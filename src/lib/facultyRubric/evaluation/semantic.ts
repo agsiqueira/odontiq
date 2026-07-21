@@ -62,8 +62,8 @@ const semanticEvaluationModes = new Set([
   "procedural-choice",
 ]);
 
-const defaultBatchSize = 8;
-const semanticMaxTokens = 1_600;
+const defaultBatchSize = 4;
+const semanticMaxTokens = 2_400;
 
 export async function evaluateSemanticFacultyCriteria({
   input,
@@ -118,7 +118,9 @@ export async function evaluateSemanticFacultyCriteria({
           let response;
           try {
             response = await textGenerator({
-              systemPrompt: FACULTY_SEMANTIC_EVALUATION_SYSTEM_PROMPT,
+              systemPrompt: batchAttemptNumber === 1
+                ? FACULTY_SEMANTIC_EVALUATION_SYSTEM_PROMPT
+                : `${FACULTY_SEMANTIC_EVALUATION_SYSTEM_PROMPT}\n\nCORRECTION: The prior response could not be parsed. Return one complete JSON object with a results array. Do not use markdown fences, commentary, or trailing text.`,
               temperature: 0.1,
               maxTokens: semanticMaxTokens,
               messages: [
@@ -144,6 +146,19 @@ export async function evaluateSemanticFacultyCriteria({
             messages: normalizedInput.messages,
           });
           if (!parsed.success) {
+            if (process.env.NODE_ENV !== "production") {
+              console.error("Faculty semantic response parsing failed.", {
+                caseId: rubric.caseId,
+                attemptNumber: batchAttemptNumber,
+                batchNumber: batchIndex + 1,
+                requestedCriterionIds: batch.map((criterion) => criterion.id),
+                provider: response.diagnostics?.provider ?? "injected",
+                providerStatus: response.diagnostics?.status,
+                providerContentType: response.diagnostics?.contentType,
+                responseLength: response.text.length,
+                parseIssues: parsed.issues.map((issue) => issue.code),
+              });
+            }
             throw new Error(
               `semantic_batch_${batchIndex + 1}_invalid_top_level_response`,
             );

@@ -11,6 +11,7 @@ import { parseAndValidateAiFacultyEvaluationResponse } from "../src/lib/facultyR
 import { validateFacultyCriterionEvaluations } from "../src/lib/facultyRubric/evaluation/validation";
 import { buildFacultyReport } from "../src/lib/facultyRubric/report";
 import { buildCanonicalFacultyReportPresentation } from "../src/lib/facultyRubric/report/presentation";
+import { validatePersistedFacultyArtifacts } from "../src/lib/facultyRubric/report/artifactIntegrity";
 import { scoreFacultyRubricEvaluations } from "../src/lib/facultyRubric/scoring";
 import type { LocalEncounterSummary } from "../src/lib/localEncounter";
 
@@ -149,6 +150,31 @@ const report = buildFacultyReport({
   score,
   generatedAt: "2026-07-12T12:01:00.000Z",
 });
+const jsonRoundTrippedScore = JSON.parse(JSON.stringify(score)) as typeof score;
+const jsonRoundTrippedReport = JSON.parse(JSON.stringify(report)) as typeof report;
+assert.notEqual(jsonRoundTrippedScore.rawPercentage, null);
+jsonRoundTrippedScore.rawPercentage =
+  (jsonRoundTrippedScore.rawPercentage ?? 0) + Number.EPSILON;
+jsonRoundTrippedReport.overallScore.rawPercentage =
+  (jsonRoundTrippedReport.overallScore.rawPercentage ?? 0) + Number.EPSILON;
+const numericRoundTripIntegrity = validatePersistedFacultyArtifacts({
+    caseId,
+    evaluation: {
+      caseId,
+      rubricVersion: score.rubricVersion,
+      transcriptRevision: "numeric-round-trip",
+      status: "complete",
+      evaluations: completedEvaluations,
+      evaluatedAt: "2026-07-12T12:00:02.000Z",
+    },
+    score: jsonRoundTrippedScore,
+    report: jsonRoundTrippedReport,
+  });
+assert.equal(
+  numericRoundTripIntegrity.status,
+  "valid",
+  `Harmless JSON floating-point round trips must not invalidate a persisted report: ${numericRoundTripIntegrity.errors.join(",")}`,
+);
 assert.equal(report.criterionResults.length, supportedCriterionIds.length);
 const summary: LocalEncounterSummary = {
   ...encounter,
@@ -212,6 +238,33 @@ const reportComponent = await readFile(
 assert(
   reportComponent.includes("Report generation was interrupted. Please try again."),
   "True technical failure must retain the interrupted report message.",
+);
+
+const semanticEvaluator = await readFile(
+  "src/lib/facultyRubric/evaluation/semantic.ts",
+  "utf8",
+);
+assert(
+  semanticEvaluator.includes("const defaultBatchSize = 4") &&
+    semanticEvaluator.includes("const semanticMaxTokens = 2_400"),
+  "Semantic evaluation must bound smaller batches with sufficient structured-output capacity.",
+);
+assert(
+  semanticEvaluator.includes("The prior response could not be parsed"),
+  "The second semantic attempt must include a corrective JSON-only instruction.",
+);
+
+const clientGeneration = await readFile(
+  "src/lib/facultyRubric/report/clientGeneration.ts",
+  "utf8",
+);
+assert(
+  clientGeneration.includes("await persistCompletedAttemptToServer(summary)"),
+  "Canonical artifact generation must await durable persistence.",
+);
+assert(
+  !clientGeneration.includes("void persistCompletedAttemptToServer(summary)"),
+  "Canonical artifact persistence must not be fire-and-forget.",
 );
 
 console.log("Canonical report-generation regression validation passed.");

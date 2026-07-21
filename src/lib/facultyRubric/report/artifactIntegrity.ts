@@ -269,6 +269,9 @@ function compareScoreField<K extends keyof FacultyRubricScore>(
   field: K,
   errors: string[],
 ) {
+  if (typeof actual[field] === "number" && typeof expected[field] === "number") {
+    if (Math.abs(actual[field] - expected[field]) <= 1e-9) return;
+  }
   if (actual[field] !== expected[field]) {
     errors.push(`score-field-mismatch:${String(field)}`);
   }
