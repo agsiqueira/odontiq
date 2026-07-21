@@ -60,6 +60,7 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
     "c3.nkda": /\bno known (?:drug|medication)?\s*allerg|\b(?:don't|do not) have (?:any )?(?:known )?(?:drug )?allerg|\bnot allergic\b/i,
     "c2.swelling": /\bright\b.{0,25}\b(?:cheek|face)\b.{0,25}\b(?:swollen|swelling)\b|\b(?:swollen|swelling)\b.{0,25}\bright\b.{0,20}\b(?:cheek|face|side)\b/i,
     "c4.severity": /(?:^|\b)(?:about |around |approximately )?(?:seven|7)(?:\s*(?:\/|out of)\s*10)?(?:\b|[.!?]?$)/i,
+    "c1.opioid": /\b(?:no|not|never|haven't|have not|don't|do not)\b.{0,55}\b(?:opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|misus(?:e|ed)|abus(?:e|ed)|dependen(?:ce|t)|addict(?:ion|ed))\b|\b(?:opioids?|opiates?|narcotics?)\b.{0,35}\b(?:no|not|never|haven't|have not|don't|do not)\b/i,
   };
   return rules[fact.id]?.test(response) ?? true;
 }
@@ -98,7 +99,20 @@ function findStableFactContradiction(
     return "contradiction of Case 5 smoking history";
   }
 
+  if (facts.some((fact) => fact.id === "c1.opioid") && affirmsOpioidHistory(response)) {
+    return "contradiction of Case 1 no-opioid history";
+  }
+
   return undefined;
+}
+
+function affirmsOpioidHistory(response: string): boolean {
+  const opioid = /\b(?:opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?)))\b/i;
+  const misuse = /\b(?:opioid\s+)?(?:misus(?:e|ed)|abus(?:e|ed)|dependen(?:ce|t)|addict(?:ion|ed))\b/i;
+  if (!opioid.test(response) && !misuse.test(response)) return false;
+  const denial = /\b(?:no|not|never|haven't|have not|hadn't|didn't|did not|don't|do not|without)\b[^.!?]{0,65}\b(?:opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|misus(?:e|ed)|abus(?:e|ed)|dependen(?:ce|t)|addict(?:ion|ed))\b/i;
+  if (denial.test(response)) return false;
+  return /\b(?:yes|i(?:'ve| have| had| used| took| was| am)|history of|used to)\b/i.test(response);
 }
 
 function findCanonicalLocationContradiction(response: string, facts: readonly PatientDisclosureFact[]): string | undefined {

@@ -64,6 +64,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   swelling_location: /\b(where|location|side|under.*jaw|submandibular|sublingual)\b.*\b(swell|swelling)|\b(swell|swelling)\b.*\b(where|location|side|under.*jaw|submandibular|sublingual)\b/i,
   swelling_progression: /\b(swell|swelling)\b.*\b(worse|worsen|spread|progress|change|fast|quick)|\b(worse|worsen|spread|progress|change|fast|quick)\b.*\b(swell|swelling)\b/i,
   medical_conditions: /\b(medical|health)\b.*\b(history|condition|problem)|\b(diabetes|hypertension|high blood pressure)\b/i,
+  opioid_history: /\b(opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|opioid (?:use|misuse|abuse|dependence|addiction))\b/i,
   medications: /\b(medication|medicine|meds|what do you take|taking)\b/i,
   allergies: /\b(allerg|penicillin)\b/i,
   smoking: /\b(smok|smoking|tobacco|cigarette)\b/i,
@@ -685,6 +686,10 @@ function selectCaseSpecificAllowedFacts({
   facts: InternalFact[];
   question: string;
 }): InternalFact[] | undefined {
+  if (caseId === "case-01" && QUESTION_INTENT_PATTERNS.opioid_history.test(question)) {
+    return facts.filter((fact) => fact.id === "c1.opioid");
+  }
+
   if (caseId === "case-03") {
     const normalizedQuestion = normalizeText(question);
     if (/\bwhat medications? did you take\b|\bwhat did you take\b/.test(normalizedQuestion)) {

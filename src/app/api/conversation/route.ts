@@ -263,6 +263,9 @@ function patientFactFallback(
     "c3.nkda": "I have no known drug allergies.",
     "c2.swelling": "My right cheek is swollen and has been getting worse over about the last day.",
     "c4.severity": "I would rate the pain a seven out of ten.",
+    "c1.opioid": /\b(?:misus|abus|dependen|addict)\b/i.test(studentMessage)
+      ? "No, I have no history of opioid misuse or dependence."
+      : "No, I have never used opioids or narcotics.",
     "c4.location": "The pain is in my lower-left first molar.",
     "c5.location": "The pain is in my lower-left tooth area.",
     "c4.penicillin": "Penicillin gives me hives.",
@@ -289,6 +292,7 @@ function requiredFactsForTurn(
   const asksIbuprofenTolerance = /\b(?:ibuprofen|advil|motrin|nsaid)\b/i.test(studentMessage);
   const asksSwelling = /\b(?:swell|swollen|swelling|puffy|edema)\b/i.test(studentMessage);
   const asksNumericSeverity = /\b(?:out of ten|\/10|pain scale|rate (?:the |your |it)|how (?:bad|severe)|severity)\b/i.test(studentMessage);
+  const asksOpioidHistory = /\b(?:opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|opioid (?:use|misuse|abuse|dependence|addiction))\b/i.test(studentMessage);
   return visible.filter((fact) =>
     (asksDuration && /\.duration$/.test(fact.id)) ||
     (asksLocation && /\.location$/.test(fact.id)) ||
@@ -299,6 +303,7 @@ function requiredFactsForTurn(
     (asksIbuprofenTolerance && fact.id === "c3.ibuprofen")
     || (asksSwelling && fact.id === "c2.swelling")
     || (asksNumericSeverity && fact.id === "c4.severity")
+    || (asksOpioidHistory && fact.id === "c1.opioid")
   );
 }
 

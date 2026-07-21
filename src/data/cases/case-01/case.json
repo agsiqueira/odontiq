@@ -75,6 +75,7 @@
       {"id":"c1.conditions","topic":"medical_history","text":"The patient has type 2 diabetes and hypertension.","questionIntents":["medical_conditions"]},
       {"id":"c1.metformin","topic":"medications","text":"The patient takes metformin.","questionIntents":["medications"]},
       {"id":"c1.lisinopril","topic":"medications","text":"The patient takes lisinopril.","questionIntents":["medications"]},
+      {"id":"c1.opioid","topic":"medical_history","text":"The patient has no history of opioid or narcotic use, opioid misuse, or opioid dependence.","questionIntents":["opioid_history"]},
       {"id":"c1.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
       {"id":"c1.smoking","topic":"social_history","text":"The patient smokes about one pack per day.","questionIntents":["smoking"]},
       {"id":"c1.access","topic":"dental_history","text":"The patient has no insurance and cannot afford the needed extraction.","questionIntents":["dental_access"]}

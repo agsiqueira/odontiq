@@ -148,6 +148,32 @@ const case5Smoking: PatientDisclosureFact = { id: "c5.smoking", topic: "social_h
 assert.equal(assessPatientOutputIntegrity("I don't smoke.", [case5Smoking]).reason, "contradiction of Case 5 smoking history");
 assert.equal(assessPatientOutputIntegrity("I smoke about half a pack per day.", [case5Smoking], [], [case5Smoking]).valid, true);
 
+const case1Opioid: PatientDisclosureFact = { id: "c1.opioid", topic: "medical_history", text: "The patient has no history of opioid or narcotic use, opioid misuse, or opioid dependence." };
+for (const valid of [
+  "No, I have never used opioids.",
+  "I have not taken narcotics before.",
+  "No, I have no history of prescription opioid misuse.",
+  "I have never been dependent on opioids.",
+]) assert.equal(assessPatientOutputIntegrity(valid, [case1Opioid], [], [case1Opioid]).valid, true, valid);
+for (const invalid of [
+  "Yes, I have used opioids before.",
+  "I took narcotics in the past.",
+  "I have a history of prescription painkiller use.",
+  "I was dependent on opioids.",
+  "I take metformin and lisinopril.",
+]) assert.equal(assessPatientOutputIntegrity(invalid, [case1Opioid], [], [case1Opioid]).valid, false, invalid);
+assert.equal(assessPatientOutputIntegrity("Yes, I have used opioids before.", [case1Opioid]).reason, "contradiction of Case 1 no-opioid history");
+
+const opioidFallback = await generatePatientRoleSafeResponse({
+  initialOutput: "Yes, I have taken narcotics before.",
+  visibleFacts: [case1Opioid],
+  requiredFacts: [case1Opioid],
+  retry: async () => "I take metformin and lisinopril.",
+  fallbackText: "No, I have never used opioids or narcotics.",
+});
+assert.equal(opioidFallback.repeatedDrift, true);
+assert.equal(opioidFallback.text, "No, I have never used opioids or narcotics.");
+
 let quoteRetryCount = 0;
 const unquoted = await generatePatientRoleSafeResponse({
   initialOutput: '  "My wife said, "You need to see a dentist.""  ',
