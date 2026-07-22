@@ -1,7 +1,7 @@
 {
   "metadata": { "schemaVersion": "1.0", "id": "case-01", "estimatedTime": "18 min", "urgency": "Emergency", "status": "in-progress", "score": null, "chiefComplaint": "I have a bad toothache, my jaw is swollen, and I am having trouble swallowing and breathing when I lie down.", "title": "Ludwig's Angina with Impending Airway Compromise" },
   "patient": { "name": "Amara Johnson", "age": 52, "sex": "Not specified" },
-  "voicePreference": { "provider": "navigator", "gender": "female", "ageGroup": "adult", "bodyHabitus": "heavier_set", "tone": "strained", "speakingStyle": "short_muffled", "demeanor": ["ill", "anxious", "cooperative", "prefers_upright"], "preferredVoiceId": "af_sarah", "fallbackVoices": [{ "voiceId": "am_michael", "speed": 0.92 }, { "voiceId": "am_adam", "speed": 0.9 }], "speed": 0.8 },
+  "voicePreference": { "provider": "navigator", "gender": "female", "ageGroup": "adult", "bodyHabitus": "heavier_set", "tone": "strained", "speakingStyle": "short_muffled", "demeanor": ["ill", "anxious", "cooperative", "prefers_upright"], "preferredVoiceId": "am_adam", "fallbackVoices": [{ "voiceId": "am_michael", "speed": 0.92 }, { "voiceId": "am_adam", "speed": 0.9 }], "speed": 0.8 },
   "assets": {
     "rest": "/patients/case-01/case-01-amara-johnson-v4.png", "talking": "/patients/case-01/talking-v4.mp4",
     "examinations": [
