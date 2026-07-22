@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { useMentorSpeechPlayback } from "@/hooks/useMentorSpeechPlayback";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import { persistCompletedAttemptToServer } from "@/lib/persistence/completedAttemptClient";
+import { ensureCanonicalFacultyArtifacts } from "@/lib/facultyRubric/report/clientGeneration";
 
 type DebriefOutput = {
   summary: string;
@@ -205,6 +206,9 @@ export function MentorGeneratedDebrief({
       isSendingRef.current = false;
       spokenOpeningKeyRef.current = null;
 
+      if (attemptId) {
+        void ensureCanonicalFacultyArtifacts({ caseId, attemptId });
+      }
       void generateDebrief({ summary, controller })
         .then((response) => {
           if (!controller || controller.signal.aborted) {

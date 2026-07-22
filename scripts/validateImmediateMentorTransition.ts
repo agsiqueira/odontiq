@@ -33,6 +33,16 @@ const localStorage = {
 };
 Object.assign(globalThis, {
   window: { localStorage, setTimeout },
+  fetch: async (input: string | URL | Request) => {
+    const url = String(input);
+    const payload = url.includes("/reconcile")
+      ? { success: true, encounterId: "mentor-validation-encounter", duplicate: false }
+      : { success: true };
+    return new Response(JSON.stringify(payload), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  },
 });
 setLocalEncounterUserScope("validation-user");
 
@@ -94,8 +104,13 @@ const deferredEvaluation = new Promise<FacultyRubricEvaluationState>(
   },
 );
 let evaluationCalls = 0;
+let markEvaluationStarted!: () => void;
+const evaluationStarted = new Promise<void>((resolve) => {
+  markEvaluationStarted = resolve;
+});
 const evaluate = async () => {
   evaluationCalls += 1;
+  markEvaluationStarted();
   return deferredEvaluation;
 };
 const first = ensureCanonicalFacultyArtifacts({
@@ -109,6 +124,7 @@ const duplicate = ensureCanonicalFacultyArtifacts({
   evaluate,
 });
 assert.equal(first, duplicate, "Concurrent mentor/remount calls must share one evaluation.");
+await evaluationStarted;
 assert.equal(evaluationCalls, 1);
 resolveEvaluation(completeEvaluation);
 const completed = await first;

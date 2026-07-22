@@ -1,9 +1,9 @@
 {
   "metadata": { "schemaVersion": "1.0", "id": "case-01", "estimatedTime": "18 min", "urgency": "Emergency", "status": "in-progress", "score": null, "chiefComplaint": "I have a bad toothache, my jaw is swollen, and I am having trouble swallowing and breathing when I lie down.", "title": "Ludwig's Angina with Impending Airway Compromise" },
-  "patient": { "name": "Amara Johnson", "age": 52, "sex": "Female" },
+  "patient": { "name": "Amara Johnson", "age": 52, "sex": "Not specified" },
   "voicePreference": { "provider": "navigator", "gender": "female", "ageGroup": "adult", "bodyHabitus": "heavier_set", "tone": "strained", "speakingStyle": "short_muffled", "demeanor": ["ill", "anxious", "cooperative", "prefers_upright"], "preferredVoiceId": "af_sarah", "fallbackVoices": [{ "voiceId": "am_michael", "speed": 0.92 }, { "voiceId": "am_adam", "speed": 0.9 }], "speed": 0.8 },
   "assets": {
-    "rest": "/patients/case-01/case-01-amara-johnson-v3.png", "talking": "/patients/case-01/talking-v3.mp4",
+    "rest": "/patients/case-01/case-01-amara-johnson-v4.png", "talking": "/patients/case-01/talking-v4.mp4",
     "examinations": [
       { "id": "vital-signs", "title": "Vital Signs (on arrival)", "type": "vital-signs", "findings": [{"label":"Temperature","value":"38.6°C (101.5°F)"},{"label":"Heart Rate","value":"112 bpm"},{"label":"Blood Pressure","value":"142/86 mmHg"},{"label":"Respiratory Rate","value":"24 breaths/min"},{"label":"Oxygen Saturation","value":"94% on room air"}] },
       { "id": "airway-examination", "title": "Airway and Head-and-Neck Examination", "type": "clinical-findings", "findings": [{"label":"General appearance","value":"Ill-appearing, anxious, and sitting upright; unable to tolerate lying flat"},{"label":"Submandibular and sublingual spaces","value":"Marked bilateral swelling with induration and tenderness"},{"label":"Floor of mouth","value":"Tense and board-like"},{"label":"Tongue","value":"Elevated and posteriorly displaced"},{"label":"Voice and secretions","value":"Muffled voice with drooling"},{"label":"Breathing","value":"Increased work of breathing with mild inspiratory stridor"},{"label":"External fluctuance","value":"No discrete fluctuance appreciated"},{"label":"Cardiovascular","value":"Tachycardic with regular rhythm"}] },
@@ -57,7 +57,11 @@
   ],
   "supportingInfo": {
     "patientFacts": [
-      {"id":"c1.pain","topic":"pain","text":"The pain began as a dull toothache and progressed to 8/10 despite over-the-counter analgesics; the exact drug and dose are not known.","questionIntents":["pain"]},
+      {"id":"c1.pain","topic":"pain","text":"The pain began gradually as a dull toothache and progressed rapidly despite over-the-counter analgesics.","questionIntents":["pain_quality"]},
+      {"id":"c1.initial-severity","topic":"pain","text":"The initial dull toothache was approximately 3/10.","questionIntents":["initial_pain_severity"]},
+      {"id":"c1.severity","topic":"pain","text":"The current pain is 8/10.","questionIntents":["pain_severity"]},
+      {"id":"c1.onset-uncertain","topic":"onset_duration","text":"The patient does not know the exact original onset time; the acute worsening dental pain has lasted four days.","questionIntents":["onset_certainty"]},
+      {"id":"c1.otc-unknown","topic":"medications","text":"The patient tried an over-the-counter pain medicine but does not know or cannot identify the exact product or dose.","questionIntents":["otc_identity"]},
       {"id":"c1.duration","topic":"onset_duration","text":"The left lower molar pain has worsened over four days.","questionIntents":["duration"]},
       {"id":"c1.location","topic":"location","text":"The bad tooth is a decayed left mandibular molar.","questionIntents":["location"]},
       {"id":"c1.swelling-location","topic":"swelling","text":"The swelling is bilateral under the jaw and under the tongue.","questionIntents":["swelling_location"]},
@@ -66,21 +70,33 @@
       {"id":"c1.liquids","topic":"medical_history","text":"The patient cannot swallow liquids normally.","questionIntents":["swallowing_liquids"]},
       {"id":"c1.dyspnea","topic":"medical_history","text":"The patient feels short of breath.","questionIntents":["breathing"]},
       {"id":"c1.dyspnea-supine","topic":"medical_history","text":"Breathing becomes worse when lying flat, with a choking sensation, so the patient must sit upright.","questionIntents":["positional_breathing"]},
+      {"id":"c1.airway-duration","topic":"onset_duration","text":"Difficulty swallowing and shortness of breath when lying down began approximately 12 hours ago.","questionIntents":["airway_duration"]},
+      {"id":"c1.upright-breathing","topic":"medical_history","text":"The patient is not short of breath while sitting upright.","questionIntents":["upright_breathing"]},
       {"id":"c1.drooling","topic":"medical_history","text":"The patient is drooling.","questionIntents":["drooling"]},
       {"id":"c1.voice","topic":"medical_history","text":"The patient's voice sounds muffled.","questionIntents":["voice_change"]},
       {"id":"c1.noisy-breathing","topic":"medical_history","text":"The patient's breathing has started making a slight noise.","questionIntents":["noisy_breathing"]},
       {"id":"c1.tongue","topic":"medical_history","text":"The patient feels the tongue is pushed upward.","questionIntents":["tongue_position"]},
-      {"id":"c1.fever","topic":"medical_history","text":"The patient has felt feverish and very hot but did not measure a temperature at home.","questionIntents":["fever"]},
+      {"id":"c1.fever","topic":"medical_history","text":"The patient has felt subjectively feverish and very hot.","questionIntents":["fever"]},
+      {"id":"c1.home-temperature","topic":"medical_history","text":"The patient did not measure a temperature at home and does not know an exact home temperature.","questionIntents":["temperature_checked"]},
+      {"id":"c1.chest-pain","topic":"medical_history","text":"The patient does not have chest pain.","questionIntents":["chest_pain"]},
       {"id":"c1.chills","topic":"medical_history","text":"The patient has had chills.","questionIntents":["chills"]},
-      {"id":"c1.conditions","topic":"medical_history","text":"The patient has type 2 diabetes and hypertension.","questionIntents":["medical_conditions"]},
+      {"id":"c1.diabetes","topic":"medical_history","text":"The patient has type 2 diabetes mellitus.","questionIntents":["medical_conditions"]},
+      {"id":"c1.hypertension","topic":"medical_history","text":"The patient has hypertension.","questionIntents":["medical_conditions"]},
       {"id":"c1.metformin","topic":"medications","text":"The patient takes metformin.","questionIntents":["medications"]},
       {"id":"c1.lisinopril","topic":"medications","text":"The patient takes lisinopril.","questionIntents":["medications"]},
       {"id":"c1.opioid","topic":"medical_history","text":"The patient has no history of opioid or narcotic use, opioid misuse, or opioid dependence.","questionIntents":["opioid_history"]},
+      {"id":"c1.ibuprofen","topic":"medications","text":"The patient has no contraindication to ibuprofen, Motrin, or Advil.","questionIntents":["ibuprofen_tolerance"]},
+      {"id":"c1.prior-antibiotics-unknown","topic":"medications","text":"Whether the patient previously took antibiotics for this dental problem is not established; the patient does not know or recall.","questionIntents":["prior_antibiotics"]},
       {"id":"c1.nkda","topic":"allergies","text":"The patient has no known drug allergies and no penicillin allergy.","questionIntents":["allergies"]},
       {"id":"c1.smoking","topic":"social_history","text":"The patient smokes about one pack per day.","questionIntents":["smoking"]},
+      {"id":"c1.alcohol","topic":"social_history","text":"The patient does not use alcohol.","questionIntents":["alcohol_use"]},
+      {"id":"c1.illicit-drugs","topic":"social_history","text":"The patient does not use illicit drugs.","questionIntents":["illicit_drug_use"]},
+      {"id":"c1.prior-root-canal-unknown","topic":"dental_history","text":"Whether the affected tooth previously had root-canal treatment is not established; the patient does not know or recall.","questionIntents":["prior_root_canal"]},
+      {"id":"c1.prior-extraction-unknown","topic":"dental_history","text":"Whether the patient has any prior extraction history is not established; the patient does not know or recall.","questionIntents":["prior_extraction"]},
       {"id":"c1.access","topic":"dental_history","text":"The patient has no insurance and cannot afford the needed extraction.","questionIntents":["dental_access"]}
-      ,{"id":"c1.cold","topic":"pain","text":"The tooth has occasionally been sensitive to cold.","questionIntents":["thermal"]}
-      ,{"id":"c1.biting","topic":"pain","text":"Pressure from biting has occasionally made the tooth hurt.","questionIntents":["biting"]}
+      ,{"id":"c1.cold","topic":"pain","text":"The tooth was sensitive to cold, so the patient avoided cold triggers.","questionIntents":["thermal"]}
+      ,{"id":"c1.biting","topic":"pain","text":"Biting pressure hurt the tooth, so the patient avoided biting on it.","questionIntents":["biting"]}
+      ,{"id":"c1.dental-attempt","topic":"dental_history","text":"The patient knew the tooth needed treatment and tried to see a dentist.","questionIntents":["dental_visit_attempt"]}
     ],
     "history": {"onset":"The toothache began gradually and then worsened quickly.","duration":"Four days of worsening dental pain; swallowing and breathing symptoms progressed over approximately 12 hours.","pain":"Dull left lower molar pain progressed to 8/10 despite unspecified over-the-counter analgesics.","medications":"Takes metformin and lisinopril; exact over-the-counter analgesic and dose are not known.","allergies":"No known drug allergies and no penicillin allergy.","medicalHistory":"Type 2 diabetes and hypertension; no known opioid-use history and no ibuprofen contraindication.","dentalHistory":"Poor dentition with a decayed left mandibular molar that needs extraction.","socialHistory":"Smokes about one pack per day; no alcohol or illicit drug use; no insurance and cannot afford extraction."},
     "hpiFacts": ["Four days of worsening left lower molar pain.","Rapidly progressive swelling under the jaw and tongue.","Dysphagia and dyspnea developed over approximately 12 hours.","Dull pain progressed to 8/10 despite unspecified over-the-counter analgesics.","Drooling and muffled voice are present.","Cannot lie flat because of choking and breathlessness.","Fever and chills are present.","The patient feels the tongue is pushed upward."],

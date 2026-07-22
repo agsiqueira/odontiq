@@ -23,6 +23,7 @@
     "validate:case05-cold": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase05LingeringCold.ts",
     "validate:case05-irreversible-pulpitis": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase05IrreversiblePulpitis.ts",
     "validate:case01-ludwigs": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase01Ludwigs.ts",
+    "validate:case01-faculty-facts": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase01FacultyFacts.ts",
     "validate:case02-systemic-infection": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02SystemicInfection.ts",
     "validate:case03-periapical-abscess": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03PeriapicalAbscess.ts",
     "validate:case04-necrotic-pulp": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04NecroticPulp.ts",

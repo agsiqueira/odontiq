@@ -61,13 +61,28 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   fever: /\b(fever|feverish|temperature)\b/i,
   chills: /\b(chill|chills|shiver|shivering)\b/i,
   systemic_illness: /\b(feel sick|feeling sick|weak|fatigue|unwell|systemic)\b/i,
+  systemic_timeline: /\b(?:when|how long)\b.*\b(?:fever|chills|fatigue|cheek|swelling)|\b(?:fever|chills|fatigue|cheek|swelling)\b.*\b(?:when|how long|start|begin)\b/i,
+  lymph_nodes: /\b(?:lymph|lymph nodes?|glands?)\b/i,
+  heart_rate_knowledge: /\b(?:heart rate|pulse|tachycardia)\b/i,
+  sirs_knowledge: /\bSIRS\b|systemic inflammatory response/i,
+  dental_condition: /\b(?:bad teeth|spots? on|cavit(?:y|ies)|tooth condition)\b/i,
   swelling_location: /\b(where|location|side|under.*jaw|submandibular|sublingual)\b.*\b(swell|swelling)|\b(swell|swelling)\b.*\b(where|location|side|under.*jaw|submandibular|sublingual)\b/i,
   swelling_progression: /\b(swell|swelling)\b.*\b(worse|worsen|spread|progress|change|fast|quick)|\b(worse|worsen|spread|progress|change|fast|quick)\b.*\b(swell|swelling)\b/i,
   medical_conditions: /\b(medical|health)\b.*\b(history|condition|problem)|\b(diabetes|hypertension|high blood pressure)\b/i,
   opioid_history: /\b(opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|opioid (?:use|misuse|abuse|dependence|addiction))\b/i,
+  onset_certainty: /\b(?:know|remember)\b.*\bexactly\b.*\b(?:start|begin|onset)|\bexact (?:start|onset)\b/i,
+  airway_duration: /\bhow long\b.*\b(?:swallow|breath|lying|lie flat)|\b(?:swallow|breath|lying|lie flat)\b.*\bhow long\b/i,
+  upright_breathing: /\b(?:breath|short of breath)\b.*\b(?:sitting|upright)|\b(?:sitting|upright)\b.*\b(?:breath|short of breath)\b/i,
+  chest_pain: /\bchest pain\b/i,
+  alcohol_use: /\b(?:alcohol|drink(?:ing)?)\b/i,
+  illicit_drug_use: /\b(?:illicit|recreational|street) drugs?\b|\bdrug use\b/i,
+  prior_antibiotics: /\b(?:antibiotics?|amoxicillin|penicillin)\b.*\b(?:take|taken|use|used|already|before|for this)|\b(?:take|taken|use|used|already)\b.*\bantibiotics?\b/i,
+  otc_identity: /\b(?:which|what|name)\b.*\b(?:over[- ]the[- ]counter|otc|pain (?:medicine|medication|killer))\b/i,
+  prior_dental_procedure: /\b(?:root canal|extract(?:ion|ed)?|pulled|treatment|procedure)\b.*\b(?:before|prior|already|had|this tooth|that tooth|on it)|\b(?:had|already|ever)\b.*\b(?:root canal|extract(?:ion|ed)?|tooth pulled|treatment|procedure)\b|\b(?:this|that|same|painful)\b.*\b(?:tooth|molar)\b.*\b(?:extract(?:ion|ed)?|pulled)\b/i,
+  initial_pain_severity: /\b(?:initial|initially|at first|when it (?:began|started)|when (?:the )?pain first (?:began|started))\b.*\b(?:pain|scale|severe|bad|\/10|out of ten)\b|\b(?:pain|scale|severe|severity|bad|\/10|out of ten)\b.*\b(?:initial|initially|at first|when it first (?:began|started)|when (?:the )?pain first (?:began|started))\b/i,
   medications: /\b(medication|medicine|meds|what do you take|taking)\b/i,
-  allergies: /\b(allerg|penicillin)\b/i,
-  smoking: /\b(smok|smoking|tobacco|cigarette)\b/i,
+  allergies: /\ballerg(?:y|ies|ic)?\b|\bpenicillin\b/i,
+  smoking: /\b(smok(?:e|es|ed|ing)?|tobacco|cigarettes?)\b/i,
   dental_access: /\b(afford|cost|insurance|why.*(?:treated|removed|extracted)|dentist|appointment|access)\b/i,
   tongue_position: /\b(tongue)\b.*\b(push|pushed|up|elevat|back|posterior)|\b(push|pushed|elevat|posterior)\b.*\b(tongue)\b/i,
   thermal: /\b(cold|hot|heat|thermal|temperature sensitivity)\b/i,
@@ -75,7 +90,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   pain_quality: /\b(what.*feel|describe.*pain|quality|throbb|sharp|dull|aching)\b/i,
   pain_severity: /\b(how bad|how severe|severity|scale|rate|out of ten|\/10)\b/i,
   radiation: /\b(travel|radiat|spread anywhere|go anywhere|ear)\b/i,
-  ibuprofen_tolerance: /\b(ibuprofen|advil|motrin|nsaid)\b.*\b(bother|upset|stomach|tolerat|reaction)|\b(bother|upset|stomach|tolerat|reaction)\b.*\b(ibuprofen|advil|motrin|nsaid)\b/i,
+  ibuprofen_tolerance: /\b(ibuprofen|advil|motrin|nsaid)\b.*\b(bother|upset|stomach|tolerat|reaction|contraindication|can (?:i|you) take|okay|safe)|\b(bother|upset|stomach|tolerat|reaction|contraindication|can (?:i|you) take|okay|safe)\b.*\b(ibuprofen|advil|motrin|nsaid)\b/i,
   root_canal_history: /\b(root canal|nerve removed|had.*crown|crown.*history)\b/i,
   symptom_sequence: /\b(stop|stopped|went away|come back|came back|return|returned|before|earlier episode)\b/i,
   hard_object_injury: /\b(bite|bit|biting)\b.*\b(hard|object|food|something)|\b(hard|object|food|something)\b.*\b(bite|bit|biting)\b/i,
@@ -88,7 +103,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   nocturnal_pain: /\b(wake|wakes|waking|night|sleep|sleeping)\b/i,
   dental_visit_history: /\b(last|when)\b.*\b(dentist|dental visit)|\b(dentist|dental visit)\b.*\b(last|when|years? ago)\b/i,
   current_pain: /\b(constant|all the time|continuous|does it stop|pain now)\b/i,
-  temperature_checked: /\b(check|checked|measure|measured|thermometer)\b.*\b(temperature|fever)|\b(temperature|fever)\b.*\b(check|checked|measure|measured|thermometer)\b/i,
+  temperature_checked: /\b(check|checked|measure|measured|thermometer|know)\b.*\b(?:exact )?(temperature|fever)|\b(?:exact )?(temperature|fever)\b.*\b(check|checked|measure|measured|thermometer|know)\b/i,
   mouth_opening: /\b(open|opening)\b.*\b(mouth|jaw)|\b(trismus)\b/i,
   facial_swelling: /\b(cheek|face|facial)\b.*\b(swell|swelling|puffy)|\b(swell|swelling|puffy)\b.*\b(cheek|face|facial)\b/i,
   pain: /\b(pain|hurt|ache|severity|scale|rate)\b/i,
@@ -508,6 +523,8 @@ export function classifyQuestion(question: string) {
     asksRestrictedClinicalInterpretation:
       providerMessageIntent === "question" &&
       !COMPREHENSION_QUESTION_PATTERN.test(question.trim()) &&
+      !/\bdo you know (?:the )?diagnosis\b/i.test(question.trim()) &&
+      !QUESTION_INTENT_PATTERNS.prior_dental_procedure.test(normalizedQuestion) &&
       RESTRICTED_INTERPRETATION_PATTERN.test(normalizedQuestion),
     providerMessageIntent,
   };
@@ -689,12 +706,92 @@ function selectCaseSpecificAllowedFacts({
   if (caseId === "case-01" && QUESTION_INTENT_PATTERNS.opioid_history.test(question)) {
     return facts.filter((fact) => fact.id === "c1.opioid");
   }
+  if (caseId === "case-01") {
+    const normalizedQuestion = normalizeText(question);
+    if (QUESTION_INTENT_PATTERNS.initial_pain_severity.test(question)) return facts.filter((fact) => fact.id === "c1.initial-severity");
+    if (QUESTION_INTENT_PATTERNS.pain_severity.test(question)) return facts.filter((fact) => fact.id === "c1.severity");
+    if (QUESTION_INTENT_PATTERNS.swelling_location.test(question)) return facts.filter((fact) => fact.id === "c1.swelling-location");
+    if (/\b(?:right side|right tooth|on the right)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.location");
+    if (QUESTION_INTENT_PATTERNS.onset_certainty.test(question)) return facts.filter((fact) => fact.id === "c1.onset-uncertain");
+    if (QUESTION_INTENT_PATTERNS.airway_duration.test(question)) return facts.filter((fact) => fact.id === "c1.airway-duration");
+    if (QUESTION_INTENT_PATTERNS.upright_breathing.test(question)) return facts.filter((fact) => fact.id === "c1.upright-breathing");
+    if (QUESTION_INTENT_PATTERNS.chest_pain.test(question)) return facts.filter((fact) => fact.id === "c1.chest-pain");
+    if (QUESTION_INTENT_PATTERNS.temperature_checked.test(question)) return facts.filter((fact) => fact.id === "c1.home-temperature");
+    if (QUESTION_INTENT_PATTERNS.allergies.test(question)) return facts.filter((fact) => fact.id === "c1.nkda");
+    if (/\bdiabetes\b/.test(normalizedQuestion) && !/\bhypertension|high blood pressure\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.diabetes");
+    if (/\bhypertension|high blood pressure\b/.test(normalizedQuestion) && !/\bdiabetes\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.hypertension");
+    if (QUESTION_INTENT_PATTERNS.ibuprofen_tolerance.test(question)) return facts.filter((fact) => fact.id === "c1.ibuprofen");
+    if (QUESTION_INTENT_PATTERNS.alcohol_use.test(question)) return facts.filter((fact) => fact.id === "c1.alcohol");
+    if (QUESTION_INTENT_PATTERNS.illicit_drug_use.test(question)) return facts.filter((fact) => fact.id === "c1.illicit-drugs");
+    if (QUESTION_INTENT_PATTERNS.prior_antibiotics.test(question)) return facts.filter((fact) => fact.id === "c1.prior-antibiotics-unknown");
+    if (QUESTION_INTENT_PATTERNS.otc_identity.test(question)) return facts.filter((fact) => fact.id === "c1.otc-unknown");
+    if (QUESTION_INTENT_PATTERNS.prior_dental_procedure.test(question)) {
+      if (/\broot canal\b/.test(normalizedQuestion) && !/\b(?:extract(?:ed|ion)?|pulled)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.prior-root-canal-unknown");
+      if (/\b(?:extract(?:ed|ion)?|pulled)\b/.test(normalizedQuestion) && !/\broot canal\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.prior-extraction-unknown");
+      return facts.filter((fact) => fact.id === "c1.prior-root-canal-unknown" || fact.id === "c1.prior-extraction-unknown");
+    }
+    if (/\b(?:what|which)\s+(?:medications?|meds)\b|\bmedication list\b/.test(normalizedQuestion)) {
+      return facts.filter((fact) => fact.id === "c1.metformin" || fact.id === "c1.lisinopril");
+    }
+  }
+
+  if (caseId === "case-02") {
+    const normalizedQuestion = normalizeText(question);
+    if (QUESTION_INTENT_PATTERNS.allergies.test(question)) return facts.filter((fact) => fact.id === "c2.nkda");
+    if (/\b(?:dose|how (?:often|frequently)|every how many hours)\b.*\b(?:ibuprofen|motrin|advil)\b|\b(?:ibuprofen|motrin|advil)\b.*\b(?:dose|how (?:often|frequently)|hours)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c2.med");
+    if (/\b(?:initial|initially|at first|earlier)\b.*\b(?:pain|feel|felt|hot|cold)\b|\b(?:pain|feel|felt)\b.*\b(?:initial|initially|at first|earlier)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c2.thermal-history");
+    if (QUESTION_INTENT_PATTERNS.opioid_history.test(question)) return facts.filter((fact) => fact.id === "c2.opioid");
+    if (QUESTION_INTENT_PATTERNS.heart_rate_knowledge.test(question)) return facts.filter((fact) => fact.id === "c2.heart-rate-unknown");
+    if (QUESTION_INTENT_PATTERNS.sirs_knowledge.test(question)) return facts.filter((fact) => fact.id === "c2.sirs-unknown");
+    if (QUESTION_INTENT_PATTERNS.pain_severity.test(question)) return facts.filter((fact) => fact.id === "c2.severity");
+    if (QUESTION_INTENT_PATTERNS.systemic_timeline.test(question)) return facts.filter((fact) => fact.id === "c2.systemic-timeline");
+    if (QUESTION_INTENT_PATTERNS.temperature_checked.test(question)) return facts.filter((fact) => fact.id === "c2.temperature-unknown");
+    if (QUESTION_INTENT_PATTERNS.prior_antibiotics.test(question)) return facts.filter((fact) => fact.id === "c2.prior-antibiotics-unknown");
+    if (QUESTION_INTENT_PATTERNS.prior_dental_procedure.test(question)) {
+      const ids = new Set<string>();
+      if (/\broot canal\b/.test(normalizedQuestion)) ids.add("c2.prior-root-canal-unknown");
+      if (/\b(?:treatment|procedure)\b/.test(normalizedQuestion)) ids.add("c2.prior-treatment-unknown");
+      if (/\b(?:extract|extraction|extracted|pulled)\b/.test(normalizedQuestion)) {
+        if (/\b(?:another|other|any)\s+tooth\b|\bever\b/.test(normalizedQuestion)) ids.add("c2.other-extraction-unknown");
+        else ids.add("c2.painful-tooth-not-extracted");
+      }
+      return facts.filter((fact) => ids.has(fact.id));
+    }
+    if (QUESTION_INTENT_PATTERNS.ibuprofen_tolerance.test(question)) return facts.filter((fact) => fact.id === "c2.ibuprofen");
+    if (QUESTION_INTENT_PATTERNS.alcohol_use.test(question)) return facts.filter((fact) => fact.id === "c2.alcohol");
+    if (QUESTION_INTENT_PATTERNS.illicit_drug_use.test(question)) return facts.filter((fact) => fact.id === "c2.illicit-drugs");
+    if (QUESTION_INTENT_PATTERNS.smoking.test(question)) return facts.filter((fact) => fact.id === "c2.smoking");
+    if (QUESTION_INTENT_PATTERNS.medical_conditions.test(question)) return facts.filter((fact) => fact.id === "c2.healthy");
+    if (QUESTION_INTENT_PATTERNS.dental_condition.test(question)) return facts.filter((fact) => fact.id === "c2.cavities-belief");
+  }
 
   if (caseId === "case-03") {
     const normalizedQuestion = normalizeText(question);
+    if (/\b(?:dose|how much|how often|frequency)\b.*\bpepcid\b|\bpepcid\b.*\b(?:dose|how much|how often|frequency)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.pepcid-details-unknown");
+    if (/\bantibiotics?\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\bantibiotics?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.prior-antibiotics-unknown");
+    if (/\b(?:tylenol|acetaminophen)\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\b(?:tylenol|acetaminophen)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.prior-acetaminophen-unknown");
+    if (/\b(?:root canal|nerve removed)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.crown" || fact.id === "c3.rct");
+    if (/\b(?:crown|tooth cap|cap on)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.crown");
+    if (/\b(?:this|that|painful)\b.*\b(?:tooth|molar)\b.*\b(?:extract(?:ed|ion)|removed|pulled)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.painful-tooth-not-extracted");
+    if (/\b(?:which|what)\s+teeth\b.*\b(?:treated|dental work|worked on)\b|\bremember\b.*\bwhich teeth\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.treated-teeth-unknown");
+    if (/\b(?:dental work|work done on your teeth|treated before)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.dental-work");
+    if (/\b(?:tap|tapping|percussion|percuss)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.percussion");
+    if (/\bcold\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.cold");
+    if (/\b(?:inside|mouth|gum)\b.*\b(?:swell|swelling|puffy)\b|\b(?:swell|swelling)\b.*\b(?:inside|mouth|gum)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.oral-swelling");
+    if (/\bchest pain\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.chest-pain-negative");
+    if (/\bneck\b.*\b(?:stiff|stiffness)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.neck-stiffness-negative");
+    if (/\b(?:surgery|surgeries|surgical history|operation)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.surgery-negative");
+    if (/\b(?:opioid|opioids|opiate|opiates|narcotic|narcotics)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.opioid-negative");
+    if (/\b(?:alcohol|drink)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.alcohol");
+    if (/\b(?:illicit|recreational|street) drugs?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.illicit-drugs-negative");
+    if (/\bwhen\b.*\bcall(?:ed)?\b.*\bdentist\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.dentist-contact");
+    if (/\b(?:exact|measured)\b.*\btemperature\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.temperature-unknown");
+    if (/\b(?:exact|measured)\b.*\b(?:heart rate|pulse)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.heart-rate-unknown");
+    if (/\b(?:diagnosis|what (?:is|do you think is) wrong|know what this is)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.diagnosis-unknown");
     if (/\bwhat medications? did you take\b|\bwhat did you take\b/.test(normalizedQuestion)) {
       return facts.filter((fact) => fact.id === "c3.pepcid" || fact.id === "c3.ibuprofen");
     }
+    if (/\ballerg\w*\b/.test(normalizedQuestion) && /\b(ibuprofen|advil|motrin|nsaid)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c3.nkda" || fact.id === "c3.ibuprofen");
     if (/\b(ibuprofen|advil|motrin|nsaid)\b/.test(normalizedQuestion)) {
       return facts.filter((fact) => fact.id === "c3.ibuprofen");
     }
@@ -703,11 +800,52 @@ function selectCaseSpecificAllowedFacts({
     }
   }
 
+  if (caseId === "case-04") {
+    const normalizedQuestion = normalizeText(question);
+    if (/\b(?:gum|gingival|inside (?:the|your) mouth|abscess)\b.*\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b|\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b.*\b(?:gum|gingival|mouth)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-gum-swelling");
+    if (/\b(?:face|facial)\b.*\b(?:swell|swelling|swollen)\b|\b(?:swell|swelling|swollen)\b.*\b(?:face|facial)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-swelling");
+    if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.ibuprofen-frequency-unknown");
+    if (/\b(?:can|safe|safely|contraindication)\b.*\b(?:ibuprofen|advil|motrin)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.ibuprofen-suitable");
+    if (/\b(?:what have you taken|what did you take|pain medicine|pain medication)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.medication");
+    if (/\b(?:tylenol|acetaminophen)\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\b(?:tylenol|acetaminophen)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.prior-acetaminophen-unknown");
+    if (/\bantibiotics?\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\bantibiotics?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.prior-antibiotics-unknown");
+    if (/\b(?:root canal|nerve removed)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.root-canal-unknown");
+    if (/\b(?:this|that|painful)\b.*\b(?:tooth|molar)\b.*\b(?:extract(?:ed|ion)|removed|pulled)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.painful-tooth-not-extracted");
+    if (/\b(?:filling|restoration)\b.*\b(?:how old|when|years? ago|placed)\b|\bhow old\b.*\bfilling\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.filling-present");
+    if (/\b(?:definitely|certain|really)\b.*\b(?:broken|broke)\b|\b(?:broken|broke)\b.*\b(?:definitely|certain)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.filling-break-belief");
+    if (/\b(?:anaphylaxis|angioedema)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.hives");
+    if (/\b(?:surgery|surgeries|surgical history|operation)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.surgery-unknown");
+    if (/\b(?:opioid|opioids|opiate|opiates|narcotic|narcotics)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.opioid-negative");
+    if (/\b(?:alcohol|drink)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.alcohol");
+    if (/\b(?:illicit|recreational|street) drugs?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.illicit-drugs-negative");
+    if (/\b(?:last|when)\b.*\b(?:dentist|dental visit)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.last-dentist");
+    if (/\b(?:exact|measured)\b.*\btemperature\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.temperature-unknown");
+    if (/\bdo you know (?:the )?diagnosis\b|\bknow what this is\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.diagnosis-unknown");
+    if (/\b(?:percent|percentage|70%)\b.*\b(?:tooth|crown|remain)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.tooth-percentage-unknown");
+  }
+
   if (caseId !== "case-05") {
     return undefined;
   }
 
   const normalizedQuestion = normalizeText(question);
+  if (/\b(?:what have you taken|what did you take|pain medicine|pain medication)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.med");
+  if (/\b(?:which|exact|what)\b.*\b(?:tooth|tooth number)\b|\bfirst molar\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.location");
+  if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.ibuprofen-frequency-unknown");
+  if (/\b(?:can|safe|safely|contraindication)\b.*\b(?:ibuprofen|advil|motrin)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.ibuprofen-suitable");
+  if (/\b(?:opioid|opioids|opiate|opiates|narcotic|narcotics|prescription painkillers?)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.opioid-negative");
+  if (/\b(?:tylenol|acetaminophen)\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\b(?:tylenol|acetaminophen)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.prior-acetaminophen-unknown");
+  if (/\bantibiotics?\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\bantibiotics?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.prior-antibiotics-current-unknown");
+  if (/\b(?:want|asking|request|need)\b.*\bantibiotics?\b|\bantibiotics?\b.*\b(?:want|asking|request|need|helped before)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.antibiotic-request");
+  if (/\b(?:surgery|surgeries|surgical history|operation)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.surgery-unknown");
+  if (/\b(?:root canal|nerve removed)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.root-canal-unknown");
+  if (/\b(?:filling|restoration)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.filling-unknown");
+  if (/\b(?:this|that|painful|current)\b.*\btooth\b.*\b(?:extract(?:ed|ion)|removed|pulled)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.painful-tooth-not-extracted");
+  if (/\b(?:exact|measured)\b.*\btemperature\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.temperature-unknown");
+  if (/\bdo you know (?:the )?diagnosis\b|\bknow what this is\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.diagnosis-unknown");
+  if (/\b(?:current|already|have|got)\b.*\b(?:dentist|appointment)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.appointment-negative");
+  if (/\balcohol\b|\bdrink(?:ing)? alcohol\b|\bdrinking habits?\b|\b(?:do you|how often do you) drink$/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.alcohol");
+  if (/\b(?:illicit|recreational|street) drugs?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.illicit-drugs-negative");
   if (/\bwhat makes (?:the )?pain worse\b/.test(normalizedQuestion)) {
     return facts.filter((fact) => ["c5.cold", "c5.chewing", "c5.biting"].includes(fact.id));
   }
@@ -742,9 +880,15 @@ function selectCaseSpecificAllowedFacts({
   const asksWhatColdDoes =
     /\bwhat happens\b/.test(normalizedQuestion) &&
     /\bcold\b/.test(normalizedQuestion);
+  const asksCompoundColdAndLingering =
+    /\bcold\b.{0,25}\bwors(?:e|en|ens)\b/.test(normalizedQuestion) ||
+    /^cold then\b/.test(normalizedQuestion);
   const mentionsCold = /\bcold\b/.test(normalizedQuestion);
   const mentionsHot = /\b(hot|heat)\b/.test(normalizedQuestion);
 
+  if (asksAboutLingeringColdPain && asksCompoundColdAndLingering) {
+    return facts.filter((fact) => ["c5.cold", "c5.lingering"].includes(fact.id));
+  }
   if (asksAboutLingeringColdPain) {
     return facts.filter((fact) => fact.id === "c5.lingering");
   }

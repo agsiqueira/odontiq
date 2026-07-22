@@ -59,6 +59,18 @@ assert.deepEqual(
 );
 
 assert.deepEqual(
+  visibleFacts("Does cold worsen it, and does the pain stop immediately after the cold is removed?"),
+  [coldTriggerFact, lingeringFact],
+  "A compound cold-provocation and persistence question should reveal both established facts",
+);
+
+assert.deepEqual(
+  visibleFacts("Cold then stop right away or keeps hurting?"),
+  [coldTriggerFact, lingeringFact],
+  "A terse compound cold question should reveal both established facts",
+);
+
+assert.deepEqual(
   visibleFacts("What makes the pain worse?"),
   [coldTriggerFact, "Chewing on the affected side is uncomfortable.", "There is slight biting and percussion discomfort."],
   "A provoking-factor question should reveal supported cold and chewing or biting triggers without volunteering persistence",

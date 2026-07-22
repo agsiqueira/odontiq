@@ -1,4 +1,4 @@
-import { loadCase, type CaseData } from "@/data/cases";
+import { loadCase, type CaseData } from "../data/cases";
 
 export type ConversationRole = "student" | "patient";
 
