@@ -30,6 +30,15 @@ export type PersistAttemptBundle = {
   report?: unknown;
 };
 
+export type ClaimReportGenerationInput = {
+  userId: string;
+  attemptId: string;
+  generationAttemptId: string;
+  expectedUpdatedAt: Date;
+  staleBefore: Date;
+  allowInvalidCompleteReclaim: boolean;
+};
+
 export class CompletedAttemptRepository {
   findOwnedByAttemptId(userId: string, attemptId: string) {
     return db.completedAttempt.findUnique({
@@ -189,6 +198,9 @@ export class CompletedAttemptRepository {
       const guardedUpdate = await tx.completedAttempt.updateMany({
         where: {
           id: attempt.id,
+          ...(input.generationStatus === "PENDING"
+            ? { generationStatus: { not: "IN_PROGRESS" as const } }
+            : {}),
           NOT: {
             generationStatus: "COMPLETE",
             integrityStatus: "VALID",
@@ -245,6 +257,107 @@ export class CompletedAttemptRepository {
         },
       });
     });
+  }
+
+  async claimReportGeneration(input: ClaimReportGenerationInput) {
+    const claimableStatuses: Prisma.CompletedAttemptWhereInput[] = [
+      { generationStatus: { in: ["PENDING", "FAILED"] } },
+      {
+        generationStatus: "IN_PROGRESS",
+        OR: [
+          { generationStartedAt: null },
+          { generationStartedAt: { lt: input.staleBefore } },
+        ],
+      },
+    ];
+    if (input.allowInvalidCompleteReclaim) {
+      claimableStatuses.push({ generationStatus: "COMPLETE" });
+    }
+
+    const result = await db.completedAttempt.updateMany({
+      where: {
+        userId: input.userId,
+        attemptId: input.attemptId,
+        updatedAt: input.expectedUpdatedAt,
+        OR: claimableStatuses,
+      },
+      data: {
+        generationStatus: "IN_PROGRESS",
+        generationAttemptId: input.generationAttemptId,
+        generationStartedAt: new Date(),
+        generationError: null,
+        integrityStatus: "PENDING",
+      },
+    });
+    return result.count === 1;
+  }
+
+  async completeClaimedReportGeneration(
+    input: PersistAttemptBundle & { generationAttemptId: string },
+  ) {
+    return db.$transaction(async (tx) => {
+      const guardedUpdate = await tx.completedAttempt.updateMany({
+        where: {
+          userId: input.userId,
+          attemptId: input.attemptId,
+          generationStatus: "IN_PROGRESS",
+          generationAttemptId: input.generationAttemptId,
+        },
+        data: {
+          generationStatus: "COMPLETE",
+          generationAttemptId: null,
+          generationStartedAt: null,
+          generationError: null,
+          integrityStatus: input.integrityStatus,
+          percentage: input.percentage,
+          passed: input.passed,
+          completedAt: input.completedAt,
+        },
+      });
+      if (guardedUpdate.count !== 1) return false;
+      const attempt = await tx.completedAttempt.findUniqueOrThrow({
+        where: {
+          userId_attemptId: {
+            userId: input.userId,
+            attemptId: input.attemptId,
+          },
+        },
+      });
+      if (input.evaluation !== undefined) {
+        await facultyArtifactRepository.upsertEvaluation(tx, attempt.id, input.evaluation);
+      }
+      if (input.score !== undefined) {
+        await facultyArtifactRepository.upsertScore(tx, attempt.id, input.score);
+      }
+      if (input.report !== undefined) {
+        await facultyArtifactRepository.upsertReport(tx, attempt.id, input.report);
+      }
+      return true;
+    });
+  }
+
+  async failClaimedReportGeneration(input: {
+    userId: string;
+    attemptId: string;
+    generationAttemptId: string;
+    error: string;
+  }) {
+    const result = await db.completedAttempt.updateMany({
+      where: {
+        userId: input.userId,
+        attemptId: input.attemptId,
+        generationStatus: "IN_PROGRESS",
+        generationAttemptId: input.generationAttemptId,
+      },
+      data: {
+        generationStatus: "FAILED",
+        generationAttemptId: null,
+        generationStartedAt: null,
+        generationError: input.error,
+        integrityStatus: "INVALID",
+      },
+    });
+    return result.count === 1;
   }
 }
 

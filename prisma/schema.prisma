@@ -58,6 +58,8 @@ model CompletedAttempt {
   encounterId       String
   caseId            String
   generationStatus  ReportGenerationStatus    @default(PENDING)
+  generationAttemptId String?
+  generationStartedAt DateTime?
   generationError   String?
   integrityStatus   ArtifactIntegrityStatus   @default(PENDING)
   percentage        Float?

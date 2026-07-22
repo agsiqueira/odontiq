@@ -9,6 +9,8 @@ type DashboardAttempt = {
 };
 
 type ReportAttempt = DashboardAttempt & {
+  generationStartedAt?: Date | null;
+  generationError?: string | null;
   encounter: { encounterData: unknown };
   facultyEvaluation: { data: unknown } | null;
   facultyScore: { data: unknown } | null;
@@ -55,6 +57,11 @@ export class ReportsService {
       : undefined;
 
     return {
+      caseId: attempt.caseId,
+      generationStatus: attempt.generationStatus,
+      integrityStatus: attempt.integrityStatus,
+      generationStartedAt: attempt.generationStartedAt?.toISOString() ?? null,
+      generationError: attempt.generationError ?? null,
       evaluation: attempt.facultyEvaluation?.data ?? null,
       score: attempt.facultyScore?.data ?? null,
       report: attempt.facultyReport?.data ?? null,

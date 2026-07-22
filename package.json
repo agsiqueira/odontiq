@@ -10,6 +10,7 @@
     "validate:rubrics": "node scripts/validateFacultyRubrics.mjs",
     "validate:canonical-pdf": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalFacultyPdf.ts",
     "validate:canonical-report-generation": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalReportGeneration.ts",
+    "validate:report-generation-ownership": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateReportGenerationOwnership.ts",
     "validate:post-semantic-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePostSemanticMergeRetry.ts",
     "validate:immediate-mentor": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateImmediateMentorTransition.ts",
     "validate:faculty-scoring": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFacultyScoring.ts",

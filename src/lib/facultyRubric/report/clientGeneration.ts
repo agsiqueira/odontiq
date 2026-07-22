@@ -78,7 +78,9 @@ export function ensureCanonicalFacultyArtifacts({
         )
       : 0;
   const operation =
-    leaseRemaining > 0
+    evaluate === requestFacultyEvaluation
+      ? runServerCanonicalGeneration(summary)
+      : leaseRemaining > 0
       ? waitForExistingGeneration({
           caseId,
           attemptId,
@@ -99,6 +101,70 @@ export function ensureCanonicalFacultyArtifacts({
   };
   void operation.then(clearOperation, clearOperation);
   return operation;
+}
+
+async function runServerCanonicalGeneration(
+  summary: CompletedEncounterAttempt,
+): Promise<CanonicalFacultyGenerationResult> {
+  await persistCompletedAttemptToServer({
+    ...summary,
+    facultyReportGeneration:
+      summary.facultyReportGeneration?.status === "in-progress"
+        ? createFacultyGenerationAttempt("pending")
+        : summary.facultyReportGeneration,
+  });
+  const response = await fetch(
+    `/api/reports/${encodeURIComponent(summary.attemptId)}`,
+    { method: "POST" },
+  );
+  const payload = (await response.json().catch(() => undefined)) as
+    | {
+        status?: "complete" | "in-progress" | "failed" | "pending";
+        evaluation?: FacultyRubricEvaluationState | null;
+        score?: CompletedEncounterAttempt["facultyRubricScore"] | null;
+        report?: CompletedEncounterAttempt["facultyReport"] | null;
+        error?: string;
+      }
+    | undefined;
+
+  if (response.status === 202 && payload?.status === "in-progress") {
+    return { status: "in-progress", summary };
+  }
+  if (
+    !response.ok ||
+    payload?.status !== "complete" ||
+    !payload.evaluation ||
+    !payload.score ||
+    !payload.report
+  ) {
+    const error = payload?.error ?? "faculty_generation_failed";
+    const failedSummary: CompletedEncounterAttempt = {
+      ...summary,
+      facultyReportGeneration: {
+        ...(summary.facultyReportGeneration ?? createFacultyGenerationAttempt()),
+        status: "failed",
+        updatedAt: new Date().toISOString(),
+        error,
+      },
+    };
+    writeCompletedEncounterAttempt(failedSummary);
+    return { status: "failed", summary: failedSummary, error };
+  }
+
+  const completedSummary: CompletedEncounterAttempt = {
+    ...summary,
+    facultyRubricEvaluation: payload.evaluation,
+    facultyRubricScore: payload.score,
+    facultyReport: payload.report,
+    facultyReportGeneration: {
+      ...(summary.facultyReportGeneration ?? createFacultyGenerationAttempt()),
+      status: "complete",
+      updatedAt: new Date().toISOString(),
+      error: undefined,
+    },
+  };
+  writeCompletedEncounterAttempt(completedSummary);
+  return { status: "complete", summary: completedSummary };
 }
 
 async function waitForExistingGeneration({
