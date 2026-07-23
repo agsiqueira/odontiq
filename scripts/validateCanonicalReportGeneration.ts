@@ -126,13 +126,17 @@ assert.deepEqual(
     observedValue: airwayRecommendation?.observedValue,
     status: airwayRecommendation?.status,
   },
-  { expectedValue: false, observedValue: false, status: "met" },
-  "Expected-negative recommendation must score as correctly avoided.",
+  { expectedValue: true, observedValue: false, status: "not-met" },
+  "The active positive airway recommendation must be missed when no learner evidence supports it.",
 );
 const antibioticChoice = completedEvaluations.find(
   (evaluation) => evaluation.criterionId === "C1-MP-004",
 );
-assert.equal(antibioticChoice?.status, "not-applicable");
+assert.equal(
+  antibioticChoice?.status,
+  "not-met",
+  "Antibiotic selection remains applicable because the active rubric positively requires IV antibiotics.",
+);
 
 const score = scoreFacultyRubricEvaluations({
   caseId,
@@ -143,7 +147,7 @@ const antibioticChoiceScore = score.criteria.find(
   (criterion) => criterion.criterionId === "C1-MP-004",
 );
 assert.equal(antibioticChoiceScore?.earnedPoints, 0);
-assert.equal(antibioticChoiceScore?.possiblePoints, 0);
+assert.equal(antibioticChoiceScore?.possiblePoints, 1);
 const report = buildFacultyReport({
   rubric,
   completedEvaluations,

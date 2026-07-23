@@ -64,5 +64,21 @@ assert(
   }).valid,
   "ID-based rule should survive a renamed criterion label",
 );
+assert(
+  valid("asked-about-fever", [student("s1", "Any fever or chills?")], ["s1"]),
+  "Compound fever-and-chills assessment should pass",
+);
+assert(
+  valid("asked-about-fever", [student("s1", "Have you had an elevated or high temperature?")], ["s1"]),
+  "Elevated/high-temperature assessment should pass",
+);
+assert(
+  !valid("asked-about-fever", [student("s1", "Have you had chills?")], ["s1"]),
+  "Chills alone must not satisfy fever assessment",
+);
+assert(
+  !valid("asked-about-fever", [patient("p1", "I have had chills.")], ["p1"]),
+  "Patient-volunteered chills must not satisfy fever assessment",
+);
 
 console.log("Targeted semantic evidence validation passed.");

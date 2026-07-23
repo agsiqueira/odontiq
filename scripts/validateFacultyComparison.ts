@@ -1,6 +1,7 @@
 import { facultyRubrics } from "../src/lib/facultyRubric/caseRubrics";
 import {
   buildFacultyComparisonSections,
+  getAuthoredExpectedValue,
   getFacultyComparisonResultLabel,
 } from "../src/lib/facultyRubric/report/comparison";
 
@@ -38,12 +39,15 @@ const evaluations = rubric.criteria.map((criterion) => ({
   rationale: "Comparison validation.",
   evaluationMethod: "deterministic" as const,
   evaluatedAt: "2026-07-12T00:00:00.000Z",
-  expectedValue: criterion.evaluationMode === "recommendation" ? false : true,
-  observedValue: false,
+  expectedValue: getAuthoredExpectedValue(criterion),
+  observedValue: true,
 }));
 const sections = buildFacultyComparisonSections(rubric.caseId, evaluations);
 const rows = sections.flatMap((section) => section.rows);
-assert(rows.length === rubric.criteria.length, "Every authored item should appear once");
+assert(
+  rows.length === rubric.criteria.filter((criterion) => criterion.expectation !== "neutral").length,
+  "Every active authored item should appear once and neutral items should be omitted",
+);
 assert(
   sections.every((section) => {
     const positions = section.rows.map((row) =>
@@ -53,8 +57,8 @@ assert(
   }),
   "Authored item order should be preserved within each section",
 );
-const avoided = rows.find((row) => row.criterionId === "C1-MP-001");
-assert(avoided?.result === "Correctly avoided", "Unchecked Case 1 recommendation should be correctly avoided");
+const recommended = rows.find((row) => row.criterionId === "C1-MP-001");
+assert(recommended?.result === "Met", "Completed Case 1 recommendation should be met");
 const antibiotic = rows.find((row) => row.criterionId === "C1-MP-004");
 assert(antibiotic?.result === "Not applicable", "Conditional antibiotic selection should be not applicable");
 

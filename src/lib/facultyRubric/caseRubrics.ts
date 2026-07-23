@@ -27,6 +27,18 @@ function shared(
   return composeSharedCriterion(sharedCriterionTemplates[template], overrides);
 }
 
+function unscoredShared(
+  template: keyof typeof sharedCriterionTemplates,
+  overrides: Parameters<typeof composeSharedCriterion>[1],
+): FacultyRubricCriterion {
+  return {
+    ...composeSharedCriterion(sharedCriterionTemplates[template], overrides),
+    expectation: "neutral",
+    weight: 0,
+    provisionalWeight: false,
+  };
+}
+
 function finding({
   id,
   name,
@@ -127,7 +139,7 @@ function recommendation({
   critical = false,
   acceptedConcepts,
   legacyClinicalChecklistIds,
-  expectedValue = false,
+  expectedValue = true,
   facultyNotes,
 }: {
   id: string;
@@ -227,48 +239,12 @@ function recognizedClinicalFinding({ id, name, title, acceptedConcepts, critical
 }
 
 const case01Criteria: FacultyRubricCriterion[] = [
-  shared("askedAboutFever", {
-    id: "C1-IG-001",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["systemic-symptoms"],
-    legacyClinicalChecklistIds: ["clinical-3"],
-  }),
-  shared("askedAboutPenicillinAllergy", {
-    id: "C1-IG-002",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["allergies"],
-    legacyClinicalChecklistIds: ["clinical-4"],
-  }),
-  shared("askedAboutColdPain", {
-    id: "C1-IG-003",
-    weight: 1,
-    critical: false,
-    provisionalWeight: true,
-    facultyNotes: "No clear legacy Case 1 thermal-sensitivity checklist item exists.",
-  }),
-  shared("askedAboutLingeringColdPain", {
-    id: "C1-IG-004",
-    weight: 1,
-    critical: false,
-    provisionalWeight: true,
-    facultyNotes: "No clear legacy Case 1 lingering-cold checklist item exists.",
-  }),
-  shared("askedAboutBitingPain", {
-    id: "C1-IG-005",
-    weight: 1,
-    critical: false,
-    provisionalWeight: true,
-    facultyNotes: "No clear legacy Case 1 biting-pain checklist item exists.",
-  }),
-  shared("askedAboutHomeMedicationUse", {
-    id: "C1-IG-006",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["medications"],
-    legacyClinicalChecklistIds: ["clinical-4"],
-  }),
+  unscoredShared("askedAboutFever", { id: "C1-IG-001", weight: 0, critical: false, facultyNotes: "Unscored for the Case 1 emergency pathway per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutPenicillinAllergy", { id: "C1-IG-002", weight: 0, critical: false, facultyNotes: "General medication and penicillin allergy questions are unscored for the Case 1 emergency pathway per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutColdPain", { id: "C1-IG-003", weight: 0, critical: false, facultyNotes: "Unscored for Case 1 per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutLingeringColdPain", { id: "C1-IG-004", weight: 0, critical: false, facultyNotes: "Unscored for Case 1 per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutBitingPain", { id: "C1-IG-005", weight: 0, critical: false, facultyNotes: "Unscored for Case 1 per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutHomeMedicationUse", { id: "C1-IG-006", weight: 0, critical: false, facultyNotes: "Unscored for Case 1 per confirmed Phase 1 checklist review." }),
   finding({
     id: "C1-IG-007",
     name: "asked-about-positional-breathing",
@@ -514,28 +490,9 @@ const case02Criteria: FacultyRubricCriterion[] = [
     legacyPatientChecklistIds: ["allergies"],
     legacyClinicalChecklistIds: ["clinical-4"],
   }),
-  shared("askedAboutColdPain", {
-    id: "C2-IG-003",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["thermal-sensitivity"],
-    legacyClinicalChecklistIds: ["clinical-1"],
-  }),
-  shared("askedAboutLingeringColdPain", {
-    id: "C2-IG-004",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["thermal-sensitivity"],
-    legacyClinicalChecklistIds: ["clinical-1"],
-    facultyNotes: "The Word checklist asks whether lingering was assessed, but the case narrative does not specify a lingering answer. Current versus historical lingering remains pending faculty confirmation.",
-  }),
-  shared("askedAboutBitingPain", {
-    id: "C2-IG-005",
-    weight: 1,
-    critical: false,
-    legacyPatientChecklistIds: ["biting-pain"],
-    legacyClinicalChecklistIds: ["clinical-1"],
-  }),
+  unscoredShared("askedAboutColdPain", { id: "C2-IG-003", weight: 0, critical: false, facultyNotes: "Unscored for Case 2 per confirmed Phase 1 checklist review." }),
+  unscoredShared("askedAboutLingeringColdPain", { id: "C2-IG-004", weight: 0, critical: false, facultyNotes: "Unscored for Case 2 per confirmed Phase 1 checklist review; the prior lingering-answer ambiguity no longer affects scoring." }),
+  unscoredShared("askedAboutBitingPain", { id: "C2-IG-005", weight: 0, critical: false, facultyNotes: "Unscored for Case 2 per confirmed Phase 1 checklist review." }),
   shared("askedAboutHomeMedicationUse", {
     id: "C2-IG-006",
     weight: 1,
@@ -552,12 +509,7 @@ const case02Criteria: FacultyRubricCriterion[] = [
     critical: false,
     provisionalWeight: true,
   }),
-  shared("explainedTemporaryPainRelief", {
-    id: "C2-PC-002",
-    weight: 1,
-    critical: false,
-    provisionalWeight: true,
-  }),
+  unscoredShared("explainedTemporaryPainRelief", { id: "C2-PC-002", weight: 0, critical: false, facultyNotes: "Unscored for Case 2 per confirmed Phase 1 checklist review." }),
   criterion({
     id: "C2-PC-003",
     name: "explained-antibiotics-do-not-resolve-source",
@@ -699,6 +651,13 @@ const case03Criteria: FacultyRubricCriterion[] = [
     id: "C3-IG-002",
     weight: 1,
     critical: false,
+    legacyPatientChecklistIds: ["allergies"],
+  }),
+  finding({
+    id: "C3-IG-010",
+    name: "asked-about-general-medication-allergies",
+    title: "Asked About General Medication Allergies",
+    acceptedConcepts: ["medication allergies", "drug allergies", "allergies to medicines"],
     legacyPatientChecklistIds: ["allergies"],
   }),
   shared("askedAboutColdPain", {
@@ -889,6 +848,13 @@ const case04Criteria: FacultyRubricCriterion[] = [
     id: "C4-IG-002",
     weight: 1,
     critical: false,
+    legacyPatientChecklistIds: ["allergies"],
+  }),
+  finding({
+    id: "C4-IG-012",
+    name: "asked-about-general-medication-allergies",
+    title: "Asked About General Medication Allergies",
+    acceptedConcepts: ["medication allergies", "drug allergies", "allergies to medicines"],
     legacyPatientChecklistIds: ["allergies"],
   }),
   shared("askedAboutColdPain", {
@@ -1083,6 +1049,13 @@ const case05Criteria: FacultyRubricCriterion[] = [
     critical: false,
     legacyPatientChecklistIds: ["allergies"],
     legacyClinicalChecklistIds: ["clinical-4"],
+  }),
+  finding({
+    id: "C5-IG-012",
+    name: "asked-about-general-medication-allergies",
+    title: "Asked About General Medication Allergies",
+    acceptedConcepts: ["medication allergies", "drug allergies", "allergies to medicines"],
+    legacyPatientChecklistIds: ["allergies"],
   }),
   shared("askedAboutColdPain", {
     id: "C5-IG-003",

@@ -126,6 +126,8 @@ assert.deepEqual(ct.findings.map((item) => item.value), ["Periapical abscess of 
 const rubric = facultyRubrics.find((item) => item.caseId === "case-02")!;
 for (const id of ["C2-CI-002", "C2-CI-003", "C2-EX-005", "C2-EX-006", "C2-EX-007", "C2-EX-008", "C2-MP-007", "C2-MP-008", "C2-MP-009", "C2-MP-010"]) assert(rubric.criteria.some((criterion) => criterion.id === id), id);
 assert(rubric.criteria.filter((criterion) => criterion.id !== "C2-EX-001" && criterion.id.startsWith("C2-EX-")).every((criterion) => criterion.evaluationMode === "clinical-statement"));
-assert(rubric.criteria.find((criterion) => criterion.id === "C2-IG-004")?.facultyNotes?.includes("pending faculty"));
+const lingeringColdCriterion = rubric.criteria.find((criterion) => criterion.id === "C2-IG-004");
+assert.equal(lingeringColdCriterion?.expectation, "neutral");
+assert.equal(lingeringColdCriterion?.weight, 0);
 
 console.log("Case 2 systemic-infection validation passed.");

@@ -474,7 +474,9 @@ if (integrityRubric) {
       caseId: integrityRubric.caseId,
       evaluation: {
         ...integrityEvaluationState,
-        evaluations: integrityEvaluations.slice(1),
+        evaluations: integrityEvaluations.filter(
+          (evaluation) => evaluation.criterionId !== integrityScore.criteria[0]?.criterionId,
+        ),
       },
       score: integrityScore,
       report: integrityReport,
@@ -486,7 +488,12 @@ if (integrityRubric) {
       caseId: integrityRubric.caseId,
       evaluation: {
         ...integrityEvaluationState,
-        evaluations: [integrityEvaluations[0], ...integrityEvaluations],
+        evaluations: [
+          integrityEvaluations.find(
+            (evaluation) => evaluation.criterionId === integrityScore.criteria[0]?.criterionId,
+          )!,
+          ...integrityEvaluations,
+        ],
       },
       score: integrityScore,
       report: integrityReport,

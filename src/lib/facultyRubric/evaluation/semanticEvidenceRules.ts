@@ -12,7 +12,21 @@ export const semanticEvidenceRules: SemanticEvidenceRule[] = [
   {
     criterionIds: ["C1-IG-001", "C2-IG-001", "C3-IG-001", "C4-IG-001", "C5-IG-001", "C2-CF-002"],
     requiredLearnerPatterns: [
-      /\b(fever|febrile|chills?|temperature|feel(?:ing)? (?:sick|unwell)|malaise|fatigue|weakness|body aches?|nausea|vomit(?:ing)?|systemic symptoms?)\b/i,
+      /\b(fever(?:s|ish)?|febrile|(?:elevated|high) temperature|temperature|feel(?:ing)? (?:sick|unwell)|malaise|fatigue|weakness|body aches?|nausea|vomit(?:ing)?|systemic symptoms?)\b/i,
+    ],
+  },
+  {
+    criterionIds: ["C3-IG-005", "C4-IG-005", "C5-IG-005"],
+    requiredLearnerPatterns: [
+      /\b(?:bit(?:e|ing)(?: down)?|chew(?:ing)?|tap(?:ping)?|percussion)\b/i,
+      /\b(?:pressure|press(?:ing|ed)?|touch(?:ing|ed)?|contact)\b.{0,35}\b(?:tooth|teeth)\b|\b(?:tooth|teeth)\b.{0,35}\b(?:pressure|press(?:ing|ed)?|touch(?:ing|ed)?|contact)\b/i,
+      /\bteeth (?:come|coming) together\b/i,
+    ],
+  },
+  {
+    criterionIds: ["C3-IG-004", "C4-IG-004", "C5-IG-004"],
+    requiredLearnerPatterns: [
+      /\b(?:linger(?:s|ed|ing)?|persist(?:s|ed|ing)?|stop(?:s|ped|ping)? immediately|go(?:es)? away|after (?:the )?cold|cold (?:is|was) removed)\b/i,
     ],
   },
   {
@@ -92,7 +106,7 @@ const rejectedGenericLearnerPatterns = [
   /^\s*(?:what brings you in|what seems to be the problem|tell me what happened|how can i help(?: you)?(?: today)?|anything else)\s*[?.!]*\s*$/i,
 ];
 
-const questionPattern = /(?:\?|^\s*(?:what|when|where|why|how|which|who|do|does|did|is|are|was|were|can|could|have|has|had)\b|\b(?:do|does|did|can|could|have|has|had|are|were|will|would) you\b)/i;
+const questionPattern = /(?:\?|^\s*(?:what|when|where|why|how|which|who|do|does|did|is|are|was|were|can|could|have|has|had)\b|\b(?:do|does|did|can|could|have|has|had|are|were|will|would) you\b|\byou (?:haven't|have not|don't|do not|aren't|are not|didn't|did not)\b)/i;
 const examinationStatementPattern = /\b(?:i (?:see|observe|notice|find|examined|palpated)|on (?:exam|examination)|the exam (?:shows|reveals)|there is|there are)\b/i;
 const speculativeConclusionQuestionPattern = /\b(?:could|would|might|may|is) this (?:be|mean)\b/i;
 const recommendationPattern = /\b(?:i (?:recommend|would|will|can|plan to)|we (?:should|need to|will|can)|you (?:should|need to)|let(?:'s| us)|plan is|start|begin|give|administer|order|obtain|refer|consult|perform|proceed|offer)\b/i;

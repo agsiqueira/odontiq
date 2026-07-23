@@ -114,6 +114,7 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
     "c3.radiation": /\bright ear\b/i,
     "c3.biting": /\b(?:biting|bite|chewing|chew)\b.{0,35}\b(?:hurt|pain|sharp|tender)\b|\b(?:hurt|pain|sharp|tender)\b.{0,35}\b(?:biting|bite|chewing|chew)\b/i,
     "c3.percussion": /\b(?:tap|tapping|percussion)\b.{0,35}\b(?:hurt|pain|tender)\b|\b(?:hurt|pain|tender)\b.{0,35}\b(?:tap|tapping|percussion)\b/i,
+    "c3.gum-palpation": /\b(?:yes\b.{0,20})?(?:hurt|pain|tender)\w*\b.{0,35}\b(?:press|pressure|palpat|touch)\w*\b|\b(?:press|pressure|palpat|touch)\w*\b.{0,35}\b(?:hurt|pain|tender)\w*\b/i,
     "c3.cold": /\b(?:cold|cold drinks?|cold water)\b.{0,35}\b(?:does not|doesn't|not|no)\b.{0,20}\b(?:hurt|painful|pain)\b|\b(?:no|not|doesn't|does not)\b.{0,35}\b(?:hurt|painful|pain)\b.{0,25}\bcold\b/i,
     "c3.swelling": /\b(?:face|lower[- ]right side)\b.{0,30}\b(?:puffy|swollen|swelling)\b|\b(?:puffy|swollen|swelling)\b.{0,30}\b(?:face|lower[- ]right side)\b/i,
     "c3.oral-swelling": /\b(?:gum|inside (?:my|the) mouth)\b.{0,35}\b(?:swollen|swelling|puffy)\b|\b(?:swollen|swelling)\b.{0,35}\b(?:gum|mouth)\b/i,

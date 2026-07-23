@@ -1376,12 +1376,8 @@ const semanticCase1 = await evaluateSemanticFacultyCriteria({
   evaluatedAt: "2026-07-11T13:00:00.000Z",
 });
 assert(
-  semanticCase1.semanticEvaluations.some(
-    (evaluation) =>
-      evaluation.criterionId === "C1-IG-003" &&
-      evaluation.status === "met",
-  ),
-  "Semantic evaluator should credit semantically equivalent cold-pain questions.",
+  !semanticCase1.requestedCriterionIds.includes("C1-IG-003"),
+  "Unscored Case 1 cold-pain questions should not require semantic evaluation.",
 );
 assert(
   semanticCase1.semanticEvaluations.some(
@@ -1394,8 +1390,8 @@ assert(
   "Finding elicitation should cite both learner question and confirming patient response.",
 );
 assert(
-  semanticCase1.requestedCriterionIds.includes("C1-IG-001"),
-  "Fever criteria should require semantic review of explicit learner evidence.",
+  !semanticCase1.requestedCriterionIds.includes("C1-IG-001"),
+  "Unscored Case 1 fever questions should not require semantic evaluation.",
 );
 assert(
   !semanticCase1.mergedEvaluations.some(

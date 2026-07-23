@@ -16,6 +16,7 @@ import {
 } from "@/lib/patientRoleGuard";
 import { generatePatientRoleSafeResponse } from "@/lib/patientRoleResponse";
 import { normalizeOuterPatientQuoteWrapper } from "@/lib/patientDialogue";
+import { patientImmediateResponse } from "@/lib/patientImmediateResponse";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
@@ -102,8 +103,14 @@ export async function POST(request: Request): Promise<Response> {
 
     provider = getAIProvider();
     const selectedProvider = provider;
-    const providerResponse =
-      await selectedProvider.generateConversationResponse(providerInput);
+    const immediateResponse = patientImmediateResponse({
+      caseId: payload.caseId,
+      message: payload.message,
+      disclosureState,
+    });
+    const providerResponse = immediateResponse
+      ? { text: immediateResponse }
+      : await selectedProvider.generateConversationResponse(providerInput);
     const safeResponse = await generatePatientRoleSafeResponse({
       initialOutput: providerResponse.text,
       visibleFacts: [
@@ -276,6 +283,7 @@ function patientFactFallback(
     "c3.smoking": "No, I do not smoke.",
     "c3.appointment": "I have an appointment with my dentist next week, and I still plan to go.",
     "c3.percussion": "Yes, tapping that tooth really hurts.",
+    "c3.gum-palpation": "Yes, it hurts when you press there.",
     "c3.cold": "No, drinking something cold is not painful.",
     "c3.oral-swelling": "Yes, my gum is swollen and painful inside my mouth.",
     "c3.chest-pain-negative": "No, I do not have chest pain.",
@@ -436,7 +444,7 @@ function requiredFactsForTurn(
   ]);
   const requiredCase2Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case2ProtectedIds.has(fact.id)).map((fact) => fact.id));
   const case3ProtectedIds = new Set([
-    "c3.location", "c3.duration", "c3.pain-quality", "c3.pain-severity", "c3.radiation", "c3.biting", "c3.percussion", "c3.cold",
+    "c3.location", "c3.duration", "c3.pain-quality", "c3.pain-severity", "c3.radiation", "c3.biting", "c3.percussion", "c3.gum-palpation", "c3.cold",
     "c3.swelling", "c3.oral-swelling", "c3.no-fever", "c3.mouth-opening", "c3.breathing", "c3.swallowing", "c3.voice",
     "c3.chest-pain-negative", "c3.neck-stiffness-negative", "c3.ulcers", "c3.surgery-negative", "c3.pepcid", "c3.ibuprofen", "c3.nkda",
     "c3.opioid-negative", "c3.smoking", "c3.alcohol", "c3.illicit-drugs-negative", "c3.crown", "c3.rct", "c3.dental-work",

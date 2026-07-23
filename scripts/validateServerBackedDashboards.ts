@@ -87,6 +87,11 @@ async function main() {
     "case-1-newest",
   );
   assert.deepEqual(await reports.getReport("user-1", "case-1-newest"), {
+    caseId: "case-01",
+    generationStatus: "COMPLETE",
+    integrityStatus: "VALID",
+    generationStartedAt: null,
+    generationError: null,
     evaluation: { status: "complete" },
     score: { percentage: 90 },
     report: { caseId: "case-01" },

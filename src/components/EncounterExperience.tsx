@@ -14,12 +14,14 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { EncounterKeyboardFocus } from "@/components/EncounterKeyboardFocus";
+import { EncounterOnboarding } from "@/components/EncounterOnboarding";
 import { InteractionCharacterStage } from "@/components/InteractionCharacterStage";
 import { InteractionComposer } from "@/components/InteractionComposer";
 import { InteractionConversation } from "@/components/InteractionConversation";
 import { InteractionExperienceShell } from "@/components/InteractionExperienceShell";
 import { ZoomableExaminationImage } from "@/components/ZoomableExaminationImage";
 import type { OdontIQCase } from "@/lib/cases";
+import { shouldShowEncounterOnboarding } from "@/lib/encounterOnboarding";
 import {
   createCompletedEncounterAttemptId,
   readEncounterSnapshot,
@@ -61,6 +63,8 @@ type EncounterExperienceProps = {
 };
 
 type CommunicationMode = "voice" | "text";
+
+type EncounterEntryStatus = "checking" | "onboarding" | "active";
 
 type EncounterPanel = "controls" | "conversation" | "examination" | "viewer";
 
@@ -316,6 +320,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const [serverEncounterId, setServerEncounterId] = useState<string>();
   const [encounterSyncError, setEncounterSyncError] = useState<string>();
   const [isSyncingEncounter, setIsSyncingEncounter] = useState(false);
+  const [entryStatus, setEntryStatus] =
+    useState<EncounterEntryStatus>("checking");
+  const [entryError, setEntryError] = useState<string>();
+  const [entryCheckSequence, setEntryCheckSequence] = useState(0);
   const [encounterSyncStatus, setEncounterSyncStatus] =
     useState<EncounterSyncState["status"]>("idle");
   const [mentorIntervention, setMentorIntervention] =
@@ -337,6 +345,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const hasRestoredSnapshot = useRef(false);
   const isCompletingRef = useRef(false);
   const isSyncingEncounterRef = useRef(false);
+  const startRequestedRef = useRef(false);
   const serverEncounterRevisionRef = useRef(1);
   const encounterSyncServiceRef = useRef<EncounterSyncService | undefined>(
     undefined,
@@ -564,7 +573,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   }, []);
 
   const syncServerEncounter = useCallback(async () => {
-    if (isSyncingEncounterRef.current) return;
+    if (isSyncingEncounterRef.current) return false;
     isSyncingEncounterRef.current = true;
     setIsSyncingEncounter(true);
     setEncounterSyncError(undefined);
@@ -627,10 +636,12 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
           });
         }
       }
+      return true;
     } catch {
       setEncounterSyncError(
         "Encounter sync was interrupted. Your work is saved locally.",
       );
+      return false;
     } finally {
       isSyncingEncounterRef.current = false;
       setIsSyncingEncounter(false);
@@ -638,12 +649,52 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   }, [handleEncounterSyncState, patientCase.id]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
-      void syncServerEncounter();
-    }, 0);
+    let cancelled = false;
 
-    return () => window.clearTimeout(timer);
-  }, [syncServerEncounter]);
+    const prepareEncounterEntry = async () => {
+      setEntryError(undefined);
+      const hasLocalSnapshot = Boolean(readEncounterSnapshot(patientCase.id));
+      if (hasLocalSnapshot) {
+        if (!cancelled) setEntryStatus("active");
+        if (!cancelled) void syncServerEncounter();
+        return;
+      }
+
+      try {
+        const response = await fetch("/api/home/progression");
+        if (!response.ok) throw new Error("progression_unavailable");
+        const payload = (await response.json()) as {
+          activeEncounters?: Array<{ caseId?: unknown }>;
+        };
+        const hasActiveServerEncounter = (payload.activeEncounters ?? []).some(
+          (encounter) => encounter.caseId === patientCase.id,
+        );
+        if (cancelled) return;
+        if (
+          shouldShowEncounterOnboarding({
+            hasLocalSnapshot,
+            hasActiveServerEncounter,
+          })
+        ) {
+          setEntryStatus("onboarding");
+        } else {
+          setEntryStatus("active");
+          void syncServerEncounter();
+        }
+      } catch {
+        if (!cancelled) {
+          setEntryError(
+            "We couldn't check this encounter. Check your connection and try again.",
+          );
+        }
+      }
+    };
+
+    void prepareEncounterEntry();
+    return () => {
+      cancelled = true;
+    };
+  }, [entryCheckSequence, patientCase.id, syncServerEncounter]);
 
   useEffect(() => {
     return () => encounterSyncServiceRef.current?.destroy();
@@ -725,6 +776,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   };
 
   useEffect(() => {
+    if (entryStatus !== "active") return;
     const timer = window.setTimeout(() => {
       const snapshot = readEncounterSnapshot(patientCase.id);
 
@@ -804,7 +856,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     return () => {
       window.clearTimeout(timer);
     };
-  }, [patientCase.id]);
+  }, [entryStatus, patientCase.id]);
 
   useEffect(() => {
     if (!hasRestoredSnapshot.current) {
@@ -1251,6 +1303,55 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       guidanceCardVisible: false,
     }));
   };
+
+  const beginConsultation = async () => {
+    if (startRequestedRef.current) return;
+    startRequestedRef.current = true;
+    setEntryError(undefined);
+    const started = await syncServerEncounter();
+    if (started) {
+      setEntryStatus("active");
+      return;
+    }
+    startRequestedRef.current = false;
+    setEntryError(
+      "We couldn't start the consultation. Check your connection and try again.",
+    );
+  };
+
+  if (entryStatus === "checking") {
+    return (
+      <main className="flex min-h-dvh items-center justify-center bg-[var(--color-background)] px-4 text-[var(--color-text-primary)]">
+        <div className="max-w-md text-center" role="status">
+          <p className="font-semibold">Preparing your encounter...</p>
+          {entryError ? (
+            <>
+              <p role="alert" className="mt-3 text-sm text-amber-900">
+                {entryError}
+              </p>
+              <Button
+                type="button"
+                className="mt-4"
+                onClick={() => setEntryCheckSequence((value) => value + 1)}
+              >
+                Try again
+              </Button>
+            </>
+          ) : null}
+        </div>
+      </main>
+    );
+  }
+
+  if (entryStatus === "onboarding") {
+    return (
+      <EncounterOnboarding
+        isStarting={isSyncingEncounter}
+        error={entryError ?? encounterSyncError}
+        onBegin={() => void beginConsultation()}
+      />
+    );
+  }
 
   return (
     <main

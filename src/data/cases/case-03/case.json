@@ -67,6 +67,7 @@
       {"id":"c3.radiation","topic":"pain","text":"The pain radiates toward the right ear.","questionIntents":["radiation"]},
       {"id":"c3.biting","topic":"pain","text":"Biting and chewing on the affected tooth cause severe pain.","questionIntents":["biting"]},
       {"id":"c3.percussion","topic":"pain","text":"Tapping the affected tooth causes marked pain and tenderness.","questionIntents":["percussion"]},
+      {"id":"c3.gum-palpation","topic":"pain","text":"Pressing or palpating the affected gum area causes tenderness and pain.","questionIntents":["gum_palpation"]},
       {"id":"c3.cold","topic":"pain","text":"Drinking something cold is not painful.","questionIntents":["cold_current"]},
       {"id":"c3.swelling","topic":"swelling","text":"The lower-right side of the face feels mildly puffy.","questionIntents":["facial_swelling"]},
       {"id":"c3.oral-swelling","topic":"swelling","text":"There is painful swelling in the gum inside the mouth.","questionIntents":["oral_swelling"]},

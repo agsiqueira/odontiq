@@ -30,7 +30,9 @@ export function buildFacultyComparisonSections(
   if (!rubric) return [];
   const byId = new Map(evaluations.map((item) => [item.criterionId, item]));
   const sections = new Map<string, FacultyComparisonRow[]>();
-  for (const criterion of rubric.criteria) {
+  for (const criterion of rubric.criteria.filter(
+    (candidate) => candidate.expectation !== "neutral",
+  )) {
     const evaluation = byId.get(criterion.id);
     const row = buildFacultyComparisonRow(criterion, evaluation);
     const title = getSectionTitle(criterion);
