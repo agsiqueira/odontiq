@@ -33,7 +33,12 @@ export function applyPatientQuestionClassification(input: {
     detectedEvents,
     emittedQuestionIds: [...previous.emittedQuestionIds],
   };
-  const id = input.classification.eligibleQuestionId;
+  const id = deriveEligibleQuestionId({
+    caseId: input.caseId,
+    previous,
+    currentEvents: input.classification.detectedEvents,
+    accumulatedEvents: detectedEvents,
+  });
   if (!id || next.emittedQuestionIds.includes(id)) return { state: next };
   const definition = getPatientQuestion(id);
   if (!definition || definition.caseId !== input.caseId) return { state: next };
@@ -48,29 +53,56 @@ export function applyPatientQuestionClassification(input: {
     return { state: next };
   }
 
-  if (
-    id === "c3-follow-up-why" &&
-    (detectedEvents.drainageTemporaryOrNondefinitiveExplained ||
-      detectedEvents.definitiveDentalTreatmentExplained)
-  ) {
-    // Both explanation components must be assessed on the current answer, not
-    // accumulated from unrelated earlier turns.
-    const current = input.classification.detectedEvents;
-    if (
-      current.drainageTemporaryOrNondefinitiveExplained &&
-      current.definitiveDentalTreatmentExplained
-    ) {
-      return { state: next };
-    }
-  }
-  if (
-    id === "c4-antibiotic-needed-question" &&
-    (input.classification.detectedEvents.antibioticsRecommended ||
-      input.classification.detectedEvents.antibioticsNotIndicatedExplained)
-  ) {
-    return { state: next };
-  }
-
   next.emittedQuestionIds.push(id);
   return { state: next, selectedQuestionId: id };
+}
+
+function deriveEligibleQuestionId(input: {
+  caseId: string;
+  previous: PatientQuestionState;
+  currentEvents: PatientQuestionClassification["detectedEvents"];
+  accumulatedEvents: PatientQuestionState["detectedEvents"];
+}): PatientQuestionId | undefined {
+  switch (input.caseId) {
+    case "case-01":
+      return input.accumulatedEvents.hospitalAdmissionOrSurgicalManagementDiscussed
+        ? "c1-extraction-question"
+        : undefined;
+    case "case-02":
+      return input.accumulatedEvents.antibioticsRecommendedAsCurrentPlan
+        ? "c2-antibiotic-effect-question"
+        : undefined;
+    case "case-03": {
+      if (
+        !input.previous.emittedQuestionIds.includes("c3-follow-up-needed-question")
+      ) {
+        return input.accumulatedEvents.incisionAndDrainageProposed &&
+          input.accumulatedEvents.patientAgreedToIncisionAndDrainage
+          ? "c3-follow-up-needed-question"
+          : undefined;
+      }
+      if (
+        input.currentEvents.promptDentalFollowUpConfirmed &&
+        !(
+          input.currentEvents.drainageTemporaryOrNondefinitiveExplained &&
+          input.currentEvents.definitiveDentalTreatmentExplained
+        )
+      ) {
+        return "c3-follow-up-why";
+      }
+      return undefined;
+    }
+    case "case-04":
+      return input.currentEvents.painManagementOrDispositionDiscussed &&
+        !input.currentEvents.antibioticsRecommended &&
+        !input.currentEvents.antibioticsNotIndicatedExplained
+        ? "c4-antibiotic-needed-question"
+        : undefined;
+    case "case-05":
+      return input.accumulatedEvents.patientPainDescribed
+        ? "c5-antibiotic-request"
+        : undefined;
+    default:
+      return undefined;
+  }
 }

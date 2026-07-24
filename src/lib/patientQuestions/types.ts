@@ -34,11 +34,39 @@ export type PatientQuestionClassification = {
   schemaVersion: 1;
   caseId: string;
   analyzedStudentMessageId: string;
-  detectedEvents: PatientQuestionEvents;
-  eligibleQuestionId: PatientQuestionId | null;
+  detectedEvents: Partial<PatientQuestionEvents>;
   confidence: number;
   evidenceMessageIds: string[];
+  evidenceAliases: string[];
 };
+
+export type PatientQuestionClassificationFailureReason =
+  | "provider-failure"
+  | "invalid-json"
+  | "unknown-field"
+  | "case-mismatch"
+  | "invalid-event-shape"
+  | "wrong-case-event"
+  | "invalid-confidence"
+  | "low-confidence"
+  | "invalid-evidence-alias"
+  | "missing-evidence";
+
+export type PatientQuestionClassificationResult =
+  | { success: true; classification: PatientQuestionClassification }
+  | {
+      success: false;
+      reason: PatientQuestionClassificationFailureReason;
+      safeMetadata?: {
+        confidence?: number;
+        assertedEventNames?: string[];
+        evidenceAliases?: string[];
+        evidenceAliasesValid?: boolean;
+        rawOutputLength?: number;
+        providerErrorCategory?: string;
+        providerStatus?: number;
+      };
+    };
 
 export const EMPTY_PATIENT_QUESTION_EVENTS: PatientQuestionEvents = {
   hospitalAdmissionOrSurgicalManagementDiscussed: false,

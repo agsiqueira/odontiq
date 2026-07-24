@@ -3,6 +3,7 @@ import type { ConversationMessage } from "@/lib/conversationEngine";
 import { buildPatientQuestionClassifierPrompt } from "./prompt";
 import { parsePatientQuestionClassification } from "./schema";
 import type { PatientQuestionState } from "./types";
+import type { PatientQuestionClassificationResult } from "./types";
 
 export async function classifyPatientQuestionTrigger(input: {
   provider: AIProvider;
@@ -13,7 +14,7 @@ export async function classifyPatientQuestionTrigger(input: {
   draftPatientResponse: string;
   conversation: readonly ConversationMessage[];
   state: PatientQuestionState;
-}) {
+}): Promise<PatientQuestionClassificationResult> {
   const prompt = buildPatientQuestionClassifierPrompt(input);
   try {
     const result = await input.provider.generateText({
@@ -26,9 +27,32 @@ export async function classifyPatientQuestionTrigger(input: {
       text: result.text,
       caseId: input.caseId,
       studentMessageId: input.studentMessageId,
-      validMessageIds: prompt.validMessageIds,
+      allowedEvents: prompt.allowedEvents,
+      evidenceAliases: prompt.evidenceAliases,
     });
-  } catch {
-    return undefined;
+  } catch (error) {
+    const safeProviderError =
+      error &&
+      typeof error === "object" &&
+      "name" in error &&
+      error.name === "NavigatorProviderError"
+        ? error as { category?: unknown; status?: unknown }
+        : undefined;
+    return {
+      success: false,
+      reason: "provider-failure",
+      ...(safeProviderError
+        ? {
+            safeMetadata: {
+              ...(typeof safeProviderError.category === "string"
+                ? { providerErrorCategory: safeProviderError.category }
+                : {}),
+              ...(typeof safeProviderError.status === "number"
+                ? { providerStatus: safeProviderError.status }
+                : {}),
+            },
+          }
+        : {}),
+    };
   }
 }

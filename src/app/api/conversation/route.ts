@@ -171,7 +171,7 @@ export async function POST(request: Request): Promise<Response> {
       },
     });
     const patientMessageId = crypto.randomUUID();
-    const classification = shouldClassifyPatientQuestions(
+    const classificationResult = shouldClassifyPatientQuestions(
       payload.caseId,
       questionContext.state,
     )
@@ -186,6 +186,17 @@ export async function POST(request: Request): Promise<Response> {
           state: questionContext.state,
         })
       : undefined;
+    if (classificationResult && !classificationResult.success) {
+      console.warn("Patient-question semantic classification failed closed.", {
+        event: "patient_question_classification_failed",
+        caseId: payload.caseId,
+        correlationId: payload.requestId,
+        provider: provider.name,
+        model: process.env.NAVIGATOR_MODEL,
+        reason: classificationResult.reason,
+        ...classificationResult.safeMetadata,
+      });
+    }
     const storedTurn = await patientQuestionService.finalizeTurn({
       userId: user.id,
       encounterId: payload.encounterId,
@@ -195,7 +206,10 @@ export async function POST(request: Request): Promise<Response> {
       patientMessageId,
       baseResponse: safeResponse.text,
       providerName: provider.name,
-      classification,
+      classification:
+        classificationResult?.success
+          ? classificationResult.classification
+          : undefined,
       questionText: (id) => getPatientQuestion(id as Parameters<typeof getPatientQuestion>[0])?.text,
     });
     if (storedTurn === "not-found") {
