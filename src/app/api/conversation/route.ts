@@ -133,6 +133,10 @@ export async function POST(request: Request): Promise<Response> {
       caseId: payload.caseId,
       message: payload.message,
       disclosureState,
+      emittedQuestionIds: questionContext.state.emittedQuestionIds,
+      priorPatientDialogue: sanitizedConversation
+        .filter((message) => message.role === "patient")
+        .map((message) => patientDialogueOnly(message.text)),
     });
     const providerResponse = immediateResponse
       ? { text: immediateResponse }

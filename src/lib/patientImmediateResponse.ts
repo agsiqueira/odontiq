@@ -1,5 +1,6 @@
 import type { PatientDisclosureState } from "./patientDisclosure";
 import { case3ConsentResponse } from "./case3ConsentResponse";
+import { case1PlanAcknowledgement } from "./case1PlanAcknowledgement";
 
 const NPO_INSTRUCTION_PATTERN =
   /\b(?:npo|nothing by mouth|do not eat or drink|don'?t eat or drink|cannot have anything to eat or drink|can'?t have anything to eat or drink|no food or liquids?)\b/i;
@@ -16,11 +17,24 @@ export function patientImmediateResponse({
   caseId,
   message,
   disclosureState,
+  emittedQuestionIds = [],
+  priorPatientDialogue = [],
 }: {
   caseId: string;
   message: string;
   disclosureState: PatientDisclosureState;
+  emittedQuestionIds?: readonly string[];
+  priorPatientDialogue?: readonly string[];
 }): string | undefined {
+  const planAcknowledgement = case1PlanAcknowledgement({
+    caseId,
+    message,
+    providerMessageIntent: disclosureState.providerMessageIntent,
+    emittedQuestionIds,
+    priorPatientDialogue,
+  });
+  if (planAcknowledgement) return planAcknowledgement;
+
   const consentResponse = case3ConsentResponse(caseId, message);
   if (consentResponse) return consentResponse;
 
