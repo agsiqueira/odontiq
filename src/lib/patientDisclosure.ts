@@ -1,5 +1,6 @@
 import type { CaseData } from "../data/cases";
 import type { ConversationMessage } from "./conversationEngine";
+import { isTreatmentConsentRequest } from "./case3ConsentResponse";
 
 export type PatientDisclosureTopic =
   | "chief_complaint"
@@ -23,6 +24,7 @@ export type PatientDisclosureFact = {
 
 export type ProviderMessageIntent =
   | "question"
+  | "treatment_consent"
   | "instruction"
   | "diagnosis_explanation"
   | "treatment_plan"
@@ -590,6 +592,10 @@ export function classifyProviderMessageIntent(
     !FASTING_HISTORY_QUESTION_PATTERN.test(normalizedMessage)
   ) {
     return "instruction";
+  }
+
+  if (isTreatmentConsentRequest(trimmedMessage)) {
+    return "treatment_consent";
   }
 
   if (

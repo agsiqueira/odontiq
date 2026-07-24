@@ -32,6 +32,10 @@ const intentCases: Array<{
     expected: "treatment_plan",
   },
   {
+    message: "I recommend draining the abscess to release the pressure. Is that okay?",
+    expected: "treatment_consent",
+  },
+  {
     message: "Return in one week so we can check the healing.",
     expected: "disposition_plan",
   },
@@ -112,6 +116,16 @@ assert.equal(
   false,
   "Treatment-plan comprehension must not trigger the clinical fallback",
 );
+
+const treatmentConsentState = buildPatientDisclosureState({
+  caseData,
+  conversation: [],
+  latestStudentMessage:
+    "I recommend draining the abscess to release the pressure. Is that okay?",
+});
+assert.equal(treatmentConsentState.providerMessageIntent, "treatment_consent");
+assert.equal(treatmentConsentState.asksRestrictedClinicalInterpretation, false);
+assert.deepEqual(treatmentConsentState.allowedThisTurn, []);
 
 console.log(
   `Patient message intent validation passed (${intentCases.length} intent cases).`,

@@ -36,6 +36,7 @@
     "validate:case02-systemic-infection": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02SystemicInfection.ts",
     "validate:case02-image-orientation": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02ImageOrientation.ts",
     "validate:case03-periapical-abscess": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03PeriapicalAbscess.ts",
+    "validate:case03-consent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ConsentResponse.ts",
     "validate:case04-necrotic-pulp": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04NecroticPulp.ts",
     "validate:canonical-cases": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalCases.ts --report",
     "validate:canonical-cases:strict": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalCases.ts --strict",

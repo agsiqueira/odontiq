@@ -1,4 +1,5 @@
 import type { PatientDisclosureState } from "./patientDisclosure";
+import { case3ConsentResponse } from "./case3ConsentResponse";
 
 const NPO_INSTRUCTION_PATTERN =
   /\b(?:npo|nothing by mouth|do not eat or drink|don'?t eat or drink|cannot have anything to eat or drink|can'?t have anything to eat or drink|no food or liquids?)\b/i;
@@ -20,6 +21,9 @@ export function patientImmediateResponse({
   message: string;
   disclosureState: PatientDisclosureState;
 }): string | undefined {
+  const consentResponse = case3ConsentResponse(caseId, message);
+  if (consentResponse) return consentResponse;
+
   if (
     NPO_INSTRUCTION_PATTERN.test(message) &&
     !FASTING_HISTORY_QUESTION_PATTERN.test(message)
