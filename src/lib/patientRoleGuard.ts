@@ -45,3 +45,6 @@ You are the patient, not the clinician. Speak in the first person only about wha
 
 export const SAFE_PATIENT_ROLE_FALLBACK =
   "I'm not sure about that. Could you explain what it means for me?";
+
+export const SAFE_PATIENT_BASE_RESPONSE_FALLBACK =
+  "I'm not sure about that.";

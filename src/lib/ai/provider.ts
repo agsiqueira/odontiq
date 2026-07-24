@@ -10,6 +10,8 @@ export type ConversationChatMessage = {
 export type ConversationGatewayRequest = {
   encounterId: string;
   caseId: string;
+  requestId: string;
+  studentMessageId: string;
   conversation: ConversationMessage[];
   coveredChecklistItems: string[];
   message: string;
@@ -25,6 +27,10 @@ export type ConversationGatewayOutput = {
   provider: string;
   response: string;
   encounterId: string;
+  requestId: string;
+  patientMessageId: string;
+  selectedQuestionId?: string;
+  patientQuestionStateVersion: number;
 };
 
 export type AIProviderResponse = {

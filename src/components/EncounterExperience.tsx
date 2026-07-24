@@ -154,6 +154,10 @@ type ConversationApiResponse =
       provider: string;
       response: string;
       encounterId: string;
+      requestId: string;
+      patientMessageId: string;
+      selectedQuestionId?: string;
+      patientQuestionStateVersion: number;
     }
   | {
       success: false;
@@ -915,7 +919,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const submitStudentMessage = async (studentMessage: string) => {
     const text = studentMessage.trim();
 
-    if (!text || isGeneratingPatientResponse) {
+    if (!text || isGeneratingPatientResponse || !serverEncounterId) {
       return;
     }
 
@@ -978,8 +982,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          encounterId: patientCase.id,
+          encounterId: serverEncounterId,
           caseId: patientCase.id,
+          requestId: `${studentConversationMessage.id}-response`,
+          studentMessageId: studentConversationMessage.id,
           userMessage: text,
           message: text,
           conversation: conversationHistory,
@@ -992,10 +998,12 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         throw new Error("Conversation request failed");
       }
 
-      const patientConversationMessage = createConversationMessage(
-        "patient",
-        data.response,
-      );
+      const patientConversationMessage: ConversationMessage = {
+        id: data.patientMessageId,
+        role: "patient",
+        text: data.response,
+        timestamp: new Date().toISOString(),
+      };
 
       dispatch({
         type: "appendMessage",
@@ -1771,7 +1779,10 @@ function isSuccessfulConversationResponse(
     typeof candidate.provider === "string" &&
     typeof candidate.response === "string" &&
     candidate.response.trim().length > 0 &&
-    typeof candidate.encounterId === "string"
+    typeof candidate.encounterId === "string" &&
+    typeof candidate.requestId === "string" &&
+    typeof candidate.patientMessageId === "string" &&
+    typeof candidate.patientQuestionStateVersion === "number"
   );
 }
 

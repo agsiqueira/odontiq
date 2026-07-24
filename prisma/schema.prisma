@@ -47,8 +47,49 @@ model Encounter {
   updatedAt         DateTime           @updatedAt
   user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
   completedAttempts CompletedAttempt[]
+  patientQuestionState PatientQuestionState?
+  patientQuestionEmissions PatientQuestionEmission[]
+  conversationTurns ConversationTurn[]
 
   @@index([userId, caseId, createdAt])
+}
+
+model PatientQuestionState {
+  encounterId String   @id
+  version     Int      @default(0)
+  state       Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  encounter   Encounter @relation(fields: [encounterId], references: [id], onDelete: Cascade)
+}
+
+model PatientQuestionEmission {
+  id          String   @id @default(uuid())
+  encounterId String
+  questionId  String
+  turnId      String
+  emittedAt   DateTime @default(now())
+  encounter   Encounter @relation(fields: [encounterId], references: [id], onDelete: Cascade)
+
+  @@unique([encounterId, questionId])
+  @@index([encounterId, emittedAt])
+}
+
+model ConversationTurn {
+  id                 String   @id @default(uuid())
+  encounterId        String
+  requestId          String
+  studentMessageId   String
+  patientMessageId   String
+  responseText       String
+  providerName       String
+  selectedQuestionId String?
+  stateVersion       Int
+  createdAt          DateTime @default(now())
+  encounter          Encounter @relation(fields: [encounterId], references: [id], onDelete: Cascade)
+
+  @@unique([encounterId, requestId])
+  @@index([encounterId, createdAt])
 }
 
 model CompletedAttempt {

@@ -17,6 +17,11 @@ import {
 import { generatePatientRoleSafeResponse } from "@/lib/patientRoleResponse";
 import { normalizeOuterPatientQuoteWrapper } from "@/lib/patientDialogue";
 import { patientImmediateResponse } from "@/lib/patientImmediateResponse";
+import { requireAppUser } from "@/lib/requireAppUser";
+import { patientQuestionService } from "@/lib/persistence/services/patientQuestionService";
+import { classifyPatientQuestionTrigger } from "@/lib/patientQuestions/classifier";
+import { getPatientQuestion } from "@/lib/patientQuestions/catalog";
+import { shouldClassifyPatientQuestions } from "@/lib/patientQuestions/stateMachine";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
@@ -32,7 +37,9 @@ Do not include analysis, teaching, diagnosis, differential diagnosis, treatment 
 
 Carefully determine whether the provider is asking you a question or explaining something to you. A plain-language interpretation of the current message is supplied below.
 
-When the provider explains a diagnosis, treatment, medication, procedure, referral, admission, discharge plan, follow-up plan, or other course of action, respond as a patient receiving that information. Briefly acknowledge, react, express an appropriate concern or emotion, or ask one short realistic follow-up question about pain, safety, timing, medication, admission, recovery, or what happens next. Do not ask a question every time, and vary acknowledgments naturally while staying consistent with the patient's age, personality, emotional state, and the seriousness of the situation.
+When the provider explains a diagnosis, treatment, medication, procedure, referral, admission, discharge plan, follow-up plan, or other course of action, respond as a patient receiving that information. Briefly acknowledge, react, or express an appropriate concern or emotion while staying consistent with the patient's age, personality, emotional state, and the seriousness of the situation.
+
+Do not initiate or invent a follow-up question. Approved patient-initiated questions are controlled separately and will be added after your response when appropriate.
 
 Do not say "I don't know," "That's why I'm here," or "You're the doctor" in response to a provider explanation, recommendation, instruction, reassurance, or closing statement. Do not independently approve, reject, alter, or add to the clinical plan. React only as the patient.
 
@@ -82,6 +89,25 @@ export async function POST(request: Request): Promise<Response> {
         { status: 404 },
       );
     }
+    const user = await requireAppUser();
+    const questionContext = await patientQuestionService.loadContext(
+      user.id,
+      payload.encounterId,
+      payload.caseId,
+    );
+    if (questionContext.status === "not-found") {
+      return Response.json({ success: false, error: "encounter_not_found" }, { status: 404 });
+    }
+    if (questionContext.status === "case-mismatch") {
+      return Response.json({ success: false, error: "encounter_case_mismatch" }, { status: 409 });
+    }
+    const existingTurn = await patientQuestionService.findTurn(
+      payload.encounterId,
+      payload.requestId,
+    );
+    if (existingTurn) {
+      return Response.json(toConversationResponse(payload.encounterId, existingTurn));
+    }
 
     const sanitizedConversation = payload.conversation.map((message) => ({
       ...message,
@@ -123,6 +149,7 @@ export async function POST(request: Request): Promise<Response> {
         .map((message) => patientDialogueOnly(message.text)),
       fallbackText: patientFactFallback(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
       requiredFacts: requiredFactsForTurn(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
+      allowPatientInitiatedQuestion: false,
       retry: async () => {
         console.warn("Patient-output validation rejected unsafe dialogue.", {
           event: "patient_output_validation_failed",
@@ -143,6 +170,40 @@ export async function POST(request: Request): Promise<Response> {
         return retryResponse.text;
       },
     });
+    const patientMessageId = crypto.randomUUID();
+    const classification = shouldClassifyPatientQuestions(
+      payload.caseId,
+      questionContext.state,
+    )
+      ? await classifyPatientQuestionTrigger({
+          provider: selectedProvider,
+          caseId: payload.caseId,
+          studentMessageId: payload.studentMessageId,
+          studentMessage: payload.message,
+          draftPatientMessageId: patientMessageId,
+          draftPatientResponse: safeResponse.text,
+          conversation: sanitizedConversation,
+          state: questionContext.state,
+        })
+      : undefined;
+    const storedTurn = await patientQuestionService.finalizeTurn({
+      userId: user.id,
+      encounterId: payload.encounterId,
+      caseId: payload.caseId,
+      requestId: payload.requestId,
+      studentMessageId: payload.studentMessageId,
+      patientMessageId,
+      baseResponse: safeResponse.text,
+      providerName: provider.name,
+      classification,
+      questionText: (id) => getPatientQuestion(id as Parameters<typeof getPatientQuestion>[0])?.text,
+    });
+    if (storedTurn === "not-found") {
+      return Response.json({ success: false, error: "encounter_not_found" }, { status: 404 });
+    }
+    if (storedTurn === "case-mismatch") {
+      return Response.json({ success: false, error: "encounter_case_mismatch" }, { status: 409 });
+    }
 
     if (safeResponse.repeatedDrift) {
       console.warn("Patient-role corrective retry also drifted.", {
@@ -160,12 +221,7 @@ export async function POST(request: Request): Promise<Response> {
       });
     }
 
-    return Response.json({
-      success: true,
-      provider: provider.name,
-      response: safeResponse.text,
-      encounterId: payload.encounterId,
-    });
+    return Response.json(toConversationResponse(payload.encounterId, storedTurn));
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
       console.error("Conversation provider request failed.", {
@@ -201,11 +257,36 @@ function isConversationRequest(
   return (
     typeof candidate.encounterId === "string" &&
     typeof candidate.caseId === "string" &&
+    typeof candidate.requestId === "string" &&
+    typeof candidate.studentMessageId === "string" &&
     Array.isArray(candidate.conversation) &&
     Array.isArray(candidate.coveredChecklistItems) &&
     candidate.coveredChecklistItems.every((item) => typeof item === "string") &&
     typeof candidate.message === "string"
   );
+}
+
+function toConversationResponse(
+  encounterId: string,
+  turn: {
+    requestId: string;
+    patientMessageId: string;
+    responseText: string;
+    providerName: string;
+    selectedQuestionId?: string;
+    stateVersion: number;
+  },
+) {
+  return {
+    success: true as const,
+    provider: turn.providerName,
+    response: turn.responseText,
+    encounterId,
+    requestId: turn.requestId,
+    patientMessageId: turn.patientMessageId,
+    selectedQuestionId: turn.selectedQuestionId,
+    patientQuestionStateVersion: turn.stateVersion,
+  };
 }
 
 function buildPatientSystemPrompt(
@@ -414,7 +495,6 @@ function patientFactFallback(
     "c5.temperature-unknown": "I haven't had a fever, but I don't know an exact temperature.",
     "c5.diagnosis-unknown": "I don't know the diagnosis; I just know the pain won't go away.",
     "c5.appointment-negative": "No, I don't have a dentist or an appointment right now.",
-    "c5.antibiotic-request": "Can I get an antibiotic? It helped before when I had a toothache, but I don't know whether I need one now.",
   };
   const selected = [...new Set(Object.entries(fallbacks).filter(([id]) => requiredIds.has(id)).map(([, text]) => text))];
   return selected.length ? selected.join(" ") : undefined;
@@ -469,7 +549,7 @@ function requiredFactsForTurn(
     "c5.prior-acetaminophen-unknown", "c5.prior-antibiotics-current-unknown", "c5.nkda", "c5.healthy", "c5.opioid-negative",
     "c5.surgery-unknown", "c5.smoking", "c5.alcohol", "c5.illicit-drugs-negative", "c5.dental-history",
     "c5.painful-tooth-not-extracted", "c5.root-canal-unknown", "c5.filling-unknown", "c5.temperature-unknown",
-    "c5.diagnosis-unknown", "c5.appointment-negative", "c5.antibiotic-request", "c5.access", "c5.goal",
+    "c5.diagnosis-unknown", "c5.appointment-negative", "c5.access", "c5.goal",
   ]);
   const requiredCase5Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case5ProtectedIds.has(fact.id)).map((fact) => fact.id));
   const asksDuration = /\b(?:how long|duration|how many days|when.{0,20}(?:start|begin))\b/i.test(studentMessage);

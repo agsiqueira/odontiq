@@ -28,6 +28,7 @@
     "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",
     "validate:patient-message-intent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientMessageIntent.ts",
     "validate:patient-output": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientOutputIntegrity.ts",
+    "validate:patient-questions": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientInitiatedQuestions.ts",
     "validate:case05-cold": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase05LingeringCold.ts",
     "validate:case05-irreversible-pulpitis": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase05IrreversiblePulpitis.ts",
     "validate:case01-ludwigs": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase01Ludwigs.ts",

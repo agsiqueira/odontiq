@@ -1,6 +1,7 @@
 import { normalizePatientDialogueWithDiagnostics } from "./patientDialogue";
 import {
   assessPatientRole,
+  SAFE_PATIENT_BASE_RESPONSE_FALLBACK,
   SAFE_PATIENT_ROLE_FALLBACK,
 } from "./patientRoleGuard";
 import { assessPatientOutputIntegrity } from "./patientOutputGuard";
@@ -20,6 +21,7 @@ export async function generatePatientRoleSafeResponse({
   priorPatientDialogue = [],
   fallbackText = SAFE_PATIENT_ROLE_FALLBACK,
   requiredFacts = [],
+  allowPatientInitiatedQuestion = true,
 }: {
   initialOutput: string;
   retry: () => Promise<string>;
@@ -27,6 +29,7 @@ export async function generatePatientRoleSafeResponse({
   priorPatientDialogue?: readonly string[];
   fallbackText?: string;
   requiredFacts?: readonly PatientDisclosureFact[];
+  allowPatientInitiatedQuestion?: boolean;
 }): Promise<PatientRoleSafeResponse> {
   let normalized = normalizePatientDialogueWithDiagnostics(initialOutput);
   const assessment = assessPatientRole(normalized.text);
@@ -36,7 +39,8 @@ export async function generatePatientRoleSafeResponse({
     priorPatientDialogue,
     requiredFacts,
   );
-  if (assessment.valid && integrity.valid) {
+  const questionValid = allowPatientInitiatedQuestion || !containsUnsolicitedQuestion(normalized.text);
+  if (assessment.valid && integrity.valid && questionValid) {
     return {
       text: normalized.text,
       formattingChanged: normalized.changed,
@@ -52,7 +56,8 @@ export async function generatePatientRoleSafeResponse({
       visibleFacts,
       priorPatientDialogue,
       requiredFacts,
-    ).valid
+    ).valid &&
+    (allowPatientInitiatedQuestion || !containsUnsolicitedQuestion(normalized.text))
   ) {
     return {
       text: normalized.text,
@@ -63,9 +68,15 @@ export async function generatePatientRoleSafeResponse({
   }
 
   return {
-    text: fallbackText,
+    text: allowPatientInitiatedQuestion
+      ? fallbackText
+      : SAFE_PATIENT_BASE_RESPONSE_FALLBACK,
     formattingChanged: false,
     initialRejection: assessment.matchedPattern ?? integrity.reason,
     repeatedDrift: true,
   };
+}
+
+function containsUnsolicitedQuestion(text: string) {
+  return /(?:^|[.!]\s+)[^?]*\?/m.test(text.trim());
 }

@@ -39,7 +39,6 @@ const questions: Array<[string, string[]]> = [
   ["How often do you take Motrin?", ["c5.ibuprofen-frequency-unknown"]],
   ["Have you taken Tylenol before coming in?", ["c5.prior-acetaminophen-unknown"]],
   ["Have you taken antibiotics for this before coming in?", ["c5.prior-antibiotics-current-unknown"]],
-  ["Do you want an antibiotic?", ["c5.antibiotic-request"]],
   ["Have you used opioids?", ["c5.opioid-negative"]],
   ["Are you allergic to penicillin?", ["c5.nkda"]],
   ["Do you smoke?", ["c5.smoking"]],
@@ -57,6 +56,7 @@ const questions: Array<[string, string[]]> = [
   ["Can you afford a dentist or do you have insurance?", ["c5.access"]],
 ];
 for (const [question, ids] of questions) assert.deepEqual(visible(question).map((fact) => fact.id), ids, question);
+assert(!visible("Do you want an antibiotic?").some((fact) => fact.id === "c5.antibiotic-request"));
 assert(visible("How many seconds does it last after cold?").every((fact) => !/\b\d+\s*(seconds?|minutes?)\b/i.test(fact.text)));
 assert(visible("Does cold make it worse?").every((fact) => !/percussion|chewing|swelling/i.test(fact.text)));
 assert(visible("Tell me about the pain.").every((fact) => !/insurance|smok|dental visit/i.test(fact.text)));

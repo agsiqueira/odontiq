@@ -899,7 +899,6 @@ function selectCaseSpecificAllowedFacts({
   if (/\b(?:opioid|opioids|opiate|opiates|narcotic|narcotics|prescription painkillers?)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.opioid-negative");
   if (/\b(?:tylenol|acetaminophen)\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\b(?:tylenol|acetaminophen)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.prior-acetaminophen-unknown");
   if (/\bantibiotics?\b.*\b(?:before|already|home|arrival|coming in|taken|take)\b|\b(?:taken|take)\b.*\bantibiotics?\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.prior-antibiotics-current-unknown");
-  if (/\b(?:want|asking|request|need)\b.*\bantibiotics?\b|\bantibiotics?\b.*\b(?:want|asking|request|need|helped before)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.antibiotic-request");
   if (/\b(?:surgery|surgeries|surgical history|operation)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.surgery-unknown");
   if (/\b(?:root canal|nerve removed)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.root-canal-unknown");
   if (/\b(?:filling|restoration)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.filling-unknown");

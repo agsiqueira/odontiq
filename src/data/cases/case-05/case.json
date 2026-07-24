@@ -106,7 +106,6 @@
       {"id":"c5.temperature-unknown","topic":"medical_history","text":"The patient has no fever but does not know an exact temperature.","questionIntents":["temperature_knowledge"]},
       {"id":"c5.diagnosis-unknown","topic":"medical_history","text":"The patient does not independently know the diagnosis.","questionIntents":["diagnosis_knowledge"]},
       {"id":"c5.appointment-negative","topic":"dental_history","text":"The patient has no current dentist or appointment and says arranging care will take time.","questionIntents":["current_appointment"]},
-      {"id":"c5.antibiotic-request","topic":"medications","text":"The patient asks for an antibiotic because one helped with a prior toothache, but does not know whether it is indicated now.","questionIntents":["antibiotic_request"]},
       {"id":"c5.access","topic":"dental_history","text":"Unemployment, lack of insurance, and inability to afford care create a dental access barrier; arranging treatment may take time.","questionIntents":["dental_access"]},
       {"id":"c5.goal","topic":"dental_history","text":"The patient wants to save tooth if possible.","questionIntents":["patient_goal"]}
     ],

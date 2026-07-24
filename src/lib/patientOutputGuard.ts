@@ -104,7 +104,6 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
     "c5.temperature-unknown": /\b(?:haven't|have not)\b.{0,20}\bfever\b.{0,45}\b(?:don't|do not)\b.{0,15}\bknow\b.{0,20}\bexact temperature\b/i,
     "c5.diagnosis-unknown": /\b(?:don't|do not)\b.{0,25}\bknow\b.{0,25}\b(?:diagnosis|what (?:it|this) is)\b/i,
     "c5.appointment-negative": /\b(?:no|don't|do not)\b.{0,35}\b(?:dentist|appointment)\b/i,
-    "c5.antibiotic-request": /\bantibiotics?\b.{0,45}\b(?:helped before|don't know|do not know|need one)\b|\b(?:helped before|don't know|do not know)\b.{0,45}\bantibiotics?\b/i,
     "c3.ulcers": /\b(?:have|had|history of|deal(?:ing)? with|known)\b.{0,25}\b(?:stomach|gastric)?\s*ulcers?\b|\b(?:stomach|gastric)\s*ulcers?\b/i,
     "c3.pepcid": /\bpepcid\b.{0,25}\b(?:as needed|when needed|prn|take|use)\b|\b(?:take|use)\b.{0,25}\bpepcid\b/i,
     "c3.ibuprofen": /\b(?:ibuprofen|advil|motrin)\b.{0,40}\b(?:upsets?|bothers?|irritates?|poorly tolerate|avoid|stomach)\b/i,
