@@ -65,6 +65,12 @@ The complete sweep also exposed one stale test assumption in `validatePostSemant
 - Case 4: delayed-antibiotic prescription language; it remains unscored.
 - Case 5: exact local-anesthetic formulation calibration and whether it is scored or supporting context.
 
+### 2026-07-24 faculty clarification overrides
+
+- **Case 2 allergy outcome:** the required information-gathering outcome is establishing the patient's penicillin-allergy status. A direct penicillin/amoxicillin-class question counts when answered. A general medication-allergy question counts only when the patient's response explicitly establishes penicillin-allergy status.
+- **Case 3 analgesia:** the provider should recommend acetaminophen/Tylenol only and should not recommend ibuprofen, Advil, Motrin, or another NSAID given the patient's ulcer history and intolerance. The contradictory affirmative ibuprofen item in the historical faculty Word checklist is not the active canonical guidance.
+- Exact acetaminophen dose, interval, and maximum daily amount remain pending faculty confirmation and are not taught or scored.
+
 ## 10. Known limitations
 
 - Scripted legacy responses are deterministic while production patient prose is provider-generated from allowed facts; semantic wording may differ, but the fact boundary is shared and validated.

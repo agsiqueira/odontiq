@@ -134,5 +134,41 @@ assert(
   ),
   "A negated recommendation must not count as performing the recommendation",
 );
+assert(
+  valid(
+    "case-03",
+    "C3-MP-002",
+    [student("s-tylenol", "Avoid ibuprofen; use Tylenol instead.")],
+    ["s-tylenol"],
+  ),
+  "A Tylenol recommendation must remain explicit when paired with ibuprofen avoidance",
+);
+assert(
+  !valid(
+    "case-03",
+    "C3-MP-002",
+    [student("s-intolerance", "Ibuprofen upsets your stomach because of your ulcers.")],
+    ["s-intolerance"],
+  ),
+  "Recognizing ulcer-related ibuprofen intolerance must not count as recommending Tylenol",
+);
+assert(
+  !valid(
+    "case-03",
+    "C3-MP-007",
+    [student("s-avoid-nsaid", "Do not take ibuprofen.")],
+    ["s-avoid-nsaid"],
+  ),
+  "A negated ibuprofen recommendation must not count as affirmative NSAID recommendation",
+);
+assert(
+  valid(
+    "case-03",
+    "C3-MP-007",
+    [student("s-recommend-nsaid", "Take Motrin for pain.")],
+    ["s-recommend-nsaid"],
+  ),
+  "An affirmative Motrin recommendation must count as explicit unsafe recommendation evidence",
+);
 
 console.log("Explicit semantic learner-evidence validation passed.");

@@ -60,6 +60,9 @@ False-positive safeguards:
 - For "Asked About Fever", broad openings such as "What brings you in?", "What seems to be the problem?", "Tell me what happened", and "How can I help you today?" never count.
 - A patient volunteering fever or systemic symptoms never satisfies "Asked About Fever" unless the learner directly asks or clearly follows up about fever, chills, feeling unwell, fatigue, weakness, body aches, nausea, vomiting, or systemic involvement.
 - Evidence for "Asked About Fever" must quote the targeted learner inquiry itself, not a generic opening or the patient's volunteered statement.
+- "Established Penicillin-Allergy Status" requires both a relevant learner inquiry and the patient's explicit response about penicillin status. A general medication-allergy question counts only when its response explicitly establishes penicillin status. Food or environmental allergy questions and unprompted patient disclosures do not count.
+- For Case 3 pain medication, acetaminophen or Tylenol must be affirmatively recommended to earn the positive criterion. Recognizing ulcers or NSAID intolerance alone is insufficient.
+- For the Case 3 unsafe NSAID criterion, identify only affirmative recommendations to take ibuprofen, Advil, Motrin, or another NSAID. Do not identify avoidance instructions, negated recommendations, or historical/intolerance discussion as unsafe recommendations.
 
 Return exactly:
 {

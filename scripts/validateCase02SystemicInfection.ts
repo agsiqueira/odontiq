@@ -60,6 +60,12 @@ const questions: Array<[string, string[]]> = [
 for (const [question, ids] of questions) assert.deepEqual(visible(question).map((fact) => fact.id), ids, question);
 assert.deepEqual(visible("Have you checked your temperature?").map((fact) => fact.id), ["c2.temperature-unknown"]);
 assert.deepEqual(visible("Do you know your exact temperature?").map((fact) => fact.id), ["c2.temperature-unknown"]);
+const broadAllergyQuestion = "Do you have medication allergies?";
+assert.match(
+  sendMessage("case-02", broadAllergyQuestion, []).patientMessage,
+  /not allergic to penicillin/i,
+  "A broad Case 2 medication-allergy question must explicitly disclose penicillin-allergy status",
+);
 
 for (const question of ["Have you had a fever?", "Did hot or cold bother it earlier?", "Do you feel weak or sick?", "Tell me about the pain."]) {
   const facts = visible(question);
@@ -83,6 +89,24 @@ assert(!corpus.includes("has not noticed fever"));
 assert(!corpus.includes("acetaminophen only"));
 assert(!corpus.includes("seven out of ten"));
 assert(!corpus.includes("deep-space involvement is present"));
+
+const case2Rubric = facultyRubrics.find((item) => item.caseId === "case-02")!;
+const allergyCriteria = case2Rubric.criteria.filter((criterion) =>
+  /allerg/i.test(`${criterion.name} ${criterion.title}`),
+);
+assert.deepEqual(
+  allergyCriteria.map((criterion) => criterion.id),
+  ["C2-IG-002"],
+  "Case 2 must score one allergy outcome without double-counting general and penicillin allergy criteria",
+);
+assert.equal(allergyCriteria[0]?.name, "established-penicillin-allergy-status");
+assert.equal(allergyCriteria[0]?.reportLabel, "Established penicillin-allergy status");
+assert(
+  caseData.supportingInfo.expectedQuestions.some((question) =>
+    /penicillin|amoxicillin/i.test(question),
+  ),
+  "Case 2 expected-question language must explicitly identify the penicillin-allergy outcome",
+);
 
 const patientFacts = caseData.supportingInfo.patientFacts ?? [];
 for (const response of [

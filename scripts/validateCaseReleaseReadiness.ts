@@ -51,6 +51,19 @@ for (const rubric of facultyRubrics) {
 const rubricCorpus = (caseId: string) => normalize(facultyRubrics.find((item) => item.caseId === caseId));
 assert(!/pregnan|hot sensitivity|radiat/.test(rubricCorpus("case-05")), "case-05: unsupported heat, radiation, or pregnancy entered the rubric");
 assert(!/routine antibiotics are indicated|recommended routine antibiotics/.test(rubricCorpus("case-04")), "case-04: rubric rewards routine antibiotics");
-assert(!/recommended ibuprofen|ibuprofen recommended/.test(rubricCorpus("case-03")), "case-03: rubric rewards ibuprofen");
+const case3Rubric = facultyRubrics.find((item) => item.caseId === "case-03");
+assert(case3Rubric, "case-03: rubric missing");
+assert(
+  !case3Rubric.criteria.some(
+    (criterion) =>
+      criterion.expectation === "required" &&
+      criterion.expectedValue !== false &&
+      criterion.evaluationMode === "recommendation" &&
+      /(?:ibuprofen|advil|motrin|nsaid)/i.test(
+        `${criterion.name} ${criterion.title} ${(criterion.acceptedConcepts ?? []).join(" ")}`,
+      ),
+  ),
+  "case-03: rubric positively rewards ibuprofen or another NSAID",
+);
 
 console.log("Case remediation release-readiness invariants passed for Cases 1-5.");

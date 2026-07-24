@@ -93,11 +93,17 @@ for (const caseId of ["case-03", "case-04", "case-05"]) {
 const case3 = facultyRubrics.find((rubric) => rubric.caseId === "case-03")!;
 assert(!case3.criteria.some((criterion) =>
   criterion.expectation === "required" &&
+  criterion.expectedValue !== false &&
   (criterion.name === "recommended-ibuprofen" || /recommend(?:ed|s)? ibuprofen/i.test(`${criterion.title} ${criterion.description}`)),
 ));
 assert(case3.criteria.some((criterion) =>
   criterion.name === "preferred-acetaminophen-with-dose-review" &&
-  /avoid(?:ed)? ibuprofen/i.test(`${criterion.title} ${criterion.description}`),
+  criterion.acceptedConcepts?.every((concept) => /^(?:acetaminophen|tylenol)$/i.test(concept)),
+));
+assert(case3.criteria.some((criterion) =>
+  criterion.id === "C3-MP-007" &&
+  criterion.expectedValue === false &&
+  criterion.critical,
 ));
 
 assert.equal(FINAL_FACULTY_RUBRIC_POLICY.passingScorePercentage, 84);

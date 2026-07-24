@@ -483,8 +483,24 @@ const case02Criteria: FacultyRubricCriterion[] = [
     legacyPatientChecklistIds: ["systemic-symptoms"],
     legacyClinicalChecklistIds: ["clinical-2"],
   }),
-  shared("askedAboutPenicillinAllergy", {
+  criterion({
     id: "C2-IG-002",
+    name: "established-penicillin-allergy-status",
+    title: "Established Penicillin-Allergy Status",
+    description:
+      "Established whether the patient is allergic to penicillin through a relevant learner inquiry and an explicit patient response.",
+    competency: "information-gathering",
+    evaluationMode: "finding-elicitation",
+    expectation: "required",
+    source: "faculty-history-question",
+    acceptedConcepts: [
+      "penicillin allergy",
+      "amoxicillin allergy",
+      "penicillin-class allergy",
+      "medication allergies",
+      "drug allergies",
+    ],
+    reportLabel: "Established penicillin-allergy status",
     weight: 1,
     critical: false,
     legacyPatientChecklistIds: ["allergies"],
@@ -709,10 +725,34 @@ const case03Criteria: FacultyRubricCriterion[] = [
   recommendation({
     id: "C3-MP-002",
     name: "preferred-acetaminophen-with-dose-review",
-    title: "Preferred Acetaminophen and Avoided Ibuprofen",
-    description: "Preferred acetaminophen conceptually because of ulcer history and ibuprofen intolerance, without requiring an unapproved dose.",
-    acceptedConcepts: ["acetaminophen", "Tylenol", "avoid ibuprofen", "NSAID intolerance"],
+    title: "Recommended Acetaminophen or Tylenol",
+    description: "Recommended acetaminophen or Tylenol for pain because ibuprofen is not tolerated, without requiring an unapproved dose.",
+    acceptedConcepts: ["acetaminophen", "Tylenol"],
     facultyNotes: "Exact acetaminophen dose, interval, and maximum daily amount remain pending faculty review; do not score a specific schedule.",
+  }),
+  recommendation({
+    id: "C3-MP-007",
+    name: "recommended-nsaid-despite-ulcer-intolerance",
+    title: "Recommended NSAID Despite Ulcer History and Intolerance",
+    description:
+      "Affirmatively recommended ibuprofen, Advil, Motrin, or another NSAID despite the patient's stomach-ulcer history and documented intolerance.",
+    critical: true,
+    acceptedConcepts: [
+      "ibuprofen",
+      "Advil",
+      "Motrin",
+      "NSAID",
+      "naproxen",
+      "Aleve",
+      "ketorolac",
+      "Toradol",
+      "diclofenac",
+      "celecoxib",
+      "Celebrex",
+    ],
+    expectedValue: false,
+    facultyNotes:
+      "Faculty clarification requires Tylenol only; negation, avoidance counseling, and historical discussion of NSAID intolerance do not count as this unsafe recommendation.",
   }),
   shared("recommendedPromptDentalFollowUp", {
     id: "C3-MP-003",

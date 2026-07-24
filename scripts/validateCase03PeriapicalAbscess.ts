@@ -5,6 +5,10 @@ import { facultyRubrics } from "../src/lib/facultyRubric/caseRubrics";
 import { buildPatientDisclosureState } from "../src/lib/patientDisclosure";
 import { assessPatientOutputIntegrity } from "../src/lib/patientOutputGuard";
 import { canonicalCase03 } from "../src/data/canonicalCaseSpecs/case-03";
+import type { FacultyCriterionEvaluation } from "../src/lib/facultyRubric/evaluation/types";
+import { getAuthoredExpectedValue } from "../src/lib/facultyRubric/report/comparison";
+import { buildFacultyReport } from "../src/lib/facultyRubric/report";
+import { scoreFacultyRubricEvaluations } from "../src/lib/facultyRubric/scoring";
 
 const caseData = loadCase("case-03")!;
 const corpus = JSON.stringify(caseData).toLowerCase();
@@ -103,11 +107,92 @@ assert.equal(caseData.assets.examinations.some((item) => item.id === "vital-sign
 for (const unsupported of ["first molar", "poor dentition", "no stridor", "37.2", "96 bpm", "128/78"]) assert(!corpus.includes(unsupported), unsupported);
 
 const rubric = facultyRubrics.find((item) => item.caseId === "case-03")!;
-for (const id of ["C3-PD-001", "C3-PD-002", "C3-PD-003", "C3-MP-001", "C3-MP-002", "C3-MP-004", "C3-MP-005", "C3-MP-006", "C3-CI-004", "C3-EX-002", "C3-EX-003", "C3-EX-004", "C3-EX-005", "C3-EX-006"]) assert(rubric.criteria.some((criterion) => criterion.id === id), id);
+for (const id of ["C3-PD-001", "C3-PD-002", "C3-PD-003", "C3-MP-001", "C3-MP-002", "C3-MP-004", "C3-MP-005", "C3-MP-006", "C3-MP-007", "C3-CI-004", "C3-EX-002", "C3-EX-003", "C3-EX-004", "C3-EX-005", "C3-EX-006"]) assert(rubric.criteria.some((criterion) => criterion.id === id), id);
 assert(rubric.criteria.find((criterion) => criterion.id === "C3-PD-001")?.acceptedConcepts?.includes("inferior alveolar nerve block"));
 assert(!rubric.criteria.some((criterion) => criterion.acceptedConcepts?.some((concept) => /maxillary infiltration/i.test(concept))));
 assert(!rubric.criteria.some((criterion) => criterion.id === "C3-MP-002" && criterion.acceptedConcepts?.some((concept) => /^ibuprofen$|^nsaid$/i.test(concept))));
 assert(rubric.criteria.find((criterion) => criterion.id === "C3-MP-002")?.facultyNotes?.includes("pending faculty review"));
+assert.deepEqual(rubric.criteria.find((criterion) => criterion.id === "C3-MP-002")?.acceptedConcepts, ["acetaminophen", "Tylenol"]);
+const unsafeNsaidCriterion = rubric.criteria.find((criterion) => criterion.id === "C3-MP-007");
+assert(unsafeNsaidCriterion);
+assert.equal(unsafeNsaidCriterion.expectedValue, false);
+assert.equal(unsafeNsaidCriterion.critical, true);
+assert.equal(unsafeNsaidCriterion.evaluationMode, "recommendation");
+assert(!rubric.criteria.some((criterion) =>
+  criterion.expectation === "required" &&
+  criterion.evaluationMode === "recommendation" &&
+  criterion.expectedValue !== false &&
+  criterion.acceptedConcepts?.some((concept) => /^(?:ibuprofen|advil|motrin|nsaid)$/i.test(concept)),
+), "No active positive Case 3 criterion may reward an NSAID recommendation");
 assert(rubric.criteria.filter((criterion) => criterion.id !== "C3-EX-001" && criterion.id.startsWith("C3-EX-")).every((criterion) => criterion.evaluationMode === "clinical-statement"));
+
+const scoredCriteria = rubric.criteria.filter((criterion) =>
+  criterion.expectation === "required" && criterion.weight > 0
+);
+const safeEvaluations: FacultyCriterionEvaluation[] = scoredCriteria.map((criterion) => {
+  const expected = getAuthoredExpectedValue(criterion);
+  return {
+    caseId: rubric.caseId,
+    criterionId: criterion.id,
+    status: "met",
+    confidence: 1,
+    evidence: [],
+    rationale: expected ? "Expected behavior present." : "Unsafe behavior correctly avoided.",
+    evaluationMethod: "deterministic",
+    evaluatedAt: "2026-07-24T00:00:00.000Z",
+    expectedValue: expected,
+    observedValue: expected,
+  };
+});
+const safeScore = scoreFacultyRubricEvaluations({
+  caseId: rubric.caseId,
+  evaluations: safeEvaluations,
+});
+assert.equal(safeScore.penaltyPoints, 0);
+assert(!safeScore.criticalMissCriterionIds.includes("C3-MP-007"));
+assert(safeScore.criticalMetCriterionIds.includes("C3-MP-007"));
+
+const unsafeEvaluations = safeEvaluations.map((evaluation) =>
+  evaluation.criterionId === "C3-MP-007"
+    ? {
+        ...evaluation,
+        status: "not-met" as const,
+        observedValue: true,
+        rationale: "Learner affirmatively recommended ibuprofen.",
+      }
+    : evaluation
+);
+const unsafeScore = scoreFacultyRubricEvaluations({
+  caseId: rubric.caseId,
+  evaluations: unsafeEvaluations,
+});
+assert.equal(unsafeScore.penaltyPoints, 1);
+assert(unsafeScore.adjustedPoints < safeScore.adjustedPoints);
+assert.equal(unsafeScore.safetyStatus, "critical-miss");
+assert(unsafeScore.criticalMissCriterionIds.includes("C3-MP-007"));
+
+const unsafeReport = buildFacultyReport({
+  rubric,
+  completedEvaluations: unsafeEvaluations,
+  score: unsafeScore,
+  generatedAt: "2026-07-24T00:00:01.000Z",
+});
+assert(
+  unsafeReport.criticalSafetyItems.some(
+    (item) => item.criterion.criterionId === "C3-MP-007" &&
+      /NSAID.*Ulcer History/i.test(item.criterion.title),
+  ),
+  "Unsafe NSAID recommendation must appear in the faculty-facing critical safety report",
+);
+assert(
+  unsafeReport.improvementAreas.some((item) => item.criterionId === "C3-MP-007"),
+  "Unsafe NSAID recommendation must appear in report improvement areas",
+);
+assert(
+  caseData.supportingInfo.reportData.criticalMisses.some((item) =>
+    /recommending ibuprofen despite ulcers and intolerance/i.test(item),
+  ),
+  "The applicable legacy Case 3 report language must identify ibuprofen recommendation as a critical miss",
+);
 
 console.log("Case 3 periapical-abscess validation passed.");

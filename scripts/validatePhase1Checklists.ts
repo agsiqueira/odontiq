@@ -122,7 +122,7 @@ for (const caseId of ["case-01", "case-02", "case-03", "case-04", "case-05"]) {
   assert(caseData.conversation.scripted.length > 0, `${caseId} dialogue must remain configured`);
 }
 
-assert(criterionNames("case-02").has("asked-about-penicillin-allergy"));
+assert(criterionNames("case-02").has("established-penicillin-allergy-status"));
 assert(criterionNames("case-02").has("asked-about-home-medication-use"));
 assert(criterionNames("case-02").has("offered-dental-anesthesia"));
 assert(criterionNames("case-02").has("explained-antibiotics-do-not-resolve-source"));

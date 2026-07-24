@@ -6,6 +6,7 @@ export type SemanticEvidenceRule = {
   criterionIds?: string[];
   criterionNames?: string[];
   requiredLearnerPatterns: RegExp[];
+  forbiddenLearnerPatterns?: RegExp[];
 };
 
 export const semanticEvidenceRules: SemanticEvidenceRule[] = [
@@ -66,9 +67,27 @@ export const semanticEvidenceRules: SemanticEvidenceRule[] = [
     ],
   },
   {
-    criterionIds: ["C1-IG-002", "C2-IG-002", "C3-IG-002", "C4-IG-002", "C5-IG-002"],
+    criterionIds: ["C1-IG-002", "C3-IG-002", "C4-IG-002", "C5-IG-002"],
     requiredLearnerPatterns: [
       /\b(allerg(?:y|ies|ic)|reaction to (?:medicine|medication|penicillin)|penicillin reaction)\b/i,
+    ],
+  },
+  {
+    criterionIds: ["C3-MP-002"],
+    requiredLearnerPatterns: [
+      /\b(?:recommend|take|use|give|start|try|should|can)\b.{0,45}\b(?:acetaminophen|tylenol)\b|\b(?:acetaminophen|tylenol)\b.{0,45}\b(?:recommend|take|use|give|start|try|should|can)\b/i,
+    ],
+  },
+  {
+    criterionIds: ["C3-MP-007"],
+    requiredLearnerPatterns: [
+      /\b(?:recommend|take|use|give|start|try|should|can)\b.{0,45}\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b|\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b.{0,45}\b(?:recommend|take|use|give|start|try|should|can)\b/i,
+    ],
+    forbiddenLearnerPatterns: [
+      /\b(?:do not|don't|avoid|should not|shouldn't|would not|wouldn't|not recommend|stop|instead of|rather than)\b.{0,55}\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b/i,
+      /\brecommend(?:ed|ing)?\s+against\b.{0,45}\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b/i,
+      /\b(?:acetaminophen|tylenol)\b.{0,35}\b(?:instead of|rather than)\b.{0,35}\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b/i,
+      /\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b.{0,35}\b(?:upset|bother|intoler|ulcer|reaction|allerg)\w*\b/i,
     ],
   },
 ];
@@ -81,9 +100,17 @@ export function validateTargetedSemanticEvidence({
 }: {
   criterionName: string;
   criterionId?: string;
-  result: Pick<AiFacultyCriterionEvaluation, "learnerEvidenceMessageIds">;
+  result: Pick<AiFacultyCriterionEvaluation, "learnerEvidenceMessageIds"> &
+    Partial<Pick<AiFacultyCriterionEvaluation, "contextualPatientMessageIds">>;
   messages: FacultyEvaluationMessage[];
 }) {
+  if (criterionId === "C2-IG-002") {
+    return {
+      applicable: true,
+      valid: validatesEstablishedPenicillinAllergyStatus(result, messages),
+    } as const;
+  }
+
   const ruleById = criterionId
     ? semanticEvidenceRules.find((item) => item.criterionIds?.includes(criterionId))
     : undefined;
@@ -96,10 +123,52 @@ export function validateTargetedSemanticEvidence({
     const message = messagesById.get(messageId);
     return (
       message?.role === "student" &&
-      rule.requiredLearnerPatterns.some((pattern) => pattern.test(message.content))
+      rule.requiredLearnerPatterns.some((pattern) => pattern.test(message.content)) &&
+      !rule.forbiddenLearnerPatterns?.some((pattern) => pattern.test(message.content))
     );
   });
   return { applicable: true, valid } as const;
+}
+
+const penicillinClassPattern =
+  /\b(?:penicillin(?:-class)?|amoxicillin|ampicillin|augmentin|amoxicillin[- ]clavulanate)\b/i;
+const explicitPenicillinStatusPattern =
+  /\b(?:penicillin(?:-class)?|amoxicillin|ampicillin|augmentin|amoxicillin[- ]clavulanate)\b.{0,55}\b(?:allerg|reaction|tolerat)|\b(?:allerg|reaction|tolerat)\w*\b.{0,55}\b(?:penicillin(?:-class)?|amoxicillin|ampicillin|augmentin|amoxicillin[- ]clavulanate)\b/i;
+const generalMedicationAllergyPattern =
+  /\b(?:medication|medicine|drug|prescription)\s+(?:or\s+drug\s+)?allerg(?:y|ies|ic)\b|\ballerg(?:y|ies|ic)\b.{0,25}\b(?:medication|medicine|drug|prescription)\b/i;
+
+function validatesEstablishedPenicillinAllergyStatus(
+  result: Pick<AiFacultyCriterionEvaluation, "learnerEvidenceMessageIds"> &
+    Partial<Pick<AiFacultyCriterionEvaluation, "contextualPatientMessageIds">>,
+  messages: FacultyEvaluationMessage[],
+) {
+  const learnerIds = new Set(result.learnerEvidenceMessageIds);
+  const patientIds = new Set(result.contextualPatientMessageIds ?? []);
+
+  return messages.some((message, learnerIndex) => {
+    const isPenicillinClassInquiry = penicillinClassPattern.test(message.content);
+    const isGeneralMedicationAllergyInquiry =
+      generalMedicationAllergyPattern.test(message.content);
+    if (
+      message.role !== "student" ||
+      !learnerIds.has(message.id) ||
+      !(isPenicillinClassInquiry || isGeneralMedicationAllergyInquiry)
+    ) {
+      return false;
+    }
+
+    const response = messages
+      .slice(learnerIndex + 1)
+      .find((candidate) => candidate.role === "student" || candidate.role === "patient");
+
+    return Boolean(
+      response?.role === "patient" &&
+        patientIds.has(response.id) &&
+        response.content.trim().length > 0 &&
+        (isPenicillinClassInquiry ||
+          explicitPenicillinStatusPattern.test(response.content)),
+    );
+  });
 }
 
 const rejectedGenericLearnerPatterns = [
@@ -165,6 +234,18 @@ export function validateExplicitLearnerEvidence({
       case "clinical-statement":
         return !questionPattern.test(content) && conclusionPattern.test(content);
       case "recommendation":
+        if (criterion.id === "C3-MP-002") {
+          return /\b(?:recommend|take|use|give|start|try|should|can)\b.{0,45}\b(?:acetaminophen|tylenol)\b|\b(?:acetaminophen|tylenol)\b.{0,45}\b(?:recommend|take|use|give|start|try|should|can)\b/i.test(
+            content,
+          );
+        }
+        if (criterion.id === "C3-MP-007") {
+          return (
+            /\b(?:recommend|take|use|give|start|try|should|can)\b.{0,45}\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b|\b(?:ibuprofen|advil|motrin|nsaid\w*|naproxen|aleve|ketorolac|toradol|diclofenac|celecoxib|celebrex)\b.{0,45}\b(?:recommend|take|use|give|start|try|should|can)\b/i.test(
+              content,
+            ) && !negatedRecommendationPattern.test(content)
+          );
+        }
         return (
           recommendationPattern.test(content) &&
           !negatedRecommendationPattern.test(content)
