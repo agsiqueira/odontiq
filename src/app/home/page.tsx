@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 export default function HomePage() {
   return (
     <main className="min-h-dvh bg-[var(--color-background)] px-4 pb-24 pt-4 text-[var(--color-text-primary)]">
-      <div className="mx-auto flex min-h-[calc(100dvh-7rem)] w-full max-w-[30rem] flex-col">
+      <div className="mx-auto flex min-h-[calc(100dvh-7rem)] w-full max-w-[30rem] flex-col md:max-w-[48rem]">
         <header>
           <div className="flex items-start justify-between gap-4">
             <div>

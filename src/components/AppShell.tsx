@@ -27,7 +27,7 @@ export function AppShell({
 }: AppShellProps) {
   return (
     <div className="min-h-dvh bg-[var(--color-background)] text-[var(--color-text-primary)]">
-      <div className="mx-auto flex min-h-dvh w-full max-w-[30rem] flex-col bg-[var(--color-background)]">
+      <div className="mx-auto flex min-h-dvh w-full max-w-[30rem] flex-col bg-[var(--color-background)] md:max-w-[48rem]">
         {showTopBar ? (
           <TopBar
             title={title}

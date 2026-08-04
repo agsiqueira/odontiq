@@ -25,7 +25,7 @@ export default async function ReportPage({ params, searchParams }: ReportPagePro
 
   return (
     <AppShell
-      title="Report"
+      title="Consultation Report"
       eyebrow={patientCase.patientName}
       showSettings
       className="space-y-4"

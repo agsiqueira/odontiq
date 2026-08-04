@@ -22,6 +22,7 @@ import type {
 } from "@/lib/facultyRubric/report";
 import type { FacultyComparisonSection } from "@/lib/facultyRubric/report/comparison";
 import type { ConversationMessage } from "@/lib/conversationEngine";
+import { getLearnerInterfaceText } from "@/lib/interfaceTerminology";
 import {
   FACULTY_REPORT_DISPLAY_TITLES,
   formatEncounterTranscriptTimestamp,
@@ -163,7 +164,7 @@ export function FacultyCaseReport({
           <CriterionSummaryList
             items={facultyReport.criticalSafetyItems.map((item) => ({
               id: item.criterion.criterionId,
-              title: item.criterion.title,
+              title: getLearnerInterfaceText(item.criterion.title),
               meta:
                 item.status === "uncertain"
                   ? "Critical uncertainty"
@@ -308,7 +309,7 @@ function EncounterTranscript({ messages }: { messages: ConversationMessage[] }) 
 
 function ComparisonSection({ section }: { section: FacultyComparisonSection }) {
   return (
-    <ReportCard title={section.title}>
+    <ReportCard title={getLearnerInterfaceText(section.title)}>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[44rem] border-collapse text-left text-sm">
           <thead>
@@ -323,7 +324,9 @@ function ComparisonSection({ section }: { section: FacultyComparisonSection }) {
           <tbody>
             {section.rows.map((row) => (
               <tr key={row.criterionId} className="border-b align-top">
-                <td className="py-3 pr-3 font-medium">{row.itemName}</td>
+                <td className="py-3 pr-3 font-medium">
+                  {getLearnerInterfaceText(row.itemName)}
+                </td>
                 <td className="py-3 pr-3">{row.expected}</td>
                 <td className="py-3 pr-3">{row.student}</td>
                 <td className="py-3 pr-3 font-medium">{row.result}</td>
@@ -440,7 +443,7 @@ function GroupedStrengthList({
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <p className="min-w-0 break-words text-sm font-medium">
-                    {strength.title}
+                    {getLearnerInterfaceText(strength.title)}
                   </p>
                   {strength.critical ? (
                     <StatusBadge tone="success" label="Critical strength" />
@@ -489,7 +492,7 @@ function GroupedImprovementList({
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div className="min-w-0">
                       <p className="break-words text-sm font-medium">
-                        {improvement.title}
+                        {getLearnerInterfaceText(improvement.title)}
                       </p>
                       {isUncertain ? (
                         <p className="mt-2 text-sm leading-6 text-[var(--color-text-secondary)]">
@@ -569,7 +572,9 @@ function CriterionDetail({
     <section className="rounded-xl border border-[var(--color-border)] p-3 text-sm">
       <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
         <div className="min-w-0">
-          <p className="break-words font-semibold">{criterion.title}</p>
+          <p className="break-words font-semibold">
+            {getLearnerInterfaceText(criterion.title)}
+          </p>
           <p className="mt-1 break-words text-xs text-[var(--color-text-secondary)]">
             {criterion.criterionId} - {criterion.competency}
           </p>

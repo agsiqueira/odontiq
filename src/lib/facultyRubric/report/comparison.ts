@@ -97,7 +97,7 @@ export function getAuthoredExpectedValue(criterion: FacultyRubricCriterion) {
 
 function getSectionTitle(criterion: FacultyRubricCriterion) {
   if (criterion.competency === "information-gathering") return "Signs and symptoms";
-  if (criterion.competency === "clinical-findings") return "Emergency assessment";
+  if (criterion.competency === "clinical-findings") return "Hospital Assessment";
   if (criterion.competency === "clinical-interpretation") return "Airway patency";
   if (criterion.competency === "examination") return "Examination";
   return "Immediate recommendations";

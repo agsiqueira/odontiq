@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { getCaseUrgencyDisplayLabel } from "@/lib/interfaceTerminology";
 import type { PatientCardPresentation } from "@/lib/patientCardPresentation";
 import { cn } from "@/lib/utils";
 
@@ -40,7 +41,7 @@ export function PatientProfileCard({
     <article
       className={cn(
         "rounded-2xl border border-[rgba(15,23,42,0.06)] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]",
-        compact ? "p-4" : "p-6",
+        compact ? "p-4 md:p-6" : "p-6",
         className
       )}
     >
@@ -77,7 +78,7 @@ export function PatientProfileCard({
               <div
                 className={cn(
                   "relative overflow-hidden rounded-full bg-[color-mix(in_srgb,var(--color-brand)_12%,white)]",
-                  compact ? "size-[5.75rem]" : "size-32"
+                  compact ? "size-[5.75rem] md:size-28" : "size-32"
                 )}
               >
                 <Image
@@ -96,7 +97,7 @@ export function PatientProfileCard({
           <h2
             className={cn(
               "font-semibold leading-none tracking-tight",
-              compact ? "text-3xl" : "text-4xl"
+              compact ? "text-3xl md:text-4xl" : "text-4xl"
             )}
           >
             {patientCase.patientName}
@@ -109,7 +110,7 @@ export function PatientProfileCard({
         <blockquote
           className={cn(
             "min-h-[3.75em] font-semibold leading-tight text-[var(--color-text-primary)]",
-            compact ? "mt-4 text-xl" : "mt-8 text-2xl"
+            compact ? "mt-4 text-xl md:text-2xl" : "mt-8 text-2xl"
           )}
         >
           &ldquo;{presentation.openingStatement}&rdquo;
@@ -134,7 +135,7 @@ export function PatientProfileCard({
                 urgencyStyles[presentation.urgency]
               )}
             >
-              {presentation.urgency}
+              {getCaseUrgencyDisplayLabel(presentation.urgency)}
             </span>
             <span className="rounded-full bg-[color-mix(in_srgb,var(--color-action)_12%,white)] px-4 py-2 text-sm font-semibold text-[var(--color-action)]">
               {presentation.statusLabel}

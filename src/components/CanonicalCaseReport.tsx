@@ -4,13 +4,9 @@ import { useUser } from "@clerk/nextjs";
 import { Check, Circle, LoaderCircle } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { FacultyCaseReport } from "@/components/FacultyCaseReport";
+import { LearnerCaseReport } from "@/components/LearnerCaseReport";
 import { Button } from "@/components/ui/button";
 import { getCaseById } from "@/lib/cases";
-import {
-  buildCanonicalFacultyPdfFilename,
-  generateCanonicalFacultyPdfBlob,
-} from "@/lib/facultyRubric/report/pdf";
 import { buildCanonicalFacultyReportPresentation } from "@/lib/facultyRubric/report/presentation";
 import { getStudentDisplayName } from "@/lib/facultyRubric/report/displayContent";
 import {
@@ -93,8 +89,6 @@ export function CanonicalCaseReport({
     useState<ReportGenerationStage>("saving");
   const [summary, setSummary] = useState<CompletedEncounterAttempt | null>(null);
   const [isRetrying, setIsRetrying] = useState(false);
-  const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
-  const [pdfError, setPdfError] = useState("");
   const mountedRef = useRef(true);
   const { user } = useUser();
   const patientCase = getCaseById(caseId);
@@ -258,31 +252,6 @@ export function CanonicalCaseReport({
     }
   }, [caseId, isRetrying, summary]);
 
-  const downloadPdf = useCallback(async () => {
-    if (isDownloadingPdf) return;
-    if (!presentation) {
-      setPdfError("The report must be successfully generated before it can be downloaded.");
-      return;
-    }
-    setIsDownloadingPdf(true);
-    setPdfError("");
-    try {
-      const blob = await generateCanonicalFacultyPdfBlob(presentation);
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = buildCanonicalFacultyPdfFilename(presentation);
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      window.setTimeout(() => window.URL.revokeObjectURL(url), 0);
-    } catch {
-      setPdfError("The PDF could not be generated. Please try again.");
-    } finally {
-      setIsDownloadingPdf(false);
-    }
-  }, [isDownloadingPdf, presentation]);
-
   if (
     status === "ready" &&
     summary &&
@@ -290,19 +259,13 @@ export function CanonicalCaseReport({
     patientCase
   ) {
     return (
-      <FacultyCaseReport
+      <LearnerCaseReport
         caseId={caseId}
-        attemptId={summary.attemptId}
         caseTitle={patientCase.openingStatement}
         patientName={patientCase.patientName}
-        studentName={presentation.studentName}
         caseLabel={presentation.caseLabel}
         completedAt={presentation.completedAt}
         facultyReport={presentation.report}
-        onDownloadPdf={() => void downloadPdf()}
-        isDownloadingPdf={isDownloadingPdf}
-        pdfError={pdfError}
-        comparisonSections={presentation.comparisonSections}
         transcript={presentation.transcript}
       />
     );

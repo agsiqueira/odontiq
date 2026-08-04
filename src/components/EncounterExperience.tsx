@@ -1370,7 +1370,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       className="encounter-root min-h-dvh bg-[var(--color-background)] text-[var(--color-text-primary)]"
     >
       <EncounterKeyboardFocus />
-      <div className="mx-auto flex h-dvh min-h-0 w-full max-w-[30rem] flex-col px-4 pb-3 pt-4">
+      <div className="mx-auto flex h-dvh min-h-0 w-full max-w-[30rem] flex-col px-4 pb-3 pt-4 md:max-w-[48rem] md:px-6">
         {encounterSyncError ? (
           <div
             role="alert"
@@ -1415,7 +1415,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
         <InteractionExperienceShell
           className="mt-2 max-sm:mt-[calc(3.75rem+env(safe-area-inset-top))]"
-          protectedHeightClassName="h-[clamp(10rem,32dvh,15.75rem)]"
+          protectedHeightClassName="h-[clamp(10rem,32dvh,15.75rem)] md:h-[clamp(12rem,28dvh,18rem)]"
           character={
             <div
               data-encounter-patient-viewport
@@ -1428,7 +1428,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                 alt={`${patientCase.patientName} speaking`}
                 isTalking={isPatientAudioPlaying}
                 ref={talkingVideoRef}
-                className="encounter-patient-viewport z-10 h-full w-full max-w-[28rem]"
+                className="encounter-patient-viewport z-10 h-full w-full max-w-[28rem] md:w-auto md:max-w-[32rem]"
               />
             </div>
           }
