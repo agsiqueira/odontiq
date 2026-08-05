@@ -76,6 +76,7 @@ export function useSpeechRecognition({
   onFinalTranscript,
 }: UseSpeechRecognitionOptions) {
   const recognitionRef = useRef<BrowserSpeechRecognition | null>(null);
+  const isListeningRef = useRef(false);
   const finalTranscriptRef = useRef("");
   const [status, setStatus] =
     useState<SpeechRecognitionStatus>("unsupported");
@@ -96,6 +97,7 @@ export function useSpeechRecognition({
       }
 
       setStatus("idle");
+      isListeningRef.current = false;
       setError(null);
     }, 0);
 
@@ -162,6 +164,7 @@ export function useSpeechRecognition({
     };
 
     recognition.onerror = (event) => {
+      isListeningRef.current = false;
       emitAudioDiagnostic("speech_recognition.error", {
         errorCode: event.error ?? "unknown",
         isListening: false,
@@ -180,6 +183,7 @@ export function useSpeechRecognition({
     };
 
     recognition.onend = () => {
+      isListeningRef.current = false;
       recognitionRef.current = null;
 
       setStatus((currentStatus) =>
@@ -207,6 +211,7 @@ export function useSpeechRecognition({
     try {
       setError(null);
       setStatus("listening");
+      isListeningRef.current = true;
       recognition.start();
       emitAudioDiagnostic("microphone.recording_started", {
         isListening: true,
@@ -219,6 +224,7 @@ export function useSpeechRecognition({
         isRecording: false,
       });
       recognitionRef.current = null;
+      isListeningRef.current = false;
       setStatus("error");
       setError({
         message: "Voice input could not be started. Please try again or type your question.",
@@ -245,12 +251,14 @@ export function useSpeechRecognition({
         });
         recognitionRef.current.abort();
       }
+      isListeningRef.current = false;
     };
   }, []);
 
   return {
     error,
     isListening,
+    isListeningNow: () => isListeningRef.current,
     isSupported,
     startListening,
     status,

@@ -944,6 +944,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       return;
     }
 
+    if (submissionSource === "text") {
+      speechPlayback.primePlayback();
+    }
+
     if (speechPlayback.isSpeaking) {
       speechPlayback.stop();
     }
@@ -1020,7 +1024,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         httpStatus: response.status,
         ok: response.ok,
         responseId: isSuccessfulConversationResponse(data) ? data.patientMessageId : "invalid",
-        isListening: speechRecognition.isListening,
+        isListening: speechRecognition.isListeningNow(),
         isSpeaking: speechPlayback.isSpeaking,
         audioContextState: currentAudioContextState(),
       });
@@ -1063,6 +1067,8 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     if (!speechRecognition.isSupported) {
       return;
     }
+
+    speechPlayback.primePlayback();
 
     if (speechPlayback.isSpeaking) {
       speechPlayback.stop();
@@ -1477,15 +1483,37 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
             />
           }
           conversationFooter={
-            mentorIntervention.guidanceCardVisible &&
-            mentorIntervention.promptText ? (
-              <MentorGuidanceCard
-                promptText={mentorIntervention.promptText}
-                bullets={getMentorGuidanceBullets(
-                  mentorIntervention.missingCategories,
-                )}
-                onDismiss={dismissMentorGuidanceCard}
-              />
+            (mentorIntervention.guidanceCardVisible && mentorIntervention.promptText) ||
+            speechPlayback.needsPlaybackTap ? (
+              <div className="space-y-2">
+                {speechPlayback.needsPlaybackTap ? (
+                  <div className="flex items-center justify-between gap-3 rounded-xl border border-[var(--color-brand)] bg-[var(--color-surface)] px-3 py-2 shadow-sm">
+                    <button
+                      type="button"
+                      onClick={speechPlayback.retryPlayback}
+                      className="min-h-11 flex-1 touch-manipulation rounded-lg bg-[var(--color-action)] px-4 text-sm font-semibold text-white"
+                    >
+                      Tap to hear patient
+                    </button>
+                    <button
+                      type="button"
+                      onClick={speechPlayback.dismissPlaybackRetry}
+                      className="min-h-11 touch-manipulation px-2 text-sm font-semibold text-[var(--color-text-secondary)]"
+                    >
+                      Dismiss
+                    </button>
+                  </div>
+                ) : null}
+                {mentorIntervention.guidanceCardVisible && mentorIntervention.promptText ? (
+                  <MentorGuidanceCard
+                    promptText={mentorIntervention.promptText}
+                    bullets={getMentorGuidanceBullets(
+                      mentorIntervention.missingCategories,
+                    )}
+                    onDismiss={dismissMentorGuidanceCard}
+                  />
+                ) : null}
+              </div>
             ) : null
           }
           composer={
