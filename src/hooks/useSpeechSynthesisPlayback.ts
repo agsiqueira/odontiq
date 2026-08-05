@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
+import { PatientAudioPlaybackController } from "@/lib/patientAudioPlaybackController";
 
 type SpeechSynthesisStatus =
   | "unsupported"
@@ -28,14 +30,14 @@ type VoiceSpeakResponse =
 export function useSpeechSynthesisPlayback({
   caseId,
 }: UseSpeechSynthesisPlaybackOptions) {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const audioUrlRef = useRef<string | null>(null);
+  const audioControllerRef = useRef<PatientAudioPlaybackController | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const playbackIdRef = useRef(0);
   const lastTextRef = useRef("");
   const [status, setStatus] =
     useState<SpeechSynthesisStatus>("unsupported");
+  const [needsPlaybackTap, setNeedsPlaybackTap] = useState(false);
 
   const isSupported = status !== "unsupported";
   const isPreparingSpeech = status === "preparing";
@@ -55,22 +57,40 @@ export function useSpeechSynthesisPlayback({
     };
   }, []);
 
-  const cleanupAudio = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.removeAttribute("src");
-      audioRef.current.load();
-      audioRef.current = null;
+  const getAudioController = useCallback(() => {
+    if (!audioControllerRef.current) {
+      audioControllerRef.current = new PatientAudioPlaybackController({
+        createAudio: () => new Audio(),
+        createObjectUrl: (blob) => URL.createObjectURL(blob),
+        revokeObjectUrl: (url) => URL.revokeObjectURL(url),
+        onPlaybackStarted: () => {
+          setStatus("speaking");
+          emitAudioDiagnostic("speaking_animation.started", {
+            playback: "audio-element",
+            isSpeaking: true,
+          });
+        },
+        onPlaybackStopped: (reason) => {
+          setStatus("idle");
+          emitAudioDiagnostic("speaking_animation.stopped", {
+            playback: "audio-element",
+            isSpeaking: false,
+            reason,
+          });
+        },
+        onRetryRequired: () => setNeedsPlaybackTap(true),
+        onRetryCleared: () => setNeedsPlaybackTap(false),
+        onDiagnostic: emitAudioDiagnostic,
+      });
     }
-
-    if (audioUrlRef.current) {
-      URL.revokeObjectURL(audioUrlRef.current);
-      audioUrlRef.current = null;
-    }
+    return audioControllerRef.current;
   }, []);
 
   const cancelBrowserSpeech = useCallback(() => {
     if ("speechSynthesis" in window) {
+      emitAudioDiagnostic("tts.browser_cancelled", {
+        isSpeaking: window.speechSynthesis.speaking,
+      });
       window.speechSynthesis.cancel();
     }
 
@@ -78,14 +98,18 @@ export function useSpeechSynthesisPlayback({
   }, []);
 
   const stop = useCallback(() => {
+    emitAudioDiagnostic("audio.stop_cleanup", {
+      hadAbortController: Boolean(abortControllerRef.current),
+      audioContextState: currentAudioContextState(),
+    });
     playbackIdRef.current += 1;
 
     abortControllerRef.current?.abort();
     abortControllerRef.current = null;
-    cleanupAudio();
+    audioControllerRef.current?.cancel("stop");
     cancelBrowserSpeech();
     setStatus("idle");
-  }, [cancelBrowserSpeech, cleanupAudio]);
+  }, [cancelBrowserSpeech]);
 
   const playBrowserFallback = useCallback(
     (text: string, playbackId: number) => {
@@ -119,6 +143,10 @@ export function useSpeechSynthesisPlayback({
         }
 
         setStatus("speaking");
+        emitAudioDiagnostic("speaking_animation.started", {
+          playback: "browser-speech",
+          isSpeaking: true,
+        });
       };
 
       utterance.onend = () => {
@@ -128,6 +156,11 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("idle");
+        emitAudioDiagnostic("speaking_animation.stopped", {
+          playback: "browser-speech",
+          isSpeaking: false,
+          reason: "ended",
+        });
       };
 
       utterance.onerror = () => {
@@ -137,6 +170,10 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("error");
+        emitAudioDiagnostic("audio.error", {
+          playback: "browser-speech",
+          isSpeaking: false,
+        });
       };
 
       try {
@@ -153,55 +190,14 @@ export function useSpeechSynthesisPlayback({
     async (
       audioBase64: string,
       mimeType: string,
-      playbackId: number,
     ): Promise<void> => {
       const audioBlob = new Blob([base64ToUint8Array(audioBase64)], {
         type: mimeType || "audio/mpeg",
       });
-      const audioUrl = URL.createObjectURL(audioBlob);
-      const audio = new Audio(audioUrl);
-
-      cleanupAudio();
-      audioUrlRef.current = audioUrl;
-      audioRef.current = audio;
-
-      await new Promise<void>((resolve, reject) => {
-        audio.onplaying = () => {
-          if (playbackIdRef.current !== playbackId) {
-            return;
-          }
-
-          setStatus("speaking");
-          resolve();
-        };
-
-        audio.onended = () => {
-          if (playbackIdRef.current === playbackId) {
-            cleanupAudio();
-            setStatus("idle");
-          }
-
-          resolve();
-        };
-
-        audio.onerror = () => {
-          if (playbackIdRef.current === playbackId) {
-            cleanupAudio();
-          }
-
-          reject(new Error("Navigator audio playback failed."));
-        };
-
-        void audio.play().catch((error: unknown) => {
-          if (playbackIdRef.current === playbackId) {
-            cleanupAudio();
-          }
-
-          reject(error);
-        });
-      });
+      const result = await getAudioController().playGeneratedAudio(audioBlob);
+      if (result === "failed") throw new Error("Navigator audio playback failed.");
     },
-    [cleanupAudio],
+    [getAudioController],
   );
 
   const speak = useCallback(
@@ -218,6 +214,13 @@ export function useSpeechSynthesisPlayback({
       const playbackId = playbackIdRef.current + 1;
       playbackIdRef.current = playbackId;
       setStatus("preparing");
+      emitAudioDiagnostic("tts.request_started", {
+        playbackId,
+        caseId,
+        textLength: nextText.length,
+        isSpeaking: false,
+        audioContextState: currentAudioContextState(),
+      });
 
       const controller = new AbortController();
       abortControllerRef.current = controller;
@@ -236,6 +239,13 @@ export function useSpeechSynthesisPlayback({
         });
 
         const data = (await response.json()) as VoiceSpeakResponse;
+        emitAudioDiagnostic("tts.request_completed", {
+          playbackId,
+          httpStatus: response.status,
+          ok: response.ok,
+          success: data.success,
+          aborted: controller.signal.aborted,
+        });
 
         if (
           playbackIdRef.current !== playbackId ||
@@ -254,8 +264,13 @@ export function useSpeechSynthesisPlayback({
         }
 
         abortControllerRef.current = null;
-        await playNavigatorAudio(data.audioBase64, data.mimeType, playbackId);
-      } catch {
+        await playNavigatorAudio(data.audioBase64, data.mimeType);
+      } catch (error) {
+        emitAudioDiagnostic("tts.request_failed_or_fallback", {
+          playbackId,
+          aborted: controller.signal.aborted,
+          errorName: error instanceof Error ? error.name : typeof error,
+        });
         if (
           playbackIdRef.current !== playbackId ||
           controller.signal.aborted
@@ -274,20 +289,40 @@ export function useSpeechSynthesisPlayback({
     void speak(lastTextRef.current);
   }, [speak]);
 
+  const primePlayback = useCallback(() => {
+    getAudioController().primeFromGesture();
+  }, [getAudioController]);
+
+  const retryPlayback = useCallback(() => {
+    void getAudioController().retryFromGesture();
+  }, [getAudioController]);
+
+  const dismissPlaybackRetry = useCallback(() => {
+    audioControllerRef.current?.dismissRetry();
+  }, []);
+
   useEffect(() => {
     return () => {
+      emitAudioDiagnostic("audio.unmount_cleanup", {
+        hadAbortController: Boolean(abortControllerRef.current),
+      });
       playbackIdRef.current += 1;
       abortControllerRef.current?.abort();
-      cleanupAudio();
+      audioControllerRef.current?.dispose();
+      audioControllerRef.current = null;
       cancelBrowserSpeech();
     };
-  }, [cancelBrowserSpeech, cleanupAudio]);
+  }, [cancelBrowserSpeech]);
 
   return {
     isSpeaking,
     isPreparingSpeech,
     isSupported,
+    needsPlaybackTap,
+    primePlayback,
     replay,
+    retryPlayback,
+    dismissPlaybackRetry,
     speak,
     status,
     stop,
