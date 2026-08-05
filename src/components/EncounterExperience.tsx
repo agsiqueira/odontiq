@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { AudioDebugPanel } from "@/components/AudioDebugPanel";
 import { EncounterKeyboardFocus } from "@/components/EncounterKeyboardFocus";
 import { EncounterOnboarding } from "@/components/EncounterOnboarding";
 import { InteractionCharacterStage } from "@/components/InteractionCharacterStage";
@@ -57,6 +58,7 @@ import { getMentorGuidanceBullets } from "@/lib/mentorIntervention";
 import { useMentorSpeechPlayback } from "@/hooks/useMentorSpeechPlayback";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
+import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
 
 type EncounterExperienceProps = {
   patientCase: OdontIQCase;
@@ -376,6 +378,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const isConversationOpen = true;
 
   const handleFinalVoiceTranscript = useCallback((transcript: string) => {
+    emitAudioDiagnostic("recognized_transcript.submitted_to_encounter", {
+      transcriptLength: transcript.trim().length,
+      source: "voice",
+    });
     voiceSubmitRef.current(transcript);
   }, []);
 
@@ -392,15 +398,27 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     }
 
     if (isPatientAudioPlaying) {
+      emitAudioDiagnostic("speaking_animation.video_start_requested", {
+        isSpeaking: true,
+        audioContextState: currentAudioContextState(),
+      });
       try {
         talkingVideo.currentTime = 0;
       } catch {
         // Some browsers block seeking until metadata is loaded.
       }
 
-      void talkingVideo.play().catch(() => undefined);
+      void talkingVideo.play().then(() => {
+        emitAudioDiagnostic("speaking_animation.video_started", { isSpeaking: true });
+      }).catch((error: unknown) => {
+        emitAudioDiagnostic("speaking_animation.video_start_rejected", {
+          isSpeaking: true,
+          errorName: error instanceof Error ? error.name : typeof error,
+        });
+      });
     } else {
       talkingVideo.pause();
+      emitAudioDiagnostic("speaking_animation.video_stopped", { isSpeaking: false });
 
       try {
         talkingVideo.currentTime = 0;
@@ -916,7 +934,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     state.messages,
   ]);
 
-  const submitStudentMessage = async (studentMessage: string) => {
+  const submitStudentMessage = async (
+    studentMessage: string,
+    submissionSource: "text" | "voice" = "text",
+  ) => {
     const text = studentMessage.trim();
 
     if (!text || isGeneratingPatientResponse || !serverEncounterId) {
@@ -994,6 +1015,16 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       });
       const data: unknown = await response.json().catch(() => undefined);
 
+      emitAudioDiagnostic("patient_response.received", {
+        submissionSource,
+        httpStatus: response.status,
+        ok: response.ok,
+        responseId: isSuccessfulConversationResponse(data) ? data.patientMessageId : "invalid",
+        isListening: speechRecognition.isListening,
+        isSpeaking: speechPlayback.isSpeaking,
+        audioContextState: currentAudioContextState(),
+      });
+
       if (!response.ok || !isSuccessfulConversationResponse(data)) {
         throw new Error("Conversation request failed");
       }
@@ -1052,7 +1083,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
 
   useEffect(() => {
     voiceSubmitRef.current = (transcript: string) => {
-      void submitStudentMessage(transcript);
+      void submitStudentMessage(transcript, "voice");
     };
   });
 
@@ -1369,6 +1400,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       data-input-focused={isInputFocused ? "true" : "false"}
       className="encounter-root min-h-dvh bg-[var(--color-background)] text-[var(--color-text-primary)]"
     >
+      <AudioDebugPanel />
       <EncounterKeyboardFocus />
       <div className="mx-auto flex h-dvh min-h-0 w-full max-w-[30rem] flex-col px-4 pb-3 pt-4 md:max-w-[48rem] md:px-6">
         {encounterSyncError ? (

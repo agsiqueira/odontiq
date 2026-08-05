@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
 
 type SpeechSynthesisStatus =
   | "unsupported"
@@ -56,6 +57,11 @@ export function useSpeechSynthesisPlayback({
   }, []);
 
   const cleanupAudio = useCallback(() => {
+    emitAudioDiagnostic("audio.cleanup", {
+      hadAudioElement: Boolean(audioRef.current),
+      hadObjectUrl: Boolean(audioUrlRef.current),
+      audioContextState: currentAudioContextState(),
+    });
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.removeAttribute("src");
@@ -71,6 +77,9 @@ export function useSpeechSynthesisPlayback({
 
   const cancelBrowserSpeech = useCallback(() => {
     if ("speechSynthesis" in window) {
+      emitAudioDiagnostic("tts.browser_cancelled", {
+        isSpeaking: window.speechSynthesis.speaking,
+      });
       window.speechSynthesis.cancel();
     }
 
@@ -78,6 +87,10 @@ export function useSpeechSynthesisPlayback({
   }, []);
 
   const stop = useCallback(() => {
+    emitAudioDiagnostic("audio.stop_cleanup", {
+      hadAbortController: Boolean(abortControllerRef.current),
+      audioContextState: currentAudioContextState(),
+    });
     playbackIdRef.current += 1;
 
     abortControllerRef.current?.abort();
@@ -119,6 +132,10 @@ export function useSpeechSynthesisPlayback({
         }
 
         setStatus("speaking");
+        emitAudioDiagnostic("speaking_animation.started", {
+          playback: "browser-speech",
+          isSpeaking: true,
+        });
       };
 
       utterance.onend = () => {
@@ -128,6 +145,11 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("idle");
+        emitAudioDiagnostic("speaking_animation.stopped", {
+          playback: "browser-speech",
+          isSpeaking: false,
+          reason: "ended",
+        });
       };
 
       utterance.onerror = () => {
@@ -137,6 +159,10 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("error");
+        emitAudioDiagnostic("audio.error", {
+          playback: "browser-speech",
+          isSpeaking: false,
+        });
       };
 
       try {
@@ -160,6 +186,11 @@ export function useSpeechSynthesisPlayback({
       });
       const audioUrl = URL.createObjectURL(audioBlob);
       const audio = new Audio(audioUrl);
+      emitAudioDiagnostic("audio.element_created", {
+        playbackId,
+        mimeType: mimeType || "audio/mpeg",
+        audioContextState: currentAudioContextState(),
+      });
 
       cleanupAudio();
       audioUrlRef.current = audioUrl;
@@ -172,11 +203,23 @@ export function useSpeechSynthesisPlayback({
           }
 
           setStatus("speaking");
+          emitAudioDiagnostic("speaking_animation.started", {
+            playback: "audio-element",
+            playbackId,
+            isSpeaking: true,
+          });
           resolve();
         };
 
         audio.onended = () => {
           if (playbackIdRef.current === playbackId) {
+            emitAudioDiagnostic("audio.ended", { playbackId });
+            emitAudioDiagnostic("speaking_animation.stopped", {
+              playback: "audio-element",
+              playbackId,
+              isSpeaking: false,
+              reason: "ended",
+            });
             cleanupAudio();
             setStatus("idle");
           }
@@ -185,6 +228,11 @@ export function useSpeechSynthesisPlayback({
         };
 
         audio.onerror = () => {
+          emitAudioDiagnostic("audio.error", {
+            playback: "audio-element",
+            playbackId,
+            mediaErrorCode: audio.error?.code ?? null,
+          });
           if (playbackIdRef.current === playbackId) {
             cleanupAudio();
           }
@@ -192,11 +240,15 @@ export function useSpeechSynthesisPlayback({
           reject(new Error("Navigator audio playback failed."));
         };
 
-        void audio.play().catch((error: unknown) => {
-          if (playbackIdRef.current === playbackId) {
-            cleanupAudio();
-          }
-
+        emitAudioDiagnostic("audio.play_called", { playbackId });
+        void audio.play().then(() => {
+          emitAudioDiagnostic("audio.play_resolved", { playbackId });
+        }).catch((error: unknown) => {
+          emitAudioDiagnostic("audio.play_rejected", {
+            playbackId,
+            errorName: error instanceof Error ? error.name : typeof error,
+          });
+          if (playbackIdRef.current === playbackId) cleanupAudio();
           reject(error);
         });
       });
@@ -218,6 +270,13 @@ export function useSpeechSynthesisPlayback({
       const playbackId = playbackIdRef.current + 1;
       playbackIdRef.current = playbackId;
       setStatus("preparing");
+      emitAudioDiagnostic("tts.request_started", {
+        playbackId,
+        caseId,
+        textLength: nextText.length,
+        isSpeaking: false,
+        audioContextState: currentAudioContextState(),
+      });
 
       const controller = new AbortController();
       abortControllerRef.current = controller;
@@ -236,6 +295,13 @@ export function useSpeechSynthesisPlayback({
         });
 
         const data = (await response.json()) as VoiceSpeakResponse;
+        emitAudioDiagnostic("tts.request_completed", {
+          playbackId,
+          httpStatus: response.status,
+          ok: response.ok,
+          success: data.success,
+          aborted: controller.signal.aborted,
+        });
 
         if (
           playbackIdRef.current !== playbackId ||
@@ -255,7 +321,12 @@ export function useSpeechSynthesisPlayback({
 
         abortControllerRef.current = null;
         await playNavigatorAudio(data.audioBase64, data.mimeType, playbackId);
-      } catch {
+      } catch (error) {
+        emitAudioDiagnostic("tts.request_failed_or_fallback", {
+          playbackId,
+          aborted: controller.signal.aborted,
+          errorName: error instanceof Error ? error.name : typeof error,
+        });
         if (
           playbackIdRef.current !== playbackId ||
           controller.signal.aborted
@@ -276,6 +347,9 @@ export function useSpeechSynthesisPlayback({
 
   useEffect(() => {
     return () => {
+      emitAudioDiagnostic("audio.unmount_cleanup", {
+        hadAbortController: Boolean(abortControllerRef.current),
+      });
       playbackIdRef.current += 1;
       abortControllerRef.current?.abort();
       cleanupAudio();

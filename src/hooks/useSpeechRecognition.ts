@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
 
 type SpeechRecognitionStatus =
   | "unsupported"
@@ -104,6 +105,11 @@ export function useSpeechRecognition({
   }, []);
 
   const stopListening = useCallback(() => {
+    emitAudioDiagnostic("microphone.recording_stop_requested", {
+      isListening: true,
+      isRecording: true,
+      audioContextState: currentAudioContextState(),
+    });
     recognitionRef.current?.stop();
   }, []);
 
@@ -117,7 +123,10 @@ export function useSpeechRecognition({
       return;
     }
 
-    recognitionRef.current?.abort();
+    if (recognitionRef.current) {
+      emitAudioDiagnostic("speech_recognition.abort", { reason: "restart" });
+      recognitionRef.current.abort();
+    }
     finalTranscriptRef.current = "";
 
     const recognition = new Recognition();
@@ -144,10 +153,20 @@ export function useSpeechRecognition({
         ]
           .filter(Boolean)
           .join(" ");
+        emitAudioDiagnostic("speech_recognition.completed", {
+          transcriptLength: finalTranscript.trim().length,
+          isListening: true,
+          isRecording: true,
+        });
       }
     };
 
     recognition.onerror = (event) => {
+      emitAudioDiagnostic("speech_recognition.error", {
+        errorCode: event.error ?? "unknown",
+        isListening: false,
+        isRecording: false,
+      });
       const blocked = event.error === "not-allowed";
       setStatus("error");
       setError(
@@ -170,7 +189,17 @@ export function useSpeechRecognition({
       const transcript = finalTranscriptRef.current.trim();
       finalTranscriptRef.current = "";
 
+      emitAudioDiagnostic("microphone.recording_stopped", {
+        isListening: false,
+        isRecording: false,
+        transcriptLength: transcript.length,
+        audioContextState: currentAudioContextState(),
+      });
+
       if (transcript) {
+        emitAudioDiagnostic("recognized_transcript.submitted", {
+          transcriptLength: transcript.length,
+        });
         onFinalTranscript(transcript);
       }
     };
@@ -179,7 +208,16 @@ export function useSpeechRecognition({
       setError(null);
       setStatus("listening");
       recognition.start();
+      emitAudioDiagnostic("microphone.recording_started", {
+        isListening: true,
+        isRecording: true,
+        audioContextState: currentAudioContextState(),
+      });
     } catch {
+      emitAudioDiagnostic("microphone.recording_start_rejected", {
+        isListening: false,
+        isRecording: false,
+      });
       recognitionRef.current = null;
       setStatus("error");
       setError({
@@ -199,7 +237,14 @@ export function useSpeechRecognition({
 
   useEffect(() => {
     return () => {
-      recognitionRef.current?.abort();
+      if (recognitionRef.current) {
+        emitAudioDiagnostic("speech_recognition.cleanup", {
+          action: "abort",
+          isListening: true,
+          isRecording: true,
+        });
+        recognitionRef.current.abort();
+      }
     };
   }, []);
 
