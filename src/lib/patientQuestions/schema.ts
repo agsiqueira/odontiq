@@ -71,11 +71,12 @@ export function parsePatientQuestionClassification(input: {
   ) {
     return { success: false, reason: "invalid-evidence-alias", safeMetadata };
   }
+  const evidenceAliases = parsed.evidence;
 
   const aliasesByName = new Map(
     input.evidenceAliases.map((entry) => [entry.alias, entry]),
   );
-  if (parsed.evidence.some((alias) => !aliasesByName.has(alias))) {
+  if (evidenceAliases.some((alias) => !aliasesByName.has(alias))) {
     return {
       success: false,
       reason: "invalid-evidence-alias",
@@ -84,9 +85,31 @@ export function parsePatientQuestionClassification(input: {
   }
   const assertedEventNames = suppliedEventNames.filter(
     (event) => parsedEvents[event] === true,
-  );
-  if (assertedEventNames.length > 0 && parsed.evidence.length === 0) {
+  ) as PatientQuestionEventId[];
+  if (assertedEventNames.length > 0 && evidenceAliases.length === 0) {
     return { success: false, reason: "missing-evidence", safeMetadata };
+  }
+  const evidenceRoles = new Set(
+    evidenceAliases.map((alias) => aliasesByName.get(alias)!.role),
+  );
+  if (
+    assertedEventNames.some((event) =>
+      eventRequiresPatientEvidence(event)
+        ? !evidenceRoles.has("patient")
+        : !evidenceRoles.has("student"),
+    )
+  ) {
+    return { success: false, reason: "incompatible-evidence-role", safeMetadata };
+  }
+  if (
+    assertedEventNames.some((event) =>
+      !eventHasSemanticallyCompatibleEvidence(
+        event,
+        evidenceAliases.map((alias) => aliasesByName.get(alias)!),
+      ),
+    )
+  ) {
+    return { success: false, reason: "incompatible-evidence-semantics", safeMetadata };
   }
 
   const detectedEvents: Partial<PatientQuestionEvents> = {};
@@ -101,8 +124,8 @@ export function parsePatientQuestionClassification(input: {
       analyzedStudentMessageId: input.studentMessageId,
       detectedEvents,
       confidence: parsed.confidence,
-      evidenceAliases: [...parsed.evidence],
-      evidenceMessageIds: parsed.evidence.map(
+      evidenceAliases: [...evidenceAliases],
+      evidenceMessageIds: evidenceAliases.map(
         (alias) => aliasesByName.get(alias)!.messageId,
       ),
     },
@@ -118,6 +141,33 @@ function failure(
     reason,
     safeMetadata: { rawOutputLength: text.length },
   };
+}
+
+function eventRequiresPatientEvidence(event: PatientQuestionEventId) {
+  return event === "patientAgreedToIncisionAndDrainage" || event === "patientPainDescribed";
+}
+
+function eventHasSemanticallyCompatibleEvidence(
+  event: PatientQuestionEventId,
+  evidence: readonly PatientQuestionEvidenceAlias[],
+) {
+  if (event !== "hospitalAdmissionOrSurgicalManagementDiscussed") return true;
+  return evidence.some((entry) =>
+    entry.role === "student" && case1ManagementEvidenceIsCompatible(entry.content),
+  );
+}
+
+function case1ManagementEvidenceIsCompatible(content: string) {
+  const normalized = content.toLowerCase().replace(/[’]/g, "'");
+  const historicalQuestion = /^(?:have|has|had|did|were|was)\b.*\b(?:ever|before|previously|history|prior|past)\b/.test(normalized)
+    || /\b(?:history of|in the past|previously|prior)\b/.test(normalized);
+  if (historicalQuestion) return false;
+
+  return /\b(?:admit|admitted|admitting|admission|hospitali[sz](?:e|ed|ation)|stay in (?:the )?hospital)\b/.test(normalized)
+    || /\b(?:surgery|surgical|operative|operation|operate|omfs|oral surgeon|oral surgery)\b/.test(normalized)
+    || /\b(?:extract|extracted|extracting|extraction)\b/.test(normalized)
+    || /\bpull(?:ed|ing)? (?:out )?(?:the |this |that |your )?(?:bad )?tooth\b/.test(normalized)
+    || /\b(?:remove|removing) (?:the |this |that |your )?(?:bad )?tooth\b|\bremoval of (?:the |this |that |your )?(?:bad )?tooth\b/.test(normalized);
 }
 
 function getSafeMetadata(

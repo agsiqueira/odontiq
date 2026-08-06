@@ -19,7 +19,7 @@ export async function generatePatientRoleSafeResponse({
   retry,
   visibleFacts = [],
   priorPatientDialogue = [],
-  fallbackText = SAFE_PATIENT_ROLE_FALLBACK,
+  fallbackText,
   requiredFacts = [],
   allowPatientInitiatedQuestion = true,
 }: {
@@ -68,9 +68,9 @@ export async function generatePatientRoleSafeResponse({
   }
 
   return {
-    text: allowPatientInitiatedQuestion
-      ? fallbackText
-      : SAFE_PATIENT_BASE_RESPONSE_FALLBACK,
+    text: fallbackText ?? (allowPatientInitiatedQuestion
+      ? SAFE_PATIENT_ROLE_FALLBACK
+      : SAFE_PATIENT_BASE_RESPONSE_FALLBACK),
     formattingChanged: false,
     initialRejection: assessment.matchedPattern ?? integrity.reason,
     repeatedDrift: true,

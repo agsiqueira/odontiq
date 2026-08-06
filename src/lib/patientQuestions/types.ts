@@ -50,6 +50,8 @@ export type PatientQuestionClassificationFailureReason =
   | "invalid-confidence"
   | "low-confidence"
   | "invalid-evidence-alias"
+  | "incompatible-evidence-role"
+  | "incompatible-evidence-semantics"
   | "missing-evidence";
 
 export type PatientQuestionClassificationResult =

@@ -749,7 +749,7 @@ function requiredFactsForTurn(
   ]);
   const requiredCase5Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case5ProtectedIds.has(fact.id)).map((fact) => fact.id));
   const asksDuration = /\b(?:how long|duration|how many days|when.{0,20}(?:start|begin))\b/i.test(studentMessage);
-  const asksLocation = /\b(?:where|which tooth|what tooth|what side|what hurts|which one hurts|upper or lower|left or right)\b/i.test(studentMessage);
+  const asksLocation = /\b(?:where|which (?:tooth|teeth)|what (?:tooth|teeth)|what side|what hurts|which one hurts|upper or lower|left or right)\b/i.test(studentMessage);
   const asksAllergies = /\b(?:allerg|penicillin|reaction)\b/i.test(studentMessage);
   const asksSmoking = /\b(?:smok|tobacco|cigarette)\b/i.test(studentMessage);
   const asksMedicalHistory = /\b(?:medical (?:history|conditions?)|health (?:history|conditions?|problems?)|ulcers?)\b/i.test(studentMessage);

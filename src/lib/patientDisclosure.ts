@@ -112,7 +112,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   facial_swelling: /\b(cheek|face|facial)\b.*\b(swell|swelling|puffy)|\b(swell|swelling|puffy)\b.*\b(cheek|face|facial)\b/i,
   pain: /\b(pain|hurt|ache|severity|scale|rate)\b/i,
   duration: /\b(how long|duration|when.*start|days?|hours?)\b/i,
-  location: /\b(where|which tooth|what tooth|side|left|right|upper|lower)\b/i,
+  location: /\b(where|which (?:tooth|teeth)|what (?:tooth|teeth)|side|left|right|upper|lower)\b/i,
 };
 
 const BROAD_QUESTION_PATTERN =
@@ -197,7 +197,9 @@ const TOPIC_ALIASES: Record<PatientDisclosureTopic, string[]> = {
     "location",
     "located",
     "which tooth",
+    "which teeth",
     "what tooth",
+    "what teeth",
     "area",
     "side",
     "upper",
@@ -797,7 +799,10 @@ function selectCaseSpecificAllowedFacts({
 
   if (caseId === "case-02") {
     const normalizedQuestion = normalizeText(question);
-    if (QUESTION_INTENT_PATTERNS.systemic_timeline.test(question)) return facts.filter((fact) => fact.id === "c2.systemic-timeline");
+    const timelineIds = new Set<string>();
+    if (asksCase2DentalPainOnset(normalizedQuestion)) timelineIds.add("c2.duration");
+    if (QUESTION_INTENT_PATTERNS.systemic_timeline.test(question)) timelineIds.add("c2.systemic-timeline");
+    if (timelineIds.size > 0) return facts.filter((fact) => timelineIds.has(fact.id));
     const airwayIds = new Set<string>();
     if (/\b(?:swell|swelling|swollen|puffy|edema)\b/.test(normalizedQuestion)) airwayIds.add("c2.swelling");
     if (/\b(?:breath|breathing|dyspnea)\b/.test(normalizedQuestion)) airwayIds.add("c2.breathing-negative");
@@ -970,6 +975,18 @@ function selectCaseSpecificAllowedFacts({
     return [];
   }
   return facts.filter((fact) => fact.id === "c5.cold");
+}
+
+function asksCase2DentalPainOnset(question: string) {
+  const asksWhen = /\bhow long\b|\bduration\b|\bwhen\b.*\b(?:start|begin)|\b(?:start|begin)\w*\b.*\bwhen\b/.test(question);
+  if (!asksWhen) return false;
+
+  const namesDentalPain = /\b(?:tooth|teeth|toothache|pain|hurt|hurting|ache)\b/.test(question);
+  if (namesDentalPain) return true;
+
+  const namesSystemicTimeline = /\b(?:fever|feverish|chills?|weak|weakness|fatigue|tired|cheek|swell|swelling|swollen)\b/.test(question);
+  const usesGeneralSymptomReference = /\b(?:this|it|problem|symptoms?)\b/.test(question);
+  return usesGeneralSymptomReference && !namesSystemicTimeline;
 }
 
 function addFact(

@@ -12,6 +12,8 @@ const GENERAL_PAIN_QUESTION_PATTERN = /^(?:are you (?:in pain|hurting(?: right n
 const QUESTION_PATTERN = /\?\s*$|^(?:are|can|could|did|do|does|have|has|how|is|was|were|what|when|where|which|who|why|would)\b/i;
 const UNSUPPORTED_LIGHT_TRIGGER_QUESTION_PATTERN =
   /\b(?:bright\s+)?(?:sunlight|light)\b.{0,40}\b(?:pain|hurt|ache)\b|\b(?:pain|hurt|ache)\b.{0,40}\b(?:bright\s+)?(?:sunlight|light)\b/i;
+const SOCIAL_WELLBEING_QUESTION_PATTERN =
+  /^(?:so[, ]+)?(?:how are you(?: feeling| doing)?|how do you feel|are you okay)(?:\s+(?:today|right now))?[?.!]*$/i;
 
 export function patientImmediateResponse({
   caseId,
@@ -47,6 +49,12 @@ export function patientImmediateResponse({
 
   if (GENERAL_PAIN_QUESTION_PATTERN.test(message.trim())) {
     return "Yes, it hurts.";
+  }
+
+  if (SOCIAL_WELLBEING_QUESTION_PATTERN.test(message.trim())) {
+    return caseId === "case-01"
+      ? "Not great. I'm exhausted and in pain."
+      : "Not great. I'm in pain.";
   }
 
   if (

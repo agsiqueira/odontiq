@@ -333,6 +333,84 @@ const missingEvidence = parseFixture({
 });
 assert(!missingEvidence.success && missingEvidence.reason === "missing-evidence");
 
+const case1Aliases = [
+  { alias: "student-current", messageId: "student-current-id", role: "student" as const, content: "We need to discuss hospital admission." },
+  { alias: "patient-draft", messageId: "patient-draft-id", role: "patient" as const, content: "Not great. I'm exhausted and in pain." },
+];
+const patientOnlyCase1Evidence = parsePatientQuestionClassification({
+  text: JSON.stringify({ schemaVersion: 1, caseId: "case-01", events: { hospitalAdmissionOrSurgicalManagementDiscussed: true }, confidence: 1, evidence: ["patient-draft"] }),
+  caseId: "case-01",
+  studentMessageId: "student-current-id",
+  allowedEvents: ["hospitalAdmissionOrSurgicalManagementDiscussed"],
+  evidenceAliases: case1Aliases,
+});
+assert(!patientOnlyCase1Evidence.success && patientOnlyCase1Evidence.reason === "incompatible-evidence-role");
+const studentSupportedCase1Evidence = parsePatientQuestionClassification({
+  text: JSON.stringify({ schemaVersion: 1, caseId: "case-01", events: { hospitalAdmissionOrSurgicalManagementDiscussed: true }, confidence: 1, evidence: ["student-current"] }),
+  caseId: "case-01",
+  studentMessageId: "student-current-id",
+  allowedEvents: ["hospitalAdmissionOrSurgicalManagementDiscussed"],
+  evidenceAliases: case1Aliases,
+});
+assert(studentSupportedCase1Evidence.success);
+
+for (const unrelatedStudentMessage of [
+  "When did the tooth pain and swelling begin, and how severe is the pain?",
+  "Are you having trouble breathing or swallowing now, and have you had a fever?",
+  "What medications are you taking, and do you have allergies?",
+]) {
+  const unrelatedEvidence = [{
+    alias: "student-current",
+    messageId: "student-current-id",
+    role: "student" as const,
+    content: unrelatedStudentMessage,
+  }];
+  const result = parsePatientQuestionClassification({
+    text: JSON.stringify({ schemaVersion: 1, caseId: "case-01", events: { hospitalAdmissionOrSurgicalManagementDiscussed: true }, confidence: 1, evidence: ["student-current"] }),
+    caseId: "case-01",
+    studentMessageId: "student-current-id",
+    allowedEvents: ["hospitalAdmissionOrSurgicalManagementDiscussed"],
+    evidenceAliases: unrelatedEvidence,
+  });
+  assert(!result.success && result.reason === "incompatible-evidence-semantics", unrelatedStudentMessage);
+}
+
+for (const qualifyingStudentMessage of [
+  "You may need to be admitted to the hospital.",
+  "Oral surgery will evaluate you for surgical management.",
+  "The bad tooth may need to be extracted.",
+  "They may need to pull out the bad tooth.",
+]) {
+  const qualifyingEvidence = [{
+    alias: "student-current",
+    messageId: "student-current-id",
+    role: "student" as const,
+    content: qualifyingStudentMessage,
+  }];
+  const result = parsePatientQuestionClassification({
+    text: JSON.stringify({ schemaVersion: 1, caseId: "case-01", events: { hospitalAdmissionOrSurgicalManagementDiscussed: true }, confidence: 1, evidence: ["student-current"] }),
+    caseId: "case-01",
+    studentMessageId: "student-current-id",
+    allowedEvents: ["hospitalAdmissionOrSurgicalManagementDiscussed"],
+    evidenceAliases: qualifyingEvidence,
+  });
+  assert(result.success, qualifyingStudentMessage);
+  if (result.success) {
+    const transition = applyPatientQuestionClassification({ caseId: "case-01", classification: result.classification });
+    assert.equal(transition.selectedQuestionId, "c1-extraction-question");
+    assert.equal(getPatientQuestion(transition.selectedQuestionId!)?.text, "Will they pull out the bad tooth?");
+  }
+}
+
+const historicalExtractionQuestion = parsePatientQuestionClassification({
+  text: JSON.stringify({ schemaVersion: 1, caseId: "case-01", events: { hospitalAdmissionOrSurgicalManagementDiscussed: true }, confidence: 1, evidence: ["student-current"] }),
+  caseId: "case-01",
+  studentMessageId: "student-current-id",
+  allowedEvents: ["hospitalAdmissionOrSurgicalManagementDiscussed"],
+  evidenceAliases: [{ alias: "student-current", messageId: "student-current-id", role: "student", content: "Have you ever had a tooth extracted before?" }],
+});
+assert(!historicalExtractionQuestion.success && historicalExtractionQuestion.reason === "incompatible-evidence-semantics");
+
 const providerFailure = await classifyPatientQuestionTrigger({
   provider: {
     name: "failing-regression-provider",

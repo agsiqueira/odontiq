@@ -99,6 +99,33 @@ assert.equal(
 );
 
 const case2 = cases[1];
+const case2TimelineCases: Array<[string, string[]]> = [
+  ["When did the upper-right tooth pain begin?", ["c2.duration"]],
+  ["When did the upper-right tooth pain begin, and have you felt feverish?", ["c2.duration", "c2.systemic-timeline"]],
+  ["How long has the tooth been hurting?", ["c2.duration"]],
+  ["When did this start?", ["c2.duration"]],
+  ["How long have you had the tooth pain and swelling?", ["c2.duration", "c2.systemic-timeline"]],
+  ["When did the fever and chills begin?", ["c2.systemic-timeline"]],
+];
+for (const [message, expectedIds] of case2TimelineCases) {
+  const state = buildPatientDisclosureState({ caseData: case2, conversation: [], latestStudentMessage: message });
+  assert.deepEqual(new Set(state.allowedThisTurn.map((fact) => fact.id)), new Set(expectedIds), message);
+}
+const exactCase2Compound = buildPatientDisclosureState({
+  caseData: case2,
+  conversation: [],
+  latestStudentMessage: "When did the upper-right tooth pain begin, and have you felt feverish?",
+});
+assert.equal(
+  assessPatientOutputIntegrity(
+    "The fever and cheek swelling started about twenty-four hours ago.",
+    case2.supportingInfo.patientFacts ?? [],
+    [],
+    exactCase2Compound.allowedThisTurn,
+  ).valid,
+  false,
+  "The 24-hour systemic timeline must not substitute for the seven-day dental-pain duration.",
+);
 const airwayCompound = buildPatientDisclosureState({
   caseData: case2,
   conversation: [],

@@ -91,6 +91,15 @@ const durationFallback = await generatePatientRoleSafeResponse({
 assert.equal(durationFallback.repeatedDrift, true);
 assert.equal(durationFallback.text, "It has been getting worse for seven days.");
 
+const noQuestionFactFallback = await generatePatientRoleSafeResponse({
+  initialOutput: "Legal Disclaimer: not patient dialogue.",
+  retry: async () => "End of simulation",
+  fallbackText: "I have no known drug allergies.",
+  allowPatientInitiatedQuestion: false,
+});
+assert.equal(noQuestionFactFallback.repeatedDrift, true);
+assert.equal(noQuestionFactFallback.text, "I have no known drug allergies.");
+
 const case4Duration: PatientDisclosureFact = { id: "c4.duration", topic: "onset_duration", text: "The returned pain has worsened over five days." };
 assert.equal(assessPatientOutputIntegrity("It got worse over the last 48 hours.", [case4Duration], [], [case4Duration]).valid, false);
 assert.equal(assessPatientOutputIntegrity("The returned pain has worsened for five days.", [case4Duration], [], [case4Duration]).valid, true);
