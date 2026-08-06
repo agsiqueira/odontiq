@@ -84,12 +84,15 @@ model ConversationTurn {
   responseText       String
   providerName       String
   selectedQuestionId String?
+  behaviorIntentId   String?
+  behaviorAnswerClear Boolean  @default(false)
   stateVersion       Int
   createdAt          DateTime @default(now())
   encounter          Encounter @relation(fields: [encounterId], references: [id], onDelete: Cascade)
 
   @@unique([encounterId, requestId])
   @@index([encounterId, createdAt])
+  @@index([encounterId, behaviorIntentId, createdAt])
 }
 
 model CompletedAttempt {

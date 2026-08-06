@@ -69,6 +69,35 @@ export type BehavioralRenderInput = {
   contract: BehavioralContract;
   /** Governed immediate replies and other exact-output paths bypass styling. */
   exactTextRequired?: boolean;
+  repetition?: BehavioralRepetitionContext;
+};
+
+export type BehavioralRepetitionLevel = "none" | "first_repeat" | "later_repeat";
+
+export type BehavioralIntentHistory = {
+  intentId: string;
+  askCount: number;
+  clearAnswerCount: number;
+  lastAskedAt?: string;
+  lastAnswerText?: string;
+  lastGovernedFactIds: readonly string[];
+};
+
+export type BehavioralRepetitionContext = {
+  level: BehavioralRepetitionLevel;
+  clarificationSafe: boolean;
+  countsTowardHistory: boolean;
+  reason:
+    | "first-ask"
+    | "semantic-repeat"
+    | "classifier-uncertainty"
+    | "ineligible-intent"
+    | "safety-critical"
+    | "confirmation"
+    | "speech-recognition"
+    | "uncertain-prior-answer"
+    | "not-a-question";
+  history?: BehavioralIntentHistory;
 };
 
 export type AmaraToneMode =
@@ -86,4 +115,5 @@ export type BehavioralRenderResult = {
   valid: boolean;
   violations: BehavioralViolation[];
   usedFallback: boolean;
+  repetition?: BehavioralRepetitionContext;
 };

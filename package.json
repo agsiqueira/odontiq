@@ -34,6 +34,7 @@
     "validate:amara-breathing-animation": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBreathingAnimation.ts",
     "validate:amara-behavior": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBehavioralFramework.ts",
     "validate:amara-behavior-phase2": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBehavioralRendering.ts",
+    "validate:amara-behavior-phase3": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBehavioralRepetition.ts",
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
     "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",

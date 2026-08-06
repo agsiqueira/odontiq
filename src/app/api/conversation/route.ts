@@ -26,7 +26,11 @@ import {
   AMARA_BEHAVIORAL_CONTRACT,
   AMARA_PATIENT_ID,
   attachGovernedFacts,
+  buildAmaraRepetitionContext,
+  classifyAmaraRepetitionSignal,
+  hasCompleteAmaraRepetitionFacts,
   renderPatientBehavior,
+  selectAmaraRepetitionFacts,
 } from "@/lib/patientBehavior";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
@@ -117,6 +121,16 @@ export async function POST(request: Request): Promise<Response> {
       return Response.json(toConversationResponse(payload.encounterId, existingTurn));
     }
 
+    const repetitionSignal = payload.caseId === "case-01"
+      ? classifyAmaraRepetitionSignal(payload.message)
+      : undefined;
+    const persistedBehaviorTurns = repetitionSignal?.intentId
+      ? await patientQuestionService.loadBehaviorIntentHistory(
+          payload.encounterId,
+          repetitionSignal.intentId,
+        )
+      : [];
+
     const sanitizedConversation = payload.conversation.map((message) => ({
       ...message,
       text: message.role === "patient"
@@ -187,16 +201,39 @@ export async function POST(request: Request): Promise<Response> {
         return retryResponse.text;
       },
     });
+    const baseRepetition = repetitionSignal
+      ? buildAmaraRepetitionContext({
+          signal: repetitionSignal,
+          persistedTurns: persistedBehaviorTurns,
+          governedFactIds: turnRequiredFacts.map((fact) => fact.id),
+        })
+      : undefined;
+    const behavioralFacts = [
+      ...turnRequiredFacts,
+      ...(baseRepetition
+        ? selectAmaraRepetitionFacts(baseRepetition, disclosureState.alreadyDisclosed)
+        : []),
+    ].filter((fact, index, facts) => facts.findIndex((candidate) => candidate.id === fact.id) === index);
+    const repetition = baseRepetition?.history
+      ? {
+          ...baseRepetition,
+          history: {
+            ...baseRepetition.history,
+            lastGovernedFactIds: behavioralFacts.map((fact) => fact.id),
+          },
+        }
+      : baseRepetition;
     const behavioralResponse = payload.caseId === "case-01"
       ? renderPatientBehavior({
           patientId: AMARA_PATIENT_ID,
           caseId: payload.caseId,
           originalText: safeResponse.text,
           governedFacts: attachGovernedFacts(
-            turnRequiredFacts,
-            new Set(turnRequiredFacts.map((fact) => fact.id)),
+            behavioralFacts,
+            new Set(behavioralFacts.map((fact) => fact.id)),
           ),
           contract: AMARA_BEHAVIORAL_CONTRACT,
+          repetition,
           // Immediate acknowledgements and unsupported-boundary replies are
           // governed exact-output paths and must not be restyled.
           exactTextRequired: Boolean(immediateResponse),
@@ -239,6 +276,12 @@ export async function POST(request: Request): Promise<Response> {
       patientMessageId,
       baseResponse: finalResponseText,
       providerName: provider.name,
+      behaviorIntentId: repetition?.countsTowardHistory
+        ? repetition.history?.intentId
+        : undefined,
+      behaviorAnswerClear: repetition
+        ? hasCompleteAmaraRepetitionFacts(repetition, behavioralFacts)
+        : false,
       classification:
         classificationResult?.success
           ? classificationResult.classification

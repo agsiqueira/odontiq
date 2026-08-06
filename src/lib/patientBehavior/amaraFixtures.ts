@@ -47,6 +47,41 @@ export function buildAmaraBehaviorFixtures() {
   });
 }
 
+export function buildAmaraRepetitionFixtures() {
+  const definition = definitions.find((item) => item.id === "duration");
+  if (!definition) throw new Error("Missing duration fixture");
+  const governedFacts = [fixtureFact(definition)];
+  return ([
+    { label: "First duration ask", level: "none", askCount: 1 },
+    { label: "First semantic repeat", level: "first_repeat", askCount: 2 },
+    { label: "Later semantic repeat", level: "later_repeat", askCount: 3 },
+  ] as const).map((scenario) => ({
+    id: `duration-${scenario.level}`,
+    label: scenario.label,
+    originalText: definition.originalText,
+    governedFacts,
+    result: renderPatientBehavior({
+      patientId: AMARA_PATIENT_ID,
+      caseId: "case-01",
+      originalText: definition.originalText,
+      governedFacts,
+      contract: AMARA_BEHAVIORAL_CONTRACT,
+      repetition: {
+        level: scenario.level,
+        clarificationSafe: false,
+        countsTowardHistory: true,
+        reason: scenario.level === "none" ? "first-ask" : "semantic-repeat",
+        history: {
+          intentId: "duration",
+          askCount: scenario.askCount,
+          clearAnswerCount: scenario.askCount - 1,
+          lastGovernedFactIds: ["c1.duration"],
+        },
+      },
+    }),
+  }));
+}
+
 function fixtureFact(definition: FixtureDefinition): GovernedFact {
   const canonical = case01.supportingInfo.patientFacts.find(
     (fact) => fact.id === definition.factId,

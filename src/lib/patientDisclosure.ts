@@ -82,7 +82,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   otc_identity: /\b(?:which|what|name)\b.*\b(?:over[- ]the[- ]counter|otc|pain (?:medicine|medication|killer))\b/i,
   prior_dental_procedure: /\b(?:root canal|extract(?:ion|ed)?|pulled|treatment|procedure)\b.*\b(?:before|prior|already|had|this tooth|that tooth|on it)|\b(?:had|already|ever)\b.*\b(?:root canal|extract(?:ion|ed)?|tooth pulled|treatment|procedure)\b|\b(?:this|that|same|painful)\b.*\b(?:tooth|molar)\b.*\b(?:extract(?:ion|ed)?|pulled)\b/i,
   initial_pain_severity: /\b(?:initial|initially|at first|when it (?:began|started)|when (?:the )?pain first (?:began|started))\b.*\b(?:pain|scale|severe|bad|\/10|out of ten)\b|\b(?:pain|scale|severe|severity|bad|\/10|out of ten)\b.*\b(?:initial|initially|at first|when it first (?:began|started)|when (?:the )?pain first (?:began|started))\b/i,
-  medications: /\b(medication|medicine|meds|what do you take|taking)\b/i,
+  medications: /\b(medications?|medicine|meds|what do you take|taking)\b/i,
   allergies: /\ballerg(?:y|ies|ic)?\b|\bpenicillin\b/i,
   smoking: /\b(smok(?:e|es|ed|ing)?|tobacco|cigarettes?)\b/i,
   dental_access: /\b(afford|cost|insurance|why.*(?:treated|removed|extracted)|dentist|appointment|access)\b/i,

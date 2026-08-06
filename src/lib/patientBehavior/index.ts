@@ -2,7 +2,14 @@ export { AMARA_BEHAVIORAL_CONTRACT, AMARA_PATIENT_ID } from "./amaraContract";
 export { attachGovernedFacts } from "./governedFacts";
 export { renderPatientBehavior } from "./renderer";
 export { renderAmaraCandidate, selectAmaraToneMode } from "./amaraRenderer";
-export { buildAmaraBehaviorFixtures } from "./amaraFixtures";
+export { buildAmaraBehaviorFixtures, buildAmaraRepetitionFixtures } from "./amaraFixtures";
+export {
+  buildAmaraRepetitionContext,
+  classifyAmaraRepetitionSignal,
+  hasCompleteAmaraRepetitionFacts,
+  selectAmaraRepetitionFacts,
+} from "./repetition";
+export type { AmaraRepetitionSignal, PersistedBehaviorIntentTurn } from "./repetition";
 export { validateFactPreservation } from "./factPreservation";
 export {
   IMMUTABLE_RESPONSE_ELEMENTS,
@@ -15,4 +22,7 @@ export type {
   BehavioralViolation,
   GovernedFact,
   AmaraToneMode,
+  BehavioralIntentHistory,
+  BehavioralRepetitionContext,
+  BehavioralRepetitionLevel,
 } from "./types";

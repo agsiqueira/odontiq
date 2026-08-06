@@ -33,6 +33,18 @@ const CASE_1_TEMPLATES: Readonly<Record<string, string>> = {
   "Hello... please help me.": "Hello... help me.",
 };
 
+const CASE_1_REPEAT_TEMPLATES: Readonly<Record<string, readonly [string, string]>> = {
+  "The dental pain has been worsening for four days.": [
+    "Four days. It's been worsening.",
+    "I said four days. It's been worsening.",
+  ],
+  "The tooth pain has been getting worse for four days.": [
+    "Four days. It's been getting worse.",
+    "I said four days. It's been getting worse.",
+  ],
+  "The painful tooth is my lower-left molar.": ["Lower-left molar.", "The lower-left molar. Same one."],
+};
+
 export function selectAmaraToneMode(
   input: Pick<BehavioralRenderInput, "patientId" | "caseId" | "originalText">,
 ): AmaraToneMode {
@@ -56,6 +68,13 @@ export function renderAmaraCandidate(
     return input.originalText;
   }
 
+  const repeatTemplate = CASE_1_REPEAT_TEMPLATES[input.originalText];
+  if (repeatTemplate && input.repetition?.level === "first_repeat") return repeatTemplate[0];
+  if (repeatTemplate && input.repetition?.level === "later_repeat") return repeatTemplate[1];
+
+  const factAwareRepeat = renderFactAwareRepeat(input);
+  if (factAwareRepeat) return factAwareRepeat;
+
   const template = CASE_1_TEMPLATES[input.originalText];
   if (template) return template;
 
@@ -74,4 +93,22 @@ export function renderAmaraCandidate(
   }
 
   return candidate;
+}
+
+function renderFactAwareRepeat(input: Readonly<BehavioralRenderInput>) {
+  const intentId = input.repetition?.history?.intentId;
+  const level = input.repetition?.level;
+  if (!intentId || level === "none" || !level) return undefined;
+  const factIds = new Set(input.governedFacts.map((fact) => fact.id));
+  const concise = (() => {
+    if (intentId === "duration" && factIds.has("c1.duration")) return "Four days. It's been worsening.";
+    if (intentId === "location" && factIds.has("c1.location")) return "Lower-left molar.";
+    return undefined;
+  })();
+  if (!concise) return undefined;
+  return level === "later_repeat" ? `Like I said, ${lowercaseFirst(concise)}` : concise;
+}
+
+function lowercaseFirst(text: string) {
+  return `${text.charAt(0).toLowerCase()}${text.slice(1)}`;
 }

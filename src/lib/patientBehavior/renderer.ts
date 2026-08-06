@@ -24,6 +24,7 @@ export function renderPatientBehavior(
       violations: [],
       usedFallback: false,
       bypassReason,
+      repetition: input.repetition,
     };
   }
 
@@ -55,6 +56,7 @@ export function renderPatientBehavior(
     valid: true,
     violations: [],
     usedFallback: false,
+    repetition: input.repetition,
   };
 }
 
@@ -72,6 +74,7 @@ function fallback(
     valid: false,
     violations,
     usedFallback: true,
+    repetition: input.repetition,
   };
 }
 

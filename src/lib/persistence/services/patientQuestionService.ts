@@ -41,6 +41,22 @@ export class PatientQuestionService {
     return turn ? toStoredTurn(turn) : undefined;
   }
 
+  async loadBehaviorIntentHistory(encounterId: string, behaviorIntentId: string) {
+    return db.conversationTurn.findMany({
+      where: { encounterId, behaviorIntentId },
+      orderBy: [{ createdAt: "asc" }, { id: "asc" }],
+      select: {
+        responseText: true,
+        behaviorAnswerClear: true,
+        createdAt: true,
+      },
+    }).then((turns) => turns.map((turn) => ({
+      responseText: turn.responseText,
+      answerClear: turn.behaviorAnswerClear,
+      createdAt: turn.createdAt,
+    })));
+  }
+
   async finalizeTurn(input: {
     userId: string;
     encounterId: string;
@@ -50,6 +66,8 @@ export class PatientQuestionService {
     patientMessageId: string;
     baseResponse: string;
     providerName: string;
+    behaviorIntentId?: string;
+    behaviorAnswerClear?: boolean;
     classification?: PatientQuestionClassification;
     questionText: (id: string) => string | undefined;
     retryAttempt?: number;
@@ -131,6 +149,8 @@ export class PatientQuestionService {
             patientMessageId: input.patientMessageId,
             responseText,
             providerName: input.providerName,
+            behaviorIntentId: input.behaviorIntentId,
+            behaviorAnswerClear: input.behaviorAnswerClear ?? false,
             selectedQuestionId,
             stateVersion: transition.state.version,
           },

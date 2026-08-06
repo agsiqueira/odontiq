@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 
-import { buildAmaraBehaviorFixtures } from "@/lib/patientBehavior";
+import { buildAmaraBehaviorFixtures, buildAmaraRepetitionFixtures } from "@/lib/patientBehavior";
 
 export default function DeveloperAmaraBehaviorPage() {
   if (process.env.NODE_ENV === "production") notFound();
 
-  const fixtures = buildAmaraBehaviorFixtures();
+  const fixtures = [...buildAmaraRepetitionFixtures(), ...buildAmaraBehaviorFixtures()];
   return (
     <main className="mx-auto min-h-screen max-w-6xl bg-slate-50 px-6 py-10 text-slate-950">
       <h1 className="text-3xl font-semibold">Amara behavioral rendering</h1>
@@ -28,6 +28,7 @@ export default function DeveloperAmaraBehaviorPage() {
               <Meta label="Governed facts" value={fixture.governedFacts.map((fact) => fact.id).join(", ") || "None"} />
               <Meta label="Validation" value={fixture.result.valid ? "Valid" : "Rejected"} />
               <Meta label="Fallback" value={fixture.result.usedFallback ? "Yes" : "No"} />
+              <Meta label="Repetition" value={fixture.result.repetition ? `${fixture.result.repetition.level} (${fixture.result.repetition.reason})` : "Not supplied"} />
             </dl>
             <Comparison label="Validation violations" value={fixture.result.violations.map((item) => `${item.code}: ${item.message}`).join("\n") || "None"} />
           </article>
