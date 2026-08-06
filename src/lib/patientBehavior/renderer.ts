@@ -1,6 +1,7 @@
 import { validateFactPreservation } from "./factPreservation";
 import { renderAmaraCandidate, selectAmaraToneMode } from "./amaraRenderer";
 import { AMARA_PATIENT_ID } from "./amaraContract";
+import { renderStagedPatientCandidate } from "./stages";
 import type {
   BehavioralRenderInput,
   BehavioralRenderResult,
@@ -25,15 +26,18 @@ export function renderPatientBehavior(
       usedFallback: false,
       bypassReason,
       repetition: input.repetition,
+      stage: input.stage,
     };
   }
 
-  const toneMode = selectAmaraToneMode(input);
+  const toneMode = input.patientId === AMARA_PATIENT_ID ? selectAmaraToneMode(input) : undefined;
   let candidateText: string;
   try {
     candidateText = candidateRenderer
       ? candidateRenderer(input)
-      : renderAmaraCandidate(input, toneMode);
+      : input.stage
+        ? renderStagedPatientCandidate(input)
+        : renderAmaraCandidate(input, toneMode);
   } catch {
     return fallback(input, input.originalText, toneMode, [{
       code: "unsupported-addition",
@@ -57,6 +61,7 @@ export function renderPatientBehavior(
     violations: [],
     usedFallback: false,
     repetition: input.repetition,
+    stage: input.stage,
   };
 }
 
@@ -75,12 +80,13 @@ function fallback(
     violations,
     usedFallback: true,
     repetition: input.repetition,
+    stage: input.stage,
   };
 }
 
 function getBypassReason(input: BehavioralRenderInput): BehavioralRenderResult["bypassReason"] {
-  if (input.patientId !== AMARA_PATIENT_ID) return "non-amara";
-  if (input.caseId !== "case-01") return "wrong-case";
+  if (!input.stage && input.patientId !== AMARA_PATIENT_ID) return "non-amara";
+  if (!input.stage && input.caseId !== "case-01") return "wrong-case";
   if (!input.originalText) return "empty";
   if (input.exactTextRequired) return "exact-output";
   return undefined;

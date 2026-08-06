@@ -70,6 +70,23 @@ export type BehavioralRenderInput = {
   /** Governed immediate replies and other exact-output paths bypass styling. */
   exactTextRequired?: boolean;
   repetition?: BehavioralRepetitionContext;
+  /** Baseline personality stage derived only from finalized patient-turn count. */
+  stage?: BehavioralStage;
+};
+
+export type BehavioralStage = 1 | 2 | 3;
+export type GovernedPatientId =
+  | "amara-johnson"
+  | "marcus-lee"
+  | "elena-garcia"
+  | "noah-patel"
+  | "sofia-williams";
+
+export type PatientBehaviorProfile = {
+  patientId: GovernedPatientId;
+  caseId: string;
+  displayName: string;
+  stages: Readonly<Record<BehavioralStage, string>>;
 };
 
 export type BehavioralRepetitionLevel = "none" | "first_repeat" | "later_repeat";
@@ -116,4 +133,5 @@ export type BehavioralRenderResult = {
   violations: BehavioralViolation[];
   usedFallback: boolean;
   repetition?: BehavioralRepetitionContext;
+  stage?: BehavioralStage;
 };

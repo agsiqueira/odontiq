@@ -41,6 +41,10 @@ export class PatientQuestionService {
     return turn ? toStoredTurn(turn) : undefined;
   }
 
+  async countFinalizedTurns(encounterId: string) {
+    return db.conversationTurn.count({ where: { encounterId } });
+  }
+
   async loadBehaviorIntentHistory(encounterId: string, behaviorIntentId: string) {
     return db.conversationTurn.findMany({
       where: { encounterId, behaviorIntentId },

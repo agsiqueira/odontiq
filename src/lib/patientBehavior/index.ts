@@ -12,6 +12,14 @@ export {
 export type { AmaraRepetitionSignal, PersistedBehaviorIntentTurn } from "./repetition";
 export { validateFactPreservation } from "./factPreservation";
 export {
+  PATIENT_BEHAVIOR_PROFILES,
+  behavioralContractForCase,
+  behavioralStageForNextTurn,
+  patientBehaviorProfileForCase,
+  renderStagedPatientCandidate,
+  selectBehavioralStage,
+} from "./stages";
+export {
   IMMUTABLE_RESPONSE_ELEMENTS,
   MUTABLE_RESPONSE_ELEMENTS,
 } from "./types";
@@ -25,4 +33,7 @@ export type {
   BehavioralIntentHistory,
   BehavioralRepetitionContext,
   BehavioralRepetitionLevel,
+  BehavioralStage,
+  GovernedPatientId,
+  PatientBehaviorProfile,
 } from "./types";

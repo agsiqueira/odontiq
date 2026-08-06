@@ -31,9 +31,9 @@ import {
   nonEnglishOutputDetection,
 } from "@/lib/patientLanguagePolicy";
 import {
-  AMARA_BEHAVIORAL_CONTRACT,
-  AMARA_PATIENT_ID,
   attachGovernedFacts,
+  behavioralContractForCase,
+  behavioralStageForNextTurn,
   buildAmaraRepetitionContext,
   classifyAmaraRepetitionSignal,
   hasCompleteAmaraRepetitionFacts,
@@ -169,6 +169,9 @@ export async function POST(request: Request): Promise<Response> {
       return Response.json(toConversationResponse(payload.encounterId, storedLanguageTurn));
     }
 
+    const priorFinalizedTurnCount = await patientQuestionService.countFinalizedTurns(payload.encounterId);
+    const behavioralStage = behavioralStageForNextTurn(priorFinalizedTurnCount);
+    const patientBehaviorContract = behavioralContractForCase(payload.caseId);
     const repetitionSignal = payload.caseId === "case-01"
       ? classifyAmaraRepetitionSignal(payload.message)
       : undefined;
@@ -271,16 +274,17 @@ export async function POST(request: Request): Promise<Response> {
           },
         }
       : baseRepetition;
-    const behavioralResponse = payload.caseId === "case-01"
+    const behavioralResponse = patientBehaviorContract
       ? renderPatientBehavior({
-          patientId: AMARA_PATIENT_ID,
+          patientId: patientBehaviorContract.patientId,
           caseId: payload.caseId,
           originalText: safeResponse.text,
           governedFacts: attachGovernedFacts(
             behavioralFacts,
             new Set(behavioralFacts.map((fact) => fact.id)),
           ),
-          contract: AMARA_BEHAVIORAL_CONTRACT,
+          contract: patientBehaviorContract,
+          stage: behavioralStage,
           repetition,
           // Immediate acknowledgements and unsupported-boundary replies are
           // governed exact-output paths and must not be restyled.
