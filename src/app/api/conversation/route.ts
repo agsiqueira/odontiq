@@ -23,6 +23,14 @@ import { classifyPatientQuestionTrigger } from "@/lib/patientQuestions/classifie
 import { getPatientQuestion } from "@/lib/patientQuestions/catalog";
 import { shouldClassifyPatientQuestions } from "@/lib/patientQuestions/stateMachine";
 import {
+  LANGUAGE_POLICY_BEHAVIOR_INTENT_ID,
+  detectPatientLanguageIntent,
+  governedPatientLanguageResponse,
+  isClearlyNonEnglishText,
+  languagePolicyRepetitionLevel,
+  nonEnglishOutputDetection,
+} from "@/lib/patientLanguagePolicy";
+import {
   AMARA_BEHAVIORAL_CONTRACT,
   AMARA_PATIENT_ID,
   attachGovernedFacts,
@@ -38,6 +46,8 @@ const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental enc
 You must act only as the patient. Do not act as the dentist, instructor, evaluator, preceptor, assistant, or narrator.
 
 Respond only with natural spoken dialogue. Return only the words the patient should say aloud.
+
+Always respond in English. Never translate the clinical response, switch languages, or imitate another language used by the learner.
 
 Do not use Markdown, headings, numbered lists, bullet points, tables, code formatting, bold markers, or italic markers. Do not use asterisks, hash symbols, or structured formatting. Do not add labels such as "Response:", "Patient:", or "Answer:". Do not enumerate information as "one, two, three" unless the patient would naturally speak that way.
 
@@ -119,6 +129,44 @@ export async function POST(request: Request): Promise<Response> {
     );
     if (existingTurn) {
       return Response.json(toConversationResponse(payload.encounterId, existingTurn));
+    }
+
+    const languageDetection = detectPatientLanguageIntent(payload.message);
+    if (languageDetection) {
+      const countsAsLanguageRefusal = languageDetection.intent !== "english-ability";
+      const priorLanguageTurns = countsAsLanguageRefusal
+        ? await patientQuestionService.loadBehaviorIntentHistory(
+            payload.encounterId,
+            LANGUAGE_POLICY_BEHAVIOR_INTENT_ID,
+          )
+        : [];
+      const governedResponse = governedPatientLanguageResponse({
+        detection: languageDetection,
+        repetitionLevel: languagePolicyRepetitionLevel(priorLanguageTurns.length),
+        isAmara: payload.caseId === "case-01",
+      });
+      const storedLanguageTurn = await patientQuestionService.finalizeTurn({
+        userId: user.id,
+        encounterId: payload.encounterId,
+        caseId: payload.caseId,
+        requestId: payload.requestId,
+        studentMessageId: payload.studentMessageId,
+        patientMessageId: crypto.randomUUID(),
+        baseResponse: governedResponse,
+        providerName: "governed-language-policy",
+        behaviorIntentId: countsAsLanguageRefusal
+          ? LANGUAGE_POLICY_BEHAVIOR_INTENT_ID
+          : undefined,
+        behaviorAnswerClear: countsAsLanguageRefusal,
+        questionText: () => undefined,
+      });
+      if (storedLanguageTurn === "not-found") {
+        return Response.json({ success: false, error: "encounter_not_found" }, { status: 404 });
+      }
+      if (storedLanguageTurn === "case-mismatch") {
+        return Response.json({ success: false, error: "encounter_case_mismatch" }, { status: 409 });
+      }
+      return Response.json(toConversationResponse(payload.encounterId, storedLanguageTurn));
     }
 
     const repetitionSignal = payload.caseId === "case-01"
@@ -239,9 +287,23 @@ export async function POST(request: Request): Promise<Response> {
           exactTextRequired: Boolean(immediateResponse),
         })
       : undefined;
-    const finalResponseText = behavioralResponse?.text ?? safeResponse.text;
+    const generatedResponseText = behavioralResponse?.text ?? safeResponse.text;
+    const outputRejectedByLanguageBackstop = isClearlyNonEnglishText(generatedResponseText);
+    const outputLanguageHistory = outputRejectedByLanguageBackstop
+      ? await patientQuestionService.loadBehaviorIntentHistory(
+          payload.encounterId,
+          LANGUAGE_POLICY_BEHAVIOR_INTENT_ID,
+        )
+      : [];
+    const finalResponseText = outputRejectedByLanguageBackstop
+      ? governedPatientLanguageResponse({
+          detection: nonEnglishOutputDetection(),
+          repetitionLevel: languagePolicyRepetitionLevel(outputLanguageHistory.length),
+          isAmara: payload.caseId === "case-01",
+        })
+      : generatedResponseText;
     const patientMessageId = crypto.randomUUID();
-    const classificationResult = shouldClassifyPatientQuestions(
+    const classificationResult = !outputRejectedByLanguageBackstop && shouldClassifyPatientQuestions(
       payload.caseId,
       questionContext.state,
     )
@@ -275,13 +337,19 @@ export async function POST(request: Request): Promise<Response> {
       studentMessageId: payload.studentMessageId,
       patientMessageId,
       baseResponse: finalResponseText,
-      providerName: provider.name,
-      behaviorIntentId: repetition?.countsTowardHistory
+      providerName: outputRejectedByLanguageBackstop
+        ? "governed-language-policy-backstop"
+        : provider.name,
+      behaviorIntentId: repetition?.countsTowardHistory && !outputRejectedByLanguageBackstop
         ? repetition.history?.intentId
-        : undefined,
-      behaviorAnswerClear: repetition
-        ? hasCompleteAmaraRepetitionFacts(repetition, behavioralFacts)
-        : false,
+        : outputRejectedByLanguageBackstop
+          ? LANGUAGE_POLICY_BEHAVIOR_INTENT_ID
+          : undefined,
+      behaviorAnswerClear: outputRejectedByLanguageBackstop
+        ? true
+        : repetition
+          ? hasCompleteAmaraRepetitionFacts(repetition, behavioralFacts)
+          : false,
       classification:
         classificationResult?.success
           ? classificationResult.classification
