@@ -59,7 +59,7 @@ import { useMentorSpeechPlayback } from "@/hooks/useMentorSpeechPlayback";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
 import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
-import { AMARA_BREATHING_VIDEO_PATH } from "@/lib/patientAudioPlan";
+import { getAmaraBreathingAnimationPath } from "@/lib/patientAudioPlan";
 
 type EncounterExperienceProps = {
   patientCase: OdontIQCase;
@@ -368,6 +368,9 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const isPatientSpeechSegmentActive = speechPlayback.isSpeechSegmentActive;
   const isAmaraBreathingEffectActive =
     patientCase.id === "case-01" && speechPlayback.isBreathingEffectActive;
+  const amaraBreathingAnimationSrc = patientCase.id === "case-01"
+    ? getAmaraBreathingAnimationPath(speechPlayback.activeEffectId)
+    : undefined;
   const selectedExamination = patientCase.assets.examinations.find(
     (examination) => examination.id === state.selectedExaminationId,
   );
@@ -1472,9 +1475,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                 alt={`${patientCase.patientName} speaking`}
                 isTalking={isPatientSpeechSegmentActive}
                 breathingSrc={
-                  patientCase.id === "case-01"
-                    ? AMARA_BREATHING_VIDEO_PATH
-                    : undefined
+                  amaraBreathingAnimationSrc
                 }
                 isBreathing={isAmaraBreathingEffectActive}
                 ref={talkingVideoRef}

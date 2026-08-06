@@ -43,7 +43,8 @@ export function useSpeechSynthesisPlayback({
   const [needsPlaybackTap, setNeedsPlaybackTap] = useState(false);
   const [activeSegmentType, setActiveSegmentType] =
     useState<RenderedPatientAudioSegment["type"] | null>(null);
-  const pendingSegmentTypeRef = useRef<RenderedPatientAudioSegment["type"] | null>(null);
+  const [activeEffectId, setActiveEffectId] = useState<string | null>(null);
+  const pendingSegmentRef = useRef<RenderedPatientAudioSegment | null>(null);
 
   const isSupported = status !== "unsupported";
   const isPreparingSpeech = status === "preparing";
@@ -71,7 +72,11 @@ export function useSpeechSynthesisPlayback({
         revokeObjectUrl: (url) => URL.revokeObjectURL(url),
         onPlaybackStarted: () => {
           setStatus("speaking");
-          setActiveSegmentType(pendingSegmentTypeRef.current);
+          const pendingSegment = pendingSegmentRef.current;
+          setActiveSegmentType(pendingSegment?.type ?? null);
+          setActiveEffectId(
+            pendingSegment?.type === "effect" ? pendingSegment.effectId : null,
+          );
           emitAudioDiagnostic("speaking_animation.started", {
             playback: "audio-element",
             isSpeaking: true,
@@ -80,6 +85,7 @@ export function useSpeechSynthesisPlayback({
         onPlaybackStopped: (reason) => {
           setStatus("idle");
           setActiveSegmentType(null);
+          setActiveEffectId(null);
           emitAudioDiagnostic("speaking_animation.stopped", {
             playback: "audio-element",
             isSpeaking: false,
@@ -115,8 +121,9 @@ export function useSpeechSynthesisPlayback({
     abortControllerRef.current?.abort();
     abortControllerRef.current = null;
     audioControllerRef.current?.cancel("stop");
-    pendingSegmentTypeRef.current = null;
+    pendingSegmentRef.current = null;
     setActiveSegmentType(null);
+    setActiveEffectId(null);
     cancelBrowserSpeech();
     setStatus("idle");
   }, [cancelBrowserSpeech]);
@@ -154,6 +161,7 @@ export function useSpeechSynthesisPlayback({
 
         setStatus("speaking");
         setActiveSegmentType("speech");
+        setActiveEffectId(null);
         emitAudioDiagnostic("speaking_animation.started", {
           playback: "browser-speech",
           isSpeaking: true,
@@ -168,6 +176,7 @@ export function useSpeechSynthesisPlayback({
         utteranceRef.current = null;
         setStatus("idle");
         setActiveSegmentType(null);
+        setActiveEffectId(null);
         emitAudioDiagnostic("speaking_animation.stopped", {
           playback: "browser-speech",
           isSpeaking: false,
@@ -183,6 +192,7 @@ export function useSpeechSynthesisPlayback({
         utteranceRef.current = null;
         setStatus("error");
         setActiveSegmentType(null);
+        setActiveEffectId(null);
         emitAudioDiagnostic("audio.error", {
           playback: "browser-speech",
           isSpeaking: false,
@@ -201,12 +211,13 @@ export function useSpeechSynthesisPlayback({
 
   const playAudioBlob = useCallback(
     async (audioBlob: Blob, segment: RenderedPatientAudioSegment) => {
-      pendingSegmentTypeRef.current = segment.type;
+      pendingSegmentRef.current = segment;
       try {
         return await getAudioController().playToCompletion(audioBlob);
       } finally {
-        pendingSegmentTypeRef.current = null;
+        pendingSegmentRef.current = null;
         setActiveSegmentType(null);
+        setActiveEffectId(null);
       }
     },
     [getAudioController],
@@ -326,6 +337,23 @@ export function useSpeechSynthesisPlayback({
     void speak(lastTextRef.current);
   }, [speak]);
 
+  const auditionEffect = useCallback(
+    async (effectId: string, src: string) => {
+      stop();
+      const playbackId = playbackIdRef.current + 1;
+      playbackIdRef.current = playbackId;
+      setStatus("preparing");
+      try {
+        const blob = await fetchEffectBlob(src);
+        if (playbackIdRef.current !== playbackId) return;
+        await playAudioBlob(blob, { type: "effect", effectId, src });
+      } catch {
+        if (playbackIdRef.current === playbackId) setStatus("error");
+      }
+    },
+    [playAudioBlob, stop],
+  );
+
   const primePlayback = useCallback(() => {
     getAudioController().primeFromGesture();
   }, [getAudioController]);
@@ -347,7 +375,7 @@ export function useSpeechSynthesisPlayback({
       abortControllerRef.current?.abort();
       audioControllerRef.current?.dispose();
       audioControllerRef.current = null;
-      pendingSegmentTypeRef.current = null;
+      pendingSegmentRef.current = null;
       cancelBrowserSpeech();
     };
   }, [cancelBrowserSpeech]);
@@ -355,6 +383,7 @@ export function useSpeechSynthesisPlayback({
   return {
     isSpeaking,
     isBreathingEffectActive: activeSegmentType === "effect",
+    activeEffectId,
     isSpeechSegmentActive: activeSegmentType === "speech",
     isPreparingSpeech,
     isSupported,
@@ -363,6 +392,7 @@ export function useSpeechSynthesisPlayback({
     replay,
     retryPlayback,
     dismissPlaybackRetry,
+    auditionEffect,
     speak,
     status,
     stop,

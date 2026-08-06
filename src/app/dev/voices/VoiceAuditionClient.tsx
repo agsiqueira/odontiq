@@ -6,7 +6,11 @@ import { Play, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { InteractionCharacterStage } from "@/components/InteractionCharacterStage";
 import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
-import { AMARA_BREATHING_VIDEO_PATH } from "@/lib/patientAudioPlan";
+import {
+  AMARA_BREATH_EFFECT_PATHS,
+  getAmaraBreathingAnimationPath,
+  type PatientAudioEffectId,
+} from "@/lib/patientAudioPlan";
 import {
   getKokoroVoicesByGender,
   type KokoroVoiceCatalogEntry,
@@ -25,6 +29,11 @@ const AMARA_PLACEMENT_AUDITIONS = [
   { label: "Heavy breath after speech", patientTurnIndex: 17 },
   { label: "Rare two-breath sequence", patientTurnIndex: 6 },
 ] as const;
+const AMARA_EFFECT_AUDITIONS = [
+  { label: "Moderate breath 01", effectId: "amara-breath-moderate-01" },
+  { label: "Moderate breath 02", effectId: "amara-breath-moderate-02" },
+  { label: "Heavy breath 01", effectId: "amara-breath-heavy-01" },
+] as const satisfies ReadonlyArray<{ label: string; effectId: PatientAudioEffectId }>;
 
 type VoiceAuditionResponse =
   | {
@@ -296,13 +305,27 @@ export function VoiceAuditionClient() {
             mode="media"
             idleSrc="/patients/case-01/case-01-amara-johnson-v4.png"
             talkingSrc="/patients/case-01/talking-v4.mp4"
-            breathingSrc={AMARA_BREATHING_VIDEO_PATH}
+            breathingSrc={getAmaraBreathingAnimationPath(amaraPlayback.activeEffectId)}
             alt="Amara breathing audition"
             isTalking={false}
             isBreathing={amaraPlayback.isBreathingEffectActive}
             className="w-full max-w-md"
           />
           <div className="flex flex-wrap gap-2">
+            {AMARA_EFFECT_AUDITIONS.map((audition) => (
+              <Button
+                key={audition.effectId}
+                type="button"
+                variant="outline"
+                onClick={() => void amaraPlayback.auditionEffect(
+                  audition.effectId,
+                  AMARA_BREATH_EFFECT_PATHS[audition.effectId],
+                )}
+              >
+                <Play className="size-4" />
+                {audition.label}
+              </Button>
+            ))}
             {AMARA_PLACEMENT_AUDITIONS.map((audition) => (
               <Button
                 key={audition.label}

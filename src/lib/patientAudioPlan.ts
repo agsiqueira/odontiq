@@ -17,13 +17,28 @@ export type AmaraBreathingPlacement =
   | "heavy-after"
   | "two-breath";
 
-export const AMARA_BREATHING_VIDEO_PATH = "/video/amara/amara-breathing.mp4";
+export const AMARA_BREATHING_MODERATE_VIDEO_PATH =
+  "/video/amara/amara-breathing-moderate.mp4";
+export const AMARA_BREATHING_HEAVY_VIDEO_PATH =
+  "/video/amara/amara-breathing-heavy.mp4";
+
+export const AMARA_BREATH_EFFECT_VIDEO_PATHS: Record<PatientAudioEffectId, string> = {
+  "amara-breath-moderate-01": AMARA_BREATHING_MODERATE_VIDEO_PATH,
+  "amara-breath-moderate-02": AMARA_BREATHING_MODERATE_VIDEO_PATH,
+  "amara-breath-heavy-01": AMARA_BREATHING_HEAVY_VIDEO_PATH,
+};
 
 export const AMARA_BREATH_EFFECT_PATHS: Record<PatientAudioEffectId, string> = {
   "amara-breath-moderate-01": "/audio/amara/amara-breath-moderate-01.mp3",
   "amara-breath-moderate-02": "/audio/amara/amara-breath-moderate-02.mp3",
   "amara-breath-heavy-01": "/audio/amara/amara-breath-heavy-01.mp3",
 };
+
+export function getAmaraBreathingAnimationPath(effectId: string | null | undefined) {
+  return effectId && effectId in AMARA_BREATH_EFFECT_VIDEO_PATHS
+    ? AMARA_BREATH_EFFECT_VIDEO_PATHS[effectId as PatientAudioEffectId]
+    : undefined;
+}
 
 const AMARA_CASE_ID = "case-01";
 const AMARA_HEAVY_BREATH: PatientAudioEffectId = "amara-breath-heavy-01";

@@ -4,7 +4,12 @@ import {
   startAmaraBreathingAnimation,
   type AmaraBreathingVideoElement,
 } from "../src/lib/amaraBreathingAnimation";
-import { buildPatientAudioPlan } from "../src/lib/patientAudioPlan";
+import {
+  AMARA_BREATHING_HEAVY_VIDEO_PATH,
+  AMARA_BREATHING_MODERATE_VIDEO_PATH,
+  buildPatientAudioPlan,
+  getAmaraBreathingAnimationPath,
+} from "../src/lib/patientAudioPlan";
 import {
   playPatientAudioSequence,
   type RenderedPatientAudioSegment,
@@ -24,6 +29,13 @@ class FakeVideo implements AmaraBreathingVideoElement {
   }
 }
 
+assert.equal(getAmaraBreathingAnimationPath("amara-breath-moderate-01"), AMARA_BREATHING_MODERATE_VIDEO_PATH);
+assert.equal(getAmaraBreathingAnimationPath("amara-breath-moderate-02"), AMARA_BREATHING_MODERATE_VIDEO_PATH);
+assert.equal(getAmaraBreathingAnimationPath("amara-breath-heavy-01"), AMARA_BREATHING_HEAVY_VIDEO_PATH);
+assert.notEqual(AMARA_BREATHING_MODERATE_VIDEO_PATH, AMARA_BREATHING_HEAVY_VIDEO_PATH);
+assert.equal(getAmaraBreathingAnimationPath(undefined), undefined, "speech selects no animation");
+assert.equal(getAmaraBreathingAnimationPath("unknown-effect"), undefined, "unknown effects are safe");
+
 const video = new FakeVideo();
 const stop = startAmaraBreathingAnimation(video);
 assert.equal(video.playCalls, 1, "effect activation starts the video");
@@ -40,6 +52,21 @@ await Promise.resolve();
 stopRejected();
 assert.equal(rejected.pauseCalls, 1, "rejected video playback remains safely stoppable");
 assert.doesNotThrow(() => startAmaraBreathingAnimation(null)(), "missing MP4 is a no-op");
+
+for (const effectId of ["amara-breath-moderate-01", "amara-breath-heavy-01"] as const) {
+  const result = await playPatientAudioSequence([
+    { type: "effect", effectId, src: "/effect.mp3" },
+  ], {
+    isCancelled: () => false,
+    loadEffect: async () => new Blob(["effect"]),
+    loadSpeech: (segment) => new Blob([segment.text]),
+    play: async () => {
+      startAmaraBreathingAnimation(null)();
+      return "ended";
+    },
+  });
+  assert.equal(result, "ended", `missing ${effectId} MP4 does not block audio`);
+}
 
 const activity: string[] = [];
 const rendered: RenderedPatientAudioSegment[] = [
@@ -65,6 +92,28 @@ await playPatientAudioSequence(rendered, {
 });
 assert.deepEqual(activity, ["speech-no-animation", "effect-active", "effect-reset", "speech-no-animation"]);
 
+const switchedAnimations: Array<string | undefined> = [];
+await playPatientAudioSequence([
+  { type: "effect", effectId: "amara-breath-moderate-01", src: "/moderate.mp3" },
+  { type: "effect", effectId: "amara-breath-heavy-01", src: "/heavy.mp3" },
+], {
+  isCancelled: () => false,
+  loadEffect: async () => new Blob(["effect"]),
+  loadSpeech: (segment) => new Blob([segment.text]),
+  play: async (_blob, segment) => {
+    switchedAnimations.push(
+      segment.type === "effect"
+        ? getAmaraBreathingAnimationPath(segment.effectId)
+        : undefined,
+    );
+    return "ended";
+  },
+});
+assert.deepEqual(switchedAnimations, [
+  AMARA_BREATHING_MODERATE_VIDEO_PATH,
+  AMARA_BREATHING_HEAVY_VIDEO_PATH,
+], "two effects switch to the correct animation");
+
 const failedEffectVideo = new FakeVideo();
 const resetFailedEffect = startAmaraBreathingAnimation(failedEffectVideo);
 resetFailedEffect();
@@ -86,6 +135,6 @@ assert.ok(
 
 const encounter = await readFile("src/components/EncounterExperience.tsx", "utf8");
 assert.match(encounter, /patientCase\.id === "case-01" && speechPlayback\.isBreathingEffectActive/);
-assert.match(encounter, /AMARA_BREATHING_VIDEO_PATH/);
+assert.match(encounter, /getAmaraBreathingAnimationPath\(speechPlayback\.activeEffectId\)/);
 
-console.log("Amara breathing animation validation passed: 14 focused assertions.");
+console.log("Amara breathing animation validation passed: 23 focused assertions.");

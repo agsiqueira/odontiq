@@ -30,16 +30,17 @@ export const InteractionCharacterStage = forwardRef<
   InteractionCharacterStageProps
 >(function InteractionCharacterStage(props, ref) {
   const [idleImageFailed, setIdleImageFailed] = useState(false);
-  const [breathingVideoFailed, setBreathingVideoFailed] = useState(false);
+  const [failedBreathingSrc, setFailedBreathingSrc] = useState<string>();
   const breathingVideoRef = useRef<HTMLVideoElement>(null);
+  const breathingSrc = props.mode === "media" ? props.breathingSrc : undefined;
   const isBreathing = props.mode === "media" && Boolean(props.isBreathing);
   const isBreathingVideoVisible =
-    isBreathing && !breathingVideoFailed;
+    isBreathing && Boolean(breathingSrc) && failedBreathingSrc !== breathingSrc;
 
   useEffect(() => {
-    if (!isBreathing || breathingVideoFailed) return;
+    if (!isBreathingVideoVisible) return;
     return startAmaraBreathingAnimation(breathingVideoRef.current);
-  }, [breathingVideoFailed, isBreathing]);
+  }, [breathingSrc, isBreathingVideoVisible]);
 
   return (
     <div
@@ -97,7 +98,7 @@ export const InteractionCharacterStage = forwardRef<
                 props.mediaClassName,
                 isBreathingVideoVisible ? "opacity-100" : "opacity-0",
               )}
-              onError={() => setBreathingVideoFailed(true)}
+              onError={() => setFailedBreathingSrc(props.breathingSrc)}
             />
           ) : null}
           {idleImageFailed ? (
