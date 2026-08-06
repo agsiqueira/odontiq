@@ -169,7 +169,10 @@ export async function POST(request: Request): Promise<Response> {
       return Response.json(toConversationResponse(payload.encounterId, storedLanguageTurn));
     }
 
-    const priorFinalizedTurnCount = await patientQuestionService.countFinalizedTurns(payload.encounterId);
+    const [priorFinalizedTurnCount, recentPatientResponses] = await Promise.all([
+      patientQuestionService.countFinalizedTurns(payload.encounterId),
+      patientQuestionService.loadRecentFinalizedResponses(payload.encounterId),
+    ]);
     const behavioralStage = behavioralStageForNextTurn(priorFinalizedTurnCount);
     const patientBehaviorContract = behavioralContractForCase(payload.caseId);
     const repetitionSignal = payload.caseId === "case-01"
@@ -285,6 +288,8 @@ export async function POST(request: Request): Promise<Response> {
           ),
           contract: patientBehaviorContract,
           stage: behavioralStage,
+          finalizedTurnNumber: priorFinalizedTurnCount + 1,
+          recentPatientResponses,
           repetition,
           // Immediate acknowledgements and unsupported-boundary replies are
           // governed exact-output paths and must not be restyled.
@@ -299,7 +304,7 @@ export async function POST(request: Request): Promise<Response> {
           LANGUAGE_POLICY_BEHAVIOR_INTENT_ID,
         )
       : [];
-    const finalResponseText = outputRejectedByLanguageBackstop
+    let finalResponseText = outputRejectedByLanguageBackstop
       ? governedPatientLanguageResponse({
           detection: nonEnglishOutputDetection(),
           repetitionLevel: languagePolicyRepetitionLevel(outputLanguageHistory.length),
@@ -332,6 +337,12 @@ export async function POST(request: Request): Promise<Response> {
         reason: classificationResult.reason,
         ...classificationResult.safeMetadata,
       });
+    }
+    const patientQuestionMayBeAdded = classificationResult?.success
+      ? Object.values(classificationResult.classification.detectedEvents).some(Boolean)
+      : false;
+    if (patientQuestionMayBeAdded && behavioralResponse?.optionalPhrase) {
+      finalResponseText = behavioralResponse.textWithoutOptionalPhrase ?? finalResponseText;
     }
     const storedTurn = await patientQuestionService.finalizeTurn({
       userId: user.id,

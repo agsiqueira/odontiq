@@ -1,7 +1,7 @@
 import { validateFactPreservation } from "./factPreservation";
 import { renderAmaraCandidate, selectAmaraToneMode } from "./amaraRenderer";
 import { AMARA_PATIENT_ID } from "./amaraContract";
-import { renderStagedPatientCandidate } from "./stages";
+import { renderStagedPatientCandidateResult } from "./stages";
 import type {
   BehavioralRenderInput,
   BehavioralRenderResult,
@@ -31,13 +31,24 @@ export function renderPatientBehavior(
   }
 
   const toneMode = input.patientId === AMARA_PATIENT_ID ? selectAmaraToneMode(input) : undefined;
+  const stagedCandidate = input.stage ? renderStagedPatientCandidateResult(input) : undefined;
+  let optionalSelection = stagedCandidate?.selection;
+  let textWithoutOptionalPhrase = stagedCandidate
+    ? stagedCandidate.selection.phrase
+      ? stagedCandidate.text.slice(0, -(stagedCandidate.selection.phrase.length + 1))
+      : stagedCandidate.text
+    : undefined;
   let candidateText: string;
   try {
     candidateText = candidateRenderer
       ? candidateRenderer(input)
       : input.stage
-        ? renderStagedPatientCandidate(input)
+        ? stagedCandidate?.text ?? input.originalText
         : renderAmaraCandidate(input, toneMode);
+    if (candidateRenderer) {
+      optionalSelection = undefined;
+      textWithoutOptionalPhrase = undefined;
+    }
   } catch {
     return fallback(input, input.originalText, toneMode, [{
       code: "unsupported-addition",
@@ -50,7 +61,11 @@ export function renderPatientBehavior(
     candidateText,
     governedFacts: input.governedFacts,
   });
-  if (!validation.valid) return fallback(input, candidateText, toneMode, validation.violations);
+  if (!validation.valid) {
+    return fallback(input, candidateText, toneMode, validation.violations, optionalSelection?.phrase
+      ? { ...optionalSelection, phrase: undefined, suppressed: true, suppressionReason: "fact-preservation-fallback" }
+      : optionalSelection);
+  }
 
   return {
     text: candidateText,
@@ -62,6 +77,11 @@ export function renderPatientBehavior(
     usedFallback: false,
     repetition: input.repetition,
     stage: input.stage,
+    optionalPhrase: optionalSelection?.phrase,
+    optionalPhraseSuppressed: optionalSelection?.suppressed,
+    optionalPhraseSuppressionReason: optionalSelection?.suppressionReason,
+    recentPhraseHistory: optionalSelection?.recentPhraseHistory,
+    textWithoutOptionalPhrase,
   };
 }
 
@@ -70,6 +90,7 @@ function fallback(
   candidateText: string,
   toneMode: BehavioralRenderResult["toneMode"],
   violations: BehavioralRenderResult["violations"],
+  optionalSelection?: ReturnType<typeof renderStagedPatientCandidateResult>["selection"],
 ): BehavioralRenderResult {
   return {
     text: input.originalText,
@@ -81,6 +102,11 @@ function fallback(
     usedFallback: true,
     repetition: input.repetition,
     stage: input.stage,
+    optionalPhrase: optionalSelection?.phrase,
+    optionalPhraseSuppressed: optionalSelection?.suppressed,
+    optionalPhraseSuppressionReason: optionalSelection?.suppressionReason,
+    recentPhraseHistory: optionalSelection?.recentPhraseHistory,
+    textWithoutOptionalPhrase: input.originalText,
   };
 }
 

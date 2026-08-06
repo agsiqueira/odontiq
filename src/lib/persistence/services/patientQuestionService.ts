@@ -45,6 +45,15 @@ export class PatientQuestionService {
     return db.conversationTurn.count({ where: { encounterId } });
   }
 
+  async loadRecentFinalizedResponses(encounterId: string, take = 5) {
+    return db.conversationTurn.findMany({
+      where: { encounterId },
+      orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+      take,
+      select: { responseText: true },
+    }).then((turns) => turns.reverse().map((turn) => turn.responseText));
+  }
+
   async loadBehaviorIntentHistory(encounterId: string, behaviorIntentId: string) {
     return db.conversationTurn.findMany({
       where: { encounterId, behaviorIntentId },

@@ -72,6 +72,8 @@ export type BehavioralRenderInput = {
   repetition?: BehavioralRepetitionContext;
   /** Baseline personality stage derived only from finalized patient-turn count. */
   stage?: BehavioralStage;
+  finalizedTurnNumber?: number;
+  recentPatientResponses?: readonly string[];
 };
 
 export type BehavioralStage = 1 | 2 | 3;
@@ -87,6 +89,53 @@ export type PatientBehaviorProfile = {
   caseId: string;
   displayName: string;
   stages: Readonly<Record<BehavioralStage, string>>;
+  optionalPhrases: readonly BehavioralPhrase[];
+};
+
+export type BehavioralPhraseCategory =
+  | "cooperative-effort"
+  | "exhaustion"
+  | "treatment-focus"
+  | "anxiety"
+  | "hesitation"
+  | "stoic-closure"
+  | "condition-frustration";
+
+export type BehavioralPhraseRisk =
+  | "governed-question-like"
+  | "unsupported-history"
+  | "unsupported-treatment-preference"
+  | "unsupported-recurrence"
+  | "scoring-relevant"
+  | "clinically-misleading";
+
+export type BehavioralPhrase = {
+  text: string;
+  category: BehavioralPhraseCategory;
+  contractSupport: string;
+  presentationOnly: true;
+  isQuestion: false;
+  introducesFact: false;
+  allowedPatients: readonly GovernedPatientId[];
+  allowedStages: readonly BehavioralStage[];
+  risks: readonly BehavioralPhraseRisk[];
+};
+
+export type OptionalPhraseSuppressionReason =
+  | "stage-frequency"
+  | "short-or-ineligible-answer"
+  | "exact-governed-output"
+  | "repetition-already-styled"
+  | "consecutive-personality-phrase"
+  | "rolling-five-limit"
+  | "recent-phrase-reuse"
+  | "fact-preservation-fallback";
+
+export type OptionalPhraseSelection = {
+  phrase?: string;
+  suppressed: boolean;
+  suppressionReason?: OptionalPhraseSuppressionReason;
+  recentPhraseHistory: readonly string[];
 };
 
 export type BehavioralRepetitionLevel = "none" | "first_repeat" | "later_repeat";
@@ -134,4 +183,9 @@ export type BehavioralRenderResult = {
   usedFallback: boolean;
   repetition?: BehavioralRepetitionContext;
   stage?: BehavioralStage;
+  optionalPhrase?: string;
+  optionalPhraseSuppressed?: boolean;
+  optionalPhraseSuppressionReason?: OptionalPhraseSuppressionReason;
+  recentPhraseHistory?: readonly string[];
+  textWithoutOptionalPhrase?: string;
 };

@@ -17,6 +17,9 @@ export {
   behavioralStageForNextTurn,
   patientBehaviorProfileForCase,
   renderStagedPatientCandidate,
+  renderStagedPatientCandidateResult,
+  selectOptionalPersonalityPhrase,
+  isBehavioralPhraseEligible,
   selectBehavioralStage,
 } from "./stages";
 export {
@@ -36,4 +39,9 @@ export type {
   BehavioralStage,
   GovernedPatientId,
   PatientBehaviorProfile,
+  BehavioralPhrase,
+  BehavioralPhraseCategory,
+  BehavioralPhraseRisk,
+  OptionalPhraseSelection,
+  OptionalPhraseSuppressionReason,
 } from "./types";

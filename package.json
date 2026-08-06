@@ -36,6 +36,8 @@
     "validate:amara-behavior-phase2": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBehavioralRendering.ts",
     "validate:amara-behavior-phase3": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBehavioralRepetition.ts",
     "validate:patient-behavior-stages": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientBehavioralStages.ts",
+    "validate:patient-behavior-diversity": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientBehavioralPhraseDiversity.ts",
+    "validate:behavioral-phrase-governance": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateBehavioralPhraseGovernance.ts",
     "validate:patient-language": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientLanguageGovernance.ts",
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
