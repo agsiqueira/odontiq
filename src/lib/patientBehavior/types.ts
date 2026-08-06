@@ -67,10 +67,21 @@ export type BehavioralRenderInput = {
   originalText: string;
   governedFacts: readonly GovernedFact[];
   contract: BehavioralContract;
+  /** Governed immediate replies and other exact-output paths bypass styling. */
+  exactTextRequired?: boolean;
 };
+
+export type AmaraToneMode =
+  | "brief"
+  | "exhausted"
+  | "mildly_impatient"
+  | "cooperative_terse";
 
 export type BehavioralRenderResult = {
   text: string;
+  candidateText: string;
+  toneMode?: AmaraToneMode;
+  bypassReason?: "non-amara" | "wrong-case" | "empty" | "exact-output";
   preservedFactIds: string[];
   valid: boolean;
   violations: BehavioralViolation[];

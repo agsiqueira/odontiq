@@ -26,14 +26,23 @@ function extractExactValues(text: string) {
   const values = text.match(
     /\b(?:\d+(?:\.\d+)?(?:\s*\/\s*10|\s*(?:mg|milligrams?|hours?|days?|weeks?|months?|years?|packs?))|(?:one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty[- ]four|forty[- ]eight)\s+(?:out of ten|milligrams?|hours?|days?|weeks?|months?|years?|packs?))\b/gi,
   );
-  return values?.map(normalize) ?? [];
+  return [...new Set((values ?? []).flatMap((value) => {
+    const normalized = normalize(value);
+    const painScore = normalized.match(/^(\d+)\s*\/\s*10$/);
+    return painScore
+      ? [normalized, `${numberWord(Number(painScore[1]))} out of ten`]
+      : [normalized];
+  }))];
 }
 
 function extractProtectedTerms(text: string) {
   const terms = text.match(
     /\b(?:lower[- ]left|lower[- ]right|upper[- ]left|upper[- ]right|metformin|lisinopril|penicillin|diabetes|hypertension|high blood pressure|drug allergies?|short of breath|chest pain|swallow(?:ing)?|drool(?:ing)?|muffled|ibuprofen|alcohol|illicit drugs?)\b/gi,
   );
-  return [...new Set((terms ?? []).map(normalize))];
+  const normalizedTerms = (terms ?? []).map(normalize);
+  if (/\b(?:left lower|left mandibular)\b/i.test(text)) normalizedTerms.push("lower-left");
+  if (/\b(?:right lower|right mandibular)\b/i.test(text)) normalizedTerms.push("lower-right");
+  return [...new Set(normalizedTerms)];
 }
 
 function inferPolarity(text: string): GovernedFact["polarity"] {
@@ -48,4 +57,9 @@ function expressesUncertainty(text: string) {
 
 function normalize(value: string) {
   return value.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function numberWord(value: number) {
+  return ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][value]
+    ?? String(value);
 }

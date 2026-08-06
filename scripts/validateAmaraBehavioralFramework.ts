@@ -83,7 +83,7 @@ const passThroughInput = {
   governedFacts: [duration],
   contract: AMARA_BEHAVIORAL_CONTRACT,
 };
-const passThrough = renderPatientBehavior(passThroughInput);
+const passThrough = renderPatientBehavior(passThroughInput, (input) => input.originalText);
 assert.equal(passThrough.text, passThroughInput.originalText);
 assert.equal(passThrough.valid, true);
 assert.equal(passThrough.usedFallback, false);

@@ -5,9 +5,10 @@ import type {
 
 const UNCERTAINTY_PATTERN = /\b(?:maybe|perhaps|i think|i guess|not sure|unsure|probably|might|could be)\b/i;
 const ALTERNATIVE_VALUE_PATTERN = /\b(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|twelve)\s+or\s+(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|twelve)\b/i;
-const NEGATION_PATTERN = /\b(?:no|not|never|cannot|can't|do not|don't|haven't|have not|without)\b/i;
+const NEGATION_PATTERN = /\b(?:no|not|never|cannot|can't|do not|don't|did not|didn't|haven't|have not|without)\b/i;
 const LOCATION_PATTERN = /\b(?:lower[- ]left|lower[- ]right|upper[- ]left|upper[- ]right)\b/gi;
 const MEDICATION_ALLERGY_PATTERN = /\b(?:metformin|lisinopril|penicillin|ibuprofen|advil|motrin|insulin|drug allergies?)\b/gi;
+const CLINICAL_TERM_PATTERN = /\b(?:toothache|pain|swelling|swollen|fever|chills|drooling|choking|short of breath|chest pain|swallow(?:ing)?|muffled|diabetes|hypertension|high blood pressure|metformin|lisinopril|penicillin|ibuprofen|opioids?|narcotics?|alcohol|illicit drugs?|allerg(?:y|ies|ic))\b/gi;
 
 export function validateFactPreservation({
   originalText,
@@ -37,6 +38,18 @@ export function validateFactPreservation({
   const candidateMedications = extractMatches(candidateText, MEDICATION_ALLERGY_PATTERN);
   if (!sameValues(originalMedications, candidateMedications)) {
     violations.push(violation("medication-or-allergy-changed", "Medication or allergy information changed."));
+  }
+
+  const originalClinicalTerms = extractMatches(originalText, CLINICAL_TERM_PATTERN);
+  const candidateClinicalTerms = extractMatches(candidateText, CLINICAL_TERM_PATTERN);
+  const addedClinicalTerms = candidateClinicalTerms.filter(
+    (term) => !originalClinicalTerms.includes(term),
+  );
+  if (addedClinicalTerms.length > 0) {
+    violations.push(violation(
+      "unsupported-addition",
+      `Candidate added unsupported clinical terms: ${addedClinicalTerms.join(", ")}.`,
+    ));
   }
 
   for (const fact of governedFacts) {

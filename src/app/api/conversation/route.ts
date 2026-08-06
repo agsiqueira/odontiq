@@ -197,6 +197,9 @@ export async function POST(request: Request): Promise<Response> {
             new Set(turnRequiredFacts.map((fact) => fact.id)),
           ),
           contract: AMARA_BEHAVIORAL_CONTRACT,
+          // Immediate acknowledgements and unsupported-boundary replies are
+          // governed exact-output paths and must not be restyled.
+          exactTextRequired: Boolean(immediateResponse),
         })
       : undefined;
     const finalResponseText = behavioralResponse?.text ?? safeResponse.text;
