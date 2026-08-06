@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Play, Square } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
+import { AMARA_BREATH_EFFECT_PATHS } from "@/lib/patientAudioPlan";
 import {
   getKokoroVoicesByGender,
   type KokoroVoiceCatalogEntry,
@@ -25,6 +27,7 @@ type VoiceAuditionResponse =
     };
 
 export function VoiceAuditionClient() {
+  const amaraPlayback = useSpeechSynthesisPlayback({ caseId: "case-01" });
   const [sampleText, setSampleText] = useState(DEFAULT_SAMPLE_TEXT);
   const [speed, setSpeed] = useState(0.9);
   const [loadingVoiceId, setLoadingVoiceId] = useState<string | null>(null);
@@ -68,7 +71,8 @@ export function VoiceAuditionClient() {
     abortControllerRef.current = null;
     setLoadingVoiceId(null);
     cleanupAudio();
-  }, [cleanupAudio]);
+    amaraPlayback.stop();
+  }, [amaraPlayback, cleanupAudio]);
 
   const playVoice = useCallback(
     async (voiceId: string) => {
@@ -262,6 +266,44 @@ export function VoiceAuditionClient() {
               {errorMessage}
             </p>
           ) : null}
+        </section>
+
+        <section className="grid gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+          <div>
+            <h2 className="text-lg font-semibold">Amara breathing audition</h2>
+            <p className="text-sm text-[var(--color-muted-foreground)]">
+              Local integration placeholders and deterministic encounter sequences.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(AMARA_BREATH_EFFECT_PATHS).map(([effectId, src]) => (
+              <Button
+                key={effectId}
+                type="button"
+                variant="outline"
+                onClick={() => void amaraPlayback.auditionEffect(src)}
+              >
+                <Play className="size-4" />
+                {effectId}
+              </Button>
+            ))}
+            <Button
+              type="button"
+              onClick={() => void amaraPlayback.speak("Yes, it hurts.")}
+            >
+              <Play className="size-4" />
+              Short Amara sequence
+            </Button>
+            <Button
+              type="button"
+              onClick={() => void amaraPlayback.speak(
+                "The swelling started beneath my jaw yesterday. It has spread quickly and swallowing has become much harder for me today.",
+              )}
+            >
+              <Play className="size-4" />
+              Long Amara sequence
+            </Button>
+          </div>
         </section>
 
         <div className="grid gap-6 lg:grid-cols-2">

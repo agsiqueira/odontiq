@@ -4,6 +4,7 @@ import {
   PatientAudioPlaybackController,
   type PatientAudioElement,
 } from "../src/lib/patientAudioPlaybackController";
+import { playPatientAudioSequence } from "../src/lib/patientAudioSequence";
 
 async function testPrimeAndPersistentReuse() {
   const harness = createHarness();
@@ -91,6 +92,69 @@ async function testReplacementHasNoDuplicateElementOrUrl() {
   assert.equal(harness.urlsRevoked.length, 2, "cleanup releases the final URL");
 }
 
+async function testSerialCompletionUsesOneElement() {
+  const harness = createHarness();
+  const played: string[] = [];
+  for (const label of ["effect", "speech-one", "effect-two", "speech-two"]) {
+    const completion = harness.controller.playToCompletion(new Blob([label]));
+    await flush();
+    played.push(label);
+    harness.audio.emit("ended");
+    assert.equal(await completion, "ended");
+  }
+  assert.deepEqual(played, ["effect", "speech-one", "effect-two", "speech-two"]);
+  assert.equal(harness.createdAudioCount, 1, "the complete sequence reuses one audio element");
+}
+
+async function testSequenceRetryAndCancellation() {
+  const blockedError = new DOMException("blocked", "NotAllowedError");
+  const blocked = createHarness([() => Promise.reject(blockedError), resolvePlay]);
+  const completion = blocked.controller.playToCompletion(new Blob(["effect"]));
+  await flush();
+  assert.equal(blocked.retryRequired, 1);
+  assert.equal(blocked.urlsCreated.length, 1, "blocked segment is generated only once");
+  assert.equal(await blocked.controller.retryFromGesture(), "playing");
+  blocked.audio.emit("ended");
+  assert.equal(await completion, "ended");
+  assert.equal(blocked.urlsCreated.length, 1, "retry does not duplicate the completed segment");
+
+  const cancelled = createHarness();
+  const cancelledCompletion = cancelled.controller.playToCompletion(new Blob(["sequence"]));
+  await flush();
+  cancelled.controller.cancel("replacement");
+  assert.equal(await cancelledCompletion, "cancelled");
+}
+
+async function testPlanExecutionOrderAndEffectFailure() {
+  const calls: string[] = [];
+  const segments = [
+    { type: "effect" as const, effectId: "broken", src: "/broken.mp3" },
+    { type: "speech" as const, text: "First.", audioBase64: "MQ==", mimeType: "audio/mpeg" },
+    { type: "effect" as const, effectId: "working", src: "/working.mp3" },
+    { type: "speech" as const, text: " Second.", audioBase64: "Mg==", mimeType: "audio/mpeg" },
+  ];
+  const result = await playPatientAudioSequence(segments, {
+    isCancelled: () => false,
+    loadEffect: async (segment) => {
+      calls.push(`effect:${segment.effectId}`);
+      if (segment.effectId === "broken") throw new Error("missing asset");
+      return new Blob([segment.effectId]);
+    },
+    loadSpeech: (segment) => {
+      calls.push(`speech:${segment.text}`);
+      return new Blob([segment.text]);
+    },
+    play: async () => { calls.push("play"); return "ended"; },
+  });
+  assert.equal(result, "ended");
+  assert.deepEqual(calls, [
+    "effect:broken",
+    "speech:First.", "play",
+    "effect:working", "play",
+    "speech: Second.", "play",
+  ], "effect failure continues to speech while successful segments stay ordered");
+}
+
 async function testAuthoritativeListeningStateWiring() {
   const recognition = await readFile("src/hooks/useSpeechRecognition.ts", "utf8");
   const encounter = await readFile("src/components/EncounterExperience.tsx", "utf8");
@@ -173,6 +237,9 @@ await testBlockedRetryWithoutRegeneration();
 await testAnimationFollowsPlaybackEvents();
 await testStopPathsAndCleanup();
 await testReplacementHasNoDuplicateElementOrUrl();
+await testSerialCompletionUsesOneElement();
+await testSequenceRetryAndCancellation();
+await testPlanExecutionOrderAndEffectFailure();
 await testAuthoritativeListeningStateWiring();
 
 console.log("Patient audio playback validation passed: 10 focused scenarios.");

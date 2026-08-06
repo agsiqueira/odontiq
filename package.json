@@ -30,6 +30,7 @@
     "validate:patient-tone": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientToneInstruction.ts",
     "validate:audio-diagnostics": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAudioDiagnostics.ts",
     "validate:patient-audio-playback": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientAudioPlayback.ts",
+    "validate:amara-breathing": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAmaraBreathingProfile.ts",
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
     "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",
