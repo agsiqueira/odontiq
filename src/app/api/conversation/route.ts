@@ -22,6 +22,12 @@ import { patientQuestionService } from "@/lib/persistence/services/patientQuesti
 import { classifyPatientQuestionTrigger } from "@/lib/patientQuestions/classifier";
 import { getPatientQuestion } from "@/lib/patientQuestions/catalog";
 import { shouldClassifyPatientQuestions } from "@/lib/patientQuestions/stateMachine";
+import {
+  AMARA_BEHAVIORAL_CONTRACT,
+  AMARA_PATIENT_ID,
+  attachGovernedFacts,
+  renderPatientBehavior,
+} from "@/lib/patientBehavior";
 
 const PATIENT_ROLE_SYSTEM_PROMPT = `You are the patient in an odontIQ dental encounter simulation.
 
@@ -143,6 +149,11 @@ export async function POST(request: Request): Promise<Response> {
     const providerResponse = immediateResponse
       ? { text: immediateResponse }
       : await selectedProvider.generateConversationResponse(providerInput);
+    const turnRequiredFacts = requiredFactsForTurn(
+      disclosureState,
+      payload.message,
+      patientCase.supportingInfo.patientFacts ?? [],
+    );
     const safeResponse = await generatePatientRoleSafeResponse({
       initialOutput: providerResponse.text,
       visibleFacts: [
@@ -154,7 +165,7 @@ export async function POST(request: Request): Promise<Response> {
         .filter((message) => message.role === "patient")
         .map((message) => patientDialogueOnly(message.text)),
       fallbackText: patientFactFallback(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
-      requiredFacts: requiredFactsForTurn(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
+      requiredFacts: turnRequiredFacts,
       allowPatientInitiatedQuestion: false,
       retry: async () => {
         console.warn("Patient-output validation rejected unsafe dialogue.", {
@@ -176,6 +187,19 @@ export async function POST(request: Request): Promise<Response> {
         return retryResponse.text;
       },
     });
+    const behavioralResponse = payload.caseId === "case-01"
+      ? renderPatientBehavior({
+          patientId: AMARA_PATIENT_ID,
+          caseId: payload.caseId,
+          originalText: safeResponse.text,
+          governedFacts: attachGovernedFacts(
+            turnRequiredFacts,
+            new Set(turnRequiredFacts.map((fact) => fact.id)),
+          ),
+          contract: AMARA_BEHAVIORAL_CONTRACT,
+        })
+      : undefined;
+    const finalResponseText = behavioralResponse?.text ?? safeResponse.text;
     const patientMessageId = crypto.randomUUID();
     const classificationResult = shouldClassifyPatientQuestions(
       payload.caseId,
@@ -187,7 +211,7 @@ export async function POST(request: Request): Promise<Response> {
           studentMessageId: payload.studentMessageId,
           studentMessage: payload.message,
           draftPatientMessageId: patientMessageId,
-          draftPatientResponse: safeResponse.text,
+          draftPatientResponse: finalResponseText,
           conversation: sanitizedConversation,
           state: questionContext.state,
         })
@@ -210,7 +234,7 @@ export async function POST(request: Request): Promise<Response> {
       requestId: payload.requestId,
       studentMessageId: payload.studentMessageId,
       patientMessageId,
-      baseResponse: safeResponse.text,
+      baseResponse: finalResponseText,
       providerName: provider.name,
       classification:
         classificationResult?.success
