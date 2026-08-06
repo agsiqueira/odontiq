@@ -5,6 +5,10 @@ import {
   getDefaultNavigatorVoice,
   NavigatorSpeechError,
 } from "@/lib/ai/navigatorSpeech";
+import {
+  AMARA_BREATH_EFFECT_PATHS,
+  buildPatientAudioPlan,
+} from "@/lib/patientAudioPlan";
 
 export const runtime = "nodejs";
 
@@ -33,9 +37,9 @@ export async function POST(request: Request) {
   }
 
   const caseId = typeof body.caseId === "string" ? body.caseId.trim() : "";
-  const text = typeof body.text === "string" ? body.text.trim() : "";
+  const text = typeof body.text === "string" ? body.text : "";
 
-  if (!caseId || !text) {
+  if (!caseId || !text.trim()) {
     return Response.json(
       { success: false, error: "caseId_and_text_required" },
       { status: 400 },
@@ -52,18 +56,30 @@ export async function POST(request: Request) {
   }
 
   const voicePreference = resolveVoicePreference(patientCase);
+  const audioPlan = buildPatientAudioPlan(caseId, text);
 
   try {
-    const audio = await createNavigatorSpeechAudio({
-      text: text.slice(0, MAX_TTS_TEXT_LENGTH),
-      voiceId: voicePreference.voiceId,
-      speed: voicePreference.speed,
-    });
+    const renderedAudioPlan = await Promise.all(
+      audioPlan.map(async (segment) => {
+        if (segment.type === "effect") {
+          return {
+            ...segment,
+            src: AMARA_BREATH_EFFECT_PATHS[segment.effectId],
+          };
+        }
+
+        const audio = await createNavigatorSpeechAudio({
+          text: segment.text.slice(0, MAX_TTS_TEXT_LENGTH),
+          voiceId: voicePreference.voiceId,
+          speed: voicePreference.speed,
+        });
+        return { ...segment, ...audio };
+      }),
+    );
 
     return Response.json({
       success: true,
-      audioBase64: audio.audioBase64,
-      mimeType: audio.mimeType,
+      audioPlan: renderedAudioPlan,
     });
   } catch (error) {
     if (error instanceof NavigatorSpeechError) {

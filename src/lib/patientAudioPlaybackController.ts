@@ -1,4 +1,5 @@
 export type PatientAudioPlaybackResult = "playing" | "blocked" | "cancelled" | "failed";
+export type PatientAudioCompletionResult = "ended" | "cancelled" | "failed";
 
 type PatientAudioEventName = "playing" | "ended" | "pause" | "error";
 
@@ -36,6 +37,7 @@ export class PatientAudioPlaybackController {
   private disposed = false;
   private priming = false;
   private operationId = 0;
+  private completionResolver: ((result: PatientAudioCompletionResult) => void) | null = null;
 
   public constructor(private readonly options: PatientAudioPlaybackControllerOptions) {}
 
@@ -68,9 +70,12 @@ export class PatientAudioPlaybackController {
     });
   }
 
-  public async playGeneratedAudio(blob: Blob): Promise<PatientAudioPlaybackResult> {
+  public async playGeneratedAudio(
+    blob: Blob,
+    preserveCompletion = false,
+  ): Promise<PatientAudioPlaybackResult> {
     if (this.disposed) return "cancelled";
-    this.replaceCurrentPlayback("replacement");
+    this.replaceCurrentPlayback("replacement", preserveCompletion);
     const audio = this.ensureAudio();
     const operationId = ++this.operationId;
     const objectUrl = this.options.createObjectUrl(blob);
@@ -81,6 +86,17 @@ export class PatientAudioPlaybackController {
     audio.src = objectUrl;
     audio.load();
     return this.attemptPlay(operationId, "generated");
+  }
+
+  public playToCompletion(blob: Blob): Promise<PatientAudioCompletionResult> {
+    return new Promise((resolve) => {
+      this.settleCompletion("cancelled");
+      this.completionResolver = resolve;
+      void this.playGeneratedAudio(blob, true).then((result) => {
+        if (result === "failed") this.settleCompletion("failed");
+        if (result === "cancelled") this.settleCompletion("cancelled");
+      });
+    });
   }
 
   public async retryFromGesture(): Promise<PatientAudioPlaybackResult> {
@@ -101,6 +117,7 @@ export class PatientAudioPlaybackController {
     this.retryPending = false;
     this.options.onRetryCleared();
     this.options.onDiagnostic?.("audio.cancelled", { reason });
+    this.settleCompletion("cancelled");
   }
 
   public dismissRetry(): void {
@@ -144,6 +161,7 @@ export class PatientAudioPlaybackController {
     this.options.onPlaybackStopped("ended");
     this.options.onDiagnostic?.("audio.ended");
     this.releaseCurrentUrl();
+    this.settleCompletion("ended");
   };
 
   private readonly handlePause = () => {
@@ -159,6 +177,7 @@ export class PatientAudioPlaybackController {
       mediaErrorCode: this.audio?.error?.code ?? null,
     });
     this.releaseCurrentUrl();
+    this.settleCompletion("failed");
   };
 
   private ensureAudio(): PatientAudioElement {
@@ -196,11 +215,12 @@ export class PatientAudioPlaybackController {
         return "blocked";
       }
       this.releaseCurrentUrl();
+      this.settleCompletion("failed");
       return "failed";
     }
   }
 
-  private replaceCurrentPlayback(reason: string): void {
+  private replaceCurrentPlayback(reason: string, preserveCompletion = false): void {
     if (!this.audio && !this.objectUrl) return;
     ++this.operationId;
     this.audio?.pause();
@@ -208,6 +228,13 @@ export class PatientAudioPlaybackController {
     this.releaseCurrentUrl();
     this.retryPending = false;
     this.options.onRetryCleared();
+    if (!preserveCompletion) this.settleCompletion("cancelled");
+  }
+
+  private settleCompletion(result: PatientAudioCompletionResult): void {
+    const resolve = this.completionResolver;
+    this.completionResolver = null;
+    resolve?.(result);
   }
 
   private releaseCurrentUrl(): void {

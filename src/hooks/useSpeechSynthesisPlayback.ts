@@ -3,6 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
 import { PatientAudioPlaybackController } from "@/lib/patientAudioPlaybackController";
+import {
+  playPatientAudioSequence,
+  type RenderedPatientAudioSegment,
+} from "@/lib/patientAudioSequence";
 
 type SpeechSynthesisStatus =
   | "unsupported"
@@ -18,8 +22,7 @@ type UseSpeechSynthesisPlaybackOptions = {
 type VoiceSpeakResponse =
   | {
       success: true;
-      audioBase64: string;
-      mimeType: string;
+      audioPlan: RenderedPatientAudioSegment[];
     }
   | {
       success: false;
@@ -186,18 +189,37 @@ export function useSpeechSynthesisPlayback({
     [cancelBrowserSpeech, caseId],
   );
 
-  const playNavigatorAudio = useCallback(
+  const playAudioBlob = useCallback(
     async (
-      audioBase64: string,
-      mimeType: string,
-    ): Promise<void> => {
-      const audioBlob = new Blob([base64ToUint8Array(audioBase64)], {
-        type: mimeType || "audio/mpeg",
-      });
-      const result = await getAudioController().playGeneratedAudio(audioBlob);
-      if (result === "failed") throw new Error("Navigator audio playback failed.");
+      audioBlob: Blob,
+    ) => {
+      return getAudioController().playToCompletion(audioBlob);
     },
     [getAudioController],
+  );
+
+  const playAudioPlan = useCallback(
+    async (audioPlan: Extract<VoiceSpeakResponse, { success: true }>["audioPlan"], playbackId: number) => {
+      await playPatientAudioSequence(audioPlan, {
+        isCancelled: () => playbackIdRef.current !== playbackId,
+        loadEffect: (segment) => fetchEffectBlob(segment.src),
+        loadSpeech: (segment) => new Blob(
+          [base64ToUint8Array(segment.audioBase64)],
+          { type: segment.mimeType || "audio/mpeg" },
+        ),
+        play: playAudioBlob,
+        onFailure: (segment, error, continued) => {
+          emitAudioDiagnostic("audio.sequence_segment_failed", {
+            playbackId,
+            segmentType: segment.type,
+            segmentId: segment.type === "effect" ? segment.effectId : undefined,
+            errorName: error instanceof Error ? error.name : typeof error,
+            continued,
+          });
+        },
+      });
+    },
+    [playAudioBlob],
   );
 
   const speak = useCallback(
@@ -257,14 +279,14 @@ export function useSpeechSynthesisPlayback({
         if (
           !response.ok ||
           !data.success ||
-          !data.audioBase64 ||
-          !data.mimeType
+          !Array.isArray(data.audioPlan) ||
+          data.audioPlan.length === 0
         ) {
           throw new Error("Navigator TTS unavailable.");
         }
 
         abortControllerRef.current = null;
-        await playNavigatorAudio(data.audioBase64, data.mimeType);
+        await playAudioPlan(data.audioPlan, playbackId);
       } catch (error) {
         emitAudioDiagnostic("tts.request_failed_or_fallback", {
           playbackId,
@@ -282,7 +304,24 @@ export function useSpeechSynthesisPlayback({
         playBrowserFallback(nextText, playbackId);
       }
     },
-    [caseId, playBrowserFallback, playNavigatorAudio, stop],
+    [caseId, playAudioPlan, playBrowserFallback, stop],
+  );
+
+  const auditionEffect = useCallback(
+    async (src: string) => {
+      stop();
+      const playbackId = playbackIdRef.current + 1;
+      playbackIdRef.current = playbackId;
+      setStatus("preparing");
+      try {
+        const blob = await fetchEffectBlob(src);
+        if (playbackIdRef.current !== playbackId) return;
+        await playAudioBlob(blob);
+      } catch {
+        if (playbackIdRef.current === playbackId) setStatus("error");
+      }
+    },
+    [playAudioBlob, stop],
   );
 
   const replay = useCallback(() => {
@@ -323,10 +362,21 @@ export function useSpeechSynthesisPlayback({
     replay,
     retryPlayback,
     dismissPlaybackRetry,
+    auditionEffect,
     speak,
     status,
     stop,
   };
+}
+
+async function fetchEffectBlob(src: string) {
+  const response = await fetch(src);
+  if (!response.ok) throw new Error(`Breathing effect failed with status ${response.status}.`);
+  const blob = await response.blob();
+  if (!blob.size || !blob.type.startsWith("audio/")) {
+    throw new Error("Breathing effect was not valid audio.");
+  }
+  return blob;
 }
 
 function base64ToUint8Array(base64: string) {

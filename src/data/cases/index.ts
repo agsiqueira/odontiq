@@ -89,6 +89,14 @@ export type CaseData = {
     tone?: string;
     speakingStyle?: string;
     demeanor?: string[];
+    audioProfile?: {
+      effects: Array<
+        | "amara-breath-moderate-01"
+        | "amara-breath-moderate-02"
+        | "amara-breath-heavy-01"
+      >;
+      direction: string;
+    };
   };
   assets: {
     rest: string;
