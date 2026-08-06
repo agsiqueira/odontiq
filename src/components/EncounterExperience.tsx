@@ -59,6 +59,7 @@ import { useMentorSpeechPlayback } from "@/hooks/useMentorSpeechPlayback";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
 import { currentAudioContextState, emitAudioDiagnostic } from "@/lib/audioDiagnostics";
+import { AMARA_BREATHING_VIDEO_PATH } from "@/lib/patientAudioPlan";
 
 type EncounterExperienceProps = {
   patientCase: OdontIQCase;
@@ -364,7 +365,9 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   });
   const mentorSpeechPlayback = useMentorSpeechPlayback();
   const isGeneratingPatientResponse = state.isSpeaking;
-  const isPatientAudioPlaying = speechPlayback.isSpeaking;
+  const isPatientSpeechSegmentActive = speechPlayback.isSpeechSegmentActive;
+  const isAmaraBreathingEffectActive =
+    patientCase.id === "case-01" && speechPlayback.isBreathingEffectActive;
   const selectedExamination = patientCase.assets.examinations.find(
     (examination) => examination.id === state.selectedExaminationId,
   );
@@ -397,7 +400,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       return;
     }
 
-    if (isPatientAudioPlaying) {
+    if (isPatientSpeechSegmentActive) {
       emitAudioDiagnostic("speaking_animation.video_start_requested", {
         isSpeaking: true,
         audioContextState: currentAudioContextState(),
@@ -426,7 +429,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         // Keep the current frame if seeking is not available yet.
       }
     }
-  }, [isPatientAudioPlaying]);
+  }, [isPatientSpeechSegmentActive]);
 
   const createConversationMessage = (
     role: ConversationRole,
@@ -1044,7 +1047,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         type: "appendMessage",
         message: patientConversationMessage,
       });
-      speechPlayback.speak(patientConversationMessage.text);
+      const patientTurnIndex = state.messages.filter(
+        (message) => message.role === "patient",
+      ).length;
+      speechPlayback.speak(patientConversationMessage.text, patientTurnIndex);
       dispatch({
         type: "recordEvent",
         event: createEncounterEvent("patient_response_generated", {
@@ -1464,7 +1470,13 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
                 idleSrc={patientCase.assets.rest}
                 talkingSrc={patientCase.assets.talking}
                 alt={`${patientCase.patientName} speaking`}
-                isTalking={isPatientAudioPlaying}
+                isTalking={isPatientSpeechSegmentActive}
+                breathingSrc={
+                  patientCase.id === "case-01"
+                    ? AMARA_BREATHING_VIDEO_PATH
+                    : undefined
+                }
+                isBreathing={isAmaraBreathingEffectActive}
                 ref={talkingVideoRef}
                 className="encounter-patient-viewport z-10 h-full w-full max-w-[28rem] md:w-auto md:max-w-[32rem]"
               />

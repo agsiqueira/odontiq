@@ -13,7 +13,7 @@ type PatientAudioSequenceOptions = {
   isCancelled: () => boolean;
   loadEffect: (segment: Extract<RenderedPatientAudioSegment, { type: "effect" }>) => Promise<Blob>;
   loadSpeech: (segment: Extract<RenderedPatientAudioSegment, { type: "speech" }>) => Blob;
-  play: (blob: Blob) => Promise<PatientAudioCompletionResult>;
+  play: (blob: Blob, segment: RenderedPatientAudioSegment) => Promise<PatientAudioCompletionResult>;
   onFailure?: (segment: RenderedPatientAudioSegment, error: unknown, continued: boolean) => void;
 };
 
@@ -29,7 +29,7 @@ export async function playPatientAudioSequence(
         ? await options.loadEffect(segment)
         : options.loadSpeech(segment);
       if (options.isCancelled()) return "cancelled" as const;
-      const result = await options.play(blob);
+      const result = await options.play(blob, segment);
       if (result === "cancelled") return "cancelled" as const;
       if (result === "failed" && segment.type === "speech") {
         throw new Error("Patient speech playback failed.");

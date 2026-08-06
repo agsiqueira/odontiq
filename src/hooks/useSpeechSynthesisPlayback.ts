@@ -41,6 +41,9 @@ export function useSpeechSynthesisPlayback({
   const [status, setStatus] =
     useState<SpeechSynthesisStatus>("unsupported");
   const [needsPlaybackTap, setNeedsPlaybackTap] = useState(false);
+  const [activeSegmentType, setActiveSegmentType] =
+    useState<RenderedPatientAudioSegment["type"] | null>(null);
+  const pendingSegmentTypeRef = useRef<RenderedPatientAudioSegment["type"] | null>(null);
 
   const isSupported = status !== "unsupported";
   const isPreparingSpeech = status === "preparing";
@@ -68,6 +71,7 @@ export function useSpeechSynthesisPlayback({
         revokeObjectUrl: (url) => URL.revokeObjectURL(url),
         onPlaybackStarted: () => {
           setStatus("speaking");
+          setActiveSegmentType(pendingSegmentTypeRef.current);
           emitAudioDiagnostic("speaking_animation.started", {
             playback: "audio-element",
             isSpeaking: true,
@@ -75,6 +79,7 @@ export function useSpeechSynthesisPlayback({
         },
         onPlaybackStopped: (reason) => {
           setStatus("idle");
+          setActiveSegmentType(null);
           emitAudioDiagnostic("speaking_animation.stopped", {
             playback: "audio-element",
             isSpeaking: false,
@@ -110,6 +115,8 @@ export function useSpeechSynthesisPlayback({
     abortControllerRef.current?.abort();
     abortControllerRef.current = null;
     audioControllerRef.current?.cancel("stop");
+    pendingSegmentTypeRef.current = null;
+    setActiveSegmentType(null);
     cancelBrowserSpeech();
     setStatus("idle");
   }, [cancelBrowserSpeech]);
@@ -146,6 +153,7 @@ export function useSpeechSynthesisPlayback({
         }
 
         setStatus("speaking");
+        setActiveSegmentType("speech");
         emitAudioDiagnostic("speaking_animation.started", {
           playback: "browser-speech",
           isSpeaking: true,
@@ -159,6 +167,7 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("idle");
+        setActiveSegmentType(null);
         emitAudioDiagnostic("speaking_animation.stopped", {
           playback: "browser-speech",
           isSpeaking: false,
@@ -173,6 +182,7 @@ export function useSpeechSynthesisPlayback({
 
         utteranceRef.current = null;
         setStatus("error");
+        setActiveSegmentType(null);
         emitAudioDiagnostic("audio.error", {
           playback: "browser-speech",
           isSpeaking: false,
@@ -190,10 +200,14 @@ export function useSpeechSynthesisPlayback({
   );
 
   const playAudioBlob = useCallback(
-    async (
-      audioBlob: Blob,
-    ) => {
-      return getAudioController().playToCompletion(audioBlob);
+    async (audioBlob: Blob, segment: RenderedPatientAudioSegment) => {
+      pendingSegmentTypeRef.current = segment.type;
+      try {
+        return await getAudioController().playToCompletion(audioBlob);
+      } finally {
+        pendingSegmentTypeRef.current = null;
+        setActiveSegmentType(null);
+      }
     },
     [getAudioController],
   );
@@ -223,7 +237,7 @@ export function useSpeechSynthesisPlayback({
   );
 
   const speak = useCallback(
-    async (text: string) => {
+    async (text: string, patientTurnIndex = 0) => {
       const nextText = text.trim();
 
       if (!nextText) {
@@ -256,6 +270,7 @@ export function useSpeechSynthesisPlayback({
           body: JSON.stringify({
             caseId,
             text: nextText,
+            patientTurnIndex,
           }),
           signal: controller.signal,
         });
@@ -307,23 +322,6 @@ export function useSpeechSynthesisPlayback({
     [caseId, playAudioPlan, playBrowserFallback, stop],
   );
 
-  const auditionEffect = useCallback(
-    async (src: string) => {
-      stop();
-      const playbackId = playbackIdRef.current + 1;
-      playbackIdRef.current = playbackId;
-      setStatus("preparing");
-      try {
-        const blob = await fetchEffectBlob(src);
-        if (playbackIdRef.current !== playbackId) return;
-        await playAudioBlob(blob);
-      } catch {
-        if (playbackIdRef.current === playbackId) setStatus("error");
-      }
-    },
-    [playAudioBlob, stop],
-  );
-
   const replay = useCallback(() => {
     void speak(lastTextRef.current);
   }, [speak]);
@@ -349,12 +347,15 @@ export function useSpeechSynthesisPlayback({
       abortControllerRef.current?.abort();
       audioControllerRef.current?.dispose();
       audioControllerRef.current = null;
+      pendingSegmentTypeRef.current = null;
       cancelBrowserSpeech();
     };
   }, [cancelBrowserSpeech]);
 
   return {
     isSpeaking,
+    isBreathingEffectActive: activeSegmentType === "effect",
+    isSpeechSegmentActive: activeSegmentType === "speech",
     isPreparingSpeech,
     isSupported,
     needsPlaybackTap,
@@ -362,7 +363,6 @@ export function useSpeechSynthesisPlayback({
     replay,
     retryPlayback,
     dismissPlaybackRetry,
-    auditionEffect,
     speak,
     status,
     stop,

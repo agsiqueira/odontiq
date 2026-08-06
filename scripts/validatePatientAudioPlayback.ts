@@ -155,6 +155,30 @@ async function testPlanExecutionOrderAndEffectFailure() {
   ], "effect failure continues to speech while successful segments stay ordered");
 }
 
+async function testTrailingEffectAndMultiSegmentSafariRetry() {
+  const blockedError = new DOMException("blocked", "NotAllowedError");
+  const harness = createHarness([resolvePlay, () => Promise.reject(blockedError), resolvePlay]);
+  const segments = [
+    { type: "speech" as const, text: "Speech.", audioBase64: "MQ==", mimeType: "audio/mpeg" },
+    { type: "effect" as const, effectId: "trailing", src: "/trailing.mp3" },
+  ];
+  const sequence = playPatientAudioSequence(segments, {
+    isCancelled: () => false,
+    loadEffect: async () => new Blob(["effect"]),
+    loadSpeech: () => new Blob(["speech"]),
+    play: (blob) => harness.controller.playToCompletion(blob),
+  });
+  await flush();
+  harness.audio.emit("ended");
+  await flush();
+  assert.equal(harness.retryRequired, 1, "the trailing effect waits for a Safari retry");
+  assert.equal(harness.urlsCreated.length, 2, "completed speech is not regenerated");
+  assert.equal(await harness.controller.retryFromGesture(), "playing");
+  harness.audio.emit("ended");
+  assert.equal(await sequence, "ended", "a trailing breathing effect completes the sequence");
+  assert.equal(harness.urlsCreated.length, 2, "retry does not replay completed speech or recreate the effect");
+}
+
 async function testAuthoritativeListeningStateWiring() {
   const recognition = await readFile("src/hooks/useSpeechRecognition.ts", "utf8");
   const encounter = await readFile("src/components/EncounterExperience.tsx", "utf8");
@@ -240,6 +264,7 @@ await testReplacementHasNoDuplicateElementOrUrl();
 await testSerialCompletionUsesOneElement();
 await testSequenceRetryAndCancellation();
 await testPlanExecutionOrderAndEffectFailure();
+await testTrailingEffectAndMultiSegmentSafariRetry();
 await testAuthoritativeListeningStateWiring();
 
-console.log("Patient audio playback validation passed: 10 focused scenarios.");
+console.log("Patient audio playback validation passed: 11 focused scenarios.");

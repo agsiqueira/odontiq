@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Play, Square } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { InteractionCharacterStage } from "@/components/InteractionCharacterStage";
 import { useSpeechSynthesisPlayback } from "@/hooks/useSpeechSynthesisPlayback";
-import { AMARA_BREATH_EFFECT_PATHS } from "@/lib/patientAudioPlan";
+import { AMARA_BREATHING_VIDEO_PATH } from "@/lib/patientAudioPlan";
 import {
   getKokoroVoicesByGender,
   type KokoroVoiceCatalogEntry,
@@ -13,6 +14,17 @@ import {
 
 const DEFAULT_SAMPLE_TEXT =
   "Hello, doctor. I've had pain on this side of my mouth for about three days. It hurts when I chew.";
+const AMARA_SEQUENCE_TEXT =
+  "The swelling started beneath my jaw yesterday. It has spread quickly and swallowing has become much harder for me today.";
+const AMARA_PLACEMENT_AUDITIONS = [
+  { label: "Speech only", patientTurnIndex: 4 },
+  { label: "Moderate breath before speech", patientTurnIndex: 0 },
+  { label: "Moderate breath after speech", patientTurnIndex: 2 },
+  { label: "Moderate breath between speech", patientTurnIndex: 1 },
+  { label: "Heavy breath before speech", patientTurnIndex: 11 },
+  { label: "Heavy breath after speech", patientTurnIndex: 17 },
+  { label: "Rare two-breath sequence", patientTurnIndex: 6 },
+] as const;
 
 type VoiceAuditionResponse =
   | {
@@ -246,7 +258,12 @@ export function VoiceAuditionClient() {
               type="button"
               variant="outline"
               onClick={stop}
-              disabled={!loadingVoiceId && !playingVoiceId}
+              disabled={
+                !loadingVoiceId &&
+                !playingVoiceId &&
+                !amaraPlayback.isSpeaking &&
+                !amaraPlayback.isPreparingSpeech
+              }
             >
               <Square className="size-4" />
               Stop
@@ -275,34 +292,31 @@ export function VoiceAuditionClient() {
               Local integration placeholders and deterministic encounter sequences.
             </p>
           </div>
+          <InteractionCharacterStage
+            mode="media"
+            idleSrc="/patients/case-01/case-01-amara-johnson-v4.png"
+            talkingSrc="/patients/case-01/talking-v4.mp4"
+            breathingSrc={AMARA_BREATHING_VIDEO_PATH}
+            alt="Amara breathing audition"
+            isTalking={false}
+            isBreathing={amaraPlayback.isBreathingEffectActive}
+            className="w-full max-w-md"
+          />
           <div className="flex flex-wrap gap-2">
-            {Object.entries(AMARA_BREATH_EFFECT_PATHS).map(([effectId, src]) => (
+            {AMARA_PLACEMENT_AUDITIONS.map((audition) => (
               <Button
-                key={effectId}
+                key={audition.label}
                 type="button"
                 variant="outline"
-                onClick={() => void amaraPlayback.auditionEffect(src)}
+                onClick={() => void amaraPlayback.speak(
+                  AMARA_SEQUENCE_TEXT,
+                  audition.patientTurnIndex,
+                )}
               >
                 <Play className="size-4" />
-                {effectId}
+                {audition.label}
               </Button>
             ))}
-            <Button
-              type="button"
-              onClick={() => void amaraPlayback.speak("Yes, it hurts.")}
-            >
-              <Play className="size-4" />
-              Short Amara sequence
-            </Button>
-            <Button
-              type="button"
-              onClick={() => void amaraPlayback.speak(
-                "The swelling started beneath my jaw yesterday. It has spread quickly and swallowing has become much harder for me today.",
-              )}
-            >
-              <Play className="size-4" />
-              Long Amara sequence
-            </Button>
           </div>
         </section>
 

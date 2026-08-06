@@ -15,6 +15,7 @@ export const runtime = "nodejs";
 type VoiceRequestBody = {
   caseId?: unknown;
   text?: unknown;
+  patientTurnIndex?: unknown;
 };
 
 type ResolvedVoicePreference = {
@@ -38,6 +39,10 @@ export async function POST(request: Request) {
 
   const caseId = typeof body.caseId === "string" ? body.caseId.trim() : "";
   const text = typeof body.text === "string" ? body.text : "";
+  const patientTurnIndex = typeof body.patientTurnIndex === "number" &&
+    Number.isSafeInteger(body.patientTurnIndex) && body.patientTurnIndex >= 0
+    ? body.patientTurnIndex
+    : 0;
 
   if (!caseId || !text.trim()) {
     return Response.json(
@@ -56,7 +61,7 @@ export async function POST(request: Request) {
   }
 
   const voicePreference = resolveVoicePreference(patientCase);
-  const audioPlan = buildPatientAudioPlan(caseId, text);
+  const audioPlan = buildPatientAudioPlan(caseId, text, patientTurnIndex);
 
   try {
     const renderedAudioPlan = await Promise.all(
