@@ -2,7 +2,7 @@
   "metadata":{"schemaVersion":"1.0","id":"case-05","estimatedTime":"14 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"This tooth pain won't go away, and it keeps waking me up at night. I just want to sleep.","title":"Symptomatic Irreversible Pulpitis"},
   "patient":{"name":"Sofia Williams","age":32,"sex":"Not specified"},
   "voicePreference":{"provider":"navigator","voiceId":"af_heart","speed":0.88},
-  "assets":{"rest":"/patients/case-05/case-05-sofia-williams-v4.png","talking":"/patients/case-05/talking-v4.mp4","examinations":[
+  "assets":{"rest":"/patients/case-05/case-05-sofia-williams-v5.png","talking":"/patients/case-05/talking-v5.mp4","examinations":[
     {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Location and tooth","value":"Large cavity involving the left mandibular first molar"},{"label":"Cold test","value":"Cold provokes worse pain that persists after the stimulus is removed; no exact duration documented"},{"label":"Biting and percussion","value":"Slight tenderness with biting and percussion"},{"label":"Gingiva","value":"No swelling, no fluctuance, and no purulence"},{"label":"Palpation","value":"No gingival palpation pain"},{"label":"Face and mouth opening","value":"Face is normal without swelling; mouth opens normally"},{"label":"Voice and breathing","value":"Voice is normal with no shortness of breath"}]},
     {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-05/examination/examination-01.jpg","description":"Left mandibular first molar and surrounding gingiva assessment."}
   ]},

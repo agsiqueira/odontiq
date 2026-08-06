@@ -39,6 +39,7 @@
     "validate:patient-behavior-diversity": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientBehavioralPhraseDiversity.ts",
     "validate:behavioral-phrase-governance": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateBehavioralPhraseGovernance.ts",
     "validate:patient-language": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientLanguageGovernance.ts",
+    "validate:patient-core-responses": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientCoreResponses.ts",
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
     "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",

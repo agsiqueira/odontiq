@@ -17,6 +17,7 @@ import {
 import { generatePatientRoleSafeResponse } from "@/lib/patientRoleResponse";
 import { normalizeOuterPatientQuoteWrapper } from "@/lib/patientDialogue";
 import { patientImmediateResponse } from "@/lib/patientImmediateResponse";
+import { governedPatientCoreResponse } from "@/lib/patientCoreResponse";
 import { requireAppUser } from "@/lib/requireAppUser";
 import { patientQuestionService } from "@/lib/persistence/services/patientQuestionService";
 import { classifyPatientQuestionTrigger } from "@/lib/patientQuestions/classifier";
@@ -167,6 +168,28 @@ export async function POST(request: Request): Promise<Response> {
         return Response.json({ success: false, error: "encounter_case_mismatch" }, { status: 409 });
       }
       return Response.json(toConversationResponse(payload.encounterId, storedLanguageTurn));
+    }
+
+    const coreResponse = governedPatientCoreResponse(patientCase, payload.message);
+    if (coreResponse) {
+      const storedCoreTurn = await patientQuestionService.finalizeTurn({
+        userId: user.id,
+        encounterId: payload.encounterId,
+        caseId: payload.caseId,
+        requestId: payload.requestId,
+        studentMessageId: payload.studentMessageId,
+        patientMessageId: crypto.randomUUID(),
+        baseResponse: coreResponse.text,
+        providerName: "governed-patient-core",
+        questionText: () => undefined,
+      });
+      if (storedCoreTurn === "not-found") {
+        return Response.json({ success: false, error: "encounter_not_found" }, { status: 404 });
+      }
+      if (storedCoreTurn === "case-mismatch") {
+        return Response.json({ success: false, error: "encounter_case_mismatch" }, { status: 409 });
+      }
+      return Response.json(toConversationResponse(payload.encounterId, storedCoreTurn));
     }
 
     const [priorFinalizedTurnCount, recentPatientResponses] = await Promise.all([

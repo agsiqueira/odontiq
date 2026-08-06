@@ -2,7 +2,7 @@
   "metadata":{"schemaVersion":"1.0","id":"case-03","estimatedTime":"15 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"My tooth hurts all the time, and I can't chew on it.","title":"Right Mandibular Periapical Abscess"},
   "patient":{"name":"Elena Garcia","age":25,"sex":"Not specified"},
   "voicePreference":{"provider":"navigator","voiceId":"af_bella","speed":1},
-  "assets":{"rest":"/patients/case-03/case-03-elena-garcia-v4.png","talking":"/patients/case-03/talking-v4.mp4","examinations":[
+  "assets":{"rest":"/patients/case-03/case-03-elena-garcia-v5.png","talking":"/patients/case-03/talking-v5.mp4","examinations":[
     {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Face","value":"Mild facial puffiness"},{"label":"Dentition","value":"Crown or cap on the lower-right back tooth"},{"label":"Affected tooth","value":"Marked percussion and biting tenderness"},{"label":"Cold response","value":"Drinking something cold is not painful"},{"label":"Gingiva","value":"Localized swelling with fluctuance, purulence, and palpation tenderness"},{"label":"Floor of mouth","value":"Not raised"},{"label":"Airway","value":"No airway-compromise finding selected; voice is normal and mouth opens normally"}]},
     {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-03/examination/examination-01.jpg","description":"Right mandibular posterior tooth and localized intraoral swelling assessment."}
   ]},
