@@ -2,7 +2,7 @@
   "metadata":{"schemaVersion":"1.0","id":"case-04","estimatedTime":"12 min","urgency":"Urgent","status":"not-started","score":null,"chiefComplaint":"My left lower tooth hurts really badly when I bite, and it is hard to chew.","title":"Necrotic Pulp with Acute Apical Periodontitis"},
   "patient":{"name":"Noah Patel","age":38,"sex":"Not specified"},
   "voicePreference":{"provider":"navigator","voiceId":"am_michael","speed":1.1},
-  "assets":{"rest":"/patients/case-04/case-04-noah-patel-v5.png","talking":"/patients/case-04/talking-v5.mp4","examinations":[
+  "assets":{"rest":"/patients/case-04/case-04-noah-patel-v6.png","talking":"/patients/case-04/talking-v6.mp4","examinations":[
     {"id":"oral-examination","title":"Oral and Head Examination","type":"clinical-findings","findings":[{"label":"Location and tooth","value":"Lower-left molar with a large filling"},{"label":"Cold response","value":"Cold is not painful now"},{"label":"Percussion and biting","value":"Marked tenderness to percussion and biting pressure"},{"label":"Gingiva","value":"Tender to palpation; no swelling, fluctuance, or purulence"},{"label":"Abscess","value":"No intraoral abscess"},{"label":"Airway","value":"No airway-compromise finding selected; mouth opens normally and voice is normal"}]},
     {"id":"examination-01","title":"Intraoral Examination Image","image":"/patients/case-04/examination/examination-01.png","description":"Lower-left molar and surrounding gingiva assessment."}
   ]},
