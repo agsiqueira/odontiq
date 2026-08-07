@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { getCaseUrgencyDisplayLabel } from "@/lib/interfaceTerminology";
 import type { PatientCardPresentation } from "@/lib/patientCardPresentation";
 import { cn } from "@/lib/utils";
 
@@ -17,13 +16,6 @@ type PatientProfileCardProps = {
   compact?: boolean;
   eyebrow?: string;
   contextLabel?: string;
-};
-
-const urgencyStyles = {
-  Routine: "border border-[var(--color-border)] bg-white text-[var(--color-brand)]",
-  Urgent: "bg-[color-mix(in_srgb,var(--color-retry)_14%,white)] text-[var(--color-retry)]",
-  Emergency:
-    "bg-[color-mix(in_srgb,var(--color-emergency)_12%,white)] text-[var(--color-emergency)]",
 };
 
 export function PatientProfileCard({
@@ -128,19 +120,9 @@ export function PatientProfileCard({
         ) : null}
 
         <div className={cn("flex items-center justify-between gap-3", compact ? "mt-4" : "mt-8")}>
-          <div className="flex flex-wrap items-center gap-2">
-            <span
-              className={cn(
-                "rounded-full px-4 py-2 text-sm font-semibold",
-                urgencyStyles[presentation.urgency]
-              )}
-            >
-              {getCaseUrgencyDisplayLabel(presentation.urgency)}
-            </span>
-            <span className="rounded-full bg-[color-mix(in_srgb,var(--color-action)_12%,white)] px-4 py-2 text-sm font-semibold text-[var(--color-action)]">
-              {presentation.statusLabel}
-            </span>
-          </div>
+          <span className="rounded-full bg-[color-mix(in_srgb,var(--color-action)_12%,white)] px-4 py-2 text-sm font-semibold text-[var(--color-action)]">
+            {presentation.statusLabel}
+          </span>
           <span className="flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-secondary)]">
             <Clock className="size-4" />
             {presentation.duration}
