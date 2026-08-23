@@ -177,7 +177,7 @@ function ReportCaseCard({ card }: { card: ReportCard }) {
       </div>
 
       <p className="mt-3 line-clamp-2 min-h-12 text-sm leading-6 text-[var(--color-text-secondary)]">
-        {card.patientCase.title}
+        {card.patientCase.openingStatement}
       </p>
 
       <div className="mt-auto flex flex-wrap items-end justify-between gap-x-3 gap-y-2 border-t border-[var(--color-border)] pt-3">
