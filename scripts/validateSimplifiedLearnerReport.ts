@@ -20,7 +20,6 @@ const [learnerSource, canonicalSource, facultySource, pdfSource, reportPage] =
 
 for (const requiredLearnerText of [
   "Consultation Report",
-  "Overall score",
   "Strengths",
   "Areas for Improvement",
   "Consultation Transcript",
@@ -37,7 +36,6 @@ for (const requiredLearnerText of [
 assert(reportPage.includes('title="Consultation Report"'));
 assert(learnerSource.includes("{patientName}"));
 assert(learnerSource.includes("{caseTitle}"));
-assert(learnerSource.includes("facultyReport.overallScore.percentage"));
 assert(learnerSource.includes("facultyReport.strengths.slice(0, 3)"));
 assert.match(
   learnerSource,
@@ -47,6 +45,9 @@ assert.match(
 for (const prohibitedLearnerText of [
   "Back to Mentor",
   "Download PDF",
+  "Overall score",
+  "facultyReport.overallScore",
+  "formatFacultyReportPercent",
   "Required score",
   "minimum score",
   "earnedPoints",

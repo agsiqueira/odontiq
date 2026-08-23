@@ -7,10 +7,7 @@ import { useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import type { FacultyReport } from "@/lib/facultyRubric/report";
-import {
-  formatEncounterTranscriptTimestamp,
-  formatFacultyReportPercent,
-} from "@/lib/facultyRubric/report/displayContent";
+import { formatEncounterTranscriptTimestamp } from "@/lib/facultyRubric/report/displayContent";
 import { getLearnerInterfaceText } from "@/lib/interfaceTerminology";
 import {
   buildLearnerTranscriptFilename,
@@ -67,26 +64,14 @@ export function LearnerCaseReport({
   return (
     <div className="mx-auto w-full max-w-4xl space-y-4">
       <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-          <div className="min-w-0">
-            <h1 className="text-2xl font-semibold leading-tight sm:text-3xl">
-              Consultation Report
-            </h1>
-            <p className="mt-3 break-words text-lg font-semibold">{patientName}</p>
-            <p className="mt-1 break-words text-sm leading-6 text-[var(--color-text-secondary)]">
-              {caseLabel ? `${caseLabel} · ` : ""}{caseTitle}
-            </p>
-          </div>
-          {facultyReport ? (
-            <div className="w-full shrink-0 rounded-xl bg-[color-mix(in_srgb,var(--color-brand)_8%,white)] px-5 py-4 sm:w-auto sm:min-w-40">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-brand)]">
-                Overall score
-              </p>
-              <p className="mt-1 text-3xl font-semibold">
-                {formatFacultyReportPercent(facultyReport.overallScore.percentage)}
-              </p>
-            </div>
-          ) : null}
+        <div className="min-w-0">
+          <h1 className="text-2xl font-semibold leading-tight sm:text-3xl">
+            Consultation Report
+          </h1>
+          <p className="mt-3 break-words text-lg font-semibold">{patientName}</p>
+          <p className="mt-1 break-words text-sm leading-6 text-[var(--color-text-secondary)]">
+            {caseLabel ? `${caseLabel} · ` : ""}{caseTitle}
+          </p>
         </div>
       </section>
 
