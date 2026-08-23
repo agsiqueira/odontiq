@@ -140,8 +140,12 @@ const initialEncounterState: EncounterState = {
   encounterEvents: [],
 };
 
-const patientResponseErrorMessage =
-  "The AI patient response could not be generated. Please try again.";
+const patientResponseInterruptedMessage =
+  "The patient response was interrupted. Your question was saved. Select ‘Retry response’ to try again.";
+const patientResponseRetryingMessage =
+  "OdontIQ is retrying the patient response. Please keep this page open.";
+const patientResponseUnavailableMessage =
+  "The patient response could not be requested. Please refresh the page and try again.";
 
 const initialMentorInterventionState: MentorInterventionState = {
   evaluated: false,
@@ -167,6 +171,18 @@ type ConversationApiResponse =
       provider?: string;
       error?: string;
     };
+
+type PatientResponseRequestEnvelope = Readonly<{
+  encounterId: string;
+  caseId: string;
+  requestId: string;
+  studentMessageId: string;
+  userMessage: string;
+  message: string;
+  conversation: readonly Readonly<ConversationMessage>[];
+  coveredChecklistItems: readonly string[];
+  submissionSource: "text" | "voice";
+}>;
 
 type ServerEncounterResponse = {
   id: string;
@@ -337,6 +353,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     useState<MentorInterventionState>(initialMentorInterventionState);
   const [facultyRubricEvaluation, setFacultyRubricEvaluation] =
     useState<FacultyRubricEvaluationState>();
+  const [failedPatientResponseRequest, setFailedPatientResponseRequest] =
+    useState<PatientResponseRequestEnvelope | null>(null);
+  const [isRetryingPatientResponse, setIsRetryingPatientResponse] =
+    useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const voiceSubmitRef = useRef<(transcript: string) => void>(() => {});
   const keepFocusedModeForExamination = useRef(false);
@@ -353,6 +373,10 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
   const isCompletingRef = useRef(false);
   const isSyncingEncounterRef = useRef(false);
   const startRequestedRef = useRef(false);
+  const patientResponseRequestActiveRef = useRef(false);
+  const patientResponseRequestSequenceRef = useRef(0);
+  const patientResponseAbortRef = useRef<AbortController | null>(null);
+  const knownMessageIdsRef = useRef(new Set<string>());
   const serverEncounterRevisionRef = useRef(1);
   const encounterSyncServiceRef = useRef<EncounterSyncService | undefined>(
     undefined,
@@ -395,6 +419,12 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     onFinalTranscript: handleFinalVoiceTranscript,
   });
   const voiceInputMessage = speechRecognition.error?.message;
+
+  useEffect(() => {
+    knownMessageIdsRef.current = new Set(
+      state.messages.map((message) => message.id),
+    );
+  }, [state.messages]);
 
   useEffect(() => {
     const talkingVideo = talkingVideoRef.current;
@@ -940,15 +970,115 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
     state.messages,
   ]);
 
+  const acceptPatientResponse = (
+    envelope: PatientResponseRequestEnvelope,
+    data: Extract<ConversationApiResponse, { success: true }>,
+  ) => {
+    if (knownMessageIdsRef.current.has(data.patientMessageId)) return;
+
+    const patientConversationMessage: ConversationMessage = {
+      id: data.patientMessageId,
+      role: "patient",
+      text: data.response,
+      timestamp: new Date().toISOString(),
+    };
+    knownMessageIdsRef.current.add(patientConversationMessage.id);
+    dispatch({ type: "appendMessage", message: patientConversationMessage });
+    const patientTurnIndex = state.messages.filter(
+      (message) => message.role === "patient",
+    ).length;
+    speechPlayback.speak(patientConversationMessage.text, patientTurnIndex);
+    dispatch({
+      type: "recordEvent",
+      event: createEncounterEvent("patient_response_generated", {
+        messageId: patientConversationMessage.id,
+        provider: data.provider,
+        encounterId: envelope.encounterId,
+      }),
+    });
+  };
+
+  const executePatientResponseRequest = async (
+    envelope: PatientResponseRequestEnvelope,
+    isRetry: boolean,
+    requestAlreadyClaimed = false,
+  ) => {
+    if (!requestAlreadyClaimed) {
+      if (patientResponseRequestActiveRef.current) return;
+      patientResponseRequestActiveRef.current = true;
+    }
+    const requestSequence = patientResponseRequestSequenceRef.current + 1;
+    const controller = new AbortController();
+    patientResponseRequestSequenceRef.current = requestSequence;
+    patientResponseAbortRef.current?.abort();
+    patientResponseAbortRef.current = controller;
+    if (isRetry) setIsRetryingPatientResponse(true);
+    dispatch({ type: "setResponseError", error: undefined });
+    dispatch({ type: "startSpeaking" });
+
+    try {
+      const result = await requestPatientResponse(envelope, controller.signal);
+      if (
+        controller.signal.aborted ||
+        patientResponseRequestSequenceRef.current !== requestSequence
+      ) {
+        return;
+      }
+
+      emitAudioDiagnostic("patient_response.received", {
+        submissionSource: envelope.submissionSource,
+        httpStatus: result.httpStatus,
+        ok: result.kind === "success",
+        responseId:
+          result.kind === "success" ? result.data.patientMessageId : "invalid",
+        isListening: speechRecognition.isListeningNow(),
+        isSpeaking: speechPlayback.isSpeaking,
+        audioContextState: currentAudioContextState(),
+      });
+
+      if (result.kind === "success") {
+        acceptPatientResponse(envelope, result.data);
+        setFailedPatientResponseRequest(null);
+        dispatch({ type: "setResponseError", error: undefined });
+      } else if (result.kind === "retryable") {
+        setFailedPatientResponseRequest(envelope);
+        dispatch({
+          type: "setResponseError",
+          error: patientResponseInterruptedMessage,
+        });
+      } else {
+        setFailedPatientResponseRequest(null);
+        dispatch({
+          type: "setResponseError",
+          error: patientResponseUnavailableMessage,
+        });
+      }
+    } finally {
+      if (patientResponseRequestSequenceRef.current === requestSequence) {
+        patientResponseRequestActiveRef.current = false;
+        if (!controller.signal.aborted) {
+          setIsRetryingPatientResponse(false);
+          dispatch({ type: "stopSpeaking" });
+        }
+      }
+    }
+  };
+
   const submitStudentMessage = async (
     studentMessage: string,
     submissionSource: "text" | "voice" = "text",
   ) => {
     const text = studentMessage.trim();
 
-    if (!text || isGeneratingPatientResponse || !serverEncounterId) {
+    if (
+      !text ||
+      isGeneratingPatientResponse ||
+      patientResponseRequestActiveRef.current ||
+      !serverEncounterId
+    ) {
       return;
     }
+    patientResponseRequestActiveRef.current = true;
 
     if (submissionSource === "text") {
       speechPlayback.primePlayback();
@@ -977,6 +1107,19 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       state.coveredChecklistItems,
       coverageResult.newlyCoveredChecklistIds,
     );
+    const requestEnvelope = freezePatientResponseRequest({
+      encounterId: serverEncounterId,
+      caseId: patientCase.id,
+      requestId: `${studentConversationMessage.id}-response`,
+      studentMessageId: studentConversationMessage.id,
+      userMessage: text,
+      message: text,
+      conversation: conversationHistory,
+      coveredChecklistItems: coveredChecklistItemsForRequest,
+      submissionSource,
+    });
+    knownMessageIdsRef.current.add(studentConversationMessage.id);
+    setFailedPatientResponseRequest(null);
 
     dispatch({
       type: "appendMessage",
@@ -999,77 +1142,17 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
         checklistCoverage: coverageResult.evidence,
       }),
     });
-    dispatch({ type: "startSpeaking" });
-
     if (responseTimer.current) {
       window.clearTimeout(responseTimer.current);
       responseTimer.current = null;
     }
 
-    try {
-      const response = await fetch("/api/conversation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          encounterId: serverEncounterId,
-          caseId: patientCase.id,
-          requestId: `${studentConversationMessage.id}-response`,
-          studentMessageId: studentConversationMessage.id,
-          userMessage: text,
-          message: text,
-          conversation: conversationHistory,
-          coveredChecklistItems: coveredChecklistItemsForRequest,
-        }),
-      });
-      const data: unknown = await response.json().catch(() => undefined);
+    await executePatientResponseRequest(requestEnvelope, false, true);
+  };
 
-      emitAudioDiagnostic("patient_response.received", {
-        submissionSource,
-        httpStatus: response.status,
-        ok: response.ok,
-        responseId: isSuccessfulConversationResponse(data) ? data.patientMessageId : "invalid",
-        isListening: speechRecognition.isListeningNow(),
-        isSpeaking: speechPlayback.isSpeaking,
-        audioContextState: currentAudioContextState(),
-      });
-
-      if (!response.ok || !isSuccessfulConversationResponse(data)) {
-        throw new Error("Conversation request failed");
-      }
-
-      const patientConversationMessage: ConversationMessage = {
-        id: data.patientMessageId,
-        role: "patient",
-        text: data.response,
-        timestamp: new Date().toISOString(),
-      };
-
-      dispatch({
-        type: "appendMessage",
-        message: patientConversationMessage,
-      });
-      const patientTurnIndex = state.messages.filter(
-        (message) => message.role === "patient",
-      ).length;
-      speechPlayback.speak(patientConversationMessage.text, patientTurnIndex);
-      dispatch({
-        type: "recordEvent",
-        event: createEncounterEvent("patient_response_generated", {
-          messageId: patientConversationMessage.id,
-          provider: data.provider,
-          encounterId: data.encounterId,
-        }),
-      });
-    } catch {
-      dispatch({
-        type: "setResponseError",
-        error: patientResponseErrorMessage,
-      });
-    } finally {
-      dispatch({ type: "stopSpeaking" });
-    }
+  const retryPatientResponse = async () => {
+    if (!failedPatientResponseRequest) return;
+    await executePatientResponseRequest(failedPatientResponseRequest, true);
   };
 
   const toggleVoiceInput = () => {
@@ -1190,6 +1273,7 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
       if (responseTimer.current) {
         window.clearTimeout(responseTimer.current);
       }
+      patientResponseAbortRef.current?.abort();
     };
   }, []);
 
@@ -1496,9 +1580,30 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
             />
           }
           conversationFooter={
+            failedPatientResponseRequest ||
             (mentorIntervention.guidanceCardVisible && mentorIntervention.promptText) ||
             speechPlayback.needsPlaybackTap ? (
               <div className="space-y-2">
+                {failedPatientResponseRequest ? (
+                  <div className="rounded-xl border border-red-200 bg-red-50 px-3 py-3 shadow-sm">
+                    <p className="text-sm leading-6 text-red-700" role="status">
+                      {isRetryingPatientResponse
+                        ? patientResponseRetryingMessage
+                        : patientResponseInterruptedMessage}
+                    </p>
+                    <Button
+                      type="button"
+                      size="sm"
+                      className="mt-3"
+                      disabled={isRetryingPatientResponse}
+                      onClick={() => void retryPatientResponse()}
+                    >
+                      {isRetryingPatientResponse
+                        ? "Retrying response…"
+                        : "Retry response"}
+                    </Button>
+                  </div>
+                ) : null}
                 {speechPlayback.needsPlaybackTap ? (
                   <div className="flex items-center justify-between gap-3 rounded-xl border border-[var(--color-brand)] bg-[var(--color-surface)] px-3 py-2 shadow-sm">
                     <button
@@ -1536,8 +1641,14 @@ export function EncounterExperience({ patientCase }: EncounterExperienceProps) {
               isSubmitting={isGeneratingPatientResponse}
               isListening={speechRecognition.isListening}
               isVoiceSupported={speechRecognition.isSupported}
-              errorMessage={state.responseError}
-              statusMessage={!state.responseError ? voiceInputMessage : undefined}
+              errorMessage={
+                failedPatientResponseRequest ? undefined : state.responseError
+              }
+              statusMessage={
+                !state.responseError && !failedPatientResponseRequest
+                  ? voiceInputMessage
+                  : undefined
+              }
               submitLabel="Send question"
               leftAction={
                 <button
@@ -1836,6 +1947,70 @@ function MentorGuidanceCard({
       ) : null}
     </aside>
   );
+}
+
+type PatientResponseRequestResult =
+  | {
+      kind: "success";
+      data: Extract<ConversationApiResponse, { success: true }>;
+      httpStatus: number;
+    }
+  | { kind: "retryable" | "non-retryable"; httpStatus: number };
+
+function freezePatientResponseRequest(
+  request: PatientResponseRequestEnvelope,
+): PatientResponseRequestEnvelope {
+  return Object.freeze({
+    ...request,
+    conversation: Object.freeze(
+      request.conversation.map((message) => Object.freeze({ ...message })),
+    ),
+    coveredChecklistItems: Object.freeze([...request.coveredChecklistItems]),
+  });
+}
+
+async function requestPatientResponse(
+  request: PatientResponseRequestEnvelope,
+  signal: AbortSignal,
+): Promise<PatientResponseRequestResult> {
+  try {
+    const response = await fetch("/api/conversation", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        encounterId: request.encounterId,
+        caseId: request.caseId,
+        requestId: request.requestId,
+        studentMessageId: request.studentMessageId,
+        userMessage: request.userMessage,
+        message: request.message,
+        conversation: request.conversation,
+        coveredChecklistItems: request.coveredChecklistItems,
+      }),
+      signal,
+    });
+    const data: unknown = await response.json().catch(() => undefined);
+    if (
+      response.ok &&
+      isSuccessfulConversationResponse(data) &&
+      data.encounterId === request.encounterId &&
+      data.requestId === request.requestId
+    ) {
+      return { kind: "success", data, httpStatus: response.status };
+    }
+    return {
+      kind: isNonRetryablePatientResponseStatus(response.status)
+        ? "non-retryable"
+        : "retryable",
+      httpStatus: response.status,
+    };
+  } catch {
+    return { kind: "retryable", httpStatus: 0 };
+  }
+}
+
+function isNonRetryablePatientResponseStatus(status: number) {
+  return status === 400 || status === 401 || status === 403 || status === 404 || status === 409;
 }
 
 function isSuccessfulConversationResponse(
