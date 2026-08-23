@@ -68,6 +68,7 @@
     "validate:case-specs": "npm run validate:canonical-cases && npm run validate:case-reachability",
     "validate:case-release-readiness": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCaseReleaseReadiness.ts",
     "validate:encounter-persistence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterPersistence.ts",
+    "validate:fresh-case-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFreshCaseRetry.ts",
     "validate:encounter-document": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterDocument.ts",
     "validate:encounter-sync": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateEncounterSync.ts",
     "validate:completed-attempt-persistence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCompletedAttemptPersistence.ts",
