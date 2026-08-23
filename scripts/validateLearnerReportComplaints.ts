@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 import { CASE_DATA } from "../src/data/cases";
-import { buildLearnerTranscriptFilename } from "../src/lib/learnerTranscriptDownload";
+import { buildLearnerReportPdfFilename } from "../src/lib/learnerReportPdf";
 
 const reportsDashboardSource = await readFile("src/app/reports/page.tsx", "utf8");
 const canonicalReportSource = await readFile(
@@ -18,8 +18,8 @@ const patientCardSource = await readFile(
   "utf8",
 );
 const caseSource = await readFile("src/lib/cases.ts", "utf8");
-const transcriptSource = await readFile(
-  "src/lib/learnerTranscriptDownload.ts",
+const learnerPdfSource = await readFile(
+  "src/lib/learnerReportPdf.ts",
   "utf8",
 );
 
@@ -30,7 +30,7 @@ assert.equal(
 );
 
 for (const caseData of CASE_DATA) {
-  const filename = buildLearnerTranscriptFilename(caseData.metadata.id);
+  const filename = buildLearnerReportPdfFilename(caseData.metadata.id);
   assert(filename.includes(caseData.metadata.id));
   assert(!filename.includes(caseData.metadata.title));
 
@@ -71,8 +71,8 @@ assert.doesNotMatch(learnerReportSource, /diagnosis|patientCase\.title/i);
 assert.doesNotMatch(canonicalReportSource, /caseTitle=\{patientCase\.title\}/);
 assert.doesNotMatch(reportsDashboardSource, /aria-(?:label|description)=.*patientCase\.title/);
 assert.doesNotMatch(learnerReportSource, /aria-(?:label|description)=.*caseTitle/);
-assert.doesNotMatch(transcriptSource, /diagnosis|metadata\.title|patientCase\.title/i);
-assert.match(transcriptSource, /odontiq-\$\{safeCaseId\}-transcript\.txt/);
+assert.doesNotMatch(learnerPdfSource, /diagnosis|metadata\.title|patientCase\.title/i);
+assert.match(learnerPdfSource, /odontiq-\$\{safeCaseId \|\| "case"\}-consultation-report\.pdf/);
 
 // Diagnostic metadata remains present for internal clinical and faculty use.
 for (const caseData of CASE_DATA) {

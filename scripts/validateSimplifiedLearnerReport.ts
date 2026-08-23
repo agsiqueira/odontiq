@@ -1,11 +1,6 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-import {
-  buildLearnerTranscriptFilename,
-  buildLearnerTranscriptText,
-} from "../src/lib/learnerTranscriptDownload";
-
 const readSource = (relativePath: string) =>
   readFile(new URL(`../${relativePath}`, import.meta.url), "utf8");
 
@@ -23,7 +18,7 @@ for (const requiredLearnerText of [
   "Strengths",
   "Areas for Improvement",
   "Consultation Transcript",
-  "Download Transcript",
+  "Download PDF Report",
   "Try Another Case",
   "Return Home",
 ]) {
@@ -72,60 +67,9 @@ assert(canonicalSource.includes("<LearnerCaseReport"));
 assert.equal(canonicalSource.includes("<FacultyCaseReport"), false);
 assert.equal(canonicalSource.includes("generateCanonicalFacultyPdfBlob"), false);
 
-const transcript = [
-  {
-    id: "student-1",
-    role: "student" as const,
-    text: "Exact provider wording.",
-    timestamp: "2026-08-04T14:30:00.000Z",
-  },
-  {
-    id: "patient-1",
-    role: "patient" as const,
-    text: "Exact patient wording.",
-    timestamp: "2026-08-04T14:30:05.000Z",
-  },
-];
-const download = buildLearnerTranscriptText(
-  {
-    patientName: "Test Patient",
-    caseTitle: "Test Case",
-    caseLabel: "Case 01",
-    completedAt: "2026-08-04T14:31:00.000Z",
-  },
-  transcript,
-);
-
-for (const expected of [
-  "Test Patient",
-  "Case 01",
-  "2026-08-04T14:31:00.000Z",
-  "Exact provider wording.",
-  "2026-08-04T14:30:00.000Z",
-  "Exact patient wording.",
-  "2026-08-04T14:30:05.000Z",
-]) {
-  assert(download.includes(expected), `Transcript export omitted: ${expected}`);
-}
-
-for (const prohibitedExportText of [
-  "score",
-  "strength",
-  "improvement",
-  "pass",
-  "rubric",
-  "evidence",
-  "critical",
-  "diagnostic",
-]) {
-  assert.equal(
-    download.toLowerCase().includes(prohibitedExportText),
-    false,
-    `Transcript export contains prohibited report content: ${prohibitedExportText}`,
-  );
-}
-
-assert.equal(buildLearnerTranscriptFilename("case/01"), "odontiq-case-01-transcript.txt");
+assert.equal(learnerSource.includes("Download Transcript"), false);
+assert.equal(learnerSource.includes("text/plain"), false);
+assert.equal(learnerSource.includes(".txt"), false);
 assert(facultySource.includes("Critical Safety Items") || facultySource.includes("criticalSafetySummary"));
 assert(facultySource.includes("Download PDF"));
 assert(pdfSource.includes("generateCanonicalFacultyPdfBlob"));

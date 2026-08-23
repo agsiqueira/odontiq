@@ -55,7 +55,7 @@ assert.match(
 );
 for (const preserved of [
   "Consultation Transcript",
-  "Download Transcript",
+  "Download PDF Report",
   "Retry personalized feedback",
   "Personalized feedback was not generated",
 ]) {

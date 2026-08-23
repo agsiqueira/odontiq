@@ -14,10 +14,6 @@ import {
   generateLearnerReportPdfBlob,
   type LearnerReportPdfModel,
 } from "@/lib/learnerReportPdf";
-import {
-  buildLearnerTranscriptFilename,
-  buildLearnerTranscriptText,
-} from "@/lib/learnerTranscriptDownload";
 
 type LearnerCaseReportProps = {
   caseId: string;
@@ -61,23 +57,6 @@ export function LearnerCaseReport({
       : [],
     [facultyReport],
   );
-
-  const downloadTranscript = useCallback(() => {
-    const text = buildLearnerTranscriptText(
-      { patientName, caseTitle, caseLabel, completedAt },
-      transcript,
-    );
-    const url = window.URL.createObjectURL(
-      new Blob([text], { type: "text/plain;charset=utf-8" }),
-    );
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = buildLearnerTranscriptFilename(caseId);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    window.setTimeout(() => window.URL.revokeObjectURL(url), 0);
-  }, [caseId, caseLabel, caseTitle, completedAt, patientName, transcript]);
 
   const downloadPdfReport = useCallback(async () => {
     if (downloadInProgressRef.current || isPreparingPdf) return;
@@ -161,22 +140,17 @@ export function LearnerCaseReport({
       <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-lg font-semibold">Consultation Transcript</h2>
-          <div className="flex flex-col gap-2 sm:flex-row">
-            <Button
-              type="button"
-              variant="outline"
-              className="h-11"
-              disabled={isPreparingPdf}
-              onClick={() => void downloadPdfReport()}
-            >
-              <Download className="size-4" aria-hidden="true" />
-              {isPreparingPdf ? "Preparing PDF…" : "Download PDF Report"}
-            </Button>
-            <Button type="button" variant="outline" className="h-11" onClick={downloadTranscript}>
-              <Download className="size-4" aria-hidden="true" />
-              Download Transcript
-            </Button>
-          </div>
+          <Button
+            type="button"
+            variant="outline"
+            className="h-11"
+            aria-label="Download PDF Report"
+            disabled={isPreparingPdf}
+            onClick={() => void downloadPdfReport()}
+          >
+            <Download className="size-4" aria-hidden="true" />
+            {isPreparingPdf ? "Preparing PDF…" : "Download PDF Report"}
+          </Button>
         </div>
         {pdfError ? (
           <p className="mt-3 text-sm text-red-700" role="status">

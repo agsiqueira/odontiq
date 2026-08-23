@@ -167,9 +167,8 @@ assert(learnerSource.includes("window.URL.createObjectURL(blob)"));
 assert(learnerSource.includes("window.URL.revokeObjectURL(url)"));
 assert.match(learnerSource, /finally \{[\s\S]*setIsPreparingPdf\(false\)/);
 assert(learnerSource.includes("The PDF report could not be downloaded. Please try again."));
-assert(learnerSource.includes("Download Transcript"));
-assert(learnerSource.includes("buildLearnerTranscriptText"));
-assert(learnerSource.includes("buildLearnerTranscriptFilename"));
+assert(!learnerSource.includes("Download Transcript"));
+assert(!learnerSource.includes('type: "text/plain'));
 assert(learnerSource.includes("<EncounterTranscript messages={transcript} />"));
 
 const downloadStart = learnerSource.indexOf("const downloadPdfReport = useCallback");

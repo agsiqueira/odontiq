@@ -18,7 +18,8 @@ assert(
 assert.match(learnerSource, /disabled=\{isRetrying\}/);
 assert.match(learnerSource, /facultyReport\?: FacultyReport/);
 assert(learnerSource.includes("Consultation Transcript"));
-assert(learnerSource.includes("Download Transcript"));
+assert(learnerSource.includes("Download PDF Report"));
+assert(!learnerSource.includes("Download Transcript"));
 assert(learnerSource.includes("Try Another Case"));
 assert(learnerSource.includes("Return Home"));
 
