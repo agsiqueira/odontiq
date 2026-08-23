@@ -23,7 +23,6 @@ type ReportCard = {
   patientCase: OdontIQCase;
   status: ReportCardStatus;
   completedAt?: string;
-  score?: number;
   attemptId?: string;
 };
 
@@ -187,23 +186,12 @@ function ReportCaseCard({ card }: { card: ReportCard }) {
               Completed {formatCompletionDate(card.completedAt)}
             </p>
           ) : null}
-          <div
-            className={`flex flex-wrap items-center gap-2 ${
-              card.status === "completed" ? "justify-between" : ""
-            }`}
+          <span
+            className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${details.badgeClassName}`}
           >
-            <span
-              className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${details.badgeClassName}`}
-            >
-              {card.status === "completed" ? "✓ " : ""}
-              {details.label}
-            </span>
-            {card.status === "completed" && card.score !== undefined ? (
-              <span className="text-sm font-semibold text-[var(--color-text-primary)]">
-                {formatScore(card.score)}
-              </span>
-            ) : null}
-          </div>
+            {card.status === "completed" ? "✓ " : ""}
+            {details.label}
+          </span>
           {card.status !== "completed" && card.completedAt ? (
             <p className="mt-1.5 truncate text-xs text-[var(--color-text-secondary)]">
               Completed {formatCompletionDate(card.completedAt)}
@@ -251,7 +239,6 @@ function reportCardsFromDashboard(attempts: DashboardAttempt[]): ReportCard[] {
         patientCase,
         status: "completed" as const,
         completedAt,
-        score: attempt.percentage ?? undefined,
         attemptId: attempt.latestAttemptId,
       };
     }
@@ -307,7 +294,6 @@ function cardFromCompletedSummary(
       patientCase,
       status: "completed",
       completedAt,
-      score: summary.facultyRubricScore?.percentage ?? undefined,
       attemptId: summary.attemptId,
     };
   }
@@ -341,10 +327,6 @@ function formatCompletionDate(value: string) {
   return Number.isNaN(date.getTime())
     ? "date unavailable"
     : new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(date);
-}
-
-function formatScore(value: number) {
-  return `${Number.isInteger(value) ? value : value.toFixed(1)}%`;
 }
 
 function formatCaseNumber(caseId: string) {

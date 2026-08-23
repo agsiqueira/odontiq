@@ -7,7 +7,7 @@ const readSource = (relativePath: string) =>
 const [
   learnerSource,
   canonicalSource,
-  dashboardSource,
+  dashboardApiSource,
   scoringSource,
   reportBuilderSource,
   persistenceSource,
@@ -16,7 +16,7 @@ const [
 ] = await Promise.all([
   readSource("src/components/LearnerCaseReport.tsx"),
   readSource("src/components/CanonicalCaseReport.tsx"),
-  readSource("src/app/reports/page.tsx"),
+  readSource("src/lib/persistence/services/reportsService.ts"),
   readSource("src/lib/facultyRubric/scoring.ts"),
   readSource("src/lib/facultyRubric/report/builder.ts"),
   readSource("src/lib/persistence/completedAttemptClient.ts"),
@@ -62,15 +62,14 @@ for (const preserved of [
   assert(learnerSource.includes(preserved), `learner report lost: ${preserved}`);
 }
 
-// Internal evaluation, persistence, pass/fail, faculty output, and the Phase 3C
-// dashboard percentage remain intentionally unchanged.
+// Internal evaluation, persistence, pass/fail, faculty output, and the dashboard
+// API percentage remain intentionally unchanged.
 assert.match(scoringSource, /percentage/);
 assert.match(scoringSource, /passStatus/);
 assert.match(reportBuilderSource, /overallScore/);
 assert.match(persistenceSource, /score: summary\.facultyRubricScore/);
 assert.match(persistenceSource, /percentage: summary\.facultyRubricScore\?\.percentage/);
-assert.match(dashboardSource, /score: attempt\.percentage \?\? undefined/);
-assert.match(dashboardSource, /\{formatScore\(card\.score\)\}/);
+assert.match(dashboardApiSource, /percentage: attempt\.percentage/);
 assert.match(facultyReportSource, /facultyReport\.overallScore\.percentage/);
 assert.match(facultyPdfSource, /report\.overallScore\.percentage/);
 

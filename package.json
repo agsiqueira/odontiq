@@ -46,6 +46,7 @@
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:learner-report-complaints": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateLearnerReportComplaints.ts",
     "validate:learner-report-no-score": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateLearnerReportNoScore.ts",
+    "validate:reports-dashboard-no-percent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateReportsDashboardNoPercent.ts",
     "validate:feedback-failure-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFeedbackFailureReport.ts",
     "validate:visible-feedback-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateVisibleFeedbackRetry.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",

@@ -163,7 +163,7 @@ async function main() {
   assert(reportsPage.includes('fetch("/api/reports/dashboard")'));
   assert(reportsPage.includes("readCachedReportCards()"));
   assert(reportComponent.includes("/api/reports/${encodeURIComponent(attemptId)}"));
-  assert(reportComponent.includes("readCompletedEncounterAttempt"));
+  assert(!reportComponent.includes("readCompletedEncounterAttempt"));
   assert(homeComponent.includes('fetch("/api/home/progression")'));
   assert(casesComponent.includes('fetch("/api/home/progression")'));
   assert(casesComponent.includes('preferredAction: activeCaseIds.has(patientCase.id)'));
