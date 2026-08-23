@@ -56,6 +56,10 @@ for (const profile of PATIENT_BEHAVIOR_PROFILES) {
   transcriptPhrases.set(profile.patientId, phrases.filter(Boolean));
   console.log(`${profile.displayName} optional accents: ${phrases.map((phrase, index) => phrase ? `turn ${index + 1}: ${phrase}` : "").filter(Boolean).join(" | ") || "none"}`);
   equal(stages, [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3], `${profile.displayName} retains stage boundaries`);
+  if (profile.patientId === "elena-garcia") {
+    equal(phrases.filter(Boolean).length, 0, "Elena receives no context-free hesitation accents");
+    continue;
+  }
   check(phrases.filter(Boolean).length > 0, `${profile.displayName} has an occasional personality accent`);
   check(phrases.filter(Boolean).length < 6, `${profile.displayName} uses accents on fewer than half of responses`);
   check(phrases.slice(0, 4).filter(Boolean).length <= 1, `${profile.displayName} uses minimal Stage 1 framing`);
@@ -76,7 +80,7 @@ for (const profile of PATIENT_BEHAVIOR_PROFILES) {
 
 check(transcriptPhrases.get("amara-johnson")?.some((phrase) => /taken care|exhausted|wearing|keep going/.test(phrase)), "Amara remains treatment-focused or exhausted");
 check(transcriptPhrases.get("marcus-lee")?.every((phrase) => /nervous|serious|worried/.test(phrase)), "Marcus remains anxious, not impatient");
-check(transcriptPhrases.get("elena-garcia")?.every((phrase) => /embarrassing|explain|uncomfortable/.test(phrase)), "Elena remains hesitant, not rude");
+equal(transcriptPhrases.get("elena-garcia"), [], "Elena context-free transcript remains undecorated");
 check(transcriptPhrases.get("noah-patel")?.every((phrase) => /it|all|brief|simple/.test(phrase)), "Noah remains stoic, not impatient");
 check(transcriptPhrases.get("sofia-williams")?.every((phrase) => /this|it/i.test(phrase)), "Sofia's frustration remains condition-focused");
 

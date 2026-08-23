@@ -45,6 +45,24 @@ export const PATIENT_BEHAVIOR_PROFILES: readonly PatientBehaviorProfile[] = [
 const BY_CASE = new Map(PATIENT_BEHAVIOR_PROFILES.map((profile) => [profile.caseId, profile]));
 const BY_PATIENT = new Map(PATIENT_BEHAVIOR_PROFILES.map((profile) => [profile.patientId, profile]));
 const ALL_OPTIONAL_PHRASES = PATIENT_BEHAVIOR_PROFILES.flatMap((profile) => profile.optionalPhrases.map((phrase) => phrase.text));
+const CASE_3_SENSITIVE_HISTORY_FACT_IDS = new Set([
+  "c3.opioid-negative",
+  "c3.illicit-drugs-negative",
+]);
+const CASE_3_EXPLANATORY_FACT_IDS = new Set([
+  "c3.pain-quality",
+  "c3.radiation",
+  "c3.rct",
+  "c3.treated-teeth-unknown",
+]);
+const CASE_3_SENSITIVE_PHRASES = new Set([
+  "It's a little embarrassing.",
+  "I'm uncomfortable talking about it.",
+]);
+const CASE_3_EXPLANATORY_PHRASES = new Set([
+  "It's hard to explain.",
+  "I'm trying to explain it.",
+]);
 
 export function selectBehavioralStage(finalizedTurnNumber: number): BehavioralStage {
   if (finalizedTurnNumber <= 4) return 1;
@@ -99,6 +117,10 @@ export function selectOptionalPersonalityPhrase(
   if (input.repetition?.level && input.repetition.level !== "none") return suppressed("repetition-already-styled", history);
   if (!eligibleForOptionalPhrase(baselineText)) return suppressed("short-or-ineligible-answer", history);
   if (history[history.length - 1]) return suppressed("consecutive-personality-phrase", history);
+  if (
+    input.patientId === "elena-garcia" &&
+    history.slice(-4).some(Boolean)
+  ) return suppressed("rolling-five-limit", history);
   if (history.slice(-4).filter(Boolean).length >= 2) return suppressed("rolling-five-limit", history);
 
   const cadence = input.stage === 1 ? 4 : input.stage === 2 ? 3 : 2;
@@ -107,7 +129,9 @@ export function selectOptionalPersonalityPhrase(
   if ((input.finalizedTurnNumber + cadenceOffset) % cadence !== 0) return suppressed("stage-frequency", history);
 
   const recentThree = new Set(history.slice(-3).filter(Boolean));
-  const eligiblePhrases = profile.optionalPhrases.filter((phrase) => isBehavioralPhraseEligible(phrase, input));
+  const eligiblePhrases = profile.optionalPhrases.filter((phrase) =>
+    isBehavioralPhraseEligible(phrase, input) && case3PhraseContextIsEligible(phrase, input),
+  );
   if (eligiblePhrases.length === 0) return suppressed("stage-frequency", history);
   const start = stableHash(`${input.patientId}\u0000${input.stage}\u0000${input.finalizedTurnNumber}\u0000${baselineText}`) % eligiblePhrases.length;
   for (let offset = 0; offset < eligiblePhrases.length; offset += 1) {
@@ -115,6 +139,21 @@ export function selectOptionalPersonalityPhrase(
     if (!recentThree.has(phrase)) return { phrase, suppressed: false, recentPhraseHistory: history };
   }
   return suppressed("recent-phrase-reuse", history);
+}
+
+function case3PhraseContextIsEligible(
+  phrase: BehavioralPhrase,
+  input: Pick<BehavioralRenderInput, "patientId" | "governedFacts">,
+) {
+  if (input.patientId !== "elena-garcia") return true;
+  const factIds = new Set(input.governedFacts.map((fact) => fact.id));
+  if (CASE_3_SENSITIVE_PHRASES.has(phrase.text)) {
+    return [...CASE_3_SENSITIVE_HISTORY_FACT_IDS].some((id) => factIds.has(id));
+  }
+  if (CASE_3_EXPLANATORY_PHRASES.has(phrase.text)) {
+    return [...CASE_3_EXPLANATORY_FACT_IDS].some((id) => factIds.has(id));
+  }
+  return false;
 }
 
 export function isBehavioralPhraseEligible(phrase: BehavioralPhrase, input: Pick<BehavioralRenderInput, "patientId" | "stage">) {
