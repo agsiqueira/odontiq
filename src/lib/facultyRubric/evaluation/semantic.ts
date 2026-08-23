@@ -32,6 +32,7 @@ import {
   validateTargetedSemanticEvidence,
 } from "./semanticEvidenceRules";
 import { evaluateFacultySemanticWithRetry } from "./retry";
+import { buildSemanticProviderFailureToken } from "./providerFailure";
 
 export type FacultySemanticEvaluationModel = (
   input: AITextGenerationInput,
@@ -136,8 +137,7 @@ export async function evaluateSemanticFacultyCriteria({
             });
           } catch (error) {
             throw new Error(
-              `semantic_batch_${batchIndex + 1}_request_failed`,
-              { cause: error },
+              buildSemanticProviderFailureToken(batchIndex + 1, error),
             );
           }
           const parsed = parseAndValidateAiFacultyEvaluationResponse({

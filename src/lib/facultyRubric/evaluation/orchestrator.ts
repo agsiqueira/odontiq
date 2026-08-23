@@ -20,6 +20,7 @@ import {
   normalizeBidirectionalEvaluations,
 } from "./finalization";
 import { getResolvedFacultyRubricCalibration } from "../calibration";
+import { isSemanticProviderFailureToken } from "./providerFailure";
 
 export type EvaluateFacultyRubricForEncounterInput =
   FacultyRubricEncounterEvaluationInput & {
@@ -256,7 +257,10 @@ function summarizeUnknownError(error: unknown) {
     if (error.message.includes("timed out")) {
       return "semantic_evaluation_timeout";
     }
-    if (/^semantic_batch_\d+_(?:request_failed|invalid_top_level_response)$/.test(error.message)) {
+    if (
+      isSemanticProviderFailureToken(error.message) ||
+      /^semantic_batch_\d+_invalid_top_level_response$/.test(error.message)
+    ) {
       return error.message;
     }
     return "semantic_evaluation_failed";
