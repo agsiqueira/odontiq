@@ -115,7 +115,11 @@ export function MentorGeneratedDebrief({
   const [draftQuestion, setDraftQuestion] = useState("");
   const [chatError, setChatError] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [isRetryingDebrief, setIsRetryingDebrief] = useState(false);
   const requestKeyRef = useRef<string | null>(null);
+  const debriefRequestIdRef = useRef(0);
+  const debriefAbortRef = useRef<AbortController | null>(null);
+  const isDebriefRequestActiveRef = useRef(false);
   const chatRequestIdRef = useRef(0);
   const chatAbortRef = useRef<AbortController | null>(null);
   const isSendingRef = useRef(false);
@@ -196,6 +200,10 @@ export function MentorGeneratedDebrief({
 
       requestKeyRef.current = requestKey;
       controller = new AbortController();
+      const requestId = debriefRequestIdRef.current + 1;
+      debriefRequestIdRef.current = requestId;
+      debriefAbortRef.current = controller;
+      isDebriefRequestActiveRef.current = true;
 
       setLocalSummary(summary);
       setStatus("loading-debrief");
@@ -211,7 +219,11 @@ export function MentorGeneratedDebrief({
       }
       void generateDebrief({ summary, controller })
         .then((response) => {
-          if (!controller || controller.signal.aborted) {
+          if (
+            !controller ||
+            controller.signal.aborted ||
+            debriefRequestIdRef.current !== requestId
+          ) {
             return;
           }
 
@@ -222,26 +234,87 @@ export function MentorGeneratedDebrief({
           setDebrief(response.debrief);
           setStatus("ready");
         })
-        .catch((error) => {
-          if (!controller || controller.signal.aborted) {
+        .catch(() => {
+          if (
+            !controller ||
+            controller.signal.aborted ||
+            debriefRequestIdRef.current !== requestId
+          ) {
             return;
           }
 
           setStatus("error");
-          setMessage(
-            error instanceof Error
-              ? error.message
-              : "The mentor debrief could not be generated.",
-          );
+          setMessage("");
+        })
+        .finally(() => {
+          if (debriefRequestIdRef.current === requestId) {
+            isDebriefRequestActiveRef.current = false;
+          }
         });
     }, 0);
 
     return () => {
       window.clearTimeout(timer);
       controller?.abort();
+      debriefAbortRef.current?.abort();
       chatAbortRef.current?.abort();
     };
   }, [attemptId, caseId]);
+
+  const retryDebrief = useCallback(async () => {
+    if (
+      isDebriefRequestActiveRef.current ||
+      !localSummary ||
+      localSummary.caseId !== caseId ||
+      localSummary.conversationHistory.length === 0
+    ) {
+      return;
+    }
+
+    const requestId = debriefRequestIdRef.current + 1;
+    const controller = new AbortController();
+    debriefRequestIdRef.current = requestId;
+    debriefAbortRef.current?.abort();
+    debriefAbortRef.current = controller;
+    isDebriefRequestActiveRef.current = true;
+    setIsRetryingDebrief(true);
+    setMessage("");
+
+    try {
+      const response = await generateDebrief({
+        summary: localSummary,
+        controller,
+      });
+      if (
+        controller.signal.aborted ||
+        debriefRequestIdRef.current !== requestId
+      ) {
+        return;
+      }
+      if (!response.success) {
+        setStatus("error");
+        return;
+      }
+
+      setDebrief(response.debrief);
+      setStatus("ready");
+    } catch {
+      if (
+        controller.signal.aborted ||
+        debriefRequestIdRef.current !== requestId
+      ) {
+        return;
+      }
+      setStatus("error");
+    } finally {
+      if (debriefRequestIdRef.current === requestId) {
+        isDebriefRequestActiveRef.current = false;
+        if (!controller.signal.aborted) {
+          setIsRetryingDebrief(false);
+        }
+      }
+    }
+  }, [caseId, localSummary]);
 
   const submitQuestion = useCallback(
     async (question: string) => {
@@ -385,12 +458,18 @@ export function MentorGeneratedDebrief({
       <section className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4">
         <p className="text-sm font-semibold text-red-700">Mentor debrief</p>
         <p className="mt-3 text-sm leading-6 text-red-700">
-          The AI mentor debrief could not be generated. Please try finishing the
-          encounter again.
+          {isRetryingDebrief
+            ? "OdontIQ is retrying your mentor debrief. Please keep this page open."
+            : "The mentor debrief could not be generated. Your encounter and transcript were saved. Select ‘Retry mentor debrief’ below to try again without repeating the encounter."}
         </p>
-        {message ? (
-          <p className="mt-2 text-xs leading-5 text-red-600">Reason: {message}</p>
-        ) : null}
+        <Button
+          type="button"
+          className="mt-4"
+          disabled={isRetryingDebrief}
+          onClick={() => void retryDebrief()}
+        >
+          {isRetryingDebrief ? "Retrying mentor debrief…" : "Retry mentor debrief"}
+        </Button>
       </section>
     );
   }

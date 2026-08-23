@@ -14,6 +14,7 @@
     "validate:post-semantic-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePostSemanticMergeRetry.ts",
     "validate:semantic-provider-failures": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSemanticProviderFailureClassification.ts",
     "validate:immediate-mentor": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateImmediateMentorTransition.ts",
+    "validate:mentor-debrief-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateMentorDebriefRetry.ts",
     "validate:faculty-scoring": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFacultyScoring.ts",
     "validate:phase1-checklists": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePhase1Checklists.ts",
     "validate:phase2-scoring-matrix": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePhase2ScoringMatrix.ts",
