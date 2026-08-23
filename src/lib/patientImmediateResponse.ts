@@ -14,6 +14,12 @@ const UNSUPPORTED_LIGHT_TRIGGER_QUESTION_PATTERN =
   /\b(?:bright\s+)?(?:sunlight|light)\b.{0,40}\b(?:pain|hurt|ache)\b|\b(?:pain|hurt|ache)\b.{0,40}\b(?:bright\s+)?(?:sunlight|light)\b/i;
 const SOCIAL_WELLBEING_QUESTION_PATTERN =
   /^(?:so[, ]+)?(?:how are you(?: feeling| doing)?|how do you feel|are you okay)(?:\s+(?:today|right now))?[?.!]*$/i;
+const CASE_3_ALLERGY_QUESTION_PATTERN =
+  /\ballerg(?:y|ies|ic)\b/i;
+const CASE_3_IBUPROFEN_PATTERN =
+  /\b(?:ibuprofen|advil|motrin|nsaids?)\b/i;
+const CASE_3_IBUPROFEN_INTOLERANCE_QUESTION_PATTERN =
+  /\b(?:allerg(?:y|ies|ic)|reaction|react|upset|stomach|ulcers?|tolerat|bother|avoid|can you take|what happens)\b/i;
 
 export function patientImmediateResponse({
   caseId,
@@ -39,6 +45,24 @@ export function patientImmediateResponse({
 
   const consentResponse = case3ConsentResponse(caseId, message);
   if (consentResponse) return consentResponse;
+
+  if (
+    caseId === "case-03" &&
+    isDirectCase3Question(message) &&
+    CASE_3_IBUPROFEN_PATTERN.test(message) &&
+    CASE_3_IBUPROFEN_INTOLERANCE_QUESTION_PATTERN.test(message)
+  ) {
+    return "I'm not allergic to ibuprofen, but it upsets my stomach, so I avoid it.";
+  }
+
+  if (
+    caseId === "case-03" &&
+    isDirectCase3Question(message) &&
+    CASE_3_ALLERGY_QUESTION_PATTERN.test(message) &&
+    !CASE_3_IBUPROFEN_PATTERN.test(message)
+  ) {
+    return "No, I have no known drug allergies, including no penicillin allergy.";
+  }
 
   if (
     NPO_INSTRUCTION_PATTERN.test(message) &&
@@ -78,4 +102,9 @@ export function patientImmediateResponse({
   }
 
   return undefined;
+}
+
+function isDirectCase3Question(message: string) {
+  const trimmed = message.trim();
+  return QUESTION_PATTERN.test(trimmed) || /^any\b/i.test(trimmed);
 }
