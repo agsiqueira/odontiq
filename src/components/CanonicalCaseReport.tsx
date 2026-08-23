@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { LearnerCaseReport } from "@/components/LearnerCaseReport";
 import { Button } from "@/components/ui/button";
-import { getCaseById } from "@/lib/cases";
+import { getCaseById, getCaseDisplayLabel } from "@/lib/cases";
 import { buildCanonicalFacultyReportPresentation } from "@/lib/facultyRubric/report/presentation";
 import { getStudentDisplayName } from "@/lib/facultyRubric/report/displayContent";
 import {
@@ -51,6 +51,7 @@ const REPORT_GENERATION_PROGRESS: Record<ReportGenerationStage, number> = {
 type ServerReportArtifacts = {
   status: "complete";
   caseId: string;
+  completedAt: string | null;
   evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
   score: CompletedEncounterAttempt["facultyRubricScore"] | null;
   report: CompletedEncounterAttempt["facultyReport"] | null;
@@ -58,12 +59,16 @@ type ServerReportArtifacts = {
 };
 type ServerReportInProgress = {
   status: "in-progress";
+  caseId: string;
+  completedAt: string | null;
+  transcript: ConversationMessage[];
   stage: "evaluating";
   retryAfterMs: number;
 };
 type ServerReportPending = {
   status: "pending" | "failed";
   caseId: string;
+  completedAt: string | null;
   evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
   score: CompletedEncounterAttempt["facultyRubricScore"] | null;
   report: CompletedEncounterAttempt["facultyReport"] | null;
@@ -90,6 +95,7 @@ export function CanonicalCaseReport({
   const [summary, setSummary] = useState<CompletedEncounterAttempt | null>(null);
   const [serverTranscript, setServerTranscript] =
     useState<ConversationMessage[] | null>(null);
+  const [serverCompletedAt, setServerCompletedAt] = useState<string | undefined>();
   const [isAutomaticallyRetrying, setIsAutomaticallyRetrying] = useState(false);
   const [isRetrying, setIsRetrying] = useState(false);
   const mountedRef = useRef(true);
@@ -126,13 +132,12 @@ export function CanonicalCaseReport({
       let confirmedTranscript: ConversationMessage[] | null = null;
       try {
         let payload = await requestReport(attemptId);
-        if (payload.status !== "in-progress") {
-          if (payload.caseId !== caseId) {
-            throw new Error("server_report_case_mismatch");
-          }
-          confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
-          setServerTranscript(confirmedTranscript);
+        if (payload.caseId !== caseId) {
+          throw new Error("server_report_case_mismatch");
         }
+        confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
+        setServerTranscript(confirmedTranscript);
+        setServerCompletedAt(payload.completedAt ?? undefined);
         if (payload.status === "failed") {
           setSummary(null);
           setStatus("ready");
@@ -168,6 +173,7 @@ export function CanonicalCaseReport({
           }
           confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
           setServerTranscript(confirmedTranscript);
+          setServerCompletedAt(payload.completedAt ?? undefined);
         }
 
         if (initialGenerationFailed) {
@@ -182,6 +188,7 @@ export function CanonicalCaseReport({
                 ...message,
               }));
               setServerTranscript(confirmedTranscript);
+              setServerCompletedAt(recovered.completedAt ?? undefined);
             }
           } catch {
             // The bounded retry can proceed without exposing or substituting data.
@@ -203,6 +210,7 @@ export function CanonicalCaseReport({
               }
               confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
               setServerTranscript(confirmedTranscript);
+              setServerCompletedAt(payload.completedAt ?? undefined);
             }
             candidate = buildCompletedReportSummaryIfAvailable({
               attemptId,
@@ -224,6 +232,7 @@ export function CanonicalCaseReport({
             if (recovered.status !== "in-progress" && recovered.caseId === caseId) {
               confirmedTranscript = recovered.transcript.map((message) => ({ ...message }));
               setServerTranscript(confirmedTranscript);
+              setServerCompletedAt(recovered.completedAt ?? undefined);
             }
           } catch {
             // Missing and unauthorized attempts remain indistinguishable.
@@ -293,6 +302,7 @@ export function CanonicalCaseReport({
         throw new Error("server_report_case_mismatch");
       }
       setServerTranscript(payload.transcript.map((message) => ({ ...message })));
+      setServerCompletedAt(payload.completedAt ?? undefined);
       setSummary(buildCompletedReportSummary({ attemptId, caseId, payload }));
       setStatus("ready");
     } catch {
@@ -312,8 +322,8 @@ export function CanonicalCaseReport({
         caseId={caseId}
         caseTitle={patientCase.openingStatement}
         patientName={patientCase.patientName}
-        caseLabel={presentation?.caseLabel}
-        completedAt={presentation?.completedAt}
+        caseLabel={getCaseDisplayLabel(caseId)}
+        completedAt={serverCompletedAt}
         facultyReport={presentation?.report}
         transcript={presentation?.transcript ?? serverTranscript}
         feedbackState={
@@ -566,6 +576,16 @@ async function generateOrJoinReport(
 
 function isServerReportResponse(value: unknown): value is ServerReportResponse {
   if (!value || typeof value !== "object" || !("status" in value)) return false;
+  if (
+    typeof (value as { caseId?: unknown }).caseId !== "string" ||
+    !(
+      (value as { completedAt?: unknown }).completedAt === null ||
+      typeof (value as { completedAt?: unknown }).completedAt === "string"
+    ) ||
+    !Array.isArray((value as { transcript?: unknown }).transcript)
+  ) {
+    return false;
+  }
   const status = (value as { status?: unknown }).status;
   if (status === "in-progress") {
     return (

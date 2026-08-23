@@ -62,6 +62,7 @@ export class ReportsService {
       integrityStatus: attempt.integrityStatus,
       generationStartedAt: attempt.generationStartedAt?.toISOString() ?? null,
       generationError: attempt.generationError ?? null,
+      completedAt: attempt.completedAt?.toISOString() ?? null,
       evaluation: attempt.facultyEvaluation?.data ?? null,
       score: attempt.facultyScore?.data ?? null,
       report: attempt.facultyReport?.data ?? null,

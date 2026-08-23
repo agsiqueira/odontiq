@@ -60,7 +60,7 @@ export async function POST(
     return reportStateResponse(await reportsService.getReport(user.id, attemptId));
   }
   if (disposition === "in-progress") {
-    return inProgressResponse();
+    return inProgressResponse(await reportsService.getReport(user.id, attemptId));
   }
   const document = isEncounterDocument(attempt.encounter.encounterData)
     ? attempt.encounter.encounterData
@@ -150,18 +150,21 @@ function reportStateResponse(state: PersistedReportState, contested = false) {
     state.generationStatus === "IN_PROGRESS" &&
     generationStartedWithinLease(state.generationStartedAt)
   ) {
-    return inProgressResponse();
+    return inProgressResponse(state);
   }
-  if (contested) return inProgressResponse();
+  if (contested) return inProgressResponse(state);
   return Response.json({
     ...state,
     status: state.generationStatus === "FAILED" ? "failed" as const : "pending" as const,
   });
 }
 
-function inProgressResponse() {
+function inProgressResponse(state: PersistedReportState) {
   return Response.json(
     {
+      caseId: state.caseId,
+      completedAt: state.completedAt,
+      transcript: state.transcript,
       status: "in-progress" as const,
       stage: "evaluating" as const,
       retryAfterMs: 2_500,

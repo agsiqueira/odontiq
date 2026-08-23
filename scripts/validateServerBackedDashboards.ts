@@ -92,6 +92,7 @@ async function main() {
     integrityStatus: "VALID",
     generationStartedAt: null,
     generationError: null,
+    completedAt: "2026-07-12T12:00:00.000Z",
     evaluation: { status: "complete" },
     score: { percentage: 90 },
     report: { caseId: "case-01" },

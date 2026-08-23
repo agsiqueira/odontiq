@@ -44,7 +44,6 @@ assert.match(
 
 for (const prohibitedLearnerText of [
   "Back to Mentor",
-  "Download PDF",
   "Overall score",
   "facultyReport.overallScore",
   "formatFacultyReportPercent",

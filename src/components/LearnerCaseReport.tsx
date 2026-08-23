@@ -2,13 +2,18 @@
 
 import Link from "next/link";
 import { Download, Home, ListRestart } from "lucide-react";
-import { useCallback } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import type { FacultyReport } from "@/lib/facultyRubric/report";
 import { formatEncounterTranscriptTimestamp } from "@/lib/facultyRubric/report/displayContent";
 import { getLearnerInterfaceText } from "@/lib/interfaceTerminology";
+import {
+  buildLearnerReportPdfFilename,
+  generateLearnerReportPdfBlob,
+  type LearnerReportPdfModel,
+} from "@/lib/learnerReportPdf";
 import {
   buildLearnerTranscriptFilename,
   buildLearnerTranscriptText,
@@ -37,12 +42,25 @@ export function LearnerCaseReport({
   feedbackState = facultyReport ? "available" : "failed",
   onRetryFeedback,
 }: LearnerCaseReportProps) {
-  const strengths = facultyReport ? facultyReport.strengths.slice(0, 3) : [];
-  const improvements = facultyReport
-    ? facultyReport.improvementAreas
-        .filter((item) => item.status === "not-met")
-        .slice(0, 3)
-    : [];
+  const [isPreparingPdf, setIsPreparingPdf] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
+  const downloadInProgressRef = useRef(false);
+  const strengths = useMemo(
+    () => facultyReport
+      ? facultyReport.strengths.slice(0, 3)
+          .map((item) => getLearnerInterfaceText(item.title))
+      : [],
+    [facultyReport],
+  );
+  const improvements = useMemo(
+    () => facultyReport
+      ? facultyReport.improvementAreas
+          .filter((item) => item.status === "not-met")
+          .slice(0, 3)
+          .map((item) => getLearnerInterfaceText(item.title))
+      : [],
+    [facultyReport],
+  );
 
   const downloadTranscript = useCallback(() => {
     const text = buildLearnerTranscriptText(
@@ -61,6 +79,56 @@ export function LearnerCaseReport({
     window.setTimeout(() => window.URL.revokeObjectURL(url), 0);
   }, [caseId, caseLabel, caseTitle, completedAt, patientName, transcript]);
 
+  const downloadPdfReport = useCallback(async () => {
+    if (downloadInProgressRef.current || isPreparingPdf) return;
+    downloadInProgressRef.current = true;
+    setIsPreparingPdf(true);
+    setPdfError(false);
+    let url: string | undefined;
+    try {
+      const model: LearnerReportPdfModel = {
+        caseId,
+        caseLabel: caseLabel ?? caseId,
+        patientName,
+        complaint: caseTitle,
+        completedAt,
+        feedback: facultyReport
+          ? { status: "available", strengths, improvementAreas: improvements }
+          : { status: "unavailable" },
+        transcript: transcript.map(({ role, text, timestamp }) => ({
+          role,
+          text,
+          timestamp,
+        })),
+      };
+      const blob = await Promise.resolve(generateLearnerReportPdfBlob(model));
+      url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = buildLearnerReportPdfFilename(caseId);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch {
+      setPdfError(true);
+    } finally {
+      if (url) window.URL.revokeObjectURL(url);
+      downloadInProgressRef.current = false;
+      setIsPreparingPdf(false);
+    }
+  }, [
+    caseId,
+    caseLabel,
+    caseTitle,
+    completedAt,
+    facultyReport,
+    improvements,
+    isPreparingPdf,
+    patientName,
+    strengths,
+    transcript,
+  ]);
+
   return (
     <div className="mx-auto w-full max-w-4xl space-y-4">
       <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
@@ -77,10 +145,10 @@ export function LearnerCaseReport({
 
       {facultyReport ? (
         <>
-          <FeedbackSection title="Strengths" items={strengths.map((item) => item.title)} />
+          <FeedbackSection title="Strengths" items={strengths} />
           <FeedbackSection
             title="Areas for Improvement"
-            items={improvements.map((item) => item.title)}
+            items={improvements}
           />
         </>
       ) : (
@@ -93,11 +161,28 @@ export function LearnerCaseReport({
       <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-lg font-semibold">Consultation Transcript</h2>
-          <Button type="button" variant="outline" className="h-11" onClick={downloadTranscript}>
-            <Download className="size-4" aria-hidden="true" />
-            Download Transcript
-          </Button>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <Button
+              type="button"
+              variant="outline"
+              className="h-11"
+              disabled={isPreparingPdf}
+              onClick={() => void downloadPdfReport()}
+            >
+              <Download className="size-4" aria-hidden="true" />
+              {isPreparingPdf ? "Preparing PDF…" : "Download PDF Report"}
+            </Button>
+            <Button type="button" variant="outline" className="h-11" onClick={downloadTranscript}>
+              <Download className="size-4" aria-hidden="true" />
+              Download Transcript
+            </Button>
+          </div>
         </div>
+        {pdfError ? (
+          <p className="mt-3 text-sm text-red-700" role="status">
+            The PDF report could not be downloaded. Please try again.
+          </p>
+        ) : null}
         <div className="mt-4 max-h-[36rem] overflow-y-auto overscroll-contain pr-1">
           <EncounterTranscript messages={transcript} />
         </div>
@@ -163,7 +248,7 @@ function FeedbackSection({ title, items }: { title: string; items: string[] }) {
         <ul className="mt-4 space-y-3">
           {items.map((item) => (
             <li key={item} className="break-words rounded-xl bg-[var(--color-muted)] px-4 py-3 text-sm font-medium leading-6">
-              {getLearnerInterfaceText(item)}
+              {item}
             </li>
           ))}
         </ul>
