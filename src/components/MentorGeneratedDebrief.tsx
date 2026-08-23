@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   type RefObject,
   useCallback,
@@ -126,6 +127,10 @@ export function MentorGeneratedDebrief({
   const spokenOpeningKeyRef = useRef<string | null>(null);
   const mentorVideoRef = useRef<HTMLVideoElement>(null);
   const mentorSpeechPlayback = useMentorSpeechPlayback();
+  const savedReportHref =
+    localSummary?.caseId === caseId && localSummary.attemptId.trim()
+      ? `/reports/${localSummary.caseId}?attemptId=${encodeURIComponent(localSummary.attemptId)}`
+      : null;
   const {
     isSpeaking: isMentorSpeaking,
     speak: speakMentorMessage,
@@ -460,16 +465,27 @@ export function MentorGeneratedDebrief({
         <p className="mt-3 text-sm leading-6 text-red-700">
           {isRetryingDebrief
             ? "OdontIQ is retrying your mentor debrief. Please keep this page open."
-            : "The mentor debrief could not be generated. Your encounter and transcript were saved. Select ‘Retry mentor debrief’ below to try again without repeating the encounter."}
+            : "The mentor debrief could not be generated. Your encounter and transcript were saved. You can retry the mentor debrief or continue to your saved report without repeating the encounter."}
         </p>
-        <Button
-          type="button"
-          className="mt-4"
-          disabled={isRetryingDebrief}
-          onClick={() => void retryDebrief()}
-        >
-          {isRetryingDebrief ? "Retrying mentor debrief…" : "Retry mentor debrief"}
-        </Button>
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          {savedReportHref ? (
+            <Button asChild>
+              <Link href={savedReportHref}>View saved report</Link>
+            </Button>
+          ) : null}
+          <Button
+            type="button"
+            disabled={isRetryingDebrief}
+            onClick={() => void retryDebrief()}
+          >
+            {isRetryingDebrief
+              ? "Retrying mentor debrief…"
+              : "Retry mentor debrief"}
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/home">Return home</Link>
+          </Button>
+        </div>
       </section>
     );
   }

@@ -7,7 +7,7 @@ const [mentorSource, debriefRouteSource] = await Promise.all([
 ]);
 
 const failureInstructions =
-  "The mentor debrief could not be generated. Your encounter and transcript were saved. Select ‘Retry mentor debrief’ below to try again without repeating the encounter.";
+  "The mentor debrief could not be generated. Your encounter and transcript were saved. You can retry the mentor debrief or continue to your saved report without repeating the encounter.";
 const retryProgress =
   "OdontIQ is retrying your mentor debrief. Please keep this page open.";
 
