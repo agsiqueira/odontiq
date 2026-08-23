@@ -90,6 +90,7 @@ export function CanonicalCaseReport({
   const [summary, setSummary] = useState<CompletedEncounterAttempt | null>(null);
   const [serverTranscript, setServerTranscript] =
     useState<ConversationMessage[] | null>(null);
+  const [isAutomaticallyRetrying, setIsAutomaticallyRetrying] = useState(false);
   const [isRetrying, setIsRetrying] = useState(false);
   const mountedRef = useRef(true);
   const { user } = useUser();
@@ -125,13 +126,6 @@ export function CanonicalCaseReport({
       let confirmedTranscript: ConversationMessage[] | null = null;
       try {
         let payload = await requestReport(attemptId);
-        if (payload.status === "in-progress") {
-          setStatus("generating");
-          setGenerationStage("evaluating");
-          const joined = await waitForExistingReport(attemptId, () => cancelled);
-          if (!joined) return;
-          payload = joined;
-        }
         if (payload.status !== "in-progress") {
           if (payload.caseId !== caseId) {
             throw new Error("server_report_case_mismatch");
@@ -144,56 +138,83 @@ export function CanonicalCaseReport({
           setStatus("ready");
           return;
         }
-        if (payload.status !== "complete") {
+
+        const participatesInInitialGeneration =
+          payload.status === "pending" || payload.status === "in-progress";
+        let initialGenerationFailed = false;
+        if (payload.status === "pending") {
           setGenerationStage("preparing");
           setStatus("generating");
           setGenerationStage("evaluating");
-          payload = await requestReport(attemptId, "POST");
-          if (payload.status === "in-progress") {
+          try {
+            payload = await generateOrJoinReport(attemptId, () => cancelled);
+          } catch {
+            initialGenerationFailed = true;
+          }
+        } else if (payload.status === "in-progress") {
+          setStatus("generating");
+          setGenerationStage("evaluating");
+          try {
             const joined = await waitForExistingReport(attemptId, () => cancelled);
             if (!joined) return;
             payload = joined;
-          }
-          if (payload.status !== "in-progress") {
-            if (payload.caseId !== caseId) {
-              throw new Error("server_report_case_mismatch");
-            }
-            confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
-            setServerTranscript(confirmedTranscript);
+          } catch {
+            initialGenerationFailed = true;
           }
         }
-        if (
-          payload.status === "complete" &&
-          payload.evaluation &&
-          payload.score &&
-          payload.report
-        ) {
-          setGenerationStage("building");
-          candidate = {
-            attemptId,
-            caseId,
-            conversationHistory: payload.transcript,
-            coveredFacts: [],
-            coveredChecklistItems: [],
-            encounterEvents: [],
-            examinationsViewed: [],
-            savedAt: payload.report.reportMetadata.generatedAt,
-            lifecycleStatus: "completed",
-            persistence: {
-              status: "synced",
-              attempts: 0,
-              updatedAt: payload.report.reportMetadata.generatedAt,
-            },
-            facultyRubricEvaluation: payload.evaluation,
-            facultyRubricScore: payload.score,
-            facultyReport: payload.report,
-            facultyReportGeneration: {
-              status: "complete",
+        if (!initialGenerationFailed && payload.status !== "in-progress") {
+          if (payload.caseId !== caseId) {
+            throw new Error("server_report_case_mismatch");
+          }
+          confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
+          setServerTranscript(confirmedTranscript);
+        }
+
+        if (initialGenerationFailed) {
+          try {
+            const recovered = await requestReport(attemptId);
+            if (recovered.status !== "in-progress") {
+              if (recovered.caseId !== caseId) {
+                throw new Error("server_report_case_mismatch");
+              }
+              payload = recovered;
+              confirmedTranscript = recovered.transcript.map((message) => ({
+                ...message,
+              }));
+              setServerTranscript(confirmedTranscript);
+            }
+          } catch {
+            // The bounded retry can proceed without exposing or substituting data.
+          }
+        }
+        candidate = buildCompletedReportSummaryIfAvailable({
+          attemptId,
+          caseId,
+          payload,
+        });
+        if (!candidate && participatesInInitialGeneration) {
+          setIsAutomaticallyRetrying(true);
+          setStatus(confirmedTranscript ? "ready" : "generating");
+          try {
+            payload = await generateOrJoinReport(attemptId, () => cancelled);
+            if (payload.status !== "in-progress") {
+              if (payload.caseId !== caseId) {
+                throw new Error("server_report_case_mismatch");
+              }
+              confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
+              setServerTranscript(confirmedTranscript);
+            }
+            candidate = buildCompletedReportSummaryIfAvailable({
               attemptId,
-              startedAt: payload.report.reportMetadata.generatedAt,
-              updatedAt: payload.report.reportMetadata.generatedAt,
-            },
-          };
+              caseId,
+              payload,
+            });
+          } finally {
+            if (!cancelled) setIsAutomaticallyRetrying(false);
+          }
+        }
+        if (candidate) {
+          setGenerationStage("building");
           setGenerationStage("finalizing");
         }
       } catch {
@@ -295,8 +316,18 @@ export function CanonicalCaseReport({
         completedAt={presentation?.completedAt}
         facultyReport={presentation?.report}
         transcript={presentation?.transcript ?? serverTranscript}
-        feedbackState={isRetrying ? "retrying" : presentation ? "available" : "failed"}
-        onRetryFeedback={presentation ? undefined : () => void retry()}
+        feedbackState={
+          isAutomaticallyRetrying
+            ? "automatic-retrying"
+            : isRetrying
+              ? "retrying"
+              : presentation
+                ? "available"
+                : "failed"
+        }
+        onRetryFeedback={
+          presentation || isAutomaticallyRetrying ? undefined : () => void retry()
+        }
       />
     );
   }
@@ -362,6 +393,23 @@ function buildCompletedReportSummary({
       updatedAt: generatedAt,
     },
   };
+}
+
+function buildCompletedReportSummaryIfAvailable({
+  attemptId,
+  caseId,
+  payload,
+}: {
+  attemptId: string;
+  caseId: string;
+  payload: ServerReportResponse;
+}) {
+  return payload.status === "complete" &&
+    payload.evaluation &&
+    payload.score &&
+    payload.report
+    ? buildCompletedReportSummary({ attemptId, caseId, payload })
+    : null;
 }
 
 function FacultyReportGenerationProgress({
@@ -503,6 +551,17 @@ async function waitForExistingReport(
       REPORT_STATUS_POLL_TIMEOUT_MS / REPORT_STATUS_POLL_INTERVAL_MS,
     ),
   });
+}
+
+async function generateOrJoinReport(
+  attemptId: string,
+  isCancelled: () => boolean,
+) {
+  const payload = await requestReport(attemptId, "POST");
+  if (payload.status !== "in-progress") return payload;
+  const joined = await waitForExistingReport(attemptId, isCancelled);
+  if (!joined) throw new Error("server_report_generation_timeout");
+  return joined;
 }
 
 function isServerReportResponse(value: unknown): value is ServerReportResponse {

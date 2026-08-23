@@ -43,6 +43,7 @@
     "validate:patient-core-responses": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientCoreResponses.ts",
     "validate:learner-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateSimplifiedLearnerReport.ts",
     "validate:feedback-failure-report": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateFeedbackFailureReport.ts",
+    "validate:visible-feedback-retry": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateVisibleFeedbackRetry.ts",
     "validate:app-user-resolution": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateAppUserResolution.ts",
     "validate:patient-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientDialogueNormalization.ts",
     "validate:patient-message-intent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validatePatientMessageIntent.ts",

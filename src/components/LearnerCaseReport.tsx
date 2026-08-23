@@ -25,7 +25,7 @@ type LearnerCaseReportProps = {
   completedAt?: string;
   facultyReport?: FacultyReport;
   transcript: ConversationMessage[];
-  feedbackState?: "available" | "failed" | "retrying";
+  feedbackState?: "available" | "failed" | "automatic-retrying" | "retrying";
   onRetryFeedback?: () => void;
 };
 
@@ -140,18 +140,21 @@ function FeedbackUnavailableSection({
   feedbackState,
   onRetry,
 }: {
-  feedbackState: "available" | "failed" | "retrying";
+  feedbackState: "available" | "failed" | "automatic-retrying" | "retrying";
   onRetry?: () => void;
 }) {
   const isRetrying = feedbackState === "retrying";
+  const isAutomaticallyRetrying = feedbackState === "automatic-retrying";
 
   return (
     <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
       <h2 className="text-lg font-semibold">Personalized feedback</h2>
       <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]" role="status">
-        {isRetrying
-          ? "OdontIQ is retrying your personalized feedback. Please keep this page open."
-          : "Personalized feedback was not generated. Your encounter and transcript were saved. Select ‘Retry personalized feedback’ below to try again without repeating the encounter."}
+        {isAutomaticallyRetrying
+          ? "The first attempt was interrupted. OdontIQ is retrying your personalized feedback. Please keep this page open."
+          : isRetrying
+            ? "OdontIQ is retrying your personalized feedback. Please keep this page open."
+            : "Personalized feedback was not generated. Your encounter and transcript were saved. Select ‘Retry personalized feedback’ below to try again without repeating the encounter."}
       </p>
       {onRetry ? (
         <Button
