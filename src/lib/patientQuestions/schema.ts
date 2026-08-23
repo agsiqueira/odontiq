@@ -106,6 +106,7 @@ export function parsePatientQuestionClassification(input: {
       !eventHasSemanticallyCompatibleEvidence(
         event,
         evidenceAliases.map((alias) => aliasesByName.get(alias)!),
+        input.evidenceAliases,
       ),
     )
   ) {
@@ -150,6 +151,7 @@ function eventRequiresPatientEvidence(event: PatientQuestionEventId) {
 function eventHasSemanticallyCompatibleEvidence(
   event: PatientQuestionEventId,
   evidence: readonly PatientQuestionEvidenceAlias[],
+  allEvidence: readonly PatientQuestionEvidenceAlias[],
 ) {
   if (event === "hospitalAdmissionOrSurgicalManagementDiscussed") {
     return evidence.some((entry) =>
@@ -160,6 +162,14 @@ function eventHasSemanticallyCompatibleEvidence(
     return evidence.some((entry) =>
       entry.role === "student" && case2AntibioticPlanEvidenceIsCompatible(entry.content),
     );
+  }
+  if (event === "incisionAndDrainageProposed") {
+    return evidence.some((entry) =>
+      entry.role === "student" && case3DrainageProposalEvidenceIsCompatible(entry.content),
+    );
+  }
+  if (event === "patientAgreedToIncisionAndDrainage") {
+    return case3DrainageAgreementEvidenceIsCompatible(evidence, allEvidence);
   }
   return true;
 }
@@ -193,6 +203,63 @@ function case2AntibioticPlanEvidenceIsCompatible(content: string) {
 
   return /\b(?:recommend(?:ed|ing)?|start(?:ed|ing)?|begin(?:ning)?|give|giving|administer(?:ed|ing)?|order(?:ed|ing)?|prescrib(?:e|ed|ing)|need|will use)\b/.test(normalized)
     || /\bthis antibiotic\b.{0,30}\bwill\b/.test(normalized);
+}
+
+function case3DrainageProposalEvidenceIsCompatible(content: string) {
+  const normalized = content.toLowerCase().replace(/[’]/g, "'");
+  const drainageReference = /\b(?:incision and drainage|i\s*(?:&|and)\s*d)\b|\b(?:drain|drainage|draining)\b.{0,55}\b(?:abscess|infection|pus|pressure)\b|\b(?:abscess|infection|pus|pressure)\b.{0,55}\b(?:drain|drainage|draining)\b/;
+  if (!drainageReference.test(normalized)) return false;
+
+  const negatedOrDeclined = /\b(?:no|not|won't|will not|do not|don't|decline(?:d|s)?|refus(?:e|ed|es)|without)\b.{0,70}\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b.{0,70}\b(?:not indicated|not recommended|unnecessary|declined|refused|won't|will not)\b/.test(normalized);
+  const hypotheticalOrDeferred = /\b(?:may|might|could|possibly|perhaps|consider|hypothetical(?:ly)?|later|eventually|in the future)\b.{0,80}\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\bif\b.{0,100}\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized);
+  const historical = /\b(?:have you ever|did you ever|previously|in the past|history of)\b.{0,90}\b(?:incision|drain|drainage|drained|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\b(?:incision|drain|drainage|drained|i\s*(?:&|and)\s*d)\b.{0,60}\b(?:before|previously|in the past|history|yesterday|earlier|last (?:week|month|year))\b/.test(normalized)
+    || /\b(?:performed|completed|did)\b.{0,50}\b(?:incision|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized);
+  if (negatedOrDeclined || hypotheticalOrDeferred || historical) return false;
+
+  return /\b(?:i'd like to|i recommend|i propose|i offer|i plan to|i will|i(?:'m| am) going to|we plan to|we(?:'re| are) going to|we (?:need|should|can|will)|the plan is to|let's|perform|proceed with|do)\b/.test(normalized);
+}
+
+function case3DrainageAgreementEvidenceIsCompatible(
+  citedEvidence: readonly PatientQuestionEvidenceAlias[],
+  allEvidence: readonly PatientQuestionEvidenceAlias[],
+) {
+  const citedAliases = new Set(citedEvidence.map((entry) => entry.alias));
+  const validProposalIndexes = allEvidence.flatMap((entry, index) =>
+    entry.role === "student" &&
+    citedAliases.has(entry.alias) &&
+    case3DrainageProposalEvidenceIsCompatible(entry.content)
+      ? [index]
+      : [],
+  );
+  if (validProposalIndexes.length === 0) return false;
+
+  return allEvidence.some((entry, patientIndex) => {
+    if (entry.role !== "patient" || !citedAliases.has(entry.alias)) return false;
+    const normalized = entry.content.toLowerCase().replace(/[’]/g, "'").trim();
+    if (/\b(?:ct|imaging|x-?ray|scan|antibiotics?|anesthe(?:sia|tic)|nerve block|referral|dentist)\b/.test(normalized)) {
+      return false;
+    }
+    const earlierProposal = validProposalIndexes.some((index) => index < patientIndex);
+    if (!earlierProposal) return false;
+
+    const explicitlyAgreesToDrainage = /\b(?:agree|consent|okay|ok|fine|alright|go ahead|proceed|do it|let's do it|yes)\b.{0,60}\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+      || /\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b.{0,60}\b(?:agree|consent|okay|ok|fine|alright|go ahead|proceed|do it|yes)\b/.test(normalized);
+    if (explicitlyAgreesToDrainage) return true;
+
+    const genericAgreement = /^(?:yes(?:,? (?:that's|that is))? (?:okay|ok|fine)|yes,? i (?:agree|consent)|okay|ok|alright|that's fine|that is fine|i agree|i consent|go ahead|let's do it|we can proceed)(?:[,.!]|$)/.test(normalized);
+    if (!genericAgreement) return false;
+
+    const immediatelyPrevious = allEvidence[patientIndex - 1];
+    if (!immediatelyPrevious || immediatelyPrevious.role !== "student" || !citedAliases.has(immediatelyPrevious.alias)) {
+      return false;
+    }
+    if (case3DrainageProposalEvidenceIsCompatible(immediatelyPrevious.content)) return true;
+    const consentBridge = /\b(?:is that (?:okay|ok|fine)|do you agree|do i have your consent|can we proceed|may we proceed|are you (?:okay|ok|comfortable) with (?:that|this|proceeding))\b/i.test(immediatelyPrevious.content);
+    return consentBridge && validProposalIndexes.some((index) => index < patientIndex - 1);
+  });
 }
 
 function getSafeMetadata(
