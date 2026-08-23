@@ -362,7 +362,7 @@ function findCase1Contradiction(response: string): string | undefined {
   if (/\b(?:pain|toothache|it)\b.{0,35}\b(?:two weeks?|14 days?|one week|seven days?|two days?|yesterday)\b/i.test(response)) return "contradiction of Case 1 four-day dental-pain duration";
   if (/\b(?:short of breath|trouble breathing|hard to breathe)\b.{0,35}\b(?:while )?(?:sitting|upright)\b/i.test(response) && !/\b(?:no|not|don't|do not)\b/i.test(response)) return "contradiction of Case 1 upright breathing status";
   if (/\b(?:measured|checked|temperature was|fever of)\b.{0,25}\b103\b|\b103\s*(?:degrees?|°)/i.test(response)) return "invented Case 1 home temperature";
-  if (/\b(?:i(?:'m| am)|yes,? i(?:'m| am))\s+(?!not\b)allergic\b.{0,25}\bpenicillin\b/i.test(response)) return "contradiction of Case 1 no penicillin allergy";
+  if (affirmsCase1PenicillinReaction(response)) return "contradiction of Case 1 no penicillin allergy";
   if (/\b(?:i\s+(?:use|take|am on)|yes,? i\s+(?:use|take))\b.{0,25}\binsulin\b/i.test(response)) return "invented Case 1 insulin use";
   if (/\b(?:i\s+(?:drink|use)|yes,? i\s+(?:drink|use))\b.{0,30}\b(?:alcohol|beer|wine|liquor)\b/i.test(response)) return "contradiction of Case 1 no alcohol use";
   if (/\b(?:i\s+(?:use|take)|yes,? i\s+(?:use|take))\b.{0,30}\b(?:illicit|recreational|street) drugs?\b/i.test(response)) return "contradiction of Case 1 no illicit-drug use";
@@ -373,6 +373,21 @@ function findCase1Contradiction(response: string): string | undefined {
   if (/\bi\s+(?:took|used|tried)\b.{0,25}\b(?:ibuprofen|advil|motrin|acetaminophen|tylenol|aspirin)\b/i.test(response)) return "invented Case 1 exact over-the-counter analgesic";
   if (/\b(?:[0-7]|9|10)\s*(?:\/|out of)\s*10\b/i.test(response) && /\b(?:now|current|currently|pain is|rate)\b/i.test(response)) return "contradiction of Case 1 current 8/10 severity";
   return undefined;
+}
+
+function affirmsCase1PenicillinReaction(response: string): boolean {
+  const affirmativePatterns = [
+    /\bi(?:'m| am| was| have been)\s+(?!not\b)allergic\b.{0,35}\bpenicillin\b/i,
+    /\b(?:i\s+(?:have|had)|my)\s+(?!no\b|never\b|not\b)(?:an?\s+)?\bpenicillin\s+allerg(?:y|ies)\b/i,
+    /\bi(?:'ve| have| had)\s+(?!never\b|not\b)(?:had\s+|experienced\s+)?(?:an?\s+|some\s+|bad\s+)*(?:allergic\s+)?(?:reaction|reactions|hives|rash|anaphylaxis|angioedema)\b.{0,50}\b(?:to|from|after(?:\s+taking)?|when\s+i\s+took)\b.{0,25}\bpenicillin\b/i,
+    /\bi\s+(?!never\b)(?:reacted|react)\s+(?:badly\s+)?\b(?:to|after(?:\s+taking)?)\b.{0,20}\bpenicillin\b/i,
+    /\bi\s+(?:got|developed|experienced)\s+(?:an?\s+|some\s+|bad\s+)*(?:allergic\s+)?(?:reaction|reactions|hives|rash|anaphylaxis|angioedema)\b.{0,50}\b(?:to|from|after(?:\s+taking)?)\b.{0,25}\bpenicillin\b/i,
+    /\bi\s+broke\s+out\s+in\s+(?:a\s+)?(?:hives|rash)\b.{0,40}\bafter\s+(?:taking\s+)?penicillin\b/i,
+    /\bpenicillin\s+(?:caus(?:e|es|ed)|giv(?:e|es)|gave|triggered)\s+(?:me\s+)?(?:an?\s+|some\s+|bad\s+)*(?:allergic\s+)?(?:reaction|reactions|hives|rash|anaphylaxis|angioedema)\b/i,
+    /\bpenicillin\s+(?:made|caused)\s+(?:my\s+)?(?:lips?|face|mouth|tongue|throat)\s+(?:swell|swell up|swollen)\b/i,
+    /\bmy\s+(?:lips?|face|mouth|tongue|throat)\s+(?:swelled|swelled up|got swollen)\b.{0,35}\b(?:after|from|when)\b.{0,25}\bpenicillin\b/i,
+  ];
+  return affirmativePatterns.some((pattern) => pattern.test(response));
 }
 
 function affirmsOpioidHistory(response: string): boolean {
