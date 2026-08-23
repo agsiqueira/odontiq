@@ -65,6 +65,7 @@
     "validate:case01-penicillin-consistency": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase01PenicillinConsistency.ts",
     "validate:case01-faculty-facts": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase01FacultyFacts.ts",
     "validate:case02-systemic-infection": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02SystemicInfection.ts",
+    "validate:case02-antibiotic-question-timing": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02AntibioticQuestionTiming.ts",
     "validate:case02-image-orientation": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase02ImageOrientation.ts",
     "validate:case03-periapical-abscess": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03PeriapicalAbscess.ts",
     "validate:case03-consent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ConsentResponse.ts",

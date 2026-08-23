@@ -151,10 +151,17 @@ function eventHasSemanticallyCompatibleEvidence(
   event: PatientQuestionEventId,
   evidence: readonly PatientQuestionEvidenceAlias[],
 ) {
-  if (event !== "hospitalAdmissionOrSurgicalManagementDiscussed") return true;
-  return evidence.some((entry) =>
-    entry.role === "student" && case1ManagementEvidenceIsCompatible(entry.content),
-  );
+  if (event === "hospitalAdmissionOrSurgicalManagementDiscussed") {
+    return evidence.some((entry) =>
+      entry.role === "student" && case1ManagementEvidenceIsCompatible(entry.content),
+    );
+  }
+  if (event === "antibioticsRecommendedAsCurrentPlan") {
+    return evidence.some((entry) =>
+      entry.role === "student" && case2AntibioticPlanEvidenceIsCompatible(entry.content),
+    );
+  }
+  return true;
 }
 
 function case1ManagementEvidenceIsCompatible(content: string) {
@@ -168,6 +175,24 @@ function case1ManagementEvidenceIsCompatible(content: string) {
     || /\b(?:extract|extracted|extracting|extraction)\b/.test(normalized)
     || /\bpull(?:ed|ing)? (?:out )?(?:the |this |that |your )?(?:bad )?tooth\b/.test(normalized)
     || /\b(?:remove|removing) (?:the |this |that |your )?(?:bad )?tooth\b|\bremoval of (?:the |this |that |your )?(?:bad )?tooth\b/.test(normalized);
+}
+
+function case2AntibioticPlanEvidenceIsCompatible(content: string) {
+  const normalized = content.toLowerCase().replace(/[’]/g, "'");
+  const antibioticReference = /\b(?:antibiotics?|antimicrobial (?:treatment|therapy)|unasyn|ampicillin[ -]sulbactam|clindamycin)\b/;
+  if (!antibioticReference.test(normalized)) return false;
+
+  const historyOrPriorUse = /\b(?:history of|in the past|previously|prior)\b.{0,60}\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b/.test(normalized)
+    || /^(?:have|has|had|did|were|was)\b.{0,100}\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b.{0,30}\b(?:ever|before|previously|prior|past)\b/.test(normalized);
+  const allergyInquiry = /\b(?:allerg(?:y|ic|ies)|reaction|reacted)\b.{0,60}\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b/.test(normalized)
+    || /\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b.{0,60}\b(?:allerg(?:y|ic|ies)|reaction|reacted)\b/.test(normalized);
+  const hypothetical = /\b(?:if|would|could|might|maybe|possibly|hypothetical(?:ly)?)\b.{0,80}\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b/.test(normalized);
+  const negated = /\b(?:no|not|won't|will not|do not|don't|without)\b.{0,50}\b(?:recommend|start|begin|give|administer|order|prescribe|use|need)?\w*\b.{0,30}\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b/.test(normalized)
+    || /\b(?:antibiotics?|antimicrobial|unasyn|ampicillin[ -]sulbactam|clindamycin)\b.{0,50}\b(?:not indicated|not recommended|unnecessary|won't be given|will not be given)\b/.test(normalized);
+  if (historyOrPriorUse || allergyInquiry || hypothetical || negated) return false;
+
+  return /\b(?:recommend(?:ed|ing)?|start(?:ed|ing)?|begin(?:ning)?|give|giving|administer(?:ed|ing)?|order(?:ed|ing)?|prescrib(?:e|ed|ing)|need|will use)\b/.test(normalized)
+    || /\bthis antibiotic\b.{0,30}\bwill\b/.test(normalized);
 }
 
 function getSafeMetadata(
