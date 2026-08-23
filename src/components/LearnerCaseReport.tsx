@@ -23,8 +23,10 @@ type LearnerCaseReportProps = {
   patientName: string;
   caseLabel?: string;
   completedAt?: string;
-  facultyReport: FacultyReport;
+  facultyReport?: FacultyReport;
   transcript: ConversationMessage[];
+  feedbackState?: "available" | "failed" | "retrying";
+  onRetryFeedback?: () => void;
 };
 
 export function LearnerCaseReport({
@@ -35,11 +37,15 @@ export function LearnerCaseReport({
   completedAt,
   facultyReport,
   transcript,
+  feedbackState = facultyReport ? "available" : "failed",
+  onRetryFeedback,
 }: LearnerCaseReportProps) {
-  const strengths = facultyReport.strengths.slice(0, 3);
-  const improvements = facultyReport.improvementAreas
-    .filter((item) => item.status === "not-met")
-    .slice(0, 3);
+  const strengths = facultyReport ? facultyReport.strengths.slice(0, 3) : [];
+  const improvements = facultyReport
+    ? facultyReport.improvementAreas
+        .filter((item) => item.status === "not-met")
+        .slice(0, 3)
+    : [];
 
   const downloadTranscript = useCallback(() => {
     const text = buildLearnerTranscriptText(
@@ -71,22 +77,33 @@ export function LearnerCaseReport({
               {caseLabel ? `${caseLabel} · ` : ""}{caseTitle}
             </p>
           </div>
-          <div className="w-full shrink-0 rounded-xl bg-[color-mix(in_srgb,var(--color-brand)_8%,white)] px-5 py-4 sm:w-auto sm:min-w-40">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-brand)]">
-              Overall score
-            </p>
-            <p className="mt-1 text-3xl font-semibold">
-              {formatFacultyReportPercent(facultyReport.overallScore.percentage)}
-            </p>
-          </div>
+          {facultyReport ? (
+            <div className="w-full shrink-0 rounded-xl bg-[color-mix(in_srgb,var(--color-brand)_8%,white)] px-5 py-4 sm:w-auto sm:min-w-40">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-brand)]">
+                Overall score
+              </p>
+              <p className="mt-1 text-3xl font-semibold">
+                {formatFacultyReportPercent(facultyReport.overallScore.percentage)}
+              </p>
+            </div>
+          ) : null}
         </div>
       </section>
 
-      <FeedbackSection title="Strengths" items={strengths.map((item) => item.title)} />
-      <FeedbackSection
-        title="Areas for Improvement"
-        items={improvements.map((item) => item.title)}
-      />
+      {facultyReport ? (
+        <>
+          <FeedbackSection title="Strengths" items={strengths.map((item) => item.title)} />
+          <FeedbackSection
+            title="Areas for Improvement"
+            items={improvements.map((item) => item.title)}
+          />
+        </>
+      ) : (
+        <FeedbackUnavailableSection
+          feedbackState={feedbackState}
+          onRetry={onRetryFeedback}
+        />
+      )}
 
       <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -116,6 +133,37 @@ export function LearnerCaseReport({
         </Button>
       </nav>
     </div>
+  );
+}
+
+function FeedbackUnavailableSection({
+  feedbackState,
+  onRetry,
+}: {
+  feedbackState: "available" | "failed" | "retrying";
+  onRetry?: () => void;
+}) {
+  const isRetrying = feedbackState === "retrying";
+
+  return (
+    <section className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--elevation-subtle)] sm:p-6">
+      <h2 className="text-lg font-semibold">Personalized feedback</h2>
+      <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]" role="status">
+        {isRetrying
+          ? "OdontIQ is retrying your personalized feedback. Please keep this page open."
+          : "Personalized feedback was not generated. Your encounter and transcript were saved. Select ‘Retry personalized feedback’ below to try again without repeating the encounter."}
+      </p>
+      {onRetry ? (
+        <Button
+          type="button"
+          className="mt-4 h-11"
+          disabled={isRetrying}
+          onClick={onRetry}
+        >
+          {isRetrying ? "Retrying personalized feedback…" : "Retry personalized feedback"}
+        </Button>
+      ) : null}
+    </section>
   );
 }
 

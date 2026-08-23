@@ -10,11 +10,9 @@ import { getCaseById } from "@/lib/cases";
 import { buildCanonicalFacultyReportPresentation } from "@/lib/facultyRubric/report/presentation";
 import { getStudentDisplayName } from "@/lib/facultyRubric/report/displayContent";
 import {
-  readCompletedEncounterAttempt,
   type CompletedEncounterAttempt,
 } from "@/lib/localEncounter";
 import type { ConversationMessage } from "@/lib/conversationEngine";
-import { persistCompletedAttemptToServer } from "@/lib/persistence/completedAttemptClient";
 import { waitForGenerationCompletion } from "@/lib/facultyRubric/report/generationOwnership";
 
 type Status = "checking" | "generating" | "ready" | "missing" | "error";
@@ -52,6 +50,7 @@ const REPORT_GENERATION_PROGRESS: Record<ReportGenerationStage, number> = {
 };
 type ServerReportArtifacts = {
   status: "complete";
+  caseId: string;
   evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
   score: CompletedEncounterAttempt["facultyRubricScore"] | null;
   report: CompletedEncounterAttempt["facultyReport"] | null;
@@ -64,6 +63,7 @@ type ServerReportInProgress = {
 };
 type ServerReportPending = {
   status: "pending" | "failed";
+  caseId: string;
   evaluation: CompletedEncounterAttempt["facultyRubricEvaluation"] | null;
   score: CompletedEncounterAttempt["facultyRubricScore"] | null;
   report: CompletedEncounterAttempt["facultyReport"] | null;
@@ -88,6 +88,8 @@ export function CanonicalCaseReport({
   const [generationStage, setGenerationStage] =
     useState<ReportGenerationStage>("saving");
   const [summary, setSummary] = useState<CompletedEncounterAttempt | null>(null);
+  const [serverTranscript, setServerTranscript] =
+    useState<ConversationMessage[] | null>(null);
   const [isRetrying, setIsRetrying] = useState(false);
   const mountedRef = useRef(true);
   const { user } = useUser();
@@ -120,6 +122,7 @@ export function CanonicalCaseReport({
         return;
       }
       let candidate: CompletedEncounterAttempt | null = null;
+      let confirmedTranscript: ConversationMessage[] | null = null;
       try {
         let payload = await requestReport(attemptId);
         if (payload.status === "in-progress") {
@@ -129,12 +132,19 @@ export function CanonicalCaseReport({
           if (!joined) return;
           payload = joined;
         }
-        if (payload.status !== "complete") {
-          const local = readCompletedEncounterAttempt(caseId, attemptId);
-          if (local?.persistence.status === "pending-sync") {
-            setGenerationStage("saving");
-            await persistCompletedAttemptToServer(local);
+        if (payload.status !== "in-progress") {
+          if (payload.caseId !== caseId) {
+            throw new Error("server_report_case_mismatch");
           }
+          confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
+          setServerTranscript(confirmedTranscript);
+        }
+        if (payload.status === "failed") {
+          setSummary(null);
+          setStatus("ready");
+          return;
+        }
+        if (payload.status !== "complete") {
           setGenerationStage("preparing");
           setStatus("generating");
           setGenerationStage("evaluating");
@@ -143,6 +153,13 @@ export function CanonicalCaseReport({
             const joined = await waitForExistingReport(attemptId, () => cancelled);
             if (!joined) return;
             payload = joined;
+          }
+          if (payload.status !== "in-progress") {
+            if (payload.caseId !== caseId) {
+              throw new Error("server_report_case_mismatch");
+            }
+            confirmedTranscript = payload.transcript.map((message) => ({ ...message }));
+            setServerTranscript(confirmedTranscript);
           }
         }
         if (
@@ -180,13 +197,25 @@ export function CanonicalCaseReport({
           setGenerationStage("finalizing");
         }
       } catch {
-        candidate = readCompletedEncounterAttempt(caseId, attemptId);
-      }
-      if (!candidate) {
-        candidate = readCompletedEncounterAttempt(caseId, attemptId);
+        if (!confirmedTranscript) {
+          try {
+            const recovered = await requestReport(attemptId);
+            if (recovered.status !== "in-progress" && recovered.caseId === caseId) {
+              confirmedTranscript = recovered.transcript.map((message) => ({ ...message }));
+              setServerTranscript(confirmedTranscript);
+            }
+          } catch {
+            // Missing and unauthorized attempts remain indistinguishable.
+          }
+        }
       }
       if (cancelled) return;
       if (!candidate) {
+        if (confirmedTranscript) {
+          setSummary(null);
+          setStatus("ready");
+          return;
+        }
         setStatus("missing");
         return;
       }
@@ -219,43 +248,42 @@ export function CanonicalCaseReport({
   }, [attemptId, caseId]);
 
   const retry = useCallback(async () => {
-    if (!summary || isRetrying) return;
+    if (!attemptId || !serverTranscript || isRetrying) return;
     setIsRetrying(true);
     try {
-      setStatus("generating");
-      setGenerationStage("evaluating");
-      let payload = await requestReport(summary.attemptId, "POST");
+      let payload = await requestReport(attemptId, "POST");
       if (payload.status === "in-progress") {
         const joined = await waitForExistingReport(
-          summary.attemptId,
+          attemptId,
           () => !mountedRef.current,
         );
         if (!joined) throw new Error("server_report_generation_timeout");
         payload = joined;
       }
-      if (payload.status !== "complete" || !payload.evaluation || !payload.score || !payload.report) {
+      if (
+        payload.status !== "complete" ||
+        !payload.evaluation ||
+        !payload.score ||
+        !payload.report
+      ) {
         throw new Error("server_report_retry_failed");
       }
-      setGenerationStage("finalizing");
-      window.location.reload();
-    } catch (error) {
-      if (process.env.NODE_ENV !== "production") {
-        console.error("Canonical faculty report retry failed.", {
-          caseId,
-          error: error instanceof Error ? error.message : "unknown_error",
-          stack: error instanceof Error ? error.stack : undefined,
-        });
+      if (payload.caseId !== caseId) {
+        throw new Error("server_report_case_mismatch");
       }
-      setStatus("error");
+      setServerTranscript(payload.transcript.map((message) => ({ ...message })));
+      setSummary(buildCompletedReportSummary({ attemptId, caseId, payload }));
+      setStatus("ready");
+    } catch {
+      setStatus("ready");
     } finally {
       setIsRetrying(false);
     }
-  }, [caseId, isRetrying, summary]);
+  }, [attemptId, caseId, isRetrying, serverTranscript]);
 
   if (
     status === "ready" &&
-    summary &&
-    presentation &&
+    serverTranscript &&
     patientCase
   ) {
     return (
@@ -263,10 +291,12 @@ export function CanonicalCaseReport({
         caseId={caseId}
         caseTitle={patientCase.openingStatement}
         patientName={patientCase.patientName}
-        caseLabel={presentation.caseLabel}
-        completedAt={presentation.completedAt}
-        facultyReport={presentation.report}
-        transcript={presentation.transcript}
+        caseLabel={presentation?.caseLabel}
+        completedAt={presentation?.completedAt}
+        facultyReport={presentation?.report}
+        transcript={presentation?.transcript ?? serverTranscript}
+        feedbackState={isRetrying ? "retrying" : presentation ? "available" : "failed"}
+        onRetryFeedback={presentation ? undefined : () => void retry()}
       />
     );
   }
@@ -299,6 +329,39 @@ export function CanonicalCaseReport({
       ) : null}
     </section>
   );
+}
+
+function buildCompletedReportSummary({
+  attemptId,
+  caseId,
+  payload,
+}: {
+  attemptId: string;
+  caseId: string;
+  payload: ServerReportArtifacts;
+}): CompletedEncounterAttempt {
+  const generatedAt = payload.report?.reportMetadata.generatedAt ?? new Date().toISOString();
+  return {
+    attemptId,
+    caseId,
+    conversationHistory: payload.transcript,
+    coveredFacts: [],
+    coveredChecklistItems: [],
+    encounterEvents: [],
+    examinationsViewed: [],
+    savedAt: generatedAt,
+    lifecycleStatus: "completed",
+    persistence: { status: "synced", attempts: 0, updatedAt: generatedAt },
+    facultyRubricEvaluation: payload.evaluation ?? undefined,
+    facultyRubricScore: payload.score ?? undefined,
+    facultyReport: payload.report ?? undefined,
+    facultyReportGeneration: {
+      status: "complete",
+      attemptId,
+      startedAt: generatedAt,
+      updatedAt: generatedAt,
+    },
+  };
 }
 
 function FacultyReportGenerationProgress({
