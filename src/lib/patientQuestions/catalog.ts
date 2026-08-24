@@ -32,11 +32,8 @@ export const PATIENT_QUESTION_CATALOG = [
   {
     id: "c3-follow-up-needed-question",
     caseId: "case-03",
-    text: "Since I am going to do this, do I still need to see my dentist soon?",
-    semanticPrerequisites: [
-      "incisionAndDrainageProposed",
-      "patientAgreedToIncisionAndDrainage",
-    ],
+    text: "Even with this treatment, do I still need to see my dentist soon?",
+    semanticPrerequisites: ["temporaryTreatmentActive"],
     deterministicPrerequisiteQuestionIds: [],
     onceOnly: true,
   },

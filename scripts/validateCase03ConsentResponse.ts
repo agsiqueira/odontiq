@@ -115,6 +115,7 @@ const classified = await classifyPatientQuestionTrigger({
           schemaVersion: 1,
           caseId: "case-03",
           events: {
+            temporaryTreatmentActive: true,
             incisionAndDrainageProposed: true,
             patientAgreedToIncisionAndDrainage: true,
           },
@@ -141,10 +142,10 @@ const initial = applyPatientQuestionClassification({
 assert.equal(initial.state.version, 1);
 assert.equal(initial.selectedQuestionId, "c3-follow-up-needed-question");
 const initialQuestion = getPatientQuestion(initial.selectedQuestionId!)?.text;
-assert.equal(initialQuestion, "Since I am going to do this, do I still need to see my dentist soon?");
+assert.equal(initialQuestion, "Even with this treatment, do I still need to see my dentist soon?");
 assert.equal(
   `${draftAgreement} ${initialQuestion}`,
-  "Yes, that’s okay. Since I am going to do this, do I still need to see my dentist soon?",
+  "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
 );
 
 const repeat = applyPatientQuestionClassification({

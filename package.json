@@ -71,6 +71,7 @@
     "validate:case03-allergy-response-relevance": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03AllergyResponseRelevance.ts",
     "validate:case03-contextual-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ContextualDialogue.ts",
     "validate:case03-follow-up-evidence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03FollowUpQuestionEvidence.ts",
+    "validate:case03-temporary-treatment-question": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03TemporaryTreatmentQuestion.ts",
     "validate:case03-consent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ConsentResponse.ts",
     "validate:case04-necrotic-pulp": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04NecroticPulp.ts",
     "validate:canonical-cases": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalCases.ts --report",

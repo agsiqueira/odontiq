@@ -71,7 +71,7 @@ assert.deepEqual(
   [
     { id: "c1-extraction-question", text: "Will they pull out the bad tooth?" },
     { id: "c2-antibiotic-effect-question", text: "Will the antibiotic make the tooth better?" },
-    { id: "c3-follow-up-needed-question", text: "Since I am going to do this, do I still need to see my dentist soon?" },
+    { id: "c3-follow-up-needed-question", text: "Even with this treatment, do I still need to see my dentist soon?" },
     { id: "c3-follow-up-why", text: "Why?" },
     { id: "c4-antibiotic-needed-question", text: "Do I need an antibiotic?" },
     { id: "c5-antibiotic-request", text: "Can I get an antibiotic? It has helped in the past when I had a toothache." },

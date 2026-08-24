@@ -15,6 +15,7 @@ const CASE_EVENTS: Record<string, readonly PatientQuestionEventId[]> = {
   "case-01": ["hospitalAdmissionOrSurgicalManagementDiscussed"],
   "case-02": ["antibioticsRecommendedAsCurrentPlan"],
   "case-03": [
+    "temporaryTreatmentActive",
     "incisionAndDrainageProposed",
     "patientAgreedToIncisionAndDrainage",
   ],
@@ -31,6 +32,8 @@ const EVENT_DEFINITIONS: Record<PatientQuestionEventId, string> = {
     "current care includes hospital admission, surgical management, or OMFS/oral-surgery consultation; historical questions do not count",
   antibioticsRecommendedAsCurrentPlan:
     "antibiotics are recommended or part of the current plan; history, allergy inquiry, hypothetical mention, and saying antibiotics are unnecessary do not count",
+  temporaryTreatmentActive:
+    "the provider actively recommends, orders, starts, gives, offers, or performs a Case 3 temporary treatment: antibiotic therapy, local dental anesthesia or nerve block, incision and drainage, or acetaminophen pain relief; history, allergy inquiry, hypothetical, considered, declined, negated, unnecessary, and permanent-only treatment do not count",
   incisionAndDrainageProposed:
     "the provider proposes incision and drainage of this abscess",
   patientAgreedToIncisionAndDrainage:

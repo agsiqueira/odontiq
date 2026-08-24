@@ -27,7 +27,7 @@ const expectedText: Record<PatientQuestionId, string> = {
   "c1-extraction-question": "Will they pull out the bad tooth?",
   "c2-antibiotic-effect-question": "Will the antibiotic make the tooth better?",
   "c3-follow-up-needed-question":
-    "Since I am going to do this, do I still need to see my dentist soon?",
+    "Even with this treatment, do I still need to see my dentist soon?",
   "c3-follow-up-why": "Why?",
   "c4-antibiotic-needed-question": "Do I need an antibiotic?",
   "c5-antibiotic-request":
@@ -123,8 +123,7 @@ assert.equal(c5Insufficient.selectedQuestionId, undefined);
 const c3Initial = applyPatientQuestionClassification({
   caseId: "case-03",
   classification: classification("case-03", {
-    incisionAndDrainageProposed: true,
-    patientAgreedToIncisionAndDrainage: true,
+    temporaryTreatmentActive: true,
   }),
 });
 assert.equal(c3Initial.selectedQuestionId, "c3-follow-up-needed-question");
@@ -232,6 +231,7 @@ const expectedEvents: Record<string, readonly PatientQuestionEventId[]> = {
   "case-01": ["hospitalAdmissionOrSurgicalManagementDiscussed"],
   "case-02": ["antibioticsRecommendedAsCurrentPlan"],
   "case-03": [
+    "temporaryTreatmentActive",
     "incisionAndDrainageProposed",
     "patientAgreedToIncisionAndDrainage",
   ],

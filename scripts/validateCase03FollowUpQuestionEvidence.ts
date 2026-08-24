@@ -138,9 +138,17 @@ const unrelatedAfterPrior = parse([
 assert.equal(unrelatedAfterPrior.success, false);
 
 assert(priorAccepted.success);
-const first = applyPatientQuestionClassification({
+const legacyEventsDoNotTrigger = applyPatientQuestionClassification({
   caseId: "case-03",
   classification: priorAccepted.classification,
+});
+assert.equal(legacyEventsDoNotTrigger.selectedQuestionId, undefined);
+const first = applyPatientQuestionClassification({
+  caseId: "case-03",
+  classification: {
+    ...priorAccepted.classification,
+    detectedEvents: { temporaryTreatmentActive: true },
+  },
 });
 assert.equal(first.selectedQuestionId, "c3-follow-up-needed-question");
 const repeated = applyPatientQuestionClassification({
@@ -172,7 +180,7 @@ assert.equal(parse(aliases(validProposals[0]), {
 }, undefined, 0.849).success, false);
 assert.equal(
   getPatientQuestion("c3-follow-up-needed-question")?.text,
-  "Since I am going to do this, do I still need to see my dentist soon?",
+  "Even with this treatment, do I still need to see my dentist soon?",
 );
 
 const whyClassification = {

@@ -11,6 +11,7 @@ export type PatientQuestionId =
 export type PatientQuestionEventId =
   | "hospitalAdmissionOrSurgicalManagementDiscussed"
   | "antibioticsRecommendedAsCurrentPlan"
+  | "temporaryTreatmentActive"
   | "incisionAndDrainageProposed"
   | "patientAgreedToIncisionAndDrainage"
   | "promptDentalFollowUpConfirmed"
@@ -73,6 +74,7 @@ export type PatientQuestionClassificationResult =
 export const EMPTY_PATIENT_QUESTION_EVENTS: PatientQuestionEvents = {
   hospitalAdmissionOrSurgicalManagementDiscussed: false,
   antibioticsRecommendedAsCurrentPlan: false,
+  temporaryTreatmentActive: false,
   incisionAndDrainageProposed: false,
   patientAgreedToIncisionAndDrainage: false,
   promptDentalFollowUpConfirmed: false,

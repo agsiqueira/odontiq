@@ -76,8 +76,7 @@ function deriveEligibleQuestionId(input: {
       if (
         !input.previous.emittedQuestionIds.includes("c3-follow-up-needed-question")
       ) {
-        return input.accumulatedEvents.incisionAndDrainageProposed &&
-          input.accumulatedEvents.patientAgreedToIncisionAndDrainage
+        return input.accumulatedEvents.temporaryTreatmentActive
           ? "c3-follow-up-needed-question"
           : undefined;
       }

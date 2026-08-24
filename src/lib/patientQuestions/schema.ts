@@ -163,6 +163,11 @@ function eventHasSemanticallyCompatibleEvidence(
       entry.role === "student" && case2AntibioticPlanEvidenceIsCompatible(entry.content),
     );
   }
+  if (event === "temporaryTreatmentActive") {
+    return evidence.some((entry) =>
+      entry.role === "student" && case3TemporaryTreatmentEvidenceIsCompatible(entry.content),
+    );
+  }
   if (event === "incisionAndDrainageProposed") {
     return evidence.some((entry) =>
       entry.role === "student" && case3DrainageProposalEvidenceIsCompatible(entry.content),
@@ -172,6 +177,23 @@ function eventHasSemanticallyCompatibleEvidence(
     return case3DrainageAgreementEvidenceIsCompatible(evidence, allEvidence);
   }
   return true;
+}
+
+function case3TemporaryTreatmentEvidenceIsCompatible(content: string) {
+  const normalized = content.toLowerCase().replace(/[’]/g, "'");
+  const treatmentReference = /\b(?:antibiotics?|antimicrobial (?:treatment|therapy)|local anesthe(?:tic|sia)|dental block|nerve block|mandibular block|inferior alveolar nerve block|acetaminophen|tylenol)\b|\b(?:incision and drainage|i\s*(?:&|and)\s*d)\b|\b(?:drain|drainage|draining)\b.{0,55}\b(?:abscess|infection|pus|pressure)\b|\b(?:abscess|infection|pus|pressure)\b.{0,55}\b(?:drain|drainage|draining)\b/;
+  if (!treatmentReference.test(normalized)) return false;
+
+  const rejectedContext = /\b(?:no|not|won't|will not|do not|don't|without|decline(?:d|s)?|refus(?:e|ed|es))\b.{0,80}\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b.{0,80}\b(?:not indicated|not recommended|unnecessary|declined|refused|won't|will not)\b/.test(normalized)
+    || /\b(?:may|might|could|possibly|perhaps|consider(?:ed|ing)?|hypothetical(?:ly)?|later|eventually|in the future)\b.{0,100}\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\bif\b.{0,120}\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\b(?:have you ever|did you ever|previously|in the past|history of)\b.{0,100}\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|drained|i\s*(?:&|and)\s*d)\b/.test(normalized)
+    || /\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|drained|i\s*(?:&|and)\s*d)\b.{0,70}\b(?:before|previously|in the past|history|yesterday|earlier|last (?:week|month|year))\b/.test(normalized)
+    || /\b(?:allerg(?:y|ic|ies)|reaction|reacted)\b.{0,70}\b(?:antibiotics?|antimicrobial)\b|\b(?:antibiotics?|antimicrobial)\b.{0,70}\b(?:allerg(?:y|ic|ies)|reaction|reacted)\b/.test(normalized);
+  if (rejectedContext) return false;
+
+  return /\b(?:recommend(?:ed|ing)?|prescrib(?:e|ed|ing)|order(?:ed|ing)?|start(?:ed|ing)?|begin(?:ning)?|give|giving|administer(?:ed|ing)?|perform(?:ed|ing)?|proceed(?:ing)?(?: with)?|offer(?:ed|ing)?|will use|i'd like to|i plan to|i will|i(?:'m| am) going to|we plan to|we(?:'re| are) going to|we (?:need|should|will)|the plan is to|let's)\b/.test(normalized);
 }
 
 function case1ManagementEvidenceIsCompatible(content: string) {
