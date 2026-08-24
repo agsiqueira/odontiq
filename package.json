@@ -76,6 +76,7 @@
     "validate:case04-necrotic-pulp": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04NecroticPulp.ts",
     "validate:case04-cold-consistency": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04ColdConsistency.ts",
     "validate:case04-dentist-status": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04DentistStatus.ts",
+    "validate:case04-closing-phrases": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04ClosingPhraseConsistency.ts",
     "validate:canonical-cases": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalCases.ts --report",
     "validate:canonical-cases:strict": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCanonicalCases.ts --strict",
     "validate:case-reachability": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCaseReachability.ts --report",

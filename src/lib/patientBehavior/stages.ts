@@ -30,8 +30,6 @@ export const PATIENT_BEHAVIOR_PROFILES: readonly PatientBehaviorProfile[] = [
   ] },
   { patientId: "noah-patel", caseId: "case-04", displayName: "Noah Patel", stages: { 1: "Quiet", 2: "Very concise", 3: "Blunt and stoic, never impatient" }, optionalPhrases: [
     approvedPhrase("noah-patel", "That's it.", "stoic-closure", "Stage 2–3: very concise, blunt, and stoic", [2, 3]),
-    approvedPhrase("noah-patel", "That's all.", "stoic-closure", "Stage 2–3: very concise, blunt, and stoic", [2, 3]),
-    approvedPhrase("noah-patel", "Plain and simple.", "stoic-closure", "Stage 3: blunt and stoic", [3]),
     approvedPhrase("noah-patel", "I'm keeping it brief.", "stoic-closure", "Stage 2–3: very concise and stoic", [2, 3]),
   ] },
   { patientId: "sofia-williams", caseId: "case-05", displayName: "Sofia Williams", stages: { 1: "Cooperative", 2: "Frustrated with the condition", 3: "Clearly tired of dealing with the condition, not the clinician" }, optionalPhrases: [
@@ -118,6 +116,10 @@ export function selectOptionalPersonalityPhrase(
   if (!eligibleForOptionalPhrase(baselineText)) return suppressed("short-or-ineligible-answer", history);
   if (history[history.length - 1]) return suppressed("consecutive-personality-phrase", history);
   if (
+    input.patientId === "noah-patel" &&
+    (input.recentPatientResponses ?? []).slice(-5).some(containsCase4ClosureFamily)
+  ) return suppressed("rolling-five-limit", history);
+  if (
     input.patientId === "elena-garcia" &&
     history.slice(-4).some(Boolean)
   ) return suppressed("rolling-five-limit", history);
@@ -190,6 +192,18 @@ function eligibleForOptionalPhrase(text: string) {
 
 function recentPhraseHistory(responses: readonly string[]) {
   return responses.slice(-5).map((response) => ALL_OPTIONAL_PHRASES.find((phrase) => response.includes(phrase)) ?? "");
+}
+
+function containsCase4ClosureFamily(response: string) {
+  const normalized = response
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .replace(/&/g, " and ")
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return /\b(?:thats all|thats it|plain and simple|im keeping it brief)\b/.test(normalized);
 }
 
 function suppressed(reason: OptionalPhraseSelection["suppressionReason"], history: readonly string[]): OptionalPhraseSelection {
