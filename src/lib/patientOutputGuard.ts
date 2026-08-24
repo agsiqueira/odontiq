@@ -77,7 +77,7 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
     "c4.alcohol": /\b(?:occasional|occasionally)\b.{0,25}\b(?:alcohol|drink)\b|\b(?:alcohol|drink)\b.{0,25}\b(?:occasional|occasionally)\b/i,
     "c4.illicit-drugs-negative": /\b(?:no|not|don't|do not|never)\b.{0,35}\b(?:illicit|recreational|street) drugs?\b/i,
     "c4.last-dentist": /\b(?:dentist|dental visit)\b.{0,35}\b(?:five|5)\s+years?\b|\b(?:five|5)\s+years?\b.{0,35}\b(?:dentist|dental visit)\b/i,
-    "c4.access": /\b(?:no|don't have|do not have|lost)\b.{0,30}\bdental insurance\b|\b(?:arranging|getting)\b.{0,30}\bdental care\b.{0,30}\b(?:take time|a while)\b/i,
+    "c4.access": /\b(?:no|don't have|do not have|lost)\b.{0,30}\bdental insurance\b|\b(?:no|don't have|do not have)\b.{0,35}\bdentist\b.{0,30}\b(?:see|access|available|now)\b|\b(?:arranging|getting)\b.{0,30}\bdental care\b.{0,30}\b(?:take time|a while)\b/i,
     "c4.goal": /\b(?:want|would like|hope)\b.{0,25}\bsave\b.{0,15}\btooth\b/i,
     "c4.surgery-unknown": /\b(?:not sure|unsure|don't know|do not know)\b/i,
     "c4.ibuprofen-frequency-unknown": /\b(?:don't remember|do not remember|not sure|unsure)\b.{0,55}\b(?:schedule|frequency|number of doses|how often)\b/i,
@@ -346,6 +346,7 @@ function findCase4Contradiction(response: string): string | undefined {
   if (/\b(?:never|don't|do not)\b.{0,20}\b(?:drink|alcohol)\b|\b(?:drink|alcohol)\b.{0,20}\b(?:daily|every day|heavily)\b/i.test(response)) return "contradiction of Case 4 occasional alcohol use";
   if (/\b(?:i use|yes)\b.{0,25}\b(?:illicit|recreational|street) drugs?\b/i.test(response)) return "contradiction of Case 4 no illicit-drug use";
   if (/\b(?:recently|last week|last month)\b.{0,25}\b(?:dentist|dental visit)\b|\b(?:dentist|dental visit)\b.{0,25}\b(?:recently|last week|last month)\b|\bappointment\b.{0,25}\bnext week\b/i.test(response)) return "contradiction of Case 4 dental access history";
+  if (affirmsCurrentCase4DentistAccess(response)) return "contradiction of Case 4 current dentist access";
   if (/\b(?:want|prefer|would like)\b.{0,20}(?:\b(?:extract|remove|pull)\b.{0,15}\btooth\b|\btooth\b.{0,15}\b(?:extracted|removed|pulled)\b)/i.test(response)) return "contradiction of Case 4 tooth-saving goal";
   const uncertainty = /\b(?:not sure|unsure|don't know|do not know|don't remember|do not remember)\b/i.test(response);
   if (!uncertainty && /\b(?:surgery|root canal|tylenol|acetaminophen|antibiotics?)\b/i.test(response) && /\b(?:yes|no|never|already|had|took|taken|didn't|did not)\b/i.test(response)) return "invented Case 4 unknown history";
@@ -363,6 +364,10 @@ function affirmsUnsupportedCurrentCase4ColdPain(response: string) {
   if (!positiveCold) return false;
   const negated = /\b(?:no|not|doesn't|does not|isn't|is not|no longer|anymore)\b.{0,40}\b(?:cold|hurt|pain|sensitive|worse)\b|\bcold\b.{0,40}\b(?:no|not|doesn't|does not|isn't|is not|no longer)\b/i.test(response);
   return !negated;
+}
+
+function affirmsCurrentCase4DentistAccess(response: string) {
+  return /\bi (?:have|have got|'ve got|got)\b.{0,20}\b(?:a|my) (?:regular )?dentist\b|\bi (?:see|visit)\b.{0,20}\b(?:a|my) dentist regularly\b|\bmy dentist\b.{0,35}\b(?:can|will|could)\b.{0,20}\b(?:see|fit|schedule)\b|\bi can follow[- ]?up with my dentist\b|\bi (?:already )?have\b.{0,20}\b(?:an? )?appointment\b/i.test(response);
 }
 
 function findCase1Contradiction(response: string): string | undefined {

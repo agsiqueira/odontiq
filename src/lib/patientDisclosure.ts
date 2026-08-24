@@ -660,7 +660,9 @@ export function selectAllowedFacts({
   disclosedFactIds: Set<string>;
   question: string;
 }) {
-  if (classification.asksRestrictedClinicalInterpretation) {
+  const case4AccessQuestion = caseId === "case-04"
+    && /\b(?:referral|refer|follow[- ]?up|appointment|help (?:me )?(?:find|finding|arrange)|find(?:ing)? (?:a )?dentist|arrange dental|need help)\b/i.test(question);
+  if (classification.asksRestrictedClinicalInterpretation && !case4AccessQuestion) {
     return [];
   }
 
@@ -889,6 +891,10 @@ function selectCaseSpecificAllowedFacts({
         : new Set([asksHistory ? "c4.cold-prior" : "c4.cold-now"]);
       return facts.filter((fact) => ids.has(fact.id));
     }
+    const asksDentalHistory = /\b(?:when|how long)\b.{0,35}\b(?:last|since)\b.{0,25}\b(?:see|saw|seen|visit(?:ed)?)\b.{0,20}\bdentist\b|\b(?:have|did) you ever\b.{0,30}\b(?:dentist|dental visit)\b|\blast (?:dental visit|saw (?:a )?dentist)\b/.test(normalizedQuestion);
+    if (asksDentalHistory) return facts.filter((fact) => fact.id === "c4.last-dentist");
+    if (/\b(?:referral|refer|follow up|appointment|help (?:me )?(?:find|finding|arrange)|find(?:ing)? (?:a )?dentist|arrange dental|need help)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.access");
+    if (/\b(?:have|got|see)\b.{0,25}\b(?:a |your |my )?(?:regular )?dentist\b|\bwho is your dentist\b|\bregular dentist\b|\bdental insurance\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.access");
     if (/\b(?:gum|gingival|inside (?:the|your) mouth|abscess)\b.*\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b|\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b.*\b(?:gum|gingival|mouth)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-gum-swelling");
     if (/\b(?:face|facial)\b.*\b(?:swell|swelling|swollen)\b|\b(?:swell|swelling|swollen)\b.*\b(?:face|facial)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-swelling");
     if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.ibuprofen-frequency-unknown");

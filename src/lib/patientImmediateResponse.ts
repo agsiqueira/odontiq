@@ -27,6 +27,10 @@ const CASE_4_BITE_PATTERN = /\b(?:bite|biting|chew|chewing|tap|tapping|percussio
 const CASE_4_COLD_HISTORY_PATTERN = /\b(?:before|earlier|previously|used to|at first|in the past)\b/i;
 const CASE_4_COLD_CHANGE_PATTERN = /\b(?:change|changed|stop|stopped|no longer|anymore)\b/i;
 const CASE_4_COLD_STILL_WITH_HISTORY_PATTERN = /\bstill\b.*\b(?:before|earlier|previously|used to)\b|\b(?:before|earlier|previously|used to)\b.*\bstill\b/i;
+const CASE_4_DENTAL_HISTORY_PATTERN = /\b(?:when|how long)\b.{0,35}\b(?:last|since)\b.{0,25}\b(?:see|saw|seen|visit(?:ed)?)\b.{0,20}\bdentist\b|\b(?:have|did) you ever\b.{0,30}\b(?:dentist|dental visit)\b|\blast (?:dental visit|saw (?:a )?dentist)\b/i;
+const CASE_4_DENTAL_INSURANCE_PATTERN = /\bdental insurance\b/i;
+const CASE_4_DENTAL_FOLLOW_UP_PATTERN = /\b(?:follow[- ]?up|appointment|referral|refer|help (?:me )?(?:find|finding|arrange)|find(?:ing)? (?:a )?dentist|arrange dental|need help)\b/i;
+const CASE_4_CURRENT_DENTIST_PATTERN = /\b(?:have|got|see)\b.{0,25}\b(?:a |your |my )?(?:regular )?dentist\b|\bwho is your dentist\b|\bregular dentist\b/i;
 
 export function patientImmediateResponse({
   caseId,
@@ -55,6 +59,9 @@ export function patientImmediateResponse({
 
   const case4ThermalResponse = case4GovernedThermalResponse(caseId, message);
   if (case4ThermalResponse) return case4ThermalResponse;
+
+  const case4DentistResponse = case4GovernedDentistResponse(caseId, message);
+  if (case4DentistResponse) return case4DentistResponse;
 
   if (
     caseId === "case-03" &&
@@ -131,6 +138,27 @@ export function case4GovernedThermalResponse(
   if (asksChange) return "Cold hurt earlier, but it does not cause pain now.";
   if (asksHistory) return "Cold hurt the tooth earlier in the illness.";
   return "No, cold does not cause pain now.";
+}
+
+export function case4GovernedDentistResponse(
+  caseId: string,
+  message: string,
+): string | undefined {
+  if (caseId !== "case-04" || !QUESTION_PATTERN.test(message.trim())) return undefined;
+  if (CASE_4_DENTAL_HISTORY_PATTERN.test(message)) {
+    return "Yes. My last dental visit was about five years ago.";
+  }
+  if (CASE_4_DENTAL_INSURANCE_PATTERN.test(message)
+    && !CASE_4_DENTAL_FOLLOW_UP_PATTERN.test(message)) {
+    return "No, I don't have dental insurance.";
+  }
+  if (CASE_4_DENTAL_FOLLOW_UP_PATTERN.test(message)) {
+    return "I don't have a dentist I can see now, so I'll need help arranging follow-up.";
+  }
+  if (CASE_4_CURRENT_DENTIST_PATTERN.test(message)) {
+    return "No, I don't have a dentist I can see now.";
+  }
+  return undefined;
 }
 
 function isDirectCase3Question(message: string) {
