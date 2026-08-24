@@ -333,6 +333,7 @@ function findCase4Contradiction(response: string): string | undefined {
   if (/\b(?:sharp|severe)?\s*(?:biting|bite) pain\b.{0,30}\bstarted\b.{0,20}\b(?:five|5)\s+days? ago\b.{0,25}\b(?:no change|unchanged)\b/i.test(response)) return "contradiction of Case 4 48-hour biting-pain intensification";
   if (/\b(?:eight|8)\s*(?:\/|out of)\s*(?:ten|10)\b/i.test(response)) return "contradiction of Case 4 current 7/10 severity";
   if (/\bcold\b.{0,30}\b(?:still|currently|now)\b.{0,20}\b(?:hurts?|painful|worse)\b/i.test(response)) return "contradiction of Case 4 no current cold pain";
+  if (affirmsUnsupportedCurrentCase4ColdPain(response)) return "contradiction of Case 4 no current cold pain";
   if (/\bcold\b.{0,30}\b(?:never|did not|didn't)\b.{0,20}\b(?:hurt|pain)\b|\b(?:never|did not|didn't)\b.{0,30}\bcold\b.{0,20}\b(?:hurt|pain)\b/i.test(response)) return "contradiction of Case 4 historical cold pain";
   if (/\b(?:definitely|certainly)\b.{0,30}\b(?:filling|restoration)\b.{0,20}\b(?:broke|broken|failed)\b|\bfilling\b.{0,30}\bdefinitely\b.{0,20}\b(?:broke|broken|failed)\b/i.test(response)) return "invented Case 4 confirmed filling fracture";
   if (/\bi have\b\s+(?!no\b|not\b).{0,25}\b(?:facial swelling|swelling|pus|purulence|drainage|abscess)\b|\bmy face is\b\s+(?!not\b).{0,15}\bswollen\b|\bthere is\b\s+(?!no\b|not\b).{0,20}\b(?:pus|purulence|drainage|abscess)\b/i.test(response)) return "contradiction of Case 4 no infection signs";
@@ -353,6 +354,15 @@ function findCase4Contradiction(response: string): string | undefined {
   if (/\b(?:i know|diagnosis is|i have)\b.{0,35}\b(?:necrotic pulp|acute apical periodontitis|periapical abscess)\b/i.test(response)) return "invented Case 4 diagnosis knowledge";
   if (/\b(?:i know|only|about)\b.{0,25}\b70\s*%.{0,25}\b(?:tooth|crown)\b/i.test(response)) return "invented Case 4 tooth-structure percentage knowledge";
   return undefined;
+}
+
+function affirmsUnsupportedCurrentCase4ColdPain(response: string) {
+  const historical = /\b(?:before|earlier|previously|used to|at first|in the past)\b/i.test(response);
+  if (historical) return false;
+  const positiveCold = /\bcold(?:\s+drinks?|\s+water)?\b.{0,35}\b(?:makes?|made)\b.{0,15}\b(?:it|pain|tooth)?\s*(?:worse|hurt)|\bcold(?:\s+drinks?|\s+water)?\b.{0,35}\b(?:hurts?|painful|causes? pain|sensitive)\b|\b(?:hurts?|pain)\b.{0,35}\b(?:drink|drinking|have|having)\b.{0,20}\bcold\b|\b(?:tooth|it)\b.{0,25}\bsensitive to cold\b/i.test(response);
+  if (!positiveCold) return false;
+  const negated = /\b(?:no|not|doesn't|does not|isn't|is not|no longer|anymore)\b.{0,40}\b(?:cold|hurt|pain|sensitive|worse)\b|\bcold\b.{0,40}\b(?:no|not|doesn't|does not|isn't|is not|no longer)\b/i.test(response);
+  return !negated;
 }
 
 function findCase1Contradiction(response: string): string | undefined {

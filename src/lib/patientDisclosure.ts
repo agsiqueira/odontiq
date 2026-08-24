@@ -876,6 +876,19 @@ function selectCaseSpecificAllowedFacts({
 
   if (caseId === "case-04") {
     const normalizedQuestion = normalizeText(question);
+    const mentionsHeat = /\b(?:hot|heat)\b/.test(normalizedQuestion);
+    const mentionsCold = /\b(?:cold|chilly|chilled)\b/.test(normalizedQuestion)
+      || (/\bsensitiv(?:e|ity)\b/.test(normalizedQuestion) && !mentionsHeat);
+    if (!mentionsCold && mentionsHeat) return [];
+    if (mentionsCold) {
+      const asksHistory = /\b(?:before|earlier|previously|used to|at first|in the past)\b/.test(normalizedQuestion);
+      const asksChange = /\b(?:change|changed|stop|stopped|no longer|anymore)\b/.test(normalizedQuestion)
+        || /\bstill\b.*\b(?:before|earlier|previously|used to)\b|\b(?:before|earlier|previously|used to)\b.*\bstill\b/.test(normalizedQuestion);
+      const ids = asksChange
+        ? new Set(["c4.cold-prior", "c4.cold-now"])
+        : new Set([asksHistory ? "c4.cold-prior" : "c4.cold-now"]);
+      return facts.filter((fact) => ids.has(fact.id));
+    }
     if (/\b(?:gum|gingival|inside (?:the|your) mouth|abscess)\b.*\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b|\b(?:swell|swelling|pus|purulence|fluctuance|abscess)\b.*\b(?:gum|gingival|mouth)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-gum-swelling");
     if (/\b(?:face|facial)\b.*\b(?:swell|swelling|swollen)\b|\b(?:swell|swelling|swollen)\b.*\b(?:face|facial)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.no-swelling");
     if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c4.ibuprofen-frequency-unknown");

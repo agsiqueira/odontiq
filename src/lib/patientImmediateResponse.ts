@@ -20,6 +20,13 @@ const CASE_3_IBUPROFEN_PATTERN =
   /\b(?:ibuprofen|advil|motrin|nsaids?)\b/i;
 const CASE_3_IBUPROFEN_INTOLERANCE_QUESTION_PATTERN =
   /\b(?:allerg(?:y|ies|ic)|reaction|react|upset|stomach|ulcers?|tolerat|bother|avoid|can you take|what happens)\b/i;
+const CASE_4_COLD_PATTERN = /\b(?:cold|chilly|chilled)\b/i;
+const CASE_4_THERMAL_SENSITIVITY_PATTERN = /\bsensitiv(?:e|ity)\b/i;
+const CASE_4_HEAT_PATTERN = /\b(?:hot|heat)\b/i;
+const CASE_4_BITE_PATTERN = /\b(?:bite|biting|chew|chewing|tap|tapping|percussion|percuss)\w*\b/i;
+const CASE_4_COLD_HISTORY_PATTERN = /\b(?:before|earlier|previously|used to|at first|in the past)\b/i;
+const CASE_4_COLD_CHANGE_PATTERN = /\b(?:change|changed|stop|stopped|no longer|anymore)\b/i;
+const CASE_4_COLD_STILL_WITH_HISTORY_PATTERN = /\bstill\b.*\b(?:before|earlier|previously|used to)\b|\b(?:before|earlier|previously|used to)\b.*\bstill\b/i;
 
 export function patientImmediateResponse({
   caseId,
@@ -45,6 +52,9 @@ export function patientImmediateResponse({
 
   const consentResponse = case3ConsentResponse(caseId, message);
   if (consentResponse) return consentResponse;
+
+  const case4ThermalResponse = case4GovernedThermalResponse(caseId, message);
+  if (case4ThermalResponse) return case4ThermalResponse;
 
   if (
     caseId === "case-03" &&
@@ -102,6 +112,25 @@ export function patientImmediateResponse({
   }
 
   return undefined;
+}
+
+export function case4GovernedThermalResponse(
+  caseId: string,
+  message: string,
+): string | undefined {
+  if (caseId !== "case-04" || !QUESTION_PATTERN.test(message.trim())) return undefined;
+  const mentionsHeat = CASE_4_HEAT_PATTERN.test(message);
+  const mentionsCold = CASE_4_COLD_PATTERN.test(message)
+    || (CASE_4_THERMAL_SENSITIVITY_PATTERN.test(message) && !mentionsHeat);
+  if (!mentionsCold && mentionsHeat) return "I haven't noticed that.";
+  if (!mentionsCold || CASE_4_BITE_PATTERN.test(message)) return undefined;
+
+  const asksHistory = CASE_4_COLD_HISTORY_PATTERN.test(message);
+  const asksChange = CASE_4_COLD_CHANGE_PATTERN.test(message)
+    || CASE_4_COLD_STILL_WITH_HISTORY_PATTERN.test(message);
+  if (asksChange) return "Cold hurt earlier, but it does not cause pain now.";
+  if (asksHistory) return "Cold hurt the tooth earlier in the illness.";
+  return "No, cold does not cause pain now.";
 }
 
 function isDirectCase3Question(message: string) {
