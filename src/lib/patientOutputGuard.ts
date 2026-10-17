@@ -61,7 +61,7 @@ export function expressesRequiredFact(response: string, fact: PatientDisclosureF
     "c5.severity": /\b(?:nine|9)\s*(?:\/|out of)\s*(?:ten|10)\b|^\s*(?:nine|9)[.!]?\s*$|\bsevere\b/i,
     "c5.spontaneous": /\b(?:spontaneous|on its own|without (?:a )?(?:trigger|reason)|starts? (?:by )?itself)\b/i,
     "c5.nocturnal": /\b(?:wak\w*|sleep\w*|night)\b/i,
-    "c5.cold": /\bcold(?: drinks?| water| food)?\b.{0,20}\b(?:worsen\w*|hurts?|causes? pain|makes? (?:it|the pain|my tooth) (?:worse|hurt))\b|\b(?:pain|it)\b.{0,20}\b(?:worse|worsen\w*)\b.{0,35}\bcold\b/i,
+    "c5.cold": /\b(?:hurts?|painful)\b.{0,15}\b(?:when|with)\b.{0,25}\bcold\b|\bcold(?: drinks?| water| food)?\b.{0,20}\b(?:worsen\w*|hurts?|causes? pain|makes? (?:it|(?:the|my) (?:pain|tooth)) (?:worse|hurt))\b|\b(?:pain|it)\b.{0,20}\b(?:worse|worsen\w*)\b.{0,35}\bcold\b/i,
     "c5.lingering": /\b(?:linger\w*|doesn't (?:stop|go away)|does not (?:stop|go away)|keeps? hurting|persists?)\b/i,
     "c5.chewing": /\bchew\w*\b.{0,35}\b(?:uncomfortable|hurt|pain)\b|\b(?:uncomfortable|hurt|pain)\b.{0,35}\bchew\w*\b/i,
     "c5.biting": /\b(?:bit\w*|tap\w*)\b.{0,35}\b(?:hurt|pain|tender)\b|\b(?:hurt|pain|tender)\b.{0,35}\b(?:bit\w*|tap\w*)\b/i,
