@@ -1,0 +1,270 @@
+[
+  {
+    "testId": "C01-G01-Q08",
+    "runId": "18a3b22d-697b-4e07-a5b2-57899b4b2117",
+    "responseSha256": "3d1c268237f85bede8e6445a827bee1805fb3bba7cf9a3bf8d25c9f9e0f0762e",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C01-G03-Q01",
+    "runId": "ffb460f5-0a42-4090-beec-a2656b4c658e",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C02-G05-Q01",
+    "runId": "a3e2f975-7cf2-491d-b5c2-1b304f9c9654",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C03-G09-V4H2",
+    "runId": "3e91a986-aa5c-466d-b507-a29fa346bc60",
+    "responseSha256": "db31b770eeda3aa86fa729cf34b13018437006701758f299e69d7c294e86b800",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C03-G11-H01",
+    "runId": "6697da28-a7f9-4e56-8eff-15e911bb12aa",
+    "responseSha256": "f4826bc3d7a244f4b787833c7b281289e52777a73b96f72036ef1635a6ae4238",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "Do you have any children?",
+        "response": "Yes, I have a young daughter.",
+        "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "response": "Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.",
+        "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "C03-G11-H03",
+    "runId": "054c4576-1b1e-487b-9aa4-1db35288f949",
+    "responseSha256": "d242b3e00ac200d0b3366cde5d99586c8163009c26203ecdb2af54a69309a04a",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "Do you have any children?",
+        "response": "Yes, I have a young daughter.",
+        "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "response": "Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.",
+        "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "runId": "bd8d603d-2fb8-437c-8d3f-cb48e7c479a4",
+    "responseSha256": "d99125a6bca93b37e48ca44479e9e5699908b792f036021f4868c8494d5fd523",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "Do you have any children?",
+        "response": "Yes, I have a young daughter.",
+        "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "response": "Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.",
+        "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "runId": "fb6a3850-8f0d-4b50-ba27-944631f74f7a",
+    "responseSha256": "ab968513d9efd5fef5830d3cacb3626cae03f9afedc88993a8dbe5560a2b68bc",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "Do you have any children?",
+        "response": "Yes, I have a young daughter.",
+        "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "response": "Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.",
+        "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "C03-TARGET-6",
+    "runId": "2950b8f7-930a-40c8-b385-92daabdb8e92",
+    "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C04-G14-Q01",
+    "runId": "8bffadc3-4fb6-452f-9dff-19e15fba2885",
+    "responseSha256": "363e2dadcfd6938df98aea8018839ae07876bc86689ed98c0d711532b3386bf7",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C04-TARGET-6",
+    "runId": "f7d19af6-0f72-4743-9427-289eba20ddd3",
+    "responseSha256": "635a03f017babdde4522b7949c2e6c51e3cfaa2276c65c3346a73860da8d364d",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C05-G16-V4H1",
+    "runId": "7ccd093e-345f-4276-8fc9-12e4095138c0",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C05-G17-Q01",
+    "runId": "98b04421-0e2f-4ff8-a2c0-6e38042e6156",
+    "responseSha256": "26ee8ef6bbd028e25c107b3ca9cfc7e90bf914469301344b9954ce6e6b9fce52",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "C05-TARGET-5",
+    "runId": "e5c13e55-6185-4e66-88aa-21fe49d7413e",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "PROD-APPROPRIATE-C4-QUESTION",
+    "runId": "a2f8939d-0c45-4649-8e54-7f515a539beb",
+    "responseSha256": "2a4dbc68abae5aa05228dbaf8ffe9c752dcd741621e9bb00c49bd2fb63612cdf",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "PROD-APPROPRIATE-C5-QUESTION",
+    "runId": "9dd04265-a247-4d6f-a123-d5975ee25985",
+    "responseSha256": "6f091fd0c686a6839530f508841ae10503761447d5d0480d383b340e74d8201e",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": []
+  },
+  {
+    "testId": "PROD-CLOSURE-1",
+    "runId": "7aec55e5-b3d1-4696-a0d8-f7a9efb44a4d",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "What brings you here today?",
+        "response": "I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.",
+        "responseSha256": "a692d7834baa3113995c3eababf2aa436f232cf1257a72828e4799d6b96a650c",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "PROD-CLOSURE-2",
+    "runId": "b78493c5-2b70-43c0-a2e1-4ed2e81500ac",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "What brings you here today?",
+        "response": "My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.",
+        "responseSha256": "8a324592df299279e4edb384216bf06862761072db0923e250be17ca26daf6ca",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "PROD-CLOSURE-3",
+    "runId": "3178e962-9f07-4dbf-8620-4130bfa83795",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "What brings you here today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+        "responseSha256": "7b692bb11c2f711c8ddc5c8e6adbb107c8eefaf4a7a4cbb86527d4fb98811154",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "PROD-CLOSURE-4",
+    "runId": "c6399b6b-a643-428c-8fbe-789f12048ff3",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "What brings you here today?",
+        "response": "My left lower back tooth hurts really badly when I bite, and it is hard to chew.",
+        "responseSha256": "65aab8035274a3ad389904bcdf92c2d02c222da1c3d15873e3f088b515b25e8b",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  },
+  {
+    "testId": "PROD-CLOSURE-5",
+    "runId": "28b48904-6e42-4f7b-a03c-127b59105835",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "outcome": "PASS",
+    "reason": "Exact question, context and final response reviewed: requested facts/preferences/unknown boundaries and acknowledgments are supported; no unsupported attendance/provider/child/payment inference; patient questions absent for screening and present after actual plan or substantive pain. UI/API and encounter/request correlation checked.",
+    "setupReviews": [
+      {
+        "question": "What brings you here today?",
+        "response": "This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseSha256": "9102ff1723e7ab2e52b17ffe7318ccca11d2e620684a2b8c431959abe02aecf5",
+        "outcome": "PASS",
+        "reason": "Actual setup response is a supported complaint, family fact, sourced preference or acknowledgment; opening Case 5 pain attributes legitimately permit its once-only question."
+      }
+    ]
+  }
+]

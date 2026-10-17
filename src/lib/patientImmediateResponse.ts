@@ -1,6 +1,7 @@
 import type { PatientDisclosureState } from "./patientDisclosure";
 import { case3ConsentResponse } from "./case3ConsentResponse";
 import { case1PlanAcknowledgement } from "./case1PlanAcknowledgement";
+import { backgroundFallback } from "./patientBackgroundTurn";
 import { isPatientConversationClosure } from "./patientConversationClosure";
 
 const NPO_INSTRUCTION_PATTERN =
@@ -47,6 +48,8 @@ export function patientImmediateResponse({
   priorPatientDialogue?: readonly string[];
 }): string | undefined {
   if (isPatientConversationClosure(message)) return "You're welcome.";
+  const background = disclosureState.backgroundTurn;
+  if (background && !background.clinicalRequested && background.requests.some(r => r.value === "unknown" || r.concept === "care_coordination")) return backgroundFallback(background);
   if (disclosureState.backgroundTurn && !(caseId === "case-04"
     && !disclosureState.backgroundTurn.clinicalRequested
     && disclosureState.backgroundTurn.requests.every(request => request.concept === "dentist" || request.concept === "attendance" && request.value === "no_current"))) return undefined;

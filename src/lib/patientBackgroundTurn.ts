@@ -1,8 +1,9 @@
+import { PATIENT_QUESTION_CATALOG } from "./patientQuestions/catalog";
 import type { PatientDisclosureFact } from "./patientDisclosure";
 import type { ConversationMessage } from "./conversationEngine";
 import { assertsHouseholdComposition, deniesCurrentDentist } from "./patientCanonicalAssertions";
 
-export type BackgroundConcept = "household" | "residence" | "residency" | "insurance" | "coverage_timing" | "dentist" | "attendance" | "payment_activity" | "child" | "shared_clinic" | "travel_capability" | "travel_willingness" | "payment_ability" | "payment_preference";
+export type BackgroundConcept = "child_condition" | "child_provider" | "provider_identity" | "care_coordination" | "household" | "residence" | "residency" | "insurance" | "coverage_timing" | "dentist" | "attendance" | "payment_activity" | "child" | "shared_clinic" | "travel_capability" | "travel_willingness" | "payment_ability" | "payment_preference";
 export type BackgroundRequest = { concept: BackgroundConcept; subject: "patient" | "daughter"; sourceId?: string; value: string; answer: string };
 export type BackgroundTurn = { requests: BackgroundRequest[]; clinicalRequested: boolean; shortAnswer?: "yes" | "no" };
 
@@ -53,6 +54,9 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
   const financial = !travel && /\b(?:afford\w*|pay\w*|fees?|charg\w*|cost\w*|copay\w*|money|contribute|income|sliding scale|free)\b/.test(q)
     && (!coverage || /\b(?:can you pay|could you pay|able to pay|afford|prefer|free|sliding|income|pay anything)\b/.test(q));
   const preference = financial && /\b(?:prefer\w*|free|no cost|sliding|income|focus|need)\b/.test(q);
+  // A care-search offer is an acknowledgment/preference turn, not a new history disclosure.
+  const careSearchOffer = !/\?\s*$/.test(q) && /\b(?:i|we)\b.{0,35}\b(?:look\w*|search\w*|explor\w*|find\w*)\b.{0,45}\b(?:care|clinic|dentist|options?)\b/.test(q);
+  const providerIdentity = dentist && !daughter && /\b(?:who|name)\b/.test(q);
   const requests: BackgroundRequest[] = [];
   const add = (concept: BackgroundConcept, subject: BackgroundRequest["subject"], source: PatientDisclosureFact | undefined, value: string, answer: string) => {
     if (!requests.some(r => r.concept === concept && r.subject === subject)) requests.push({ concept, subject, sourceId: source?.id, value, answer });
@@ -74,10 +78,23 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     if (!daughter && timing) add("coverage_timing", "patient", insurance, /lost Medicaid within the past year/i.test(insurance?.text ?? "") ? "past_year" : "unknown", /lost Medicaid within the past year/i.test(insurance?.text ?? "") ? "I lost Medicaid within the past year." : "I'm not sure about that coverage history.");
     else if (!daughter && !/\beven if\b/.test(q)) add("insurance", "patient", insurance, /uninsured/i.test(insurance?.text ?? "") ? "uninsured" : "unknown", insurance ? "I don't have insurance." : "I'm not sure about my coverage.");
   }
-  if (dentist) {
+  if (daughter && !shared && !careSearchOffer && /\b(?:teeth|tooth|pain|cavities|condition|problems?|treatment|needs?)\b/.test(q)) {
+    const condition = facts.find(f => /\bdaughter\b/i.test(f.text) && /\b(?:cavities|toothache|dental problems|needs? treatment|dental work)\b/i.test(f.text));
+    add("child_condition", "daughter", condition, condition ? "sourced" : "unknown", condition?.text ?? "I'm not sure about my daughter's dental condition.");
+  }
+  if (dentist && daughter) {
+    const childProvider = facts.find(f => /\bdaughter\b/i.test(f.text) && /\b(?:has|sees|attends)\b.{0,30}\b(?:dentist|clinic|provider)\b/i.test(f.text));
+    add("child_provider", "daughter", childProvider, childProvider ? "sourced" : "unknown", childProvider?.text ?? "I'm not sure about her dental provider.");
+  }
+  if (dentist && !daughter) {
     const own = find("regular_dentist");
     const access = facts.find(f => /\.(?:access|appointment-negative)$/.test(f.id) && /(?:\bno\b.{0,60}\bdentist|not have.*dentist)/i.test(f.text));
     add("dentist", "patient", own ?? access, own ? "has_dentist" : access ? "no_dentist" : "unknown", own ? "I have my own dentist and an appointment next week." : access ? "I don't have a dentist I can see now." : "I'm not sure about a regular dentist.");
+  }
+  if (providerIdentity) add("provider_identity", "patient", undefined, "unknown", "I'm not sure what name to give you.");
+  if (careSearchOffer) {
+    add("care_coordination", "patient", undefined, "acknowledgment", "Thank you for helping me find dental care.");
+    if (daughter && family) add("shared_clinic", "patient", family, "same_clinic", "I'd prefer the same clinic for my daughter and me.");
   }
   if (attendance) {
     const frequency = facts.find(f => /\b(?:regularly|routinely|every (?:year|six months))\b/i.test(f.text) && /\b(?:visits?|sees?|dentist)\b/i.test(f.text));
@@ -130,6 +147,11 @@ export function backgroundPrompt(turn: BackgroundTurn): string {
 /** Conservative semantic checks. Ambiguous generations are retried, then use sourced fallback. */
 export function assessBackgroundAnswer(text: string, turn: BackgroundTurn): { valid: boolean; reason?: string } {
   const s = normalize(text);
+  if (turn.requests.some(r => r.concept === "care_coordination")) {
+    let base = text.trim();
+    for (const question of PATIENT_QUESTION_CATALOG) base = base.replace(question.text, "").trim();
+    if (normalize(base) !== normalize(backgroundFallback(turn))) return { valid: false, reason: "care-search acknowledgment added unsourced assertions" };
+  }
   if (turn.requests.some(r => r.concept === "household" && r.value === "unknown")
     && assertsHouseholdComposition(text)) return { valid: false, reason: "unsupported household composition despite uncertainty" };
   const bare = s.replace(/[,.!?]/g, " ").replace(/\s+/g, " ").trim();
@@ -138,6 +160,7 @@ export function assessBackgroundAnswer(text: string, turn: BackgroundTurn): { va
   const capabilityCondition = turn.requests.length === 1 && turn.requests[0].concept === "shared_clinic"
     && turn.shortAnswer === "yes" && /^(?:yes|probably)\b/.test(s)
     && /\b(?:as long as|provided|if)\b/.test(s) && /\b(?:care|treat\w*|meet|cater|accept|provide)\b/.test(s);
+  if (turn.requests.some(r => r.value === "unknown") && /^(?:yes|yeah|yep|of course|certainly)\b/.test(s) && !turn.shortAnswer) return { valid: false, reason: "unscoped affirmation of unspecified information" };
   const missing = turn.requests.find(r => !expressesRequest(s, r) && !short && !capabilityCondition);
   if (missing) return { valid: false, reason: `background ${missing.subject} ${missing.concept}: missing or contradictory ${missing.value}` };
   const known = turn.requests.some(r => r.value !== "unknown");
@@ -145,8 +168,8 @@ export function assessBackgroundAnswer(text: string, turn: BackgroundTurn): { va
     && expressesRequest(s.split(/\bbut\b/)[0], turn.requests[0])
     && /\b(?:not sure|don't know|do not know)\b.{0,20}\b(?:if|whether)\b.{0,25}\b(?:can|could|would|will|meet|cover|treat|accept|provide)\b/.test(s)
     && !/\b(?:not sure|don't know|do not know)\b.{0,25}\b(?:prefer|want|easier|convenient)\b/.test(s);
-  const scopedUnknown = turn.requests.some(r => r.value === "unknown" && (r.concept === "attendance" || r.concept === "payment_activity"))
-    && /\b(?:not sure|don't know|do not know|don't remember)\b.{0,30}\b(?:how often|frequency|regularly|payment|paying|arrangement)\b/.test(s);
+  const scopedUnknown = turn.requests.some(r => r.value === "unknown" && (r.concept === "attendance" || r.concept === "payment_activity" || r.concept === "provider_identity"))
+    && /\b(?:not sure|don't know|do not know|don't remember)\b.{0,30}\b(?:how often|frequency|regularly|payment|paying|arrangement|name)\b/.test(s);
   if (known && !clinicCapabilityCaveat && !scopedUnknown && /\b(?:not sure|don't know|do not know|never considered|depends on|have to think|hope so|haven't checked)\b/.test(s)) return { valid: false, reason: "uncertainty about known background facts" };
   if (turn.requests.some(r => r.concept === "shared_clinic" && r.value === "same_clinic")
     && /\b(?:prefer|want)(?: to (?:use|go to)| using)? (?:a )?(?:separate|different) (?:clinic\w*|office\w*|dentist\w*)\b|\b(?:don't|do not) want (?:the |a )?(?:same|one) clinic\b/.test(s)) return { valid: false, reason: "contradictory shared-care preference" };
@@ -170,6 +193,9 @@ function expressesRequest(s: string, r: BackgroundRequest): boolean {
   if (r.value === "unknown") return /\b(?:not sure|unsure|don't know|do not know|don't remember)\b/.test(s)
     && !/\b(?:i have|i can|i can't|i cannot|i will|i won't|i would|my)\b.{0,25}\b(?:car|reliable|ride|travel)\b/.test(s);
   switch (r.concept) {
+    case "child_condition": case "child_provider": return r.value === "sourced" && s.includes(normalize(r.answer));
+    case "care_coordination": return /\b(?:thank|thanks|appreciate)\b/.test(s);
+    case "provider_identity": return false;
     case "attendance": return r.value === "no_current" ? deniesCurrentDentist(s) : r.value === "sourced" && s.includes(normalize(r.answer));
     case "payment_activity": return r.value === "sourced" && s.includes(normalize(r.answer));
     case "household": return false; // Only an explicit unknown household answer is sourced above.

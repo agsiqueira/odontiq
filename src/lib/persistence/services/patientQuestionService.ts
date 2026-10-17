@@ -1,4 +1,6 @@
 import "server-only";
+import { constrainQuestionClassification } from "@/lib/patientQuestions/eligibility";
+import type { ConversationMessage } from "@/lib/conversationEngine";
 import { assertPatientFinalResponse } from "@/lib/patientFinalResponse";
 import { loadCase } from "@/data/cases";
 
@@ -85,6 +87,7 @@ export class PatientQuestionService {
     behaviorIntentId?: string;
     behaviorAnswerClear?: boolean;
     classification?: PatientQuestionClassification;
+    questionEvidence?: { studentMessage: string; conversation: readonly ConversationMessage[] };
     questionText: (id: string) => string | undefined;
     retryAttempt?: number;
   }): Promise<StoredConversationTurn | "not-found" | "case-mismatch"> {
@@ -113,11 +116,15 @@ export class PatientQuestionService {
           where: { encounterId: input.encounterId },
         });
         const previous = parseState(storedState?.state);
-        const transition = input.classification
+        const groundedClassification = input.classification && input.questionEvidence
+          ? constrainQuestionClassification({ classification: input.classification, ...input.questionEvidence,
+              patientResponse: input.baseResponse, facts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [] })
+          : undefined;
+        const transition = groundedClassification
           ? applyPatientQuestionClassification({
               caseId: input.caseId,
               state: previous,
-              classification: input.classification,
+              classification: groundedClassification,
             })
           : { state: previous, selectedQuestionId: undefined };
 

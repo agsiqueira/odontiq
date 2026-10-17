@@ -1,5 +1,7 @@
 import type { AIProvider } from "@/lib/ai/provider";
 import type { ConversationMessage } from "@/lib/conversationEngine";
+import { constrainQuestionClassification } from "./eligibility";
+import { loadCase } from "../../data/cases";
 import { buildPatientQuestionClassifierPrompt } from "./prompt";
 import { parsePatientQuestionClassification } from "./schema";
 import type { PatientQuestionState } from "./types";
@@ -23,13 +25,20 @@ export async function classifyPatientQuestionTrigger(input: {
       temperature: 0,
       maxTokens: 450,
     });
-    return parsePatientQuestionClassification({
+    const parsed = parsePatientQuestionClassification({
       text: result.text,
       caseId: input.caseId,
       studentMessageId: input.studentMessageId,
       allowedEvents: prompt.allowedEvents,
       evidenceAliases: prompt.evidenceAliases,
     });
+    return parsed.success ? { success: true, classification: constrainQuestionClassification({
+      classification: parsed.classification,
+      studentMessage: input.studentMessage,
+      patientResponse: input.draftPatientResponse,
+      conversation: input.conversation,
+      facts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [],
+    }) } : parsed;
   } catch (error) {
     const safeProviderError =
       error &&
@@ -56,3 +65,4 @@ export async function classifyPatientQuestionTrigger(input: {
     };
   }
 }
+

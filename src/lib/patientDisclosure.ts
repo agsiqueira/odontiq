@@ -992,6 +992,10 @@ function selectCaseSpecificAllowedFacts({
   }
 
   const normalizedQuestion = normalizeText(question);
+  // Compose independently requested pain attributes before single-concept routing.
+  const asksQuality = /\b(?:feel like|describe.{0,25}pain|quality)\b/.test(normalizedQuestion);
+  const asksProvocation = /\b(?:what|which).{0,35}(?:makes?|make|worsens?|aggravat|triggers?)\b/.test(normalizedQuestion);
+  if (asksQuality && asksProvocation) return facts.filter(fact => ["c5.quality", "c5.cold", "c5.chewing"].includes(fact.id));
   if (/\b(?:what have you taken|what did you take|pain medicine|pain medication)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.med");
   if (/\b(?:which|exact|what)\b.*\b(?:tooth|tooth number)\b|\bfirst molar\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.location");
   if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.ibuprofen-frequency-unknown");

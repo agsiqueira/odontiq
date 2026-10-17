@@ -46,7 +46,7 @@ export function assessPatientOutputIntegrity(
   return contradiction ? { valid: false, reason: contradiction } : { valid: true };
 }
 
-function expressesRequiredFact(response: string, fact: PatientDisclosureFact): boolean {
+export function expressesRequiredFact(response: string, fact: PatientDisclosureFact): boolean {
   const transportation = expressesTransportationFact(response, fact);
   if (transportation !== undefined) return transportation;
   const county = residenceCounty(fact);
@@ -56,6 +56,15 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
       && !new RegExp(`\\b(?:not|don't|do not)\\b[^.!?]{0,30}\\b(?:live|living|reside)\\b[^.!?]{0,25}${escaped}`, "i").test(response);
   }
   const rules: Readonly<Record<string, RegExp>> = {
+    "c5.constant": /\b(?:constant|all the time|won't go away|doesn't go away)\b/i,
+    "c5.quality": /\bdeep\b.{0,25}\bthrobbing\b|\bthrobbing\b.{0,25}\bdeep\b/i,
+    "c5.severity": /\b(?:nine|9)\s*(?:\/|out of)\s*(?:ten|10)\b|^\s*(?:nine|9)[.!]?\s*$|\bsevere\b/i,
+    "c5.spontaneous": /\b(?:spontaneous|on its own|without (?:a )?(?:trigger|reason)|starts? (?:by )?itself)\b/i,
+    "c5.nocturnal": /\b(?:wak\w*|sleep\w*|night)\b/i,
+    "c5.cold": /\bcold\b.{0,45}\b(?:worse|hurt|pain)\b|\b(?:worse|hurt|pain)\b.{0,45}\bcold\b/i,
+    "c5.lingering": /\b(?:linger\w*|doesn't (?:stop|go away)|does not (?:stop|go away)|keeps? hurting|persists?)\b/i,
+    "c5.chewing": /\bchew\w*\b.{0,35}\b(?:uncomfortable|hurt|pain)\b|\b(?:uncomfortable|hurt|pain)\b.{0,35}\bchew\w*\b/i,
+    "c5.biting": /\b(?:bit\w*|tap\w*)\b.{0,35}\b(?:hurt|pain|tender)\b|\b(?:hurt|pain|tender)\b.{0,35}\b(?:bit\w*|tap\w*)\b/i,
     "c2.duration": /\b(?:seven|7)\s+days?\b|\b(?:about |around |approximately |roughly )?(?:a|one)\s+week\b/i,
     "c3.duration": /\b(?:three|3)\s+days?\b/i,
     "c4.duration": /\b(?:five|5)\s+days?\b/i,

@@ -1,0 +1,44 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { loadCase } from '../src/data/cases';
+import { buildPatientDisclosureState, type PatientDisclosureFact } from '../src/lib/patientDisclosure';
+import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
+import { patientImmediateResponse } from '../src/lib/patientImmediateResponse';
+import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
+import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
+import { constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
+import { applyPatientQuestionClassification } from '../src/lib/patientQuestions/stateMachine';
+import { createEmptyPatientQuestionState, type PatientQuestionClassification } from '../src/lib/patientQuestions/types';
+import { generatePatientRoleSafeResponse } from '../src/lib/patientRoleResponse';
+const facts=(id:string)=>loadCase(id)!.supportingInfo.patientFacts!;
+const classification=(id:string):PatientQuestionClassification=>({schemaVersion:1,caseId:id,analyzedStudentMessageId:'s',detectedEvents:{painManagementOrDispositionDiscussed:id==='case-04',patientPainDescribed:id==='case-05'},confidence:1,evidenceAliases:['student-current','patient-draft'],evidenceMessageIds:['s','p']});
+const qualify=(id:string,q:string,a:string)=>constrainQuestionClassification({classification:classification(id),studentMessage:q,patientResponse:a,conversation:[],facts:facts(id)});
+async function main(){
+const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:any)=>r.correctedVerdict==='FAIL');
+assert.equal(corrections.length,90);
+for(const r of corrections){const c=qualify(`case-${r.testId.slice(1,3)}`,r.question,r.actualResponse);assert.equal(applyPatientQuestionClassification({caseId:`case-${r.testId.slice(1,3)}`,classification:c}).selectedQuestionId,undefined,r.testId);}
+for(const [q,a] of [['Where do you live?','Duval County.'],['Could you pay a sliding-scale fee?',"I'm open to paying a sliding-scale fee."],["I'm looking into dental care options for you.",'Thank you for helping me find dental care.']])assert.equal(qualify('case-04',q,a).detectedEvents.painManagementOrDispositionDiscussed,false);
+for(const q of ['I will give you ibuprofen for pain and refer you to a dentist.','For now take pain medicine; see your dentist tomorrow.'])assert.equal(applyPatientQuestionClassification({caseId:'case-04',classification:qualify('case-04',q,'Thank you.')} ).selectedQuestionId,'c4-antibiotic-needed-question');
+for(const [q,a] of [['What brings you in?',"This tooth pain keeps waking me at night."],['What does it feel like?',"It's deep and throbbing."],['Where is it?',"My lower-left jaw hurts."]])assert.equal(applyPatientQuestionClassification({caseId:'case-05',classification:qualify('case-05',q,a)}).selectedQuestionId,'c5-antibiotic-request');
+assert.equal(applyPatientQuestionClassification({caseId:'case-05',classification:qualify('case-05','Who do you live with?',"I'm focused on this tooth pain.")}).selectedQuestionId,undefined);
+const first=applyPatientQuestionClassification({caseId:'case-04',classification:qualify('case-04','Do you have insurance?',"I don't have insurance.")});
+assert.equal(first.state.emittedQuestionIds.length,0);
+const later=applyPatientQuestionClassification({caseId:'case-04',state:first.state,classification:qualify('case-04','We will give ibuprofen and arrange dental follow-up.','Okay.')});
+assert.equal(later.selectedQuestionId,'c4-antibiotic-needed-question');
+assert.equal(applyPatientQuestionClassification({caseId:'case-04',state:later.state,classification:qualify('case-04','We will give ibuprofen.','Okay.')}).selectedQuestionId,undefined);
+assert.equal(qualify('case-04','Thank you for explaining that.','You are welcome.').detectedEvents.painManagementOrDispositionDiscussed,false);
+const old=JSON.parse(fs.readFileSync('validation/v6/results.json','utf8'));
+for(const id of ['C03-TARGET-6','C04-TARGET-6','C05-TARGET-6','C03-G09-H01','C01-G01-Q08']){
+const r=old.find((r:any)=>r.testId===id),c=loadCase(r.caseId)!;const state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:r.question});const good=patientImmediateResponse({caseId:r.caseId,message:r.question,disclosureState:state});assert(good,id);const context={canonicalFacts:facts(r.caseId),backgroundTurn:state.backgroundTurn,latestStudentMessage:r.question};assert(validatePatientFinalResponse(good,context).valid,`${id} ${good}`);if(id!=='C01-G01-Q08')assert(!validatePatientFinalResponse(r.finalResponse,context).valid,id);
+const final=await generatePatientRoleSafeResponse({initialOutput:r.finalResponse,retry:async()=>r.finalResponse,fallbackText:good,validateAdditional:t=>validatePatientFinalResponse(t,context),allowPatientInitiatedQuestion:false});assert(validatePatientFinalResponse(final.text,context).valid,id);
+}
+for(const bad of ["That's good to hear. My daughter's teeth need some attention too.","That's good to hear. We both need it, especially after these recent issues."]){const q="I'm looking into dental care options for you and your daughter.",state=buildPatientDisclosureState({caseData:loadCase('case-03')!,conversation:[],latestStudentMessage:q});assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts('case-03'),backgroundTurn:state.backgroundTurn,latestStudentMessage:q}).valid,bad);}
+const q='What does your tooth pain feel like, and what makes it worse?',state=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:q});const required=requiredFactsForTurn(state,q,facts('case-05'));assert(required.some(f=>f.id==='c5.quality'));assert(required.some(f=>f.id==='c5.cold'));assert(!validatePatientFinalResponse('It hurts in my lower-left jaw.',{canonicalFacts:facts('case-05'),requiredFacts:required,visibleFacts:state.allowedThisTurn}).valid);
+const supported:PatientDisclosureFact[]=[...facts('case-03'),{id:'test.child-condition',topic:'dental_history',text:'The daughter has cavities.'}];
+assert(supported.some(f=>f.text==='The daughter has cavities.')); // Source-positive routing checked below using the same case contract.
+const supportedTurn=interpretBackgroundTurn('Does your daughter have dental problems?',[],supported);assert(supportedTurn?.requests.some(r=>r.concept==='child_condition'&&r.sourceId==='test.child-condition'));
+fs.writeFileSync('validation/v7/focused-regressions.json',JSON.stringify({at:new Date().toISOString(),priorTimingCorrections:90,passed:true,coverage:['source-scoped offers','both V6 regressions','setup FAIL/REVIEW','production compound pain and payment','opening and later pain','once only','eligibility after withholding','repeated unsafe retry and fallback','source-positive child condition']},null,2));console.log('V7 focused regressions passed.');
+}
+main().catch(e=>{console.error(e);process.exitCode=1;});
+
+

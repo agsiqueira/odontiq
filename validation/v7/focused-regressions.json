@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-17T23:07:42.308Z",
+  "priorTimingCorrections": 90,
+  "passed": true,
+  "coverage": [
+    "source-scoped offers",
+    "both V6 regressions",
+    "setup FAIL/REVIEW",
+    "production compound pain and payment",
+    "opening and later pain",
+    "once only",
+    "eligibility after withholding",
+    "repeated unsafe retry and fallback",
+    "source-positive child condition"
+  ]
+}

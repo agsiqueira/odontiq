@@ -185,16 +185,24 @@ export async function POST(request: Request): Promise<Response> {
 
     const coreResponse = governedPatientCoreResponse(patientCase, payload.message);
     if (coreResponse) {
+      const corePatientMessageId = crypto.randomUUID();
+      const coreClassification = coreResponse.intent === "chief_complaint" && shouldClassifyPatientQuestions(payload.caseId, questionContext.state)
+        ? await classifyPatientQuestionTrigger({ provider: getAIProvider(), caseId: payload.caseId,
+            studentMessageId: payload.studentMessageId, studentMessage: payload.message,
+            draftPatientMessageId: corePatientMessageId, draftPatientResponse: coreResponse.text,
+            conversation: payload.conversation, state: questionContext.state }) : undefined;
       const storedCoreTurn = await patientQuestionService.finalizeTurn({
         userId: user.id,
         encounterId: payload.encounterId,
         caseId: payload.caseId,
         requestId: payload.requestId,
         studentMessageId: payload.studentMessageId,
-        patientMessageId: crypto.randomUUID(),
+        patientMessageId: corePatientMessageId,
         baseResponse: coreResponse.text,
         providerName: "governed-patient-core",
-        questionText: () => undefined,
+        classification: coreClassification?.success ? coreClassification.classification : undefined,
+        questionEvidence: { studentMessage: payload.message, conversation: payload.conversation },
+        questionText: id => getPatientQuestion(id as Parameters<typeof getPatientQuestion>[0])?.text,
       });
       if (storedCoreTurn === "not-found") {
         return Response.json({ success: false, error: "encounter_not_found" }, { status: 404 });
@@ -428,6 +436,7 @@ export async function POST(request: Request): Promise<Response> {
         : repetition
           ? hasCompleteAmaraRepetitionFacts(repetition, behavioralFacts)
           : false,
+      questionEvidence: { studentMessage: payload.message, conversation: sanitizedConversation },
       classification:
         classificationResult?.success
           ? classificationResult.classification

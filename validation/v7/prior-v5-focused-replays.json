@@ -1,0 +1,480 @@
+{
+  "checkedAt": "2026-10-17T23:07:45.096Z",
+  "baselineUnresolvedItems": 72,
+  "replays": [
+    {
+      "testId": "C01-G01-Q08",
+      "question": "Are you paying for dental care without insurance?",
+      "oldResponse": "Yes, I'm uninsured and paying out of pocket.",
+      "concepts": [
+        "insurance",
+        "payment_activity"
+      ],
+      "repairedFallback": "I don't have insurance. I'm not sure about a payment arrangement."
+    },
+    {
+      "testId": "C02-G05-Q02",
+      "question": "How long ago did your Medicaid coverage end?",
+      "oldResponse": "I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-Q06",
+      "question": "How recently did you lose your Medicaid coverage?",
+      "oldResponse": "I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-Q07",
+      "question": "Did your Medicaid end sometime in the past twelve months?",
+      "oldResponse": "Yes, it ended about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-Q14",
+      "question": "Was the loss of your Medicaid in the past year?",
+      "oldResponse": "Yeah, I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-Q15",
+      "question": "When you lost Medicaid?",
+      "oldResponse": "I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-Q17",
+      "question": "You lose your Medicaid in the last year?",
+      "oldResponse": "Yeah, I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-N1",
+      "question": "How recently did your Medicaid coverage come to an end?",
+      "oldResponse": "I lost it about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C01-G03-V4H2",
+      "question": "Could you make a trip to a different county for affordable treatment?",
+      "oldResponse": "I'm not sure, it depends on the cost and if I can even get time off work.",
+      "concepts": [
+        "travel_capability"
+      ],
+      "repairedFallback": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care."
+    },
+    {
+      "testId": "C02-G05-V4H1",
+      "question": "Did your Medicaid end within the past twelve months?",
+      "oldResponse": "Yeah, it ended about a year ago.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C02-G05-V4H2",
+      "question": "How long has it been since Medicaid stopped covering you?",
+      "oldResponse": "It's been about a year since I lost Medicaid.",
+      "concepts": [
+        "coverage_timing"
+      ],
+      "repairedFallback": "I lost Medicaid within the past year."
+    },
+    {
+      "testId": "C03-G08-V4H3",
+      "question": "Do you carry a plan for your dental care?",
+      "oldResponse": "Not really, it's been a while since I've been to the dentist.",
+      "concepts": [
+        "insurance"
+      ],
+      "repairedFallback": "I don't have insurance."
+    },
+    {
+      "testId": "C03-G09-V4H1",
+      "question": "Is there a dentist you consider your usual provider?",
+      "oldResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "concepts": [
+        "dentist"
+      ],
+      "repairedFallback": "I have my own dentist and an appointment next week."
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "question": "Do you already see a dentist regularly?",
+      "oldResponse": "Not really, I haven't in a while. I have an appointment next week though.",
+      "concepts": [
+        "dentist",
+        "attendance"
+      ],
+      "repairedFallback": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist."
+    },
+    {
+      "testId": "C03-G09-V4H3",
+      "question": "Are you established with a dentist of your own?",
+      "oldResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "concepts": [
+        "dentist"
+      ],
+      "repairedFallback": "I have my own dentist and an appointment next week."
+    },
+    {
+      "testId": "C03-G10-Q01",
+      "stage": "scored-question",
+      "actualQuestion": "Tell me about your daughter's coverage.",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q02",
+      "stage": "scored-question",
+      "actualQuestion": "Does your daughter have insurance?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q03",
+      "stage": "scored-question",
+      "actualQuestion": "Is your daughter covered by Medicaid?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q04",
+      "stage": "scored-question",
+      "actualQuestion": "What insurance does your daughter have?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q05",
+      "stage": "scored-question",
+      "actualQuestion": "How is your daughter's care covered?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q06",
+      "stage": "scored-question",
+      "actualQuestion": "Does your young daughter have Medicaid coverage?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q08",
+      "stage": "scored-question",
+      "actualQuestion": "What coverage would your daughter use at a dental clinic?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q09",
+      "stage": "scored-question",
+      "actualQuestion": "Can you tell me whether your daughter has Medicaid?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q10",
+      "stage": "scored-question",
+      "actualQuestion": "Who is covered by Medicaid, you or your daughter?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q11",
+      "stage": "scored-question",
+      "actualQuestion": "Do you have a young daughter, and what insurance does she have?",
+      "correctedPersistenceResponse": "My daughter has Medicaid. I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-Q13",
+      "stage": "scored-question",
+      "actualQuestion": "Before finding a clinic for both of you, what insurance does your daughter have?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q14",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-Q15",
+      "stage": "scored-question",
+      "actualQuestion": "Your daughter has what insurance?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q16",
+      "stage": "scored-question",
+      "actualQuestion": "Do your daughter have Medicaid?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q17",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-Q18",
+      "stage": "scored-question",
+      "actualQuestion": "What insurance your daughter got?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q19",
+      "stage": "scored-question",
+      "actualQuestion": "You daughter is insured or not?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G10-Q20",
+      "stage": "scored-question",
+      "actualQuestion": "Does your daughters coverage come from Medicaid?",
+      "correctedPersistenceResponse": "My daughter has Medicaid."
+    },
+    {
+      "testId": "C03-G11-Q01",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q02",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q03",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q04",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q05",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q07",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q08",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q09",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q10",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q11",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q12",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q13",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q14",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q15",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q16",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q17",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q18",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q19",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-Q20",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-H01",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-H02",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-H03",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-H01",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-H02",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-H03",
+      "stage": "setup",
+      "actualQuestion": "Do you have any children?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-N1",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-N2",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-N3",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-N1",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-N2",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-N3",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-V4H1",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-V4H2",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G10-V4H3",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-V4H1",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-V4H2",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    },
+    {
+      "testId": "C03-G11-V4H3",
+      "stage": "setup",
+      "actualQuestion": "Do you have a daughter?",
+      "correctedPersistenceResponse": "I have a young daughter."
+    }
+  ],
+  "transportTests": "502/503/504 one retry, exhausted max2, no retry on auth/rate-limit/application/general errors/network exceptions; every attempt recorded"
+}
