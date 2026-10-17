@@ -1,0 +1,3453 @@
+[
+  {
+    "testId": "C02-G05-Q03",
+    "runId": "e60e7e9b-9dd5-4035-abed-75fa8e9780ac",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "responseSha256": "41485c39018b32cd8fa527898cd63b1014c3e6da16eb775142d630b69b56be76",
+    "reviewedAt": "2026-10-17T20:31:18.420Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-Q03",
+    "runId": "e60e7e9b-9dd5-4035-abed-75fa8e9780ac",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-Q11",
+    "runId": "67b78491-507f-40a0-9e54-0909ad7628d5",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "responseSha256": "41485c39018b32cd8fa527898cd63b1014c3e6da16eb775142d630b69b56be76",
+    "reviewedAt": "2026-10-17T20:31:18.420Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-Q11",
+    "runId": "67b78491-507f-40a0-9e54-0909ad7628d5",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-Q16",
+    "runId": "00185fe1-a889-4b38-944d-7085d911c179",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yeah, I had Medicaid before, but I lost it within the last year.",
+    "responseSha256": "036134c4a0b59106e2722328a68de330718a39798a03dffa1c26a06a45836511",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and bounded within-last-year loss; no more precise date or loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and bounded within-last-year loss; no more precise date or loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and bounded within-last-year loss; no more precise date or loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and bounded within-last-year loss; no more precise date or loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-Q16",
+    "runId": "00185fe1-a889-4b38-944d-7085d911c179",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G06-Q16",
+    "runId": "922a8f32-5f5a-4c7b-a9df-85936dfaadd2",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "Collier County.",
+    "responseSha256": "d4edeeafdd760e24ba1f83d34091e0a4683ede0a14146b1d64e80d5e53064928",
+    "reviewedAt": "2026-10-17T20:33:37.106Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-Q14",
+    "runId": "42b91608-91c6-4e38-a525-12ea4a4109ec",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-Q17",
+    "runId": "5c1c17a5-cbd5-496a-b6ff-e47783e47806",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q01",
+    "runId": "278feca6-60b7-4160-ac16-42c76d583a82",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q01",
+    "runId": "278feca6-60b7-4160-ac16-42c76d583a82",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. I want to make sure we both have the best care.",
+    "responseSha256": "55f4b31d294c3a7548eabecf70578b71ebbd5b492e56acd90d61a07ead54d678",
+    "reviewedAt": "2026-10-17T20:41:10.035Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment and wish for care for the known parent/daughter after the child setup; no clinic history, cohabitation or scheduling arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment and wish for care for the known parent/daughter after the child setup; no clinic history, cohabitation or scheduling arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment and wish for care for the known parent/daughter after the child setup; no clinic history, cohabitation or scheduling arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment and wish for care for the known parent/daughter after the child setup; no clinic history, cohabitation or scheduling arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q02",
+    "runId": "68d9e983-fd01-4699-a8b8-49ce8e17838c",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q02",
+    "runId": "68d9e983-fd01-4699-a8b8-49ce8e17838c",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter's dental health is important to me.",
+    "responseSha256": "a88f582e341bc0540d6405c01cdb75393b4c94955b6531d3f851a1d9f4820db1",
+    "reviewedAt": "2026-10-17T20:43:35.720Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q03",
+    "runId": "d7b927c0-6bd2-4011-a22d-e15ca6664ece",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q03",
+    "runId": "d7b927c0-6bd2-4011-a22d-e15ca6664ece",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need proper care.",
+    "responseSha256": "e11a24a7023725e3892e98f127a5e6b70a1f2b9e7254367b131c3ac0aa06e3ab",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q04",
+    "runId": "da64b4b1-46ee-447a-8d7d-d28a59116d5e",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q04",
+    "runId": "da64b4b1-46ee-447a-8d7d-d28a59116d5e",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "responseSha256": "ddd85c679beff552bf3faf99f5034aa7ac5569bf4468209841b6655972e1cde8",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q05",
+    "runId": "d4c49324-6071-45b9-8bbf-bf1d2616a211",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q05",
+    "runId": "d4c49324-6071-45b9-8bbf-bf1d2616a211",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "responseSha256": "dec603063abde715c3426fb6cacfb4133bdff07e60bc442045195550148af79e",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "runId": "5d874bbd-82a4-424d-af8f-7483166f34cb",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "runId": "5d874bbd-82a4-424d-af8f-7483166f34cb",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q07",
+    "runId": "e4223392-a181-402d-bd7a-7406a4280ecf",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q07",
+    "runId": "e4223392-a181-402d-bd7a-7406a4280ecf",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q08",
+    "runId": "56174813-7818-48ba-8cf0-9ada4eae2573",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q08",
+    "runId": "56174813-7818-48ba-8cf0-9ada4eae2573",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear.",
+    "responseSha256": "7b42e92a68e914e04347a9d03db3e92ea2cf2913ca25098aa1fb0a9032025bab",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q09",
+    "runId": "88e227ff-0f9e-4dc3-8800-a3505e9f2fda",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q09",
+    "runId": "88e227ff-0f9e-4dc3-8800-a3505e9f2fda",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that, doctor. My daughter's dental care is important to me.",
+    "responseSha256": "99af79104dde8b74c04f49bb9277072b20a6ee5f08c6809a7824ea2ad301fde5",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q10",
+    "runId": "5909201c-82b2-407a-86df-038032b65795",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q10",
+    "runId": "5909201c-82b2-407a-86df-038032b65795",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter's dental health is important to me.",
+    "responseSha256": "a88f582e341bc0540d6405c01cdb75393b4c94955b6531d3f851a1d9f4820db1",
+    "reviewedAt": "2026-10-17T20:43:35.720Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "runId": "a84ecddf-f700-4dd4-b792-fe9ba124fd85",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "runId": "a84ecddf-f700-4dd4-b792-fe9ba124fd85",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter's teeth need more attention, I think.",
+    "responseSha256": "1d907b29375da342e39873975982115ec729202f07af241f4a42f99fdd7bfa51",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+      }
+    },
+    "outcome": "FAIL"
+  },
+  {
+    "testId": "C03-G11-Q12",
+    "runId": "9e2deef4-f0c4-48f4-be68-1bc768d5cc07",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q12",
+    "runId": "9e2deef4-f0c4-48f4-be68-1bc768d5cc07",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter needs good dental care too.",
+    "responseSha256": "c5486305ffadb6fc949e40fd28c295b922c411075a5a872dddd79f7a128f8fb2",
+    "reviewedAt": "2026-10-17T20:44:14.499Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General need for good care, without asserting a specific condition or existing clinic, is a natural acknowledgment in the known daughter context."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General need for good care, without asserting a specific condition or existing clinic, is a natural acknowledgment in the known daughter context."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General need for good care, without asserting a specific condition or existing clinic, is a natural acknowledgment in the known daughter context."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General need for good care, without asserting a specific condition or existing clinic, is a natural acknowledgment in the known daughter context."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "runId": "56db6bfb-df1b-4305-8a2e-30d1f8e1ab48",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "runId": "56db6bfb-df1b-4305-8a2e-30d1f8e1ab48",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that, doctor. My daughter's dental care is important to me.",
+    "responseSha256": "99af79104dde8b74c04f49bb9277072b20a6ee5f08c6809a7824ea2ad301fde5",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q14",
+    "runId": "cfcf0039-d78c-450e-9f8d-71a991a29513",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q14",
+    "runId": "cfcf0039-d78c-450e-9f8d-71a991a29513",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. She needs good care too.",
+    "responseSha256": "049bfa258ec689927811aca0067f4d7fb93a7a0555fa521697be9c091fa4a2f4",
+    "reviewedAt": "2026-10-17T20:44:14.689Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General wish for good care for the known daughter; no specific condition, existing clinic or treatment history asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General wish for good care for the known daughter; no specific condition, existing clinic or treatment history asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General wish for good care for the known daughter; no specific condition, existing clinic or treatment history asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General wish for good care for the known daughter; no specific condition, existing clinic or treatment history asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q15",
+    "runId": "39791fb7-cb8b-442c-966e-1d79541cf5c7",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q15",
+    "runId": "39791fb7-cb8b-442c-966e-1d79541cf5c7",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q16",
+    "runId": "46663b6c-617b-4b00-ad3f-747e10069bae",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q16",
+    "runId": "46663b6c-617b-4b00-ad3f-747e10069bae",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter's dental care is important to me.",
+    "responseSha256": "8b8fb69d4be2ef9de389cf8ec84ad50b3c43fa9a714e6a6db2d34376bfd6f698",
+    "reviewedAt": "2026-10-17T20:44:14.872Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural value statement about care for the known daughter, without invented clinical or household facts."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural value statement about care for the known daughter, without invented clinical or household facts."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural value statement about care for the known daughter, without invented clinical or household facts."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural value statement about care for the known daughter, without invented clinical or household facts."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q17",
+    "runId": "488cf956-eeb5-473e-a1db-19413ba4b980",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q17",
+    "runId": "488cf956-eeb5-473e-a1db-19413ba4b980",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q18",
+    "runId": "ea37e036-30e8-4f38-ae72-8900fab4ae66",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q18",
+    "runId": "ea37e036-30e8-4f38-ae72-8900fab4ae66",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q19",
+    "runId": "f5a1c0aa-0525-4750-84ad-32122a487686",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q19",
+    "runId": "f5a1c0aa-0525-4750-84ad-32122a487686",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need good dental care.",
+    "responseSha256": "09bcd5df2b58f2374f980939b7bdd11f84c82a89c59e2202d79622ed1ad4eeb7",
+    "reviewedAt": "2026-10-17T20:44:42.604Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General value of good dental care in the parent/daughter conversation; no specific clinical condition or established provider invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General value of good dental care in the parent/daughter conversation; no specific clinical condition or established provider invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General value of good dental care in the parent/daughter conversation; no specific clinical condition or established provider invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General value of good dental care in the parent/daughter conversation; no specific clinical condition or established provider invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q20",
+    "runId": "e951d0be-152e-441b-89fe-4c357990f039",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-Q20",
+    "runId": "e951d0be-152e-441b-89fe-4c357990f039",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "responseSha256": "ddd85c679beff552bf3faf99f5034aa7ac5569bf4468209841b6655972e1cde8",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q01-PAIN",
+    "runId": "9a4d7613-7529-4802-9468-4b97192a73bd",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q01-PAIN",
+    "runId": "9a4d7613-7529-4802-9468-4b97192a73bd",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with the pain.",
+    "responseSha256": "05fed776fa87792a96c5e1fca2f2244ecc435dcfaab7fac88f5174f05ec9aafc",
+    "reviewedAt": "2026-10-17T20:56:37.953Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort is supported by severe canonical pain and directly answers how the patient feels; no extra red flags or unsupported history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort is supported by severe canonical pain and directly answers how the patient feels; no extra red flags or unsupported history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort is supported by severe canonical pain and directly answers how the patient feels; no extra red flags or unsupported history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort is supported by severe canonical pain and directly answers how the patient feels; no extra red flags or unsupported history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q02-PAIN",
+    "runId": "cc22fede-9573-413e-a01d-66ae4b1fc438",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q02-PAIN",
+    "runId": "cc22fede-9573-413e-a01d-66ae4b1fc438",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "responseSha256": "5ee32ac88df9183f53e16123638650e756b9a11fc525b541d81f56a08d011608",
+    "reviewedAt": "2026-10-17T20:56:45.570Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q03-PAIN",
+    "runId": "fbdf1ad8-5c8c-4e71-9cc7-54390f8ecfdd",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q03-PAIN",
+    "runId": "fbdf1ad8-5c8c-4e71-9cc7-54390f8ecfdd",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q04-PAIN",
+    "runId": "7484f476-5a30-4a83-829d-527626617967",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q04-PAIN",
+    "runId": "7484f476-5a30-4a83-829d-527626617967",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q05-PAIN",
+    "runId": "19f67f54-1f44-4cdf-a30f-b9662031a012",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q05-PAIN",
+    "runId": "19f67f54-1f44-4cdf-a30f-b9662031a012",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q06-PAIN",
+    "runId": "3bc7c838-3052-4dba-bc9b-69f5abe6a1f3",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q06-PAIN",
+    "runId": "3bc7c838-3052-4dba-bc9b-69f5abe6a1f3",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q07-PAIN",
+    "runId": "6e0c3667-7f0c-4fda-8561-28f18fac7170",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q07-PAIN",
+    "runId": "6e0c3667-7f0c-4fda-8561-28f18fac7170",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q08-PAIN",
+    "runId": "338a69d9-ad9c-489e-baf1-7a522c1cfe45",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q08-PAIN",
+    "runId": "338a69d9-ad9c-489e-baf1-7a522c1cfe45",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q09-PAIN",
+    "runId": "3fd0abaa-8b59-47ff-bc70-8c03fb3a89f7",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q09-PAIN",
+    "runId": "3fd0abaa-8b59-47ff-bc70-8c03fb3a89f7",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "responseSha256": "5ee32ac88df9183f53e16123638650e756b9a11fc525b541d81f56a08d011608",
+    "reviewedAt": "2026-10-17T20:56:45.570Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q10-PAIN",
+    "runId": "972e6adc-100f-4238-9d77-5bb64adedb63",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q10-PAIN",
+    "runId": "972e6adc-100f-4238-9d77-5bb64adedb63",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q11-PAIN",
+    "runId": "9f34c02c-0ab2-479e-9bdb-396ca88e6421",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q11-PAIN",
+    "runId": "9f34c02c-0ab2-479e-9bdb-396ca88e6421",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain. It's really distressing.",
+    "responseSha256": "1140b6efb1d6d2a431333f02891a453dc11bc9a80b62e718cc59712c386d0664",
+    "reviewedAt": "2026-10-17T20:58:40.028Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Direct comfort/distress response consistent with canonical severe8/10 pain; no invented event, new symptom or treatment claim."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Direct comfort/distress response consistent with canonical severe8/10 pain; no invented event, new symptom or treatment claim."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Direct comfort/distress response consistent with canonical severe8/10 pain; no invented event, new symptom or treatment claim."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Direct comfort/distress response consistent with canonical severe8/10 pain; no invented event, new symptom or treatment claim."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q12-PAIN",
+    "runId": "1fc396c8-8421-4600-9a08-08062d9fe6dd",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q12-PAIN",
+    "runId": "1fc396c8-8421-4600-9a08-08062d9fe6dd",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "responseSha256": "5ee32ac88df9183f53e16123638650e756b9a11fc525b541d81f56a08d011608",
+    "reviewedAt": "2026-10-17T20:56:45.570Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q13-PAIN",
+    "runId": "57c029e5-01cb-4555-afd4-349736caad75",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q13-PAIN",
+    "runId": "57c029e5-01cb-4555-afd4-349736caad75",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q14-PAIN",
+    "runId": "e1bb4072-aed8-4192-93e3-be30453395ff",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q14-PAIN",
+    "runId": "e1bb4072-aed8-4192-93e3-be30453395ff",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q15-PAIN",
+    "runId": "29408805-89e4-4ef6-b048-5742ff112c94",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q15-PAIN",
+    "runId": "29408805-89e4-4ef6-b048-5742ff112c94",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q16-PAIN",
+    "runId": "c756f6a9-fd84-450c-a6dc-f8da673c735a",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q16-PAIN",
+    "runId": "c756f6a9-fd84-450c-a6dc-f8da673c735a",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "responseSha256": "5ee32ac88df9183f53e16123638650e756b9a11fc525b541d81f56a08d011608",
+    "reviewedAt": "2026-10-17T20:56:45.570Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q17-PAIN",
+    "runId": "783bb2bf-39f4-4e93-a17e-4125c617c220",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q17-PAIN",
+    "runId": "783bb2bf-39f4-4e93-a17e-4125c617c220",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q18-PAIN",
+    "runId": "56a6c5ef-5c25-493d-b309-fb1d5e3e4cee",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q18-PAIN",
+    "runId": "56a6c5ef-5c25-493d-b309-fb1d5e3e4cee",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q19-PAIN",
+    "runId": "6f6ee44f-0537-4806-9a1b-385bcf3f7e60",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q19-PAIN",
+    "runId": "6f6ee44f-0537-4806-9a1b-385bcf3f7e60",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "responseSha256": "5ee32ac88df9183f53e16123638650e756b9a11fc525b541d81f56a08d011608",
+    "reviewedAt": "2026-10-17T20:56:45.570Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers emotional/comfort prompt without unsupported details."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q20-PAIN",
+    "runId": "10aadffb-2906-46b7-a76f-05e91c52f1e9",
+    "caseId": "case-01",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "responseSha256": "b3ce8c74983945c5dfc6de16443d75c0e594c1b736112d78c924ef3b32cb4049",
+    "reviewedAt": "2026-10-17T20:56:37.764Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical current severity8/10 and lower-left molar location; severity question is fully answered with only directly linked location."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C01-G03-Q20-PAIN",
+    "runId": "10aadffb-2906-46b7-a76f-05e91c52f1e9",
+    "caseId": "case-01",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "responseSha256": "4f196dcb0dfa8d8af27ba867fcf7e4bdb997a4db2b0714080cf5a54cabcbcfaa",
+    "reviewedAt": "2026-10-17T20:56:45.741Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General discomfort consistent with canonical severe pain; directly answers comfort prompt without adding clinical history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H01",
+    "runId": "861eaac4-6a47-4db5-8ddc-f65fbb2eb196",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T21:02:23.087Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid entails prior possession and establishes the coverage referent; canonical within-past-year bound is preserved without invented reason or exact date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid entails prior possession and establishes the coverage referent; canonical within-past-year bound is preserved without invented reason or exact date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid entails prior possession and establishes the coverage referent; canonical within-past-year bound is preserved without invented reason or exact date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid entails prior possession and establishes the coverage referent; canonical within-past-year bound is preserved without invented reason or exact date."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H01",
+    "runId": "861eaac4-6a47-4db5-8ddc-f65fbb2eb196",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H02",
+    "runId": "d4a52af1-3bc1-488a-9560-4185361c8282",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "responseSha256": "41485c39018b32cd8fa527898cd63b1014c3e6da16eb775142d630b69b56be76",
+    "reviewedAt": "2026-10-17T20:31:18.420Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H02",
+    "runId": "d4a52af1-3bc1-488a-9560-4185361c8282",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H03",
+    "runId": "6377d4df-0298-441f-a853-2f7b582daa29",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "responseSha256": "41485c39018b32cd8fa527898cd63b1014c3e6da16eb775142d630b69b56be76",
+    "reviewedAt": "2026-10-17T20:31:18.420Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior coverage and loss within the past year; historical yes and referent established without invented reason/date."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G05-H03",
+    "runId": "6377d4df-0298-441f-a853-2f7b582daa29",
+    "caseId": "case-02",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-17T20:31:18.423Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct coverage-loss event and bound; prior setup establishes Medicaid referent, no invented loss reason."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G06-H01",
+    "runId": "dabb5586-a031-4c4e-a026-e1e020f56869",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "I live in Collier County.",
+    "responseSha256": "abfd6c8e0cdb6e2b79d50c697696289a8e7c069cda362d734e7b3ddbac81d96b",
+    "reviewedAt": "2026-10-17T21:03:08.507Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G06-H02",
+    "runId": "250d5762-842c-4dab-b9b9-6a42c8528b03",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "I live in Collier County.",
+    "responseSha256": "abfd6c8e0cdb6e2b79d50c697696289a8e7c069cda362d734e7b3ddbac81d96b",
+    "reviewedAt": "2026-10-17T21:03:08.507Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical Collier County directly answers residence and establishes the referent; does not assert established residency."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C02-G06-H03",
+    "runId": "f57be939-023e-454c-8926-7496e7f18842",
+    "caseId": "case-02",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "Collier County.",
+    "responseSha256": "d4edeeafdd760e24ba1f83d34091e0a4683ede0a14146b1d64e80d5e53064928",
+    "reviewedAt": "2026-10-17T20:33:37.106Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct canonical county; establishes the residency-question referent without inventing household or address."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-H01",
+    "runId": "86dc6baa-6e0d-4f85-a81c-7c4ec3c416ad",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-H02",
+    "runId": "003ab8ea-fd4a-4e02-b2f3-bdf5025e6efe",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-H03",
+    "runId": "88421743-fdf1-4c11-a745-ab857d4130e0",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H01",
+    "runId": "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H01",
+    "runId": "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+    "responseSha256": "4c05b9b9010597fbd51ea5c929cfc99015de69d734fcbf175ac31af54df35dcb",
+    "reviewedAt": "2026-10-17T21:05:01.746Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H02",
+    "runId": "ba0e8aa6-08c9-4c4f-827e-299b7f1ac53d",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H02",
+    "runId": "ba0e8aa6-08c9-4c4f-827e-299b7f1ac53d",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "responseSha256": "dec603063abde715c3426fb6cacfb4133bdff07e60bc442045195550148af79e",
+    "reviewedAt": "2026-10-17T20:43:35.723Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H03",
+    "runId": "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T20:40:45.584Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-H03",
+    "runId": "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac",
+    "caseId": "case-03",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+    "responseSha256": "4c05b9b9010597fbd51ea5c929cfc99015de69d734fcbf175ac31af54df35dcb",
+    "reviewedAt": "2026-10-17T21:05:01.746Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-N1",
+    "runId": "f8369d8b-d081-4760-8679-4840eccb4f5d",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-N2",
+    "runId": "d15f3b60-c212-4252-bc44-98dab75abec0",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-N3",
+    "runId": "28765133-09ed-4113-b419-c3b3aba6171c",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-N1",
+    "runId": "7ca160ee-84d9-41ac-aa42-eed94716d50f",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-N2",
+    "runId": "3b580c48-9a08-47d5-a76c-4421509d6498",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-N3",
+    "runId": "52181fa1-9934-490c-88e8-7afc838797b2",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-V4H1",
+    "runId": "a5896173-a900-46ba-8fe0-2c95e1cbccf4",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-V4H2",
+    "runId": "2b65bb89-ad80-41be-9f33-d421bde25c6e",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G10-V4H3",
+    "runId": "0376ee34-36f3-4d30-9203-8c2085d6735c",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-V4H1",
+    "runId": "83b5f925-71b1-4ba2-89e0-e1eb183658ad",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-V4H2",
+    "runId": "d58572f4-4af0-4ec2-8b0a-4a3f7cb59f09",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  },
+  {
+    "testId": "C03-G11-V4H3",
+    "runId": "c3038c0f-d6f3-4c2b-8745-403dbc8cc5cf",
+    "caseId": "case-03",
+    "setupTurnIndex": 0,
+    "question": "Do you have a daughter?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+    "reviewedAt": "2026-10-17T21:13:34.161Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage referent without cohabitation, age or provider history."
+      }
+    },
+    "outcome": "PASS"
+  }
+]

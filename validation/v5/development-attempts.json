@@ -1,0 +1,26 @@
+[
+  {
+    "phase": "focused regression development",
+    "result": "FAIL",
+    "observation": "The first generic attendance negative-control fixture incorrectly expected rejection in Case2, whose canonical facts do establish a gap since Medicaid loss. The fixture was corrected to preserve that supported exception; the recorded Case3 unsupported-attendance failures remained rejected.",
+    "evidenceKind": "Summary of original tool output; not a reconstructed raw provider trace."
+  },
+  {
+    "phase": "isolated-worktree command permissions",
+    "result": "INFRASTRUCTURE ERROR",
+    "observation": "A focused check completed assertions but could not write focused-replays.json (EPERM), and typecheck could not write tsconfig.tsbuildinfo. Commands were rerun with authorized managed-worktree write access.",
+    "evidenceKind": "Summary of original command output."
+  },
+  {
+    "phase": "fresh-worktree typecheck",
+    "result": "FAIL",
+    "observation": "PageProps was unavailable until Next route type generation ran. next typegen succeeded; the full subsequent typecheck passed.",
+    "evidenceKind": "Summary of original command output."
+  },
+  {
+    "phase": "first production build",
+    "result": "INFRASTRUCTURE ERROR",
+    "observation": "Turbopack rejected the node_modules junction outside the filesystem root. A local dependency tree fixed the environment; no app or bundler configuration was changed.",
+    "rawEvidence": "automated-first-attempt.json and build-attempts.json"
+  }
+]

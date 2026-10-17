@@ -1,0 +1,384 @@
+{
+  "completedAt": "2026-10-17T21:22:40.472Z",
+  "testedCommit": "9274d49194512ec645ca8ab204972e78f7fde1fa",
+  "frozenAt": "2026-10-17T20:19:50.441Z",
+  "frozenFiles": 368,
+  "changedFrozenFiles": [],
+  "freezeManifestSha256": "33dca758f01a494c59e30571bdea210cd75819fa91f454fa2c931656291fb2df",
+  "configuration": {
+    "baseUrl": "http://localhost:3001",
+    "server": "Next16.2.10 development, Turbopack",
+    "provider": "navigator",
+    "model": "granite-3.3-8b-instruct",
+    "origin": "https://api.ai.it.ufl.edu",
+    "temperature": 0.4,
+    "maxTokens": 120,
+    "timeoutMs": 30000,
+    "upstreamRetry": {
+      "maxAttempts": 2,
+      "statuses": [
+        502,
+        503,
+        504
+      ],
+      "backoffMs": 250
+    },
+    "browserWorkers": 1,
+    "browserRetries": 0,
+    "inventorySha256": "2a27109e923c291369c979b353287cf9e747e166d3ade72266ec6694d0ffbfb7",
+    "harness": {
+      "createdAt": "2026-10-17T20:17:34.774Z",
+      "baseUrl": "http://localhost:3001",
+      "workers": 1,
+      "browserRetries": 0,
+      "originalV4HarnessUnchanged": true,
+      "changes": [
+        "Dedicated localhost port3001 for isolated V5 server",
+        "Separate auth setup/state, traces, reports and raw results",
+        "Same recorder, setup referent checks, UI/API/request correlation and student question strings",
+        "Real attempts retained on interruption; only unexecuted placeholders eligible for continuation",
+        "No semantic browser retries; bounded upstream gateway attempts occur inside provider and are recorded separately"
+      ],
+      "files": [
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v5-verification.spec.ts",
+          "sha256": "589b408fed59a7f8d3e50a49d11861320e6a95eb5d56b18b7a394d3e7c414ccb"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v5.global.setup.ts",
+          "sha256": "5ca75e6847e7d48c1d57d7007d8fc812ffe78feb8291a3145f82e12f0b5bf141"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v5.config.ts",
+          "sha256": "0a645a18ad2b997f49f8383479ea2e0a9a89257c39981c4df7dff4920bc4a7cd"
+        }
+      ],
+      "originalV4SourceSha256": "bde8ba13734d947fbb6c58366594263003f2e33b4629e94b6616e0a863c702c9"
+    }
+  },
+  "total": 546,
+  "outcomes": {
+    "PASS": 539,
+    "FAIL": 5,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "v4Outcomes": {
+    "PASS": 474,
+    "FAIL": 5,
+    "REVIEW": 10,
+    "ERROR": 17,
+    "BLOCKED": 40
+  },
+  "transitions": {
+    "PASS->PASS": 472,
+    "REVIEW->REVIEW": 1,
+    "REVIEW->PASS": 9,
+    "ERROR->PASS": 17,
+    "BLOCKED->PASS": 37,
+    "BLOCKED->FAIL": 2,
+    "BLOCKED->REVIEW": 1,
+    "PASS->FAIL": 2,
+    "FAIL->PASS": 4,
+    "FAIL->FAIL": 1
+  },
+  "regressionsFromV4Pass": [
+    {
+      "testId": "C05-TARGET-5",
+      "question": "Thank you for explaining that.",
+      "v4Outcome": "PASS",
+      "v5Outcome": "FAIL",
+      "v4Response": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "v5Response": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "v5Reason": "relevance: After a neutral thank-you, the response restarts the opening complaint and volunteers persistent pain and nocturnal waking rather than acknowledging the student. The antibiotic catalog question is permitted, but does not exempt the unrelated opening narrative. V4 labeled the identical text PASS; this is a stricter corrected semantic judgment of the same behavior, not evidence of a newly introduced text regression.",
+      "assessed": true,
+      "regressionFromV4Pass": true
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "v4Outcome": "PASS",
+      "v5Outcome": "FAIL",
+      "v4Response": "Without insurance, it's going to be expensive.",
+      "v5Response": "Without insurance, the costs will be out of pocket.",
+      "v5Reason": "factualCorrectness: The answer says costs will be out of pocket, asserting a future personal-payment arrangement from uninsured status. Case5 cannot pay anything and prefers free care; no scheduled bill, obligatory charge, self-pay arrangement or exclusion of free/charitable care is established. The requested insurance contribution should be answered from coverage facts alone.",
+      "assessed": true,
+      "regressionFromV4Pass": true
+    }
+  ],
+  "scoredQuestionsSubmitted": 546,
+  "deliveredResponsesReviewed": 546,
+  "uiApiAndCorrelation": {
+    "scoredChecked": 546,
+    "mismatches": [],
+    "successfulSetupsChecked": 119,
+    "setupIssues": [
+      {
+        "testId": "C03-G11-Q11",
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "response": "That's good to hear. My daughter's teeth need more attention, I think.",
+        "outcome": "FAIL",
+        "dimensions": {
+          "factualCorrectness": {
+            "status": "FAIL",
+            "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+          },
+          "completeness": {
+            "status": "PASS",
+            "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+          },
+          "relevance": {
+            "status": "PASS",
+            "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+          },
+          "leakage": {
+            "status": "PASS",
+            "reason": "The acknowledgment invents a current dental-care need for the daughter; canonical facts establish her Medicaid and shared-clinic preference, not her dental condition."
+          }
+        }
+      }
+    ],
+    "notChecked": [
+      "Speech playback",
+      "Production deployment behavior",
+      "Unseen V5 holdout"
+    ]
+  },
+  "verificationIntegrityChecks": 23,
+  "allIntegrityChecksPassed": true,
+  "csvVerification": {
+    "rows": 546,
+    "csvRoundTrip": true,
+    "screenshotsExist": 546,
+    "traceZipIntegrityChecked": 546
+  },
+  "providerHttpSummary": {
+    "httpAttempts": 1466,
+    "generationOperations": 1466,
+    "retryOperations": 0,
+    "recoveredAfterGatewayFailure": 0,
+    "httpStatusCounts": {
+      "200": 1466
+    },
+    "violations": []
+  },
+  "repairAcceptanceChecks": [
+    {
+      "name": "Five V4 semantic failures now PASS",
+      "passed": false,
+      "items": [
+        {
+          "testId": "C01-G03-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G08-V4H3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G09-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G09-V4H2",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G09-V4H3",
+          "outcome": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "Sixteen V4 family rejection items now deliver a scored response",
+      "passed": true
+    },
+    {
+      "name": "All40 previously BLOCKED scored questions actually submitted",
+      "passed": true,
+      "items": [
+        {
+          "testId": "C03-G10-Q14",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-Q17",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q01",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q03",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q04",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q05",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q06",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G11-Q07",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q08",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q09",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q10",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q11",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q12",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q13",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q14",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q15",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q16",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q17",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q18",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q19",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q20",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H01",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H03",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-H01",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G11-H02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-H03",
+          "outcome": "REVIEW"
+        },
+        {
+          "testId": "C03-G10-N1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-N2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-N3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H3",
+          "outcome": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "No regressions among474 V4 PASS items",
+      "passed": false,
+      "regressions": [
+        {
+          "testId": "C05-TARGET-5",
+          "v5": "FAIL"
+        },
+        {
+          "testId": "C05-G16-V4H1",
+          "v5": "FAIL"
+        }
+      ]
+    }
+  ],
+  "recommendation": "Further repair cycle required; preserve V5 evidence and repair under a new version.",
+  "merged": false,
+  "deployed": false,
+  "report": "validation/v5/REPORT.md",
+  "results": "validation/v5/results.json",
+  "unresolved": "validation/v5/unresolved-items.json"
+}

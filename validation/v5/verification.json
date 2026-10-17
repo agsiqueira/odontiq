@@ -1,0 +1,378 @@
+{
+  "checkedAt": "2026-10-17T21:21:49.655Z",
+  "testedCommit": "9274d49194512ec645ca8ab204972e78f7fde1fa",
+  "checks": [
+    {
+      "name": "Frozen V5 source/runtime files unchanged",
+      "passed": true,
+      "detail": {
+        "count": 368,
+        "changed": []
+      }
+    },
+    {
+      "name": "Copied frozen V4 evidence unchanged",
+      "passed": true,
+      "detail": 66
+    },
+    {
+      "name": "Original V4 evidence unchanged",
+      "passed": true,
+      "detail": 66
+    },
+    {
+      "name": "Original V4 implementation remains byte-identical",
+      "passed": true,
+      "detail": 216
+    },
+    {
+      "name": "Authoritative case facts unchanged from V4",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "Exact546-item unique inventory and wording/context",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "All items have real recorded outcomes; no pending placeholders",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "Every delivered response individually adjudicated and bound to its hash",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "Non-delivered responses remain ERROR/BLOCKED, not semantic passes",
+      "passed": true,
+      "detail": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "name": "Exact UI/API text and request/encounter correlation for all delivered responses",
+      "passed": true,
+      "detail": {
+        "checked": 546,
+        "total": 546,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "Every successful setup separately adjudicated and UI/API correlated",
+      "passed": true,
+      "detail": 119
+    },
+    {
+      "name": "Every delivered scored question has its full unchanged setup",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "All item encounters are distinct and fresh",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "No recorded scored submission repeated",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "First real outcome retained despite any continuation history",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "Scored request wording preserved",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "All raw-record hashes match",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "Every non-pass has exact question/context, response-or-error reason and screenshot/trace",
+      "passed": true,
+      "detail": [
+        "C01-G01-Q08",
+        "C03-G11-Q06",
+        "C03-G11-H01",
+        "C03-G11-H03",
+        "C05-TARGET-5",
+        "C03-G09-V4H2",
+        "C05-G16-V4H1"
+      ]
+    },
+    {
+      "name": "Synthetic exclusion registry covers every item encounter",
+      "passed": true,
+      "detail": 546
+    },
+    {
+      "name": "Frozen isolated verification harness unchanged",
+      "passed": true,
+      "detail": [
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v5-verification.spec.ts",
+          "sha256": "589b408fed59a7f8d3e50a49d11861320e6a95eb5d56b18b7a394d3e7c414ccb"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v5.global.setup.ts",
+          "sha256": "5ca75e6847e7d48c1d57d7007d8fc812ffe78feb8291a3145f82e12f0b5bf141"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v5.config.ts",
+          "sha256": "0a645a18ad2b997f49f8383479ea2e0a9a89257c39981c4df7dff4920bc4a7cd"
+        }
+      ]
+    },
+    {
+      "name": "All38 final automated checks passed",
+      "passed": true,
+      "detail": 38
+    },
+    {
+      "name": "All observed provider operations obey bounded gateway retry policy",
+      "passed": true,
+      "detail": {
+        "httpAttempts": 1466,
+        "generationOperations": 1466,
+        "retryOperations": 0,
+        "recoveredAfterGatewayFailure": 0,
+        "httpStatusCounts": {
+          "200": 1466
+        },
+        "violations": []
+      }
+    },
+    {
+      "name": "Successful conversation provider attempts independently retained in server log",
+      "passed": true,
+      "detail": {
+        "diagnosticAttempts": 801,
+        "missing": 0
+      }
+    }
+  ],
+  "repairChecks": [
+    {
+      "name": "Five V4 semantic failures now PASS",
+      "passed": false,
+      "items": [
+        {
+          "testId": "C01-G03-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G08-V4H3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G09-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G09-V4H2",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G09-V4H3",
+          "outcome": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "Sixteen V4 family rejection items now deliver a scored response",
+      "passed": true
+    },
+    {
+      "name": "All40 previously BLOCKED scored questions actually submitted",
+      "passed": true,
+      "items": [
+        {
+          "testId": "C03-G10-Q14",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-Q17",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q01",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q03",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q04",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q05",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q06",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G11-Q07",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q08",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q09",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q10",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q11",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q12",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q13",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q14",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q15",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q16",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q17",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q18",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q19",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-Q20",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H01",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-H03",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-H01",
+          "outcome": "FAIL"
+        },
+        {
+          "testId": "C03-G11-H02",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-H03",
+          "outcome": "REVIEW"
+        },
+        {
+          "testId": "C03-G10-N1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-N2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-N3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-N3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G10-V4H3",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H1",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H2",
+          "outcome": "PASS"
+        },
+        {
+          "testId": "C03-G11-V4H3",
+          "outcome": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "No regressions among474 V4 PASS items",
+      "passed": false,
+      "regressions": [
+        {
+          "testId": "C05-TARGET-5",
+          "v5": "FAIL"
+        },
+        {
+          "testId": "C05-G16-V4H1",
+          "v5": "FAIL"
+        }
+      ]
+    }
+  ],
+  "allIntegrityChecksPassed": true,
+  "repairAcceptancePassed": false
+}

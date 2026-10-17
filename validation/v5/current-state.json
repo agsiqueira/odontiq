@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-17T21:21:36.416Z",
+  "commit": "9274d49194512ec645ca8ab204972e78f7fde1fa",
+  "changedFrozenFiles": [],
+  "copiedV4Changed": [],
+  "realAttempted": 546,
+  "recorded": 546,
+  "reviewed": 546,
+  "outcomes": {
+    "PASS": 539,
+    "FAIL": 5,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "errors": [],
+  "uiApi": {
+    "delivered": 546,
+    "mismatches": []
+  },
+  "latest": [
+    {
+      "id": "C05-G17-V4H3",
+      "at": "2026-10-17T21:20:55.568Z"
+    }
+  ],
+  "parseErrors": []
+}
