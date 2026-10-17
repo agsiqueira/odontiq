@@ -54,6 +54,11 @@ for(const question of ['Where does it hurt?','Is it on the right or left?','Whic
  const s=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:question});
  assert(requiredFactsForTurn(s,question,facts('case-05')).some(f=>f.id==='c5.location'),question);
 }
+const coldFact=facts('case-05').find(f=>f.id==='c5.cold')!;
+const lingerFact=facts('case-05').find(f=>f.id==='c5.lingering')!;
+assert(!validatePatientFinalResponse('The pain lingers after I remove the cold drink.',{canonicalFacts:facts('case-05'),visibleFacts:[coldFact,lingerFact],requiredFacts:[coldFact,lingerFact]}).valid,'Cold/pain co-occurrence is not an assertion that cold worsens pain');
+assert(validatePatientFinalResponse('The pain lingers after I remove the cold drink.',{canonicalFacts:facts('case-05'),visibleFacts:[lingerFact],requiredFacts:[lingerFact]}).valid,'A persistence-only answer remains valid when only persistence is requested');
+for(const t of ['Cold drinks make the pain worse.','Cold worsens it.','It gets worse when I drink something cold.'])assert(validatePatientFinalResponse(t,{canonicalFacts:facts('case-05'),visibleFacts:[coldFact],requiredFacts:[coldFact]}).valid,t);
 for(const good of ["Cold drinks make the pain worse. The pain does not stop immediately after the cold is removed; it keeps hurting for a little while afterward.","The pain doesn't stop right away after cold; it lingers."])assert(validatePatientFinalResponse(good,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,good);
 for(const bad of ["Cold doesn't hurt.","The pain stops immediately after cold is removed.","It goes away right away after cold."])assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,bad);
 fs.writeFileSync('validation/v7/focused-regressions.json',JSON.stringify({at:new Date().toISOString(),priorTimingCorrections:90,passed:true,coverage:['source-scoped offers','both V6 regressions','setup FAIL/REVIEW','production compound pain and payment','opening and later pain','once only','eligibility after withholding','repeated unsafe retry and fallback','source-positive child condition']},null,2));console.log('V7 focused regressions passed.');
