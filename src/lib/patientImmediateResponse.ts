@@ -177,3 +177,15 @@ function isDirectCase3Question(message: string) {
   const trimmed = message.trim();
   return QUESTION_PATTERN.test(trimmed) || /^any\b/i.test(trimmed);
 }
+
+/** A plan-only speech act calls for acknowledgment, with no new personal constraints.
+ * This selects wording only: semantic question eligibility remains separate. */
+export function planOnlyAcknowledgment(input: {
+  intent: PatientDisclosureState["providerMessageIntent"];
+  hasGovernedAnswer: boolean;
+  requiredFacts: readonly unknown[];
+}): string | undefined {
+  return !input.hasGovernedAnswer && input.requiredFacts.length === 0
+    && ["disposition_plan", "medication_plan", "treatment_plan"].includes(input.intent)
+    ? "Okay, thank you." : undefined;
+}

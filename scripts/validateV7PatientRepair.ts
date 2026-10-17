@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import { loadCase } from '../src/data/cases';
 import { buildPatientDisclosureState, type PatientDisclosureFact } from '../src/lib/patientDisclosure';
 import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
-import { patientImmediateResponse } from '../src/lib/patientImmediateResponse';
+import { patientImmediateResponse, planOnlyAcknowledgment } from '../src/lib/patientImmediateResponse';
 import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
 import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
 import { patientAnswerWithoutQuestions, constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
@@ -14,6 +14,10 @@ const facts=(id:string)=>loadCase(id)!.supportingInfo.patientFacts!;
 const classification=(id:string):PatientQuestionClassification=>({schemaVersion:1,caseId:id,analyzedStudentMessageId:'s',detectedEvents:{painManagementOrDispositionDiscussed:id==='case-04',patientPainDescribed:id==='case-05'},confidence:1,evidenceAliases:['student-current','patient-draft'],evidenceMessageIds:['s','p']});
 const qualify=(id:string,q:string,a:string,plan=false)=>constrainQuestionClassification({classification:{...classification(id),...(plan?{currentProviderAct:'current_plan' as const,currentPlanEvidence:q}:{})},studentMessage:q,patientResponse:a,conversation:[],facts:facts(id)});
 async function main(){
+assert.equal(planOnlyAcknowledgment({intent:'disposition_plan',hasGovernedAnswer:false,requiredFacts:[]}), 'Okay, thank you.');
+for(const intent of ['question','closing','other'] as const)assert.equal(planOnlyAcknowledgment({intent,hasGovernedAnswer:false,requiredFacts:[]}),undefined);
+assert.equal(planOnlyAcknowledgment({intent:'treatment_plan',hasGovernedAnswer:true,requiredFacts:[]}),undefined);
+assert.equal(planOnlyAcknowledgment({intent:'medication_plan',hasGovernedAnswer:false,requiredFacts:[{id:'supported-answer'}]}),undefined);
 const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:{correctedVerdict:string})=>r.correctedVerdict==='FAIL');
 assert.equal(corrections.length,90);
 for(const r of corrections){const c=qualify(`case-${r.testId.slice(1,3)}`,r.question,r.actualResponse);assert.equal(applyPatientQuestionClassification({caseId:`case-${r.testId.slice(1,3)}`,classification:c}).selectedQuestionId,undefined,r.testId);}
@@ -42,6 +46,8 @@ const q='What does your tooth pain feel like, and what makes it worse?',state=bu
 const supported:PatientDisclosureFact[]=[...facts('case-03'),{id:'test.child-condition',topic:'dental_history',text:'The daughter has cavities.'}];
 assert(supported.some(f=>f.text==='The daughter has cavities.')); // Source-positive routing checked below using the same case contract.
 const supportedTurn=interpretBackgroundTurn('Does your daughter have dental problems?',[],supported);assert(supportedTurn?.requests.some(r=>r.concept==='child_condition'&&r.sourceId==='test.child-condition'));
+for(const good of ["Cold drinks make the pain worse. The pain does not stop immediately after the cold is removed; it keeps hurting for a little while afterward.","The pain doesn't stop right away after cold; it lingers."])assert(validatePatientFinalResponse(good,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,good);
+for(const bad of ["Cold doesn't hurt.","The pain stops immediately after cold is removed.","It goes away right away after cold."])assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,bad);
 fs.writeFileSync('validation/v7/focused-regressions.json',JSON.stringify({at:new Date().toISOString(),priorTimingCorrections:90,passed:true,coverage:['source-scoped offers','both V6 regressions','setup FAIL/REVIEW','production compound pain and payment','opening and later pain','once only','eligibility after withholding','repeated unsafe retry and fallback','source-positive child condition']},null,2));console.log('V7 focused regressions passed.');
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

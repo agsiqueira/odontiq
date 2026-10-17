@@ -17,7 +17,7 @@ import {
 } from "@/lib/patientRoleGuard";
 import { generatePatientRoleSafeResponse } from "@/lib/patientRoleResponse";
 import { normalizeOuterPatientQuoteWrapper } from "@/lib/patientDialogue";
-import { patientImmediateResponse } from "@/lib/patientImmediateResponse";
+import { patientImmediateResponse, planOnlyAcknowledgment } from "@/lib/patientImmediateResponse";
 import { guardPatientPresentation } from "@/lib/patientInstructionLeakage";
 import { transportationFallback } from "@/lib/patientTransportation";
 import { residenceFallback } from "@/lib/patientResidence";
@@ -414,6 +414,9 @@ export async function POST(request: Request): Promise<Response> {
     if (patientQuestionMayBeAdded && behavioralResponse?.optionalPhrase) {
       finalResponseText = behavioralResponse.textWithoutOptionalPhrase ?? finalResponseText;
     }
+    const planAcknowledgment = planOnlyAcknowledgment({ intent: disclosureState.providerMessageIntent,
+      hasGovernedAnswer: Boolean(immediateResponse), requiredFacts: turnRequiredFacts });
+    if (planAcknowledgment) finalResponseText = planAcknowledgment;
     const storedTurn = await patientQuestionService.finalizeTurn({
       userId: user.id,
       encounterId: payload.encounterId,
@@ -484,6 +487,7 @@ export async function POST(request: Request): Promise<Response> {
         presentationAssessment: validatePatientFinalResponse(presentationText, finalValidationContext),
         baseResponse: finalResponseText,
         questionClassification: classificationResult ?? null,
+        planAcknowledgmentGoverned: Boolean(planAcknowledgment),
       } } : {}),
     });
   } catch (error) {

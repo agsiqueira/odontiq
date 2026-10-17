@@ -294,7 +294,13 @@ function findCase5Contradiction(response: string): string | undefined {
   if (/\b(?:upper[- ]right|upper[- ]left|lower[- ]right|right (?:upper|lower))\b/i.test(response)) return "contradiction of Case 5 lower-left location";
   if (/\b(?:first molar|tooth number|tooth #|number \d+)\b/i.test(response) && !/\b(?:don't|do not|can't|cannot|not sure|unsure)\b/i.test(response)) return "invented Case 5 patient knowledge of exact tooth";
   if (/\b(?:started|began|worsened|worsening|getting worse|hurting)\b.{0,35}\b(?:three|3|five|5|seven|7)\s+days?\b/i.test(response)) return "contradiction of Case 5 four-day duration";
-  if (/\bcold\b.{0,35}\b(?:doesn't|does not|no longer|not)\b.{0,20}\b(?:hurt|worse|pain)|\b(?:the )?pain\b.{0,15}\b(?:stops?|goes away)\b.{0,20}\b(?:immediately|right away)\b.{0,25}\bcold\b/i.test(response)) return "contradiction of Case 5 lingering cold pain";
+  const coldClaims = response.replace(/[’‘]/g, "'").split(/[.!?;]+/);
+  const deniedColdPain = coldClaims.some(clause => /\bcold\b.{0,25}\b(?:doesn't|does not|no longer) (?:hurt\w*|worsen\w*|painful|cause pain|make (?:it|the pain) worse)\b|\bcold\b.{0,25}\b(?:isn't|is not) painful\b/i.test(clause));
+  const immediateResolution = coldClaims.some(clause => {
+    const resolution = /\b(?:pain|it)\b.{0,15}\b(?:stops?|goes away)\b.{0,20}\b(?:immediately|right away)\b/i.exec(clause);
+    return resolution && !/\b(?:not|never|doesn't|does not|won't|will not)\b/i.test(resolution[0]);
+  });
+  if (deniedColdPain || immediateResolution) return "contradiction of Case 5 lingering cold pain";
   if (/\b(?:face|gum)\b.{0,20}\b(?:is|feels|looks)?\s*(?:swollen|swelling)\b|\b(?:i have|i've got|there is)\b.{0,25}\b(?:abscess|pus|drainage|fever)\b/i.test(response)) return "contradiction of Case 5 infection negatives";
   if (/\b(?:i(?:'m| am)|yes,? i(?:'m| am))\s+(?!not\b)allergic\b.{0,25}\bpenicillin\b/i.test(response)) return "contradiction of Case 5 no penicillin allergy";
   if (affirmsOpioidHistory(response)) return "contradiction of Case 5 no-opioid history";
