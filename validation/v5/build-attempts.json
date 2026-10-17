@@ -1,0 +1,28 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/next/dist/bin/next",
+      "build"
+    ],
+    "startedAt": "2026-10-17T20:15:29.850Z",
+    "elapsedMs": 4747,
+    "exitCode": 1,
+    "stdout": "▲ Next.js 16.2.10 (Turbopack)\n- Environments: .env.local, .env\n\n  Creating an optimized production build ...\n",
+    "stderr": "\n-----\n\u001b[1m\u001b[31mFATAL\u001b[39m\u001b[0m: An unexpected Turbopack error occurred. A panic log has been written to C:\\Users\\AGOMES~1\\AppData\\Local\\Temp\\next-panic-6cb2d780d4e91cf577fe354c33a9dfed.log.\n\nTo help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20Symlink%20%5Bproject%5D%2Fnode_modules%20is%20invalid%2C%20it%20points%20out%20of%20the%20filesystem%20root&body=Turbopack%20version%3A%20%60v16.2.10%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ASymlink%20%5Bproject%5D%2Fnode_modules%20is%20invalid%2C%20it%20points%20out%20of%20the%20filesystem%20root%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_all_written_entrypoints_with_issues_operation%20failed%0A-%20Execution%20of%20EntrypointsOperation%3A%3Anew%20failed%0A-%20Execution%20of%20all_entrypoints_write_to_disk_operation%20failed%0A-%20Execution%20of%20output_assets_operation%20failed%0A-%20Execution%20of%20Project%3A%3Aget_all_endpoint_groups_with_app_route_filter%20failed%0A-%20Execution%20of%20Project%3A%3Aentrypoints_with_app_route_filter%20failed%0A-%20Execution%20of%20AppProject%3A%3Aroutes_with_filter%20failed%0A-%20Execution%20of%20directory_tree_to_entrypoints_internal%20failed%0A-%20Execution%20of%20directory_tree_to_loader_tree%20failed%0A-%20Execution%20of%20try_get_next_package%20failed%0A-%20Execution%20of%20%2AResolveResult%3A%3Afirst_source%20failed%0A-%20Execution%20of%20resolve%20failed%0A-%20Execution%20of%20resolve_internal%20failed%0A-%20Execution%20of%20find_package%20failed%0A-%20Symlink%20%5Bproject%5D%2Fnode_modules%20is%20invalid%2C%20it%20points%20out%20of%20the%20filesystem%20root%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace\n-----\n\n\n> Build error occurred\nError [TurbopackInternalError]: Symlink [project]/node_modules is invalid, it points out of the filesystem root\n\nDebug info:\n- Execution of get_all_written_entrypoints_with_issues_operation failed\n- Execution of EntrypointsOperation::new failed\n- Execution of all_entrypoints_write_to_disk_operation failed\n- Execution of output_assets_operation failed\n- Execution of Project::get_all_endpoint_groups_with_app_route_filter failed\n- Execution of Project::entrypoints_with_app_route_filter failed\n- Execution of AppProject::routes_with_filter failed\n- Execution of directory_tree_to_entrypoints_internal failed\n- Execution of directory_tree_to_loader_tree failed\n- Execution of try_get_next_package failed\n- Execution of *ResolveResult::first_source failed\n- Execution of resolve failed\n- Execution of resolve_internal failed\n- Execution of find_package failed\n- Symlink [project]/node_modules is invalid, it points out of the filesystem root\n    at ignore-listed frames {\n  type: 'TurbopackInternalError',\n  location: undefined\n}\n"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/next/dist/bin/next",
+      "build"
+    ],
+    "startedAt": "2026-10-17T20:17:54.306Z",
+    "elapsedMs": 30975,
+    "exitCode": 0,
+    "stdout": "▲ Next.js 16.2.10 (Turbopack)\n- Environments: .env.local, .env\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 9.2s\n  Running TypeScript ...\n  Finished TypeScript in 14.8s ...\n  Collecting page data using 15 workers ...\n  Generating static pages using 15 workers (0/26) ...\n  Generating static pages using 15 workers (6/26) \r\n  Generating static pages using 15 workers (12/26) \r\n  Generating static pages using 15 workers (19/26) \r\n✓ Generating static pages using 15 workers (26/26) in 591ms\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├ ƒ /api/completed-attempts/[attemptId]\n├ ƒ /api/completed-attempts/[attemptId]/reconcile\n├ ƒ /api/conversation\n├ ƒ /api/debrief\n├ ƒ /api/debrief/chat\n├ ƒ /api/dev/voice-audition\n├ ƒ /api/encounters/[encounterId]\n├ ƒ /api/encounters/[encounterId]/complete\n├ ƒ /api/encounters/start\n├ ƒ /api/faculty-rubric/evaluate\n├ ƒ /api/health\n├ ƒ /api/home/progression\n├ ƒ /api/me\n├ ƒ /api/readiness\n├ ƒ /api/report\n├ ƒ /api/reports/[attemptId]\n├ ƒ /api/reports/dashboard\n├ ƒ /api/voice/mentor\n├ ƒ /api/voice/speak\n├ ○ /cases\n├ ○ /dev/amara-behavior\n├ ○ /dev/faculty-report\n├ ○ /dev/faculty-report/compare\n├ ○ /dev/faculty-rubric\n├ ○ /dev/patient-language\n├ ○ /dev/voices\n├ ƒ /encounter/[caseId]\n├ ○ /home\n├ ƒ /login/[[...sign-in]]\n├ ƒ /mentor/[caseId]\n├ ○ /reports\n├ ƒ /reports/[caseId]\n├ ○ /settings\n└ ƒ /signup/[[...sign-up]]\n\n\nƒ Proxy (Middleware)\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n",
+    "stderr": ""
+  }
+]

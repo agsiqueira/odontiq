@@ -1,0 +1,966 @@
+{
+  "at": "2026-10-17T20:14:50.945Z",
+  "total": 72,
+  "byKind": {
+    "genuine-question-ambiguity": 1,
+    "application-overprecision-with-prior-evaluator-ambiguity": 9,
+    "erroneous-application-rejection": 16,
+    "application-defect-blocking-valid-setup": 40,
+    "upstream-failure": 1,
+    "application-defect": 5
+  },
+  "verificationSetupDefects": "V4 harness initially misclassified output-rejection502s as infrastructure failures. Its continuation recovered no-request placeholders. The final40 blocked items are valid setup requests rejected by the application, not defective setup wording.",
+  "items": [
+    {
+      "testId": "C01-G01-Q08",
+      "v4Outcome": "REVIEW",
+      "question": "Are you paying for dental care without insurance?",
+      "context": [],
+      "response": "Yes, I'm uninsured and paying out of pocket.",
+      "recordedReason": "factualCorrectness: Uninsured is correct. Paying out of pocket may describe lack of insurer or imply an unspecified actual payment arrangement; retain the same semantic ambiguity as the earlier versions.",
+      "kind": "genuine-question-ambiguity",
+      "rootCause": "The question may ask about lack of insurance or presuppose actual out-of-pocket payments. Canonical facts establish uninsured status and inability to afford extraction, not an actual payment arrangement.",
+      "resolution": "Reject explicit invented payment arrangements. Preserve the known uninsured/access facts. Do not force a yes/no about actual payments; retain REVIEW if the question boundary remains ambiguous. No baseline label is overwritten."
+    },
+    {
+      "testId": "C02-G05-Q02",
+      "v4Outcome": "REVIEW",
+      "question": "How long ago did your Medicaid coverage end?",
+      "context": [],
+      "response": "I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-Q06",
+      "v4Outcome": "REVIEW",
+      "question": "How recently did you lose your Medicaid coverage?",
+      "context": [],
+      "response": "I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-Q07",
+      "v4Outcome": "REVIEW",
+      "question": "Did your Medicaid end sometime in the past twelve months?",
+      "context": [],
+      "response": "Yes, it ended about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-Q14",
+      "v4Outcome": "REVIEW",
+      "question": "Was the loss of your Medicaid in the past year?",
+      "context": [],
+      "response": "Yeah, I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-Q15",
+      "v4Outcome": "REVIEW",
+      "question": "When you lost Medicaid?",
+      "context": [],
+      "response": "I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-Q17",
+      "v4Outcome": "REVIEW",
+      "question": "You lose your Medicaid in the last year?",
+      "context": [],
+      "response": "Yeah, I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C03-G10-Q01",
+      "v4Outcome": "ERROR",
+      "question": "Tell me about your daughter's coverage.",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q02",
+      "v4Outcome": "ERROR",
+      "question": "Does your daughter have insurance?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q03",
+      "v4Outcome": "ERROR",
+      "question": "Is your daughter covered by Medicaid?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q04",
+      "v4Outcome": "ERROR",
+      "question": "What insurance does your daughter have?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q05",
+      "v4Outcome": "ERROR",
+      "question": "How is your daughter's care covered?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q06",
+      "v4Outcome": "ERROR",
+      "question": "Does your young daughter have Medicaid coverage?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q08",
+      "v4Outcome": "ERROR",
+      "question": "What coverage would your daughter use at a dental clinic?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q09",
+      "v4Outcome": "ERROR",
+      "question": "Can you tell me whether your daughter has Medicaid?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q10",
+      "v4Outcome": "ERROR",
+      "question": "Who is covered by Medicaid, you or your daughter?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q11",
+      "v4Outcome": "ERROR",
+      "question": "Do you have a young daughter, and what insurance does she have?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q13",
+      "v4Outcome": "ERROR",
+      "question": "Before finding a clinic for both of you, what insurance does your daughter have?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q14",
+      "v4Outcome": "BLOCKED",
+      "question": "Does your child have insurance through Medicaid?",
+      "context": [
+        "Do you have any children?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q15",
+      "v4Outcome": "ERROR",
+      "question": "Your daughter has what insurance?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q16",
+      "v4Outcome": "ERROR",
+      "question": "Do your daughter have Medicaid?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q17",
+      "v4Outcome": "BLOCKED",
+      "question": "Is she on Medicaid?",
+      "context": [
+        "Do you have any children?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q18",
+      "v4Outcome": "ERROR",
+      "question": "What insurance your daughter got?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q19",
+      "v4Outcome": "ERROR",
+      "question": "You daughter is insured or not?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-Q20",
+      "v4Outcome": "ERROR",
+      "question": "Does your daughters coverage come from Medicaid?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "erroneous-application-rejection",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q01",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you prefer the same clinic?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q02",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you like you and your daughter to receive dental care at the same clinic?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q03",
+      "v4Outcome": "BLOCKED",
+      "question": "Would a dental clinic that treats both of you be preferable?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q04",
+      "v4Outcome": "BLOCKED",
+      "question": "Do you want a clinic that can see you and your daughter?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q05",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you rather use one dental clinic for both of you?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "v4Outcome": "BLOCKED",
+      "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q07",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you prefer to go where your daughter can also be treated?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q08",
+      "v4Outcome": "BLOCKED",
+      "question": "Would a clinic accepting your daughter on Medicaid and seeing you uninsured suit your preference?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q09",
+      "v4Outcome": "BLOCKED",
+      "question": "Are you hoping to find a dental clinic you can both attend?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q10",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you favor a shared clinic over separate clinics for you and your daughter?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q11",
+      "v4Outcome": "BLOCKED",
+      "question": "Do you have a preference about whether you both use the same dental clinic?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q12",
+      "v4Outcome": "BLOCKED",
+      "question": "Would it be better for you if one clinic could provide care for both of you?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q13",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you like me to look for somewhere that can treat you both?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q14",
+      "v4Outcome": "BLOCKED",
+      "question": "Is seeing the same clinic as your daughter what you would prefer?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q15",
+      "v4Outcome": "BLOCKED",
+      "question": "You want same clinic for you and your daughter?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q16",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you prefers one clinic for both?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q17",
+      "v4Outcome": "BLOCKED",
+      "question": "You and your daughter rather go same place?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q18",
+      "v4Outcome": "BLOCKED",
+      "question": "Do you wants a dentist clinic that sees both of you?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q19",
+      "v4Outcome": "BLOCKED",
+      "question": "Same dental clinic for you two would be better?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-Q20",
+      "v4Outcome": "BLOCKED",
+      "question": "Would going to different clinics be less preferable than going together?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C04-G14-Q10",
+      "v4Outcome": "ERROR",
+      "question": "Can I look for dental clinics that offer sliding-scale payments?",
+      "context": [],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Navigator request failed with status 502",
+      "kind": "upstream-failure",
+      "rootCause": "Recorded upstream HTTP 502, separate from application output rejection. Remote cause is not observable from the retained error.",
+      "resolution": "At most one additional provider attempt for explicit HTTP 502/503/504, same request body, 250ms backoff within the existing overall timeout. Every attempt logged; no retry on auth, rate limit, general 500, network exception or application validation."
+    },
+    {
+      "testId": "C03-G10-H01",
+      "v4Outcome": "BLOCKED",
+      "question": "Is your daughter the one with Medicaid, or is that you?",
+      "context": [
+        "Do you have any children?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-H02",
+      "v4Outcome": "BLOCKED",
+      "question": "What coverage is she signed up for?",
+      "context": [
+        "Do you have any children?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-H03",
+      "v4Outcome": "BLOCKED",
+      "question": "That child has which insurance plan?",
+      "context": [
+        "Do you have any children?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-H01",
+      "v4Outcome": "BLOCKED",
+      "question": "Would one office meeting both your dental needs be easier?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-H02",
+      "v4Outcome": "BLOCKED",
+      "question": "You would rather share a dental clinic with her than use separate ones?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-H03",
+      "v4Outcome": "BLOCKED",
+      "question": "Keeping both of you at one clinic sounds preferable to you?",
+      "context": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C02-G05-N1",
+      "v4Outcome": "REVIEW",
+      "question": "How recently did your Medicaid coverage come to an end?",
+      "context": [],
+      "response": "I lost it about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical loss is within the past year without a more precise interval. About a year ago may be a loose compatible approximation but narrows toward twelve months; retain unresolved additional precision consistently with primary timing REVIEWs.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C03-G10-N1",
+      "v4Outcome": "BLOCKED",
+      "question": "What insurance covers your daughter?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-N2",
+      "v4Outcome": "BLOCKED",
+      "question": "Does she have Medicaid for her care?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-N3",
+      "v4Outcome": "BLOCKED",
+      "question": "Is your child covered under Medicaid?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-N1",
+      "v4Outcome": "BLOCKED",
+      "question": "Would sharing a dental office with your daughter be preferable?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-N2",
+      "v4Outcome": "BLOCKED",
+      "question": "Do you like the idea of both of you receiving care in one clinic?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-N3",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you rather arrange care at the same place for you two?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C01-G03-V4H2",
+      "v4Outcome": "FAIL",
+      "question": "Could you make a trip to a different county for affordable treatment?",
+      "context": [],
+      "response": "I'm not sure, it depends on the cost and if I can even get time off work.",
+      "recordedReason": "factualCorrectness: Invents needing time off work and uncertainty about travel. The canonical patient has reliable transportation and can travel outside Alachua County for free or low-cost care; no employment or schedule constraint is established.; completeness: The question asks whether a trip to another county for affordable treatment is possible. The response substitutes uncertainty and unestablished conditions instead of the known positive travel capability.",
+      "kind": "application-defect",
+      "rootCause": "Trip/different-county phrasing missed the travel concept; an unsupported work-leave condition escaped the independent circumstance guard.",
+      "resolution": "Shared concept grammar, concept-scoped fallback, and provenance checks for work leave/attendance; no individual-question lookup or case-fact changes."
+    },
+    {
+      "testId": "C02-G05-V4H1",
+      "v4Outcome": "REVIEW",
+      "question": "Did your Medicaid end within the past twelve months?",
+      "context": [],
+      "response": "Yeah, it ended about a year ago.",
+      "recordedReason": "factualCorrectness: Canonical loss is within the past year with no narrower interval. About a year may be a compatible loose approximation but narrows toward twelve months; preserve unresolved additional precision consistently with the other timing REVIEWs.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C02-G05-V4H2",
+      "v4Outcome": "REVIEW",
+      "question": "How long has it been since Medicaid stopped covering you?",
+      "context": [],
+      "response": "It's been about a year since I lost Medicaid.",
+      "recordedReason": "factualCorrectness: Canonical loss is within the past year with no narrower interval. About a year may be a compatible loose approximation but narrows toward twelve months; preserve unresolved additional precision consistently with the other timing REVIEWs.",
+      "kind": "application-overprecision-with-prior-evaluator-ambiguity",
+      "rootCause": "About a year ago narrows loss timing toward twelve months, while canonical facts supply only within the past year.",
+      "resolution": "Use the known bounded interval without inventing a date. Exact-date uncertainty is allowed if the interval remains clear. Reject additional approximate precision; no change to the canonical interval or historical V4 labels."
+    },
+    {
+      "testId": "C03-G08-V4H3",
+      "v4Outcome": "FAIL",
+      "question": "Do you carry a plan for your dental care?",
+      "context": [],
+      "response": "Not really, it's been a while since I've been to the dentist.",
+      "recordedReason": "factualCorrectness: Claims it has been a while since the patient visited the dentist, an attendance interval absent from the authoritative case facts. The patient is uninsured and has an existing dentist/next-week appointment; no last-visit date is established.; completeness: Not really may loosely deny an insurance plan, but the following attendance history suggests the question was read as care planning rather than coverage. The actual uninsured status is not made clear.",
+      "kind": "application-defect",
+      "rootCause": "Carrying a plan for dental care missed the insurance concept; unsupported last-attendance wording escaped the independent guard.",
+      "resolution": "Shared concept grammar, concept-scoped fallback, and provenance checks for work leave/attendance; no individual-question lookup or case-fact changes."
+    },
+    {
+      "testId": "C03-G09-V4H1",
+      "v4Outcome": "FAIL",
+      "question": "Is there a dentist you consider your usual provider?",
+      "context": [],
+      "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "recordedReason": "relevance: A narrow question about having an established/usual dentist triggers a seven-sentence dump about the crown, root canal uncertainty, prior dental work, unknown treated teeth, extraction and dentist contact. These details are canonical but not requested. My dentist/next-week appointment sufficiently implies an existing dentist; factual correctness does not cure the relevance failure.",
+      "kind": "application-defect",
+      "rootCause": "Usual-provider/established-with/regularly phrasing missed the existing-dentist concept, selecting broad dental-history facts. The generic fallback was factually grounded but irrelevant; attendance gaps could also escape the guard.",
+      "resolution": "Shared concept grammar, concept-scoped fallback, and provenance checks for work leave/attendance; no individual-question lookup or case-fact changes."
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "v4Outcome": "FAIL",
+      "question": "Do you already see a dentist regularly?",
+      "context": [],
+      "response": "Not really, I haven't in a while. I have an appointment next week though.",
+      "recordedReason": "factualCorrectness: Not really, I have not in a while invents an unspecified gap in dental attendance and risks denying the established dentist relationship. The canonical patient has their own dentist and next-week appointment; no last attendance interval is given.; completeness: Regularly may refer to attendance frequency rather than an established provider. The response states an unsupported attendance gap instead of clearly establishing the known own-dentist relationship; the next-week appointment is correct.",
+      "kind": "application-defect",
+      "rootCause": "Usual-provider/established-with/regularly phrasing missed the existing-dentist concept, selecting broad dental-history facts. The generic fallback was factually grounded but irrelevant; attendance gaps could also escape the guard.",
+      "resolution": "Shared concept grammar, concept-scoped fallback, and provenance checks for work leave/attendance; no individual-question lookup or case-fact changes."
+    },
+    {
+      "testId": "C03-G09-V4H3",
+      "v4Outcome": "FAIL",
+      "question": "Are you established with a dentist of your own?",
+      "context": [],
+      "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "recordedReason": "relevance: A narrow question about having an established/usual dentist triggers a seven-sentence dump about the crown, root canal uncertainty, prior dental work, unknown treated teeth, extraction and dentist contact. These details are canonical but not requested. My dentist/next-week appointment sufficiently implies an existing dentist; factual correctness does not cure the relevance failure.",
+      "kind": "application-defect",
+      "rootCause": "Usual-provider/established-with/regularly phrasing missed the existing-dentist concept, selecting broad dental-history facts. The generic fallback was factually grounded but irrelevant; attendance gaps could also escape the guard.",
+      "resolution": "Shared concept grammar, concept-scoped fallback, and provenance checks for work leave/attendance; no individual-question lookup or case-fact changes."
+    },
+    {
+      "testId": "C03-G10-V4H1",
+      "v4Outcome": "BLOCKED",
+      "question": "What kind of coverage does your daughter have?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-V4H2",
+      "v4Outcome": "BLOCKED",
+      "question": "Would Medicaid cover your daughter?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G10-V4H3",
+      "v4Outcome": "BLOCKED",
+      "question": "Is Medicaid your daughter's insurance?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-V4H1",
+      "v4Outcome": "BLOCKED",
+      "question": "Would one dental practice for both you and your daughter suit you?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-V4H2",
+      "v4Outcome": "BLOCKED",
+      "question": "Would you prefer to receive care where your daughter could also be treated?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    },
+    {
+      "testId": "C03-G11-V4H3",
+      "v4Outcome": "BLOCKED",
+      "question": "Should I seek a clinic that could see you as well as your daughter?",
+      "context": [
+        "Do you have a daughter?"
+      ],
+      "response": null,
+      "recordedReason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition",
+      "kind": "application-defect-blocking-valid-setup",
+      "rootCause": "PatientQuestionService.finalizeTurn called assertPatientFinalResponse(responseText) without case context. Empty default facts were interpreted as evidence of no daughter before the route case-aware callback could run.",
+      "resolution": "Persistence now loads authoritative case facts for its final assembled-response check. Unknown family claims remain rejected for other cases. Required setup strings and scored questions remain unchanged.",
+      "limitation": "The V4 502 response omitted internal candidates. The recorded unsupported-family rejection reason is erroneous for this canonical daughter; no claim is made that every suppressed generation was otherwise perfect."
+    }
+  ]
+}

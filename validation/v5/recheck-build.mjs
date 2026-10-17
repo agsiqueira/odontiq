@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const root='validation/v5';
+const checks=JSON.parse(fs.readFileSync(`${root}/automated-checks.json`));
+if(!fs.existsSync(`${root}/automated-first-attempt.json`))fs.copyFileSync(`${root}/automated-checks.json`,`${root}/automated-first-attempt.json`);
+const attempts=fs.existsSync(`${root}/build-attempts.json`)?JSON.parse(fs.readFileSync(`${root}/build-attempts.json`)):checks.filter(c=>c.name==='build');
+const args=['node_modules/next/dist/bin/next','build'];
+const start=Date.now();
+const r=spawnSync(process.execPath,args,{encoding:'utf8',maxBuffer:8e6});
+const record={name:'build',command:[process.execPath,...args],startedAt:new Date(start).toISOString(),elapsedMs:Date.now()-start,exitCode:r.status,stdout:r.stdout,stderr:r.stderr,error:r.error?.message};
+attempts.push(record);
+fs.writeFileSync(`${root}/build-attempts.json`,JSON.stringify(attempts,null,2));
+fs.writeFileSync(`${root}/automated-checks.json`,JSON.stringify(checks.map(c=>c.name==='build'?record:c),null,2));
+console.log({buildExitCode:r.status,elapsedMs:record.elapsedMs,stdout:r.stdout,stderr:r.stderr});
+if(r.status!==0)process.exitCode=1;

@@ -1,0 +1,29 @@
+{
+  "createdAt": "2026-10-17T20:17:34.774Z",
+  "baseUrl": "http://localhost:3001",
+  "workers": 1,
+  "browserRetries": 0,
+  "originalV4HarnessUnchanged": true,
+  "changes": [
+    "Dedicated localhost port3001 for isolated V5 server",
+    "Separate auth setup/state, traces, reports and raw results",
+    "Same recorder, setup referent checks, UI/API/request correlation and student question strings",
+    "Real attempts retained on interruption; only unexecuted placeholders eligible for continuation",
+    "No semantic browser retries; bounded upstream gateway attempts occur inside provider and are recorded separately"
+  ],
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v5-verification.spec.ts",
+      "sha256": "589b408fed59a7f8d3e50a49d11861320e6a95eb5d56b18b7a394d3e7c414ccb"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v5.global.setup.ts",
+      "sha256": "5ca75e6847e7d48c1d57d7007d8fc812ffe78feb8291a3145f82e12f0b5bf141"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v5.config.ts",
+      "sha256": "0a645a18ad2b997f49f8383479ea2e0a9a89257c39981c4df7dff4920bc4a7cd"
+    }
+  ],
+  "originalV4SourceSha256": "bde8ba13734d947fbb6c58366594263003f2e33b4629e94b6616e0a863c702c9"
+}

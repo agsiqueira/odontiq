@@ -1,6 +1,7 @@
 import { getAIProvider } from "@/lib/ai";
 import type {
   AIProvider,
+  AIProviderResponse,
   ConversationGatewayInput,
 } from "@/lib/ai";
 import type {
@@ -246,7 +247,7 @@ export async function POST(request: Request): Promise<Response> {
         .filter((message) => message.role === "patient")
         .map((message) => patientDialogueOnly(message.text)),
     });
-    const providerResponse = immediateResponse
+    const providerResponse: AIProviderResponse = immediateResponse
       ? { text: immediateResponse }
       : await selectedProvider.generateConversationResponse(providerInput);
     const turnRequiredFacts = requiredFactsForTurn(
@@ -257,6 +258,7 @@ export async function POST(request: Request): Promise<Response> {
     const collectSyntheticDiagnostics = process.env.NODE_ENV === "development"
       && request.headers.get("x-odontiq-synthetic-diagnostic") === "phase-t";
     let correctiveOutput: string | undefined;
+    let correctiveProviderAttempts: AIProviderResponse["diagnostics"];
     const safeResponse = await generatePatientRoleSafeResponse({
       initialOutput: providerResponse.text,
       visibleFacts: [
@@ -293,6 +295,7 @@ export async function POST(request: Request): Promise<Response> {
           systemPrompt: `${providerInput.systemPrompt}\n\n${PATIENT_ROLE_REPAIR_PROMPT}`,
         });
         if (collectSyntheticDiagnostics) correctiveOutput = retryResponse.text;
+        if (collectSyntheticDiagnostics) correctiveProviderAttempts = retryResponse.diagnostics;
         return retryResponse.text;
       },
     });
@@ -459,6 +462,8 @@ export async function POST(request: Request): Promise<Response> {
         selectedFacts: disclosureState.allowedThisTurn, requiredFacts: turnRequiredFacts,
         systemPrompt: providerInput.systemPrompt, immediate: Boolean(immediateResponse),
         navigatorInitial: providerResponse.text, navigatorCorrective: correctiveOutput ?? null,
+        initialProviderAttempts: providerResponse.diagnostics?.attempts ?? [],
+        correctiveProviderAttempts: correctiveProviderAttempts?.attempts ?? [],
         initialRejection: safeResponse.initialRejection ?? null,
         usedFallback: safeResponse.repeatedDrift, safeResponse: safeResponse.text,
         behaviorCandidate: behavioralResponse?.text ?? null,

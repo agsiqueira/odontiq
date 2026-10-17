@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-17T20:17:03.332Z",
+  "source": "C:/240 - odontIQ/odontiq/node_modules",
+  "target": "C:\\Users\\agomesdesiqueira\\.codex\\worktrees\\odontiq-v5\\odontiq\\node_modules",
+  "files": 35928,
+  "layout": "Local directory tree; immutable dependency files hard-linked on the same volume. Application sources are independent copies. The external node_modules junction was removed without traversing its target.",
+  "reason": "Turbopack filesystem-root compatibility; no app configuration or bundler change."
+}

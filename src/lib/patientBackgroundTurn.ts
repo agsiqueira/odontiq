@@ -18,8 +18,9 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
   const household = !medicalLiving && !placeArgument && /\b(?:who|whom)\b.{0,35}\b(?:live|living|reside|share)\b|\b(?:live|living|reside)\b.{0,25}\bwith\b|\b(?:household|roommates?|housemates?)\b/.test(q);
   const travel = !/\b(?:pain|ache|hurts?|does it)\b.{0,30}\b(?:travel|spread|radiat)/.test(q)
     && (/\b(?:transportation|transport|ride|travel\w*|drive|driving)\b/.test(q)
+      || /\btrips?\b.{0,65}\b(?:count(?:y|ies)|town|clinic|treatment|care)\b/.test(q)
       || /\b(?:cross\w*|beyond|across)\b.{0,30}\bcount(?:y|ies)\b/.test(q)
-      || /\b(?:outside|another|neighboring|neighbouring|out of)\b.{0,35}\b(?:county|town)\b/.test(q)
+      || /\b(?:outside|another|different|neighboring|neighbouring|out of)\b.{0,35}\b(?:county|town)\b/.test(q)
       || /\b(?:leave|reach|get|go|goes|getting|attend)\b.{0,65}\b(?:county|town|clinic|appointment)\b/.test(q) && /\b(?:county|town|reliab\w*|depend\w*|way|means)\b/.test(q));
   const shared = daughter && (/\b(?:same|one|both|together|shared|sharing|separate|different|you two|also|where|you and your daughter)\b/.test(q)
     || /\bdaughter\b.{0,60}\band\b.{0,35}\byou\b/.test(q))
@@ -30,6 +31,7 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     || /\b(?:which|what)\b.{0,25}\bcounty\b/.test(q));
   const residency = /\b(?:residency|establish(?:ed|ing)?)\b.{0,25}\b(?:resident|residency)\b|\bresidency\b|\bresident\w*.{0,25}established?\b/.test(q);
   const coverage = /\b(?:insurance|insur(?:ed|es|er|ers|ing)|uninsured|coverage|medicaid|dental plan|covered|insurance policy)\b/.test(q)
+    || /\b(?:carry|hold)\b.{0,25}\bplan\b.{0,25}\b(?:dental|care|treatment)\b/.test(q)
     || /\bpolicy\b/.test(q) && /\b(?:have|hold|pay\w*|bill|cover\w*|dental|visit)\b/.test(q)
     || /\b(?:who|what|anyone|anybody)\b.{0,30}\bcover\w*\b.{0,30}\b(?:dental|care|visit|treatment)\b/.test(q);
   // Temporal modifiers of care planning do not ask about a coverage event.
@@ -40,6 +42,8 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     && (/\b(?:how long|recent\w*|ago|since|past|last|months?|year|ended|stop\w*|happened|ever)\b/.test(coverageTimingScope)
       || /\bwhen\b.{0,50}\b(?:start\w*|beg[ai]n\w*|end\w*|stop\w*|los[et]|lapsed?|expir\w*|became|become)\b/.test(coverageTimingScope));
   const dentist = !travel && !shared && !/\b(?:ever|last|how long|years? ago)\b/.test(q) && (/\b(?:your own|regular|usual|established|own) dentist\b/.test(q)
+    || /\bdentist\b.{0,45}\b(?:usual provider|regularly|of your own)\b/.test(q)
+    || /\bestablished\b.{0,30}\bdentist\b/.test(q)
     || /\b(?:have|has|got|any)\b.{0,20}\b(?:a |your |an? )?dentist\b/.test(q)
     || /\bdentist\b.{0,30}\b(?:normally|usually|already|go to|see)\b/.test(q)
     || /\b(?:who handles|see someone|see a regular|established care with)\b/.test(q)
@@ -99,7 +103,7 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
   const coverageAlternatives = /\bor\b/.test(q) && /\b(?:uninsured|without|none)\b|\bno (?:dental )?(?:insurance|coverage)\b/.test(q);
   let shortAnswer: BackgroundTurn["shortAnswer"];
   if (single?.concept === "insurance" && single.subject === "patient" && single.value === "uninsured" && !coverageAlternatives) shortAnswer = negativeCoverage ? "yes" : "no";
-  else if (single?.concept === "dentist" && single.value !== "unknown" && !/\b(?:no dentist|without|lack)\b/.test(q)) shortAnswer = single.value === "has_dentist" ? "yes" : "no";
+  else if (single?.concept === "dentist" && single.value !== "unknown" && !/\b(?:no dentist|without|lack|regularly|how often)\b/.test(q)) shortAnswer = single.value === "has_dentist" ? "yes" : "no";
   else if (single?.concept === "shared_clinic" && !/\b(?:separate|different)\b/.test(q)) shortAnswer = "yes";
   return { requests, clinicalRequested, shortAnswer };
 }
@@ -157,7 +161,7 @@ function expressesRequest(s: string, r: BackgroundRequest): boolean {
     case "residence": return s.includes(r.value.toLowerCase()) && !/\b(?:not|don't|do not)\b.{0,20}\blive\b/.test(s);
     case "residency": return /\b(?:not|haven't|have not)\b.{0,25}\bestablished?\b/.test(s) && !/\b(?:completed|already) established\b/.test(s);
     case "insurance": return r.subject === "daughter" ? /\b(?:daughter|she|her)\b.{0,35}\bmedicaid\b|\bmedicaid\b.{0,25}\b(?:daughter|her)\b/.test(s) && !/\b(?:she|daughter)\b.{0,20}\b(?:not|no|doesn't)\b/.test(s) : /\buninsured\b|\b(?:don't|do not|no|without)\b.{0,20}\b(?:dental )?(?:insurance|coverage)\b/.test(s) && !/\bi (?:have|am on|am covered by) (?:dental )?(?:insurance|medicaid)\b/.test(s);
-    case "coverage_timing": return /\b(?:past|last|within|about)\b.{0,20}\b(?:year|twelve months|12 months)\b/.test(s) && !/\b(?:more than|over|two|2|six|6)\b.{0,10}\b(?:years|months)\b/.test(s);
+    case "coverage_timing": return /\b(?:past|last|within)\b.{0,20}\b(?:year|twelve months|12 months)\b/.test(s) && !/\b(?:more than|over|two|2|six|6|about|around|approximately)\b.{0,10}\b(?:years?|months?)\b/.test(s);
     case "dentist": return r.value === "has_dentist" ? /\b(?:have|see|got)\b.{0,20}\b(?:own |regular |usual |a |my )*(?:dentist|dental provider|dental professional)\b/.test(s) && !deniesCurrentDentist(s) : deniesCurrentDentist(s);
     case "child": return /\b(?:have|my)\b.{0,15}\b(?:young )?daughter\b/.test(s) && !/\b(?:no|don't|do not)\b.{0,20}\b(?:kids|children|daughter)\b/.test(s);
     case "shared_clinic": return /\b(?:same|one|together|both|shared)\b/.test(s) && /\b(?:prefer|like|want|better|easier|convenient|yes)\b/.test(s) && !/\b(?:separate clinics|different clinics|don't want)\b/.test(s);

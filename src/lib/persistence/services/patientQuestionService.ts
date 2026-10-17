@@ -1,5 +1,6 @@
 import "server-only";
 import { assertPatientFinalResponse } from "@/lib/patientFinalResponse";
+import { loadCase } from "@/data/cases";
 
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/persistence/repositories/prisma";
@@ -144,7 +145,9 @@ export class PatientQuestionService {
           ? `${input.baseResponse.trim()} ${questionText}`.trim()
           : input.baseResponse.trim();
         // Validate after every addition, before any state or dialogue writes.
-        assertPatientFinalResponse(responseText);
+        assertPatientFinalResponse(responseText, {
+          canonicalFacts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [],
+        });
         input.validateFinalResponse?.(responseText);
 
         await transaction.patientQuestionState.upsert({

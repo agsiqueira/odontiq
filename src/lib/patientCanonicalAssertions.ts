@@ -39,6 +39,18 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
     && assertsHouseholdComposition(originalClauses.join(" "))) return reject("unsupported household composition");
   const hasDaughter = facts.some(f => /\bdaughter\b/i.test(f.text));
   if (!hasDaughter && /\bmy daughter\b|\bi have (?:a |one |a young )?(?:daughter|child)\b/.test(assertions)) return reject("unsupported family composition");
+  const dentalContext = /\b(?:dentist|dental provider|dental professional|dental care)\b/i.test(`${context.latestStudentMessage ?? ""} ${assertions}`);
+  const attendanceGap = /\b(?:it's|it has|has) been (?:a |quite a |a long )?while\b.{0,55}\b(?:dentist|dental)\b/.test(assertions)
+    || /\b(?:haven't|have not|hadn't|had not)\b.{0,35}\b(?:in|for) (?:a |quite a |a long )?while\b/.test(assertions);
+  const attendanceSource = /\b(?:last (?:saw|seen|visited)|not (?:seen|visited)|hasn't (?:seen|visited)|had not (?:seen|visited))\b.{0,55}\b(?:dentist|dental)\b/.test(corpus);
+  if (dentalContext && attendanceGap && !attendanceSource) return reject("unsupported dental attendance interval");
+  const attendanceFrequency = /\bi (?:regularly|routinely|often) (?:see|visit|go to)\b.{0,30}\bdentist\b|\bi (?:see|visit|go to)\b.{0,30}\bdentist\b.{0,20}\b(?:regularly|routinely|every (?:year|six months))\b/.test(assertions);
+  if (attendanceFrequency && !/\b(?:regularly|routinely|every (?:year|six months))\b/.test(corpus)) return reject("unsupported dental attendance frequency");
+  if (/\b(?:i(?:'m| am)? (?:currently )?(?:pay|paid|paying)|and (?:i'm )?paying) out of pocket\b/.test(assertions)
+    && !/\b(?:paid|pays?|paying) (?:out of pocket|for .* (?:himself|herself|themselves))\b/.test(corpus)) return reject("unsupported actual payment arrangement");
+  if (/\blost medicaid within the past year\b/.test(corpus)
+    && /\b(?:medicaid|coverage)\b/i.test(`${context.latestStudentMessage ?? ""} ${assertions}`)
+    && /\b(?:about|around|approximately) (?:a|one|1|twelve|12) (?:year|months?)\b/.test(assertions)) return reject("unsupported precise coverage-loss interval");
   const daughterHasProvider = facts.some(f => /\bdaughter\b.{0,50}\b(?:has (?:her own |a regular )?dentist|sees? (?:her |a )?dentist|attends? (?:a |the )?clinic)\b/i.test(f.text));
   if (!daughterHasProvider && (/\b(?:my daughter|she)\b[^.!?]{0,80}\b(?:sees?|attends?|go(?:es)? to|receives? care at|gets? care at)\b[^.!?]{0,35}\b(?:dentist|dental provider|clinic|office|practice)\b/.test(assertions)
     || /\b(?:my daughter|she)\b[^.!?]{0,35}\bhas (?:a |her |her own |a regular |an appointment (?:with|at) (?:a |the )?)(?:dentist|clinic|dental provider|dental office)\b/.test(assertions)
@@ -52,6 +64,7 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
     && /\byou and your (?:daughter|son|child|sister|brother|wife|husband|mother|father)\b/i.test(context.latestStudentMessage ?? "")) return reject("misread coordinated care participants as patient identity");
   const concrete = [
     { pattern: /\b(?:my employer|my (?:last |current )?job|i work (?:at|for)|i (?:lost|quit) my job|employer's (?:insurance|plan))\b/, source: /\b(?:employer|employment|job|works?)\b/ },
+    { pattern: /\b(?:time|days?) off (?:work|my job)\b|\b(?:leave|absence) from work\b/, source: /\b(?:employment|employer|job|work schedule|time off work)\b/ },
     { pattern: /\b(?:tough|hard|difficult|trouble)\b.{0,25}\b(?:finding time|schedul\w*)\b|\b(?:my|our) (?:work )?schedule\b/, source: /\b(?:schedule|finding time)\b/ },
     { pattern: /\b(?:my (?:daughter|son|wife|husband|sister|brother|parents?|mother|father|mom|dad|friend|partner|neighbor|relative|caregiver).{0,30}(?:drives?|rides?|takes? me|gives? me a ride)|my (?:car|vehicle|bus pass))\b/, source: /\b(?:drives?|vehicle|car|lives? with)\b/ },
     { pattern: /\bi (?:can |could |will |usually |normally |always |am able to )?(?:drive|take (?:a |the )?(?:bus|train|taxi|uber)|ride (?:a |my )?(?:bike|bicycle|scooter))\b|\bmy (?:bike|bicycle|scooter)\b/, source: /\b(?:drive|drives|bus|train|taxi|bike|bicycle|scooter)\b/ },
