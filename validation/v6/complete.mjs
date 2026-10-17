@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const root='validation/v6',read=p=>JSON.parse(fs.readFileSync(`${root}/${p}`)),sha=t=>crypto.createHash('sha256').update(t).digest('hex');
+const s=read('summary.json'),v=read('verification.json'),freeze=read('implementation-freeze.json'),csv=read('csv-verification.json'),prod=read('production-smoke.json'),speech=read('speech-test.json'),setups=read('setup-adjudications.json');
+const productionVerification=read('production-verification.json');
+if(s.realAttempted!==546||s.reviewed!==s.delivered||s.unreviewedSetups.length||!v.allIntegrityChecksPassed||csv.rows!==546||!csv.csvRoundTrip||!prod.complete||!productionVerification.allIntegrityChecksPassed)throw Error('Incomplete execution/review/integrity/production');
+const recommendation=s.counts.FAIL||s.counts.ERROR||s.counts.BLOCKED||setups.some(r=>r.outcome!=='PASS')||prod.summary.nonpass?'Further repair/investigation required under a new labeled version.':s.counts.REVIEW?'Explicit REVIEW boundaries remain unresolved; no confirmed failure in this coverage.':'No remaining repair need observed within this regression and production-smoke coverage.';
+const result={completedAt:new Date().toISOString(),testedCommit:freeze.commit,frozenAt:freeze.frozenAt,frozenFiles:Object.keys(freeze.files).length,freezeManifestSha256:sha(fs.readFileSync(`${root}/implementation-freeze.json`)),changedFrozenFiles:read('current-state.json').changedFrozenFiles,baselineEvidenceChanged:read('current-state.json').copiedV4Changed,configuration:freeze.configuration,total:546,outcomes:s.counts,v5Outcomes:s.v5Counts,comparison:v.repairChecks,setupOutcomes:Object.fromEntries(['PASS','FAIL','REVIEW','ERROR','BLOCKED'].map(k=>[k,setups.filter(s=>s.outcome===k).length])),setupResponsesReviewed:setups.length,uiApiAndCorrelation:read('current-state.json').uiApi,productionSmoke:prod.summary,speechStatus:speech.status,humanAudibility:speech.humanAudibility,integrityChecks:v.checks.length,allIntegrityChecksPassed:v.allIntegrityChecksPassed,csvVerification:csv,recommendation,merged:false,deployed:false,report:`${root}/REPORT.md`,results:`${root}/results.json`,unresolved:`${root}/unresolved-items.json`};
+result.firstExecutionCounts=read('first-attempt-outcomes.json').counts;
+result.recordedExecutionAttempts=read('all-recorded-attempts.json').length;
+result.infrastructureRecovery=read('infrastructure-recovery.json');
+result.productionIntegrityChecks=productionVerification.checks.length;
+result.productionGradingCorrections=read('production-grading-corrections.json');
+result.speechFirstAttemptStatus=read('speech-attempt-1.json').status;
+result.speechVerificationRecovery=read('speech-infrastructure-recovery.json');
+fs.writeFileSync(`${root}/completion.json`,JSON.stringify(result,null,2));fs.appendFileSync(`${root}/WORK_STATE.md`,`\n\nCOMPLETE ${result.completedAt}: ${JSON.stringify(s.counts)}, ${setups.length} separate setup outcomes. ${recommendation} No merge/deploy.\n`);console.log({completedAt:result.completedAt,outcomes:s.counts,recommendation});

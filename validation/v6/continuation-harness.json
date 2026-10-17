@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-17T22:00:33.976Z",
+  "eligibleIds": [
+    "C03-G08-Q14"
+  ],
+  "browserRetries": 0,
+  "maxAdditionalAttempts": 1,
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v6-continuation.spec.ts",
+      "sha256": "ea67814908c95ed7c446a1f9f2d9df66154f3ffd977afddbb9f4f3d251d02b56"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v6-continuation.config.ts",
+      "sha256": "1c5433d9f4f5d87ed414d3c9ba6d00ed3ad370cbceaf5064b9753834b4474556"
+    }
+  ]
+}

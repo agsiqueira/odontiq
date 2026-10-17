@@ -1,0 +1,778 @@
+{
+  "completedAt": "2026-10-17T22:54:01.701Z",
+  "testedCommit": "1b0ae9c5396c60c7a55b1e1b549db81da9d01de7",
+  "frozenAt": "2026-10-17T21:42:51.068Z",
+  "frozenFiles": 370,
+  "freezeManifestSha256": "21d7058787b19f9df34f766cd817839b67fed02e9c4f7090aa6961f7435f62a6",
+  "changedFrozenFiles": [],
+  "baselineEvidenceChanged": [],
+  "configuration": {
+    "baseUrl": "http://localhost:3002",
+    "server": "Next16.2.10 development, Turbopack",
+    "provider": "navigator",
+    "model": "granite-3.3-8b-instruct",
+    "origin": "https://api.ai.it.ufl.edu",
+    "temperature": 0.4,
+    "maxTokens": 120,
+    "timeoutMs": 30000,
+    "upstreamRetry": {
+      "maxAttempts": 2,
+      "statuses": [
+        502,
+        503,
+        504
+      ],
+      "backoffMs": 250
+    },
+    "browserWorkers": 1,
+    "browserRetries": 0,
+    "inventorySha256": "2a27109e923c291369c979b353287cf9e747e166d3ade72266ec6694d0ffbfb7",
+    "harness": {
+      "at": "2026-10-17T21:40:56.552Z",
+      "baseUrl": "http://localhost:3002",
+      "workers": 1,
+      "browserRetries": 0,
+      "files": [
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v6-verification.spec.ts",
+          "sha256": "1e2f4dd81d33c9074f31121b93136287d394e4329cd1fa2c72ce5091639f754b"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v6.global.setup.ts",
+          "sha256": "4510554789318adc9d5074addc5cdbaa6204f0788ddcaaeedd573bbf467e5321"
+        },
+        {
+          "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v6.config.ts",
+          "sha256": "94e6266d14459b848b9c5586a383b708a07d472e8c9128d8316004a44cb0fdf4"
+        }
+      ],
+      "baselineUnchanged": true
+    },
+    "production": {
+      "baseUrl": "http://localhost:3003",
+      "command": "node node_modules/next/dist/bin/next start --port 3003",
+      "mode": "NODE_ENV=production; optimized next build from same frozen source; separate .next production artifacts"
+    }
+  },
+  "total": 546,
+  "outcomes": {
+    "PASS": 456,
+    "FAIL": 88,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "v5Outcomes": {
+    "PASS": 539,
+    "FAIL": 5,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "comparison": {
+    "previous539PassRechecked": 539,
+    "regressions": [
+      {
+        "testId": "C04-G12-Q02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q04",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q05",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q07",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q08",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q09",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q10",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q11",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q12",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q13",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q14",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q15",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q16",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q17",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q18",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q19",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-Q20",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q04",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q05",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q06",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q07",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q08",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q09",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q10",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q11",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q12",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q13",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q14",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q15",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q16",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q17",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q18",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q19",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-Q20",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q04",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q05",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q06",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q07",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q08",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q09",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q10",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q11",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q12",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q13",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q14",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q15",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q16",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q17",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q18",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q19",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-Q20",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C03-G09-H01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "REVIEW"
+      },
+      {
+        "testId": "C04-G12-H01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-H02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-H03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-H01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-H02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-H03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-H01",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-H02",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-H03",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C03-TARGET-6",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-TARGET-2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-TARGET-4",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-TARGET-6",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C05-TARGET-6",
+        "v5Outcome": "PASS",
+        "v6Outcome": "REVIEW"
+      },
+      {
+        "testId": "C04-G12-N1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-N2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-N3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-N1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-N2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-N3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-N1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-N2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-N3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-V4H1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G12-V4H3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-V4H1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-V4H2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G13-V4H3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-V4H1",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-V4H2",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      },
+      {
+        "testId": "C04-G14-V4H3",
+        "v5Outcome": "PASS",
+        "v6Outcome": "FAIL"
+      }
+    ],
+    "sevenPreviousNonpass": [
+      {
+        "testId": "C01-G01-Q08",
+        "v5Outcome": "REVIEW",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C03-G11-Q06",
+        "v5Outcome": "FAIL",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C03-G11-H01",
+        "v5Outcome": "FAIL",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C03-G11-H03",
+        "v5Outcome": "REVIEW",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C05-TARGET-5",
+        "v5Outcome": "FAIL",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C03-G09-V4H2",
+        "v5Outcome": "FAIL",
+        "v6Outcome": "PASS"
+      },
+      {
+        "testId": "C05-G16-V4H1",
+        "v5Outcome": "FAIL",
+        "v6Outcome": "PASS"
+      }
+    ],
+    "setupNonpass": [
+      {
+        "testId": "C03-G11-Q09",
+        "runId": "1f4c681c-db53-4fdd-8dac-98be204166e3",
+        "caseId": "case-03",
+        "setupTurnIndex": 1,
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "finalResponse": "That's good to hear. We both need it, especially after these recent issues.",
+        "responseSha256": "e3ed2421301f6d29536878e16becf8ac136c2392e80baf1e3819846b00542467",
+        "reviewedAt": "2026-10-17T22:06:46.146Z",
+        "dimensions": {
+          "factualCorrectness": {
+            "status": "REVIEW",
+            "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+          },
+          "completeness": {
+            "status": "PASS",
+            "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+          },
+          "relevance": {
+            "status": "PASS",
+            "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+          },
+          "leakage": {
+            "status": "PASS",
+            "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+          }
+        },
+        "outcome": "REVIEW"
+      },
+      {
+        "testId": "C03-G11-Q10",
+        "runId": "b949c428-7030-4287-8b53-e615ba3fb0bb",
+        "caseId": "case-03",
+        "setupTurnIndex": 1,
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "finalResponse": "That's good to hear. My daughter's teeth need some attention too.",
+        "responseSha256": "42ade7f6ee3ad62f9e83d2897dac80f04c98d39208f775926c8bfc37e38e8345",
+        "reviewedAt": "2026-10-17T22:06:46.311Z",
+        "dimensions": {
+          "factualCorrectness": {
+            "status": "FAIL",
+            "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+          },
+          "completeness": {
+            "status": "PASS",
+            "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+          },
+          "relevance": {
+            "status": "PASS",
+            "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+          },
+          "leakage": {
+            "status": "PASS",
+            "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+          }
+        },
+        "outcome": "FAIL"
+      }
+    ],
+    "historicalGradingCorrections": 91,
+    "correctedV5Counts": {
+      "PASS": 448,
+      "FAIL": 95,
+      "REVIEW": 3,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "regressionsAgainstCorrectedV5": [
+      {
+        "testId": "C03-TARGET-6",
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "v5Outcome": "PASS",
+        "v5CorrectedOutcome": "PASS",
+        "v5GradingCorrectionReason": null,
+        "v6Outcome": "FAIL",
+        "v5Response": "Hi, doctor. My tooth hurts all the time, and I can't chew on it.",
+        "v6Response": "Hi, doctor, it's just me today. I need help with my tooth, it's been hurting for a while, and I can't chew properly on it.",
+        "responseIdentical": false,
+        "v6Reason": "factualCorrectness: It's just me today asserts that the daughter/others are not attending or accompanying the patient today. Neither authoritative case facts nor this fresh care-offer context establishes attendance. A shared-care offer is not evidence of who is present. The supported tooth-pain/chewing facts do not justify the added attendance claim.",
+        "assessed": true,
+        "regressionFromV5Pass": true,
+        "regressionAgainstCorrectedV5": true,
+        "identicalTextBehavioralImprovementClaim": false
+      },
+      {
+        "testId": "C05-TARGET-6",
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "v5Outcome": "PASS",
+        "v5CorrectedOutcome": "PASS",
+        "v5GradingCorrectionReason": null,
+        "v6Outcome": "REVIEW",
+        "v5Response": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "v6Response": "It's just me you need to worry about. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseIdentical": false,
+        "v6Reason": "factualCorrectness: It's just me you need to worry about may simply request focus on the patient's known pain, but in response to an offer for patient and daughter it can also imply that nobody else needs care. The case establishes no daughter or her care needs. Retain this scope ambiguity rather than infer a negative child-care fact or silently award PASS; the subsequent canonical pain attributes do appropriately permit the catalog question.",
+        "assessed": true,
+        "regressionFromV5Pass": true,
+        "regressionAgainstCorrectedV5": true,
+        "identicalTextBehavioralImprovementClaim": false
+      }
+    ]
+  },
+  "setupOutcomes": {
+    "PASS": 117,
+    "FAIL": 1,
+    "REVIEW": 1,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "setupResponsesReviewed": 119,
+  "uiApiAndCorrelation": {
+    "delivered": 546,
+    "mismatches": []
+  },
+  "productionSmoke": {
+    "planned": 19,
+    "counts": {
+      "PASS": 16,
+      "FAIL": 3,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "nonpass": 3,
+    "scoredUiApiCorrelated": 19,
+    "setupUiApiCorrelated": 13,
+    "setupOutcomes": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "setupOutcomeCounts": {
+      "PASS": 13,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setupNonpass": 0
+  },
+  "speechStatus": "AUTOMATED_PLAYBACK_COMPLETED",
+  "humanAudibility": "UNTESTED: no human listening/output-device measurement",
+  "integrityChecks": 25,
+  "allIntegrityChecksPassed": true,
+  "csvVerification": {
+    "rows": 546,
+    "csvRoundTrip": true,
+    "screenshotsExist": 546,
+    "traceZipIntegrityChecked": 546,
+    "allAttemptScreenshotsAndTraceZipIntegrityChecked": 547
+  },
+  "recommendation": "Further repair/investigation required under a new labeled version.",
+  "merged": false,
+  "deployed": false,
+  "report": "validation/v6/REPORT.md",
+  "results": "validation/v6/results.json",
+  "unresolved": "validation/v6/unresolved-items.json",
+  "firstExecutionCounts": {
+    "PASS": 455,
+    "FAIL": 88,
+    "REVIEW": 2,
+    "ERROR": 1,
+    "BLOCKED": 0
+  },
+  "recordedExecutionAttempts": 547,
+  "infrastructureRecovery": {
+    "eligibleIds": [
+      "C03-G08-Q14"
+    ],
+    "maxAdditionalAttempts": 1,
+    "reason": "Transient database availability failure after encounter creation, before any setup or scored conversation request. Trace records four GET /api/home/progression500 responses; server log records PrismaP1001 from EncounterRepository.findActiveByUserAndCase. Later items continued successfully. Preserve the original ERROR and screenshot/trace; after main run, execute one separate labeled continuation for this never-submitted question. No delivered semantic failure is eligible.",
+    "outcomePolicy": "Final scored outcomes select the first actual scored request only for this documented pre-submission recovery. First-attempt ERROR counts, original raw record, retry outcome and both encounter IDs remain separate and explicit."
+  },
+  "productionIntegrityChecks": 13,
+  "productionGradingCorrections": [
+    {
+      "testId": "PROD-APPROPRIATE-C5-QUESTION",
+      "question": "What does your tooth pain feel like, and what makes it worse?",
+      "context": [],
+      "actualResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "originalVerdict": "PASS",
+      "correctedVerdict": "FAIL",
+      "dimension": "completeness",
+      "reason": "Initial grading checked factual location and patient-question timing but missed the actual requested quality and provoking factors. Both are unanswered. Preserve production-initial-adjudication.json and the exact original response; no behavioral improvement or retry is claimed."
+    }
+  ],
+  "speechFirstAttemptStatus": "AUTOMATED_PLAYBACK_STARTED_COMPLETION_UNCONFIRMED",
+  "speechVerificationRecovery": {
+    "at": "2026-10-17T22:51:54.329Z",
+    "maxAdditionalAttempts": 1,
+    "applicationUnchanged": true,
+    "reason": "Passive observation captured mutable audio src after the app cleared it on ended. Preserve first playback-started/completion-unconfirmed result. Repeat with immutable source identifier and capture-phase observation; no playback behavior mocked or changed.",
+    "firstResult": "speech-attempt-1.json",
+    "files": [
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v6-speech-retest.spec.ts",
+        "sha256": "270ddb1d59260042a0f3acda76b046dcf16ad93f75fba2baba62e64117710558"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v6-speech-retest.config.ts",
+        "sha256": "d38b2f106853a84d925dbba1c95c6f1872d322c144a651a008791d0d4aed3739"
+      }
+    ]
+  }
+}

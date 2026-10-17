@@ -15,6 +15,11 @@ for a, b in zip(rows, exported):
     with zipfile.ZipFile(a['trace']) as z:
         assert z.testzip() is None, a['testId']
     traces += 1
-result = {'rows': len(rows), 'csvRoundTrip': True, 'screenshotsExist': len(rows), 'traceZipIntegrityChecked': traces}
+all_attempts = json.loads((root / 'all-recorded-attempts.json').read_text(encoding='utf-8'))
+for attempt in all_attempts:
+    assert pathlib.Path(attempt['screenshot']).is_file()
+    with zipfile.ZipFile(attempt['trace']) as z:
+        assert z.testzip() is None, attempt['runId']
+result = {'rows': len(rows), 'csvRoundTrip': True, 'screenshotsExist': len(rows), 'traceZipIntegrityChecked': traces, 'allAttemptScreenshotsAndTraceZipIntegrityChecked': len(all_attempts)}
 (root / 'csv-verification.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
 print(json.dumps(result))

@@ -1,0 +1,2495 @@
+{
+  "at": "2026-10-17T22:49:13.705Z",
+  "complete": true,
+  "configuration": "production-configuration.json",
+  "summary": {
+    "planned": 19,
+    "counts": {
+      "PASS": 17,
+      "FAIL": 2,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "nonpass": 2,
+    "scoredUiApiCorrelated": 19,
+    "setupUiApiCorrelated": 13,
+    "setupOutcomes": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "setupOutcomeCounts": {
+      "PASS": 13,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setupNonpass": 0
+  },
+  "results": [
+    {
+      "testId": "C01-G01-Q08",
+      "question": "Are you paying for dental care without insurance?",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "99f5da3e-2a34-41c2-8386-8ce6444542cc",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:46:37.894Z",
+      "setupTurns": [],
+      "finalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+      "apiFinalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+      "outcome": "FAIL",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+      "requestId": "case-01-1792277199985-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-01-1792277199985-1-response",
+          "encounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+          "requestMessage": "Are you paying for dental care without insurance?",
+          "provider": "navigator",
+          "finalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+          "responseRequestId": "case-01-1792277199985-1-response",
+          "responseEncounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C01-G01-Q08_99f5da3e-2a34-41c2-8386-8ce6444542cc.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C01-G01-Q08_99f5da3e-2a34-41c2-8386-8ce6444542cc.zip",
+      "freshState": {
+        "boundEncounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Are you paying for dental care without insurance?",
+        "requestId": "case-01-1792277199985-1-response",
+        "finalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+        "apiFinalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792277199985-1-response",
+            "encounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+            "requestMessage": "Are you paying for dental care without insurance?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I don't have insurance. I'm not sure about a payment arrangement yet.",
+            "responseRequestId": "case-01-1792277199985-1-response",
+            "responseEncounterId": "01232cd9-2ccd-49de-a94a-c955a4c628f8",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2748,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2748,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:46:43.123Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C01-G01-Q08_99f5da3e-2a34-41c2-8386-8ce6444542cc.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "FAIL",
+          "reason": "The question asks Are you paying for dental care without insurance? Initial Yes affirms actual payment activity, which the case does not establish. The later uninsured statement is supported, but uncertainty about an arrangement does not clearly retract or scope that initial affirmative. This repeats the implied-affirmation root found with regular attendance; the actual first production response is preserved, not rerun."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.696Z",
+      "responseSha256": "8191de5eeae2fcb4bc91425512a670992b473d944291f47152c689894052c6a1",
+      "setupAssessments": [],
+      "rawSha256": "6161feb85aacb8127343c4888442a0095ec6d74b636d740d584fe7e365624182"
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "production-smoke",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "runId": "76f6e738-974f-44f6-bb7c-641af9939209",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:46:43.819Z",
+      "setupTurns": [
+        {
+          "question": "Do you have any children?",
+          "requestId": "case-03-1792277205816-1-response",
+          "finalResponse": "Yes, I have a young daughter.",
+          "apiFinalResponse": "Yes, I have a young daughter.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277205816-1-response",
+              "encounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+              "requestMessage": "Do you have any children?",
+              "provider": "navigator",
+              "finalResponse": "Yes, I have a young daughter.",
+              "responseRequestId": "case-03-1792277205816-1-response",
+              "responseEncounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 1893,
+          "visibleApplicationError": ""
+        },
+        {
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "requestId": "case-03-1792277208818-2-response",
+          "finalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "apiFinalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277208818-2-response",
+              "encounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+              "requestMessage": "I'm looking into dental care options for you and your daughter.",
+              "provider": "navigator",
+              "finalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+              "responseRequestId": "case-03-1792277208818-2-response",
+              "responseEncounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 2079,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+      "apiFinalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+      "requestId": "case-03-1792277211983-3-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277211983-3-response",
+          "encounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+          "requestMessage": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+          "provider": "navigator",
+          "finalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+          "responseRequestId": "case-03-1792277211983-3-response",
+          "responseEncounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C03-G11-Q06_76f6e738-974f-44f6-bb7c-641af9939209.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C03-G11-Q06_76f6e738-974f-44f6-bb7c-641af9939209.zip",
+      "freshState": {
+        "boundEncounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+        "requestId": "case-03-1792277211983-3-response",
+        "finalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+        "apiFinalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277211983-3-response",
+            "encounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+            "requestMessage": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+            "provider": "navigator",
+            "finalResponse": "Yes, it would be much easier to manage if we could both receive care at the same clinic.",
+            "responseRequestId": "case-03-1792277211983-3-response",
+            "responseEncounterId": "9fb0578f-e70f-4159-a6ef-8e6760a99dc1",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2332,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2332,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:46:54.951Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C03-G11-Q06_76f6e738-974f-44f6-bb7c-641af9939209.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.699Z",
+      "responseSha256": "a01bdae7339a165d0d1505029e56e3f9ebc2ac220b98637d39692b1e69708f1c",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "Do you have any children?",
+          "response": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        {
+          "index": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "response": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "responseSha256": "19fea4131ce26b12cf3637885832740019749d0ee67c991961a1a11bb6cca7d2",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "08ad1e41fc92a96cfbe988057787d5584523bf5a3212cdd3ddd72fd07a4cf32f"
+    },
+    {
+      "testId": "C03-G11-H01",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "production-smoke",
+      "question": "Would one office meeting both your dental needs be easier?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts.",
+      "runId": "d71ef742-143c-49ca-aa5c-a65018a2a5e1",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:46:54.955Z",
+      "setupTurns": [
+        {
+          "question": "Do you have any children?",
+          "requestId": "case-03-1792277217515-1-response",
+          "finalResponse": "Yes, I have a young daughter.",
+          "apiFinalResponse": "Yes, I have a young daughter.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277217515-1-response",
+              "encounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+              "requestMessage": "Do you have any children?",
+              "provider": "navigator",
+              "finalResponse": "Yes, I have a young daughter.",
+              "responseRequestId": "case-03-1792277217515-1-response",
+              "responseEncounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 2090,
+          "visibleApplicationError": ""
+        },
+        {
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "requestId": "case-03-1792277220698-2-response",
+          "finalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "apiFinalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277220698-2-response",
+              "encounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+              "requestMessage": "I'm looking into dental care options for you and your daughter.",
+              "provider": "navigator",
+              "finalResponse": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+              "responseRequestId": "case-03-1792277220698-2-response",
+              "responseEncounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 1991,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+      "apiFinalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+      "requestId": "case-03-1792277223766-3-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277223766-3-response",
+          "encounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+          "requestMessage": "Would one office meeting both your dental needs be easier?",
+          "provider": "navigator",
+          "finalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+          "responseRequestId": "case-03-1792277223766-3-response",
+          "responseEncounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C03-G11-H01_d71ef742-143c-49ca-aa5c-a65018a2a5e1.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C03-G11-H01_d71ef742-143c-49ca-aa5c-a65018a2a5e1.zip",
+      "freshState": {
+        "boundEncounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Would one office meeting both your dental needs be easier?",
+        "requestId": "case-03-1792277223766-3-response",
+        "finalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+        "apiFinalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277223766-3-response",
+            "encounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+            "requestMessage": "Would one office meeting both your dental needs be easier?",
+            "provider": "navigator",
+            "finalResponse": "Yes, that would be much easier. It would be nice to have my daughter's and my care coordinated at the same clinic.",
+            "responseRequestId": "case-03-1792277223766-3-response",
+            "responseEncounterId": "21f4ad31-05ab-4b41-801c-89afe5c950c0",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2062,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2062,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:06.400Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C03-G11-H01_d71ef742-143c-49ca-aa5c-a65018a2a5e1.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.699Z",
+      "responseSha256": "4ea7a58c405cc23ef5ff4d7b79a965aa5da2404b29f4c41f582aa9512c4a5817",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "Do you have any children?",
+          "response": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        {
+          "index": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "response": "I appreciate that, doctor. It's important for both of us to have good dental health.",
+          "responseSha256": "19fea4131ce26b12cf3637885832740019749d0ee67c991961a1a11bb6cca7d2",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "7dc765552cf23786e13cf448dbb376939f458db765461949d076b4b85543e351"
+    },
+    {
+      "testId": "C03-G11-H03",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "production-smoke",
+      "question": "Keeping both of you at one clinic sounds preferable to you?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts.",
+      "runId": "55e31b02-2dfc-4a9d-a9e9-7a3597d9eadb",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:06.407Z",
+      "setupTurns": [
+        {
+          "question": "Do you have any children?",
+          "requestId": "case-03-1792277228980-1-response",
+          "finalResponse": "Yes, I have a young daughter.",
+          "apiFinalResponse": "Yes, I have a young daughter.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277228980-1-response",
+              "encounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+              "requestMessage": "Do you have any children?",
+              "provider": "navigator",
+              "finalResponse": "Yes, I have a young daughter.",
+              "responseRequestId": "case-03-1792277228980-1-response",
+              "responseEncounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 1813,
+          "visibleApplicationError": ""
+        },
+        {
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "requestId": "case-03-1792277231884-2-response",
+          "finalResponse": "That's good to hear. We both need it.",
+          "apiFinalResponse": "That's good to hear. We both need it.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277231884-2-response",
+              "encounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+              "requestMessage": "I'm looking into dental care options for you and your daughter.",
+              "provider": "navigator",
+              "finalResponse": "That's good to hear. We both need it.",
+              "responseRequestId": "case-03-1792277231884-2-response",
+              "responseEncounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 1884,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+      "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+      "requestId": "case-03-1792277234870-3-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277234870-3-response",
+          "encounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+          "requestMessage": "Keeping both of you at one clinic sounds preferable to you?",
+          "provider": "navigator",
+          "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+          "responseRequestId": "case-03-1792277234870-3-response",
+          "responseEncounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C03-G11-H03_55e31b02-2dfc-4a9d-a9e9-7a3597d9eadb.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C03-G11-H03_55e31b02-2dfc-4a9d-a9e9-7a3597d9eadb.zip",
+      "freshState": {
+        "boundEncounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Keeping both of you at one clinic sounds preferable to you?",
+        "requestId": "case-03-1792277234870-3-response",
+        "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+        "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277234870-3-response",
+            "encounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+            "requestMessage": "Keeping both of you at one clinic sounds preferable to you?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier.",
+            "responseRequestId": "case-03-1792277234870-3-response",
+            "responseEncounterId": "84c73af5-36aa-4a97-b76b-019d236d7a74",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1997,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1997,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:17.370Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C03-G11-H03_55e31b02-2dfc-4a9d-a9e9-7a3597d9eadb.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.699Z",
+      "responseSha256": "dafdfde4573bc6c03a47840fd558add2c73d25a657e211e6ce166bac4f681681",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "Do you have any children?",
+          "response": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        {
+          "index": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "response": "That's good to hear. We both need it.",
+          "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "0d2e1b9d8cb97b41a240b155b17f1bb30cbf9e9e07a3bbaee04e6de453ac5949"
+    },
+    {
+      "testId": "C05-TARGET-5",
+      "caseId": "case-05",
+      "groupId": "TARGET",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [],
+      "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+      "contextRequirement": "None required.",
+      "runId": "5de17329-5ee8-4901-8930-8db0c24f21dc",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:30.769Z",
+      "setupTurns": [],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+      "requestId": "case-05-1792277252765-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-05-1792277252765-1-response",
+          "encounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-05-1792277252765-1-response",
+          "responseEncounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C05-TARGET-5_5de17329-5ee8-4901-8930-8db0c24f21dc.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C05-TARGET-5_5de17329-5ee8-4901-8930-8db0c24f21dc.zip",
+      "freshState": {
+        "boundEncounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-05-1792277252765-1-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-05-1792277252765-1-response",
+            "encounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-05-1792277252765-1-response",
+            "responseEncounterId": "ccf6e877-9229-4d68-92df-b04c3ad065b6",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1034,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1034,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:34.170Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C05-TARGET-5_5de17329-5ee8-4901-8930-8db0c24f21dc.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.700Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [],
+      "rawSha256": "2dbb6ded823157e78fb0fe8b06b9092a14294d4f944b4fbfd9d8163ea5dd925c"
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "question": "Do you already see a dentist regularly?",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "c1b683e2-3db7-450d-97d0-ba7bc170c42a",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:34.824Z",
+      "setupTurns": [],
+      "finalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+      "apiFinalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+      "requestId": "case-03-1792277257348-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277257348-1-response",
+          "encounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+          "requestMessage": "Do you already see a dentist regularly?",
+          "provider": "navigator",
+          "finalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+          "responseRequestId": "case-03-1792277257348-1-response",
+          "responseEncounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C03-G09-V4H2_c1b683e2-3db7-450d-97d0-ba7bc170c42a.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C03-G09-V4H2_c1b683e2-3db7-450d-97d0-ba7bc170c42a.zip",
+      "freshState": {
+        "boundEncounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Do you already see a dentist regularly?",
+        "requestId": "case-03-1792277257348-1-response",
+        "finalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+        "apiFinalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277257348-1-response",
+            "encounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+            "requestMessage": "Do you already see a dentist regularly?",
+            "provider": "navigator",
+            "finalResponse": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+            "responseRequestId": "case-03-1792277257348-1-response",
+            "responseEncounterId": "d837a1b2-cb0b-4b9d-bdda-60fcbb389b13",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2155,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2155,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:39.830Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C03-G09-V4H2_c1b683e2-3db7-450d-97d0-ba7bc170c42a.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.700Z",
+      "responseSha256": "db31b770eeda3aa86fa729cf34b13018437006701758f299e69d7c294e86b800",
+      "setupAssessments": [],
+      "rawSha256": "ff432837142eb58aac669b97e84cc44ee583f3ec17db7f1a43d3d7e1d691fe23"
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "3c1fe5ab-d86f-46a6-9074-a22d5f01a21e",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:41.172Z",
+      "setupTurns": [],
+      "finalResponse": "I don't have insurance.",
+      "apiFinalResponse": "I don't have insurance.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+      "requestId": "case-05-1792277263264-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-05-1792277263264-1-response",
+          "encounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+          "requestMessage": "Would an insurance policy contribute to your dental costs?",
+          "provider": "navigator",
+          "finalResponse": "I don't have insurance.",
+          "responseRequestId": "case-05-1792277263264-1-response",
+          "responseEncounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C05-G16-V4H1_3c1fe5ab-d86f-46a6-9074-a22d5f01a21e.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C05-G16-V4H1_3c1fe5ab-d86f-46a6-9074-a22d5f01a21e.zip",
+      "freshState": {
+        "boundEncounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Would an insurance policy contribute to your dental costs?",
+        "requestId": "case-05-1792277263264-1-response",
+        "finalResponse": "I don't have insurance.",
+        "apiFinalResponse": "I don't have insurance.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-05-1792277263264-1-response",
+            "encounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+            "requestMessage": "Would an insurance policy contribute to your dental costs?",
+            "provider": "navigator",
+            "finalResponse": "I don't have insurance.",
+            "responseRequestId": "case-05-1792277263264-1-response",
+            "responseEncounterId": "80ffb984-e368-4c76-b560-7a0c219202db",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1845,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1845,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:45.426Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C05-G16-V4H1_3c1fe5ab-d86f-46a6-9074-a22d5f01a21e.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.701Z",
+      "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+      "setupAssessments": [],
+      "rawSha256": "a876f65896d961b77b6262f4400057b0a43a1e73587f09e4e932482cdb5e85c5"
+    },
+    {
+      "testId": "C03-G11-Q11",
+      "question": "Do you have a preference about whether you both use the same dental clinic?",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "production-smoke",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "runId": "106c0701-c7ad-4024-9699-123a516169cc",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:17.380Z",
+      "setupTurns": [
+        {
+          "question": "Do you have any children?",
+          "requestId": "case-03-1792277240116-1-response",
+          "finalResponse": "Yes, I have a young daughter.",
+          "apiFinalResponse": "Yes, I have a young daughter.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277240116-1-response",
+              "encounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+              "requestMessage": "Do you have any children?",
+              "provider": "navigator",
+              "finalResponse": "Yes, I have a young daughter.",
+              "responseRequestId": "case-03-1792277240116-1-response",
+              "responseEncounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 2021,
+          "visibleApplicationError": ""
+        },
+        {
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "requestId": "case-03-1792277243214-2-response",
+          "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+          "apiFinalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+          "provider": "navigator",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277243214-2-response",
+              "encounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+              "requestMessage": "I'm looking into dental care options for you and your daughter.",
+              "provider": "navigator",
+              "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+              "responseRequestId": "case-03-1792277243214-2-response",
+              "responseEncounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 2900,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+      "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+      "requestId": "case-03-1792277247238-3-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277247238-3-response",
+          "encounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+          "requestMessage": "Do you have a preference about whether you both use the same dental clinic?",
+          "provider": "navigator",
+          "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+          "responseRequestId": "case-03-1792277247238-3-response",
+          "responseEncounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C03-G11-Q11_106c0701-c7ad-4024-9699-123a516169cc.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C03-G11-Q11_106c0701-c7ad-4024-9699-123a516169cc.zip",
+      "freshState": {
+        "boundEncounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Do you have a preference about whether you both use the same dental clinic?",
+        "requestId": "case-03-1792277247238-3-response",
+        "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+        "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277247238-3-response",
+            "encounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+            "requestMessage": "Do you have a preference about whether you both use the same dental clinic?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier for us.",
+            "responseRequestId": "case-03-1792277247238-3-response",
+            "responseEncounterId": "68d123df-c939-4be4-b1ef-632445b205cc",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2300,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2300,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:29.975Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C03-G11-Q11_106c0701-c7ad-4024-9699-123a516169cc.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.701Z",
+      "responseSha256": "a078a4ed64d07b695e2580d8a44a594c479bc2f91d76e875c4f42974f58c43e5",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "Do you have any children?",
+          "response": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        {
+          "index": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "response": "I appreciate that. It's important for both of us to have good dental health.",
+          "responseSha256": "4c05b9b9010597fbd51ea5c929cfc99015de69d734fcbf175ac31af54df35dcb",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "6229afc743d5fa926487cabf6241fc3dfa6fd8807b198aeb9a681a7430f30c9a"
+    },
+    {
+      "testId": "C01-G03-Q01",
+      "question": "Can you travel for affordable care?",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "1f5fa140-e870-45ec-85d1-d316ae8990e2",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:46.636Z",
+      "setupTurns": [],
+      "finalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+      "apiFinalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+      "requestId": "case-01-1792277268646-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-01-1792277268646-1-response",
+          "encounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+          "requestMessage": "Can you travel for affordable care?",
+          "provider": "navigator",
+          "finalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+          "responseRequestId": "case-01-1792277268646-1-response",
+          "responseEncounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C01-G03-Q01_1f5fa140-e870-45ec-85d1-d316ae8990e2.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C01-G03-Q01_1f5fa140-e870-45ec-85d1-d316ae8990e2.zip",
+      "freshState": {
+        "boundEncounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Can you travel for affordable care?",
+        "requestId": "case-01-1792277268646-1-response",
+        "finalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+        "apiFinalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792277268646-1-response",
+            "encounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+            "requestMessage": "Can you travel for affordable care?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+            "responseRequestId": "case-01-1792277268646-1-response",
+            "responseEncounterId": "5177b908-28fe-473e-a582-bcf35f2bfdc1",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2487,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2487,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:51.481Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C01-G03-Q01_1f5fa140-e870-45ec-85d1-d316ae8990e2.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.701Z",
+      "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+      "setupAssessments": [],
+      "rawSha256": "d9e486d172b691b55fb1c42707f61a5b61a3720b635fc83ecf60d707521b39ac"
+    },
+    {
+      "testId": "C02-G05-Q01",
+      "question": "When did you lose Medicaid?",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "For “that coverage” or “Medicaid stop” follow-ups, first establish that the patient lost Medicaid. Accept a relative answer tied to that context.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "f33bb586-cfad-4bb7-b14b-e5d52a24e7fb",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:52.738Z",
+      "setupTurns": [],
+      "finalResponse": "I lost Medicaid within the past year.",
+      "apiFinalResponse": "I lost Medicaid within the past year.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+      "requestId": "case-02-1792277274628-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-02-1792277274628-1-response",
+          "encounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+          "requestMessage": "When did you lose Medicaid?",
+          "provider": "navigator",
+          "finalResponse": "I lost Medicaid within the past year.",
+          "responseRequestId": "case-02-1792277274628-1-response",
+          "responseEncounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C02-G05-Q01_f33bb586-cfad-4bb7-b14b-e5d52a24e7fb.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C02-G05-Q01_f33bb586-cfad-4bb7-b14b-e5d52a24e7fb.zip",
+      "freshState": {
+        "boundEncounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "When did you lose Medicaid?",
+        "requestId": "case-02-1792277274628-1-response",
+        "finalResponse": "I lost Medicaid within the past year.",
+        "apiFinalResponse": "I lost Medicaid within the past year.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-02-1792277274628-1-response",
+            "encounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+            "requestMessage": "When did you lose Medicaid?",
+            "provider": "navigator",
+            "finalResponse": "I lost Medicaid within the past year.",
+            "responseRequestId": "case-02-1792277274628-1-response",
+            "responseEncounterId": "00245ec0-6fb5-418e-96a2-c73884467cc0",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2005,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2005,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:47:56.893Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C02-G05-Q01_f33bb586-cfad-4bb7-b14b-e5d52a24e7fb.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.701Z",
+      "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+      "setupAssessments": [],
+      "rawSha256": "23cae9d7bbcaa9de90b8958f8503538daafdcb318567eeed9a2f190d9880782a"
+    },
+    {
+      "testId": "C04-G14-Q01",
+      "question": "Could you pay a sliding-scale fee?",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "ccf49ab5-a419-482a-9f27-f2ea4d4f0b7b",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:47:57.770Z",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+      "apiFinalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+      "outcome": "FAIL",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+      "requestId": "case-04-1792277279695-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-04-1792277279695-1-response",
+          "encounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+          "requestMessage": "Could you pay a sliding-scale fee?",
+          "provider": "navigator",
+          "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+          "responseRequestId": "case-04-1792277279695-1-response",
+          "responseEncounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C04-G14-Q01_ccf49ab5-a419-482a-9f27-f2ea4d4f0b7b.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C04-G14-Q01_ccf49ab5-a419-482a-9f27-f2ea4d4f0b7b.zip",
+      "freshState": {
+        "boundEncounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Could you pay a sliding-scale fee?",
+        "requestId": "case-04-1792277279695-1-response",
+        "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+        "apiFinalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-04-1792277279695-1-response",
+            "encounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+            "requestMessage": "Could you pay a sliding-scale fee?",
+            "provider": "navigator",
+            "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+            "responseRequestId": "case-04-1792277279695-1-response",
+            "responseEncounterId": "7acb3429-990e-49c3-8d8f-fe2a61f95c44",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2060,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2060,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:02.474Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C04-G14-Q01_ccf49ab5-a419-482a-9f27-f2ea4d4f0b7b.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "FAIL",
+          "reason": "The fresh question asks willingness to pay an income-based fee, not a provider-given pain-treatment or disposition/follow-up plan. The appended antibiotic question therefore lacks its catalog event, despite the correct sliding-scale willingness. Same timing criterion used in development and corrected V5 grading."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.702Z",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31",
+      "setupAssessments": [],
+      "rawSha256": "5aaec47e3e11ed13e92f6be838927cf49673df0a13352d5f9333108c3260253e"
+    },
+    {
+      "testId": "C05-G17-Q01",
+      "question": "Could you afford a small fee?",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": [],
+      "runId": "3fd0243d-412b-4a6e-ba84-9170fe856bbe",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:03.329Z",
+      "setupTurns": [],
+      "finalResponse": "I can't afford anything right now.",
+      "apiFinalResponse": "I can't afford anything right now.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+      "requestId": "case-05-1792277285256-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-05-1792277285256-1-response",
+          "encounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+          "requestMessage": "Could you afford a small fee?",
+          "provider": "navigator",
+          "finalResponse": "I can't afford anything right now.",
+          "responseRequestId": "case-05-1792277285256-1-response",
+          "responseEncounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\C05-G17-Q01_3fd0243d-412b-4a6e-ba84-9170fe856bbe.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\C05-G17-Q01_3fd0243d-412b-4a6e-ba84-9170fe856bbe.zip",
+      "freshState": {
+        "boundEncounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Could you afford a small fee?",
+        "requestId": "case-05-1792277285256-1-response",
+        "finalResponse": "I can't afford anything right now.",
+        "apiFinalResponse": "I can't afford anything right now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-05-1792277285256-1-response",
+            "encounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+            "requestMessage": "Could you afford a small fee?",
+            "provider": "navigator",
+            "finalResponse": "I can't afford anything right now.",
+            "responseRequestId": "case-05-1792277285256-1-response",
+            "responseEncounterId": "7b3608ce-530b-4d8c-bfb2-e53003444dbc",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2225,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2225,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:07.783Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/C05-G17-Q01_3fd0243d-412b-4a6e-ba84-9170fe856bbe.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.702Z",
+      "responseSha256": "26ee8ef6bbd028e25c107b3ca9cfc7e90bf914469301344b9954ce6e6b9fce52",
+      "setupAssessments": [],
+      "rawSha256": "5c5f92b9f5cb38cb5dedb0c4b49ec6824e3e1f2441905958079eda22ff28ff64"
+    },
+    {
+      "testId": "PROD-CLOSURE-1",
+      "caseId": "case-01",
+      "cohort": "production-smoke",
+      "groupId": "CLOSURE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint",
+      "runId": "9301ae30-e85e-4b08-ac94-c3b894c3c334",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:08.719Z",
+      "setupTurns": [
+        {
+          "question": "What brings you here today?",
+          "requestId": "case-01-1792277291746-1-response",
+          "finalResponse": "I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.",
+          "apiFinalResponse": "I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.",
+          "provider": "governed-patient-core",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-01-1792277291746-1-response",
+              "encounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+              "requestMessage": "What brings you here today?",
+              "provider": "governed-patient-core",
+              "finalResponse": "I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.",
+              "responseRequestId": "case-01-1792277291746-1-response",
+              "responseEncounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 956,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+      "requestId": "case-01-1792277293778-2-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-01-1792277293778-2-response",
+          "encounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-01-1792277293778-2-response",
+          "responseEncounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-CLOSURE-1_9301ae30-e85e-4b08-ac94-c3b894c3c334.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-CLOSURE-1_9301ae30-e85e-4b08-ac94-c3b894c3c334.zip",
+      "freshState": {
+        "boundEncounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-01-1792277293778-2-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792277293778-2-response",
+            "encounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-01-1792277293778-2-response",
+            "responseEncounterId": "54dc1001-ecde-4e30-988f-9f9ca0e06529",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1125,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1125,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:15.330Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-CLOSURE-1_9301ae30-e85e-4b08-ac94-c3b894c3c334.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.702Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "What brings you here today?",
+          "response": "I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.",
+          "responseSha256": "a692d7834baa3113995c3eababf2aa436f232cf1257a72828e4799d6b96a650c",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "6c7a45307a484ad75efc8d01d0fa85b674b7f476b18209898213a76e6fa6b445"
+    },
+    {
+      "testId": "PROD-CLOSURE-2",
+      "caseId": "case-02",
+      "cohort": "production-smoke",
+      "groupId": "CLOSURE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint",
+      "runId": "c990fb9f-bb66-4346-99d0-238edfbcf318",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:15.336Z",
+      "setupTurns": [
+        {
+          "question": "What brings you here today?",
+          "requestId": "case-02-1792277297944-1-response",
+          "finalResponse": "My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.",
+          "apiFinalResponse": "My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.",
+          "provider": "governed-patient-core",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-02-1792277297944-1-response",
+              "encounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+              "requestMessage": "What brings you here today?",
+              "provider": "governed-patient-core",
+              "finalResponse": "My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.",
+              "responseRequestId": "case-02-1792277297944-1-response",
+              "responseEncounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 1214,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+      "requestId": "case-02-1792277300261-2-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-02-1792277300261-2-response",
+          "encounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-02-1792277300261-2-response",
+          "responseEncounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-CLOSURE-2_c990fb9f-bb66-4346-99d0-238edfbcf318.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-CLOSURE-2_c990fb9f-bb66-4346-99d0-238edfbcf318.zip",
+      "freshState": {
+        "boundEncounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-02-1792277300261-2-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-02-1792277300261-2-response",
+            "encounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-02-1792277300261-2-response",
+            "responseEncounterId": "3ed1c480-bc78-466a-adfc-12046fb4b81d",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1076,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1076,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:21.748Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-CLOSURE-2_c990fb9f-bb66-4346-99d0-238edfbcf318.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.703Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "What brings you here today?",
+          "response": "My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.",
+          "responseSha256": "8a324592df299279e4edb384216bf06862761072db0923e250be17ca26daf6ca",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "7975583002e8fc4544017187d4d9eee1ea4f2f02fe388985d5346ad8c1b50ba3"
+    },
+    {
+      "testId": "PROD-CLOSURE-3",
+      "caseId": "case-03",
+      "cohort": "production-smoke",
+      "groupId": "CLOSURE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint",
+      "runId": "803401e2-b95f-4d54-9250-3e59cdaa64d1",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:21.756Z",
+      "setupTurns": [
+        {
+          "question": "What brings you here today?",
+          "requestId": "case-03-1792277304346-1-response",
+          "finalResponse": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "apiFinalResponse": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "provider": "governed-patient-core",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-03-1792277304346-1-response",
+              "encounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+              "requestMessage": "What brings you here today?",
+              "provider": "governed-patient-core",
+              "finalResponse": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+              "responseRequestId": "case-03-1792277304346-1-response",
+              "responseEncounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 945,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+      "requestId": "case-03-1792277306414-2-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-03-1792277306414-2-response",
+          "encounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-03-1792277306414-2-response",
+          "responseEncounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-CLOSURE-3_803401e2-b95f-4d54-9250-3e59cdaa64d1.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-CLOSURE-3_803401e2-b95f-4d54-9250-3e59cdaa64d1.zip",
+      "freshState": {
+        "boundEncounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-03-1792277306414-2-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792277306414-2-response",
+            "encounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-03-1792277306414-2-response",
+            "responseEncounterId": "2032641f-5436-4afb-9f56-3690fc0c0998",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1027,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1027,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:27.826Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-CLOSURE-3_803401e2-b95f-4d54-9250-3e59cdaa64d1.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.703Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "What brings you here today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "responseSha256": "7b692bb11c2f711c8ddc5c8e6adbb107c8eefaf4a7a4cbb86527d4fb98811154",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "9751ca6f8b218c89655cdda7f0ceb367eef2a91b7d461d7978db268ceac4a055"
+    },
+    {
+      "testId": "PROD-CLOSURE-4",
+      "caseId": "case-04",
+      "cohort": "production-smoke",
+      "groupId": "CLOSURE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint",
+      "runId": "48a91ed5-e8ac-4405-9ba1-5de9baf4ecaa",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:27.832Z",
+      "setupTurns": [
+        {
+          "question": "What brings you here today?",
+          "requestId": "case-04-1792277310511-1-response",
+          "finalResponse": "My left lower back tooth hurts really badly when I bite, and it is hard to chew.",
+          "apiFinalResponse": "My left lower back tooth hurts really badly when I bite, and it is hard to chew.",
+          "provider": "governed-patient-core",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-04-1792277310511-1-response",
+              "encounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+              "requestMessage": "What brings you here today?",
+              "provider": "governed-patient-core",
+              "finalResponse": "My left lower back tooth hurts really badly when I bite, and it is hard to chew.",
+              "responseRequestId": "case-04-1792277310511-1-response",
+              "responseEncounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 950,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+      "requestId": "case-04-1792277312529-2-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-04-1792277312529-2-response",
+          "encounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-04-1792277312529-2-response",
+          "responseEncounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-CLOSURE-4_48a91ed5-e8ac-4405-9ba1-5de9baf4ecaa.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-CLOSURE-4_48a91ed5-e8ac-4405-9ba1-5de9baf4ecaa.zip",
+      "freshState": {
+        "boundEncounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-04-1792277312529-2-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-04-1792277312529-2-response",
+            "encounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-04-1792277312529-2-response",
+            "responseEncounterId": "ba52921c-5341-45e4-941c-5b417d57f291",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1044,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1044,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:33.976Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-CLOSURE-4_48a91ed5-e8ac-4405-9ba1-5de9baf4ecaa.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.703Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "What brings you here today?",
+          "response": "My left lower back tooth hurts really badly when I bite, and it is hard to chew.",
+          "responseSha256": "65aab8035274a3ad389904bcdf92c2d02c222da1c3d15873e3f088b515b25e8b",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "dfe6fc0da4123bfaf2cf05ac2bf6db725b382911958802e703bd88ffece1d893"
+    },
+    {
+      "testId": "PROD-CLOSURE-5",
+      "caseId": "case-05",
+      "cohort": "production-smoke",
+      "groupId": "CLOSURE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint",
+      "runId": "3db22569-b96f-4ba2-9820-f1df34f140fb",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:33.984Z",
+      "setupTurns": [
+        {
+          "question": "What brings you here today?",
+          "requestId": "case-05-1792277316545-1-response",
+          "finalResponse": "This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep.",
+          "apiFinalResponse": "This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep.",
+          "provider": "governed-patient-core",
+          "httpStatus": 200,
+          "apiAttempts": [
+            {
+              "httpStatus": 200,
+              "requestId": "case-05-1792277316545-1-response",
+              "encounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+              "requestMessage": "What brings you here today?",
+              "provider": "governed-patient-core",
+              "finalResponse": "This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep.",
+              "responseRequestId": "case-05-1792277316545-1-response",
+              "responseEncounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+              "error": null,
+              "retryAfter": null,
+              "syntheticDiagnostics": null
+            }
+          ],
+          "correlationMatched": true,
+          "uiApiMatch": true,
+          "elapsedMs": 927,
+          "visibleApplicationError": ""
+        }
+      ],
+      "finalResponse": "You're welcome.",
+      "apiFinalResponse": "You're welcome.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+      "requestId": "case-05-1792277318561-2-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-05-1792277318561-2-response",
+          "encounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+          "requestMessage": "Thank you for explaining that.",
+          "provider": "navigator",
+          "finalResponse": "You're welcome.",
+          "responseRequestId": "case-05-1792277318561-2-response",
+          "responseEncounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-CLOSURE-5_3db22569-b96f-4ba2-9820-f1df34f140fb.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-CLOSURE-5_3db22569-b96f-4ba2-9820-f1df34f140fb.zip",
+      "freshState": {
+        "boundEncounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "Thank you for explaining that.",
+        "requestId": "case-05-1792277318561-2-response",
+        "finalResponse": "You're welcome.",
+        "apiFinalResponse": "You're welcome.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-05-1792277318561-2-response",
+            "encounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+            "requestMessage": "Thank you for explaining that.",
+            "provider": "navigator",
+            "finalResponse": "You're welcome.",
+            "responseRequestId": "case-05-1792277318561-2-response",
+            "responseEncounterId": "bc8ff26e-a48c-4ac3-80e7-52396d73e140",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1047,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 1047,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:40.156Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-CLOSURE-5_3db22569-b96f-4ba2-9820-f1df34f140fb.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.704Z",
+      "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+      "setupAssessments": [
+        {
+          "index": 0,
+          "question": "What brings you here today?",
+          "response": "This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep.",
+          "responseSha256": "6ff647c6a4be180caaf5c74c09ba5ad2d9e9425167d24608167df77eaff6319f",
+          "outcome": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      ],
+      "rawSha256": "a8dd9c4ee129f1dc48a7407cfe231a764857759756f5f17bd7f1f9b95d3c3955"
+    },
+    {
+      "testId": "PROD-APPROPRIATE-C4-QUESTION",
+      "caseId": "case-04",
+      "question": "I'm referring you to a dentist for follow-up, and we will manage your pain with ibuprofen.",
+      "expectedMeaning": "Natural patient acknowledgment; catalog antibiotic question is eligible after this actual provider pain-treatment/follow-up plan.",
+      "cohort": "production-smoke",
+      "groupId": "APPROPRIATE-QUESTIONS",
+      "groupTitle": "Patient question positive controls",
+      "setupQuestions": [],
+      "contextRequirement": "Fresh encounter with actual triggering event in this turn",
+      "runId": "350f3b6d-be4d-4607-a252-114e1a8562ad",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:41.264Z",
+      "setupTurns": [],
+      "finalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+      "apiFinalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+      "requestId": "case-04-1792277323312-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-04-1792277323312-1-response",
+          "encounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+          "requestMessage": "I'm referring you to a dentist for follow-up, and we will manage your pain with ibuprofen.",
+          "provider": "navigator",
+          "finalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+          "responseRequestId": "case-04-1792277323312-1-response",
+          "responseEncounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-APPROPRIATE-C4-QUESTION_350f3b6d-be4d-4607-a252-114e1a8562ad.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-APPROPRIATE-C4-QUESTION_350f3b6d-be4d-4607-a252-114e1a8562ad.zip",
+      "freshState": {
+        "boundEncounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "I'm referring you to a dentist for follow-up, and we will manage your pain with ibuprofen.",
+        "requestId": "case-04-1792277323312-1-response",
+        "finalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+        "apiFinalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-04-1792277323312-1-response",
+            "encounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+            "requestMessage": "I'm referring you to a dentist for follow-up, and we will manage your pain with ibuprofen.",
+            "provider": "navigator",
+            "finalResponse": "Alright, thank you. I appreciate it. Do I need an antibiotic?",
+            "responseRequestId": "case-04-1792277323312-1-response",
+            "responseEncounterId": "88900b0c-cc1b-4689-b12a-204aeb16c022",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2132,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2132,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:45.842Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-APPROPRIATE-C4-QUESTION_350f3b6d-be4d-4607-a252-114e1a8562ad.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.704Z",
+      "responseSha256": "3972ff61c3d63f8799cfdef6b8d485404e276098613e59ba68537c1c1a828ee8",
+      "setupAssessments": [],
+      "rawSha256": "b3c1097d0a5a7c9546fed93491c6681aa2aab921513a94f66c32005bc8ea18e0"
+    },
+    {
+      "testId": "PROD-APPROPRIATE-C5-QUESTION",
+      "caseId": "case-05",
+      "question": "What does your tooth pain feel like, and what makes it worse?",
+      "expectedMeaning": "Canonical current-pain attributes answer question; catalog antibiotic request is eligible only after substantive pain description.",
+      "cohort": "production-smoke",
+      "groupId": "APPROPRIATE-QUESTIONS",
+      "groupTitle": "Patient question positive controls",
+      "setupQuestions": [],
+      "contextRequirement": "Fresh encounter with actual triggering event in this turn",
+      "runId": "76e6d0ee-c1a4-4cdd-ac8f-7fe15fc8cb78",
+      "attempt": 1,
+      "attemptKind": "first-run",
+      "priorAttemptRunIds": [],
+      "startedAt": "2026-10-17T22:48:45.848Z",
+      "setupTurns": [],
+      "finalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "apiFinalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "outcome": "PASS",
+      "reason": "Awaiting semantic adjudication of the actual final response.",
+      "encounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+      "requestId": "case-05-1792277328394-1-response",
+      "provider": "navigator",
+      "apiAttempts": [
+        {
+          "httpStatus": 200,
+          "requestId": "case-05-1792277328394-1-response",
+          "encounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+          "requestMessage": "What does your tooth pain feel like, and what makes it worse?",
+          "provider": "navigator",
+          "finalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+          "responseRequestId": "case-05-1792277328394-1-response",
+          "responseEncounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+          "error": null,
+          "retryAfter": null,
+          "syntheticDiagnostics": null
+        }
+      ],
+      "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\screenshots\\PROD-APPROPRIATE-C5-QUESTION_76e6d0ee-c1a4-4cdd-ac8f-7fe15fc8cb78.png",
+      "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v6-production-2026-10-17\\traces\\PROD-APPROPRIATE-C5-QUESTION_76e6d0ee-c1a4-4cdd-ac8f-7fe15fc8cb78.zip",
+      "freshState": {
+        "boundEncounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+        "patientCount": 0,
+        "studentCount": 0,
+        "transcriptCount": 0
+      },
+      "lastAttemptedTurn": {
+        "question": "What does your tooth pain feel like, and what makes it worse?",
+        "requestId": "case-05-1792277328394-1-response",
+        "finalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "apiFinalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-05-1792277328394-1-response",
+            "encounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+            "requestMessage": "What does your tooth pain feel like, and what makes it worse?",
+            "provider": "navigator",
+            "finalResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+            "responseRequestId": "case-05-1792277328394-1-response",
+            "responseEncounterId": "5add295c-6d65-4929-90d9-994e17c90e60",
+            "error": null,
+            "retryAfter": null,
+            "syntheticDiagnostics": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2204,
+        "visibleApplicationError": ""
+      },
+      "httpStatus": 200,
+      "correlationMatched": true,
+      "uiApiMatch": true,
+      "elapsedMs": 2204,
+      "visibleApplicationError": "",
+      "completedAt": "2026-10-17T22:48:50.901Z",
+      "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v6-production-2026-10-17/raw/PROD-APPROPRIATE-C5-QUESTION_76e6d0ee-c1a4-4cdd-ac8f-7fe15fc8cb78.json",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Every exact production question, setup turn and actual final response individually inspected against unchanged case facts and catalog timing: supported preferences/provider/coverage/location/pain and appropriate closure pass; payment initial-Yes and premature fee-turn antibiotic question explicitly fail by overrides. All thirteen setup responses are canonical or general acknowledgments without new child conditions. Genuine provider plan and substantive current pain correctly permit positive-control patient questions."
+        }
+      },
+      "reviewedAt": "2026-10-17T22:49:13.704Z",
+      "responseSha256": "fd930ea47f8da74b392f221be798508f19a417b4de4288b223d8880a8c56e511",
+      "setupAssessments": [],
+      "rawSha256": "d89914836d9dc8d5a3c0ade21f3570071710a6f4634cb094dbe63a812ad14e9b"
+    }
+  ]
+}

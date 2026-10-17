@@ -1,0 +1,20 @@
+{
+  "C01-G01-Q08": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The question asks Are you paying for dental care without insurance? Initial Yes affirms actual payment activity, which the case does not establish. The later uninsured statement is supported, but uncertainty about an arrangement does not clearly retract or scope that initial affirmative. This repeats the implied-affirmation root found with regular attendance; the actual first production response is preserved, not rerun."
+    }
+  },
+  "PROD-APPROPRIATE-C5-QUESTION": {
+    "completeness": {
+      "status": "FAIL",
+      "reason": "The actual question asks what the pain feels like and what makes it worse. The response gives only location and uncertainty about which tooth, without answering quality or provoking factors despite available canonical pain/thermal facts. Its location does permit the catalog antibiotic request, but correct timing and sourced location do not make the main answer complete. The initial smoke PASS was a grading oversight, corrected without rerunning or changing the response."
+    }
+  },
+  "C04-G14-Q01": {
+    "relevance": {
+      "status": "FAIL",
+      "reason": "The fresh question asks willingness to pay an income-based fee, not a provider-given pain-treatment or disposition/follow-up plan. The appended antibiotic question therefore lacks its catalog event, despite the correct sliding-scale willingness. Same timing criterion used in development and corrected V5 grading."
+    }
+  }
+}

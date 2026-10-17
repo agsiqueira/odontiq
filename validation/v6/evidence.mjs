@@ -8,10 +8,14 @@ const read=p=>JSON.parse(fs.readFileSync(p));
 const exists=p=>fs.existsSync(p);
 const inventory=read(`${root}/run-inventory.json`).tests;
 const baseline=read('validation/v5/results.json');
+const gradingCorrections=exists(`${root}/baseline-grading-corrections.json`)?read(`${root}/baseline-grading-corrections.json`).corrections:[];
 const parseErrors=[];
 const attempts=(exists(raw)?fs.readdirSync(raw):[]).filter(f=>f.endsWith('.json')).flatMap(f=>{try{return [{...read(`${raw}/${f}`),privateRawPath:`${raw}/${f}`}];}catch(e){parseErrors.push({file:f,error:String(e)});return [];}}).sort((a,b)=>a.startedAt.localeCompare(b.startedAt));
 const actual=r=>r.encounterId!==null||(r.apiAttempts?.length??0)>0;
-const rows=inventory.flatMap(item=>{const candidates=attempts.filter(r=>r.testId===item.testId);const r=candidates.find(actual);return r?[r]:[];});
+const recoveryPolicy=exists(`${root}/infrastructure-recovery.json`)?read(`${root}/infrastructure-recovery.json`):{eligibleIds:[]};
+// Only an explicitly documented pre-submission infrastructure error may select its first actual scored request.
+// Every original encounter/error remains in all-recorded-attempts and first-attempt-outcomes.
+const rows=inventory.flatMap(item=>{const candidates=attempts.filter(r=>r.testId===item.testId);const first=candidates.find(actual);const r=recoveryPolicy.eligibleIds.includes(item.testId)&&first?.errorStage==='fresh-encounter'&&!first.apiAttempts?.length&&!first.setupTurns?.length?(candidates.find(r=>r.apiAttempts?.length>0)??first):first;return r?[r]:[];});
 const decisions=exists(`${root}/adjudications.json`)?read(`${root}/adjudications.json`):[];
 const overrides=exists(`${root}/review-overrides.json`)?read(`${root}/review-overrides.json`):{};
 const dims=['factualCorrectness','completeness','relevance','leakage'];
@@ -56,15 +60,17 @@ if(action==='show'){
   });
   return {...clean(r),implementationVersion:'V6',setupTurns:setups,setupOutcome:setups.length?(setups.some(t=>t.assessment?.outcome==='FAIL')?'FAIL':setups.some(t=>!t.assessment||t.assessment.outcome==='REVIEW')?'REVIEW':'PASS'):'NOT_APPLICABLE',outcome:r.finalResponse&&r.outcome!=='ERROR'?d?.outcome??'REVIEW':r.outcome,dimensions:d?.dimensions??Object.fromEntries(dims.map(k=>[k,{status:'NOT_ASSESSED',reason:r.finalResponse?'Awaiting individual semantic review.':r.reason}])),reason:d?Object.entries(d.dimensions).filter(([,v])=>v.status!=='PASS').map(([k,v])=>`${k}: ${v.reason}`).join('; ')||'Individually reviewed; correct, complete, relevant and no leakage.':r.reason,originalRecorderOutcome:r.outcome,allAttemptRunIds:attempts.filter(a=>a.testId===r.testId).map(a=>a.runId)};
  });
- const comparison=publicRows.map(r=>{const old=baseline.find(b=>b.testId===r.testId);const assessed=Boolean(r.encounterId)&&(!r.finalResponse||r.outcome==='ERROR'||decisions.some(d=>d.runId===r.runId));return {testId:r.testId,question:r.question,v4Outcome:old.outcome,v6Outcome:r.outcome,v4Response:old.finalResponse,v6Response:r.finalResponse,v6Reason:r.reason,assessed,regressionFromV4Pass:old.outcome==='PASS'&&assessed&&r.outcome!=='PASS'};});
+ const comparison=publicRows.map(r=>{const old=baseline.find(b=>b.testId===r.testId);const correction=gradingCorrections.find(c=>c.testId===r.testId);const corrected=correction?.correctedVerdict??old.outcome;const assessed=Boolean(r.encounterId)&&(!r.finalResponse||r.outcome==='ERROR'||decisions.some(d=>d.runId===r.runId));return {testId:r.testId,question:r.question,v5Outcome:old.outcome,v5CorrectedOutcome:corrected,v5GradingCorrectionReason:correction?.reason??null,v6Outcome:r.outcome,v5Response:old.finalResponse,v6Response:r.finalResponse,responseIdentical:old.finalResponse===r.finalResponse,v6Reason:r.reason,assessed,regressionFromV5Pass:old.outcome==='PASS'&&assessed&&r.outcome!=='PASS',regressionAgainstCorrectedV5:corrected==='PASS'&&assessed&&r.outcome!=='PASS',identicalTextBehavioralImprovementClaim:false};});
  const cohorts=[...new Set(inventory.map(r=>r.cohort))];
- const summary={generatedAt:new Date().toISOString(),planned:546,realAttempted:rows.length,delivered:rows.filter(r=>r.finalResponse).length,reviewed:decisions.length,rawRecords:attempts.length,counts:tally(publicRows),cohorts:Object.fromEntries(cohorts.map(c=>[c,{total:publicRows.filter(r=>r.cohort===c).length,outcomes:tally(publicRows.filter(r=>r.cohort===c))}])),v4Counts:tally(baseline),regressionsFromV4Pass:comparison.filter(c=>c.regressionFromV4Pass),unreviewedDelivered:publicRows.filter(r=>r.finalResponse&&dims.some(k=>r.dimensions[k].status==='NOT_ASSESSED')).map(r=>r.testId),unreviewedSetups:publicRows.flatMap(r=>r.setupTurns.filter(t=>!t.assessment).map(t=>({testId:r.testId,q:t.question,a:t.finalResponse}))),parseErrors};
+ const summary={generatedAt:new Date().toISOString(),planned:546,realAttempted:rows.length,delivered:rows.filter(r=>r.finalResponse).length,reviewed:decisions.length,rawRecords:attempts.length,counts:tally(publicRows),cohorts:Object.fromEntries(cohorts.map(c=>[c,{total:publicRows.filter(r=>r.cohort===c).length,outcomes:tally(publicRows.filter(r=>r.cohort===c))}])),v5Counts:tally(baseline),regressionsFromV5Pass:comparison.filter(c=>c.regressionFromV5Pass),unreviewedDelivered:publicRows.filter(r=>r.finalResponse&&dims.some(k=>r.dimensions[k].status==='NOT_ASSESSED')).map(r=>r.testId),unreviewedSetups:publicRows.flatMap(r=>r.setupTurns.filter(t=>!t.assessment).map(t=>({testId:r.testId,q:t.question,a:t.finalResponse}))),parseErrors};
  fs.writeFileSync(`${root}/results.json`,JSON.stringify(publicRows,null,2));
  fs.writeFileSync(`${root}/unresolved-items.json`,JSON.stringify(publicRows.filter(r=>r.outcome!=='PASS'),null,2));
- fs.writeFileSync(`${root}/comparison-v4.json`,JSON.stringify(comparison,null,2));
+ fs.writeFileSync(`${root}/comparison-v5.json`,JSON.stringify(comparison,null,2));
  fs.writeFileSync(`${root}/summary.json`,JSON.stringify(summary,null,2));
  fs.writeFileSync(`${root}/setup-adjudications.json`,JSON.stringify(setupDecisions,null,2));
  fs.writeFileSync(`${root}/all-recorded-attempts.json`,JSON.stringify(attempts.map(r=>({...clean(r),setupTurns:r.setupTurns.map(clean)})),null,2));
+ const firstAttempts=inventory.flatMap(i=>{const r=attempts.find(a=>a.testId===i.testId&&actual(a));if(!r)return [];const d=decisions.find(d=>d.runId===r.runId);return [{testId:r.testId,question:r.question,setupTurns:r.setupTurns.map(t=>({question:t.question,response:t.finalResponse})),runId:r.runId,encounterId:r.encounterId,scoredSubmitted:Boolean(r.apiAttempts?.length),outcome:r.finalResponse?d?.outcome??'REVIEW':r.outcome,finalResponse:r.finalResponse,error:r.error,errorStage:r.errorStage,failureUiText:r.failureUiText,reason:d?Object.entries(d.dimensions).filter(([,v])=>v.status!=='PASS').map(([k,v])=>`${k}: ${v.reason}`).join('; ')||'Individually reviewed correct final response.':r.reason,screenshot:r.screenshot,trace:r.trace,selectedRunId:rows.find(a=>a.testId===i.testId)?.runId}];});
+ fs.writeFileSync(`${root}/first-attempt-outcomes.json`,JSON.stringify({at:new Date().toISOString(),counts:tally(firstAttempts),items:firstAttempts},null,2));
  fs.writeFileSync(`${root}/raw-artifact-manifest.json`,JSON.stringify(attempts.map(r=>({testId:r.testId,runId:r.runId,path:r.privateRawPath,sha256:sha(fs.readFileSync(r.privateRawPath))})),null,2));
  const cell=v=>`"${String(v??'').replaceAll('"','""')}"`;
  const columns=['testId','cohort','caseId','groupId','question','setupTurns','finalResponse','outcome','reason','factualCorrectness','completeness','relevance','leakage','encounterId','requestId','provider','httpStatus','uiApiMatch','correlationMatched','runId','screenshot','trace'];
@@ -84,8 +90,8 @@ if(action==='show'){
 }else{
  const freeze=read(`${root}/implementation-freeze.json`);
  const changed=Object.entries(freeze.files).filter(([p,h])=>sha(fs.readFileSync(p))!==h).map(([p])=>p);
- const copiedV4Changed=read(`${root}/v4-evidence-manifest.json`).filter(f=>sha(fs.readFileSync(f.path))!==f.sha256).map(f=>f.path);
- const status={at:new Date().toISOString(),commit:freeze.commit,changedFrozenFiles:changed,copiedV4Changed,realAttempted:rows.length,recorded:attempts.length,reviewed:decisions.length,outcomes:tally(decisions),errors:rows.filter(r=>!r.finalResponse).map(r=>({id:r.testId,outcome:r.outcome,reason:r.reason})),uiApi:{delivered:rows.filter(r=>r.finalResponse).length,mismatches:rows.filter(r=>r.finalResponse&&(!r.uiApiMatch||r.finalResponse!==r.apiFinalResponse||!r.correlationMatched)).map(r=>r.testId)},latest:rows.slice(-1).map(r=>({id:r.testId,at:r.startedAt})),parseErrors};
+ const copiedV4Changed=read(`${root}/baseline-evidence-manifest.json`).filter(f=>sha(fs.readFileSync(f.path))!==f.sha256).map(f=>f.path);
+ const status={at:new Date().toISOString(),commit:freeze.commit,changedFrozenFiles:changed,copiedV4Changed,realAttempted:rows.length,recorded:attempts.length,reviewed:decisions.length,outcomes:tally(decisions),errors:rows.filter(r=>!r.finalResponse).map(r=>({id:r.testId,outcome:r.outcome,reason:r.reason})),uiApi:{delivered:rows.filter(r=>r.finalResponse).length,mismatches:rows.filter(r=>r.finalResponse&&(!r.uiApiMatch||r.finalResponse!==r.apiFinalResponse||!r.correlationMatched)).map(r=>r.testId)},latest:[...rows].sort((a,b)=>a.startedAt.localeCompare(b.startedAt)).slice(-1).map(r=>({id:r.testId,at:r.startedAt})),parseErrors};
  fs.writeFileSync(`${root}/current-state.json`,JSON.stringify(status,null,2));
  console.log({...status,errors:status.errors.length});
  if(changed.length||copiedV4Changed.length)process.exitCode=1;

@@ -1,0 +1,12 @@
+[
+  {
+    "testId": "PROD-APPROPRIATE-C5-QUESTION",
+    "question": "What does your tooth pain feel like, and what makes it worse?",
+    "context": [],
+    "actualResponse": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "originalVerdict": "PASS",
+    "correctedVerdict": "FAIL",
+    "dimension": "completeness",
+    "reason": "Initial grading checked factual location and patient-question timing but missed the actual requested quality and provoking factors. Both are unanswered. Preserve production-initial-adjudication.json and the exact original response; no behavioral improvement or retry is claimed."
+  }
+]
