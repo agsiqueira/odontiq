@@ -70,7 +70,7 @@ export function isPatientPainLocationQuestion(question: string): boolean {
     && !/\b(?:pain|hurts?|tooth|teeth|molar|jaw|swelling)\b/i.test(normalized);
   const explicitLocation = /\b(?:where|location|which (?:tooth|teeth)|what (?:tooth|teeth)|side|what hurts|which one hurts)\b/i.test(normalized);
   // A direction must be a place/choice, rather than an unrelated adverb.
-  const anatomicalDirection = /\b(?:left|right|upper|lower)\b.{0,20}\b(?:tooth|teeth|molar|jaw|side|mouth)\b|\b(?:tooth|teeth|molar|jaw|side|mouth)\b.{0,20}\b(?:left|right|upper|lower)\b/i.test(normalized);
+  const anatomicalDirection = /\b(?:left|right|upper|lower)[ -]+(?:(?:left|right|upper|lower|back|front)[ -]+)*(?:tooth|teeth|molar|jaw|side|mouth)\b|\b(?:upper|lower)[ -]+(?:left|right)\b/i.test(normalized);
   const directionChoice = /\b(?:left|right|upper|lower) (?:or|versus|vs) (?:left|right|upper|lower)\b|\b(?:on|in|to) (?:the |your )?(?:left|right|upper|lower)\b/i.test(normalized);
   return !asksResidenceOnly && (explicitLocation || anatomicalDirection || directionChoice);
 }

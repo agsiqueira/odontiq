@@ -46,7 +46,7 @@ const q='What does your tooth pain feel like, and what makes it worse?',state=bu
 const supported:PatientDisclosureFact[]=[...facts('case-03'),{id:'test.child-condition',topic:'dental_history',text:'The daughter has cavities.'}];
 assert(supported.some(f=>f.text==='The daughter has cavities.')); // Source-positive routing checked below using the same case contract.
 const supportedTurn=interpretBackgroundTurn('Does your daughter have dental problems?',[],supported);assert(supportedTurn?.requests.some(r=>r.concept==='child_condition'&&r.sourceId==='test.child-condition'));
-for(const question of ['Cold then stop right away or keeps hurting?','Does it stop right away after cold is removed?']){
+for(const question of ['Cold then stop right away or keeps hurting?','Does it stop right away after cold is removed?','Does your tooth pain stop right away after cold?']){
  const s=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:question});
  assert(!requiredFactsForTurn(s,question,facts('case-05')).some(f=>f.id==='c5.location'),question);
 }
