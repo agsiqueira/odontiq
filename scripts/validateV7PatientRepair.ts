@@ -8,13 +8,13 @@ import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
 import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
 import { patientAnswerWithoutQuestions, constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
 import { applyPatientQuestionClassification } from '../src/lib/patientQuestions/stateMachine';
-import { createEmptyPatientQuestionState, type PatientQuestionClassification } from '../src/lib/patientQuestions/types';
+import { type PatientQuestionClassification } from '../src/lib/patientQuestions/types';
 import { generatePatientRoleSafeResponse } from '../src/lib/patientRoleResponse';
 const facts=(id:string)=>loadCase(id)!.supportingInfo.patientFacts!;
 const classification=(id:string):PatientQuestionClassification=>({schemaVersion:1,caseId:id,analyzedStudentMessageId:'s',detectedEvents:{painManagementOrDispositionDiscussed:id==='case-04',patientPainDescribed:id==='case-05'},confidence:1,evidenceAliases:['student-current','patient-draft'],evidenceMessageIds:['s','p']});
 const qualify=(id:string,q:string,a:string,plan=false)=>constrainQuestionClassification({classification:{...classification(id),...(plan?{currentProviderAct:'current_plan' as const,currentPlanEvidence:q}:{})},studentMessage:q,patientResponse:a,conversation:[],facts:facts(id)});
 async function main(){
-const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:any)=>r.correctedVerdict==='FAIL');
+const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:{correctedVerdict:string})=>r.correctedVerdict==='FAIL');
 assert.equal(corrections.length,90);
 for(const r of corrections){const c=qualify(`case-${r.testId.slice(1,3)}`,r.question,r.actualResponse);assert.equal(applyPatientQuestionClassification({caseId:`case-${r.testId.slice(1,3)}`,classification:c}).selectedQuestionId,undefined,r.testId);}
 for(const [q,a] of [['Where do you live?','Duval County.'],['Could you pay a sliding-scale fee?',"I'm open to paying a sliding-scale fee."],["I'm looking into dental care options for you.",'Thank you for helping me find dental care.']])assert.equal(qualify('case-04',q,a).detectedEvents.painManagementOrDispositionDiscussed,false);
@@ -32,9 +32,9 @@ const later=applyPatientQuestionClassification({caseId:'case-04',state:first.sta
 assert.equal(later.selectedQuestionId,'c4-antibiotic-needed-question');
 assert.equal(applyPatientQuestionClassification({caseId:'case-04',state:later.state,classification:qualify('case-04','We will give ibuprofen.','Okay.',true)}).selectedQuestionId,undefined);
 assert.equal(qualify('case-04','Thank you for explaining that.','You are welcome.').detectedEvents.painManagementOrDispositionDiscussed,false);
-const old=JSON.parse(fs.readFileSync('validation/v6/results.json','utf8'));
+const old=JSON.parse(fs.readFileSync('validation/v6/results.json','utf8')) as {testId:string;caseId:string;question:string;finalResponse:string}[];
 for(const id of ['C03-TARGET-6','C04-TARGET-6','C05-TARGET-6','C03-G09-H01','C01-G01-Q08']){
-const r=old.find((r:any)=>r.testId===id),c=loadCase(r.caseId)!;const state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:r.question});const good=patientImmediateResponse({caseId:r.caseId,message:r.question,disclosureState:state});assert(good,id);const context={canonicalFacts:facts(r.caseId),backgroundTurn:state.backgroundTurn,latestStudentMessage:r.question};assert(validatePatientFinalResponse(good,context).valid,`${id} ${good}`);if(id!=='C01-G01-Q08')assert(!validatePatientFinalResponse(r.finalResponse,context).valid,id);
+const r=old.find(r=>r.testId===id)!,c=loadCase(r.caseId)!;const state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:r.question});const good=patientImmediateResponse({caseId:r.caseId,message:r.question,disclosureState:state});assert(good,id);const context={canonicalFacts:facts(r.caseId),backgroundTurn:state.backgroundTurn,latestStudentMessage:r.question};assert(validatePatientFinalResponse(good,context).valid,`${id} ${good}`);if(id!=='C01-G01-Q08')assert(!validatePatientFinalResponse(r.finalResponse,context).valid,id);
 const final=await generatePatientRoleSafeResponse({initialOutput:r.finalResponse,retry:async()=>r.finalResponse,fallbackText:good,validateAdditional:t=>validatePatientFinalResponse(t,context),allowPatientInitiatedQuestion:false});assert(validatePatientFinalResponse(final.text,context).valid,id);
 }
 for(const bad of ["That's good to hear. My daughter's teeth need some attention too.","That's good to hear. We both need it, especially after these recent issues."]){const q="I'm looking into dental care options for you and your daughter.",state=buildPatientDisclosureState({caseData:loadCase('case-03')!,conversation:[],latestStudentMessage:q});assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts('case-03'),backgroundTurn:state.backgroundTurn,latestStudentMessage:q}).valid,bad);}

@@ -124,14 +124,15 @@ An asserted event requires evidence of that exact event, not merely discussion o
 Provider questions seeking history, symptoms, county, insurance or ability to pay are NOT treatment/disposition plans.
 Looking/searching for care options is NOT giving a plan. A plan chooses an actual current treatment, referral or follow-up action.
 A patient answer about county, insurance, payment or preferences is NOT a pain description.
-Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
-A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Do not infer events from the case scenario, intended future care or a patient's appended question.
-For a background-only exchange all clinical events should be false.
-Example: provider asks county; patient says Duval County => painManagementOrDispositionDiscussed=false.
-Example: provider gives ibuprofen plan and directs dentist follow-up => painManagementOrDispositionDiscussed=true.
+Use only the allowed event definitions for this case; never add a field for another case.
+${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
+A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Example: patient says tooth pain keeps waking me => patientPainDescribed=true.
-Example: patient says I am focused on my tooth pain => patientPainDescribed=false.
+Example: patient says I am focused on my tooth pain => patientPainDescribed=false.` : ""}
+${input.caseId === "case-04" ? `A background-only exchange cannot establish a clinical plan.
+Example: provider asks county; patient says Duval County => painManagementOrDispositionDiscussed=false.
+Example: provider gives ibuprofen plan and directs dentist follow-up => painManagementOrDispositionDiscussed=true.` : ""}
 
 Return exactly these top-level fields:
 - schemaVersion: the number 1

@@ -21,7 +21,6 @@ import {
   type PatientQuestionId,
 } from "../src/lib/patientQuestions/types";
 import { generatePatientRoleSafeResponse } from "../src/lib/patientRoleResponse";
-import { SAFE_PATIENT_BASE_RESPONSE_FALLBACK } from "../src/lib/patientRoleGuard";
 
 const expectedText: Record<PatientQuestionId, string> = {
   "c1-extraction-question": "Will they pull out the bad tooth?",
