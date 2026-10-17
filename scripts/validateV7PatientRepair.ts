@@ -46,6 +46,14 @@ const q='What does your tooth pain feel like, and what makes it worse?',state=bu
 const supported:PatientDisclosureFact[]=[...facts('case-03'),{id:'test.child-condition',topic:'dental_history',text:'The daughter has cavities.'}];
 assert(supported.some(f=>f.text==='The daughter has cavities.')); // Source-positive routing checked below using the same case contract.
 const supportedTurn=interpretBackgroundTurn('Does your daughter have dental problems?',[],supported);assert(supportedTurn?.requests.some(r=>r.concept==='child_condition'&&r.sourceId==='test.child-condition'));
+for(const question of ['Cold then stop right away or keeps hurting?','Does it stop right away after cold is removed?']){
+ const s=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:question});
+ assert(!requiredFactsForTurn(s,question,facts('case-05')).some(f=>f.id==='c5.location'),question);
+}
+for(const question of ['Where does it hurt?','Is it on the right or left?','Which tooth hurts?']){
+ const s=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:question});
+ assert(requiredFactsForTurn(s,question,facts('case-05')).some(f=>f.id==='c5.location'),question);
+}
 for(const good of ["Cold drinks make the pain worse. The pain does not stop immediately after the cold is removed; it keeps hurting for a little while afterward.","The pain doesn't stop right away after cold; it lingers."])assert(validatePatientFinalResponse(good,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,good);
 for(const bad of ["Cold doesn't hurt.","The pain stops immediately after cold is removed.","It goes away right away after cold."])assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts('case-05'),visibleFacts:facts('case-05')}).valid,bad);
 fs.writeFileSync('validation/v7/focused-regressions.json',JSON.stringify({at:new Date().toISOString(),priorTimingCorrections:90,passed:true,coverage:['source-scoped offers','both V6 regressions','setup FAIL/REVIEW','production compound pain and payment','opening and later pain','once only','eligibility after withholding','repeated unsafe retry and fallback','source-positive child condition']},null,2));console.log('V7 focused regressions passed.');

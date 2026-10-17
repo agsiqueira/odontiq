@@ -68,8 +68,11 @@ export function isPatientPainLocationQuestion(question: string): boolean {
   const normalized = normalizeText(question);
   const asksResidenceOnly = RESIDENCE_QUESTION_PATTERN.test(normalized)
     && !/\b(?:pain|hurts?|tooth|teeth|molar|jaw|swelling)\b/i.test(normalized);
-  return !asksResidenceOnly
-    && /\b(?:where|location|which (?:tooth|teeth)|what (?:tooth|teeth)|side|left|right|upper|lower|what hurts|which one hurts)\b/i.test(normalized);
+  const explicitLocation = /\b(?:where|location|which (?:tooth|teeth)|what (?:tooth|teeth)|side|what hurts|which one hurts)\b/i.test(normalized);
+  // A direction must be a place/choice, rather than an unrelated adverb.
+  const anatomicalDirection = /\b(?:left|right|upper|lower)\b.{0,20}\b(?:tooth|teeth|molar|jaw|side|mouth)\b|\b(?:tooth|teeth|molar|jaw|side|mouth)\b.{0,20}\b(?:left|right|upper|lower)\b/i.test(normalized);
+  const directionChoice = /\b(?:left|right|upper|lower) (?:or|versus|vs) (?:left|right|upper|lower)\b|\b(?:on|in|to) (?:the |your )?(?:left|right|upper|lower)\b/i.test(normalized);
+  return !asksResidenceOnly && (explicitLocation || anatomicalDirection || directionChoice);
 }
 
 const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {

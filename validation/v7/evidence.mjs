@@ -6,6 +6,7 @@ const raw=`${privateRoot}/raw`;
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const read=p=>JSON.parse(fs.readFileSync(p));
 const exists=p=>fs.existsSync(p);
+const ledger=exists(`${privateRoot}/request-ledger.jsonl`)?fs.readFileSync(`${privateRoot}/request-ledger.jsonl`,'utf8').split('\n').filter(Boolean).map(s=>JSON.parse(s)):[];
 const inventory=read(`${root}/run-inventory.json`).tests;
 const baseline=read('validation/v6/results.json');
 const gradingCorrections=exists(`${root}/baseline-grading-corrections.json`)?read(`${root}/baseline-grading-corrections.json`).corrections:[];
@@ -69,7 +70,7 @@ if(action==='show'){
  fs.writeFileSync(`${root}/summary.json`,JSON.stringify(summary,null,2));
  fs.writeFileSync(`${root}/setup-adjudications.json`,JSON.stringify(setupDecisions,null,2));
  fs.writeFileSync(`${root}/all-recorded-attempts.json`,JSON.stringify(attempts.map(r=>({...clean(r),setupTurns:r.setupTurns.map(clean)})),null,2));
- const firstAttempts=inventory.flatMap(i=>{const r=attempts.find(a=>a.testId===i.testId&&actual(a));if(!r)return [];const d=decisions.find(d=>d.runId===r.runId);return [{testId:r.testId,question:r.question,setupTurns:r.setupTurns.map(t=>({question:t.question,response:t.finalResponse})),runId:r.runId,encounterId:r.encounterId,scoredSubmitted:Boolean(r.apiAttempts?.length),outcome:r.finalResponse?d?.outcome??'REVIEW':r.outcome,finalResponse:r.finalResponse,error:r.error,errorStage:r.errorStage,failureUiText:r.failureUiText,reason:d?Object.entries(d.dimensions).filter(([,v])=>v.status!=='PASS').map(([k,v])=>`${k}: ${v.reason}`).join('; ')||'Individually reviewed correct final response.':r.reason,screenshot:r.screenshot,trace:r.trace,selectedRunId:rows.find(a=>a.testId===i.testId)?.runId}];});
+ const firstAttempts=inventory.flatMap(i=>{const r=attempts.find(a=>a.testId===i.testId&&actual(a));if(!r)return [];const d=decisions.find(d=>d.runId===r.runId);return [{testId:r.testId,question:r.question,setupTurns:r.setupTurns.map(t=>({question:t.question,response:t.finalResponse})),runId:r.runId,encounterId:r.encounterId,scoredSubmitted:ledger.some(e=>e.event==='request-sent'&&e.stage==='scored'&&e.runId===r.runId)||Boolean(r.apiAttempts?.length),outcome:r.finalResponse?d?.outcome??'REVIEW':r.outcome,finalResponse:r.finalResponse,error:r.error,errorStage:r.errorStage,failureUiText:r.failureUiText,reason:d?Object.entries(d.dimensions).filter(([,v])=>v.status!=='PASS').map(([k,v])=>`${k}: ${v.reason}`).join('; ')||'Individually reviewed correct final response.':r.reason,screenshot:r.screenshot,trace:r.trace,selectedRunId:rows.find(a=>a.testId===i.testId)?.runId}];});
  fs.writeFileSync(`${root}/first-attempt-outcomes.json`,JSON.stringify({at:new Date().toISOString(),counts:tally(firstAttempts),items:firstAttempts},null,2));
  fs.writeFileSync(`${root}/raw-artifact-manifest.json`,JSON.stringify(attempts.map(r=>({testId:r.testId,runId:r.runId,path:r.privateRawPath,sha256:sha(fs.readFileSync(r.privateRawPath))})),null,2));
  const cell=v=>`"${String(v??'').replaceAll('"','""')}"`;
