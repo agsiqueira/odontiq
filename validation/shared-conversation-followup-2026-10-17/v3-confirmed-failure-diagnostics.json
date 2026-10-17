@@ -1,0 +1,420 @@
+[
+  {
+    "testId": "C03-G11-Q08",
+    "caseId": "case-03",
+    "question": "Would a clinic accepting your daughter on Medicaid and seeing you uninsured suit your preference?",
+    "finalResponse": "My daughter has Medicaid.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read all twenty preference questions, final responses and forty separate setup turns. Most explicitly prefer shared care; prospective ease/consistency is natural. Q08 omits preference and Q13 invents daughter clinic history, separately failed. No leakage. Setup acknowledgements express general care concern without concrete schedules or disease assertions."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "Asks whether a clinic seeing the uninsured parent and Medicaid-covered daughter suits the shared-care preference. Daughter Medicaid alone does not answer preference."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "Responds only to supplied coverage context rather than the requested shared-clinic preference; approved questions are not the issue."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all twenty preference questions, final responses and forty separate setup turns. Most explicitly prefer shared care; prospective ease/consistency is natural. Q08 omits preference and Q13 invents daughter clinic history, separately failed. No leakage. Setup acknowledgements express general care concern without concrete schedules or disease assertions."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "77b650bf-f06b-478b-8a7d-0c3d22240038",
+      "requestId": "case-03-1792258487269-3-response",
+      "interpretation": {
+        "requests": [
+          {
+            "concept": "insurance",
+            "subject": "daughter",
+            "sourceId": "c3.background-family_care",
+            "value": "medicaid",
+            "answer": "My daughter has Medicaid."
+          }
+        ],
+        "clinicalRequested": false
+      },
+      "providerMessageIntent": "question",
+      "selectedFacts": [
+        {
+          "id": "c3.background-family_care",
+          "topic": "social_history",
+          "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+        }
+      ],
+      "requiredFacts": [
+        {
+          "id": "c3.background-family_care",
+          "topic": "social_history",
+          "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+        }
+      ],
+      "immediate": false,
+      "navigatorInitial": "Yes, that would be ideal. I'd prefer to have my appointments at the same clinic as my daughter to make things easier for both of us.",
+      "navigatorCorrective": "Yes, that would be ideal. I'd prefer to have my daughter and me receive care at the same clinic.",
+      "initialRejection": "background daughter insurance: missing or contradictory medicaid",
+      "usedFallback": true,
+      "safeResponse": "My daughter has Medicaid.",
+      "behaviorCandidate": "My daughter has Medicaid.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "My daughter has Medicaid."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G11-Q08_037b6850-d8ac-49a6-9df9-fba62276b350.json"
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "caseId": "case-03",
+    "question": "Would you like me to look for somewhere that can treat you both?",
+    "finalResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The shared-clinic preference is answered, but claiming that the daughter sees a dentist at a certain clinic invents an existing clinic/provider history. Daughter Medicaid and preference do not establish that history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read all twenty preference questions, final responses and forty separate setup turns. Most explicitly prefer shared care; prospective ease/consistency is natural. Q08 omits preference and Q13 invents daughter clinic history, separately failed. No leakage. Setup acknowledgements express general care concern without concrete schedules or disease assertions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read all twenty preference questions, final responses and forty separate setup turns. Most explicitly prefer shared care; prospective ease/consistency is natural. Q08 omits preference and Q13 invents daughter clinic history, separately failed. No leakage. Setup acknowledgements express general care concern without concrete schedules or disease assertions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all twenty preference questions, final responses and forty separate setup turns. Most explicitly prefer shared care; prospective ease/consistency is natural. Q08 omits preference and Q13 invents daughter clinic history, separately failed. No leakage. Setup acknowledgements express general care concern without concrete schedules or disease assertions."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "c78b5003-2500-45f0-93aa-8a8ca815d41f",
+      "requestId": "case-03-1792258549595-3-response",
+      "interpretation": {
+        "requests": [
+          {
+            "concept": "shared_clinic",
+            "subject": "patient",
+            "sourceId": "c3.background-family_care",
+            "value": "same_clinic",
+            "answer": "I'd prefer the same clinic for my daughter and me."
+          }
+        ],
+        "clinicalRequested": false
+      },
+      "providerMessageIntent": "question",
+      "selectedFacts": [
+        {
+          "id": "c3.background-family_care",
+          "topic": "social_history",
+          "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+        }
+      ],
+      "requiredFacts": [
+        {
+          "id": "c3.background-family_care",
+          "topic": "social_history",
+          "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+        }
+      ],
+      "immediate": false,
+      "navigatorInitial": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+      "behaviorCandidate": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G11-Q13_8c88c492-1d0f-4b08-80a1-0edf4e353f64.json"
+  },
+  {
+    "testId": "C02-TARGET-3",
+    "caseId": "case-02",
+    "question": "With whom do you share your home?",
+    "finalResponse": "I live alone, I'm not sure what to tell you about my household.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "I live alone invents household composition. No canonical fact establishes living alone; adding uncertainty afterward does not remove the unsupported assertion."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "The mixed living-alone assertion and uncertainty fail to preserve the unknown household boundary; no county disclosure is needed."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "d9f41da5-7022-477f-b28b-13a24d1f6438",
+      "requestId": "case-02-1792260020187-1-response",
+      "interpretation": {
+        "requests": [
+          {
+            "concept": "household",
+            "subject": "patient",
+            "value": "unknown",
+            "answer": "I'm not sure what to tell you about my household."
+          }
+        ],
+        "clinicalRequested": false
+      },
+      "providerMessageIntent": "question",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "I live alone, I'm not sure what to tell you about my household.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "I live alone, I'm not sure what to tell you about my household.",
+      "behaviorCandidate": "I live alone, I'm not sure what to tell you about my household.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "I live alone, I'm not sure what to tell you about my household."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-3_e85da817-c028-43b3-8357-4a5e3d92cc4c.json"
+  },
+  {
+    "testId": "C04-TARGET-6",
+    "caseId": "case-04",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I'm not your daughter, I'm Noah. Do I need an antibiotic?",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "The offer is to look into care for the patient and his daughter, not an assertion that the patient is the daughter. I am not your daughter, I am Noah corrects an identity claim that was never made. No unsupported daughter existence is required, but the actual statement is misread."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "370bbf15-581c-4755-b90e-177abf068574",
+      "requestId": "case-04-1792260111930-1-response",
+      "interpretation": null,
+      "providerMessageIntent": "other",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "I'm not your daughter, I'm Noah.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "I'm not your daughter, I'm Noah.",
+      "behaviorCandidate": "I'm not your daughter, I'm Noah.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "I'm not your daughter, I'm Noah."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-6_30db6484-4983-4ad3-b690-cc63e330d370.json"
+  },
+  {
+    "testId": "C02-G04-N2",
+    "caseId": "case-02",
+    "question": "Is there a policy paying toward your dental treatment now?",
+    "finalResponse": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Introduces uncertainty and an unsupported claim of not checking despite current uninsured status being defined."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "Policy paying toward care asks current coverage, not affordability; the reply never states lack of coverage."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "Cost worry replaces the actual current-insurance answer."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read three new insurer/policy questions and complete answers. N1/N3 correctly state no insurance; N2 uncertainty, checking story and cost diversion fail separately. No leakage."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "4cda9b9e-326b-409e-a7e9-bf20a3c42e98",
+      "requestId": "case-02-1792260213441-1-response",
+      "interpretation": {
+        "requests": [
+          {
+            "concept": "payment_ability",
+            "subject": "patient",
+            "value": "unknown",
+            "answer": "I'm not sure what I can afford."
+          }
+        ],
+        "clinicalRequested": false
+      },
+      "providerMessageIntent": "question",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost.",
+      "behaviorCandidate": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-G04-N2_f6d73ee6-297e-4013-91b8-48032d79a1da.json"
+  },
+  {
+    "testId": "C03-G09-N1",
+    "caseId": "case-03",
+    "question": "Is there a dental provider you normally return to?",
+    "finalResponse": "I usually go to Dr. Smith.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Invents Dr. Smith as the usual dentist; canonical facts define an own dentist but no name."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read three new dentist-status questions and full answers. N1 invented doctor name and N3 false provider denial failed separately; N2 correctly affirms own dentist. No leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read three new dentist-status questions and full answers. N1 invented doctor name and N3 false provider denial failed separately; N2 correctly affirms own dentist. No leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read three new dentist-status questions and full answers. N1 invented doctor name and N3 false provider denial failed separately; N2 correctly affirms own dentist. No leakage."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "20c4ea53-718d-443d-83e6-cc891693efcd",
+      "requestId": "case-03-1792260302621-1-response",
+      "interpretation": null,
+      "providerMessageIntent": "question",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "I usually go to Dr. Smith.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "I usually go to Dr. Smith.",
+      "behaviorCandidate": "I usually go to Dr. Smith.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "I usually go to Dr. Smith."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G09-N1_f216e128-9da6-48f2-8830-0d0e4b9ac21e.json"
+  },
+  {
+    "testId": "C03-G09-N3",
+    "caseId": "case-03",
+    "question": "Are you already a patient of a regular dental professional?",
+    "finalResponse": "No, not really. I haven't had a regular dentist in a while.",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Denies having a regular dentist, contradicting the existing own dentist and next-week appointment."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "The negative answer gives the wrong current-provider status."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read three new dentist-status questions and full answers. N1 invented doctor name and N3 false provider denial failed separately; N2 correctly affirms own dentist. No leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read three new dentist-status questions and full answers. N1 invented doctor name and N3 false provider denial failed separately; N2 correctly affirms own dentist. No leakage."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "b4daff49-602d-498c-b828-e1339fde129f",
+      "requestId": "case-03-1792260313906-1-response",
+      "interpretation": null,
+      "providerMessageIntent": "question",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "No, not really. I haven't had a regular dentist in a while.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "No, not really. I haven't had a regular dentist in a while.",
+      "behaviorCandidate": "No, not really. I haven't had a regular dentist in a while.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "No, not really. I haven't had a regular dentist in a while."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G09-N3_824d1430-53a1-4ca2-8cc3-5daf5e0262fc.json"
+  },
+  {
+    "testId": "C04-G13-N2",
+    "caseId": "case-04",
+    "question": "Do you have a policy to consider while choosing a dental office?",
+    "finalResponse": "I care about the dentist's experience and if they accept my insurance. Do I need an antibiotic?",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Whether they accept my insurance presupposes an insurance arrangement despite defined uninsured status. A generic concern about provider experience alone is not treated as a false concrete fact."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "Does not answer whether there is an insurance policy to consider."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "Dentist experience preferences replace the actual policy/coverage question; approved antibiotic question is not the problem."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read three new current-insurance questions and full answers. N1/N3 correctly state uninsured; N2 policy misread, coverage presupposition and question omission failed separately. Approved antibiotic questions permitted; no leakage."
+      }
+    },
+    "diagnostics": {
+      "encounterId": "fad2f6b6-c0a8-4e79-bd40-be11edfdeb04",
+      "requestId": "case-04-1792260398034-1-response",
+      "interpretation": null,
+      "providerMessageIntent": "question",
+      "selectedFacts": [],
+      "requiredFacts": [],
+      "immediate": false,
+      "navigatorInitial": "I care about the dentist's experience and if they accept my insurance.",
+      "navigatorCorrective": null,
+      "initialRejection": null,
+      "usedFallback": false,
+      "safeResponse": "I care about the dentist's experience and if they accept my insurance.",
+      "behaviorCandidate": "I care about the dentist's experience and if they accept my insurance.",
+      "presentationAssessment": {
+        "valid": true
+      },
+      "baseResponse": "I care about the dentist's experience and if they accept my insurance."
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-G13-N2_5c3208b3-301f-4a85-a4d8-d1bbd82fb731.json"
+  }
+]

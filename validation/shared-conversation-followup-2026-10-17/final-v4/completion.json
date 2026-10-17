@@ -1,0 +1,33 @@
+{
+  "completedAt": "2026-10-17T19:49:52.819Z",
+  "commit": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "frozenAt": "2026-10-17T18:47:57.588Z",
+  "frozenFiles": 216,
+  "changedFrozenFiles": [],
+  "freezeManifestSha256": "935f738f28586c5d80716f4bc69cd1dc3eec5720eee1da234e0f14ac67cb37d7",
+  "configuration": "provider-configuration.json; current-state.json; infrastructure-continuation.json",
+  "total": 546,
+  "outcomes": {
+    "PASS": 474,
+    "FAIL": 5,
+    "REVIEW": 10,
+    "ERROR": 17,
+    "BLOCKED": 40
+  },
+  "scoredQuestionsSubmitted": 506,
+  "scoredQuestionsNotSubmitted": 40,
+  "deliveredResponsesReviewed": 489,
+  "uiApiMatched": 489,
+  "successfulSetupResponsesMatchedAndReviewed": 56,
+  "failedRequiredSetupRequests": 40,
+  "verificationIntegrityChecks": 25,
+  "allIntegrityChecksPassed": true,
+  "rawRecordsPreserved": 732,
+  "noRequestStopPlaceholdersPreserved": 186,
+  "recommendation": "Repair cycle required under a new version; do not release V4 as verified.",
+  "merged": false,
+  "deployed": false,
+  "report": "validation/shared-conversation-followup-2026-10-17/final-v4/REPORT.md",
+  "results": "validation/shared-conversation-followup-2026-10-17/final-v4/results.json",
+  "unresolved": "validation/shared-conversation-followup-2026-10-17/final-v4/unresolved-items.json"
+}

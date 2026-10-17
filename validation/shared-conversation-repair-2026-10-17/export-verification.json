@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "check": "primary: exact unique inventory and four dimensions",
+      "passed": true,
+      "detail": 340
+    },
+    {
+      "check": "primary: CSV/JSON round trip",
+      "passed": true,
+      "detail": 340
+    },
+    {
+      "check": "pain-context: exact unique inventory and four dimensions",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "check": "pain-context: CSV/JSON round trip",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "check": "holdout: exact unique inventory and four dimensions",
+      "passed": true,
+      "detail": 51
+    },
+    {
+      "check": "holdout: CSV/JSON round trip",
+      "passed": true,
+      "detail": 51
+    },
+    {
+      "check": "All original 340+20 strings and setup requirements unchanged",
+      "passed": true,
+      "detail": 360
+    },
+    {
+      "check": "Real Navigator, fresh encounters, final UI/API equality and correlation",
+      "passed": true,
+      "detail": {
+        "validScoredResponses": 411,
+        "uniqueScoredEncounters": 411
+      }
+    },
+    {
+      "check": "Final freeze and untouched newly created holdout",
+      "passed": true,
+      "detail": {
+        "frozenFiles": 214,
+        "holdoutQuestions": 51
+      }
+    },
+    {
+      "check": "Every semantic FAIL/REVIEW has screenshot and valid scoped trace",
+      "passed": true,
+      "detail": {
+        "nonPassResponseScreenshotsAndTraces": 9
+      }
+    },
+    {
+      "check": "All recorded attempts represented in deduplicated exclusion registry",
+      "passed": true,
+      "detail": 590
+    },
+    {
+      "check": "Preserved raw artifact checksums, including unsuccessful runs",
+      "passed": true,
+      "detail": 567
+    }
+  ],
+  "allPassed": true
+}

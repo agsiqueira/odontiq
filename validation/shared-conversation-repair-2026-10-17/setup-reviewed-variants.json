@@ -1,0 +1,301 @@
+[
+  {
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "caseId": "case-01",
+    "question": "How severe is your pain right now?",
+    "response": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "testIds": [
+      "C01-G03-Q01-PAIN",
+      "C01-G03-Q02-PAIN",
+      "C01-G03-Q03-PAIN",
+      "C01-G03-Q04-PAIN",
+      "C01-G03-Q05-PAIN",
+      "C01-G03-Q06-PAIN",
+      "C01-G03-Q07-PAIN",
+      "C01-G03-Q08-PAIN",
+      "C01-G03-Q09-PAIN",
+      "C01-G03-Q10-PAIN",
+      "C01-G03-Q11-PAIN",
+      "C01-G03-Q12-PAIN",
+      "C01-G03-Q13-PAIN",
+      "C01-G03-Q14-PAIN",
+      "C01-G03-Q15-PAIN",
+      "C01-G03-Q16-PAIN",
+      "C01-G03-Q17-PAIN",
+      "C01-G03-Q18-PAIN",
+      "C01-G03-Q19-PAIN",
+      "C01-G03-Q20-PAIN"
+    ]
+  },
+  {
+    "variantId": "fa5daa9f090e9b67b9376a0b435fca9733dc9992125772b656ceacefe2f045ef",
+    "caseId": "case-01",
+    "question": "How are you feeling with the pain?",
+    "response": "I'm quite uncomfortable with this pain.",
+    "testIds": [
+      "C01-G03-Q01-PAIN"
+    ]
+  },
+  {
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "caseId": "case-01",
+    "question": "How are you feeling with the pain?",
+    "response": "I'm feeling pretty uncomfortable with this pain.",
+    "testIds": [
+      "C01-G03-Q02-PAIN",
+      "C01-G03-Q04-PAIN",
+      "C01-G03-Q06-PAIN",
+      "C01-G03-Q08-PAIN",
+      "C01-G03-Q10-PAIN",
+      "C01-G03-Q12-PAIN",
+      "C01-G03-Q13-PAIN",
+      "C01-G03-Q14-PAIN",
+      "C01-G03-Q18-PAIN"
+    ]
+  },
+  {
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "caseId": "case-01",
+    "question": "How are you feeling with the pain?",
+    "response": "I'm feeling quite uncomfortable with this pain.",
+    "testIds": [
+      "C01-G03-Q03-PAIN",
+      "C01-G03-Q05-PAIN",
+      "C01-G03-Q09-PAIN",
+      "C01-G03-Q11-PAIN",
+      "C01-G03-Q15-PAIN",
+      "C01-G03-Q16-PAIN",
+      "C01-G03-Q17-PAIN",
+      "C01-G03-Q19-PAIN"
+    ]
+  },
+  {
+    "variantId": "c83bd169abafaf3e599edda53a6fd03a907bdbbb8af98f136b8646e5f9b15189",
+    "caseId": "case-01",
+    "question": "How are you feeling with the pain?",
+    "response": "I'm not doing well with the pain, to be honest. It's quite uncomfortable.",
+    "testIds": [
+      "C01-G03-Q07-PAIN"
+    ]
+  },
+  {
+    "variantId": "81da174a950740a06ce15bd184584f51ba0ff30402f4f0b9688b244cc4461f8b",
+    "caseId": "case-01",
+    "question": "How are you feeling with the pain?",
+    "response": "I'm feeling quite uncomfortable with the pain.",
+    "testIds": [
+      "C01-G03-Q20-PAIN"
+    ]
+  },
+  {
+    "variantId": "8962ed670de12f54dff8ada77d361f2c0970a42a2e0b3c5edbafbf6564750053",
+    "caseId": "case-02",
+    "question": "Have you ever had Medicaid?",
+    "response": "I lost Medicaid within the past year.",
+    "testIds": [
+      "C02-G05-H01",
+      "C02-G05-Q03"
+    ]
+  },
+  {
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "caseId": "case-02",
+    "question": "What happened to that coverage?",
+    "response": "I lost Medicaid within the past year.",
+    "testIds": [
+      "C02-G05-H01",
+      "C02-G05-H02",
+      "C02-G05-H03",
+      "C02-G05-Q03",
+      "C02-G05-Q11",
+      "C02-G05-Q16"
+    ]
+  },
+  {
+    "variantId": "1ddb49bad8cb697ecc2bd228e39dacc12b24a3db87f704add3982159c44d7626",
+    "caseId": "case-02",
+    "question": "Have you ever had Medicaid?",
+    "response": "Yes, I had Medicaid, but I lost it within the past year.",
+    "testIds": [
+      "C02-G05-H02",
+      "C02-G05-H03",
+      "C02-G05-Q11",
+      "C02-G05-Q16"
+    ]
+  },
+  {
+    "variantId": "4280ee8fab44a8d33a509e03a03e163c7d687da80d4f173fdf2faa8bd4833279",
+    "caseId": "case-02",
+    "question": "What county do you live in?",
+    "response": "Collier County.",
+    "testIds": [
+      "C02-G06-H01",
+      "C02-G06-H03"
+    ]
+  },
+  {
+    "variantId": "6f12405a70500f4ce2bc85cf55ffdceb905d0e84eac7d837b38fe0b2c58e2a9a",
+    "caseId": "case-02",
+    "question": "What county do you live in?",
+    "response": "I live in Collier County.",
+    "testIds": [
+      "C02-G06-H02",
+      "C02-G06-Q16"
+    ]
+  },
+  {
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "caseId": "case-03",
+    "question": "Do you have any children?",
+    "response": "Yes, I have a young daughter.",
+    "testIds": [
+      "C03-G10-H01",
+      "C03-G10-H02",
+      "C03-G10-H03",
+      "C03-G10-Q14",
+      "C03-G10-Q17",
+      "C03-G11-H01",
+      "C03-G11-H02",
+      "C03-G11-H03",
+      "C03-G11-Q01",
+      "C03-G11-Q02",
+      "C03-G11-Q03",
+      "C03-G11-Q04",
+      "C03-G11-Q05",
+      "C03-G11-Q06",
+      "C03-G11-Q07",
+      "C03-G11-Q08",
+      "C03-G11-Q09",
+      "C03-G11-Q10",
+      "C03-G11-Q11",
+      "C03-G11-Q12",
+      "C03-G11-Q13",
+      "C03-G11-Q14",
+      "C03-G11-Q15",
+      "C03-G11-Q16",
+      "C03-G11-Q17",
+      "C03-G11-Q18",
+      "C03-G11-Q19",
+      "C03-G11-Q20"
+    ]
+  },
+  {
+    "variantId": "750287137eb6ae093fbc675890974ddb9c6ccf9b4af0254313c778dc5c1da72e",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "I appreciate that, doctor. We both need good care.",
+    "testIds": [
+      "C03-G11-H01"
+    ]
+  },
+  {
+    "variantId": "dffa9fc2dbaba731b519b80f78e96971ad126b841769391aafd0c7f596b33291",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. We both need it.",
+    "testIds": [
+      "C03-G11-H02",
+      "C03-G11-Q04"
+    ]
+  },
+  {
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear, doctor. We both need it.",
+    "testIds": [
+      "C03-G11-H03",
+      "C03-G11-Q14",
+      "C03-G11-Q16",
+      "C03-G11-Q17",
+      "C03-G11-Q18"
+    ]
+  },
+  {
+    "variantId": "6ca6a07d7d89e2f17b041f097732b2b8c0f05db928b81224eb71668d90e1a62e",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "I appreciate that, doctor. It's been tough finding time for both of us.",
+    "testIds": [
+      "C03-G11-Q01"
+    ]
+  },
+  {
+    "variantId": "cd3e7530bcc513891d8e2273a36f767d876bdca3f4370daac332e81f1ff6b83f",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. My daughter needs good care too.",
+    "testIds": [
+      "C03-G11-Q02"
+    ]
+  },
+  {
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. Dental care is important for both of us.",
+    "testIds": [
+      "C03-G11-Q03",
+      "C03-G11-Q06",
+      "C03-G11-Q08",
+      "C03-G11-Q09",
+      "C03-G11-Q13",
+      "C03-G11-Q20"
+    ]
+  },
+  {
+    "variantId": "9de2092e26cae43b081e77b2db0ef4f1586a7033e3bc62908826fee7cc5ff1ca",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear, doctor.",
+    "testIds": [
+      "C03-G11-Q05"
+    ]
+  },
+  {
+    "variantId": "d41b0278ae99189f9eca351faf7a0b7b01b214a6a40c5b67f4314a5f345b0aef",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "I appreciate that. It's important for both of us to have good dental health.",
+    "testIds": [
+      "C03-G11-Q07",
+      "C03-G11-Q19"
+    ]
+  },
+  {
+    "variantId": "8ee9a309ff940b5bb5ad8e325e7ba9a7dd2d6675539f7c70358e3177486408b4",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. We both need it, especially my daughter.",
+    "testIds": [
+      "C03-G11-Q10"
+    ]
+  },
+  {
+    "variantId": "ed244ca281def966d99f829c7b79c498b28bee6c293471aa989bd9fb3a194946",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. I want what's best for her.",
+    "testIds": [
+      "C03-G11-Q11"
+    ]
+  },
+  {
+    "variantId": "5ee0c5337f9e4127758efefe99d329a18d5141262753c30cf1a238022caa335d",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear. I want to make sure we both have the best care.",
+    "testIds": [
+      "C03-G11-Q12"
+    ]
+  },
+  {
+    "variantId": "aa9cd4a338f6503a315b3bfbd9e3872ab8c434b4ffc7edb219fcb056f7794930",
+    "caseId": "case-03",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "response": "That's good to hear, doctor. I want the best for her.",
+    "testIds": [
+      "C03-G11-Q15"
+    ]
+  }
+]

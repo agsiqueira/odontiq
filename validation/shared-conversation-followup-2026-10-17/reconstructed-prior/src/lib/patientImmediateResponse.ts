@@ -1,0 +1,174 @@
+import type { PatientDisclosureState } from "./patientDisclosure";
+import { case3ConsentResponse } from "./case3ConsentResponse";
+import { case1PlanAcknowledgement } from "./case1PlanAcknowledgement";
+
+const NPO_INSTRUCTION_PATTERN =
+  /\b(?:npo|nothing by mouth|do not eat or drink|don'?t eat or drink|cannot have anything to eat or drink|can'?t have anything to eat or drink|no food or liquids?)\b/i;
+const FASTING_HISTORY_QUESTION_PATTERN =
+  /\b(?:have you (?:eaten|had anything)|when did you last (?:eat|drink)|anything by mouth)\b/i;
+const CASE_3_GUM_PALPATION_PATTERN =
+  /\b(?:gum|gums|gingiva|area|here|this)\b.*\b(?:press|pressure|palpat|touch|tender)\w*\b|\b(?:press|pressure|palpat|touch|tender)\w*\b.*\b(?:gum|gums|gingiva|area|here|this)\b/i;
+const GENERAL_PAIN_QUESTION_PATTERN = /^(?:are you (?:in pain|hurting(?: right now)?)|does (?:your |the )?(?:tooth|mouth|jaw) hurt|is (?:your |the )?(?:tooth|mouth|jaw) hurting)(?:\s+right now)?\??$/i;
+const QUESTION_PATTERN = /\?\s*$|^(?:are|can|could|did|do|does|have|has|how|is|was|were|what|when|where|which|who|why|would)\b/i;
+const UNSUPPORTED_LIGHT_TRIGGER_QUESTION_PATTERN =
+  /\b(?:bright\s+)?(?:sunlight|light)\b.{0,40}\b(?:pain|hurt|ache)\b|\b(?:pain|hurt|ache)\b.{0,40}\b(?:bright\s+)?(?:sunlight|light)\b/i;
+const SOCIAL_WELLBEING_QUESTION_PATTERN =
+  /^(?:so[, ]+)?(?:how are you(?: feeling| doing)?|how do you feel|are you okay)(?:\s+(?:today|right now))?[?.!]*$/i;
+const CASE_3_ALLERGY_QUESTION_PATTERN =
+  /\ballerg(?:y|ies|ic)\b/i;
+const CASE_3_IBUPROFEN_PATTERN =
+  /\b(?:ibuprofen|advil|motrin|nsaids?)\b/i;
+const CASE_3_IBUPROFEN_INTOLERANCE_QUESTION_PATTERN =
+  /\b(?:allerg(?:y|ies|ic)|reaction|react|upset|stomach|ulcers?|tolerat|bother|avoid|can you take|what happens)\b/i;
+const CASE_4_COLD_PATTERN = /\b(?:cold|chilly|chilled)\b/i;
+const CASE_4_THERMAL_SENSITIVITY_PATTERN = /\bsensitiv(?:e|ity)\b/i;
+const CASE_4_HEAT_PATTERN = /\b(?:hot|heat)\b/i;
+const CASE_4_BITE_PATTERN = /\b(?:bite|biting|chew|chewing|tap|tapping|percussion|percuss)\w*\b/i;
+const CASE_4_COLD_HISTORY_PATTERN = /\b(?:before|earlier|previously|used to|at first|in the past)\b/i;
+const CASE_4_COLD_CHANGE_PATTERN = /\b(?:change|changed|stop|stopped|no longer|anymore)\b/i;
+const CASE_4_COLD_STILL_WITH_HISTORY_PATTERN = /\bstill\b.*\b(?:before|earlier|previously|used to)\b|\b(?:before|earlier|previously|used to)\b.*\bstill\b/i;
+const CASE_4_DENTAL_HISTORY_PATTERN = /\b(?:when|how long)\b.{0,35}\b(?:last|since)\b.{0,25}\b(?:see|saw|seen|visit(?:ed)?)\b.{0,20}\bdentist\b|\b(?:have|did) you ever\b.{0,30}\b(?:dentist|dental visit)\b|\blast (?:dental visit|saw (?:a )?dentist)\b/i;
+const CASE_4_DENTAL_INSURANCE_PATTERN = /\bdental insurance\b/i;
+const CASE_4_DENTAL_FOLLOW_UP_PATTERN = /\b(?:follow[- ]?up|appointment|referral|refer|help (?:me )?(?:find|finding|arrange)|find(?:ing)? (?:a )?dentist|arrange dental|need help)\b/i;
+const CASE_4_CURRENT_DENTIST_PATTERN = /\b(?:have|got|see)\b.{0,25}\b(?:a |your |my )?(?:regular )?dentist\b|\bwho is your dentist\b|\bregular dentist\b/i;
+
+export function patientImmediateResponse({
+  caseId,
+  message,
+  disclosureState,
+  emittedQuestionIds = [],
+  priorPatientDialogue = [],
+}: {
+  caseId: string;
+  message: string;
+  disclosureState: PatientDisclosureState;
+  emittedQuestionIds?: readonly string[];
+  priorPatientDialogue?: readonly string[];
+}): string | undefined {
+  if (disclosureState.backgroundTurn && !(caseId === "case-04"
+    && !disclosureState.backgroundTurn.clinicalRequested
+    && disclosureState.backgroundTurn.requests.every(request => request.concept === "dentist"))) return undefined;
+  const planAcknowledgement = case1PlanAcknowledgement({
+    caseId,
+    message,
+    providerMessageIntent: disclosureState.providerMessageIntent,
+    emittedQuestionIds,
+    priorPatientDialogue,
+  });
+  if (planAcknowledgement) return planAcknowledgement;
+
+  const consentResponse = case3ConsentResponse(caseId, message);
+  if (consentResponse) return consentResponse;
+
+  const case4ThermalResponse = case4GovernedThermalResponse(caseId, message);
+  if (case4ThermalResponse) return case4ThermalResponse;
+
+  const asksBackgroundDetails = disclosureState.allowedThisTurn.some((fact) =>
+    fact.id.includes(".background-"));
+  const case4DentistResponse = asksBackgroundDetails
+    ? undefined
+    : case4GovernedDentistResponse(caseId, message);
+  if (case4DentistResponse) return case4DentistResponse;
+
+  if (
+    caseId === "case-03" &&
+    isDirectCase3Question(message) &&
+    CASE_3_IBUPROFEN_PATTERN.test(message) &&
+    CASE_3_IBUPROFEN_INTOLERANCE_QUESTION_PATTERN.test(message)
+  ) {
+    return "I'm not allergic to ibuprofen, but it upsets my stomach, so I avoid it.";
+  }
+
+  if (
+    caseId === "case-03" &&
+    isDirectCase3Question(message) &&
+    CASE_3_ALLERGY_QUESTION_PATTERN.test(message) &&
+    !CASE_3_IBUPROFEN_PATTERN.test(message)
+  ) {
+    return "No, I have no known drug allergies, including no penicillin allergy.";
+  }
+
+  if (
+    NPO_INSTRUCTION_PATTERN.test(message) &&
+    !FASTING_HISTORY_QUESTION_PATTERN.test(message)
+  ) {
+    return "Okay, I understand.";
+  }
+
+  if (GENERAL_PAIN_QUESTION_PATTERN.test(message.trim())) {
+    return "Yes, it hurts.";
+  }
+
+  if (SOCIAL_WELLBEING_QUESTION_PATTERN.test(message.trim())) {
+    return caseId === "case-01"
+      ? "Not great. I'm exhausted and in pain."
+      : "Not great. I'm in pain.";
+  }
+
+  if (
+    caseId === "case-03" &&
+    disclosureState.allowedThisTurn.some((fact) => fact.id === "c3.gum-palpation") &&
+    CASE_3_GUM_PALPATION_PATTERN.test(message)
+  ) {
+    return "Yes, it hurts when you press there.";
+  }
+
+  if (
+    (disclosureState.providerMessageIntent === "other" ||
+      UNSUPPORTED_LIGHT_TRIGGER_QUESTION_PATTERN.test(message)) &&
+    disclosureState.allowedThisTurn.length === 0 &&
+    (disclosureState.latestTopics.length === 0 ||
+      UNSUPPORTED_LIGHT_TRIGGER_QUESTION_PATTERN.test(message)) &&
+    !disclosureState.asksRestrictedClinicalInterpretation &&
+    QUESTION_PATTERN.test(message.trim())
+  ) {
+    return "I haven't noticed that.";
+  }
+
+  return undefined;
+}
+
+export function case4GovernedThermalResponse(
+  caseId: string,
+  message: string,
+): string | undefined {
+  if (caseId !== "case-04" || !QUESTION_PATTERN.test(message.trim())) return undefined;
+  const mentionsHeat = CASE_4_HEAT_PATTERN.test(message);
+  const mentionsCold = CASE_4_COLD_PATTERN.test(message)
+    || (CASE_4_THERMAL_SENSITIVITY_PATTERN.test(message) && !mentionsHeat);
+  if (!mentionsCold && mentionsHeat) return "I haven't noticed that.";
+  if (!mentionsCold || CASE_4_BITE_PATTERN.test(message)) return undefined;
+
+  const asksHistory = CASE_4_COLD_HISTORY_PATTERN.test(message);
+  const asksChange = CASE_4_COLD_CHANGE_PATTERN.test(message)
+    || CASE_4_COLD_STILL_WITH_HISTORY_PATTERN.test(message);
+  if (asksChange) return "Cold hurt earlier, but it does not cause pain now.";
+  if (asksHistory) return "Cold hurt the tooth earlier in the illness.";
+  return "No, cold does not cause pain now.";
+}
+
+export function case4GovernedDentistResponse(
+  caseId: string,
+  message: string,
+): string | undefined {
+  if (caseId !== "case-04" || !QUESTION_PATTERN.test(message.trim())) return undefined;
+  if (CASE_4_DENTAL_HISTORY_PATTERN.test(message)) {
+    return "Yes. My last dental visit was about five years ago.";
+  }
+  if (CASE_4_DENTAL_INSURANCE_PATTERN.test(message)
+    && !CASE_4_DENTAL_FOLLOW_UP_PATTERN.test(message)) {
+    return "No, I don't have dental insurance.";
+  }
+  if (CASE_4_DENTAL_FOLLOW_UP_PATTERN.test(message)) {
+    return "I don't have a dentist I can see now, so I'll need help arranging follow-up.";
+  }
+  if (CASE_4_CURRENT_DENTIST_PATTERN.test(message)) {
+    return "No, I don't have a dentist I can see now.";
+  }
+  return undefined;
+}
+
+function isDirectCase3Question(message: string) {
+  const trimmed = message.trim();
+  return QUESTION_PATTERN.test(trimmed) || /^any\b/i.test(trimmed);
+}

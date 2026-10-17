@@ -1,4 +1,5 @@
 import { validateFactPreservation } from "./factPreservation";
+import { patientInstructionLeakage } from "../patientInstructionLeakage";
 import { renderAmaraCandidate, selectAmaraToneMode } from "./amaraRenderer";
 import { AMARA_PATIENT_ID } from "./amaraContract";
 import { renderStagedPatientCandidateResult } from "./stages";
@@ -56,6 +57,10 @@ export function renderPatientBehavior(
     }]);
   }
 
+  const leakage = patientInstructionLeakage(candidateText);
+  if (leakage) {
+    return fallback(input, candidateText, toneMode, [{ code: "unsupported-addition", message: leakage }]);
+  }
   const validation = validateFactPreservation({
     originalText: input.originalText,
     candidateText,

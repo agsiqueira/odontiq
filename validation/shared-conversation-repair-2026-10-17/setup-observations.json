@@ -1,0 +1,3 @@
+[
+ {"testId":"C03-G11-Q01","setupTurnIndex":1,"question":"I'm looking into dental care options for you and your daughter.","response":"I appreciate that, doctor. It's been tough finding time for both of us.","outcome":"FAIL","dimension":"factualCorrectness","reason":"Invents an actual difficulty finding time for parent and daughter. Shared-clinic preference does not establish a scheduling barrier. The first setup already established the daughter, so the scored preference question remains valid and is assessed separately against canonical facts."}
+]

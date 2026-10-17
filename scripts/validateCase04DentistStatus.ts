@@ -70,8 +70,11 @@ for (const question of [
   assert.deepEqual(disclosure(question).allowedThisTurn.map((fact) => fact.id), ["c4.access"], question);
 }
 
-assert.equal(immediate("Do you have dental insurance?"), insuranceResponse);
-assert.deepEqual(disclosure("Do you have dental insurance?").allowedThisTurn.map((fact) => fact.id), ["c4.access"]);
+// Background coverage facts use the provider path; keep testing the legacy
+// helper separately and require the same uninsured meaning in the final guard.
+assert.equal(case4GovernedDentistResponse("case-04", "Do you have dental insurance?"), insuranceResponse);
+assert.equal(immediate("Do you have dental insurance?"), undefined);
+assert.deepEqual(disclosure("Do you have dental insurance?").allowedThisTurn.map((fact) => fact.id), ["c4.access", "c4.background-insurance"]);
 
 const unrelatedClinicalQuestion = "Would this diagnosis require a procedure?";
 assert.equal(case4GovernedDentistResponse("case-04", unrelatedClinicalQuestion), undefined);
@@ -81,6 +84,9 @@ assert.deepEqual(disclosure(unrelatedClinicalQuestion).allowedThisTurn, []);
 const case4Facts = case4.supportingInfo.patientFacts ?? [];
 const accessFact = case4Facts.filter((fact) => fact.id === "c4.access");
 assert.equal(assessPatientOutputIntegrity(currentResponse, case4Facts, [], accessFact).valid, true);
+for (const answer of [insuranceResponse, "I'm uninsured.", "I don't have insurance."]) {
+  assert.equal(assessPatientOutputIntegrity(answer, case4Facts, [], accessFact).valid, true, answer);
+}
 for (const unsafe of [
   "Yes, I have a dentist.",
   "I have a regular dentist.",

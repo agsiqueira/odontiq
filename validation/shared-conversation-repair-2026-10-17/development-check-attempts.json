@@ -1,0 +1,90 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validatePatientMessageIntent",
+      "chunk_id": "6cb3cb",
+      "wall_time_seconds": 0.0000174,
+      "exit_code": 0,
+      "original_token_count": 15,
+      "output": "Patient message intent validation passed (10 intent cases).\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validatePatientResponseRetry",
+      "chunk_id": "433b96",
+      "wall_time_seconds": 0.0000348,
+      "exit_code": 0,
+      "original_token_count": 14,
+      "output": "Patient-response same-request retry validation passed.\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase01Ludwigs",
+      "chunk_id": "917650",
+      "wall_time_seconds": 0.000023,
+      "exit_code": 1,
+      "original_token_count": 117,
+      "output": "AssertionError [ERR_ASSERTION]: A spoken fact must remain available for continuity\n    at C:/240 - odontIQ/odontiq/scripts/validateCase01Ludwigs.ts:83:21\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase02SystemicInfection",
+      "chunk_id": "995eb0",
+      "wall_time_seconds": 0.0000292,
+      "exit_code": 1,
+      "original_token_count": 129,
+      "output": "AssertionError [ERR_ASSERTION]: Do you feel weak or sick?\n+ actual - expected\n\n+ []\n- [\n-   'c2.weak'\n- ]\n\n    at C:/240 - odontIQ/odontiq/scripts/validateCase02SystemicInfection.ts:60:58\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [],\n  expected: [Array],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase03PeriapicalAbscess",
+      "chunk_id": "d4c7a6",
+      "wall_time_seconds": 0.0000109,
+      "exit_code": 1,
+      "original_token_count": 130,
+      "output": "AssertionError [ERR_ASSERTION]: Does it travel anywhere?\n+ actual - expected\n\n+ []\n- [\n-   'c3.radiation'\n- ]\n\n    at C:/240 - odontIQ/odontiq/scripts/validateCase03PeriapicalAbscess.ts:63:58\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [],\n  expected: [Array],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase04NecroticPulp",
+      "chunk_id": "396f99",
+      "wall_time_seconds": 0.0000124,
+      "exit_code": 0,
+      "original_token_count": 10,
+      "output": "Case 4 necrotic-pulp validation passed.\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase05IrreversiblePulpitis",
+      "chunk_id": "fabe15",
+      "wall_time_seconds": 0.0000247,
+      "exit_code": 1,
+      "original_token_count": 143,
+      "output": "AssertionError [ERR_ASSERTION]: What does the pain feel like?\n+ actual - expected\n\n  [\n+   'c5.background-care_cost',\n+   'c5.access',\n    'c5.quality'\n  ]\n\n    at C:/240 - odontIQ/odontiq/scripts/validateCase05IrreversiblePulpitis.ts:58:58\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [Array],\n  expected: [Array],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validatePhase5ProgressiveDisclosure",
+      "chunk_id": "bc2108",
+      "wall_time_seconds": 0.5319765,
+      "exit_code": 0,
+      "original_token_count": 13,
+      "output": "Phase 5 progressive-disclosure validation passed.\n"
+    }
+  }
+]

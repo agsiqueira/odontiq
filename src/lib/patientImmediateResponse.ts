@@ -45,6 +45,9 @@ export function patientImmediateResponse({
   emittedQuestionIds?: readonly string[];
   priorPatientDialogue?: readonly string[];
 }): string | undefined {
+  if (disclosureState.backgroundTurn && !(caseId === "case-04"
+    && !disclosureState.backgroundTurn.clinicalRequested
+    && disclosureState.backgroundTurn.requests.every(request => request.concept === "dentist"))) return undefined;
   const planAcknowledgement = case1PlanAcknowledgement({
     caseId,
     message,
@@ -60,7 +63,11 @@ export function patientImmediateResponse({
   const case4ThermalResponse = case4GovernedThermalResponse(caseId, message);
   if (case4ThermalResponse) return case4ThermalResponse;
 
-  const case4DentistResponse = case4GovernedDentistResponse(caseId, message);
+  const asksBackgroundDetails = disclosureState.allowedThisTurn.some((fact) =>
+    fact.id.includes(".background-"));
+  const case4DentistResponse = asksBackgroundDetails
+    ? undefined
+    : case4GovernedDentistResponse(caseId, message);
   if (case4DentistResponse) return case4DentistResponse;
 
   if (

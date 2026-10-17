@@ -1,0 +1,6 @@
+{
+  "reason": "An initial invocation of the existing unit script regenerated its default derived replay path. Original live/raw results were never changed. The generated deterministic replay was restored using a reconstructed interpreter whose bytes match the pre-change SHA-256; this reconstruction is not historical execution evidence.",
+  "interpreterPreChangeSha256": "ef2822db8ae6f4056088105ba46af2d2fe91b7ee96fa8634b77f1ad271bb5374",
+  "reconstructionMatchesPreChangeBytes": true,
+  "stdout": "Shared contract checks passed: 360 inventory interpretations/fallbacks, clinical controls, combined subjects, premise handling, unsupported claims and final guards. These are deterministic checks, not live Navigator observations.\n"
+}

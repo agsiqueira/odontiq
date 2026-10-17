@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-10-17T14:52:23.411Z",
+  "accounting": {
+    "expectedPrimary": 340,
+    "primaryRows": 340,
+    "uniquePrimaryIds": 340,
+    "executedPrimary": 340,
+    "expectedPain": 20,
+    "painRows": 20,
+    "executedPain": 20,
+    "allPrimaryAccountedExactlyOnce": true,
+    "duplicateRawAttempts": 220
+  },
+  "primaryTotals": {
+    "PASS": 263,
+    "FAIL": 71,
+    "REVIEW": 6,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "painContextTotals": {
+    "PASS": 15,
+    "FAIL": 5,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "byCase": [
+    {
+      "caseId": "case-01",
+      "PASS": 46,
+      "FAIL": 13,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-02",
+      "PASS": 66,
+      "FAIL": 11,
+      "REVIEW": 3,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-03",
+      "PASS": 54,
+      "FAIL": 25,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-04",
+      "PASS": 50,
+      "FAIL": 10,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-05",
+      "PASS": 47,
+      "FAIL": 12,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  ],
+  "byGroup": [
+    {
+      "caseId": "case-01",
+      "groupId": "G01",
+      "title": "Dental insurance",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 3,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-01",
+      "groupId": "G02",
+      "title": "Residence",
+      "total": 20,
+      "PASS": 14,
+      "FAIL": 6,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-01",
+      "groupId": "G03",
+      "title": "Transportation and travel",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-02",
+      "groupId": "G04",
+      "title": "Insurance",
+      "total": 20,
+      "PASS": 15,
+      "FAIL": 3,
+      "REVIEW": 2,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-02",
+      "groupId": "G05",
+      "title": "Medicaid loss timing",
+      "total": 20,
+      "PASS": 15,
+      "FAIL": 5,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-02",
+      "groupId": "G06",
+      "title": "Residency status",
+      "total": 20,
+      "PASS": 19,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-02",
+      "groupId": "G07",
+      "title": "Out-of-town transportation",
+      "total": 20,
+      "PASS": 17,
+      "FAIL": 2,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-03",
+      "groupId": "G08",
+      "title": "Residence",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-03",
+      "groupId": "G09",
+      "title": "Insurance and existing dentist",
+      "total": 20,
+      "PASS": 8,
+      "FAIL": 12,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-03",
+      "groupId": "G10",
+      "title": "Daughter coverage",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-03",
+      "groupId": "G11",
+      "title": "Shared clinic preference",
+      "total": 20,
+      "PASS": 14,
+      "FAIL": 5,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-04",
+      "groupId": "G12",
+      "title": "Residence",
+      "total": 20,
+      "PASS": 15,
+      "FAIL": 5,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-04",
+      "groupId": "G13",
+      "title": "Insurance",
+      "total": 20,
+      "PASS": 19,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-04",
+      "groupId": "G14",
+      "title": "Sliding-scale payment",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-05",
+      "groupId": "G15",
+      "title": "Residence",
+      "total": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-05",
+      "groupId": "G16",
+      "title": "Insurance",
+      "total": 20,
+      "PASS": 18,
+      "FAIL": 2,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    {
+      "caseId": "case-05",
+      "groupId": "G17",
+      "title": "Ability to pay and free care",
+      "total": 20,
+      "PASS": 13,
+      "FAIL": 6,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  ]
+}

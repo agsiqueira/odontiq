@@ -1,0 +1,130 @@
+[
+  {
+    "testId": "C04-G13-Q11",
+    "question": "Do you have insurance we should consider when finding a clinic?",
+    "requests": [
+      {
+        "concept": "insurance",
+        "subject": "patient",
+        "sourceId": "c4.background-insurance",
+        "value": "uninsured",
+        "answer": "I don't have insurance."
+      }
+    ],
+    "selected": [
+      "c4.access",
+      "c4.background-insurance"
+    ],
+    "previousResponse": "I'm not sure about that coverage history. Do I need an antibiotic?",
+    "sourcedFallback": "I don't have insurance."
+  },
+  {
+    "testId": "C01-G02-H03",
+    "question": "Where's your place, county-wise?",
+    "requests": [
+      {
+        "concept": "residence",
+        "subject": "patient",
+        "sourceId": "c1.background-residence",
+        "value": "Alachua",
+        "answer": "I live in Alachua County."
+      }
+    ],
+    "selected": [
+      "c1.background-residence"
+    ],
+    "previousResponse": "I'm not sure, I'm just worried about my jaw.",
+    "sourcedFallback": "I live in Alachua County."
+  },
+  {
+    "testId": "C01-G03-H01",
+    "question": "Would crossing county lines to get low-cost treatment be workable?",
+    "requests": [
+      {
+        "concept": "travel_willingness",
+        "subject": "patient",
+        "sourceId": "c1.background-transportation",
+        "value": "reliable",
+        "answer": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care."
+      }
+    ],
+    "selected": [
+      "c1.background-transportation"
+    ],
+    "previousResponse": "I'm not sure, I'd have to check how much that would cost.",
+    "sourcedFallback": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care."
+  },
+  {
+    "testId": "C02-G04-H02",
+    "question": "What plan insures you for a visit, if one does?",
+    "requests": [
+      {
+        "concept": "insurance",
+        "subject": "patient",
+        "sourceId": "c2.background-insurance",
+        "value": "uninsured",
+        "answer": "I don't have insurance."
+      }
+    ],
+    "selected": [
+      "c2.background-insurance"
+    ],
+    "previousResponse": "I... I don't know, I didn't check that.",
+    "sourcedFallback": "I don't have insurance."
+  },
+  {
+    "testId": "C03-G09-H02",
+    "question": "Do you already see a dental provider of your own, whether you're insured or not?",
+    "requests": [
+      {
+        "concept": "dentist",
+        "subject": "patient",
+        "sourceId": "c3.background-regular_dentist",
+        "value": "has_dentist",
+        "answer": "I have my own dentist and an appointment next week."
+      }
+    ],
+    "selected": [
+      "c3.background-regular_dentist"
+    ],
+    "previousResponse": "No, I don't have a dental provider. I'm uninsured.",
+    "sourcedFallback": "I have my own dentist and an appointment next week."
+  },
+  {
+    "testId": "C04-G13-H02",
+    "question": "Who covers your dental care, if anyone?",
+    "requests": [
+      {
+        "concept": "insurance",
+        "subject": "patient",
+        "sourceId": "c4.background-insurance",
+        "value": "uninsured",
+        "answer": "I don't have insurance."
+      }
+    ],
+    "selected": [
+      "c4.access",
+      "c4.background-insurance"
+    ],
+    "previousResponse": "My dental care is covered by my employer's insurance plan. Do I need an antibiotic?",
+    "sourcedFallback": "I don't have insurance."
+  },
+  {
+    "testId": "C05-G16-H01",
+    "question": "Is an insurer available to cover a dental visit for you?",
+    "requests": [
+      {
+        "concept": "insurance",
+        "subject": "patient",
+        "sourceId": "c5.background-insurance",
+        "value": "uninsured",
+        "answer": "I don't have insurance."
+      }
+    ],
+    "selected": [
+      "c5.background-insurance"
+    ],
+    "previousResponse": "I don't know, that's why I'm here.",
+    "sourcedFallback": "I don't have insurance."
+  }
+]

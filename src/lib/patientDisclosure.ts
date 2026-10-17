@@ -1,6 +1,7 @@
 import type { CaseData } from "../data/cases";
 import type { ConversationMessage } from "./conversationEngine";
 import { isTreatmentConsentRequest } from "./case3ConsentResponse";
+import { interpretBackgroundTurn, type BackgroundTurn } from "./patientBackgroundTurn";
 
 export type PatientDisclosureTopic =
   | "chief_complaint"
@@ -36,6 +37,7 @@ export type ProviderMessageIntent =
   | "other";
 
 export type PatientDisclosureState = {
+  backgroundTurn?: BackgroundTurn;
   alreadyDisclosed: PatientDisclosureFact[];
   allowedThisTurn: PatientDisclosureFact[];
   latestTopics: PatientDisclosureTopic[];
@@ -52,7 +54,32 @@ export type InternalFact = PatientDisclosureFact & {
   canonicalFactIds?: string[];
 };
 
+const RESIDENCE_QUESTION_PATTERN = /\b(?:residen(?:ce|cy|t)|where (?:do you |are you )?(?:live|living)|where are you from|(?:live|living|reside|home)\b[^.!?]{0,45}\bcounty|county\b[^.!?]{0,45}\b(?:live|living|reside|home))\b/i;
+
+export function isPatientPainSeverityQuestion(question: string): boolean {
+  const normalized = normalizeText(question);
+  const financialContext = /\b(?:sliding scale|fees?|payments?|pay(?:ing)?|costs?|prices?|afford|insurance|coverage)\b/.test(normalized);
+  const clinicalContext = /\b(?:pain|hurts?|hurting|toothache|symptoms?|out of ten|out of 10)\b/.test(normalized);
+  if (financialContext && !clinicalContext) return false;
+  return /\b(?:how bad|how severe|severity|pain level|scale|rate|out of ten|out of 10)\b|\/10\b/i.test(question);
+}
+
+export function isPatientPainLocationQuestion(question: string): boolean {
+  const normalized = normalizeText(question);
+  const asksResidenceOnly = RESIDENCE_QUESTION_PATTERN.test(normalized)
+    && !/\b(?:pain|hurts?|tooth|teeth|molar|jaw|swelling)\b/i.test(normalized);
+  return !asksResidenceOnly
+    && /\b(?:where|location|which (?:tooth|teeth)|what (?:tooth|teeth)|side|left|right|upper|lower|what hurts|which one hurts)\b/i.test(normalized);
+}
+
 const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
+  background_insurance: /\b(?:insurance|insured|uninsured|medicaid|coverage)\b/i,
+  background_residence: RESIDENCE_QUESTION_PATTERN,
+  background_transportation: /\b(?:transportation|transport|ride|out of town|outside (?:the |your )?county|reliable (?:car|vehicle)|have (?:a |your own )?car)\b|\b(?:travel|drive|get)\b[^.!?]{0,80}\b(?:clinic|county|town|care|treatment)\b|\b(?:care|treatment)\b[^.!?]{0,60}\b(?:travel|drive)\b|\b(?:way|means)\s+to\s+get\b[^.!?]{0,50}\b(?:dentist|dental|clinic)\b/i,
+  background_regular_dentist: /\b(?:your own dentist|regular dentist|have (?:a |your own )?dentist|currently (?:see|have) a dentist)\b/i,
+  background_family_care: /\b(?:daughter|child|children|same clinic|family.{0,20}(?:care|clinic))\b/i,
+  background_care_preference: /\bprefer\w*\b.{0,35}\b(?:clinic|care|treatment)\b|\b(?:clinic|care|treatment)\b.{0,35}\bprefer\w*\b/i,
+  background_care_cost: /\b(?:afford|costs?|pay(?:ing)?|payments?|fees?|free clinic|free care|low.cost|sliding.scale|income.based|clinic.{0,25}prefer|prefer.{0,25}clinic)\b/i,
   breathing: /\b(breath|breathing|short of breath|dyspnea)\b/i,
   positional_breathing: /\b(lie|lying|lay|flat|recline|back)\b.*\b(breath\w*|chok\w*)|\b(breath\w*|chok\w*)\b.*\b(lie|lying|lay|flat|recline|back)\b/i,
   swallowing: /\b(swallow|swallowing|dysphagia)\b/i,
@@ -86,6 +113,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   allergies: /\ballerg(?:y|ies|ic)?\b|\bpenicillin\b/i,
   smoking: /\b(smok(?:e|es|ed|ing)?|tobacco|cigarettes?)\b/i,
   dental_access: /\b(afford|cost|insurance|why.*(?:treated|removed|extracted)|dentist|appointment|access)\b/i,
+  dental_appointment: /\b(?:appointments?|dental follow[- ]?up|dental access|access to dental care)\b|\b(?:see|visit)\b.{0,20}\bdentist\b|\b(?:get|arrange|obtain)\b.{0,20}\bdental care\b/i,
   tongue_position: /\b(tongue)\b.*\b(push|pushed|up|elevat|back|posterior)|\b(push|pushed|elevat|posterior)\b.*\b(tongue)\b/i,
   thermal: /\b(cold|hot|heat|thermal|temperature sensitivity)\b/i,
   biting: /\b(bite|biting|chew|chewing|tap|tapping|pressure)\b/i,
@@ -315,26 +343,37 @@ export function buildPatientDisclosureState({
   const facts = extractPatientFacts(caseData);
   const disclosedFactIds = inferDisclosedFactIds({ facts, conversation });
   const latestClassification = classifyQuestion(latestStudentMessage);
-  const allowedFacts = selectAllowedFacts({
+  const backgroundTurn = interpretBackgroundTurn(latestStudentMessage, conversation, facts);
+  const selectedFacts = selectAllowedFacts({
     caseId: caseData.metadata.id,
     facts,
     classification: latestClassification,
     disclosedFactIds,
     question: latestStudentMessage,
   });
-  const allowedFactIds = new Set(allowedFacts.map((fact) => fact.id));
+  const sourceIds = new Set(backgroundTurn?.requests.map(request => request.sourceId));
+  const allowedFacts = backgroundTurn
+    ? [...facts.filter(fact => sourceIds.has(fact.id)),
+      ...selectedFacts.filter(fact => fact.id.endsWith(".background-transportation-unknown")),
+      ...facts.filter(fact => /\.access$/.test(fact.id) && /cannot afford|inability to pay/i.test(fact.text) && backgroundTurn.requests.some(request => request.concept === "payment_ability")),
+      ...facts.filter(fact => /\.access$/.test(fact.id) && fact.questionIntents.includes("background_insurance") && backgroundTurn.requests.some(request => request.concept === "insurance" && request.subject === "patient")),
+      ...(backgroundTurn.clinicalRequested || /\bappointment\b/i.test(latestStudentMessage) && !backgroundTurn.requests.some(request => request.concept.startsWith("travel")) ? selectedFacts.filter(fact => !fact.id.includes(".background-")) : [])]
+    : selectedFacts;
+  if (backgroundTurn) allowedFacts.sort((left, right) => Number(left.id.includes(".background-")) - Number(right.id.includes(".background-")) || left.order - right.order);
+  const uniqueAllowedFacts = allowedFacts.filter((fact, index) => allowedFacts.findIndex(candidate => candidate.id === fact.id) === index);
   const alreadyDisclosed = facts.filter(
-    (fact) => disclosedFactIds.has(fact.id) && !allowedFactIds.has(fact.id),
+    (fact) => disclosedFactIds.has(fact.id),
   );
 
   return {
+    backgroundTurn,
     alreadyDisclosed: alreadyDisclosed.map(publicFact),
-    allowedThisTurn: allowedFacts.map(publicFact),
+    allowedThisTurn: uniqueAllowedFacts.map(publicFact),
     latestTopics: latestClassification.topics,
     isBroadQuestion: latestClassification.isBroadQuestion,
     asksRestrictedClinicalInterpretation:
-      latestClassification.asksRestrictedClinicalInterpretation,
-    providerMessageIntent: latestClassification.providerMessageIntent,
+      backgroundTurn ? false : latestClassification.asksRestrictedClinicalInterpretation,
+    providerMessageIntent: backgroundTurn ? "question" : latestClassification.providerMessageIntent,
   };
 }
 
@@ -533,7 +572,7 @@ export function classifyQuestion(question: string) {
       providerMessageIntent === "question"
         ? refineQuestionIntents(Object.entries(QUESTION_INTENT_PATTERNS)
             .filter(([, pattern]) => pattern.test(normalizedQuestion))
-            .map(([intent]) => intent))
+            .map(([intent]) => intent), normalizedQuestion)
         : [],
     isBroadQuestion:
       providerMessageIntent === "question" &&
@@ -554,8 +593,15 @@ export function classifyQuestion(question: string) {
   };
 }
 
-function refineQuestionIntents(intents: string[]) {
+function refineQuestionIntents(intents: string[], question: string) {
   const refined = new Set(intents);
+  if (!isPatientPainLocationQuestion(question)) refined.delete("location");
+  if (!isPatientPainSeverityQuestion(question)) {
+    refined.delete("pain_severity");
+    // Financial uses of "scale" and "rate" are not symptoms.
+    if (!/\b(?:pain|hurt|ache)\w*\b/i.test(question)) refined.delete("pain");
+  }
+  if (refined.has("background_transportation") && !/\b(?:pain|hurts?|ache|radiat|spread)\w*\b/i.test(question)) refined.delete("radiation");
   if (refined.has("positional_breathing")) refined.delete("breathing");
   if (refined.has("noisy_breathing")) refined.delete("breathing");
   if (refined.has("swallowing_liquids")) refined.delete("swallowing");
@@ -627,6 +673,9 @@ function refineTopics(
   normalizedQuestion: string,
   topics: Set<PatientDisclosureTopic>,
 ) {
+  if (!isPatientPainLocationQuestion(normalizedQuestion)) topics.delete("location");
+  if (!isPatientPainSeverityQuestion(normalizedQuestion)
+    && !/\b(?:pain|hurt|ache)\w*\b/i.test(normalizedQuestion)) topics.delete("pain");
   if (topics.has("allergies") && /\ballerg/.test(normalizedQuestion)) {
     topics.delete("medications");
   }
@@ -662,6 +711,26 @@ export function selectAllowedFacts({
 }) {
   const case4AccessQuestion = caseId === "case-04"
     && /\b(?:referral|refer|follow[- ]?up|appointment|help (?:me )?(?:find|finding|arrange)|find(?:ing)? (?:a )?dentist|arrange dental|need help)\b/i.test(question);
+  // Background answers use the same per-turn prompt boundary as clinical facts.
+  // Select only explicitly requested background details, never broad disclosures.
+  const backgroundFacts = classification.providerMessageIntent === "question"
+    ? facts.filter((fact) => fact.id.includes(".background-")
+      && fact.questionIntents.some((intent) => classification.questionIntents.includes(intent)))
+    : [];
+  if (classification.questionIntents.includes("background_transportation")
+    && !facts.some(fact => fact.questionIntents.includes("background_transportation"))) {
+    backgroundFacts.push({
+      id: `${caseId}.background-transportation-unknown`, topic: "social_history",
+      text: "Transportation availability and willingness to travel for care are not known.",
+      aliases: [], broadEligible: false, order: facts.length,
+      questionIntents: ["background_transportation"],
+    });
+  }
+  if (backgroundFacts.length > 0 && !classification.asksRestrictedClinicalInterpretation) {
+    const relatedFacts = facts.filter((fact) => !fact.id.includes(".background-")
+      && fact.questionIntents.some((intent) => classification.questionIntents.includes(intent)));
+    return [...relatedFacts, ...backgroundFacts];
+  }
   if (classification.asksRestrictedClinicalInterpretation && !case4AccessQuestion) {
     return [];
   }
@@ -689,7 +758,7 @@ export function selectAllowedFacts({
       fact.questionIntents.some((intent) =>
         classification.questionIntents.includes(intent),
       ) &&
-      !disclosedFactIds.has(fact.id),
+      (!disclosedFactIds.has(fact.id) || !classification.isBroadQuestion),
   );
 
   if (caseSpecificFacts) {
@@ -773,7 +842,8 @@ function selectCaseSpecificAllowedFacts({
   if (caseId === "case-01") {
     const normalizedQuestion = normalizeText(question);
     if (QUESTION_INTENT_PATTERNS.initial_pain_severity.test(question)) return facts.filter((fact) => fact.id === "c1.initial-severity");
-    if (QUESTION_INTENT_PATTERNS.pain_severity.test(question)) return facts.filter((fact) => fact.id === "c1.severity");
+    if (isPatientPainSeverityQuestion(question)) return facts.filter((fact) => fact.id === "c1.severity");
+    if (/\bhow (?:are you feeling|do you feel)\b.{0,30}\bpain\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.severity");
     if (QUESTION_INTENT_PATTERNS.swelling_location.test(question)) return facts.filter((fact) => fact.id === "c1.swelling-location");
     if (/\b(?:right side|right tooth|on the right)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c1.location");
     if (QUESTION_INTENT_PATTERNS.onset_certainty.test(question)) return facts.filter((fact) => fact.id === "c1.onset-uncertain");
@@ -819,7 +889,7 @@ function selectCaseSpecificAllowedFacts({
     if (QUESTION_INTENT_PATTERNS.opioid_history.test(question)) return facts.filter((fact) => fact.id === "c2.opioid");
     if (QUESTION_INTENT_PATTERNS.heart_rate_knowledge.test(question)) return facts.filter((fact) => fact.id === "c2.heart-rate-unknown");
     if (QUESTION_INTENT_PATTERNS.sirs_knowledge.test(question)) return facts.filter((fact) => fact.id === "c2.sirs-unknown");
-    if (QUESTION_INTENT_PATTERNS.pain_severity.test(question)) return facts.filter((fact) => fact.id === "c2.severity");
+    if (isPatientPainSeverityQuestion(question)) return facts.filter((fact) => fact.id === "c2.severity");
     if (QUESTION_INTENT_PATTERNS.temperature_checked.test(question)) return facts.filter((fact) => fact.id === "c2.temperature-unknown");
     if (QUESTION_INTENT_PATTERNS.prior_antibiotics.test(question)) return facts.filter((fact) => fact.id === "c2.prior-antibiotics-unknown");
     if (QUESTION_INTENT_PATTERNS.prior_dental_procedure.test(question)) {

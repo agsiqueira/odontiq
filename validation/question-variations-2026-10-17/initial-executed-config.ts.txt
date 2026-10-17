@@ -1,0 +1,13 @@
+import { defineConfig, devices } from '@playwright/test';
+import { clerkAuthStatePath } from './src/config/authState.js';
+import { environment } from './src/config/environment.js';
+export default defineConfig({
+ testDir:'./tests',timeout:1_800_000,fullyParallel:false,workers:1,retries:0,
+ reporter:[['list'],['html',{outputFolder:'artifacts/reports/question-variations-2026-10-17/playwright',open:'never'}]],
+ outputDir:'artifacts/traces/question-variations-2026-10-17-runner',
+ use:{baseURL:environment.baseUrl,actionTimeout:30000,navigationTimeout:30000,trace:'off',video:'off',screenshot:'only-on-failure'},
+ projects:[
+  {name:'global setup',testMatch:/auth[\\/]global\.setup\.ts/,use:{...devices['Desktop Chrome']}},
+  {name:'question variations',testMatch:/browser[\\/]patient-question-variations\.spec\.ts/,use:{...devices['Desktop Chrome'],storageState:clerkAuthStatePath},dependencies:['global setup']}
+ ]
+});

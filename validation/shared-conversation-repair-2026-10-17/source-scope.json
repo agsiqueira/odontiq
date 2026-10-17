@@ -1,0 +1,20 @@
+{
+  "comparedTo": "Original study application-before.json dirty-worktree snapshot, not HEAD",
+  "changed": [
+    "src/app/api/conversation/route.ts",
+    "src/lib/patientDisclosure.ts",
+    "src/lib/patientFinalResponse.ts",
+    "src/lib/patientImmediateResponse.ts",
+    "src/lib/patientRoleResponse.ts",
+    "src/lib/patientTurnFacts.ts"
+  ],
+  "caseFactFilesUnchanged": true,
+  "newApplicationFiles": [
+    "src/lib/patientBackgroundTurn.ts"
+  ],
+  "newAutomatedTest": "scripts/validateSharedBackgroundTurn.ts",
+  "preservedBaseline": "validation/question-variations-2026-10-17",
+  "deployment": false,
+  "newDiagnosticScript": "scripts/replayLegacyBackgroundStudy.ts",
+  "supportingValidationDirectory": "validation/shared-conversation-repair-2026-10-17"
+}

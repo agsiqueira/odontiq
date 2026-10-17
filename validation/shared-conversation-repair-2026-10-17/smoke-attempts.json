@@ -1,0 +1,17 @@
+{
+ "purpose":"Pre-freeze diagnostic harness smoke attempts; excluded from final primary, pain and holdout totals",
+ "initialPlannedCount":8,
+ "initialOutcomeTotals":{"PASS":0,"FAIL":0,"REVIEW":0,"ERROR":3,"BLOCKED":5},
+ "initialAttempts":[
+  {"testId":"C01-G02-Q12","outcome":"ERROR","encounterId":"889ad241-fc88-4f90-9b2b-8a38c6fcb875","reason":"No case cards visible; Clerk JS failed to load while the diagnostic header was globally attached. No scored question completed."},
+  {"testId":"C01-G03-Q09","outcome":"ERROR","encounterId":"f88fb6ab-ed6f-4c34-86aa-a08491dbd067","reason":"No case cards visible; no scored question completed."},
+  {"testId":"C02-G05-Q11","outcome":"ERROR","encounterId":"099a4c25-894b-40d2-8b61-c84348fd0940","reason":"Run interrupted during setup after diagnosing the global-header issue. Encounter-start events preserved; no complete scoped result/trace was recorded."},
+  {"testId":"C03-G09-Q04","outcome":"BLOCKED","encounterId":null,"reason":"Not executed after smoke run interruption."},
+  {"testId":"C03-G10-Q17","outcome":"BLOCKED","encounterId":null,"reason":"Not executed after smoke run interruption."},
+  {"testId":"C03-G11-Q18","outcome":"BLOCKED","encounterId":null,"reason":"Not executed after smoke run interruption."},
+  {"testId":"C04-G14-Q13","outcome":"BLOCKED","encounterId":null,"reason":"Not executed after smoke run interruption."},
+  {"testId":"C05-G17-Q12","outcome":"BLOCKED","encounterId":null,"reason":"Not executed after smoke run interruption."}
+ ],
+ "scopedHeaderRetry":{"testId":"C01-G03-Q09","outcome":"PASS","encounterId":"b36918c4-0e9e-46b9-b04d-f34c4deb8c97","requestId":"case-01-1792250410583-1-response","response":"Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.","reason":"New fresh encounter after restricting the diagnostic header to the conversation endpoint; real Navigator generation, UI/API equality and correlation confirmed. No earlier scored response was replaced."},
+ "artifacts":"C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-smoke and shared-conversation-repair-2026-10-17-smoke-scoped"
+}

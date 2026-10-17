@@ -1,0 +1,10 @@
+[
+ {"name":"validateCase01PlanAcknowledgement","exitCode":0,"stdout":"Case 1 repeated-plan acknowledgement validation passed."},
+ {"name":"validateCase03ConsentResponse","exitCode":0,"stdout":"Case 3 consent-response validation passed (5 positive messages, 9 boundaries, full question sequence, once-only, and resume persistence)."},
+ {"name":"validatePatientCoreResponses","exitCode":0,"stdout":"Validated governed identity and chief-complaint responses for 5 cases."},
+ {"name":"validatePatientLanguageGovernance","exitCode":0,"stdout":"Patient language governance validation passed: 136 focused assertions."},
+ {"name":"validateAmaraBehavioralRepetition","exitCode":0,"stdout":"Amara Phase 3 repetition validation passed: 62 focused assertions."},
+ {"name":"validateCase04DentistStatus","exitCode":0,"stdout":"Case 4 dentist-status validation passed."},
+ {"name":"validateCase04ClosingPhraseConsistency","exitCode":0,"stdout":"Case 4 closing-phrase consistency validation passed."},
+ {"name":"validateCase05LingeringCold","exitCode":0,"stdout":"Case 5 lingering-cold validation passed."}
+]

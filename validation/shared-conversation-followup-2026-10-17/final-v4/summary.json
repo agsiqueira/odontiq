@@ -1,0 +1,920 @@
+{
+  "generatedAt": "2026-10-17T19:47:51.409Z",
+  "executionComplete": true,
+  "planned": 546,
+  "recordedAttempts": 732,
+  "cohorts": {
+    "primary": {
+      "total": 340,
+      "outcomes": {
+        "PASS": 294,
+        "FAIL": 0,
+        "REVIEW": 7,
+        "ERROR": 17,
+        "BLOCKED": 22
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 294,
+          "FAIL": 0,
+          "REVIEW": 7,
+          "NOT_ASSESSED": 39
+        },
+        "completeness": {
+          "PASS": 301,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 39
+        },
+        "relevance": {
+          "PASS": 301,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 39
+        },
+        "leakage": {
+          "PASS": 301,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 39
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 59,
+          "FAIL": 0,
+          "REVIEW": 1,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-02": {
+          "PASS": 74,
+          "FAIL": 0,
+          "REVIEW": 6,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-03": {
+          "PASS": 42,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 16,
+          "BLOCKED": 22
+        },
+        "case-04": {
+          "PASS": 59,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 1,
+          "BLOCKED": 0
+        },
+        "case-05": {
+          "PASS": 60,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "G01": {
+          "PASS": 19,
+          "FAIL": 0,
+          "REVIEW": 1,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G02": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G03": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G04": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G05": {
+          "PASS": 14,
+          "FAIL": 0,
+          "REVIEW": 6,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G06": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G07": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G08": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G09": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G10": {
+          "PASS": 2,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 16,
+          "BLOCKED": 2
+        },
+        "G11": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 20
+        },
+        "G12": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G13": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G14": {
+          "PASS": 19,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 1,
+          "BLOCKED": 0
+        },
+        "G15": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G16": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G17": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    },
+    "pain-context": {
+      "total": 20,
+      "outcomes": {
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "completeness": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "relevance": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "leakage": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "G03": {
+          "PASS": 20,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    },
+    "former-holdout-regression": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 45,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 6
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 45,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "completeness": {
+          "PASS": 45,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "relevance": {
+          "PASS": 45,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "leakage": {
+          "PASS": 45,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-02": {
+          "PASS": 12,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-03": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 6
+        },
+        "case-04": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-05": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "G01": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G02": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G03": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G04": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G05": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G06": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G07": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G08": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G09": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G10": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G11": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G12": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G13": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G14": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G15": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G16": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G17": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    },
+    "targeted-live": {
+      "total": 30,
+      "outcomes": {
+        "PASS": 30,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 30,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "completeness": {
+          "PASS": 30,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "relevance": {
+          "PASS": 30,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        },
+        "leakage": {
+          "PASS": 30,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 0
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-02": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-03": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-04": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-05": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "TARGET": {
+          "PASS": 30,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    },
+    "v3-holdout-regression": {
+      "total": 54,
+      "outcomes": {
+        "PASS": 47,
+        "FAIL": 0,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 6
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 47,
+          "FAIL": 0,
+          "REVIEW": 1,
+          "NOT_ASSESSED": 6
+        },
+        "completeness": {
+          "PASS": 48,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "relevance": {
+          "PASS": 48,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "leakage": {
+          "PASS": 48,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-02": {
+          "PASS": 11,
+          "FAIL": 0,
+          "REVIEW": 1,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-03": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 6
+        },
+        "case-04": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-05": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "G01": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G02": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G03": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G04": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G05": {
+          "PASS": 2,
+          "FAIL": 0,
+          "REVIEW": 1,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G06": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G07": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G08": {
+          "PASS": 6,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G09": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G10": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G11": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G12": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G13": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G14": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G15": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G16": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G17": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    },
+    "fresh-holdout": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 38,
+        "FAIL": 5,
+        "REVIEW": 2,
+        "ERROR": 0,
+        "BLOCKED": 6
+      },
+      "dimensions": {
+        "factualCorrectness": {
+          "PASS": 40,
+          "FAIL": 3,
+          "REVIEW": 2,
+          "NOT_ASSESSED": 6
+        },
+        "completeness": {
+          "PASS": 42,
+          "FAIL": 1,
+          "REVIEW": 2,
+          "NOT_ASSESSED": 6
+        },
+        "relevance": {
+          "PASS": 43,
+          "FAIL": 2,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        },
+        "leakage": {
+          "PASS": 45,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "NOT_ASSESSED": 6
+        }
+      },
+      "byCase": {
+        "case-01": {
+          "PASS": 8,
+          "FAIL": 1,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-02": {
+          "PASS": 10,
+          "FAIL": 0,
+          "REVIEW": 2,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-03": {
+          "PASS": 2,
+          "FAIL": 4,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 6
+        },
+        "case-04": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "case-05": {
+          "PASS": 9,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      },
+      "byGroup": {
+        "G01": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G02": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G03": {
+          "PASS": 2,
+          "FAIL": 1,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G04": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G05": {
+          "PASS": 1,
+          "FAIL": 0,
+          "REVIEW": 2,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G06": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G07": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G08": {
+          "PASS": 2,
+          "FAIL": 1,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G09": {
+          "PASS": 0,
+          "FAIL": 3,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G10": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G11": {
+          "PASS": 0,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 3
+        },
+        "G12": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G13": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G14": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G15": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G16": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        },
+        "G17": {
+          "PASS": 3,
+          "FAIL": 0,
+          "REVIEW": 0,
+          "ERROR": 0,
+          "BLOCKED": 0
+        }
+      }
+    }
+  }
+}

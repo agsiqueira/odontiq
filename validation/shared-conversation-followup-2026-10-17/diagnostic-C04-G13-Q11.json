@@ -1,0 +1,55 @@
+{
+  "testId": "C04-G13-Q11",
+  "question": "Do you have insurance we should consider when finding a clinic?",
+  "finalResponse": "No, I don't have insurance. Do I need an antibiotic?",
+  "encounterId": "28427cac-14ed-477e-a94c-b2c2f6c6f5f4",
+  "requestId": "case-04-1792258821084-1-response",
+  "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-G13-Q11_69d2c7d9-11e6-44c9-b34d-39f3bc507583.json",
+  "diagnostics": {
+    "encounterId": "28427cac-14ed-477e-a94c-b2c2f6c6f5f4",
+    "requestId": "case-04-1792258821084-1-response",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "insurance",
+          "subject": "patient",
+          "sourceId": "c4.background-insurance",
+          "value": "uninsured",
+          "answer": "I don't have insurance."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "providerMessageIntent": "question",
+    "selectedFacts": [
+      {
+        "id": "c4.access",
+        "topic": "dental_history",
+        "text": "The patient has no dental insurance or currently accessible dentist, so prompt dental access will take time to arrange."
+      },
+      {
+        "id": "c4.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured."
+      }
+    ],
+    "requiredFacts": [
+      {
+        "id": "c4.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured."
+      }
+    ],
+    "immediate": false,
+    "navigatorInitial": "No, I don't have insurance.",
+    "navigatorCorrective": null,
+    "initialRejection": null,
+    "usedFallback": false,
+    "safeResponse": "No, I don't have insurance.",
+    "behaviorCandidate": "No, I don't have insurance.",
+    "presentationAssessment": {
+      "valid": true
+    },
+    "baseResponse": "No, I don't have insurance."
+  }
+}

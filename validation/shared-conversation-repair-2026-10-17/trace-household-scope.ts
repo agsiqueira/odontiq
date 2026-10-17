@@ -1,0 +1,11 @@
+import { writeFileSync } from "node:fs";
+import { CASE_DATA } from "../../src/data/cases";
+import { buildPatientDisclosureState, classifyQuestion, extractPatientFacts, selectAllowedFacts } from "../../src/lib/patientDisclosure";
+const question = "Who do you live with?";
+const caseData = CASE_DATA[0];
+const classification = classifyQuestion(question);
+const legacy = selectAllowedFacts({ caseId: caseData.metadata.id, facts: extractPatientFacts(caseData), classification, disclosedFactIds: new Set(), question });
+const current = buildPatientDisclosureState({ caseData, conversation: [], latestStudentMessage: question });
+const result = { method: "Deterministic retained legacy selection versus the new contract. Not a historical binary or live Navigator response.", question, legacySelected: legacy.map(f => f.id), currentSelected: current.allowedThisTurn.map(f => f.id), currentInterpretation: current.backgroundTurn, expected: "Household composition is unspecified; a known county does not answer a who-with question." };
+writeFileSync("validation/shared-conversation-repair-2026-10-17/household-scope-control.json", JSON.stringify(result, null, 2));
+console.log(JSON.stringify(result));

@@ -35,7 +35,6 @@ function renderCase4(
 const noahProfile = PATIENT_BEHAVIOR_PROFILES.find(({ patientId }) => patientId === CASE_4_ID)!;
 assert.deepEqual(noahProfile.optionalPhrases.map(({ text }) => text), [
   "That's it.",
-  "I'm keeping it brief.",
 ]);
 assert.equal(noahProfile.optionalPhrases.some(({ text }) => text === "That's all."), false);
 assert.equal(noahProfile.optionalPhrases.some(({ text }) => text === "Plain and simple."), false);

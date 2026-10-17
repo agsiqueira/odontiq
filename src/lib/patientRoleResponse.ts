@@ -22,6 +22,7 @@ export async function generatePatientRoleSafeResponse({
   fallbackText,
   requiredFacts = [],
   allowPatientInitiatedQuestion = true,
+  validateAdditional,
 }: {
   initialOutput: string;
   retry: () => Promise<string>;
@@ -30,8 +31,23 @@ export async function generatePatientRoleSafeResponse({
   fallbackText?: string;
   requiredFacts?: readonly PatientDisclosureFact[];
   allowPatientInitiatedQuestion?: boolean;
+  validateAdditional?: (text: string) => { valid: boolean; reason?: string };
 }): Promise<PatientRoleSafeResponse> {
-  let normalized = normalizePatientDialogueWithDiagnostics(initialOutput);
+  const prepare = (output: string) => {
+    const normalized = normalizePatientDialogueWithDiagnostics(output);
+    if (!allowPatientInitiatedQuestion && requiredFacts.length > 0 && containsUnsolicitedQuestion(normalized.text)) {
+      const statements = normalized.text.split(/(?<=[.!?])\s+/)
+        .filter(sentence => !sentence.includes("?")).join(" ").trim();
+      // Keep a known factual answer only after independently validating it.
+      // Approved patient questions are assembled by the state machine later.
+      if (assessPatientRole(statements).valid
+        && assessPatientOutputIntegrity(statements, visibleFacts, priorPatientDialogue, requiredFacts).valid) {
+        return { ...normalized, text: statements, changed: true };
+      }
+    }
+    return normalized;
+  };
+  let normalized = prepare(initialOutput);
   const assessment = assessPatientRole(normalized.text);
   const integrity = assessPatientOutputIntegrity(
     normalized.text,
@@ -40,7 +56,8 @@ export async function generatePatientRoleSafeResponse({
     requiredFacts,
   );
   const questionValid = allowPatientInitiatedQuestion || !containsUnsolicitedQuestion(normalized.text);
-  if (assessment.valid && integrity.valid && questionValid) {
+  const additional = validateAdditional?.(normalized.text);
+  if (assessment.valid && integrity.valid && questionValid && additional?.valid !== false) {
     return {
       text: normalized.text,
       formattingChanged: normalized.changed,
@@ -48,7 +65,7 @@ export async function generatePatientRoleSafeResponse({
     };
   }
 
-  normalized = normalizePatientDialogueWithDiagnostics(await retry());
+  normalized = prepare(await retry());
   if (
     assessPatientRole(normalized.text).valid &&
     assessPatientOutputIntegrity(
@@ -57,12 +74,12 @@ export async function generatePatientRoleSafeResponse({
       priorPatientDialogue,
       requiredFacts,
     ).valid &&
-    (allowPatientInitiatedQuestion || !containsUnsolicitedQuestion(normalized.text))
+    (allowPatientInitiatedQuestion || !containsUnsolicitedQuestion(normalized.text)) && validateAdditional?.(normalized.text)?.valid !== false
   ) {
     return {
       text: normalized.text,
       formattingChanged: normalized.changed,
-      initialRejection: assessment.matchedPattern ?? integrity.reason,
+      initialRejection: assessment.matchedPattern ?? integrity.reason ?? additional?.reason,
       repeatedDrift: false,
     };
   }
@@ -72,7 +89,7 @@ export async function generatePatientRoleSafeResponse({
       ? SAFE_PATIENT_ROLE_FALLBACK
       : SAFE_PATIENT_BASE_RESPONSE_FALLBACK),
     formattingChanged: false,
-    initialRejection: assessment.matchedPattern ?? integrity.reason,
+    initialRejection: assessment.matchedPattern ?? integrity.reason ?? additional?.reason ?? (!questionValid ? "unapproved patient question" : undefined),
     repeatedDrift: true,
   };
 }

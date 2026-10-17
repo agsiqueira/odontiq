@@ -1,0 +1,215 @@
+{
+  "capturedAt": "2026-10-17T17:48:10.273Z",
+  "checks": [
+    {
+      "id": "c1.background-insurance",
+      "expectedText": "The patient is an uninsured adult.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C01-G01-Q01",
+          "requestId": "case-01-1792257183581-1-response",
+          "encounterId": "5ea4c2bd-72d7-4ce9-9cd3-4e738ce40582"
+        }
+      ]
+    },
+    {
+      "id": "c1.background-residence",
+      "expectedText": "The patient lives in Alachua County.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C01-G02-Q01",
+          "requestId": "case-01-1792257300094-1-response",
+          "encounterId": "b8221831-5ce3-4227-8d44-47e1f6dabd64"
+        }
+      ]
+    },
+    {
+      "id": "c1.background-transportation",
+      "expectedText": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C01-G03-Q01",
+          "requestId": "case-01-1792257414674-1-response",
+          "encounterId": "19d804f5-c447-4475-8df2-a7d49ff9bba4"
+        }
+      ]
+    },
+    {
+      "id": "c2.background-insurance",
+      "expectedText": "The patient is uninsured and lost Medicaid within the past year.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C02-G04-Q01",
+          "requestId": "case-02-1792257540432-1-response",
+          "encounterId": "32882176-8f69-42b6-8dd4-0b056c50adbd"
+        }
+      ]
+    },
+    {
+      "id": "c2.background-residence",
+      "expectedText": "The patient lives in Collier County but has not yet established residency.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C02-G06-Q01",
+          "requestId": "case-02-1792257794390-1-response",
+          "encounterId": "7ab32c2c-d938-46d1-a4f0-1b10ee67b0f7"
+        }
+      ]
+    },
+    {
+      "id": "c2.background-transportation",
+      "expectedText": "The patient has unreliable transportation out of town.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C02-G07-Q01",
+          "requestId": "case-02-1792257917666-1-response",
+          "encounterId": "d7bb225a-cf1e-4ce3-afdd-c61b53220e49"
+        }
+      ]
+    },
+    {
+      "id": "c3.background-insurance",
+      "expectedText": "The patient is uninsured.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C03-G09-Q01",
+          "requestId": "case-03-1792258145783-1-response",
+          "encounterId": "02f45542-d53d-4727-a33e-ceba3aa92ea9"
+        }
+      ]
+    },
+    {
+      "id": "c3.background-residence",
+      "expectedText": "The patient is a resident of Hillsborough County.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C03-G08-Q01",
+          "requestId": "case-03-1792258030256-1-response",
+          "encounterId": "2b7afadc-e383-4eeb-a2e0-0cf70b7f0bb3"
+        }
+      ]
+    },
+    {
+      "id": "c3.background-regular_dentist",
+      "expectedText": "The patient currently has their own dentist and has an appointment next week.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C03-G09-Q01",
+          "requestId": "case-03-1792258145783-1-response",
+          "encounterId": "02f45542-d53d-4727-a33e-ceba3aa92ea9"
+        }
+      ]
+    },
+    {
+      "id": "c3.background-family_care",
+      "expectedText": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C03-G10-Q01",
+          "requestId": "case-03-1792258266375-1-response",
+          "encounterId": "b9965864-75bc-432e-842b-4c86b79d10c5"
+        }
+      ]
+    },
+    {
+      "id": "c4.background-insurance",
+      "expectedText": "The patient is uninsured.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C04-G13-Q01",
+          "requestId": "case-04-1792258763253-1-response",
+          "encounterId": "79ad3eb5-8b06-4c17-9779-75093b47bb0f"
+        }
+      ]
+    },
+    {
+      "id": "c4.background-residence",
+      "expectedText": "The patient is a resident of Duval County.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C04-G12-Q01",
+          "requestId": "case-04-1792258643993-1-response",
+          "encounterId": "d72c73d8-42e9-40bc-ba01-3d2d8c88ada6"
+        }
+      ]
+    },
+    {
+      "id": "c4.background-care_cost",
+      "expectedText": "The patient is open to paying for dental care on a sliding-scale fee.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C04-G14-Q01",
+          "requestId": "case-04-1792258876398-1-response",
+          "encounterId": "4fb0d693-6e35-4716-ba88-76843f917bba"
+        }
+      ]
+    },
+    {
+      "id": "c5.background-insurance",
+      "expectedText": "The patient is uninsured.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C05-G16-Q01",
+          "requestId": "case-05-1792259110339-1-response",
+          "encounterId": "f37b281d-c3cd-416a-808f-690399548635"
+        }
+      ]
+    },
+    {
+      "id": "c5.background-residence",
+      "expectedText": "The patient is a resident of Marion County.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C05-G15-Q01",
+          "requestId": "case-05-1792258997220-1-response",
+          "encounterId": "8ade8ad6-3ee8-4c5b-a0b4-4d316810def2"
+        }
+      ]
+    },
+    {
+      "id": "c5.background-care_cost",
+      "expectedText": "The patient cannot pay anything for dental care and would prefer a free clinic.",
+      "observedInRuntime": true,
+      "mismatchedObservedTexts": [],
+      "example": [
+        {
+          "testId": "C05-G17-Q01",
+          "requestId": "case-05-1792259220150-1-response",
+          "encounterId": "efc16d7f-1c39-462b-bdba-0f1bf74e953a"
+        }
+      ]
+    }
+  ],
+  "all16ObservedAndExact": true,
+  "method": "Canonical background fact text compared with actual authenticated development-mode synthetic API diagnostics; no encounter snapshot facts substituted."
+}

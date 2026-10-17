@@ -1,3 +1,4 @@
+import { patientInstructionLeakage } from "../patientInstructionLeakage";
 import type {
   BehavioralContract,
   BehavioralPhrase,
@@ -30,7 +31,6 @@ export const PATIENT_BEHAVIOR_PROFILES: readonly PatientBehaviorProfile[] = [
   ] },
   { patientId: "noah-patel", caseId: "case-04", displayName: "Noah Patel", stages: { 1: "Quiet", 2: "Very concise", 3: "Blunt and stoic, never impatient" }, optionalPhrases: [
     approvedPhrase("noah-patel", "That's it.", "stoic-closure", "Stage 2–3: very concise, blunt, and stoic", [2, 3]),
-    approvedPhrase("noah-patel", "I'm keeping it brief.", "stoic-closure", "Stage 2–3: very concise and stoic", [2, 3]),
   ] },
   { patientId: "sofia-williams", caseId: "case-05", displayName: "Sofia Williams", stages: { 1: "Cooperative", 2: "Frustrated with the condition", 3: "Clearly tired of dealing with the condition, not the clinician" }, optionalPhrases: [
     approvedPhrase("sofia-williams", "This is frustrating.", "condition-frustration", "Stage 2–3: frustration is directed at the condition", [2, 3]),
@@ -165,6 +165,7 @@ export function isBehavioralPhraseEligible(phrase: BehavioralPhrase, input: Pick
     !phrase.isQuestion &&
     !phrase.introducesFact &&
     phrase.risks.length === 0 &&
+    !patientInstructionLeakage(phrase.text) &&
     !phrase.text.trim().endsWith("?") &&
     phrase.allowedPatients.includes(input.patientId as GovernedPatientId) &&
     phrase.allowedStages.includes(input.stage),

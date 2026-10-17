@@ -1,0 +1,80 @@
+{
+  "conversationTurns": 602,
+  "apiAttempts": 602,
+  "providers": [
+    "navigator"
+  ],
+  "httpStatuses": [
+    200,
+    502
+  ],
+  "immediateTurns": 0,
+  "internalCorrectiveGenerations": 128,
+  "internalFallbacks": 88,
+  "observedConversationGenerations": 673,
+  "rateLimitAttempts": 0,
+  "latencyMs": {
+    "method": "Browser client elapsed response time; observational sequential same-stack comparison; not controlled.",
+    "previousComparable411": {
+      "count": 411,
+      "p50": 2144,
+      "p90": 2920,
+      "p95": 3158
+    },
+    "currentComparable411": {
+      "count": 411,
+      "p50": 2101,
+      "p90": 2810,
+      "p95": 2973
+    },
+    "currentAll": {
+      "count": 546,
+      "p50": 2122,
+      "p90": 2845,
+      "p95": 2993
+    },
+    "byCohort": {
+      "primary": {
+        "count": 340,
+        "p50": 2101,
+        "p90": 2845,
+        "p95": 2989
+      },
+      "pain-context": {
+        "count": 20,
+        "p50": 2010,
+        "p90": 2693,
+        "p95": 2748
+      },
+      "former-holdout-regression": {
+        "count": 51,
+        "p50": 2114,
+        "p90": 2763,
+        "p95": 2903
+      },
+      "targeted-live": {
+        "count": 30,
+        "p50": 2224,
+        "p90": 3506,
+        "p95": 3528
+      },
+      "v3-holdout-regression": {
+        "count": 54,
+        "p50": 2084,
+        "p90": 2497,
+        "p95": 2836
+      },
+      "fresh-holdout": {
+        "count": 51,
+        "p50": 2204,
+        "p90": 2787,
+        "p95": 2859
+      }
+    }
+  },
+  "generationCountLimit": "Observed successful-request diagnostics only. Excludes generations in57 failed requests, whose internal diagnostics were not returned, and separate approved-patient-question classifier calls. Not an exact total of all provider calls.",
+  "workerCount": 1,
+  "automaticBrowserRetries": 0,
+  "minimumSubmissionIntervalMs": 1000,
+  "rawDirectory": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17-final-v4/raw"
+}

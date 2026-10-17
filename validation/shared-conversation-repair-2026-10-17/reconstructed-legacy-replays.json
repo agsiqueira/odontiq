@@ -1,0 +1,933 @@
+{
+  "method": "Deterministic reconstruction using retained lexical classifyQuestion/selectAllowedFacts and pre-contract required/guard paths, deliberately omitting backgroundTurn. Not an archived pre-change binary or a historical provider trace. Fresh-turn selection uses empty inferred-disclosure IDs; recorded setup dialogue is supplied only to integrity checks. Prompt boundary inputs are reconstructed, not the original full prompt. No Navigator call or historical model/retry/fallback content is inferred.",
+  "rows": [
+    {
+      "testId": "C01-G02-Q12",
+      "historical": {
+        "question": "For your dental referral, which county do you call home?",
+        "finalResponse": "I live in Oak County.",
+        "encounterId": "6a988512-f8db-4554-ba0b-c397edbc77ad",
+        "requestId": "case-01-1792246240588-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_residence"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": true,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [],
+          "restrictedClinicalInterpretation": true
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C01-G02-Q14",
+      "historical": {
+        "question": "Where do you normally live?",
+        "finalResponse": "The painful tooth is my lower-left molar.",
+        "encounterId": "93b99bc8-544e-4b55-893d-1a7babb19126",
+        "requestId": "case-01-1792246252340-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "location"
+          ],
+          "questionIntents": [
+            "location"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c1.location",
+            "topic": "location",
+            "text": "The bad tooth is a decayed left mandibular molar."
+          }
+        ],
+        "requiredFacts": [
+          {
+            "id": "c1.location",
+            "topic": "location",
+            "text": "The bad tooth is a decayed left mandibular molar.",
+            "questionIntents": [
+              "location"
+            ]
+          },
+          {
+            "id": "c1.location",
+            "topic": "location",
+            "text": "The bad tooth is a decayed left mandibular molar.",
+            "questionIntents": [
+              "location"
+            ],
+            "order": 209,
+            "broadEligible": false,
+            "aliases": [
+              "where",
+              "location",
+              "located",
+              "which tooth",
+              "which teeth",
+              "what tooth",
+              "what teeth",
+              "area",
+              "side",
+              "upper",
+              "lower",
+              "left",
+              "right"
+            ]
+          }
+        ],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The bad tooth is a decayed left mandibular molar."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C01-G03-Q09",
+      "historical": {
+        "question": "Do you have a dependable way to reach a dental clinic out of county?",
+        "finalResponse": "I usually rely on my sister to help with that, but she's out of town right now.",
+        "encounterId": "62281b0c-a5f2-49e4-8b61-02a78f14daeb",
+        "requestId": "case-01-1792246336718-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C01-G03-Q11",
+      "historical": {
+        "question": "Would a free dental clinic in a neighboring county work for you?",
+        "finalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+        "encounterId": "213a174e-a8c2-49ce-b0ce-d75560985310",
+        "requestId": "case-01-1792246347034-1-response",
+        "outcome": "PASS"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "social_history"
+          ],
+          "questionIntents": [],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c1.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is an uninsured adult."
+          },
+          {
+            "id": "c1.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Alachua County."
+          },
+          {
+            "id": "c1.background-transportation",
+            "topic": "social_history",
+            "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care."
+          },
+          {
+            "id": "c1.smoking",
+            "topic": "social_history",
+            "text": "The patient smokes about one pack per day."
+          },
+          {
+            "id": "c1.alcohol",
+            "topic": "social_history",
+            "text": "The patient does not use alcohol."
+          },
+          {
+            "id": "c1.illicit-drugs",
+            "topic": "social_history",
+            "text": "The patient does not use illicit drugs."
+          }
+        ],
+        "requiredFacts": [
+          {
+            "id": "c1.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Alachua County.",
+            "questionIntents": [
+              "background_residence"
+            ],
+            "broadEligible": false
+          },
+          {
+            "id": "c1.background-transportation",
+            "topic": "social_history",
+            "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+            "questionIntents": [
+              "background_transportation"
+            ],
+            "broadEligible": false
+          },
+          {
+            "id": "c1.smoking",
+            "topic": "social_history",
+            "text": "The patient smokes about one pack per day.",
+            "questionIntents": [
+              "smoking"
+            ]
+          },
+          {
+            "id": "c1.alcohol",
+            "topic": "social_history",
+            "text": "The patient does not use alcohol.",
+            "questionIntents": [
+              "alcohol_use"
+            ]
+          },
+          {
+            "id": "c1.illicit-drugs",
+            "topic": "social_history",
+            "text": "The patient does not use illicit drugs.",
+            "questionIntents": [
+              "illicit_drug_use"
+            ]
+          },
+          {
+            "id": "c1.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Alachua County.",
+            "questionIntents": [
+              "background_residence"
+            ],
+            "broadEligible": false,
+            "order": 201,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          },
+          {
+            "id": "c1.background-transportation",
+            "topic": "social_history",
+            "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+            "questionIntents": [
+              "background_transportation"
+            ],
+            "broadEligible": false,
+            "order": 202,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          },
+          {
+            "id": "c1.smoking",
+            "topic": "social_history",
+            "text": "The patient smokes about one pack per day.",
+            "questionIntents": [
+              "smoking"
+            ],
+            "order": 234,
+            "broadEligible": false,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          },
+          {
+            "id": "c1.alcohol",
+            "topic": "social_history",
+            "text": "The patient does not use alcohol.",
+            "questionIntents": [
+              "alcohol_use"
+            ],
+            "order": 235,
+            "broadEligible": false,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          },
+          {
+            "id": "c1.illicit-drugs",
+            "topic": "social_history",
+            "text": "The patient does not use illicit drugs.",
+            "questionIntents": [
+              "illicit_drug_use"
+            ],
+            "order": 236,
+            "broadEligible": false,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          }
+        ],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient is an uninsured adult.",
+            "The patient lives in Alachua County.",
+            "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+            "The patient smokes about one pack per day.",
+            "The patient does not use alcohol.",
+            "The patient does not use illicit drugs."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C02-G05-Q02",
+      "historical": {
+        "question": "How long ago did your Medicaid coverage end?",
+        "finalResponse": "It has been getting worse for seven days.",
+        "encounterId": "9593c12f-6f2c-4897-b93f-6b4f6ca174d8",
+        "requestId": "case-02-1792246517944-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "onset_duration"
+          ],
+          "questionIntents": [
+            "background_insurance",
+            "duration"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c2.duration",
+            "topic": "onset_duration",
+            "text": "The upper-right dental pain has worsened over seven days."
+          },
+          {
+            "id": "c2.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is uninsured and lost Medicaid within the past year."
+          }
+        ],
+        "requiredFacts": [
+          {
+            "id": "c2.duration",
+            "topic": "onset_duration",
+            "text": "The upper-right dental pain has worsened over seven days.",
+            "questionIntents": [
+              "duration"
+            ]
+          },
+          {
+            "id": "c2.duration",
+            "topic": "onset_duration",
+            "text": "The upper-right dental pain has worsened over seven days.",
+            "questionIntents": [
+              "duration"
+            ],
+            "order": 203,
+            "broadEligible": false,
+            "aliases": [
+              "when did",
+              "when started",
+              "start",
+              "started",
+              "begin",
+              "began",
+              "onset",
+              "how long",
+              "duration",
+              "how many days",
+              "how many weeks",
+              "for how long"
+            ]
+          }
+        ],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The upper-right dental pain has worsened over seven days.",
+            "The patient is uninsured and lost Medicaid within the past year."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C02-G06-Q18",
+      "historical": {
+        "question": "Do you has established residency in your county?",
+        "finalResponse": "No, I haven't established residency yet, I just moved to Collier County.",
+        "encounterId": "800b269c-8f4e-40e2-9fc5-1d9cd007c740",
+        "requestId": "case-02-1792246743618-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_residence"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c2.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Collier County but has not yet established residency."
+          }
+        ],
+        "requiredFacts": [
+          {
+            "id": "c2.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Collier County but has not yet established residency.",
+            "questionIntents": [
+              "background_residence"
+            ],
+            "broadEligible": false
+          },
+          {
+            "id": "c2.background-residence",
+            "topic": "social_history",
+            "text": "The patient lives in Collier County but has not yet established residency.",
+            "questionIntents": [
+              "background_residence"
+            ],
+            "broadEligible": false,
+            "order": 201,
+            "aliases": [
+              "social history",
+              "smoke",
+              "smoking",
+              "tobacco",
+              "alcohol",
+              "drugs",
+              "work",
+              "job",
+              "school",
+              "living",
+              "chew",
+              "eating",
+              "drink"
+            ]
+          }
+        ],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient lives in Collier County but has not yet established residency."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C03-G09-Q01",
+      "historical": {
+        "question": "Do you have insurance or a dentist?",
+        "finalResponse": "I don't have insurance and I don't have a regular dentist.",
+        "encounterId": "1a4eb19c-0a49-4039-a2e8-62d5de3922dc",
+        "requestId": "case-03-1792247215168-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "dental_history"
+          ],
+          "questionIntents": [
+            "background_insurance",
+            "dental_access"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c3.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is uninsured."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient is uninsured."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C03-G09-Q04",
+      "historical": {
+        "question": "Can you tell me about your insurance and your usual dentist?",
+        "finalResponse": "I don't have insurance and I usually go to Dr. Smith.",
+        "encounterId": "d6250814-1fbf-41db-95c5-e6c8ee4efd14",
+        "requestId": "case-03-1792247232698-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "dental_history"
+          ],
+          "questionIntents": [
+            "background_insurance",
+            "dental_access"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c3.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is uninsured."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient is uninsured."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C03-G10-Q01",
+      "historical": {
+        "question": "Tell me about your daughter's coverage.",
+        "finalResponse": "I don't have any kids, and I don't have insurance.",
+        "encounterId": "6a14c816-dd49-42da-840d-afe5dd9aba78",
+        "requestId": "case-03-1792247328697-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c3.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is uninsured."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient is uninsured."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C03-G10-Q17",
+      "historical": {
+        "question": "Is she on Medicaid?",
+        "finalResponse": "I don't think so, we haven't checked for eligibility.",
+        "encounterId": "2f2109cf-7db4-4bd5-9bfd-2f9393a3a7b0",
+        "requestId": "case-03-1792247428725-2-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c3.background-insurance",
+            "topic": "social_history",
+            "text": "The patient is uninsured."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient is uninsured."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C04-G14-Q13",
+      "historical": {
+        "question": "Would you consider a dental clinic where the fee varies with income?",
+        "finalResponse": "The pain is in a molar on my lower-left side. Do I need an antibiotic?",
+        "encounterId": "02113496-97a5-4b58-9d05-ce2e5f4dd0f0",
+        "requestId": "case-04-1792248019284-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [
+            "location"
+          ],
+          "questionIntents": [
+            "background_care_cost",
+            "location"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c4.location",
+            "topic": "location",
+            "text": "The painful tooth is a lower-left molar."
+          },
+          {
+            "id": "c4.background-care_cost",
+            "topic": "social_history",
+            "text": "The patient is open to paying for dental care on a sliding-scale fee."
+          }
+        ],
+        "requiredFacts": [
+          {
+            "id": "c4.location",
+            "topic": "location",
+            "text": "The painful tooth is a lower-left molar.",
+            "questionIntents": [
+              "location"
+            ]
+          },
+          {
+            "id": "c4.location",
+            "topic": "location",
+            "text": "The painful tooth is a lower-left molar.",
+            "questionIntents": [
+              "location"
+            ],
+            "order": 203,
+            "broadEligible": false,
+            "aliases": [
+              "where",
+              "location",
+              "located",
+              "which tooth",
+              "which teeth",
+              "what tooth",
+              "what teeth",
+              "area",
+              "side",
+              "upper",
+              "lower",
+              "left",
+              "right"
+            ]
+          }
+        ],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The painful tooth is a lower-left molar.",
+            "The patient is open to paying for dental care on a sliding-scale fee."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C05-G17-Q03",
+      "historical": {
+        "question": "Could you manage a reduced dental fee?",
+        "finalResponse": "I'm really hoping so, I can't afford much.",
+        "encounterId": "f13fee04-c8cc-464e-bc9a-39253a08f409",
+        "requestId": "case-05-1792248296323-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_care_cost"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c5.background-care_cost",
+            "topic": "social_history",
+            "text": "The patient cannot pay anything for dental care and would prefer a free clinic."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient cannot pay anything for dental care and would prefer a free clinic."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    },
+    {
+      "testId": "C05-G17-Q12",
+      "historical": {
+        "question": "Would you prefer a free clinic, and are you able to pay anything?",
+        "finalResponse": "I can't pay anything for dental care.",
+        "encounterId": "216c438a-c951-4f5d-9fde-9d67e454ca11",
+        "requestId": "case-05-1792248346805-1-response",
+        "outcome": "FAIL"
+      },
+      "reconstructedLegacyPath": {
+        "classification": {
+          "topics": [],
+          "questionIntents": [
+            "background_care_preference",
+            "background_care_cost"
+          ],
+          "isBroadQuestion": false,
+          "isGeneralPainQuestion": false,
+          "isOpenEndedPainQuestion": false,
+          "asksRestrictedClinicalInterpretation": false,
+          "providerMessageIntent": "question"
+        },
+        "selectedFacts": [
+          {
+            "id": "c5.background-care_cost",
+            "topic": "social_history",
+            "text": "The patient cannot pay anything for dental care and would prefer a free clinic."
+          }
+        ],
+        "requiredFacts": [],
+        "promptBoundaryInputs": {
+          "alreadyDisclosed": [],
+          "newInformation": [
+            "The patient cannot pay anything for dental care and would prefer a free clinic."
+          ],
+          "restrictedClinicalInterpretation": false
+        },
+        "immediate": null,
+        "roleAssessmentOfRecordedFinal": {
+          "valid": true
+        },
+        "integrityAssessmentOfRecordedFinal": {
+          "valid": true
+        }
+      }
+    }
+  ]
+}

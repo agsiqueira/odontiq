@@ -1,4 +1,5 @@
 import "server-only";
+import { assertPatientFinalResponse } from "@/lib/patientFinalResponse";
 
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/persistence/repositories/prisma";
@@ -78,6 +79,7 @@ export class PatientQuestionService {
     studentMessageId: string;
     patientMessageId: string;
     baseResponse: string;
+    validateFinalResponse?: (text: string) => void;
     providerName: string;
     behaviorIntentId?: string;
     behaviorAnswerClear?: boolean;
@@ -141,6 +143,9 @@ export class PatientQuestionService {
         const responseText = questionText
           ? `${input.baseResponse.trim()} ${questionText}`.trim()
           : input.baseResponse.trim();
+        // Validate after every addition, before any state or dialogue writes.
+        assertPatientFinalResponse(responseText);
+        input.validateFinalResponse?.(responseText);
 
         await transaction.patientQuestionState.upsert({
           where: { encounterId: input.encounterId },

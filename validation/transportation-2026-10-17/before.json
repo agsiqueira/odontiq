@@ -1,0 +1,91 @@
+{
+  "capturedAt": "2026-10-17T13:43:22.938Z",
+  "question": "can you travel for Affordable Care",
+  "response": "I don't know, I'm not sure how far I can travel right now. I'm in a lot of pain.",
+  "classification": {
+    "topics": [],
+    "questionIntents": [
+      "radiation"
+    ],
+    "isBroadQuestion": false,
+    "isGeneralPainQuestion": false,
+    "isOpenEndedPainQuestion": false,
+    "asksRestrictedClinicalInterpretation": false,
+    "providerMessageIntent": "question"
+  },
+  "selected": [],
+  "required": [],
+  "assessment": {
+    "valid": true
+  },
+  "canonicalBackground": [
+    {
+      "id": "c1.background-insurance",
+      "topic": "social_history",
+      "text": "The patient is an uninsured adult.",
+      "questionIntents": [
+        "background_insurance"
+      ],
+      "broadEligible": false
+    },
+    {
+      "id": "c1.background-residence",
+      "topic": "social_history",
+      "text": "The patient lives in Alachua County.",
+      "questionIntents": [
+        "background_residence"
+      ],
+      "broadEligible": false
+    },
+    {
+      "id": "c1.background-transportation",
+      "topic": "social_history",
+      "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+      "questionIntents": [
+        "background_transportation"
+      ],
+      "broadEligible": false
+    }
+  ],
+  "turns": [
+    {
+      "encounterId": "b8a9ccc1-f861-494e-87f3-9b47f781800e",
+      "requestId": "case-01-1792244300088-7-response",
+      "studentMessageId": "case-01-1792244300088-7",
+      "responseText": "I don't know, I'm not sure how far I can travel right now. I'm in a lot of pain.",
+      "providerName": "navigator",
+      "createdAt": "2026-10-17T13:38:21.657Z"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "b8a9ccc1-f861-494e-87f3-9b47f781800e",
+      "version": 22,
+      "createdAt": "2026-10-16T18:28:00.696Z",
+      "keys": [
+        "caseId",
+        "timing",
+        "messages",
+        "createdAt",
+        "updatedAt",
+        "examinations",
+        "schemaVersion",
+        "disclosedFacts",
+        "lifecycleEvents",
+        "encounterVersion",
+        "checklistCoverage",
+        "serverEncounterId"
+      ],
+      "matchingConversation": true,
+      "matchingResponse": true,
+      "correlatedMessages": [
+        {
+          "id": "case-01-1792244300088-7",
+          "role": "student",
+          "text": "can you travel for Affordable Care",
+          "timestamp": "2026-10-17T13:38:20.088Z"
+        }
+      ]
+    }
+  ]
+}

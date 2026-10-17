@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-17T19:09:42.292Z",
+  "reason": "Original harness halted all later questions after three application validator 502 responses; these are recorded application errors, not a general infrastructure outage.",
+  "applicationSourceChanged": false,
+  "originalHarness": {
+    "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-shared-conversation-repair.spec.ts",
+    "sha256": "7b3cb335d5af5cf373c3f8a3050c45261e4ba976bb0d3ce01923ecb5ddc6404c"
+  },
+  "continuationHarness": {
+    "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-shared-conversation-v4-continuation.spec.ts",
+    "sha256": "bde8ba13734d947fbb6c58366594263003f2e33b4629e94b6616e0a863c702c9"
+  },
+  "configuration": {
+    "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.shared-v4-continuation.config.ts",
+    "sha256": "a2cd72a1e781867881b1eea45a656f058ee229d399bf0f7af560a70a357d00d0"
+  },
+  "changes": [
+    "Reuse the original recorder and all semantic/request/setup checks unchanged.",
+    "Skip every item with a real prior encounter or scored API attempt, retaining successful responses and application errors; re-execute only stop-file placeholders with no request.",
+    "Preserve original stop file; use a separate continuation stop file.",
+    "Application output-rejection 502 errors do not trigger the general infrastructure circuit breaker.",
+    "Capture last attempted setup/scored turn and visible page text when execution fails.",
+    "Separate config and trace output retain previous traces."
+  ],
+  "automaticRetries": 0
+}

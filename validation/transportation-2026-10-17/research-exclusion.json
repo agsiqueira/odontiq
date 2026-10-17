@@ -1,0 +1,195 @@
+{
+  "purpose": "Exclude every listed synthetic Phase T encounter from participant research.",
+  "encounters": [
+    {
+      "encounterId": "33424216-a370-4753-81ee-2b4d696f8b83",
+      "caseId": "case-01",
+      "runId": "a4d87e0d-b684-4476-8bfa-566a4ebfae41",
+      "scenarioId": "transportation-capability-1",
+      "startedAt": "2026-10-17T13:45:18.958Z"
+    },
+    {
+      "encounterId": "dd9574fc-94e9-48b2-b531-851378b16fcd",
+      "caseId": "case-01",
+      "runId": "c7177078-ba98-4c4c-9fcf-ee35d8bab1fb",
+      "scenarioId": "transportation-capability-2",
+      "startedAt": "2026-10-17T13:46:16.709Z"
+    },
+    {
+      "encounterId": "f74483df-ccee-4195-af1a-43bd7d4ed132",
+      "caseId": "case-01",
+      "runId": "1a2d07f5-4bc2-46e6-a4fe-1289fd3783d6",
+      "scenarioId": "transportation-capability-3",
+      "startedAt": "2026-10-17T13:47:03.104Z"
+    },
+    {
+      "encounterId": "7eb40158-d86d-4f88-9d46-85db17971afd",
+      "caseId": "case-01",
+      "runId": "42f1da88-8419-4cb7-9172-45bb7215568c",
+      "scenarioId": "patient-background",
+      "startedAt": "2026-10-17T13:48:40.215Z"
+    },
+    {
+      "encounterId": "a8a6bbd9-3bb6-44c1-8e1a-c184a2415553",
+      "caseId": "case-02",
+      "runId": "c2d122f4-3a30-4eb6-b9a9-3c40f93bc996",
+      "scenarioId": "patient-background",
+      "startedAt": "2026-10-17T13:49:12.907Z"
+    },
+    {
+      "encounterId": "4db7abfe-2613-4813-81c2-a2c800ef503d",
+      "caseId": "case-03",
+      "runId": "cc738013-6812-40ce-a70c-1b87b5c7e45a",
+      "scenarioId": "patient-background",
+      "startedAt": "2026-10-17T13:49:43.969Z"
+    },
+    {
+      "encounterId": "93e43510-eaf2-4602-bfa7-70d9f770005d",
+      "caseId": "case-04",
+      "runId": "14c20fb8-372a-42d8-9159-f683665bcaf1",
+      "scenarioId": "patient-background",
+      "startedAt": "2026-10-17T13:50:22.243Z"
+    },
+    {
+      "encounterId": "06fb80d5-99d5-434b-98d2-5b0528af55d4",
+      "caseId": "case-05",
+      "runId": "36dd1f47-6238-4bfd-843a-f6c17658a4e1",
+      "scenarioId": "patient-background",
+      "startedAt": "2026-10-17T13:50:43.723Z"
+    },
+    {
+      "encounterId": "221dc7cc-d5de-4abf-b8ea-e8d943c3d2ed",
+      "caseId": "case-01",
+      "runId": "be0d5813-0621-4b11-bdf3-7acae0c86634",
+      "scenarioId": "residence-matrix-case-01",
+      "startedAt": "2026-10-17T13:51:11.804Z"
+    },
+    {
+      "encounterId": "143f9cca-94a3-4ee3-93e1-42f16977fe7b",
+      "caseId": "case-02",
+      "runId": "c4684f7d-e983-4a65-8e4c-ee06269fb61a",
+      "scenarioId": "residence-matrix-case-02",
+      "startedAt": "2026-10-17T13:51:34.746Z"
+    },
+    {
+      "encounterId": "1670bd3b-ae87-4816-98a1-9fc6415276c8",
+      "caseId": "case-03",
+      "runId": "a58099e5-938e-490e-8177-5baec898acf8",
+      "scenarioId": "residence-matrix-case-03",
+      "startedAt": "2026-10-17T13:51:55.403Z"
+    },
+    {
+      "encounterId": "95477d62-bfb8-4562-8b67-b95039d2e789",
+      "caseId": "case-04",
+      "runId": "d8d95313-e9b3-41f6-9a5f-462110aec8d0",
+      "scenarioId": "residence-matrix-case-04",
+      "startedAt": "2026-10-17T13:52:16.727Z"
+    },
+    {
+      "encounterId": "e53c1c76-06df-48bb-bda0-31e1221b4ab8",
+      "caseId": "case-05",
+      "runId": "7da64707-0e81-49bf-836a-e96dac8b93ad",
+      "scenarioId": "residence-matrix-case-05",
+      "startedAt": "2026-10-17T13:52:34.361Z"
+    },
+    {
+      "encounterId": "9e989c8d-e390-45b6-9a69-52c39d09b481",
+      "caseId": "case-04",
+      "runId": "e8b8e6d9-ce86-4e11-900f-fa0f3951a063",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-1",
+      "startedAt": "2026-10-17T13:52:56.167Z"
+    },
+    {
+      "encounterId": "7e73e9da-5c50-4231-9205-e472c73a3013",
+      "caseId": "case-04",
+      "runId": "f046298c-5124-4540-a7c1-4cc456b5fd18",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-2",
+      "startedAt": "2026-10-17T13:53:10.779Z"
+    },
+    {
+      "encounterId": "50d16441-e5f0-4102-9961-ba987efe3b29",
+      "caseId": "case-04",
+      "runId": "9e9e182d-4905-4e81-8a36-718f585e00aa",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-3",
+      "startedAt": "2026-10-17T13:53:19.742Z"
+    },
+    {
+      "encounterId": "fcd25055-d887-47c1-a19f-8ea45e39e340",
+      "caseId": "case-04",
+      "runId": "3637deec-d996-4c2f-8da0-f502ecf08392",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-1",
+      "startedAt": "2026-10-17T13:53:29.082Z"
+    },
+    {
+      "encounterId": "ee561287-44ab-4514-b3cb-f27a0750a7c8",
+      "caseId": "case-04",
+      "runId": "e5568a1d-bd76-4431-ad29-fdedc581708e",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-2",
+      "startedAt": "2026-10-17T13:53:39.322Z"
+    },
+    {
+      "encounterId": "53cea859-0497-4be0-958c-595bda693fef",
+      "caseId": "case-04",
+      "runId": "4fd4db8a-20b2-446b-a39f-46dae762aae1",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-3",
+      "startedAt": "2026-10-17T13:53:48.630Z"
+    },
+    {
+      "encounterId": "fbb36322-ceee-4351-88be-a0ab44d976b8",
+      "caseId": "case-01",
+      "runId": "a4cebbee-638d-499e-be68-7b1543c6fee0",
+      "scenarioId": "travel-distinction-case-01",
+      "startedAt": "2026-10-17T13:53:57.981Z"
+    },
+    {
+      "encounterId": "02928ae5-a9a5-4aee-8c36-5da659a7242f",
+      "caseId": "case-02",
+      "runId": "4df28c77-73cf-4c3a-bd44-ae2de60bbf05",
+      "scenarioId": "travel-distinction-case-02",
+      "startedAt": "2026-10-17T13:54:13.757Z"
+    },
+    {
+      "encounterId": "ceee9519-a62a-4f35-9061-2230550a8275",
+      "caseId": "case-03",
+      "runId": "79251cce-5698-4d55-ab7e-24b13ba75910",
+      "scenarioId": "travel-distinction-case-03",
+      "startedAt": "2026-10-17T13:54:29.664Z"
+    },
+    {
+      "encounterId": "fd5e17c6-d4e4-49b7-bae3-18c3f4e08975",
+      "caseId": "case-04",
+      "runId": "47d548d0-642f-4b14-b829-752210656bb3",
+      "scenarioId": "travel-distinction-case-04",
+      "startedAt": "2026-10-17T13:54:45.976Z"
+    },
+    {
+      "encounterId": "e0751213-1cb0-4e42-8816-2518ad2e80fc",
+      "caseId": "case-05",
+      "runId": "3c8bbe7f-d8ab-43fb-906b-78a6747e4744",
+      "scenarioId": "travel-distinction-case-05",
+      "startedAt": "2026-10-17T13:54:59.298Z"
+    },
+    {
+      "encounterId": "332f6cc9-0cb7-4487-a3db-30ec86fc5732",
+      "caseId": "case-01",
+      "runId": "b7bd2359-3587-45b4-9c4e-5b543166844a",
+      "scenarioId": "transportation-capability-1",
+      "startedAt": "2026-10-17T13:56:03.112Z"
+    },
+    {
+      "encounterId": "0d9f49f1-08d6-487e-be05-e23fc89fe895",
+      "caseId": "case-01",
+      "runId": "708cfeb7-dc16-4a2f-8ec2-380f5c967185",
+      "scenarioId": "transportation-capability-2",
+      "startedAt": "2026-10-17T13:56:42.084Z"
+    },
+    {
+      "encounterId": "80e43b27-9ae7-4fab-b5a1-2a6de66c8fde",
+      "caseId": "case-01",
+      "runId": "27307eab-3129-44d6-8e8b-77dea93a1ab7",
+      "scenarioId": "transportation-capability-3",
+      "startedAt": "2026-10-17T13:57:18.205Z"
+    }
+  ],
+  "historicalIncidentEncounter": "b8a9ccc1-f861-494e-87f3-9b47f781800e (historical record; not a synthetic encounter created by this task)"
+}

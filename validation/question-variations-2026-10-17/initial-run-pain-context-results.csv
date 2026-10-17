@@ -1,0 +1,221 @@
+﻿testId,primaryTestId,caseId,groupId,groupTitle,cohort,question,setupTurns,setupObservations,finalResponse,apiFinalResponse,outcome,reason,encounterId,requestId,provider,httpStatus,uiApiMatch,correlationMatched,runId,attempt,attemptKind,attempts,firstAttemptRunId,firstAttemptOutcome,firstAttemptReason,screenshot,trace,rawFile
+"C01-G03-Q01-PAIN","C01-G03-Q01","case-01","G03","Transportation and travel","pain-context","Can you travel for affordable care?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","80ea92d4-9a89-4040-b008-743366e5cd5f","1","first-run","1","80ea92d4-9a89-4040-b008-743366e5cd5f","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q01-PAIN_80ea92d4-9a89-4040-b008-743366e5cd5f.json"
+"C01-G03-Q02-PAIN","C01-G03-Q02","case-01","G03","Transportation and travel","pain-context","Would you travel out of Alachua County?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","bbcda7ff-169d-43f4-acc3-42c41b2b2742","1","first-run","1","bbcda7ff-169d-43f4-acc3-42c41b2b2742","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q02-PAIN_bbcda7ff-169d-43f4-acc3-42c41b2b2742.json"
+"C01-G03-Q03-PAIN","C01-G03-Q03","case-01","G03","Transportation and travel","pain-context","Can you get to a dental clinic in another county?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","5fdcde86-5997-4b6d-94c3-1cf36f591fac","1","first-run","1","5fdcde86-5997-4b6d-94c3-1cf36f591fac","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q03-PAIN_5fdcde86-5997-4b6d-94c3-1cf36f591fac.json"
+"C01-G03-Q04-PAIN","C01-G03-Q04","case-01","G03","Transportation and travel","pain-context","Would you travel farther if the dental treatment were free?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","9e599b42-84e7-40a0-bc92-3ceb3155bc44","1","first-run","1","9e599b42-84e7-40a0-bc92-3ceb3155bc44","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q04-PAIN_9e599b42-84e7-40a0-bc92-3ceb3155bc44.json"
+"C01-G03-Q05-PAIN","C01-G03-Q05","case-01","G03","Transportation and travel","pain-context","Do you have reliable transportation to get affordable dental care?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","97a99707-6964-4bd7-b54c-b6f8c95d1160","1","first-run","1","97a99707-6964-4bd7-b54c-b6f8c95d1160","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q05-PAIN_97a99707-6964-4bd7-b54c-b6f8c95d1160.json"
+"C01-G03-Q06-PAIN","C01-G03-Q06","case-01","G03","Transportation and travel","pain-context","Could you travel outside your county for a low-cost dental appointment?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","2984cd12-fb21-4695-8989-efa95740c0ee","1","first-run","1","2984cd12-fb21-4695-8989-efa95740c0ee","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q06-PAIN_2984cd12-fb21-4695-8989-efa95740c0ee.json"
+"C01-G03-Q07-PAIN","C01-G03-Q07","case-01","G03","Transportation and travel","pain-context","Would you be willing to leave Alachua County for dental treatment?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","291284c0-04a5-406f-b09b-97e86a12d28a","1","first-run","1","291284c0-04a5-406f-b09b-97e86a12d28a","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q07-PAIN_291284c0-04a5-406f-b09b-97e86a12d28a.json"
+"C01-G03-Q08-PAIN","C01-G03-Q08","case-01","G03","Transportation and travel","pain-context","If the closest affordable clinic is outside the county, could you go?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","be7a8274-96d2-4329-a24b-e7e007311157","1","first-run","1","be7a8274-96d2-4329-a24b-e7e007311157","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q08-PAIN_be7a8274-96d2-4329-a24b-e7e007311157.json"
+"C01-G03-Q09-PAIN","C01-G03-Q09","case-01","G03","Transportation and travel","pain-context","Do you have a dependable way to reach a dental clinic out of county?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","ee09d7e9-e24b-42db-94f6-8a86938cec53","1","first-run","1","ee09d7e9-e24b-42db-94f6-8a86938cec53","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q09-PAIN_ee09d7e9-e24b-42db-94f6-8a86938cec53.json"
+"C01-G03-Q10-PAIN","C01-G03-Q10","case-01","G03","Transportation and travel","pain-context","Can you arrange reliable transportation for a low-cost dental visit?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","c50d8717-db6f-4e68-a0d4-5364d2dbbcb8","1","first-run","1","c50d8717-db6f-4e68-a0d4-5364d2dbbcb8","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q10-PAIN_c50d8717-db6f-4e68-a0d4-5364d2dbbcb8.json"
+"C01-G03-Q11-PAIN","C01-G03-Q11","case-01","G03","Transportation and travel","pain-context","Would a free dental clinic in a neighboring county work for you?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","59cf2393-4d4a-4470-8620-767c2ea44f6f","1","first-run","1","59cf2393-4d4a-4470-8620-767c2ea44f6f","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q11-PAIN_59cf2393-4d4a-4470-8620-767c2ea44f6f.json"
+"C01-G03-Q12-PAIN","C01-G03-Q12","case-01","G03","Transportation and travel","pain-context","Is traveling outside Alachua County an option for affordable dental care?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","39213f25-d205-4a42-aa34-f6d588f9e5b6","1","first-run","1","39213f25-d205-4a42-aa34-f6d588f9e5b6","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q12-PAIN_39213f25-d205-4a42-aa34-f6d588f9e5b6.json"
+"C01-G03-Q13-PAIN","C01-G03-Q13","case-01","G03","Transportation and travel","pain-context","Could you get yourself to a dental appointment outside your county?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","d7c2623e-dd19-4f64-b220-a8a52dd2088c","1","first-run","1","d7c2623e-dd19-4f64-b220-a8a52dd2088c","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q13-PAIN_d7c2623e-dd19-4f64-b220-a8a52dd2088c.json"
+"C01-G03-Q14-PAIN","C01-G03-Q14","case-01","G03","Transportation and travel","pain-context","Are you able and willing to travel for cheaper dental treatment?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","e2de04b5-898d-45a9-a493-10d6b1035087","1","first-run","1","e2de04b5-898d-45a9-a493-10d6b1035087","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q14-PAIN_e2de04b5-898d-45a9-a493-10d6b1035087.json"
+"C01-G03-Q15-PAIN","C01-G03-Q15","case-01","G03","Transportation and travel","pain-context","can you travel for Affordable Care","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","823b059b-9a3b-4fb5-8abf-8f39e47d1b6f","1","first-run","1","823b059b-9a3b-4fb5-8abf-8f39e47d1b6f","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q15-PAIN_823b059b-9a3b-4fb5-8abf-8f39e47d1b6f.json"
+"C01-G03-Q16-PAIN","C01-G03-Q16","case-01","G03","Transportation and travel","pain-context","You can travel outside the county for low cost care?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","d18f6ac6-6bc0-48ce-b968-5430f42ce6e5","1","first-run","1","d18f6ac6-6bc0-48ce-b968-5430f42ce6e5","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q16-PAIN_d18f6ac6-6bc0-48ce-b968-5430f42ce6e5.json"
+"C01-G03-Q17-PAIN","C01-G03-Q17","case-01","G03","Transportation and travel","pain-context","Would you goes to another county if the dentist is free?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","d8485e8a-c3ec-4c8b-abed-8824f4805ee5","1","first-run","1","d8485e8a-c3ec-4c8b-abed-8824f4805ee5","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q17-PAIN_d8485e8a-c3ec-4c8b-abed-8824f4805ee5.json"
+"C01-G03-Q18-PAIN","C01-G03-Q18","case-01","G03","Transportation and travel","pain-context","Can you get transport for a cheaper dental clinic?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","b7aee1e2-ef0d-4399-ad62-80c993ec8c04","1","first-run","1","b7aee1e2-ef0d-4399-ad62-80c993ec8c04","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q18-PAIN_b7aee1e2-ef0d-4399-ad62-80c993ec8c04.json"
+"C01-G03-Q19-PAIN","C01-G03-Q19","case-01","G03","Transportation and travel","pain-context","If dental care cost less out of town, you can go?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","0f5a8958-1b47-4ba6-b94e-4edaaaa01bd1","1","first-run","1","0f5a8958-1b47-4ba6-b94e-4edaaaa01bd1","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q19-PAIN_0f5a8958-1b47-4ba6-b94e-4edaaaa01bd1.json"
+"C01-G03-Q20-PAIN","C01-G03-Q20","case-01","G03","Transportation and travel","pain-context","Do you has reliable transportation for dental care?","[]","[]","null","null","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","null","","","","a9d2b71e-4241-4fc7-8e57-071418bf8849","1","first-run","1","a9d2b71e-4241-4fc7-8e57-071418bf8849","BLOCKED","Error: Execution stopped after repeated infrastructure failures: {
+  ""testId"": ""C03-G08-Q03"",
+  ""at"": ""2026-10-17T14:22:42.492Z"",
+  ""reason"": ""OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\screenshots\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases"",
+  ""consecutiveInfrastructureErrors"": 3
+}","null","null","C:\240 - odontIQ\odontiq-phase-t\artifacts\reports\question-variations-2026-10-17\raw\C01-G03-Q20-PAIN_a9d2b71e-4241-4fc7-8e57-071418bf8849.json"

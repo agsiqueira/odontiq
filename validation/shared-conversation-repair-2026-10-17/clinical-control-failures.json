@@ -1,0 +1,14 @@
+[
+  {
+    "suite": "validateCase01Ludwigs",
+    "method": "Current clinical path with shared interpreter disabled; this is a reconstructed control, not an archived baseline binary",
+    "exitCode": 1,
+    "output": "AssertionError [ERR_ASSERTION]: A spoken fact must remain available for continuity\r\n    at C:/240 - odontIQ/odontiq/scripts/.validateCase01Ludwigs-beforeShared.ts:83:21\r\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\r\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n"
+  },
+  {
+    "suite": "validateCase02SystemicInfection",
+    "method": "Current clinical path with shared interpreter disabled; this is a reconstructed control, not an archived baseline binary",
+    "exitCode": 0,
+    "output": "Case 2 systemic-infection validation passed.\r\n"
+  }
+]

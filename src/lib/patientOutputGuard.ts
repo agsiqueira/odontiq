@@ -1,4 +1,7 @@
 import type { PatientDisclosureFact } from "./patientDisclosure";
+import { patientInstructionLeakage } from "./patientInstructionLeakage";
+import { expressesTransportationFact, hasTransportationUncertainty } from "./patientTransportation";
+import { residenceCounty } from "./patientResidence";
 
 export type PatientOutputAssessment = {
   valid: boolean;
@@ -22,6 +25,8 @@ export function assessPatientOutputIntegrity(
   requiredFacts: readonly PatientDisclosureFact[] = [],
 ): PatientOutputAssessment {
   const spokenText = text.trim();
+  const instructionLeakage = patientInstructionLeakage(spokenText);
+  if (instructionLeakage) return { valid: false, reason: instructionLeakage };
   for (const [reason, pattern] of LEAKAGE_PATTERNS) {
     if (pattern.test(spokenText)) return { valid: false, reason };
   }
@@ -42,6 +47,14 @@ export function assessPatientOutputIntegrity(
 }
 
 function expressesRequiredFact(response: string, fact: PatientDisclosureFact): boolean {
+  const transportation = expressesTransportationFact(response, fact);
+  if (transportation !== undefined) return transportation;
+  const county = residenceCounty(fact);
+  if (county) {
+    const escaped = county.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp(`\\b${escaped}\\b`, "i").test(response)
+      && !new RegExp(`\\b(?:not|don't|do not)\\b[^.!?]{0,30}\\b(?:live|living|reside)\\b[^.!?]{0,25}${escaped}`, "i").test(response);
+  }
   const rules: Readonly<Record<string, RegExp>> = {
     "c2.duration": /\b(?:seven|7)\s+days?\b|\b(?:about |around |approximately |roughly )?(?:a|one)\s+week\b/i,
     "c3.duration": /\b(?:three|3)\s+days?\b/i,
@@ -77,7 +90,7 @@ function expressesRequiredFact(response: string, fact: PatientDisclosureFact): b
     "c4.alcohol": /\b(?:occasional|occasionally)\b.{0,25}\b(?:alcohol|drink)\b|\b(?:alcohol|drink)\b.{0,25}\b(?:occasional|occasionally)\b/i,
     "c4.illicit-drugs-negative": /\b(?:no|not|don't|do not|never)\b.{0,35}\b(?:illicit|recreational|street) drugs?\b/i,
     "c4.last-dentist": /\b(?:dentist|dental visit)\b.{0,35}\b(?:five|5)\s+years?\b|\b(?:five|5)\s+years?\b.{0,35}\b(?:dentist|dental visit)\b/i,
-    "c4.access": /\b(?:no|don't have|do not have|lost)\b.{0,30}\bdental insurance\b|\b(?:no|don't have|do not have)\b.{0,35}\bdentist\b.{0,30}\b(?:see|access|available|now)\b|\b(?:arranging|getting)\b.{0,30}\bdental care\b.{0,30}\b(?:take time|a while)\b/i,
+    "c4.access": /\buninsured\b|\b(?:no|don't have|do not have|lost)\b.{0,30}\b(?:dental )?insurance\b|\b(?:no|don't have|do not have)\b.{0,35}\bdentist\b.{0,30}\b(?:see|access|available|now)\b|\b(?:arranging|getting)\b.{0,30}\bdental care\b.{0,30}\b(?:take time|a while)\b/i,
     "c4.goal": /\b(?:want|would like|hope)\b.{0,25}\bsave\b.{0,15}\btooth\b/i,
     "c4.surgery-unknown": /\b(?:not sure|unsure|don't know|do not know)\b/i,
     "c4.ibuprofen-frequency-unknown": /\b(?:don't remember|do not remember|not sure|unsure)\b.{0,55}\b(?:schedule|frequency|number of doses|how often)\b/i,
@@ -203,6 +216,16 @@ function findStableFactContradiction(
   facts: readonly PatientDisclosureFact[],
   priorPatientDialogue: readonly string[],
 ): string | undefined {
+  // A patient's question is not an assertion of medical history. In a fully
+  // assembled reply, do not combine an approved question's drug name with an
+  // unrelated earlier sentence (for example, "haven't established residency").
+  response = response.split(/(?<=[.!?])\s+/)
+    .filter(sentence => !sentence.includes("?")).join(" ");
+  if (facts.some(fact => /\.background-transportation$/.test(fact.id)
+    && /\bhas reliable transportation\b/i.test(fact.text))
+    && hasTransportationUncertainty(response)) {
+    return "unsupported uncertainty about defined transportation";
+  }
   const factText = [
     ...facts.map((fact) => fact.text),
     ...priorPatientDialogue,

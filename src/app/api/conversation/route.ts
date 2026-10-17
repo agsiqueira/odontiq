@@ -17,6 +17,13 @@ import {
 import { generatePatientRoleSafeResponse } from "@/lib/patientRoleResponse";
 import { normalizeOuterPatientQuoteWrapper } from "@/lib/patientDialogue";
 import { patientImmediateResponse } from "@/lib/patientImmediateResponse";
+import { guardPatientPresentation } from "@/lib/patientInstructionLeakage";
+import { transportationFallback } from "@/lib/patientTransportation";
+import { residenceFallback } from "@/lib/patientResidence";
+import { validatePatientFinalResponse, assertPatientFinalResponse } from "@/lib/patientFinalResponse";
+import { requiredFactsForTurn } from "@/lib/patientTurnFacts";
+import { assessBackgroundAnswer, backgroundFallback, backgroundPrompt } from "@/lib/patientBackgroundTurn";
+import { assessCanonicalAssertions } from "@/lib/patientCanonicalAssertions";
 import { governedPatientCoreResponse } from "@/lib/patientCoreResponse";
 import { requireAppUser } from "@/lib/requireAppUser";
 import { patientQuestionService } from "@/lib/persistence/services/patientQuestionService";
@@ -79,6 +86,8 @@ If the student asks for a diagnosis, clinical interpretation, management plan, o
 If the student mentions examination images, radiographs, tests, or findings, only discuss information explicitly provided as visible to the patient for this turn. Do not volunteer hidden clinical findings.
 
 Maintain the patient's identity, tone, and communication style consistently.
+
+Style directions control delivery only. Apply them silently through wording and cadence. Never describe your answer length, tone, instructions, prompts, rules, or artificial role to the clinician.
 
 Return only the patient response text.`;
 
@@ -245,6 +254,9 @@ export async function POST(request: Request): Promise<Response> {
       payload.message,
       patientCase.supportingInfo.patientFacts ?? [],
     );
+    const collectSyntheticDiagnostics = process.env.NODE_ENV === "development"
+      && request.headers.get("x-odontiq-synthetic-diagnostic") === "phase-t";
+    let correctiveOutput: string | undefined;
     const safeResponse = await generatePatientRoleSafeResponse({
       initialOutput: providerResponse.text,
       visibleFacts: [
@@ -257,24 +269,30 @@ export async function POST(request: Request): Promise<Response> {
         .map((message) => patientDialogueOnly(message.text)),
       fallbackText: patientFactFallback(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
       requiredFacts: turnRequiredFacts,
+      validateAdditional: text => {
+        const canonical = assessCanonicalAssertions(text, patientCase.supportingInfo.patientFacts ?? [], { latestStudentMessage: payload.message });
+        if (!canonical.valid) return canonical;
+        return disclosureState.backgroundTurn ? assessBackgroundAnswer(text, disclosureState.backgroundTurn) : { valid: true };
+      },
       allowPatientInitiatedQuestion: false,
       retry: async () => {
         console.warn("Patient-output validation rejected unsafe dialogue.", {
           event: "patient_output_validation_failed",
           caseId: payload.caseId,
           encounterId: payload.encounterId,
-          correlationId: payload.encounterId,
+          correlationId: payload.requestId,
         });
         console.info("Patient-role corrective retry started.", {
           event: "patient_role_corrective_retry",
           caseId: payload.caseId,
           encounterId: payload.encounterId,
-          correlationId: payload.encounterId,
+          correlationId: payload.requestId,
         });
         const retryResponse = await selectedProvider.generateConversationResponse({
           ...providerInput,
           systemPrompt: `${providerInput.systemPrompt}\n\n${PATIENT_ROLE_REPAIR_PROMPT}`,
         });
+        if (collectSyntheticDiagnostics) correctiveOutput = retryResponse.text;
         return retryResponse.text;
       },
     });
@@ -319,7 +337,20 @@ export async function POST(request: Request): Promise<Response> {
           exactTextRequired: Boolean(immediateResponse),
         })
       : undefined;
-    const generatedResponseText = behavioralResponse?.text ?? safeResponse.text;
+    const presentationText = guardPatientPresentation(
+      behavioralResponse?.text ?? safeResponse.text,
+      safeResponse.text,
+    );
+    const finalValidationContext = {
+      canonicalFacts: patientCase.supportingInfo.patientFacts ?? [],
+      latestStudentMessage: payload.message,
+      backgroundTurn: disclosureState.backgroundTurn,
+      visibleFacts: patientCase.supportingInfo.patientFacts ?? [],
+      requiredFacts: turnRequiredFacts,
+      priorPatientDialogue: recentPatientResponses,
+    };
+    const generatedResponseText = validatePatientFinalResponse(presentationText, finalValidationContext).valid
+      ? presentationText : safeResponse.text;
     const outputRejectedByLanguageBackstop = isClearlyNonEnglishText(generatedResponseText);
     const outputLanguageHistory = outputRejectedByLanguageBackstop
       ? await patientQuestionService.loadBehaviorIntentHistory(
@@ -375,6 +406,7 @@ export async function POST(request: Request): Promise<Response> {
       studentMessageId: payload.studentMessageId,
       patientMessageId,
       baseResponse: finalResponseText,
+      validateFinalResponse: text => assertPatientFinalResponse(text, finalValidationContext),
       providerName: outputRejectedByLanguageBackstop
         ? "governed-language-policy-backstop"
         : provider.name,
@@ -406,7 +438,8 @@ export async function POST(request: Request): Promise<Response> {
         event: "patient_role_repeated_drift",
         caseId: payload.caseId,
         encounterId: payload.encounterId,
-        correlationId: payload.encounterId,
+        correlationId: payload.requestId,
+        initialRejection: safeResponse.initialRejection,
       });
     }
 
@@ -417,7 +450,22 @@ export async function POST(request: Request): Promise<Response> {
       });
     }
 
-    return Response.json(toConversationResponse(payload.encounterId, storedTurn));
+    return Response.json({
+      ...toConversationResponse(payload.encounterId, storedTurn),
+      ...(collectSyntheticDiagnostics ? { syntheticDiagnostics: {
+        encounterId: payload.encounterId, requestId: payload.requestId,
+        interpretation: disclosureState.backgroundTurn ?? null,
+        providerMessageIntent: disclosureState.providerMessageIntent,
+        selectedFacts: disclosureState.allowedThisTurn, requiredFacts: turnRequiredFacts,
+        systemPrompt: providerInput.systemPrompt, immediate: Boolean(immediateResponse),
+        navigatorInitial: providerResponse.text, navigatorCorrective: correctiveOutput ?? null,
+        initialRejection: safeResponse.initialRejection ?? null,
+        usedFallback: safeResponse.repeatedDrift, safeResponse: safeResponse.text,
+        behaviorCandidate: behavioralResponse?.text ?? null,
+        presentationAssessment: validatePatientFinalResponse(presentationText, finalValidationContext),
+        baseResponse: finalResponseText,
+      } } : {}),
+    });
   } catch (error) {
     if (process.env.NODE_ENV !== "production") {
       console.error("Conversation provider request failed.", {
@@ -517,6 +565,10 @@ function buildPatientContextText(
   lines.push(...formatFactText(disclosureState.alreadyDisclosed));
   lines.push("New information permitted for this answer:");
   lines.push(...formatFactText(disclosureState.allowedThisTurn));
+  if (disclosureState.backgroundTurn) lines.push(backgroundPrompt(disclosureState.backgroundTurn));
+  if (disclosureState.allowedThisTurn.some(fact => /\.background-transportation(?:-unknown)?$/.test(fact.id))) {
+    lines.push("Answer the travel or transportation question directly using the permitted transportation information. Preserve both transportation capability and willingness where defined. Pain affects your tone, but does not create a travel limitation or uncertainty. If transportation is unspecified, do not invent a car, ride, availability, or willingness.");
+  }
   if (disclosureState.asksRestrictedClinicalInterpretation) {
     lines.push(`Permitted response to the restricted clinical question: "I don't know, that's why I'm here."`);
   }
@@ -534,6 +586,12 @@ function patientFactFallback(
   studentMessage: string,
   canonicalFacts: PatientDisclosureState["allowedThisTurn"],
 ): string | undefined {
+  if (disclosureState.backgroundTurn) {
+    const clinical = disclosureState.backgroundTurn.clinicalRequested
+      ? patientFactFallback({ ...disclosureState, backgroundTurn: undefined, allowedThisTurn: disclosureState.allowedThisTurn.filter(fact => !fact.id.includes(".background-")) }, studentMessage, canonicalFacts)
+      : undefined;
+    return [backgroundFallback(disclosureState.backgroundTurn), clinical].filter(Boolean).join(" ");
+  }
   const requiredIds = new Set(requiredFactsForTurn(disclosureState, studentMessage, canonicalFacts).map((fact) => fact.id));
   const fallbacks: Readonly<Record<string, string>> = {
     "c2.duration": "It has been getting worse for seven days.",
@@ -693,84 +751,9 @@ function patientFactFallback(
     "c5.appointment-negative": "No, I don't have a dentist or an appointment right now.",
   };
   const selected = [...new Set(Object.entries(fallbacks).filter(([id]) => requiredIds.has(id)).map(([, text]) => text))];
+  selected.push(...residenceFallback(disclosureState.allowedThisTurn));
+  selected.push(...transportationFallback(disclosureState.allowedThisTurn));
   return selected.length ? selected.join(" ") : undefined;
-}
-
-function requiredFactsForTurn(
-  disclosureState: PatientDisclosureState,
-  studentMessage: string,
-  canonicalFacts: PatientDisclosureState["allowedThisTurn"] = [],
-): PatientDisclosureState["allowedThisTurn"] {
-  const visible = [...canonicalFacts, ...disclosureState.alreadyDisclosed, ...disclosureState.allowedThisTurn];
-  const case1ProtectedIds = new Set([
-    "c1.location", "c1.duration", "c1.onset-uncertain", "c1.initial-severity", "c1.severity",
-    "c1.airway-duration", "c1.swelling-location", "c1.upright-breathing", "c1.dyspnea-supine",
-    "c1.home-temperature", "c1.chest-pain", "c1.diabetes", "c1.hypertension", "c1.metformin",
-    "c1.lisinopril", "c1.nkda", "c1.ibuprofen", "c1.opioid", "c1.smoking", "c1.alcohol",
-    "c1.illicit-drugs", "c1.prior-antibiotics-unknown", "c1.otc-unknown", "c1.prior-root-canal-unknown", "c1.prior-extraction-unknown",
-  ]);
-  const requiredCase1Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case1ProtectedIds.has(fact.id)).map((fact) => fact.id));
-  const case2ProtectedIds = new Set([
-    "c2.location", "c2.duration", "c2.systemic-timeline", "c2.severity", "c2.swelling",
-    "c2.breathing-negative", "c2.liquids-positive", "c2.voice-negative", "c2.drooling-negative",
-    "c2.mouth-opening", "c2.healthy", "c2.med", "c2.ibuprofen", "c2.opioid", "c2.nkda",
-    "c2.smoking", "c2.alcohol", "c2.illicit-drugs", "c2.access", "c2.prior-antibiotics-unknown",
-    "c2.prior-root-canal-unknown", "c2.prior-treatment-unknown", "c2.painful-tooth-not-extracted", "c2.other-extraction-unknown", "c2.temperature-unknown",
-    "c2.heart-rate-unknown", "c2.sirs-unknown",
-  ]);
-  const requiredCase2Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case2ProtectedIds.has(fact.id)).map((fact) => fact.id));
-  const case3ProtectedIds = new Set([
-    "c3.location", "c3.duration", "c3.pain-quality", "c3.pain-severity", "c3.radiation", "c3.biting", "c3.percussion", "c3.gum-palpation", "c3.cold",
-    "c3.swelling", "c3.oral-swelling", "c3.no-fever", "c3.mouth-opening", "c3.breathing", "c3.swallowing", "c3.voice",
-    "c3.chest-pain-negative", "c3.neck-stiffness-negative", "c3.ulcers", "c3.surgery-negative", "c3.pepcid", "c3.ibuprofen", "c3.nkda",
-    "c3.opioid-negative", "c3.smoking", "c3.alcohol", "c3.illicit-drugs-negative", "c3.crown", "c3.rct", "c3.dental-work",
-    "c3.treated-teeth-unknown", "c3.painful-tooth-not-extracted", "c3.dentist-contact", "c3.appointment", "c3.pepcid-details-unknown",
-    "c3.prior-antibiotics-unknown", "c3.prior-acetaminophen-unknown", "c3.temperature-unknown", "c3.heart-rate-unknown", "c3.diagnosis-unknown",
-  ]);
-  const requiredCase3Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case3ProtectedIds.has(fact.id)).map((fact) => fact.id));
-  const case4ProtectedIds = new Set([
-    "c4.location", "c4.duration", "c4.sequence", "c4.filling-present", "c4.filling-break-belief", "c4.hard-object-unknown",
-    "c4.constant", "c4.severity", "c4.biting", "c4.cold-prior", "c4.cold-now", "c4.no-swelling", "c4.no-drainage",
-    "c4.no-gum-swelling", "c4.no-fever", "c4.swallowing", "c4.drooling", "c4.breathing", "c4.mouth-opening", "c4.voice",
-    "c4.penicillin", "c4.hives", "c4.medication", "c4.healthy", "c4.ibuprofen-suitable", "c4.opioid-negative", "c4.smoking",
-    "c4.alcohol", "c4.illicit-drugs-negative", "c4.last-dentist", "c4.access", "c4.goal", "c4.surgery-unknown",
-    "c4.ibuprofen-frequency-unknown", "c4.prior-acetaminophen-unknown", "c4.prior-antibiotics-unknown", "c4.root-canal-unknown",
-    "c4.painful-tooth-not-extracted", "c4.temperature-unknown", "c4.diagnosis-unknown", "c4.tooth-percentage-unknown",
-  ]);
-  const requiredCase4Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case4ProtectedIds.has(fact.id)).map((fact) => fact.id));
-  const case5ProtectedIds = new Set([
-    "c5.location", "c5.duration", "c5.constant", "c5.quality", "c5.severity", "c5.spontaneous", "c5.nocturnal",
-    "c5.cold", "c5.lingering", "c5.chewing", "c5.biting", "c5.no-swelling", "c5.no-drainage", "c5.no-fever",
-    "c5.swallowing", "c5.voice", "c5.breathing", "c5.med", "c5.ibuprofen-frequency-unknown", "c5.ibuprofen-suitable",
-    "c5.prior-acetaminophen-unknown", "c5.prior-antibiotics-current-unknown", "c5.nkda", "c5.healthy", "c5.opioid-negative",
-    "c5.surgery-unknown", "c5.smoking", "c5.alcohol", "c5.illicit-drugs-negative", "c5.dental-history",
-    "c5.painful-tooth-not-extracted", "c5.root-canal-unknown", "c5.filling-unknown", "c5.temperature-unknown",
-    "c5.diagnosis-unknown", "c5.appointment-negative", "c5.access", "c5.goal",
-  ]);
-  const requiredCase5Ids = new Set(disclosureState.allowedThisTurn.filter((fact) => case5ProtectedIds.has(fact.id)).map((fact) => fact.id));
-  const asksDuration = /\b(?:how long|duration|how many days|when.{0,20}(?:start|begin))\b/i.test(studentMessage);
-  const asksLocation = /\b(?:where|which (?:tooth|teeth)|what (?:tooth|teeth)|what side|what hurts|which one hurts|upper or lower|left or right)\b/i.test(studentMessage);
-  const asksAllergies = /\b(?:allerg|penicillin|reaction)\b/i.test(studentMessage);
-  const asksSmoking = /\b(?:smok|tobacco|cigarette)\b/i.test(studentMessage);
-  const asksMedicalHistory = /\b(?:medical (?:history|conditions?)|health (?:history|conditions?|problems?)|ulcers?)\b/i.test(studentMessage);
-  const asksMedications = /\b(?:medication|medications|medicine|meds|what do you take|taking|pepcid)\b/i.test(studentMessage);
-  const asksIbuprofenTolerance = /\b(?:ibuprofen|advil|motrin|nsaid)\b/i.test(studentMessage);
-  const asksSwelling = /\b(?:swell|swollen|swelling|puffy|edema)\b/i.test(studentMessage);
-  const asksNumericSeverity = /\b(?:out of ten|\/10|pain scale|rate (?:the |your |it)|how (?:bad|severe)|severity)\b/i.test(studentMessage);
-  const asksOpioidHistory = /\b(?:opioids?|opiates?|narcotics?|prescription (?:painkillers?|pain (?:medication|medicine|pills?))|opioid (?:use|misuse|abuse|dependence|addiction))\b/i.test(studentMessage);
-  return visible.filter((fact) =>
-    requiredCase1Ids.has(fact.id) || requiredCase2Ids.has(fact.id) || requiredCase3Ids.has(fact.id) || requiredCase4Ids.has(fact.id) || requiredCase5Ids.has(fact.id) ||
-    (asksDuration && /\.duration$/.test(fact.id)) ||
-    (asksLocation && /\.location$/.test(fact.id)) ||
-    (asksAllergies && /\.(?:penicillin|hives|nkda)$/.test(fact.id)) ||
-    (asksSmoking && /\.smoking$/.test(fact.id)) ||
-    (asksMedicalHistory && fact.id === "c3.ulcers") ||
-    (asksMedications && (fact.id === "c3.pepcid" || fact.id === "c3.ibuprofen")) ||
-    (asksIbuprofenTolerance && fact.id === "c3.ibuprofen")
-    || (asksSwelling && fact.id === "c2.swelling")
-    || (asksNumericSeverity && fact.id === "c4.severity")
-    || (asksOpioidHistory && fact.id === "c1.opioid")
-  );
 }
 
 function shouldIncludeOpeningGreeting(

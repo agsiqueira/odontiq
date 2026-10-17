@@ -1,0 +1,231 @@
+{
+  "startedAt": "2026-10-17T16:35:37.8670419Z",
+  "completedAt": "2026-10-17T16:43:06.132Z",
+  "method": "Existing Phase T specs and regression matchers unchanged; one worker; automatic retries0; real Clerk/UI/API/Navigator. These suites are separate from the 411 fresh-question cohorts.",
+  "scenarioCount": 21,
+  "turnCount": 125,
+  "scenarios": {
+    "PASS": 21
+  },
+  "turns": {
+    "PASS": 125
+  },
+  "bySuite": [
+    {
+      "suite": "background",
+      "scenarioCount": 5,
+      "turnCount": 42,
+      "outcomes": {
+        "PASS": 5
+      }
+    },
+    {
+      "suite": "residence-recovery",
+      "scenarioCount": 11,
+      "turnCount": 58,
+      "outcomes": {
+        "PASS": 11
+      }
+    },
+    {
+      "suite": "travel-distinction",
+      "scenarioCount": 5,
+      "turnCount": 25,
+      "outcomes": {
+        "PASS": 5
+      }
+    }
+  ],
+  "reports": [
+    {
+      "caseId": "case-01",
+      "scenarioId": "patient-background",
+      "status": "PASS",
+      "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+    },
+    {
+      "caseId": "case-01",
+      "scenarioId": "residence-matrix-case-01",
+      "status": "PASS",
+      "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+    },
+    {
+      "caseId": "case-01",
+      "scenarioId": "travel-distinction-case-01",
+      "status": "PASS",
+      "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+      "turnCount": 5,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+    },
+    {
+      "caseId": "case-02",
+      "scenarioId": "patient-background",
+      "status": "PASS",
+      "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+      "turnCount": 9,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+    },
+    {
+      "caseId": "case-02",
+      "scenarioId": "residence-matrix-case-02",
+      "status": "PASS",
+      "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+    },
+    {
+      "caseId": "case-02",
+      "scenarioId": "travel-distinction-case-02",
+      "status": "PASS",
+      "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+      "turnCount": 5,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+    },
+    {
+      "caseId": "case-03",
+      "scenarioId": "patient-background",
+      "status": "PASS",
+      "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+      "turnCount": 9,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+    },
+    {
+      "caseId": "case-03",
+      "scenarioId": "residence-matrix-case-03",
+      "status": "PASS",
+      "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+    },
+    {
+      "caseId": "case-03",
+      "scenarioId": "travel-distinction-case-03",
+      "status": "PASS",
+      "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+      "turnCount": 5,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "patient-background",
+      "status": "PASS",
+      "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+      "turnCount": 7,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-matrix-case-04",
+      "status": "PASS",
+      "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-1",
+      "status": "PASS",
+      "encounterId": "0092a160-4145-4f1f-8891-588db1130e1b",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-58-699Z_e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-2",
+      "status": "PASS",
+      "encounterId": "f45f8b64-9d76-4b38-a618-9ae56e2e007e",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-07-958Z_6e6cb65c-72b3-4821-8263-ca3cdfad986f.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178671631-3-response-3",
+      "status": "PASS",
+      "encounterId": "f56d4f7c-4075-4656-b835-3a4e93620463",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-21-972Z_029b3289-74c8-4686-9604-1abdcfebdbb5.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-1",
+      "status": "PASS",
+      "encounterId": "3e73b5b9-a270-4f7c-b220-62a57891fd98",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-32-972Z_a5553dd8-1976-4f76-849d-c84d185bf757.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-2",
+      "status": "PASS",
+      "encounterId": "b56bce62-1318-48b0-9f07-a1a551a9fcd1",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-41-745Z_ab7ee5dd-46e0-41ec-87ff-2d987f315d01.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "residence-replay-case-04-1792178808993-3-response-3",
+      "status": "PASS",
+      "encounterId": "49d1801c-f995-4c8d-a931-0ba07525243b",
+      "turnCount": 3,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-51-021Z_c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3.json"
+    },
+    {
+      "caseId": "case-04",
+      "scenarioId": "travel-distinction-case-04",
+      "status": "PASS",
+      "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+      "turnCount": 5,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+    },
+    {
+      "caseId": "case-05",
+      "scenarioId": "patient-background",
+      "status": "PASS",
+      "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+      "turnCount": 9,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+    },
+    {
+      "caseId": "case-05",
+      "scenarioId": "residence-matrix-case-05",
+      "status": "PASS",
+      "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+      "turnCount": 8,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+    },
+    {
+      "caseId": "case-05",
+      "scenarioId": "travel-distinction-case-05",
+      "status": "PASS",
+      "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+      "turnCount": 5,
+      "blockedReason": null,
+      "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+    }
+  ],
+  "everyNonPassTurn": []
+}

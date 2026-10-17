@@ -1,0 +1,22 @@
+{
+  "conversationTurns": 518,
+  "apiAttempts": 518,
+  "providers": [
+    "navigator"
+  ],
+  "httpStatuses": [
+    200
+  ],
+  "internalCorrectiveRetries": 100,
+  "internalFallbacks": 75,
+  "observedConversationGenerationCalls": 618,
+  "modelCallCountingLimitation": "Conversation-generation calls only; separate patient-question classifier calls are not included.",
+  "rateLimitAttempts": 0,
+  "diagnosticTurns": 518,
+  "scoredFirstRuns": 411,
+  "automaticBrowserRetries": 0,
+  "workerCount": 1,
+  "minimumSubmissionIntervalMs": 1000,
+  "rawDirectory": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw",
+  "privateAuthenticationTraces": "Retained locally; do not publish."
+}

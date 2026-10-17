@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-17T17:40:12.521Z",
+  "route": ".next/dev/server/app/api/conversation/route.js",
+  "chunks": [
+    {
+      "path": ".next/dev/server/chunks/_0btxf42._.js",
+      "sha256": "c50f8f2a50d32377d977bea274e4ae8aaad25e385f572b9767c0b8405e00aa8c",
+      "hasCanonicalAssertions": false,
+      "hasHouseholdScope": false,
+      "hasCoverageTransition": false
+    },
+    {
+      "path": ".next/dev/server/chunks/[root-of-the-server]__0_3gfdi._.js",
+      "sha256": "5d9dfeda1b9d0d935013a23059decce2bad9beb00d311c8346df92e6c0cbafe5",
+      "hasCanonicalAssertions": true,
+      "hasHouseholdScope": true,
+      "hasCoverageTransition": true
+    },
+    {
+      "path": ".next/dev/server/chunks/node_modules_next_20ltvx2._.js",
+      "sha256": "bd181943f099982cd6f4d10ede23e00e1319351739d21e761ceab19793461745",
+      "hasCanonicalAssertions": false,
+      "hasHouseholdScope": false,
+      "hasCoverageTransition": false
+    },
+    {
+      "path": ".next/dev/server/chunks/node_modules_@clerk_backend_dist_0ef51mg._.js",
+      "sha256": "421e85e80b0b447e6a6602190c55055ae13f162ce36629b0ca857a0b769ac652",
+      "hasCanonicalAssertions": false,
+      "hasHouseholdScope": false,
+      "hasCoverageTransition": false
+    },
+    {
+      "path": ".next/dev/server/chunks/[root-of-the-server]__1y6b9xz._.js",
+      "sha256": "73dbfc9e2d334b93866b38ef9fa079d50d85fa023cef4c2c9f39f77298d3af8b",
+      "hasCanonicalAssertions": false,
+      "hasHouseholdScope": false,
+      "hasCoverageTransition": false
+    },
+    {
+      "path": ".next/dev/server/chunks/_next-internal_server_app_api_conversation_route_actions_1uw2154.js",
+      "sha256": "cc6fd9c61ac4c8faa31adede1f33689dd8cbcd0ecd9a8143990050b2b38849ca",
+      "hasCanonicalAssertions": false,
+      "hasHouseholdScope": false,
+      "hasCoverageTransition": false
+    }
+  ]
+}

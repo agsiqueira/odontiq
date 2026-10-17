@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-10-17T14:54:01.482Z",
+  "complete": true,
+  "head": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "applicationUnchanged": true,
+  "applicationFilesHashed": 213,
+  "playwrightVersion": "1.61.1",
+  "baseUrl": "http://localhost:3000",
+  "workers": 1,
+  "minimumTurnPacingMs": 1000,
+  "recordedConversationCalls": 449,
+  "providers": [
+    "navigator"
+  ],
+  "httpStatuses": [
+    200
+  ],
+  "firstStartedAt": "2026-10-17T14:07:45.537Z",
+  "lastCompletedAt": "2026-10-17T14:51:08.596Z",
+  "primaryResults": {
+    "PASS": 263,
+    "FAIL": 71,
+    "REVIEW": 6,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "painContextResults": {
+    "PASS": 15,
+    "FAIL": 5,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "syntheticEncounterCount": 363,
+  "automaticPlaywrightRetries": 0,
+  "manualSetupRetryAttempts": 3,
+  "scoredResponseReruns": 0
+}

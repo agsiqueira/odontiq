@@ -1,0 +1,142 @@
+[
+  {
+    "testId": "C01-G03-Q01",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I can arrange for travel if needed. I have reliable transportation and can go outside Alachua County for affordable dental care."
+  },
+  {
+    "testId": "C01-G03-Q02",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I have reliable transportation and would travel if it means getting the care I need."
+  },
+  {
+    "testId": "C01-G03-Q03",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I can manage to travel if needed, I have reliable transportation.",
+    "painFinalResponse": "Yes, I have reliable transportation, so I can travel to another county if needed."
+  },
+  {
+    "testId": "C01-G03-Q04",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I have reliable transportation and would travel outside Alachua County if the treatment were free or low-cost."
+  },
+  {
+    "testId": "C01-G03-Q05",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed.",
+    "painFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care."
+  },
+  {
+    "testId": "C01-G03-Q06",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "Yes, I can travel if needed, I have reliable transportation.",
+    "painFinalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need at a lower cost."
+  },
+  {
+    "testId": "C01-G03-Q07",
+    "primaryOutcome": "FAIL",
+    "painOutcome": "FAIL",
+    "primaryFinalResponse": "I'd have to think about that. It depends on what's wrong.",
+    "painFinalResponse": "I'm not sure, it depends on the situation."
+  },
+  {
+    "testId": "C01-G03-Q08",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I have reliable transportation, so if there's a clinic outside the county that can help, I'm willing to travel."
+  },
+  {
+    "testId": "C01-G03-Q09",
+    "primaryOutcome": "FAIL",
+    "painOutcome": "FAIL",
+    "primaryFinalResponse": "I usually rely on my sister to help with that, but she's out of town right now.",
+    "painFinalResponse": "I've been trying to get an appointment with a dentist in the neighboring county, but it's been tough."
+  },
+  {
+    "testId": "C01-G03-Q10",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I can travel if needed, I have reliable transportation.",
+    "painFinalResponse": "I can travel outside Alachua County if needed, and I have reliable transportation."
+  },
+  {
+    "testId": "C01-G03-Q11",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care."
+  },
+  {
+    "testId": "C01-G03-Q12",
+    "primaryOutcome": "FAIL",
+    "painOutcome": "FAIL",
+    "primaryFinalResponse": "I'm not sure, I just want to get better here, please help me with this pain.",
+    "painFinalResponse": "I'm not sure, I've never considered traveling for dental care."
+  },
+  {
+    "testId": "C01-G03-Q13",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation, so I could manage to get to an appointment outside the county if needed.",
+    "painFinalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need."
+  },
+  {
+    "testId": "C01-G03-Q14",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed.",
+    "painFinalResponse": "I have reliable transportation, and I'm willing to travel if it means getting the treatment I need."
+  },
+  {
+    "testId": "C01-G03-Q15",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I can travel if needed for affordable care. I have reliable transportation."
+  },
+  {
+    "testId": "C01-G03-Q16",
+    "primaryOutcome": "PASS",
+    "painOutcome": "FAIL",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I can travel if I find a place that can do the extraction at a price I can afford. My car is reliable, and I can manage the travel."
+  },
+  {
+    "testId": "C01-G03-Q17",
+    "primaryOutcome": "FAIL",
+    "painOutcome": "FAIL",
+    "primaryFinalResponse": "I wish it were that simple, but even without insurance, the cost would still be too much.",
+    "painFinalResponse": "I don't know, that's why I'm here. I can't afford the extraction here, let alone traveling to another county."
+  },
+  {
+    "testId": "C01-G03-Q18",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation, and I'm willing to travel outside Alachua County if needed for cheaper dental care.",
+    "painFinalResponse": "I have reliable transportation, so I can travel outside Alachua County if needed for free or low-cost care."
+  },
+  {
+    "testId": "C01-G03-Q19",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "painFinalResponse": "Yes, I have reliable transportation, and I can travel if it means I can afford the care."
+  },
+  {
+    "testId": "C01-G03-Q20",
+    "primaryOutcome": "PASS",
+    "painOutcome": "PASS",
+    "primaryFinalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed.",
+    "painFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care."
+  }
+]

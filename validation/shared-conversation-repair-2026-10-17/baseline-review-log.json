@@ -1,0 +1,108 @@
+{
+  "revisions": [
+    {
+      "testId": "C01-G03-Q11",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+      "originalRunId": "9cc17eea-d05e-4492-9764-2002a464d850",
+      "responseSha256": "d351c3f823313ab32816a9229d345380ab7d95a86d9deedd67d1b7b89bac033c"
+    },
+    {
+      "testId": "C02-G07-Q03",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "I have not seen a dentist since I lost Medicaid last year. I have unreliable transportation out of town.",
+      "originalRunId": "e4efbe75-b79f-4f49-b971-711fd7aa6619",
+      "responseSha256": "979f42bbffdc5d8ad1249606b2bb18651d69dc6292fd63552984cb3b6d9d07ac"
+    },
+    {
+      "testId": "C02-G07-Q06",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "I have not seen a dentist since I lost Medicaid last year. I have unreliable transportation out of town.",
+      "originalRunId": "1f627b0f-38af-48fc-80bf-7654b53efa34",
+      "responseSha256": "979f42bbffdc5d8ad1249606b2bb18651d69dc6292fd63552984cb3b6d9d07ac"
+    },
+    {
+      "testId": "C02-G07-Q13",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "I've been having trouble with my teeth and haven't seen a dentist since losing Medicaid. I really need to get this taken care of, but my transportation's unreliable. It's tough. I'll try my best to get there, though.",
+      "originalRunId": "d860c593-5c1d-4a70-9c25-2151c234ccab",
+      "responseSha256": "7ab7fc0947608078932c47e637019fa3911cb375591e7bb05d3c823e70f789e6"
+    },
+    {
+      "testId": "C03-G09-Q13",
+      "originalLabel": "FAIL",
+      "revisedLabel": "PASS",
+      "justification": "The principal request is dentist status; lack of insurance is a supplied premise. Existing dentist and next-week appointment answer it.",
+      "originalResponse": "Yes, I do have my own dentist. I have an appointment scheduled with them next week.",
+      "originalRunId": "9db374fc-e037-4bd7-82c8-879a1f927393",
+      "responseSha256": "b561147ad04675b163d225ac9cdf9c80d7c3aedba0147f110c897cda395687be"
+    },
+    {
+      "testId": "C04-G12-Q20",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "The returned pain has been getting worse for five days. I live in Duval County. Do I need an antibiotic?",
+      "originalRunId": "460d9584-c5d4-4e74-8ec3-a67cec4a2e5d",
+      "responseSha256": "92f5aaf20d5027099cfc60a58c85ffafc2dbee639cfe2b4c16879d2045468b86"
+    },
+    {
+      "testId": "C04-G13-Q13",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "The pain is in a molar on my lower-left side. I do not have dental insurance or a dentist I can see now, so arranging care will take time. Do I need an antibiotic?",
+      "originalRunId": "84451b76-d571-4a61-9009-049bca59d6ca",
+      "responseSha256": "5411dcea0e4124dc2f7b873ec87ebd130194fcaba1be02fa0c029a68f654d92e"
+    },
+    {
+      "testId": "C04-G13-Q14",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "The tooth hurt badly about a week ago, then stopped and returned; the biting pain became sharper over the past forty-eight hours. I think the old filling may have broken, but I'm not certain. I do not have dental insurance or a dentist I can see now, so arranging care will take time. Do I need an antibiotic?",
+      "originalRunId": "46636a33-656d-4340-82cd-03dce680acba",
+      "responseSha256": "fd380abbc7cf9ffca74383c7c472122c16ddbf5663e4a4f8c3a023f0d1ab40bc"
+    },
+    {
+      "testId": "C05-G17-Q11",
+      "originalLabel": "REVIEW",
+      "revisedLabel": "PASS",
+      "justification": "Read as a whole, 'I don't have any money right now' unambiguously answers inability to afford the modest fee despite the conversational uncertainty opener.",
+      "originalResponse": "I'm not sure, I don't have any money right now.",
+      "originalRunId": "72bfed0c-0fe7-46b5-bf2d-28f85d25af87",
+      "responseSha256": "c0896025be538aba4f04d0b1e2a422d0fa757206338caedcb5aa4269f3da91fe"
+    },
+    {
+      "testId": "C01-G03-Q11-PAIN",
+      "originalLabel": "PASS",
+      "revisedLabel": "FAIL",
+      "justification": "Unrelated true clinical/social/access history accompanies the requested answer; approved patient question is not the reason for failure.",
+      "originalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+      "originalRunId": "50e58ec6-a8be-4229-8799-b63fa5806a58",
+      "responseSha256": "d351c3f823313ab32816a9229d345380ab7d95a86d9deedd67d1b7b89bac033c"
+    }
+  ],
+  "primary": {
+    "PASS": 258,
+    "FAIL": 77,
+    "REVIEW": 5,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "pain": {
+    "PASS": 14,
+    "FAIL": 6,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  }
+}

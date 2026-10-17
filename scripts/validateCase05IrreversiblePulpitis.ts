@@ -53,7 +53,7 @@ const questions: Array<[string, string[]]> = [
   ["Do you know the diagnosis?", ["c5.diagnosis-unknown"]],
   ["Do you already have a dentist or appointment?", ["c5.appointment-negative"]],
   ["Do you want to save the tooth?", ["c5.goal"]],
-  ["Can you afford a dentist or do you have insurance?", ["c5.access"]],
+  ["Can you afford a dentist or do you have insurance?", ["c5.access", "c5.background-insurance", "c5.background-care_cost"]],
 ];
 for (const [question, ids] of questions) assert.deepEqual(visible(question).map((fact) => fact.id), ids, question);
 assert(!visible("Do you want an antibiotic?").some((fact) => fact.id === "c5.antibiotic-request"));

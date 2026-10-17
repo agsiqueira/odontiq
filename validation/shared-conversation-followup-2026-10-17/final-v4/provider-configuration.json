@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-10-17T19:27:02.591Z",
+  "publicSettings": {
+    "AI_PROVIDER": "navigator",
+    "NAVIGATOR_MODEL": "granite-3.3-8b-instruct",
+    "NAVIGATOR_BASE_URL": "https://api.ai.it.ufl.edu"
+  },
+  "method": "Allowlisted non-secret provider settings from current process and local env files; successful requests independently record navigator.",
+  "environment": "development",
+  "nextVersion": "16.2.10",
+  "playwrightVersion": "1.61.1"
+}
