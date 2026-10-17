@@ -46,12 +46,20 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
   if (dentalContext && attendanceGap && !attendanceSource) return reject("unsupported dental attendance interval");
   const attendanceFrequency = /\bi (?:regularly|routinely|often) (?:see|visit|go to)\b.{0,30}\bdentist\b|\bi (?:see|visit|go to)\b.{0,30}\bdentist\b.{0,20}\b(?:regularly|routinely|every (?:year|six months))\b/.test(assertions);
   if (attendanceFrequency && !/\b(?:regularly|routinely|every (?:year|six months))\b/.test(corpus)) return reject("unsupported dental attendance frequency");
+  const asksFrequency = /\b(?:regularly|routinely|how often|every (?:year|six months))\b/i.test(context.latestStudentMessage ?? "") && /\b(?:dentist|dental|visits?)\b/i.test(context.latestStudentMessage ?? "");
+  if (asksFrequency && /^\s*(?:yes|yeah|yep|i do|of course|certainly)\b/i.test(assertions)
+    && !/\b(?:regularly|routinely|every (?:year|six months))\b/.test(corpus)) return reject("unsupported implied dental attendance frequency");
+  const paymentClaim = /\b(?:costs?|bills?|fees?|care|treatment)\b.{0,30}\b(?:will|would|must|have to|going to)\b.{0,25}\b(?:out of pocket|self pay|pay myself)\b|\bi(?:'ll| will| must| have to| am going to) pay\b.{0,30}\b(?:out of pocket|myself)\b/.test(assertions);
+  if (paymentClaim && !/\b(?:out of pocket|self pay|pays? .*self)\b/.test(corpus)) return reject("unsupported prospective payment arrangement");
   if (/\b(?:i(?:'m| am)? (?:currently )?(?:pay|paid|paying)|and (?:i'm )?paying) out of pocket\b/.test(assertions)
     && !/\b(?:paid|pays?|paying) (?:out of pocket|for .* (?:himself|herself|themselves))\b/.test(corpus)) return reject("unsupported actual payment arrangement");
   if (/\blost medicaid within the past year\b/.test(corpus)
     && /\b(?:medicaid|coverage)\b/i.test(`${context.latestStudentMessage ?? ""} ${assertions}`)
     && /\b(?:about|around|approximately) (?:a|one|1|twelve|12) (?:year|months?)\b/.test(assertions)) return reject("unsupported precise coverage-loss interval");
   const daughterHasProvider = facts.some(f => /\bdaughter\b.{0,50}\b(?:has (?:her own |a regular )?dentist|sees? (?:her |a )?dentist|attends? (?:a |the )?clinic)\b/i.test(f.text));
+  if (!daughterHasProvider && /\b(?:clinic|office|practice|provider|dentist)\b.{0,15}\bas (?:my )?daughter's\b|\b(?:stick|stay|continue|keep)\b.{0,20}\b(?:with|using|seeing)\b.{0,20}\b(?:same|our)\b.{0,15}\b(?:clinic|provider|dentist)\b/.test(assertions)) return reject("unsupported presupposed shared or child provider");
+  const childCondition = /\b(?:my daughter|her teeth|my daughter's teeth|she)\b.{0,30}\b(?:needs? (?:more attention|treatment|a filling|dental work)|has (?:a toothache|cavities|dental problems)|hurts?|pain)\b/.test(assertions);
+  if (childCondition && !/\bdaughter\b.{0,70}\b(?:toothache|cavities|dental problems|needs? (?:treatment|more attention|dental work))\b/.test(corpus)) return reject("unsupported child dental condition");
   if (!daughterHasProvider && (/\b(?:my daughter|she)\b[^.!?]{0,80}\b(?:sees?|attends?|go(?:es)? to|receives? care at|gets? care at)\b[^.!?]{0,35}\b(?:dentist|dental provider|clinic|office|practice)\b/.test(assertions)
     || /\b(?:my daughter|she)\b[^.!?]{0,35}\bhas (?:a |her |her own |a regular |an appointment (?:with|at) (?:a |the )?)(?:dentist|clinic|dental provider|dental office)\b/.test(assertions)
     || /\bmy daughter's (?:dentist|clinic|dental provider|dental office)\b/.test(assertions))) return reject("unsupported child provider or clinic history");
@@ -65,7 +73,7 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
   const concrete = [
     { pattern: /\b(?:my employer|my (?:last |current )?job|i work (?:at|for)|i (?:lost|quit) my job|employer's (?:insurance|plan))\b/, source: /\b(?:employer|employment|job|works?)\b/ },
     { pattern: /\b(?:time|days?) off (?:work|my job)\b|\b(?:leave|absence) from work\b/, source: /\b(?:employment|employer|job|work schedule|time off work)\b/ },
-    { pattern: /\b(?:tough|hard|difficult|trouble)\b.{0,25}\b(?:finding time|schedul\w*)\b|\b(?:my|our) (?:work )?schedule\b/, source: /\b(?:schedule|finding time)\b/ },
+    { pattern: /\b(?:tough|hard|difficult|trouble|struggle|struggling)\b.{0,45}\b(?:finding time|coordinat\w*|schedul\w*|appointments?)\b|\b(?:my|our) (?:work )?schedules?\b/, source: /\b(?:schedule|finding time|coordinat\w*)\b/ },
     { pattern: /\b(?:my (?:daughter|son|wife|husband|sister|brother|parents?|mother|father|mom|dad|friend|partner|neighbor|relative|caregiver).{0,30}(?:drives?|rides?|takes? me|gives? me a ride)|my (?:car|vehicle|bus pass))\b/, source: /\b(?:drives?|vehicle|car|lives? with)\b/ },
     { pattern: /\bi (?:can |could |will |usually |normally |always |am able to )?(?:drive|take (?:a |the )?(?:bus|train|taxi|uber)|ride (?:a |my )?(?:bike|bicycle|scooter))\b|\bmy (?:bike|bicycle|scooter)\b/, source: /\b(?:drive|drives|bus|train|taxi|bike|bicycle|scooter)\b/ },
     { pattern: /\b(?:my income|i earn|i make \$|insurance paperwork|medicaid paperwork|waiting for (?:insurance|medicaid))\b/, source: /\b(?:income|earns?|paperwork|waiting for)\b/ },

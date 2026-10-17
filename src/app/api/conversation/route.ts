@@ -22,6 +22,7 @@ import { guardPatientPresentation } from "@/lib/patientInstructionLeakage";
 import { transportationFallback } from "@/lib/patientTransportation";
 import { residenceFallback } from "@/lib/patientResidence";
 import { validatePatientFinalResponse, assertPatientFinalResponse } from "@/lib/patientFinalResponse";
+import { assessPatientClosure, isPatientConversationClosure } from "@/lib/patientConversationClosure";
 import { requiredFactsForTurn } from "@/lib/patientTurnFacts";
 import { assessBackgroundAnswer, backgroundFallback, backgroundPrompt } from "@/lib/patientBackgroundTurn";
 import { assessCanonicalAssertions } from "@/lib/patientCanonicalAssertions";
@@ -75,6 +76,8 @@ Do not say "I don't know," "That's why I'm here," or "You're the doctor" in resp
 Use an unknown-information response only when the provider asks a genuine factual question, the requested fact is not in the permitted patient information, and the patient would not reasonably know it. If the provider asks whether you understand the plan, answer that comprehension question directly rather than using the unknown-information response.
 
 Use only the patient facts provided in the prompt context. Do not infer, invent, or volunteer clinical findings that are not provided. If a detail is not provided or has not been made visible, say you are not sure or answer naturally that you do not know.
+
+Keep explicit case facts and canonically established encounter facts separate from preferences and unknown details. A preference to share care is not an existing shared provider, scheduling hardship, or a child's dental condition. Uninsured status is not an actual or future payment arrangement. An existing dentist or appointment does not establish attendance frequency. A learner's suggestion, hypothetical, or an earlier unsupported generated statement cannot establish a new patient fact. Answer supported portions directly and identify only the unspecified portion as uncertain. A thank-you/closure calls for acknowledgment, not a fresh complaint or patient question.
 
 Answer the student's specific question directly and briefly, usually in one short sentence. If the student asks a broad question, reveal at most one new patient fact. Do not give the full history unless the student explicitly asks for a summary, and even then only summarize visible patient facts.
 
@@ -269,9 +272,11 @@ export async function POST(request: Request): Promise<Response> {
       priorPatientDialogue: payload.conversation
         .filter((message) => message.role === "patient")
         .map((message) => patientDialogueOnly(message.text)),
-      fallbackText: patientFactFallback(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
+      fallbackText: immediateResponse ?? patientFactFallback(disclosureState, payload.message, patientCase.supportingInfo.patientFacts ?? []),
       requiredFacts: turnRequiredFacts,
       validateAdditional: text => {
+        const closure = assessPatientClosure(text, payload.message);
+        if (!closure.valid) return closure;
         const canonical = assessCanonicalAssertions(text, patientCase.supportingInfo.patientFacts ?? [], { latestStudentMessage: payload.message });
         if (!canonical.valid) return canonical;
         return disclosureState.backgroundTurn ? assessBackgroundAnswer(text, disclosureState.backgroundTurn) : { valid: true };
@@ -369,7 +374,7 @@ export async function POST(request: Request): Promise<Response> {
         })
       : generatedResponseText;
     const patientMessageId = crypto.randomUUID();
-    const classificationResult = !outputRejectedByLanguageBackstop && shouldClassifyPatientQuestions(
+    const classificationResult = !isPatientConversationClosure(payload.message) && !outputRejectedByLanguageBackstop && shouldClassifyPatientQuestions(
       payload.caseId,
       questionContext.state,
     )

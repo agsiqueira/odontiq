@@ -3,6 +3,7 @@ import { assessPatientOutputIntegrity } from "./patientOutputGuard";
 import { assessPatientRole } from "./patientRoleGuard";
 import { assessBackgroundAnswer, type BackgroundTurn } from "./patientBackgroundTurn";
 import { assessCanonicalAssertions } from "./patientCanonicalAssertions";
+import { assessPatientClosure } from "./patientConversationClosure";
 
 export type FinalResponseValidationContext = {
   backgroundTurn?: BackgroundTurn;
@@ -14,6 +15,8 @@ export type FinalResponseValidationContext = {
 };
 
 export function validatePatientFinalResponse(text: string, context: FinalResponseValidationContext = {}) {
+  const closure = assessPatientClosure(text, context.latestStudentMessage);
+  if (!closure.valid) return closure;
   const role = assessPatientRole(text);
   if (!role.valid) return { valid: false, reason: role.matchedPattern };
   const canonical = assessCanonicalAssertions(text, context.canonicalFacts ?? context.visibleFacts ?? [], context);

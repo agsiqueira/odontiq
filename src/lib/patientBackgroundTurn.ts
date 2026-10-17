@@ -2,7 +2,7 @@ import type { PatientDisclosureFact } from "./patientDisclosure";
 import type { ConversationMessage } from "./conversationEngine";
 import { assertsHouseholdComposition, deniesCurrentDentist } from "./patientCanonicalAssertions";
 
-export type BackgroundConcept = "household" | "residence" | "residency" | "insurance" | "coverage_timing" | "dentist" | "child" | "shared_clinic" | "travel_capability" | "travel_willingness" | "payment_ability" | "payment_preference";
+export type BackgroundConcept = "household" | "residence" | "residency" | "insurance" | "coverage_timing" | "dentist" | "attendance" | "payment_activity" | "child" | "shared_clinic" | "travel_capability" | "travel_willingness" | "payment_ability" | "payment_preference";
 export type BackgroundRequest = { concept: BackgroundConcept; subject: "patient" | "daughter"; sourceId?: string; value: string; answer: string };
 export type BackgroundTurn = { requests: BackgroundRequest[]; clinicalRequested: boolean; shortAnswer?: "yes" | "no" };
 
@@ -48,6 +48,8 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     || /\bdentist\b.{0,30}\b(?:normally|usually|already|go to|see)\b/.test(q)
     || /\b(?:who handles|see someone|see a regular|established care with)\b/.test(q)
     || /\bdental (?:provider|professional)\b/.test(q) && /\b(?:have|see|own|regular|usual|normally|ongoing|already|return)\b/.test(q));
+  const attendance = /\b(?:regularly|routinely|how often|every (?:year|six months))\b/.test(q) && /\b(?:dentist|dental|visits?)\b/.test(q);
+  const paymentActivity = coverage && /\b(?:are you paying|do you pay|have you paid|out of pocket|self pay|paying for)\b/.test(q);
   const financial = !travel && /\b(?:afford\w*|pay\w*|fees?|charg\w*|cost\w*|copay\w*|money|contribute|income|sliding scale|free)\b/.test(q)
     && (!coverage || /\b(?:can you pay|could you pay|able to pay|afford|prefer|free|sliding|income|pay anything)\b/.test(q));
   const preference = financial && /\b(?:prefer\w*|free|no cost|sliding|income|focus|need)\b/.test(q);
@@ -76,6 +78,15 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     const own = find("regular_dentist");
     const access = facts.find(f => /\.(?:access|appointment-negative)$/.test(f.id) && /(?:\bno\b.{0,60}\bdentist|not have.*dentist)/i.test(f.text));
     add("dentist", "patient", own ?? access, own ? "has_dentist" : access ? "no_dentist" : "unknown", own ? "I have my own dentist and an appointment next week." : access ? "I don't have a dentist I can see now." : "I'm not sure about a regular dentist.");
+  }
+  if (attendance) {
+    const frequency = facts.find(f => /\b(?:regularly|routinely|every (?:year|six months))\b/i.test(f.text) && /\b(?:visits?|sees?|dentist)\b/i.test(f.text));
+    const noCurrentDentist = facts.find(f => /\.access$/.test(f.id) && /(?:not have.*dentist|no .{0,50}accessible dentist)/i.test(f.text));
+    add("attendance", "patient", frequency ?? noCurrentDentist, frequency ? "sourced" : noCurrentDentist ? "no_current" : "unknown", frequency?.text ?? (noCurrentDentist ? "I don't have a dentist I can see now." : "I'm not sure how often I've been going to the dentist."));
+  }
+  if (paymentActivity) {
+    const payment = facts.find(f => /\b(?:pays?|paid|paying)\b.{0,25}\b(?:out of pocket|for .*self)\b/i.test(f.text));
+    add("payment_activity", "patient", payment, payment ? "sourced" : "unknown", payment?.text ?? "I'm not sure about a payment arrangement.");
   }
   if (daughter && /\b(?:have|has|got)\b.{0,20}\b(?:young daughter|daughter|children|child)\b/.test(q) && (!coverage || /\band\b/.test(q))) add("child", "patient", family, family ? "daughter" : "unknown", family ? "I have a young daughter." : "I'm not sure about that.");
   if (shared || /\bwhere\b.{0,20}\bprefer\b.{0,25}\b(?:care|clinic)\b/.test(q) && family) add("shared_clinic", "patient", family, family ? "same_clinic" : "unknown", family ? "I'd prefer the same clinic for my daughter and me." : "I'm not sure about that preference.");
@@ -113,7 +124,7 @@ export function backgroundFallback(turn: BackgroundTurn): string {
 }
 
 export function backgroundPrompt(turn: BackgroundTurn): string {
-  return `Answer each requested concept about the indicated person, and only these background details: ${turn.requests.map(r => `${r.subject}: ${r.concept.replaceAll("_", " ")} — ${r.answer}`).join(" ")} Do not add names, towns, dates, transport modes, family arrangements, reasons for coverage loss, financial limits, or unrelated histories. Known facts must not become uncertainty. Unspecified details must remain unknown. Prefer a short natural answer; preserve the polarity of each part, including combined questions.`;
+  return `Answer each requested concept about the indicated person, and only these background details: ${turn.requests.map(r => `${r.subject}: ${r.concept.replaceAll("_", " ")} [${r.value === "unknown" ? "UNKNOWN" : "EXPLICIT SOURCE"}] — ${r.answer}`).join(" ")} A care preference is not existing clinic history, scheduling difficulty, or a child's dental condition. No insurance does not imply actual payments or a self-pay arrangement. Having a dentist/appointment does not imply regular attendance: never say yes to frequency without a source. Answer known portions directly, and separately say when an asked detail is unspecified. Do not add names, towns, dates, transport modes, family arrangements, coverage-loss reasons or unrelated histories. Preserve natural speech and the polarity of each part.`;
 }
 
 /** Conservative semantic checks. Ambiguous generations are retried, then use sourced fallback. */
@@ -134,7 +145,9 @@ export function assessBackgroundAnswer(text: string, turn: BackgroundTurn): { va
     && expressesRequest(s.split(/\bbut\b/)[0], turn.requests[0])
     && /\b(?:not sure|don't know|do not know)\b.{0,20}\b(?:if|whether)\b.{0,25}\b(?:can|could|would|will|meet|cover|treat|accept|provide)\b/.test(s)
     && !/\b(?:not sure|don't know|do not know)\b.{0,25}\b(?:prefer|want|easier|convenient)\b/.test(s);
-  if (known && !clinicCapabilityCaveat && /\b(?:not sure|don't know|do not know|never considered|depends on|have to think|hope so|haven't checked)\b/.test(s)) return { valid: false, reason: "uncertainty about known background facts" };
+  const scopedUnknown = turn.requests.some(r => r.value === "unknown" && (r.concept === "attendance" || r.concept === "payment_activity"))
+    && /\b(?:not sure|don't know|do not know|don't remember)\b.{0,30}\b(?:how often|frequency|regularly|payment|paying|arrangement)\b/.test(s);
+  if (known && !clinicCapabilityCaveat && !scopedUnknown && /\b(?:not sure|don't know|do not know|never considered|depends on|have to think|hope so|haven't checked)\b/.test(s)) return { valid: false, reason: "uncertainty about known background facts" };
   if (turn.requests.some(r => r.concept === "shared_clinic" && r.value === "same_clinic")
     && /\b(?:prefer|want)(?: to (?:use|go to)| using)? (?:a )?(?:separate|different) (?:clinic\w*|office\w*|dentist\w*)\b|\b(?:don't|do not) want (?:the |a )?(?:same|one) clinic\b/.test(s)) return { valid: false, reason: "contradictory shared-care preference" };
   // Personal specifics require explicit provenance, not mere plausibility.
@@ -157,6 +170,8 @@ function expressesRequest(s: string, r: BackgroundRequest): boolean {
   if (r.value === "unknown") return /\b(?:not sure|unsure|don't know|do not know|don't remember)\b/.test(s)
     && !/\b(?:i have|i can|i can't|i cannot|i will|i won't|i would|my)\b.{0,25}\b(?:car|reliable|ride|travel)\b/.test(s);
   switch (r.concept) {
+    case "attendance": return r.value === "no_current" ? deniesCurrentDentist(s) : r.value === "sourced" && s.includes(normalize(r.answer));
+    case "payment_activity": return r.value === "sourced" && s.includes(normalize(r.answer));
     case "household": return false; // Only an explicit unknown household answer is sourced above.
     case "residence": return s.includes(r.value.toLowerCase()) && !/\b(?:not|don't|do not)\b.{0,20}\blive\b/.test(s);
     case "residency": return /\b(?:not|haven't|have not)\b.{0,25}\bestablished?\b/.test(s) && !/\b(?:completed|already) established\b/.test(s);

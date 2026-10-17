@@ -46,7 +46,7 @@ async function main() {
   }
   for (const question of ["Do you see a dentist regularly?", "Are you established with your own dentist?", "Is your dentist your usual provider?"]) {
     const state = buildPatientDisclosureState({ caseData: c3, conversation: [], latestStudentMessage: question });
-    assert.deepEqual(state.backgroundTurn?.requests.map(r => r.concept), ["dentist"], question);
+    assert.deepEqual(state.backgroundTurn?.requests.map(r => r.concept), /regularly/.test(question) ? ["dentist", "attendance"] : ["dentist"], question);
     assert(!state.allowedThisTurn.some(f => /\.crown$|\.rct$|\.dental-work$/.test(f.id)), question);
   }
   for (const c of CASE_DATA) {
@@ -81,7 +81,7 @@ async function main() {
   await assert.rejects(fetchNavigatorWithGatewayRetry("https://example.invalid", {}, a => errors.push(a), { fetch: (async () => { throw new TypeError("network"); }) as typeof fetch }));
   assert.equal(errors.length, 1);
   assert.equal(errors[0].retryable, false);
-  writeFileSync("validation/v5/focused-replays.json", JSON.stringify({ checkedAt: new Date().toISOString(), baselineUnresolvedItems: baseline.length, replays, transportTests: "502/503/504 one retry, exhausted max2, no retry on auth/rate-limit/application/general errors/network exceptions; every attempt recorded" }, null, 2));
+  writeFileSync("validation/v6/prior-v5-focused-replays.json", JSON.stringify({ checkedAt: new Date().toISOString(), baselineUnresolvedItems: baseline.length, replays, transportTests: "502/503/504 one retry, exhausted max2, no retry on auth/rate-limit/application/general errors/network exceptions; every attempt recorded" }, null, 2));
   console.log(`V5 repair validation passed (${replays.length} V4 failure/review/rejection/setup replays, concept holdbacks, negative controls and bounded gateway retry tests).`);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });
