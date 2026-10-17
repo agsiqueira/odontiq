@@ -434,7 +434,9 @@ const inventedQuestion = await generatePatientRoleSafeResponse({
   retry: async () => "All right. What happens next?",
   allowPatientInitiatedQuestion: false,
 });
-assert.equal(inventedQuestion.text, SAFE_PATIENT_BASE_RESPONSE_FALLBACK);
+// V7 preserves the independently valid acknowledgment while withholding the question.
+assert.equal(inventedQuestion.text, "Okay.");
+assert.equal(inventedQuestion.repeatedDrift, false);
 assert.deepEqual(createEmptyPatientQuestionState().emittedQuestionIds, []);
 
 console.log("Patient-initiated question validation passed.");

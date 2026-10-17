@@ -1,8 +1,8 @@
 import { type PatientDisclosureFact } from "../patientDisclosure";
-import { interpretBackgroundTurn } from "../patientBackgroundTurn";
 import { isPatientConversationClosure } from "../patientConversationClosure";
 import { expressesRequiredFact } from "../patientOutputGuard";
 import type { ConversationMessage } from "../conversationEngine";
+import { PATIENT_QUESTION_CATALOG } from "./catalog";
 import type { PatientQuestionClassification } from "./types";
 
 /** Semantic classification is necessary, never sufficient: enforce scope and sourced evidence.
@@ -21,8 +21,11 @@ export function constrainQuestionClassification(input: {
     for (const event of Object.keys(result.detectedEvents)) result.detectedEvents[event as keyof typeof result.detectedEvents] = false;
     return result;
   }
-  const background = interpretBackgroundTurn(input.studentMessage, input.conversation, input.facts);
-  if (result.caseId === "case-04" && background && !background.clinicalRequested) {
+  // Case 4's prerequisite is a provider act, not a topic. Preserve the model's
+  // explicit act and verbatim current-message witness through final assembly.
+  if (result.caseId === "case-04" && (result.currentProviderAct !== "current_plan"
+    || !result.currentPlanEvidence?.trim()
+    || !input.studentMessage.includes(result.currentPlanEvidence))) {
     result.detectedEvents.painManagementOrDispositionDiscussed = false;
   }
   // A substantive current-pain description must express an actual sourced attribute,
@@ -37,4 +40,11 @@ export function constrainQuestionClassification(input: {
     if (!substantive) result.detectedEvents.patientPainDescribed = false;
   }
   return result;
+}
+
+/** The base answer never grants itself permission to ask. Only final state assembly adds questions. */
+export function patientAnswerWithoutQuestions(text: string): string {
+  let answer = text;
+  for (const question of PATIENT_QUESTION_CATALOG) answer = answer.replaceAll(question.text, "");
+  return answer.split(/(?<=[.!?])\s+/).filter(sentence => !sentence.includes("?")).join(" ").trim();
 }

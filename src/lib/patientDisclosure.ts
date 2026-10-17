@@ -119,7 +119,7 @@ const QUESTION_INTENT_PATTERNS: Record<string, RegExp> = {
   biting: /\b(bite|biting|chew|chewing|tap|tapping|pressure)\b/i,
   percussion: /\b(?:tap|tapping|percussion|percuss)\w*\b/i,
   gum_palpation: /\b(?:gum|gums|gingiva|area|here|this)\b.*\b(?:press|pressure|palpat|touch|tender)\w*\b|\b(?:press|pressure|palpat|touch|tender)\w*\b.*\b(?:gum|gums|gingiva|area|here|this)\b/i,
-  pain_quality: /\b(what.*feel|describe.*pain|quality|throbb|sharp|dull|aching)\b/i,
+  pain_quality: /\b(?:what.*feel\w*|describe.*pain|(?:describe|how).*\b(?:tooth|pain)\b.*feel\w*|quality|throbb|sharp|dull|aching)\b/i,
   pain_severity: /\b(how bad|how severe|severity|pain level|scale|rate|out of ten|\/10)\b/i,
   radiation: /\b(travel|radiat|spread anywhere|go anywhere|ear)\b/i,
   ibuprofen_tolerance: /\b(ibuprofen|advil|motrin|nsaid)\b.*\b(bother|upset|stomach|tolerat|reaction|contraindication|can (?:i|you) take|okay|safe)|\b(bother|upset|stomach|tolerat|reaction|contraindication|can (?:i|you) take|okay|safe)\b.*\b(ibuprofen|advil|motrin|nsaid)\b/i,
@@ -743,6 +743,10 @@ export function selectAllowedFacts({
       .slice(0, 2);
   }
 
+  // Descriptive pain prompts ask for known quality/current pattern, not hidden location.
+  if (caseId === "case-04" && classification.questionIntents.includes("pain_quality")) {
+    return facts.filter(f => ["c4.constant", "c4.biting"].includes(f.id));
+  }
   const caseSpecificFacts =
     classification.providerMessageIntent === "question"
       ? selectCaseSpecificAllowedFacts({
@@ -993,11 +997,11 @@ function selectCaseSpecificAllowedFacts({
 
   const normalizedQuestion = normalizeText(question);
   // Compose independently requested pain attributes before single-concept routing.
-  const asksQuality = /\b(?:feel like|describe.{0,25}pain|quality)\b/.test(normalizedQuestion);
+  const asksQuality = QUESTION_INTENT_PATTERNS.pain_quality.test(normalizedQuestion);
   const asksProvocation = /\b(?:what|which).{0,35}(?:makes?|make|worsens?|aggravat|triggers?)\b/.test(normalizedQuestion);
-  if (asksQuality && asksProvocation) return facts.filter(fact => ["c5.quality", "c5.cold", "c5.chewing"].includes(fact.id));
+  if (asksQuality) return facts.filter(fact => fact.id === "c5.quality" || asksProvocation && ["c5.cold", "c5.chewing"].includes(fact.id));
   if (/\b(?:what have you taken|what did you take|pain medicine|pain medication)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.med");
-  if (/\b(?:which|exact|what)\b.*\b(?:tooth|tooth number)\b|\bfirst molar\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.location");
+  if (isPatientPainLocationQuestion(question) || /\bexact (?:tooth|tooth number)\b|\bfirst molar\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.location");
   if (/\b(?:how often|frequency|number of doses|times a day)\b.*\b(?:ibuprofen|advil|motrin)\b|\b(?:ibuprofen|advil|motrin)\b.*\b(?:how often|frequency|times a day)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.ibuprofen-frequency-unknown");
   if (/\b(?:can|safe|safely|contraindication)\b.*\b(?:ibuprofen|advil|motrin)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.ibuprofen-suitable");
   if (/\b(?:opioid|opioids|opiate|opiates|narcotic|narcotics|prescription painkillers?)\b/.test(normalizedQuestion)) return facts.filter((fact) => fact.id === "c5.opioid-negative");

@@ -6,26 +6,31 @@ import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
 import { patientImmediateResponse } from '../src/lib/patientImmediateResponse';
 import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
 import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
-import { constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
+import { patientAnswerWithoutQuestions, constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
 import { applyPatientQuestionClassification } from '../src/lib/patientQuestions/stateMachine';
 import { createEmptyPatientQuestionState, type PatientQuestionClassification } from '../src/lib/patientQuestions/types';
 import { generatePatientRoleSafeResponse } from '../src/lib/patientRoleResponse';
 const facts=(id:string)=>loadCase(id)!.supportingInfo.patientFacts!;
 const classification=(id:string):PatientQuestionClassification=>({schemaVersion:1,caseId:id,analyzedStudentMessageId:'s',detectedEvents:{painManagementOrDispositionDiscussed:id==='case-04',patientPainDescribed:id==='case-05'},confidence:1,evidenceAliases:['student-current','patient-draft'],evidenceMessageIds:['s','p']});
-const qualify=(id:string,q:string,a:string)=>constrainQuestionClassification({classification:classification(id),studentMessage:q,patientResponse:a,conversation:[],facts:facts(id)});
+const qualify=(id:string,q:string,a:string,plan=false)=>constrainQuestionClassification({classification:{...classification(id),...(plan?{currentProviderAct:'current_plan' as const,currentPlanEvidence:q}:{})},studentMessage:q,patientResponse:a,conversation:[],facts:facts(id)});
 async function main(){
 const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:any)=>r.correctedVerdict==='FAIL');
 assert.equal(corrections.length,90);
 for(const r of corrections){const c=qualify(`case-${r.testId.slice(1,3)}`,r.question,r.actualResponse);assert.equal(applyPatientQuestionClassification({caseId:`case-${r.testId.slice(1,3)}`,classification:c}).selectedQuestionId,undefined,r.testId);}
 for(const [q,a] of [['Where do you live?','Duval County.'],['Could you pay a sliding-scale fee?',"I'm open to paying a sliding-scale fee."],["I'm looking into dental care options for you.",'Thank you for helping me find dental care.']])assert.equal(qualify('case-04',q,a).detectedEvents.painManagementOrDispositionDiscussed,false);
-for(const q of ['I will give you ibuprofen for pain and refer you to a dentist.','For now take pain medicine; see your dentist tomorrow.'])assert.equal(applyPatientQuestionClassification({caseId:'case-04',classification:qualify('case-04',q,'Thank you.')} ).selectedQuestionId,'c4-antibiotic-needed-question');
-for(const [q,a] of [['What brings you in?',"This tooth pain keeps waking me at night."],['What does it feel like?',"It's deep and throbbing."],['Where is it?',"My lower-left jaw hurts."]])assert.equal(applyPatientQuestionClassification({caseId:'case-05',classification:qualify('case-05',q,a)}).selectedQuestionId,'c5-antibiotic-request');
+for(const q of ['I will give you ibuprofen for pain and refer you to a dentist.','For now take pain medicine; see your dentist tomorrow.'])assert.equal(applyPatientQuestionClassification({caseId:'case-04',classification:qualify('case-04',q,'Thank you.',true)} ).selectedQuestionId,'c4-antibiotic-needed-question');
+for(const [q,a] of [['What does it feel like?',"It's throbbing."],['What brings you in?',"This tooth pain keeps waking me at night."],['What does it feel like?',"It's deep and throbbing."],['Where is it?',"My lower-left jaw hurts."]])assert.equal(applyPatientQuestionClassification({caseId:'case-05',classification:qualify('case-05',q,a)}).selectedQuestionId,'c5-antibiotic-request');
 assert.equal(applyPatientQuestionClassification({caseId:'case-05',classification:qualify('case-05','Who do you live with?',"I'm focused on this tooth pain.")}).selectedQuestionId,undefined);
+assert.equal(qualify('case-04',"I will give you ibuprofen. What county do you live in?",'Duval County.',true).detectedEvents.painManagementOrDispositionDiscussed,true);
+assert.equal(patientAnswerWithoutQuestions("I live in Duval County. Do I need an antibiotic?"),'I live in Duval County.');
+assert.equal(patientAnswerWithoutQuestions("It hurts. Can I get an antibiotic? It has helped in the past when I had a toothache."),'It hurts.');
+for(const [id,bad]of [['case-04','It feels sharp and throbbing.'],['case-05','It feels sharp and throbbing.']])assert(!validatePatientFinalResponse(bad,{canonicalFacts:facts(id)}).valid,bad);
+for(const id of ['case-04','case-05']){const q=id==='case-04'?'Describe how your tooth feels.':'What does your tooth pain feel like?';const state=buildPatientDisclosureState({caseData:loadCase(id)!,conversation:[],latestStudentMessage:q});assert(state.allowedThisTurn.some(f=>f.id===(id==='case-04'?'c4.biting':'c5.quality')));}
 const first=applyPatientQuestionClassification({caseId:'case-04',classification:qualify('case-04','Do you have insurance?',"I don't have insurance.")});
 assert.equal(first.state.emittedQuestionIds.length,0);
-const later=applyPatientQuestionClassification({caseId:'case-04',state:first.state,classification:qualify('case-04','We will give ibuprofen and arrange dental follow-up.','Okay.')});
+const later=applyPatientQuestionClassification({caseId:'case-04',state:first.state,classification:qualify('case-04','We will give ibuprofen and arrange dental follow-up.','Okay.',true)});
 assert.equal(later.selectedQuestionId,'c4-antibiotic-needed-question');
-assert.equal(applyPatientQuestionClassification({caseId:'case-04',state:later.state,classification:qualify('case-04','We will give ibuprofen.','Okay.')}).selectedQuestionId,undefined);
+assert.equal(applyPatientQuestionClassification({caseId:'case-04',state:later.state,classification:qualify('case-04','We will give ibuprofen.','Okay.',true)}).selectedQuestionId,undefined);
 assert.equal(qualify('case-04','Thank you for explaining that.','You are welcome.').detectedEvents.painManagementOrDispositionDiscussed,false);
 const old=JSON.parse(fs.readFileSync('validation/v6/results.json','utf8'));
 for(const id of ['C03-TARGET-6','C04-TARGET-6','C05-TARGET-6','C03-G09-H01','C01-G01-Q08']){

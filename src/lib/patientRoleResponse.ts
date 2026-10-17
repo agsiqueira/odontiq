@@ -1,3 +1,4 @@
+import { patientAnswerWithoutQuestions } from "./patientQuestions/eligibility";
 import { normalizePatientDialogueWithDiagnostics } from "./patientDialogue";
 import {
   assessPatientRole,
@@ -35,9 +36,8 @@ export async function generatePatientRoleSafeResponse({
 }): Promise<PatientRoleSafeResponse> {
   const prepare = (output: string) => {
     const normalized = normalizePatientDialogueWithDiagnostics(output);
-    if (!allowPatientInitiatedQuestion && requiredFacts.length > 0 && containsUnsolicitedQuestion(normalized.text)) {
-      const statements = normalized.text.split(/(?<=[.!?])\s+/)
-        .filter(sentence => !sentence.includes("?")).join(" ").trim();
+    if (!allowPatientInitiatedQuestion && containsUnsolicitedQuestion(normalized.text)) {
+      const statements = patientAnswerWithoutQuestions(normalized.text);
       // Keep a known factual answer only after independently validating it.
       // Approved patient questions are assembled by the state machine later.
       if (assessPatientRole(statements).valid

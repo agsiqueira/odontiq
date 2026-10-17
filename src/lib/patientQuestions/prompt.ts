@@ -139,8 +139,13 @@ Return exactly these top-level fields:
 - events: an object containing every allowed event name exactly once, each with a boolean value
 - confidence: a number from 0 to 1 representing confidence in the event determinations
 - evidence: an array containing only supplied short message aliases that support asserted true events
+${input.caseId === "case-04" ? `- currentProviderAct: exactly one of current_plan, history_or_symptom_question, background_screening, care_search_offer, explanation, other
+- currentPlanEvidence: a verbatim quote from student-current that actually gives a current pain-treatment or disposition/follow-up plan, or an empty string if none.
+A current_plan chooses a specific current treatment or follow-up action. An access-screening question, county for referral, acceptable fees or offering to look for options does not choose a plan. A symptom-history question is not a plan. Do not use patient-draft or prior context as the current plan witness.
+For a mixed turn that both gives a plan and asks a background question, currentProviderAct may be current_plan; quote the actual plan portion only.
+Only current_plan with a nonempty valid quote can support painManagementOrDispositionDiscussed=true.` : ""}
 
-Do not return message IDs. Do not add fields or event names.
+Do not return message IDs. Do not add fields other than those specified for this case or add event names.
 
 Allowed event definitions for this request:
 ${eventDefinitions}`,

@@ -57,7 +57,7 @@ export function expressesRequiredFact(response: string, fact: PatientDisclosureF
   }
   const rules: Readonly<Record<string, RegExp>> = {
     "c5.constant": /\b(?:constant|all the time|won't go away|doesn't go away)\b/i,
-    "c5.quality": /\bdeep\b.{0,25}\bthrobbing\b|\bthrobbing\b.{0,25}\bdeep\b/i,
+    "c5.quality": /\b(?:deep|throbbing)\b/i,
     "c5.severity": /\b(?:nine|9)\s*(?:\/|out of)\s*(?:ten|10)\b|^\s*(?:nine|9)[.!]?\s*$|\bsevere\b/i,
     "c5.spontaneous": /\b(?:spontaneous|on its own|without (?:a )?(?:trigger|reason)|starts? (?:by )?itself)\b/i,
     "c5.nocturnal": /\b(?:wak\w*|sleep\w*|night)\b/i,

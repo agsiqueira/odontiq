@@ -483,6 +483,7 @@ export async function POST(request: Request): Promise<Response> {
         behaviorCandidate: behavioralResponse?.text ?? null,
         presentationAssessment: validatePatientFinalResponse(presentationText, finalValidationContext),
         baseResponse: finalResponseText,
+        questionClassification: classificationResult ?? null,
       } } : {}),
     });
   } catch (error) {

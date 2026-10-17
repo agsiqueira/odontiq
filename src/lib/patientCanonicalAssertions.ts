@@ -37,6 +37,13 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
     && deniesCurrentDentist(assertions)) return reject("canonical contradiction: existing dentist");
   if (!facts.some(f => /household/.test(f.id))
     && assertsHouseholdComposition(originalClauses.join(" "))) return reject("unsupported household composition");
+  // Attribute provenance, independent of which question or route produced this text.
+  // Quality vocabulary describes clinical attributes, not a list of question/answer patches.
+  const qualityWords = ["sharp", "throbbing", "deep", "dull", "burning", "stabbing", "shooting"];
+  if (/\b(?:pain|hurts?|ache|feels?)\b/.test(assertions)) {
+    const unsupportedQuality = qualityWords.find(word => new RegExp(`\\b${word}\\b`).test(assertions) && !new RegExp(`\\b${word}\\b`).test(corpus));
+    if (unsupportedQuality) return reject(`unsupported pain quality: ${unsupportedQuality}`);
+  }
   const hasDaughter = facts.some(f => /\bdaughter\b/i.test(f.text));
   if (!hasDaughter && /\bmy daughter\b|\bi have (?:a |one |a young )?(?:daughter|child)\b/.test(assertions)) return reject("unsupported family composition");
   const dentalContext = /\b(?:dentist|dental provider|dental professional|dental care)\b/i.test(`${context.latestStudentMessage ?? ""} ${assertions}`);
@@ -58,8 +65,14 @@ export function assessCanonicalAssertions(text: string, facts: readonly PatientD
     && /\b(?:about|around|approximately) (?:a|one|1|twelve|12) (?:year|months?)\b/.test(assertions)) return reject("unsupported precise coverage-loss interval");
   const daughterHasProvider = facts.some(f => /\bdaughter\b.{0,50}\b(?:has (?:her own |a regular )?dentist|sees? (?:her |a )?dentist|attends? (?:a |the )?clinic)\b/i.test(f.text));
   if (!daughterHasProvider && /\b(?:clinic|office|practice|provider|dentist)\b.{0,15}\bas (?:my )?daughter's\b|\b(?:stick|stay|continue|keep)\b.{0,20}\b(?:with|using|seeing)\b.{0,20}\b(?:same|our)\b.{0,15}\b(?:clinic|provider|dentist)\b/.test(assertions)) return reject("unsupported presupposed shared or child provider");
-  const childCondition = /\b(?:my daughter|her teeth|my daughter's teeth|she)\b.{0,30}\b(?:needs? (?:more attention|treatment|a filling|dental work)|has (?:a toothache|cavities|dental problems)|hurts?|pain)\b/.test(assertions);
-  if (childCondition && !/\bdaughter\b.{0,70}\b(?:toothache|cavities|dental problems|needs? (?:treatment|more attention|dental work))\b/.test(corpus)) return reject("unsupported child dental condition");
+  const childCondition = originalClauses.some(clause => {
+    const c = clause.toLowerCase();
+    return /\b(?:my daughter(?:'s teeth)?|her teeth|she)\b.{0,60}\b(?:needs?|has|have|is|are|hurts?)\b/.test(c)
+      && /\b(?:teeth|tooth|dental (?:problems|condition|work|treatment)|cavities|pain|attention|check[- ]?up)\b/.test(c)
+      && !/\b(?:not sure|don't know|do not know|don't remember|prefer|would like|important to me)\b/.test(c);
+  });
+  const childConditionSource = facts.some(f => /\bdaughter\b/i.test(f.text) && /\b(?:toothache|cavities|dental problems|needs? treatment|dental work|needs? more attention)\b/i.test(f.text));
+  if (childCondition && !childConditionSource) return reject("unsupported child dental condition");
   if (!daughterHasProvider && (/\b(?:my daughter|she)\b[^.!?]{0,80}\b(?:sees?|attends?|go(?:es)? to|receives? care at|gets? care at)\b[^.!?]{0,35}\b(?:dentist|dental provider|clinic|office|practice)\b/.test(assertions)
     || /\b(?:my daughter|she)\b[^.!?]{0,35}\bhas (?:a |her |her own |a regular |an appointment (?:with|at) (?:a |the )?)(?:dentist|clinic|dental provider|dental office)\b/.test(assertions)
     || /\bmy daughter's (?:dentist|clinic|dental provider|dental office)\b/.test(assertions))) return reject("unsupported child provider or clinic history");

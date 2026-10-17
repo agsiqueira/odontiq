@@ -1,5 +1,5 @@
 import "server-only";
-import { constrainQuestionClassification } from "@/lib/patientQuestions/eligibility";
+import { constrainQuestionClassification, patientAnswerWithoutQuestions } from "@/lib/patientQuestions/eligibility";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import { assertPatientFinalResponse } from "@/lib/patientFinalResponse";
 import { loadCase } from "@/data/cases";
@@ -116,9 +116,10 @@ export class PatientQuestionService {
           where: { encounterId: input.encounterId },
         });
         const previous = parseState(storedState?.state);
+        const baseAnswer = patientAnswerWithoutQuestions(input.baseResponse);
         const groundedClassification = input.classification && input.questionEvidence
           ? constrainQuestionClassification({ classification: input.classification, ...input.questionEvidence,
-              patientResponse: input.baseResponse, facts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [] })
+              patientResponse: baseAnswer, facts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [] })
           : undefined;
         const transition = groundedClassification
           ? applyPatientQuestionClassification({
@@ -149,8 +150,8 @@ export class PatientQuestionService {
           ? input.questionText(selectedQuestionId)
           : undefined;
         const responseText = questionText
-          ? `${input.baseResponse.trim()} ${questionText}`.trim()
-          : input.baseResponse.trim();
+          ? `${baseAnswer} ${questionText}`.trim()
+          : baseAnswer;
         // Validate after every addition, before any state or dialogue writes.
         assertPatientFinalResponse(responseText, {
           canonicalFacts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [],

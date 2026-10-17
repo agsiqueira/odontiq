@@ -55,7 +55,7 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     && (!coverage || /\b(?:can you pay|could you pay|able to pay|afford|prefer|free|sliding|income|pay anything)\b/.test(q));
   const preference = financial && /\b(?:prefer\w*|free|no cost|sliding|income|focus|need)\b/.test(q);
   // A care-search offer is an acknowledgment/preference turn, not a new history disclosure.
-  const careSearchOffer = !/\?\s*$/.test(q) && /\b(?:i|we)\b.{0,35}\b(?:look\w*|search\w*|explor\w*|find\w*)\b.{0,45}\b(?:care|clinic|dentist|options?)\b/.test(q);
+  const careSearchOffer = !/\?\s*$/.test(q) && /\b(?:i|we)\b.{0,35}\b(?:look\w*|search\w*|explor\w*|find\w*)\b.{0,45}\b(?:care|clinics?|dentists?|options?)\b/.test(q);
   const providerIdentity = dentist && !daughter && /\b(?:who|name)\b/.test(q);
   const requests: BackgroundRequest[] = [];
   const add = (concept: BackgroundConcept, subject: BackgroundRequest["subject"], source: PatientDisclosureFact | undefined, value: string, answer: string) => {
