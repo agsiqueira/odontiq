@@ -40,18 +40,21 @@ assert.equal(apply(classified("Thank you for explaining that.")).selectedQuestio
 for (const quote of [definitive.quote,"The affected tooth must come out.","You still require removal of the source tooth.","Root canal treatment remains necessary."]) {
   const provider={name:"fixture",generateText:async(input)=>{
     assert.deepEqual(JSON.parse(input.messages[0].content),{currentProviderMessage:quote});
-    return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:true,quote},confidence:1})};
+    return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:true,quote},confidence:1})};
   }} as AIProvider;
   assert.deepEqual(await verifyCase3Explanations(provider,quote,"current"),{definitive:{messageId:"current",quote}});
 }
 for (const output of [
-  {temporary:{explained:false,quote:""},definitive:{explained:true,quote:"invented extraction"},confidence:1},
-  {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:0.2},
-  {temporary:{explained:false,quote:""},definitive:{explained:true,quote:""},confidence:1},
+  {temporary:{explained:false,quote:""},definitive:{required:true,quote:"invented extraction"},confidence:1},
+  {temporary:{explained:false,quote:""},definitive:{required:true,quote:bare},confidence:0.2},
+  {temporary:{explained:false,quote:""},definitive:{required:true,quote:""},confidence:1},
 ]) await assert.rejects(verifyCase3Explanations({name:"fixture",generateText:async()=>({text:JSON.stringify(output)})},bare,"current"));
+assert.deepEqual(await verifyCase3Explanations({name:"fixture",generateText:async()=>({text:JSON.stringify({
+  temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:0.2,
+})})},bare,"current"),{},"no accepted reasons cannot suppress an independently eligible question");
 console.log("Case3 evidence isolation, verbatim witnesses, independent reasons, durable state, legacy flags, closure and once-only checks passed.");
 const configuredVerifier = process.env.NAVIGATOR_EXPLANATION_MODEL ?? "llama-3.3-70b-instruct";
 await verifyCase3Explanations({name:"navigator",generateText:async input=>{
   assert.equal(input.model,configuredVerifier,"independent verifier uses explicit task model, not the patient model");
-  return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
+  return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
 }},bare,"current");

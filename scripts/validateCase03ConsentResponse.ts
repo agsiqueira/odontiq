@@ -30,6 +30,8 @@ const positiveMessages = [
   "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
   "I’d like to numb the area and drain the abscess so the pressure can be released. Do you agree?",
   "We need to make a small opening and allow the pus to drain. Are you comfortable proceeding?",
+  "I recommend an I&D for the abscess. Is that okay?",
+  "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
 ] as const;
 
 for (const message of positiveMessages) {
@@ -108,7 +110,7 @@ const classified = await classifyPatientQuestionTrigger({
     name: "case-03-consent-validator",
     generateConversationResponse: async () => ({ text: "unused" }),
     generateText: async ({ messages, systemPrompt }) => {
-      if (systemPrompt.startsWith("Decide whether the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
+      if (systemPrompt.startsWith("Decide whether the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
       assert(messages[0]?.content.includes(clearProposal));
       assert(messages[0]?.content.includes(draftAgreement));
       return {
