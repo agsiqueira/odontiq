@@ -26,6 +26,10 @@ export function assessClinicalPlanWitness(message: string, quote: string | undef
     if (!action || /\b(?:might|would|could|consider|looking|searching|exploring)\b/.test(action)) continue;
     const recommendation = /^(?:recommend|advise|suggest|propose)\b/.test(action);
     action = action.replace(/^(?:recommend|advise|suggest|propose)\s+(?:(?:that )?you\s+)?/, "");
+    // Check the action's direct object, not a clinical noun inside a financial
+    // purpose phrase. A fee modifier after an actual referral is not the object.
+    const directObject = action.replace(/^(\w+)\s+for\s+/, "$1 ").split(/\b(?:for|to|with|at|through)\b/)[0];
+    if (/\b(?:payments?|fees?|costs?|insurance|coverage|money|funds|billing)\b/.test(directObject)) continue;
     const medicine = /\b(?:ibuprofen|acetaminophen|paracetamol|naproxen|analgesi\w*|pain (?:medicine|medication|relief|control))\b/;
     const medicationAction = /^(?:take|use|give|giving|prescribe|prescribing|start|starting|provide|providing|manage|managing|treat|treating|control|controlling)\b/.test(action)
       && (medicine.test(action) || /\b(?:your |the )?pain\b/.test(action));

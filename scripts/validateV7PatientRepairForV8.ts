@@ -42,7 +42,7 @@ const later=applyPatientQuestionClassification({caseId:'case-04',state:first.sta
 assert.equal(later.selectedQuestionId,'c4-antibiotic-needed-question');
 assert.equal(applyPatientQuestionClassification({caseId:'case-04',state:later.state,classification:qualify('case-04','We will give ibuprofen.','Okay.',true)}).selectedQuestionId,undefined);
 assert.equal(qualify('case-04','Thank you for explaining that.','You are welcome.').detectedEvents.painManagementOrDispositionDiscussed,false);
-const old=JSON.parse(fs.readFileSync('validation/v8/results.json','utf8')) as {testId:string;caseId:string;question:string;finalResponse:string}[];
+const old=JSON.parse(fs.readFileSync('validation/v6/results.json','utf8')) as {testId:string;caseId:string;question:string;finalResponse:string}[];
 for(const id of ['C03-TARGET-6','C04-TARGET-6','C05-TARGET-6','C03-G09-H01','C01-G01-Q08']){
 const r=old.find(r=>r.testId===id)!,c=loadCase(r.caseId)!;const state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:r.question});const good=patientImmediateResponse({caseId:r.caseId,message:r.question,disclosureState:state});assert(good,id);const context={canonicalFacts:facts(r.caseId),backgroundTurn:state.backgroundTurn,latestStudentMessage:r.question};assert(validatePatientFinalResponse(good,context).valid,`${id} ${good}`);if(id!=='C01-G01-Q08')assert(!validatePatientFinalResponse(r.finalResponse,context).valid,id);
 const final=await generatePatientRoleSafeResponse({initialOutput:r.finalResponse,retry:async()=>r.finalResponse,fallbackText:good,validateAdditional:t=>validatePatientFinalResponse(t,context),allowPatientInitiatedQuestion:false});assert(validatePatientFinalResponse(final.text,context).valid,id);

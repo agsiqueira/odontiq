@@ -1,3 +1,4 @@
+import { patientRequestedText } from "./providerTurnScopes";
 import type { CaseData } from "../data/cases";
 import type { ConversationMessage } from "./conversationEngine";
 import { isTreatmentConsentRequest } from "./case3ConsentResponse";
@@ -57,6 +58,7 @@ export type InternalFact = PatientDisclosureFact & {
 const RESIDENCE_QUESTION_PATTERN = /\b(?:residen(?:ce|cy|t)|where (?:do you |are you )?(?:live|living)|where are you from|(?:live|living|reside|home)\b[^.!?]{0,45}\bcounty|county\b[^.!?]{0,45}\b(?:live|living|reside|home))\b/i;
 
 export function isPatientPainSeverityQuestion(question: string): boolean {
+  question = patientRequestedText(question);
   const normalized = normalizeText(question);
   const financialContext = /\b(?:sliding scale|fees?|payments?|pay(?:ing)?|costs?|prices?|afford|insurance|coverage)\b/.test(normalized);
   const clinicalContext = /\b(?:pain|hurts?|hurting|toothache|symptoms?|out of ten|out of 10)\b/.test(normalized);
@@ -345,14 +347,15 @@ export function buildPatientDisclosureState({
 }): PatientDisclosureState {
   const facts = extractPatientFacts(caseData);
   const disclosedFactIds = inferDisclosedFactIds({ facts, conversation });
-  const latestClassification = classifyQuestion(latestStudentMessage);
-  const backgroundTurn = interpretBackgroundTurn(latestStudentMessage, conversation, facts);
+  const requestedMessage = patientRequestedText(latestStudentMessage);
+  const latestClassification = classifyQuestion(requestedMessage);
+  const backgroundTurn = interpretBackgroundTurn(requestedMessage, conversation, facts);
   const selectedFacts = selectAllowedFacts({
     caseId: caseData.metadata.id,
     facts,
     classification: latestClassification,
     disclosedFactIds,
-    question: latestStudentMessage,
+    question: requestedMessage,
   });
   const sourceIds = new Set(backgroundTurn?.requests.map(request => request.sourceId));
   const allowedFacts = backgroundTurn
@@ -360,7 +363,7 @@ export function buildPatientDisclosureState({
       ...selectedFacts.filter(fact => fact.id.endsWith(".background-transportation-unknown")),
       ...facts.filter(fact => /\.access$/.test(fact.id) && /cannot afford|inability to pay/i.test(fact.text) && backgroundTurn.requests.some(request => request.concept === "payment_ability")),
       ...facts.filter(fact => /\.access$/.test(fact.id) && fact.questionIntents.includes("background_insurance") && backgroundTurn.requests.some(request => request.concept === "insurance" && request.subject === "patient")),
-      ...(backgroundTurn.clinicalRequested || /\bappointment\b/i.test(latestStudentMessage) && !backgroundTurn.requests.some(request => request.concept.startsWith("travel")) ? selectedFacts.filter(fact => !fact.id.includes(".background-")) : [])]
+      ...(backgroundTurn.clinicalRequested || /\bappointment\b/i.test(requestedMessage) && !backgroundTurn.requests.some(request => request.concept.startsWith("travel")) ? selectedFacts.filter(fact => !fact.id.includes(".background-")) : [])]
     : selectedFacts;
   if (backgroundTurn) allowedFacts.sort((left, right) => Number(left.id.includes(".background-")) - Number(right.id.includes(".background-")) || left.order - right.order);
   const uniqueAllowedFacts = allowedFacts.filter((fact, index) => allowedFacts.findIndex(candidate => candidate.id === fact.id) === index);

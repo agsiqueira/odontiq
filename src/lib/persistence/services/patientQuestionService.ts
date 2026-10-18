@@ -151,7 +151,7 @@ export class PatientQuestionService {
         const questionText = selectedQuestionId
           ? input.questionText(selectedQuestionId)
           : undefined;
-        if (selectedQuestionId && !questionText) throw new Error("Selected patient question has no renderable text.");
+        if (selectedQuestionId && !questionText?.trim()) throw new Error("Selected patient question has no renderable text.");
         const responseText = questionText
           ? `${baseAnswer} ${questionText}`.trim()
           : baseAnswer;

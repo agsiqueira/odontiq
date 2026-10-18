@@ -1,3 +1,4 @@
+import { patientRequestedText } from "./providerTurnScopes";
 import { isPatientPainLocationQuestion, isPatientPainSeverityQuestion, type PatientDisclosureState } from "./patientDisclosure";
 
 export function requiredFactsForTurn(
@@ -5,6 +6,7 @@ export function requiredFactsForTurn(
   studentMessage: string,
   canonicalFacts: PatientDisclosureState["allowedThisTurn"] = [],
 ): PatientDisclosureState["allowedThisTurn"] {
+  studentMessage = patientRequestedText(studentMessage);
   // The shared contract checks background completeness. Clinical keyword checks
   // must not require tooth location or symptom duration for background questions.
   if (disclosureState.backgroundTurn && !disclosureState.backgroundTurn.clinicalRequested) return disclosureState.allowedThisTurn.filter(fact => fact.id.includes(".background-")

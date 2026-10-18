@@ -1,3 +1,4 @@
+import { patientRequestedText } from "./providerTurnScopes";
 import { PATIENT_QUESTION_CATALOG } from "./patientQuestions/catalog";
 import type { PatientDisclosureFact } from "./patientDisclosure";
 import type { ConversationMessage } from "./conversationEngine";
@@ -11,7 +12,7 @@ const normalize = (text: string) => text.toLowerCase().replace(/[’‘]/g, "'")
 
 /** A turn contract, not a question/answer table. Values come only from canonical facts. */
 export function interpretBackgroundTurn(message: string, conversation: readonly ConversationMessage[], facts: readonly PatientDisclosureFact[]): BackgroundTurn | undefined {
-  const q = normalize(message);
+  const q = normalize(patientRequestedText(message));
   const context = normalize(conversation.slice(-6).map(turn => turn.text).join(" "));
   const daughter = /\b(?:daughter'?s?|child|children)\b/.test(q) || (/\b(?:she|her|both|you two|same clinic|together)\b/.test(q) && /\b(?:daughter|child)\b/.test(context));
   const medicalLiving = /\b(?:live|living) with\b.{0,20}\b(?:pain|diabetes|hypertension|illness|disease)\b/.test(q);
