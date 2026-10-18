@@ -614,6 +614,36 @@
       "cohort": "production-smoke",
       "groupId": "SMOKE",
       "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C4-CHILD-UNKNOWN",
+      "caseId": "case-04",
+      "question": "Does your daughter have a toothache?",
+      "expectedMeaning": "Unspecified family/condition: scoped uncertainty without affirming a daughter or giving adult pain history.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C3-CHILD-COMPOUND",
+      "caseId": "case-03",
+      "question": "Does your daughter have Medicaid, and does she have a toothache?",
+      "expectedMeaning": "Known daughter Medicaid plus unknown child condition, no adult symptom dump.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C3-CONDITIONAL-PREF",
+      "caseId": "case-03",
+      "question": "Would you prefer the same clinic if your daughter needed a filling?",
+      "expectedMeaning": "Supported preference; hypothetical filling is not an established child condition.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
     }
   ]
 }

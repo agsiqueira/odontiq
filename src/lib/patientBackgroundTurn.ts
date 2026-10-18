@@ -78,9 +78,9 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
     if (!daughter && timing) add("coverage_timing", "patient", insurance, /lost Medicaid within the past year/i.test(insurance?.text ?? "") ? "past_year" : "unknown", /lost Medicaid within the past year/i.test(insurance?.text ?? "") ? "I lost Medicaid within the past year." : "I'm not sure about that coverage history.");
     else if (!daughter && !/\beven if\b/.test(q)) add("insurance", "patient", insurance, /uninsured/i.test(insurance?.text ?? "") ? "uninsured" : "unknown", insurance ? "I don't have insurance." : "I'm not sure about my coverage.");
   }
-  if (daughter && !shared && !careSearchOffer && /\b(?:teeth|tooth|pain|cavities|condition|problems?|treatment|needs?)\b/.test(q)) {
+  if (daughter && !shared && !careSearchOffer && /\b(?:teeth|tooth\w*|pain|cavities|condition|problems?|treatment|needs?)\b/.test(q)) {
     const condition = facts.find(f => /\bdaughter\b/i.test(f.text) && /\b(?:cavities|toothache|dental problems|needs? treatment|dental work)\b/i.test(f.text));
-    add("child_condition", "daughter", condition, condition ? "sourced" : "unknown", condition?.text ?? "I'm not sure about my daughter's dental condition.");
+    add("child_condition", "daughter", condition, condition ? "sourced" : "unknown", condition?.text ?? (family ? "I'm not sure about my daughter's dental condition." : "I'm not sure about that dental condition."));
   }
   if (dentist && daughter) {
     const childProvider = facts.find(f => /\bdaughter\b/i.test(f.text) && /\b(?:has|sees|attends)\b.{0,30}\b(?:dentist|clinic|provider)\b/i.test(f.text));
@@ -125,7 +125,8 @@ export function interpretBackgroundTurn(message: string, conversation: readonly 
   }
   if (!requests.length) return undefined;
   // Background nouns such as 'dental' do not create clinical requests.
-  const clinicalRequested = /\b(?:pain|hurts?|swelling|fever|symptoms?|medicines?|medications?|allerg\w*|toothache)\b/.test(q) && !travel;
+  const childOnlyClinical = requests.some(r => r.concept === "child_condition") && !/\byour (?:own )?(?:tooth|teeth|pain|jaw|mouth|symptoms?)\b|\byou\b.{0,25}\b(?:pain|hurt\w*|symptoms?)\b/.test(q);
+  const clinicalRequested = !childOnlyClinical && /\b(?:pain|hurts?|swelling|fever|symptoms?|medicines?|medications?|allerg\w*|toothache)\b/.test(q) && !travel;
   const single = requests.length === 1 && !clinicalRequested ? requests[0] : undefined;
   const negativeCoverage = /\buninsured\b|\bwithout\b|\bno (?:dental )?(?:insurance|coverage)\b/.test(q);
   const coverageAlternatives = /\bor\b/.test(q) && /\b(?:uninsured|without|none)\b|\bno (?:dental )?(?:insurance|coverage)\b/.test(q);

@@ -5,6 +5,8 @@ import { buildPatientDisclosureState, type PatientDisclosureFact } from '../src/
 import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
 import { patientImmediateResponse, planOnlyAcknowledgment } from '../src/lib/patientImmediateResponse';
 import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
+import { patientFactFallback, patientFactSentence } from '../src/lib/patientFactFallback';
+import { assessCanonicalAssertions } from '../src/lib/patientCanonicalAssertions';
 import { expressesRequiredFact } from '../src/lib/patientOutputGuard';
 import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
 import { patientAnswerWithoutQuestions, constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
@@ -19,6 +21,9 @@ assert.equal(planOnlyAcknowledgment({intent:'disposition_plan',hasGovernedAnswer
 for(const intent of ['question','closing','other'] as const)assert.equal(planOnlyAcknowledgment({intent,hasGovernedAnswer:false,requiredFacts:[]}),undefined);
 assert.equal(planOnlyAcknowledgment({intent:'treatment_plan',hasGovernedAnswer:true,requiredFacts:[]}),undefined);
 assert.equal(planOnlyAcknowledgment({intent:'medication_plan',hasGovernedAnswer:false,requiredFacts:[{id:'supported-answer'}]}),undefined);
+assert.equal(patientFactSentence('The patient was nervous.'),'I was nervous.');
+assert.equal(patientFactSentence('The pain wakes the patient at night.'),'The pain wakes me at night.');
+assert.equal(patientFactSentence('The last dental visit was five years ago; the patient has a history of cavities.'),'The last dental visit was five years ago; I have a history of cavities.');
 const corrections=JSON.parse(fs.readFileSync('validation/v6/baseline-grading-corrections.json','utf8')).corrections.filter((r:{correctedVerdict:string})=>r.correctedVerdict==='FAIL');
 assert.equal(corrections.length,90);
 for(const r of corrections){const c=qualify(`case-${r.testId.slice(1,3)}`,r.question,r.actualResponse);assert.equal(applyPatientQuestionClassification({caseId:`case-${r.testId.slice(1,3)}`,classification:c}).selectedQuestionId,undefined,r.testId);}
@@ -58,6 +63,24 @@ for(const question of ['Where does it hurt?','Is it on the right or left?','Whic
 for(const fact of facts('case-05').filter(f=>/^c5\.(?:location|duration|constant|quality|severity|spontaneous|nocturnal|cold|lingering|chewing|biting)$/.test(f.id)))assert(expressesRequiredFact(fact.text,fact), `Canonical positive attribute rejected: ${fact.id}`);
 const bitingFact=facts('case-05').find(f=>f.id==='c5.biting')!;
 for(const text of ['There is a little discomfort when I bite or tap the tooth.','Tapping causes slight discomfort.'])assert(expressesRequiredFact(text,bitingFact),text);
+for(const text of ['My daughter needs a filling.','She has a toothache.','She needs treatment.',"I'm not sure, but my daughter has cavities.","I'd prefer the same clinic because my daughter has cavities."])assert(!assessCanonicalAssertions(text,facts('case-03')).valid,text);
+for(const text of ["I'm not sure whether my daughter has cavities.","I'd prefer the same clinic because my daughter has Medicaid.","Her teeth are important to me.","We both need good care."])assert(assessCanonicalAssertions(text,facts('case-03')).valid,text);
+assert(!assessCanonicalAssertions('It just comes and goes on its own.',facts('case-05')).valid,'Spontaneous does not establish intermittent pain');
+assert(assessCanonicalAssertions("It doesn't come and go; it's constant.",facts('case-05')).valid);
+for(const question of ['Does it hurt when you bite or tap the tooth?','What makes the pain worse?','Does the pain happen on its own without touching the tooth?']){
+ const c=loadCase('case-05')!,state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:question});
+ const required=requiredFactsForTurn(state,question,facts('case-05'));const fallback=patientFactFallback(state,question,facts('case-05'));
+ assert(fallback,question);const context={canonicalFacts:facts('case-05'),visibleFacts:state.allowedThisTurn,requiredFacts:required,latestStudentMessage:question};
+ assert(validatePatientFinalResponse(fallback,context).valid,`${question} fallback: ${fallback}`);
+ const response=await generatePatientRoleSafeResponse({initialOutput:'It comes and goes.',retry:async()=> 'It comes and goes.',fallbackText:fallback,visibleFacts:state.allowedThisTurn,requiredFacts:required,validateAdditional:t=>validatePatientFinalResponse(t,context),allowPatientInitiatedQuestion:false});
+ assert.equal(response.text,fallback);assert(validatePatientFinalResponse(response.text,context).valid);
+}
+for(const id of ['case-03','case-04']){
+ const q='Does your daughter have a toothache?',c=loadCase(id)!,state=buildPatientDisclosureState({caseData:c,conversation:[],latestStudentMessage:q});
+ assert.equal(state.backgroundTurn?.clinicalRequested,false,'Child-only clinical question is not an adult clinical question');
+ const reply=patientImmediateResponse({caseId:id,message:q,disclosureState:state});assert(reply);assert(validatePatientFinalResponse(reply,{canonicalFacts:facts(id),backgroundTurn:state.backgroundTurn,latestStudentMessage:q}).valid,`${id} ${reply}`);
+ if(id==='case-04')assert(!reply.includes('my daughter'));
+}
 const coldFact=facts('case-05').find(f=>f.id==='c5.cold')!;
 const lingerFact=facts('case-05').find(f=>f.id==='c5.lingering')!;
 assert(!validatePatientFinalResponse('The pain lingers after I remove the cold drink.',{canonicalFacts:facts('case-05'),visibleFacts:[coldFact,lingerFact],requiredFacts:[coldFact,lingerFact]}).valid,'Cold/pain co-occurrence is not an assertion that cold worsens pain');

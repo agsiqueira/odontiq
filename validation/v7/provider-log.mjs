@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-const file='dev-output/v7-server.log';
+const file=process.argv[2]??'dev-output/v7-server.log';
+const output=process.argv[3]??'validation/v7/provider-http-log.json';
 const text=fs.readFileSync(file,'utf8').replace(/\x1b\[[0-9;]*m/g,'');
 const attempts=[];
 const ordinals=new Map();
@@ -16,6 +17,6 @@ const groups=[...new Set(attempts.map(a=>`${a.operationId}#${a.generation}`))].m
 const retryGroups=groups.filter(g=>g.attempts.length>1);
 const violations=groups.filter(g=>g.attempts.length>2||g.attempts[0].attempt!==1||g.attempts.some((a,i)=>a.attempt!==i+1)||g.attempts.length>1&&![502,503,504].includes(g.attempts[0].status));
 const result={capturedAt:new Date().toISOString(),privateSource:file,method:'Safe field parsing of dedicated navigator_http_attempt log objects; no eval, credentials, prompts or response content. Repeated attempt1 with the same request ID starts a distinct corrective generation.',attempts,summary:{httpAttempts:attempts.length,generationOperations:groups.length,retryOperations:retryGroups.length,recoveredAfterGatewayFailure:retryGroups.filter(g=>g.attempts.at(-1).status===200).length,httpStatusCounts:Object.fromEntries([...new Set(attempts.map(a=>String(a.status)))].map(s=>[s,attempts.filter(a=>String(a.status)===s).length])),violations},retryGroups};
-fs.writeFileSync('validation/v7/provider-http-log.json',JSON.stringify(result,null,2));
+fs.writeFileSync(output,JSON.stringify(result,null,2));
 console.log(result.summary);
 if(violations.length)process.exitCode=1;
