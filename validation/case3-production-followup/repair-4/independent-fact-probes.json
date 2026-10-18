@@ -1,0 +1,150 @@
+[
+  {
+    "label": "repair-5-independent-fact-probe",
+    "kind": "temporary",
+    "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-b10acdc34165f4cb",
+      "created": 1792305939,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"present\":true,\"quote\":\"relieves pressure\",\"confidence\":0.9}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null,
+            "routed_experts": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 18,
+        "prompt_tokens": 195,
+        "total_tokens": 213
+      }
+    }
+  },
+  {
+    "label": "repair-5-independent-fact-probe",
+    "kind": "temporary",
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-82a7f0c09279d030",
+      "created": 1792305939,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"present\":false,\"quote\":\"\",\"confidence\":0.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "routed_experts": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 14,
+        "prompt_tokens": 202,
+        "total_tokens": 216
+      }
+    }
+  },
+  {
+    "label": "repair-5-independent-fact-probe",
+    "kind": "definitive",
+    "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-a79ff899d181a7c5",
+      "created": 1792305940,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"present\":true,\"quote\":\"it does not provide definitive tooth treatment\",\"confidence\":0.9}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 22,
+        "prompt_tokens": 220,
+        "total_tokens": 242
+      }
+    }
+  },
+  {
+    "label": "repair-5-independent-fact-probe",
+    "kind": "definitive",
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-96a87e3e45afb18a",
+      "created": 1792305941,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"present\":true,\"quote\":\"remove the affected tooth\",\"confidence\":0.9}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "routed_experts": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 19,
+        "prompt_tokens": 227,
+        "total_tokens": 246
+      }
+    }
+  }
+]

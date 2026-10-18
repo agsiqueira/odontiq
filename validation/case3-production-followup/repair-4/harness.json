@@ -1,0 +1,12 @@
+{
+  "applicationCommit": "3acd18e967d6ae6f966b78893c44d4e88d341fce",
+  "scriptHashes": {
+    "scripts/liveCase03FollowUp.mjs": "3e47d325786f2becbd0c9dda27f4ba8047b97d1754902d811ea13c0131b8d897",
+    "scripts/reviewCase03Live.mjs": "4a9d56404f9986640222c6b5c87d389c8ba9af71110839b24b3fabe4d602a73c",
+    "scripts/case3NavigatorCapture.mjs": "2ae51cf72bfcc449753a6e9ff9f71db00cf85a35aabeb1d661d150a60305bc2c"
+  },
+  "automaticScenarioRetries": 0,
+  "plannedFailureRetriesPerInjectedScenario": 1,
+  "isolatedDatabase": true,
+  "provider": "Navigator; Granite generation/trigger classification; Llama independent evidence verification"
+}

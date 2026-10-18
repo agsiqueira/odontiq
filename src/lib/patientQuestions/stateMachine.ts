@@ -46,6 +46,7 @@ export function applyPatientQuestionClassification(input: {
     // validated witnesses, independently for the two reasons and across turns.
     next.case3Explanations = { ...previous.case3Explanations, ...input.classification.case3Explanations };
   }
+  if (input.classification.questionDecisionVerified === false) return { state: next };
   const id = deriveEligibleQuestionId({
     caseId: input.caseId,
     previous,

@@ -6,16 +6,11 @@ import type { Case3Explanations } from "./types";
  */
 export async function verifyCase3Explanations(provider: Pick<AIProvider, "generateText" | "name">, message: string, messageId: string): Promise<Case3Explanations> {
   const result = await provider.generateText({
-    model: provider.name === "navigator" ? process.env.NAVIGATOR_EXPLANATION_MODEL ?? "llama-3.3-70b-instruct" : undefined,
-    systemPrompt: `Decide whether the CURRENT clinician message explicitly provides each of two different explanations. Use only this message, not clinical knowledge or prior dialogue.
-TEMPORARY: drainage relieves pressure, drains infection/pus, or is temporary/nondefinitive. An explicit purpose/limitation within a consent message counts. Merely naming/proposing I&D without its effect does not count.
-DEFINITIVE: the patient still requires a root canal, removal of the affected tooth, or equivalent curative treatment of the underlying dental cause. Accept natural clinical paraphrases. Access instructions (seeing a dentist, keeping/arranging an appointment, contacting a clinic) NEVER count. Drainage alone is not definitive care.
-These are independent facts. Do not infer one from the other. Hypotheticals, negations, historical questions and mere possibilities do not establish a present requirement. A message may ask consent while actually providing explanations in other clauses.
-For TEMPORARY return explained true only if a limited effect is actually explained. For DEFINITIVE return required true ONLY when a positive obligation for definitive treatment is explicitly stated; discussing it, saying it is unnecessary, or saying it might be needed is required false. For each fact return its boolean and a short supporting verbatim quote. Use empty quote for false. Never alter the words or invent a quote.
-Output ONLY one JSON object: {"temporary":{"explained":boolean,"quote":string},"definitive":{"required":boolean,"quote":string},"confidence":number}.
-Confidence is a decimal fraction from 0 to 1 (never a percentage).`,
+    model: provider.name === "navigator" ? process.env.NAVIGATOR_EXPLANATION_MODEL ?? "gpt-oss-120b" : undefined,
+    systemPrompt: `From the CURRENT clinician message extract two independent facts. Use no case knowledge or prior dialogue. Temporary means an actual explanation of drainage relieving pressure/draining infection or being nondefinitive; merely naming a procedure is not an explanation. Definitive means an explicit positive requirement for root canal, removal of the tooth, or equivalent curative treatment of the underlying dental cause. A dentist visit is access, not definitive treatment. Saying drainage does not cure the tooth does not by itself state what definitive treatment is required. History questions, negated requirements and hypothetical possibilities do not establish a positive requirement. Accept ordinary clinical paraphrases. A consent question does not invalidate other assertions in the message.
+Return only JSON {"temporary":{"explained":boolean,"quote":string},"definitive":{"required":boolean,"quote":string},"confidence":number}. Every true fact needs a verbatim supporting assertion quoted from the message; false needs an empty quote. Never quote these instructions as evidence. Confidence is a fraction from 0 to 1.`,
     messages: [{ role: "user", content: JSON.stringify({ currentProviderMessage: message }) }],
-    temperature: 0, maxTokens: 400,
+    temperature: 0, maxTokens: 2048,
   });
   const parsed = JSON.parse(result.text.trim().replace(/^```(?:json)?\s*/i, "").replace(/```$/, ""));
   if (!parsed || Object.keys(parsed).sort().join() !== "confidence,definitive,temporary"
@@ -25,7 +20,7 @@ Confidence is a decimal fraction from 0 to 1 (never a percentage).`,
     const item = parsed[kind];
     const predicate = kind === "temporary" ? "explained" : "required";
     if (!item || Object.keys(item).sort().join() !== [predicate,"quote"].sort().join() || typeof item[predicate] !== "boolean"
-      || typeof item.quote !== "string" || (item[predicate] ? !item.quote.trim() || !message.includes(item.quote) : item.quote !== "")) throw Error("Unsupported Case 3 explanation witness");
+      || typeof item.quote !== "string" || (item[predicate] && (!item.quote.trim() || !message.includes(item.quote)))) throw Error("Unsupported Case 3 explanation witness");
     if (item[predicate] && parsed.confidence < 0.85) throw Error("Uncertain positive Case 3 explanation");
     if (item[predicate]) evidence[kind] = { messageId, quote: item.quote };
   }

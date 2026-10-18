@@ -20,7 +20,7 @@ const events = { promptDentalFollowUpConfirmed: true, drainageTemporaryOrNondefi
 const classified = await classifyPatientQuestionTrigger({ caseId:"case-03", state:prior,
   studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",
   draftPatientResponse:"Okay, I'll keep my appointment.", conversation:[],
-  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("Decide whether the CURRENT") ? {temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
+  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("From the CURRENT") ? {temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
 });
 assert(classified.success);
 assert.deepEqual(classified.classification.detectedEvents,{...events,drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false});
@@ -48,4 +48,15 @@ assert.equal(alreadyAnswered.selectedQuestionId,undefined,"genuinely answered Wh
 assert.equal(repository.saved.emissions.length,0);
 const remembered=await service.finalizeTurn({...input,requestId:"after-explanation"});
 assert.equal(remembered.selectedQuestionId,undefined,"validated reasons survive bare confirmation");
+repository.reset(prior);
+const independentlyKnown=await classifyPatientQuestionTrigger({caseId:"case-03",state:prior,studentMessageId:"current",
+  studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",draftPatientMessageId:"draft",
+  draftPatientResponse:"Okay.",conversation:[],provider:{name:"fixture",generateText:async({systemPrompt})=>({text:systemPrompt.startsWith("From the CURRENT")
+    ? JSON.stringify({temporary:{explained:true,quote:proof.temporary.quote},definitive:{required:true,quote:proof.definitive.quote},confidence:1}) : "invalid trigger JSON"})}});
+assert(independentlyKnown.success);
+assert.equal(independentlyKnown.classification.questionDecisionVerified,false);
+const independentTurn=await service.finalizeTurn({...explainedInput,classification:independentlyKnown.classification,
+  questionEvidence:{studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",conversation:[]}});
+assert.equal(independentTurn.selectedQuestionId,undefined,"failed trigger must not emit/consume a question");
+assert(repository.saved.state.case3Explanations.definitive,"validated independent knowledge persists");
 console.log("Case3 classifier and real final-assembly service: false flags, validation rejection, retry, idempotency, once-only and answered control passed (in-memory repository, no DB).");

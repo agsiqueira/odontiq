@@ -18,6 +18,8 @@ const CASE_EVENTS: Record<string, readonly PatientQuestionEventId[]> = {
     "temporaryTreatmentActive",
     "incisionAndDrainageProposed",
     "patientAgreedToIncisionAndDrainage",
+    "drainageTemporaryOrNondefinitiveExplained",
+    "definitiveDentalTreatmentExplained",
   ],
   "case-04": [
     "painManagementOrDispositionDiscussed",

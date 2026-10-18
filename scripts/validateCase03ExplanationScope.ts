@@ -53,8 +53,12 @@ assert.deepEqual(await verifyCase3Explanations({name:"fixture",generateText:asyn
   temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:0.2,
 })})},bare,"current"),{},"no accepted reasons cannot suppress an independently eligible question");
 console.log("Case3 evidence isolation, verbatim witnesses, independent reasons, durable state, legacy flags, closure and once-only checks passed.");
-const configuredVerifier = process.env.NAVIGATOR_EXPLANATION_MODEL ?? "llama-3.3-70b-instruct";
+const configuredVerifier = process.env.NAVIGATOR_EXPLANATION_MODEL ?? "gpt-oss-120b";
 await verifyCase3Explanations({name:"navigator",generateText:async input=>{
   assert.equal(input.model,configuredVerifier,"independent verifier uses explicit task model, not the patient model");
   return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
 }},bare,"current");
+
+const rejectedTrigger=apply({...classified(full,{temporary,definitive}),questionDecisionVerified:false});
+assert.equal(rejectedTrigger.selectedQuestionId,undefined,"rejected trigger cannot consume a question");
+assert(rejectedTrigger.state.case3Explanations?.definitive,"independent validated knowledge survives");

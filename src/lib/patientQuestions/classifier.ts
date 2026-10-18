@@ -33,8 +33,19 @@ export async function classifyPatientQuestionTrigger(input: {
       allowedEvents: prompt.allowedEvents,
       evidenceAliases: prompt.evidenceAliases,
     });
-    if (parsed.success && input.caseId === "case-03") {
-      parsed.classification.case3Explanations = await verifyCase3Explanations(input.provider, input.studentMessage, input.studentMessageId);
+    if (input.caseId === "case-03") {
+      const evidence = await verifyCase3Explanations(input.provider, input.studentMessage, input.studentMessageId);
+      if (!parsed.success) {
+        // Independent, validated explanations are knowledge, not trigger evidence.
+        // Preserve them with the final answer without allowing a failed trigger
+        // decision to unlock or consume any question.
+        return Object.keys(evidence).length ? { success: true, classification: {
+          schemaVersion: 1, caseId: input.caseId, analyzedStudentMessageId: input.studentMessageId,
+          confidence: 0, evidenceAliases: ["student-current"], evidenceMessageIds: [input.studentMessageId],
+          detectedEvents: {}, case3Explanations: evidence, questionDecisionVerified: false,
+        } } : parsed;
+      }
+      parsed.classification.case3Explanations = evidence;
       parsed.classification.detectedEvents.drainageTemporaryOrNondefinitiveExplained = Boolean(parsed.classification.case3Explanations.temporary);
       parsed.classification.detectedEvents.definitiveDentalTreatmentExplained = Boolean(parsed.classification.case3Explanations.definitive);
     }

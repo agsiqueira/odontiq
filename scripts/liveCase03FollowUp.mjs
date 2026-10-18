@@ -48,6 +48,7 @@ const report = { started: new Date().toISOString(), base, applicationCommit: exe
   applicationSourceDiff: execFileSync("git", ["diff", "--name-only", "HEAD", "--", "src", "prisma", "next.config.ts"], { encoding: "utf8" }).trim(),
   buildId: fs.readFileSync(".next/BUILD_ID", "utf8").trim(),
   configuration: { node: process.version, mode: "production", model: process.env.NAVIGATOR_MODEL,
+    explanationModel: process.env.NAVIGATOR_EXPLANATION_MODEL ?? "gpt-oss-120b",
     navigator: "https://api.ai.it.ufl.edu via loopback capture/fault proxy", database: "isolated loopback PostgreSQL", auth: "existing Clerk test user, backend test session" }, tests: [] };
 const save = () => { fs.mkdirSync(path.dirname(output), { recursive: true }); fs.writeFileSync(output, JSON.stringify(report, null, 2)); };
 async function api(url, body) {

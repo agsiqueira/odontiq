@@ -110,7 +110,7 @@ const classified = await classifyPatientQuestionTrigger({
     name: "case-03-consent-validator",
     generateConversationResponse: async () => ({ text: "unused" }),
     generateText: async ({ messages, systemPrompt }) => {
-      if (systemPrompt.startsWith("Decide whether the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
+      if (systemPrompt.startsWith("From the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
       assert(messages[0]?.content.includes(clearProposal));
       assert(messages[0]?.content.includes(draftAgreement));
       return {
@@ -121,6 +121,7 @@ const classified = await classifyPatientQuestionTrigger({
             temporaryTreatmentActive: true,
             incisionAndDrainageProposed: true,
             patientAgreedToIncisionAndDrainage: true,
+            drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false,
           },
           confidence: 0.99,
           evidence: ["student-current", "patient-draft"],
