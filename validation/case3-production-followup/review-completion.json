@@ -1,0 +1,20 @@
+{
+  "applicationCommit": "3a7b37b1d33a12db20be90ee7b24261faa4558be",
+  "applicationSourceMatchesReviewedCommit": true,
+  "applicationSourceSha256": {
+    "src/lib/patientQuestions/eligibility.ts": "055a38ad114489fd1fc29fa4bf690c7503bac0cf91585e5a373c44e6c3bd4b2a",
+    "src/lib/patientQuestions/explanationScope.ts": "60ac12aff13c49bb25204f407b328872411cbb971afd3b3b208b85f42f458eb8",
+    "src/lib/patientQuestions/prompt.ts": "bdb7bfe909359b3a331c6343acf519c04fc18a8dcfd454e6be82475162282967"
+  },
+  "buildId": "zSWm2Jqeeb7eHh-8jJUvQ",
+  "automatedChecks": {
+    "priorApplicationSuite": "43/43 PASS including production build",
+    "reviewReruns": "4/4 PASS: focused scope, final assembly, typecheck, expanded lint",
+    "finalHarnessLint": "PASS"
+  },
+  "liveResults": "live-summary.json",
+  "recommendation": "Draft only: one demonstrated guard defect plus three explicitly separate whole-conversation findings; not ready to merge/deploy",
+  "productionMutated": false,
+  "secretScan": "No configured Navigator key, Clerk secret or test password in changed evidence/source files",
+  "note": "Live harness metadata and adjudication assertions extended after execution; application build/source remained unchanged. Raw first attempts preserved."
+}

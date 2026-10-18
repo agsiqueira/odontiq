@@ -1,0 +1,105 @@
+{
+  "started": "2026-10-18T06:00:08.834Z",
+  "base": "http://127.0.0.1:3009",
+  "applicationCommit": "3a7b37b1d33a12db20be90ee7b24261faa4558be",
+  "configuration": {
+    "node": "v24.14.1",
+    "mode": "production",
+    "model": "granite-3.3-8b-instruct",
+    "navigator": "https://api.ai.it.ufl.edu via loopback capture/fault proxy",
+    "database": "isolated loopback PostgreSQL",
+    "auth": "existing Clerk test user, backend test session"
+  },
+  "tests": [
+    {
+      "id": "original-fresh-1",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-2",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-3",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-4",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-5",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "temporary-only",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "definitive-only",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "REVIEW"
+    }
+  ]
+}

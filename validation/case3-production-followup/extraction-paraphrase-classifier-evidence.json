@@ -1,0 +1,27 @@
+[
+  {
+    "index": 77,
+    "record": {
+      "at": "2026-10-18T06:05:39.880Z",
+      "path": "/v1/chat/completions",
+      "request": {
+        "model": "granite-3.3-8b-instruct",
+        "temperature": 0,
+        "max_tokens": 450,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Classify semantic events for one odontIQ case.\nReturn exactly one JSON object and no Markdown or commentary.\nDetermine meaning from the ordered messages, including paraphrases and clinical equivalents.\nDo not select a patient question. Application code determines question eligibility.\nAn asserted event requires evidence of that exact event, not merely discussion of a related topic.\nProvider questions seeking history, symptoms, county, insurance or ability to pay are NOT treatment/disposition plans.\nLooking/searching for care options is NOT giving a plan. A plan chooses an actual current treatment, referral or follow-up action.\nA patient answer about county, insurance, payment or preferences is NOT a pain description.\nDo not infer events from the case scenario, intended future care or a patient's appended question.\nUse only the allowed event definitions for this case; never add a field for another case.\nThe three follow-up events refer ONLY to student-current. Cite student-current for any true follow-up event.\nConfirming a prompt dentist appointment does not explain definitive treatment, even when earlier messages describe drainage.\nDo not copy an explanation from student-prior or patient messages into a current explanation flag.\nSuppressing Why requires BOTH an actual explanation of drainage's limited effect AND an explanation of root canal, extraction or equivalent definitive care. Generic advice to see a dentist is not the latter.\n\n\n\nReturn exactly these top-level fields:\n- schemaVersion: the number 1\n- caseId: the supplied case ID\n- events: an object containing every allowed event name exactly once, each with a boolean value\n- confidence: a number from 0 to 1 representing confidence in the event determinations\n- evidence: an array containing only supplied short message aliases that support asserted true events\n\n\nDo not return message IDs. Do not add fields other than those specified for this case or add event names.\n\nAllowed event definitions for this request:\n- promptDentalFollowUpConfirmed: after the patient's follow-up question, the provider confirms the patient still needs prompt dental care\n- drainageTemporaryOrNondefinitiveExplained: the current provider answer explains drainage only relieves pressure or drains infection, or is temporary or nondefinitive\n- definitiveDentalTreatmentExplained: the current provider answer explains root canal, extraction, or equivalent definitive dental treatment is still required"
+          },
+          {
+            "role": "user",
+            "content": "{\"caseId\":\"case-03\",\"allowedEventNames\":[\"promptDentalFollowUpConfirmed\",\"drainageTemporaryOrNondefinitiveExplained\",\"definitiveDentalTreatmentExplained\"],\"allowedEvidenceAliases\":[\"student-prior-1\",\"patient-prior-1\",\"student-current\",\"patient-draft\"],\"messages\":[{\"alias\":\"student-prior-1\",\"role\":\"student\",\"content\":\"You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?\"},{\"alias\":\"patient-prior-1\",\"role\":\"patient\",\"content\":\"Yes, that\u00e2\u20ac\u2122s okay. Even with this treatment, do I still need to see my dentist soon?\"},{\"alias\":\"student-current\",\"role\":\"student\",\"content\":\"Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.\"},{\"alias\":\"patient-draft\",\"role\":\"patient\",\"content\":\"Alright, I understand. Thank you, doctor.\"}]}"
+          }
+        ]
+      },
+      "kind": "classifier",
+      "status": 200,
+      "response": "{\"id\":\"chatcmpl-9d30d54e544a9b38\",\"created\":1792303539,\"model\":\"granite-3.3-8b-instruct\",\"object\":\"chat.completion\",\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"{\\n  \\\"schemaVersion\\\": 1,\\n  \\\"caseId\\\": \\\"case-03\\\",\\n  \\\"events\\\": {\\n    \\\"promptDentalFollowUpConfirmed\\\": true,\\n    \\\"drainageTemporaryOrNondefinitiveExplained\\\": true,\\n    \\\"definitiveDentalTreatmentExplained\\\": true\\n  },\\n  \\\"confidence\\\": 1,\\n  \\\"evidence\\\": [\\n    \\\"student-prior-1\\\",\\n    \\\"patient-prior-1\\\",\\n    \\\"student-current\\\"\\n  ]\\n}\",\"role\":\"assistant\",\"provider_specific_fields\":{\"refusal\":null,\"reasoning\":null}},\"provider_specific_fields\":{\"stop_reason\":null,\"token_ids\":null}}],\"usage\":{\"completion_tokens\":105,\"prompt_tokens\":765,\"total_tokens\":870}}"
+    }
+  }
+]

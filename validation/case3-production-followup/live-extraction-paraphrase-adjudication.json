@@ -1,0 +1,26 @@
+{
+  "reviewedAt": "2026-10-18T06:09:11.069Z",
+  "rubric": "Unchanged V7/V8 current-turn contract; separate whole-conversation already-answered probe",
+  "rows": [
+    {
+      "id": "extraction-paraphrase",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    }
+  ],
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "ERROR": 0
+  },
+  "note": "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger.",
+  "semanticReview": {
+    "performed": true,
+    "reviewer": "Codex read all final responses and full recorded context",
+    "assessment": "Original five repetitions and partial-explanation controls answered relevantly with grounded patient facts. Four non-pass scenarios are documented in LIVE-REVIEW.md; current-turn contract outcomes are preserved separately. Some thank-you-plus-Why phrasing remains formulaic."
+  }
+}

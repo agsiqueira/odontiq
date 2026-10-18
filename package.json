@@ -98,7 +98,8 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:studio": "prisma studio",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate:case03-live": "node --env-file=.env.local scripts/liveCase03FollowUp.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.17",

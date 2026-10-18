@@ -1,0 +1,42 @@
+{
+  "applicationCommit": "3a7b37b1d33a12db20be90ee7b24261faa4558be",
+  "scenarioCounts": {
+    "PASS": 10,
+    "FAIL": 4,
+    "ERROR": 0,
+    "total": 14
+  },
+  "unchangedCurrentTurnContract": {
+    "PASS": 13,
+    "FAIL": 1
+  },
+  "originalReproductions": {
+    "freshEncounters": 5,
+    "PASS": 5,
+    "durableWhyEmissionsEach": 1
+  },
+  "responses": {
+    "total": 73,
+    "successfulFinalResponses": 72,
+    "intentionalGenerationFailure": 1,
+    "intentionalClassifierFailureWithSafeAnswer": 1
+  },
+  "navigator": {
+    "totalAttempts": 79,
+    "injected503": 4,
+    "actualUpstreamResponses": 75,
+    "unexpectedErrors": 0
+  },
+  "setupOnlyPriorRun": {
+    "recordedSetupErrors": 7,
+    "interruptedPendingSetup": 1,
+    "conversationRequests": 0
+  },
+  "buildId": "zSWm2Jqeeb7eHh-8jJUvQ",
+  "limitations": [
+    "API/storage correlation verified; no rendered UI comparison or speech test in this run",
+    "Navigator raw calls retained via capture proxy; production diagnostics remain disabled",
+    "Current-turn explanation contract and conversation-level already-answered expectation recorded separately; no historical verdict changed",
+    "Original production smoke failure retained; successful local repetitions do not erase it"
+  ]
+}
