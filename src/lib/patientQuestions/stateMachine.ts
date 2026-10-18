@@ -27,6 +27,9 @@ export function applyPatientQuestionClassification(input: {
   for (const [event, detected] of Object.entries(input.classification.detectedEvents)) {
     if (detected) detectedEvents[event as keyof typeof detectedEvents] = true;
   }
+  // Case 4's plan event is current-turn evidence, never a durable unlock.
+  if (input.caseId === "case-04") detectedEvents.painManagementOrDispositionDiscussed =
+    input.classification.detectedEvents.painManagementOrDispositionDiscussed === true;
   const next: PatientQuestionState = {
     ...previous,
     version: previous.version + 1,

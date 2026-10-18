@@ -130,7 +130,8 @@ ${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribu
 A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Example: patient says tooth pain keeps waking me => patientPainDescribed=true.
 Example: patient says I am focused on my tooth pain => patientPainDescribed=false.` : ""}
-${input.caseId === "case-04" ? `A background-only exchange cannot establish a clinical plan.
+${input.caseId === "case-04" ? `A background-only exchange cannot establish a clinical plan. Financial screening, payment preferences, insurance, and hypothetical care options are not clinical plans even when dental treatment is mentioned.
+For mixed turns, distinguish an actual current clinical directive/commitment from the financial or hypothetical portion. Quote only the clinical action, not the entire screening question.
 Example: provider asks county; patient says Duval County => painManagementOrDispositionDiscussed=false.
 Example: provider gives ibuprofen plan and directs dentist follow-up => painManagementOrDispositionDiscussed=true.` : ""}
 

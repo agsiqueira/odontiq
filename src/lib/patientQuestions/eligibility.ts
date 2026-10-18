@@ -1,3 +1,4 @@
+import { assessClinicalPlanWitness } from "./clinicalPlan";
 import { type PatientDisclosureFact } from "../patientDisclosure";
 import { isPatientConversationClosure } from "../patientConversationClosure";
 import { expressesRequiredFact } from "../patientOutputGuard";
@@ -24,8 +25,7 @@ export function constrainQuestionClassification(input: {
   // Case 4's prerequisite is a provider act, not a topic. Preserve the model's
   // explicit act and verbatim current-message witness through final assembly.
   if (result.caseId === "case-04" && (result.currentProviderAct !== "current_plan"
-    || !result.currentPlanEvidence?.trim()
-    || !input.studentMessage.includes(result.currentPlanEvidence))) {
+    || !assessClinicalPlanWitness(input.studentMessage, result.currentPlanEvidence).valid)) {
     result.detectedEvents.painManagementOrDispositionDiscussed = false;
   }
   // A substantive current-pain description must express an actual sourced attribute,

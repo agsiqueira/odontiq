@@ -141,14 +141,17 @@ export class PatientQuestionService {
           });
           if (alreadyEmitted) {
             selectedQuestionId = undefined;
-            transition.state.emittedQuestionIds =
-              transition.state.emittedQuestionIds.filter((id) => id !== transition.selectedQuestionId);
+            // Preserve the durable marker when an emission already exists.
+            if (!transition.state.emittedQuestionIds.includes(transition.selectedQuestionId!)) {
+              transition.state.emittedQuestionIds.push(transition.selectedQuestionId!);
+            }
           }
         }
 
         const questionText = selectedQuestionId
           ? input.questionText(selectedQuestionId)
           : undefined;
+        if (selectedQuestionId && !questionText) throw new Error("Selected patient question has no renderable text.");
         const responseText = questionText
           ? `${baseAnswer} ${questionText}`.trim()
           : baseAnswer;
