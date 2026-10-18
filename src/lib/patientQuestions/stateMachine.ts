@@ -27,6 +27,11 @@ export function applyPatientQuestionClassification(input: {
   for (const [event, detected] of Object.entries(input.classification.detectedEvents)) {
     if (detected) detectedEvents[event as keyof typeof detectedEvents] = true;
   }
+  // Proposed-and-agreed drainage is an explicit Case 3 temporary treatment.
+  // Preserve that logical implication even if the classifier's redundant summary
+  // flag is inconsistent. Either fact alone is insufficient for this implication.
+  if (input.caseId === "case-03" && detectedEvents.incisionAndDrainageProposed
+    && detectedEvents.patientAgreedToIncisionAndDrainage) detectedEvents.temporaryTreatmentActive = true;
   // Case 4's plan event is current-turn evidence, never a durable unlock.
   if (input.caseId === "case-04") detectedEvents.painManagementOrDispositionDiscussed =
     input.classification.detectedEvents.painManagementOrDispositionDiscussed === true;

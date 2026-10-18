@@ -65,6 +65,14 @@ for(const consent of ["You have an abscess. I recommend an I&D to drain the infe
  assert.equal(turn.providerMessageIntent,'treatment_consent');
  assert.deepEqual(turn.allowedThisTurn,[]);
 }
+const drainage=(proposed:boolean,agreed:boolean):PatientQuestionClassification=>({...classification('I recommend drainage.'),caseId:'case-03',detectedEvents:{temporaryTreatmentActive:false,incisionAndDrainageProposed:proposed,patientAgreedToIncisionAndDrainage:agreed}});
+for(const [proposed,agreed]of [[false,false],[true,false],[false,true]])assert.equal(applyPatientQuestionClassification({caseId:'case-03',classification:drainage(proposed,agreed)}).selectedQuestionId,undefined);
+const consentTransition=applyPatientQuestionClassification({caseId:'case-03',classification:drainage(true,true)});
+assert.equal(consentTransition.selectedQuestionId,'c3-follow-up-needed-question');
+assert.equal(consentTransition.state.detectedEvents.temporaryTreatmentActive,true);
+assert.equal(applyPatientQuestionClassification({caseId:'case-03',state:consentTransition.state,classification:drainage(true,true)}).selectedQuestionId,undefined);
+const proposalState=applyPatientQuestionClassification({caseId:'case-03',classification:drainage(true,false)}).state;
+assert.equal(applyPatientQuestionClassification({caseId:'case-03',state:proposalState,classification:drainage(false,true)}).selectedQuestionId,'c3-follow-up-needed-question');
 async function main(){
 let calls=0;
 const stripped=await generatePatientRoleSafeResponse({initialOutput:"I'm open to paying a sliding-scale fee. Do I need an antibiotic?",retry:async()=>{throw Error('Valid answer should be preserved without retry');},allowPatientInitiatedQuestion:false});
