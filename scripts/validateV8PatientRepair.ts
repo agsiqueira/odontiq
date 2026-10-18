@@ -59,6 +59,12 @@ for(const q of ['I will give you ibuprofen for pain. How severe is your pain?', 
  assert(turn.allowedThisTurn.some(f=>f.id==='c4.severity'),q);
 }
 assert.equal(patientRequestedText('If we could refer you to a dentist, would that be an option?'),'If we could refer you to a dentist, would that be an option?');
+for(const consent of ["You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?", "I recommend draining the abscess to release the pressure. Is that okay?"]) {
+ assert.equal(patientRequestedText(consent),consent);
+ const turn=buildPatientDisclosureState({caseData:loadCase('case-03')!,conversation:[],latestStudentMessage:consent});
+ assert.equal(turn.providerMessageIntent,'treatment_consent');
+ assert.deepEqual(turn.allowedThisTurn,[]);
+}
 async function main(){
 let calls=0;
 const stripped=await generatePatientRoleSafeResponse({initialOutput:"I'm open to paying a sliding-scale fee. Do I need an antibiotic?",retry:async()=>{throw Error('Valid answer should be preserved without retry');},allowPatientInitiatedQuestion:false});
