@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-17T22:51:54.329Z",
+  "maxAdditionalAttempts": 1,
+  "applicationUnchanged": true,
+  "reason": "Passive observation captured mutable audio src after the app cleared it on ended. Preserve first playback-started/completion-unconfirmed result. Repeat with immutable source identifier and capture-phase observation; no playback behavior mocked or changed.",
+  "firstResult": "speech-attempt-1.json",
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v6-speech-retest.spec.ts",
+      "sha256": "270ddb1d59260042a0f3acda76b046dcf16ad93f75fba2baba62e64117710558"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v6-speech-retest.config.ts",
+      "sha256": "d38b2f106853a84d925dbba1c95c6f1872d322c144a651a008791d0d4aed3739"
+    }
+  ]
+}

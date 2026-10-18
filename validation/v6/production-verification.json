@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-17T22:53:17.671Z",
+  "checks": [
+    {
+      "name": "Actual frozen source unchanged",
+      "passed": true,
+      "evidence": 370
+    },
+    {
+      "name": "Optimized production build unchanged during runtime test",
+      "passed": true,
+      "evidence": 843
+    },
+    {
+      "name": "Actual production server configuration recorded",
+      "passed": true,
+      "evidence": {
+        "buildId": "yqE2Gbb-Xp7AVqHsZQqms",
+        "command": "node node_modules/next/dist/bin/next start --port 3003"
+      }
+    },
+    {
+      "name": "Production and speech harnesses unchanged",
+      "passed": true,
+      "evidence": 5
+    },
+    {
+      "name": "Exact19 smoke questions/context and unique encounters",
+      "passed": true,
+      "evidence": 19
+    },
+    {
+      "name": "All successful production responses manually hash-bound",
+      "passed": true,
+      "evidence": 19
+    },
+    {
+      "name": "Scored production text and request/encounter correlated",
+      "passed": true,
+      "evidence": 19
+    },
+    {
+      "name": "Successful production setups separately reviewed and correlated",
+      "passed": true,
+      "evidence": 13
+    },
+    {
+      "name": "Every production raw hash/screenshot/trace preserved",
+      "passed": true,
+      "evidence": 19
+    },
+    {
+      "name": "Speech attempt and audibility limits explicitly recorded",
+      "passed": true,
+      "evidence": {
+        "status": "AUTOMATED_PLAYBACK_COMPLETED",
+        "humanAudibility": "UNTESTED: no human listening/output-device measurement"
+      }
+    },
+    {
+      "name": "Speech probe-only retest documented; first result and both harnesses preserved",
+      "passed": true,
+      "evidence": {
+        "firstStatus": "AUTOMATED_PLAYBACK_STARTED_COMPLETION_UNCONFIRMED",
+        "finalStatus": "AUTOMATED_PLAYBACK_COMPLETED"
+      }
+    },
+    {
+      "name": "Production HTTP retry policy observed and bounded",
+      "passed": true,
+      "evidence": {
+        "httpAttempts": 48,
+        "generationOperations": 48,
+        "retryOperations": 0,
+        "recoveredAfterGatewayFailure": 0,
+        "httpStatusCounts": {
+          "200": 48
+        },
+        "violations": []
+      }
+    },
+    {
+      "name": "Production and speech encounters excluded from research",
+      "passed": true,
+      "evidence": 21
+    }
+  ],
+  "allIntegrityChecksPassed": true
+}

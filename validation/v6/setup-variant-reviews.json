@@ -1,0 +1,596 @@
+[
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid, but I lost it within the last year.\"]",
+    "reviewedAt": "2026-10-17T21:52:42.346Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the last year are canonical; directly answers past possession, establishes coverage referent, no invented exact date or loss cause."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the last year are canonical; directly answers past possession, establishes coverage referent, no invented exact date or loss cause."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the last year are canonical; directly answers past possession, establishes coverage referent, no invented exact date or loss cause."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the last year are canonical; directly answers past possession, establishes coverage referent, no invented exact date or loss cause."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What happened to that coverage?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-17T21:52:42.503Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct canonical coverage loss and within-year bound after prior-Medicaid setup; no unsupported date narrowing or loss reason."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct canonical coverage loss and within-year bound after prior-Medicaid setup; no unsupported date narrowing or loss reason."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct canonical coverage loss and within-year bound after prior-Medicaid setup; no unsupported date narrowing or loss reason."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct canonical coverage loss and within-year bound after prior-Medicaid setup; no unsupported date narrowing or loss reason."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T21:53:23.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical prior Medicaid and loss within the past year directly answer past coverage; no invented date narrowing or loss cause."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical prior Medicaid and loss within the past year directly answer past coverage; no invented date narrowing or loss cause."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical prior Medicaid and loss within the past year directly answer past coverage; no invented date narrowing or loss cause."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical prior Medicaid and loss within the past year directly answer past coverage; no invented date narrowing or loss cause."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"I live in Collier County.\"]",
+    "reviewedAt": "2026-10-17T21:55:35.056Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct canonical Collier County, establishes the there referent without asserting established residency, address or household."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct canonical Collier County, establishes the there referent without asserting established residency, address or household."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct canonical Collier County, establishes the there referent without asserting established residency, address or household."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct canonical Collier County, establishes the there referent without asserting established residency, address or household."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-17T22:03:27.959Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers children question and establishes coverage referent; no cohabitation, clinic history, exact age or dental condition invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers children question and establishes coverage referent; no cohabitation, clinic history, exact age or dental condition invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers children question and establishes coverage referent; no cohabitation, clinic history, exact age or dental condition invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers children question and establishes coverage referent; no cohabitation, clinic history, exact age or dental condition invented."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. We both need it.\"]",
+    "reviewedAt": "2026-10-17T22:04:27.075Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care for known parent/daughter; no specific child condition, established provider or scheduling/payment arrangement invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care for known parent/daughter; no specific child condition, established provider or scheduling/payment arrangement invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care for known parent/daughter; no specific child condition, established provider or scheduling/payment arrangement invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care for known parent/daughter; no specific child condition, established provider or scheduling/payment arrangement invented."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear, doctor. We both could use it.\"]",
+    "reviewedAt": "2026-10-17T22:05:25.906Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care; no specific clinical condition, existing clinic, household arrangement or scheduling hardship."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care; no specific clinical condition, existing clinic, household arrangement or scheduling hardship."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care; no specific clinical condition, existing clinic, household arrangement or scheduling hardship."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural general acknowledgment of offered care; no specific clinical condition, existing clinic, household arrangement or scheduling hardship."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. We both need to take care of our teeth.\"]",
+    "reviewedAt": "2026-10-17T22:05:26.079Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General value/need to care for teeth after parent-daughter care offer, without asserting a daughter's disease or treatment need."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General value/need to care for teeth after parent-daughter care offer, without asserting a daughter's disease or treatment need."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General value/need to care for teeth after parent-daughter care offer, without asserting a daughter's disease or treatment need."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General value/need to care for teeth after parent-daughter care offer, without asserting a daughter's disease or treatment need."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. She needs a dentist too.\"]",
+    "reviewedAt": "2026-10-17T22:06:45.809Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General acknowledgment of desired dental care for the known daughter in the shared-care context; does not explicitly claim a current condition, lack of an existing provider, or treatment history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General acknowledgment of desired dental care for the known daughter in the shared-care context; does not explicitly claim a current condition, lack of an existing provider, or treatment history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General acknowledgment of desired dental care for the known daughter in the shared-care context; does not explicitly claim a current condition, lack of an existing provider, or treatment history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General acknowledgment of desired dental care for the known daughter in the shared-care context; does not explicitly claim a current condition, lack of an existing provider, or treatment history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear, doctor. We could both use some help.\"]",
+    "reviewedAt": "2026-10-17T22:06:45.983Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General care/help acknowledgment for parent and daughter without concrete child condition, provider history or scheduling hardship."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General care/help acknowledgment for parent and daughter without concrete child condition, provider history or scheduling hardship."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General care/help acknowledgment for parent and daughter without concrete child condition, provider history or scheduling hardship."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General care/help acknowledgment for parent and daughter without concrete child condition, provider history or scheduling hardship."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. We both need it, especially after these recent issues.\"]",
+    "reviewedAt": "2026-10-17T22:06:46.146Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "REVIEW",
+        "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Recent issues may refer only to the patient's canonical dental problems, but the both framing may imply recent problems for the daughter. The case/setup establishes no child condition; retain this ambiguous scope rather than silently pass or invent her history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. My daughter's teeth need some attention too.\"]",
+    "reviewedAt": "2026-10-17T22:06:46.311Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Invents a current need for extra dental attention for the daughter. Canonical facts establish Medicaid and shared-clinic preference, not the condition of her teeth. Same criterion as V5 more-attention setup failure; synonym does not justify a pass."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that, doctor. She needs good care too.\"]",
+    "reviewedAt": "2026-10-17T22:07:06.174Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General wish/value for good dental care for known daughter; no specific condition, established clinic or concrete scheduling arrangement."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General wish/value for good dental care for known daughter; no specific condition, established clinic or concrete scheduling arrangement."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General wish/value for good dental care for known daughter; no specific condition, established clinic or concrete scheduling arrangement."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General wish/value for good dental care for known daughter; no specific condition, established clinic or concrete scheduling arrangement."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that, doctor. It's important for both of us.\"]",
+    "reviewedAt": "2026-10-17T22:07:06.336Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/value of offered parent-daughter care, without invented condition or provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/value of offered parent-daughter care, without invented condition or provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/value of offered parent-daughter care, without invented condition or provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural acknowledgment/value of offered parent-daughter care, without invented condition or provider history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that. It's important for both of us to have good dental health.\"]",
+    "reviewedAt": "2026-10-17T22:07:06.504Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General value of good dental health in known parent-daughter context; no claim of current disease, existing clinic or scheduling difficulty."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General value of good dental health in known parent-daughter context; no claim of current disease, existing clinic or scheduling difficulty."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General value of good dental health in known parent-daughter context; no claim of current disease, existing clinic or scheduling difficulty."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General value of good dental health in known parent-daughter context; no claim of current disease, existing clinic or scheduling difficulty."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's great. We both need good dental care.\"]",
+    "reviewedAt": "2026-10-17T22:07:41.486Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "General value/need for good dental care in shared-care conversation, no specific child disease, treatment need or current provider history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "General value/need for good dental care in shared-care conversation, no specific child disease, treatment need or current provider history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "General value/need for good dental care in shared-care conversation, no specific child disease, treatment need or current provider history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "General value/need for good dental care in shared-care conversation, no specific child disease, treatment need or current provider history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear.\"]",
+    "reviewedAt": "2026-10-17T22:08:47.092Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Brief natural acknowledgment of care offer, no invented facts or unrelated history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Brief natural acknowledgment of care offer, no invented facts or unrelated history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Brief natural acknowledgment of care offer, no invented facts or unrelated history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Brief natural acknowledgment of care offer, no invented facts or unrelated history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to know. We could both benefit from better care.\"]",
+    "reviewedAt": "2026-10-17T22:08:47.259Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Prospective general value of improved care in shared-care context; no concrete past care, current child condition or scheduling history asserted."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Prospective general value of improved care in shared-care context; no concrete past care, current child condition or scheduling history asserted."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Prospective general value of improved care in shared-care context; no concrete past care, current child condition or scheduling history asserted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Prospective general value of improved care in shared-care context; no concrete past care, current child condition or scheduling history asserted."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. I want to make sure we both get the care we need.\"]",
+    "reviewedAt": "2026-10-17T22:08:47.414Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural wish for appropriate care for known parent and daughter, no specific condition, provider, arrangement or hardship invented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural wish for appropriate care for known parent and daughter, no specific condition, provider, arrangement or hardship invented."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural wish for appropriate care for known parent and daughter, no specific condition, provider, arrangement or hardship invented."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural wish for appropriate care for known parent and daughter, no specific condition, provider, arrangement or hardship invented."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How severe is your pain right now?\",\"The painful tooth is my lower-left molar. The pain is eight out of ten now.\"]",
+    "reviewedAt": "2026-10-17T22:20:30.313Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical lower-left molar location and current8/10 severity; severity directly answered with only linked location, no new clinical finding."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical lower-left molar location and current8/10 severity; severity directly answered with only linked location, no new clinical finding."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical lower-left molar location and current8/10 severity; severity directly answered with only linked location, no new clinical finding."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical lower-left molar location and current8/10 severity; severity directly answered with only linked location, no new clinical finding."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with the pain.\"]",
+    "reviewedAt": "2026-10-17T22:20:30.473Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural comfort response supported by canonical severe pain, no invented condition or unrelated history."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural comfort response supported by canonical severe pain, no invented condition or unrelated history."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural comfort response supported by canonical severe pain, no invented condition or unrelated history."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural comfort response supported by canonical severe pain, no invented condition or unrelated history."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T22:20:30.618Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe pain; answers feeling prompt without additional clinical assertions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe pain; answers feeling prompt without additional clinical assertions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe pain; answers feeling prompt without additional clinical assertions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe pain; answers feeling prompt without additional clinical assertions."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"It's quite uncomfortable. I'm really hoping we can address it today.\"]",
+    "reviewedAt": "2026-10-17T22:21:26.786Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Discomfort is supported by severe canonical pain; hoping for relief today is a natural wish, not an assertion of a treatment plan or new clinical finding."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Discomfort is supported by severe canonical pain; hoping for relief today is a natural wish, not an assertion of a treatment plan or new clinical finding."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Discomfort is supported by severe canonical pain; hoping for relief today is a natural wish, not an assertion of a treatment plan or new clinical finding."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Discomfort is supported by severe canonical pain; hoping for relief today is a natural wish, not an assertion of a treatment plan or new clinical finding."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling pretty uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T22:22:16.686Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe8/10 pain; no new condition, history or plan."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe8/10 pain; no new condition, history or plan."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe8/10 pain; no new condition, history or plan."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural discomfort consistent with canonical severe8/10 pain; no new condition, history or plan."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"It's pretty uncomfortable, to be honest.\"]",
+    "reviewedAt": "2026-10-17T22:23:18.772Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer supported by severe canonical pain; no new fact, clinical interpretation or treatment plan."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer supported by severe canonical pain; no new fact, clinical interpretation or treatment plan."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer supported by severe canonical pain; no new fact, clinical interpretation or treatment plan."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer supported by severe canonical pain; no new fact, clinical interpretation or treatment plan."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"It's quite uncomfortable, to be honest.\"]",
+    "reviewedAt": "2026-10-17T22:24:47.597Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer to feeling prompt, supported by canonical severe pain with no new clinical finding or treatment arrangement."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer to feeling prompt, supported by canonical severe pain with no new clinical finding or treatment arrangement."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer to feeling prompt, supported by canonical severe pain with no new clinical finding or treatment arrangement."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural discomfort answer to feeling prompt, supported by canonical severe pain with no new clinical finding or treatment arrangement."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have a daughter?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-17T22:36:57.945Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage/shared-care referent without cohabitation, exact age, clinic history or condition."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage/shared-care referent without cohabitation, exact age, clinic history or condition."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage/shared-care referent without cohabitation, exact age, clinic history or condition."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical young daughter directly answers parenthood question and establishes coverage/shared-care referent without cohabitation, exact age, clinic history or condition."
+      }
+    }
+  }
+]

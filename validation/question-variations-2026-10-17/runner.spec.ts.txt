@@ -1,0 +1,115 @@
+import { randomUUID } from 'node:crypto';
+import { appendFileSync, mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import path from 'node:path';
+import { test, expect } from '@playwright/test';
+import { OdontiqBrowserClient } from '../../src/clients/odontiqBrowserClient.js';
+import { environment } from '../../src/config/environment.js';
+import { sanitizeForReport } from '../../src/reports/jsonReporter.js';
+import { dialogueInstructionLeakage } from './patientDialogueLeakage.js';
+
+type Item={testId:string;primaryTestId?:string;caseId:string;groupId:string;question:string;cohort:string;setupQuestions:string[];expectedMeaning:string;contextRequirement:string;groupTitle:string};
+const inventory=JSON.parse(readFileSync(path.resolve('tests/data/question-variations-340.json'),'utf8')) as {tests:Item[]};
+const root=path.resolve('artifacts/reports/question-variations-2026-10-17');
+const raw=path.join(root,'raw');
+mkdirSync(raw,{recursive:true});
+mkdirSync(path.join(root,'screenshots'),{recursive:true});
+mkdirSync(path.join(root,'traces'),{recursive:true});
+const names:Record<string,string>={'case-01':'Amara Johnson','case-02':'Marcus Lee','case-03':'Elena Garcia','case-04':'Noah Patel','case-05':'Sofia Williams'};
+const priorRows=readdirSync(raw).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(readFileSync(path.join(raw,f),'utf8')));
+const completed=new Set(priorRows.filter(r=>r.finalResponse!==null&&r.httpStatus===200&&r.uiApiMatch&&r.correlationMatched).map(r=>r.testId));
+const selected=inventory.tests.filter(q=>!completed.has(q.testId)&&(!process.env.QUESTION_IDS||process.env.QUESTION_IDS.split(',').includes(q.testId)));
+const groups=[...new Set(selected.map(q=>`${q.cohort}:${q.groupId}`))];
+for(const group of groups){
+ test(group,async({page},testInfo)=>{
+  test.setTimeout(1_800_000);
+  expect(new URL(environment.baseUrl).origin).toBe('http://localhost:3000');
+  const client=new OdontiqBrowserClient(page,environment.baseUrl);
+  let current:Item|null=null;
+  const pending:Promise<unknown>[]=[];
+  page.on('response',response=>{
+   if(new URL(response.url()).pathname!=='/api/encounters/start'||response.request().method()!=='POST')return;
+   const item=current;
+   pending.push((async()=>{const body=await response.json().catch(()=>null);if(response.ok()&&typeof body?.id==='string')appendFileSync(path.join(root,'encounters.jsonl'),JSON.stringify({encounterId:body.id,caseId:response.request().postDataJSON()?.caseId??item?.caseId??null,testId:item?.testId??null,cohort:item?.cohort??null,createdAt:new Date().toISOString(),researchExclusion:true,purpose:'Synthetic 340-question variation study; exclude from participant research'})+'\n');})());
+  });
+  let authError:string|null=null;
+  try{await client.openApplication();await client.authenticate({email:environment.testEmail,password:environment.testPassword},false);}catch(error){authError=String(error);}
+  let consecutiveInfrastructureErrors=0;
+  for(const item of selected.filter(q=>`${q.cohort}:${q.groupId}`===group)){
+   current=item;
+   const runId=randomUUID();
+   const startedAt=new Date().toISOString();
+   const previous=priorRows.filter(r=>r.testId===item.testId);
+   const attempt=previous.filter(r=>r.encounterId!==null).length+1;
+   const record:any={...item,runId,attempt,attemptKind:attempt>1?'retry-after-harness-setup-error':previous.length?'continuation-first-executed-attempt':'first-run',priorAttemptRunIds:previous.map(r=>r.runId),startedAt,setupTurns:[],finalResponse:null,apiFinalResponse:null,outcome:'REVIEW',reason:'Awaiting semantic adjudication of the actual final response.',encounterId:null,requestId:null,provider:null,apiAttempts:[],screenshot:null,trace:null};
+   const stem=`${item.testId}_${runId}`;
+   let tracing=false;
+   let stage='initialization';
+   const stopFile=path.join(root,'execution-blocker.json');
+   const captureTurn=async(question:string,scored:boolean)=>{
+    await page.waitForTimeout(1000); // One worker, sequential requests; no burst concurrency.
+    const capture:any={question,requestId:null,finalResponse:null,apiFinalResponse:null,provider:null,httpStatus:null,apiAttempts:[],correlationMatched:false,uiApiMatch:false};
+    const apiPromise=page.waitForResponse(response=>new URL(response.url()).pathname==='/api/conversation'&&response.request().method()==='POST'&&response.request().postDataJSON()?.message===question,{timeout:45000}).then(async response=>{
+     const body=await response.json().catch(()=>({}));
+     const request=response.request().postDataJSON();
+     const api={httpStatus:response.status(),requestId:request?.requestId??null,encounterId:request?.encounterId??null,requestMessage:request?.message??null,provider:body.provider??null,finalResponse:body.response??null,responseRequestId:body.requestId??null,responseEncounterId:body.encounterId??null,error:body.error??null,retryAfter:response.headers()['retry-after']??null};
+     capture.apiAttempts.push(api);capture.requestId=api.requestId;capture.apiFinalResponse=api.finalResponse;capture.provider=api.provider;capture.httpStatus=api.httpStatus;
+     if(scored){record.apiAttempts=capture.apiAttempts;record.requestId=api.requestId;record.apiFinalResponse=api.finalResponse;record.provider=api.provider;}
+     if(api.httpStatus===429||/rate.?limit|too many requests/i.test(String(api.error))){const seconds=Math.max(60,Number(api.retryAfter)||0);writeFileSync(path.join(root,'rate-limit-last.json'),JSON.stringify({testId:item.testId,at:new Date().toISOString(),seconds,api},null,2));await page.waitForTimeout(Math.min(seconds,900)*1000);}
+     return api;
+    }).catch(()=>null);
+    const sent=await client.sendStudentMessage(question);
+    const api=await apiPromise;
+    if(!api||api.httpStatus!==200)throw new Error(`Conversation API ${api?.httpStatus??'timeout'}: ${api?.error??'no successful final response'}`);
+    const interaction=await client.waitForNextPatientResponse(sent.baseline,sent.sentAt,45000,sent.conversationResponse);
+    capture.finalResponse=interaction.response;
+    capture.elapsedMs=interaction.elapsedResponseTimeMs;
+    capture.correlationMatched=Boolean(interaction.conversation?.correlationMatched&&api.requestId===api.responseRequestId&&api.encounterId===record.encounterId&&api.responseEncounterId===record.encounterId);
+    capture.uiApiMatch=api.finalResponse===interaction.response;
+    capture.visibleApplicationError=interaction.visibleApplicationError;
+    if(api.requestMessage!==question)throw Error('Question wording changed in request');
+    return capture;
+   };
+   try{
+    if(authError)throw Error(`Authentication blocker: ${authError}`);
+    if(existsSync(stopFile))throw Error(`Execution stopped after repeated infrastructure failures: ${readFileSync(stopFile,'utf8')}`);
+    await page.context().tracing.start({screenshots:true,snapshots:true,sources:false});tracing=true;
+    stage='fresh-encounter';
+    const fresh=await client.createFreshEncounter(item.caseId);record.encounterId=fresh.encounterId;
+    appendFileSync(path.join(root,'encounters.jsonl'),JSON.stringify({encounterId:fresh.encounterId,caseId:item.caseId,testId:item.testId,cohort:item.cohort,createdAt:new Date().toISOString(),researchExclusion:true,purpose:'Synthetic 340-question variation study; exclude from participant research'})+'\n');
+    await client.navigateToCaseList();
+    await client.selectCase({caseId:item.caseId,patientName:names[item.caseId],encounterPath:`/encounter/${item.caseId}`,attemptPolicy:'resume'});
+    await client.startConsultation();
+    record.freshState=await client.verifyFreshEncounter(fresh.encounterId);
+    stage='setup';
+    for(const question of item.setupQuestions){const turn=await captureTurn(question,false);record.setupTurns.push(turn);if(!turn.correlationMatched||!turn.uiApiMatch)throw Error('Setup API/UI or encounter correlation failed');}
+    const setupText=record.setupTurns.map((t:any)=>t.finalResponse).join(' ');
+    if(item.testId==='C02-G06-Q16'&&!/Collier/i.test(setupText))throw Error('Required Collier referent not established by setup');
+    if((item.groupId==='G11'||/^C03-G10-Q(?:14|17)$/.test(item.testId))&&!/daughter/i.test(setupText))throw Error('Required daughter referent not established by setup');
+    if(item.groupId==='G05'&&item.setupQuestions.length&&(!/Medicaid/i.test(setupText)||!/lost|ended|lapsed|stop|no longer|used to|had.{0,25}before|without/i.test(setupText)))throw Error('Required prior/lost Medicaid context not established by setup');
+    if(item.cohort==='pain-context'&&!/eight|\b8\b|severe|really bad|very bad/i.test(setupText))throw Error('Required severe pain context not established by setup');
+    stage='scored-question';
+    const turn=await captureTurn(item.question,true);Object.assign(record,turn);record.question=item.question;
+    const defects=[];
+    if(!turn.correlationMatched)defects.push('Request/response or encounter correlation failed');
+    if(!turn.uiApiMatch)defects.push('Final UI text does not equal final API text');
+    if(turn.visibleApplicationError)defects.push('Visible application error');
+    if(defects.length){record.outcome='ERROR';record.reason=defects.join('; ');}
+    else if(dialogueInstructionLeakage(turn.finalResponse)){record.outcome='FAIL';record.reason='Instruction leakage in final UI/API response';}
+    else if(turn.provider!=='navigator'){record.outcome='REVIEW';record.reason=`Actual application used ${turn.provider}; inspect semantic correctness and Navigator-path limitation.`;}
+    consecutiveInfrastructureErrors=0;
+   }catch(error){
+    record.errorStage=stage;record.error=String(error);
+    record.outcome=stage==='setup'||authError||existsSync(stopFile)?'BLOCKED':'ERROR';record.reason=String(error);
+    if(stage!=='setup'&&!existsSync(stopFile)&&!authError){consecutiveInfrastructureErrors++;if(consecutiveInfrastructureErrors>=3)writeFileSync(stopFile,JSON.stringify({testId:item.testId,at:new Date().toISOString(),reason:record.reason,consecutiveInfrastructureErrors},null,2));}
+   }finally{
+    if(tracing){record.screenshot=path.join(root,'screenshots',`${stem}.png`);await page.screenshot({path:record.screenshot,fullPage:true}).catch(error=>{record.screenshotError=String(error);});record.trace=path.join(root,'traces',`${stem}.zip`);await page.context().tracing.stop({path:record.trace}).catch(error=>{record.traceError=String(error);});}
+    await client.releaseEncounterLease().catch(()=>undefined);
+    await Promise.allSettled(pending);pending.length=0;
+    record.completedAt=new Date().toISOString();
+    const file=path.join(raw,`${stem}.json`);writeFileSync(file,JSON.stringify(sanitizeForReport(record),null,2)+'\n',{flag:'wx'});
+    console.log(`VARIATION ${item.testId} ${record.outcome} encounter=${record.encounterId??'none'} ${record.finalResponse??record.reason}`);
+   }
+  }
+  await testInfo.attach('raw-result-directory',{body:Buffer.from(raw),contentType:'text/plain'});
+ });
+}

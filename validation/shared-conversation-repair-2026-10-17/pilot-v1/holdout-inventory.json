@@ -1,0 +1,598 @@
+{
+  "createdAt": "2026-10-17T15:23:01.762Z",
+  "implementationFrozenAt": "2026-10-17T15:22:53.781Z",
+  "untouched": true,
+  "tests": [
+    {
+      "testId": "C01-G01-H01",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "cohort": "holdout",
+      "question": "Is there a dental plan helping with your bills?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G01-H02",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "cohort": "holdout",
+      "question": "Who covers the dentist bill — an insurer, or are you without a plan?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G01-H03",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "cohort": "holdout",
+      "question": "You got coverage if we book a dentist visit?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G02-H01",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "For the referral address, what county is home?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G02-H02",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Where's home these days?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G02-H03",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "You staying in Alachua County?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G03-H01",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "cohort": "holdout",
+      "question": "If a cheaper clinic were a county over, would you make the trip?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G03-H02",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "cohort": "holdout",
+      "question": "Could we count on you getting to an out-of-county dentist, even with this pain?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C01-G03-H03",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "cohort": "holdout",
+      "question": "Is your way of reaching dental care dependable, and would you go farther for free treatment?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G04-H01",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "Any insurer helping you pay for treatment these days?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G04-H02",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "Is Medicaid still covering you, or are you uninsured now?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G04-H03",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "You got a current plan for your care or none?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G05-H01",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "cohort": "holdout",
+      "question": "Did that coverage end during the past year?",
+      "setupQuestions": [
+        "Have you ever had Medicaid?",
+        "What happened to that coverage?"
+      ],
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G05-H02",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "cohort": "holdout",
+      "question": "How far back was it when you stopped being covered?",
+      "setupQuestions": [
+        "Have you ever had Medicaid?",
+        "What happened to that coverage?"
+      ],
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G05-H03",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "cohort": "holdout",
+      "question": "Medicaid going away — was that within twelve months?",
+      "setupQuestions": [
+        "Have you ever had Medicaid?",
+        "What happened to that coverage?"
+      ],
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G06-H01",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "cohort": "holdout",
+      "question": "You live there, but is your county residency established?",
+      "setupQuestions": [
+        "What county do you live in?"
+      ],
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G06-H02",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "cohort": "holdout",
+      "question": "Has establishing residency in Collier been completed?",
+      "setupQuestions": [
+        "What county do you live in?"
+      ],
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G06-H03",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "cohort": "holdout",
+      "question": "For local eligibility, are you established as a resident yet?",
+      "setupQuestions": [
+        "What county do you live in?"
+      ],
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G07-H01",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "cohort": "holdout",
+      "question": "Getting to out-of-town appointments: dependable or a struggle?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G07-H02",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "cohort": "holdout",
+      "question": "Could I count on your transportation if the visit is beyond town?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C02-G07-H03",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "cohort": "holdout",
+      "question": "You can reliably makes it to a dentist in a different town?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G08-H01",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "For your home address, which Florida county applies?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G08-H02",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Where do you reside these days, county-wise?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G08-H03",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Your home county is Hillsborough, yes?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G09-H01",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "cohort": "holdout",
+      "question": "Do you have a dentist already, and is an insurer paying for your care?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G09-H02",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "cohort": "holdout",
+      "question": "Who do you usually see for dental care, and what coverage have you got?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G09-H03",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "cohort": "holdout",
+      "question": "You uninsured but already have your own dentist, correct?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G10-H01",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "cohort": "holdout",
+      "question": "Which plan is she covered under?",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G10-H02",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "cohort": "holdout",
+      "question": "Your daughter gets Medicaid, even though you don't have coverage yourself?",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G10-H03",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "cohort": "holdout",
+      "question": "Does your child have insurance, and is that Medicaid?",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G11-H01",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "holdout",
+      "question": "One place for you two, rather than separate clinics — would you like that?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G11-H02",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "holdout",
+      "question": "Would treating you together at one dental office be your preference?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G11-H03",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "holdout",
+      "question": "You both wants care at the same place, right?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G12-H01",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "For a nearby referral, which county is home to you?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G12-H02",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Where are you residing at present?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G12-H03",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Your home county Duval, is that correct?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G13-H01",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "Does any plan currently cover your dental visits?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G13-H02",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "Before we choose a clinic, what insurance coverage have you got?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G13-H03",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "You without insurance for this treatment, right?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G14-H01",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "cohort": "holdout",
+      "question": "Would fees tied to income be something you would consider?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G14-H02",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "cohort": "holdout",
+      "question": "A dentist adjusts the fee with your income — are you open to that?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G14-H03",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "cohort": "holdout",
+      "question": "You willing to consider income adjusted charges for a dental visit?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G15-H01",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Which county belongs on your home address for this referral?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G15-H02",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Where are you residing these days, in terms of county?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G15-H03",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "cohort": "holdout",
+      "question": "Home for you is Marion County, correct?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G16-H01",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "Any plan covering the dentist bill at present?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G16-H02",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "What coverage, if any, could we use to book your care?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G16-H03",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "cohort": "holdout",
+      "question": "You got insurance for treatment or you uninsured?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G17-H01",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "cohort": "holdout",
+      "question": "Is there any room in your budget for even a small copayment?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G17-H02",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "cohort": "holdout",
+      "question": "Would you prefer no-cost care, and could you contribute anything at all?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-G17-H03",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "cohort": "holdout",
+      "question": "A very small charge still too much, or could you pays it?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate all requested concepts against canonical facts."
+    }
+  ]
+}

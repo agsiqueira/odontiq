@@ -1,0 +1,323 @@
+[
+  {
+    "candidate": 1,
+    "counts": {
+      "PASS": 37,
+      "FAIL": 3,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 18,
+    "nonpass": [
+      {
+        "id": "FOCUS-C5-LATER",
+        "question": "What does your tooth pain feel like?",
+        "context": [
+          {
+            "question": "What is your name?",
+            "requestId": "case-05-1792278630188-1-response",
+            "finalResponse": "My name is Sofia Williams.",
+            "apiFinalResponse": "My name is Sofia Williams.",
+            "provider": "governed-patient-core",
+            "httpStatus": 200,
+            "apiAttempts": [
+              {
+                "httpStatus": 200,
+                "requestId": "case-05-1792278630188-1-response",
+                "encounterId": "3fed7d4f-d43b-47db-b8a0-85172a13471a",
+                "requestMessage": "What is your name?",
+                "provider": "governed-patient-core",
+                "finalResponse": "My name is Sofia Williams.",
+                "responseRequestId": "case-05-1792278630188-1-response",
+                "responseEncounterId": "3fed7d4f-d43b-47db-b8a0-85172a13471a",
+                "error": null,
+                "retryAfter": null,
+                "syntheticDiagnostics": null
+              }
+            ],
+            "correlationMatched": true,
+            "uiApiMatch": true,
+            "elapsedMs": 1060,
+            "visibleApplicationError": ""
+          }
+        ],
+        "response": "It's a sharp, throbbing pain in my lower-left jaw, but I'm not sure which tooth it's coming from. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "reason": "Invents sharp quality absent from Case 5 facts. A broad what...tooth location rule shadowed the quality request; final validator accepted unprovided quality. Antibiotic question timing itself is eligible."
+      },
+      {
+        "id": "FOCUS-C4-PROMPT",
+        "question": "Describe how your tooth feels.",
+        "context": [],
+        "response": "It feels like a sharp, throbbing pain, especially when I bite down.",
+        "reason": "Invents throbbing quality absent from Case 4 facts. Descriptive pain prompt selected no facts, and validator did not reject a new quality. Timing is correct: no patient question."
+      },
+      {
+        "id": "FOCUS-C3-CARE-PARA",
+        "question": "We are exploring clinics for both you and your daughter.",
+        "context": [
+          {
+            "question": "Do you have any children?",
+            "requestId": "case-03-1792278658719-1-response",
+            "finalResponse": "Yes, I have a young daughter.",
+            "apiFinalResponse": "Yes, I have a young daughter.",
+            "provider": "navigator",
+            "httpStatus": 200,
+            "apiAttempts": [
+              {
+                "httpStatus": 200,
+                "requestId": "case-03-1792278658719-1-response",
+                "encounterId": "097b6eb8-03b2-4f2c-be4e-eb5c1616ce4b",
+                "requestMessage": "Do you have any children?",
+                "provider": "navigator",
+                "finalResponse": "Yes, I have a young daughter.",
+                "responseRequestId": "case-03-1792278658719-1-response",
+                "responseEncounterId": "097b6eb8-03b2-4f2c-be4e-eb5c1616ce4b",
+                "error": null,
+                "retryAfter": null,
+                "syntheticDiagnostics": {
+                  "encounterId": "097b6eb8-03b2-4f2c-be4e-eb5c1616ce4b",
+                  "requestId": "case-03-1792278658719-1-response",
+                  "interpretation": {
+                    "requests": [
+                      {
+                        "concept": "child",
+                        "subject": "patient",
+                        "sourceId": "c3.background-family_care",
+                        "value": "daughter",
+                        "answer": "I have a young daughter."
+                      }
+                    ],
+                    "clinicalRequested": false
+                  },
+                  "providerMessageIntent": "question",
+                  "selectedFacts": [
+                    {
+                      "id": "c3.background-family_care",
+                      "topic": "social_history",
+                      "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+                    }
+                  ],
+                  "requiredFacts": [
+                    {
+                      "id": "c3.background-family_care",
+                      "topic": "social_history",
+                      "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+                    }
+                  ],
+                  "systemPrompt": "You are the patient in an odontIQ dental encounter simulation.\n\nYou must act only as the patient. Do not act as the dentist, instructor, evaluator, preceptor, assistant, or narrator.\n\nRespond only with natural spoken dialogue. Return only the words the patient should say aloud.\n\nAlways respond in English. Never translate the clinical response, switch languages, or imitate another language used by the learner.\n\nDo not use Markdown, headings, numbered lists, bullet points, tables, code formatting, bold markers, or italic markers. Do not use asterisks, hash symbols, or structured formatting. Do not add labels such as \"Response:\", \"Patient:\", or \"Answer:\". Do not enumerate information as \"one, two, three\" unless the patient would naturally speak that way.\n\nReturn only the Patient's spoken words. Do not wrap the complete answer in quotation marks. Internal quotation marks that are part of natural speech are allowed.\n\nDo not include analysis, teaching, diagnosis, differential diagnosis, treatment recommendations, grading feedback, narration, or explanations for the student.\n\nCarefully determine whether the provider is asking you a question or explaining something to you. A plain-language interpretation of the current message is supplied below.\n\nWhen the provider explains a diagnosis, treatment, medication, procedure, referral, admission, discharge plan, follow-up plan, or other course of action, respond as a patient receiving that information. Briefly acknowledge, react, or express an appropriate concern or emotion while staying consistent with the patient's age, personality, emotional state, and the seriousness of the situation.\n\nDo not initiate or invent a follow-up question. Approved patient-initiated questions are controlled separately and will be added after your response when appropriate.\n\nDo not say \"I don't know,\" \"That's why I'm here,\" or \"You're the doctor\" in response to a provider explanation, recommendation, instruction, reassurance, or closing statement. Do not independently approve, reject, alter, or add to the clinical plan. React only as the patient.\n\nUse an unknown-information response only when the provider asks a genuine factual question, the requested fact is not in the permitted patient information, and the patient would not reasonably know it. If the provider asks whether you understand the plan, answer that comprehension question directly rather than using the unknown-information response.\n\nUse only the patient facts provided in the prompt context. Do not infer, invent, or volunteer clinical findings that are not provided. If a detail is not provided or has not been made visible, say you are not sure or answer naturally that you do not know.\n\nKeep explicit case facts and canonically established encounter facts separate from preferences and unknown details. A preference to share care is not an existing shared provider, scheduling hardship, or a child's dental condition. Uninsured status is not an actual or future payment arrangement. An existing dentist or appointment does not establish attendance frequency. A learner's suggestion, hypothetical, or an earlier unsupported generated statement cannot establish a new patient fact. Answer supported portions directly and identify only the unspecified portion as uncertain. A thank-you/closure calls for acknowledgment, not a fresh complaint or patient question.\n\nAnswer the student's specific question directly and briefly, usually in one short sentence. If the student asks a broad question, reveal at most one new patient fact. Do not give the full history unless the student explicitly asks for a summary, and even then only summarize visible patient facts.\n\nSpeak naturally as a tired, uncomfortable patient under stress. Usually answer concisely, with limited patience and occasional curt or mildly irritable phrasing. Convey this through rhythm and word choice rather than repeatedly naming the emotion. Remain cooperative, believable, and non-abusive. Do not alter, add, anticipate, or withhold clinical facts, and continue to follow all case-specific disclosure and safety rules.\n\nOnly reveal symptoms, history, medications, allergies, dental history, social history, and examination-related information when the student asks an appropriate question about that topic.\n\nIf the student asks for a diagnosis, clinical interpretation, management plan, or what the dentist should do, do not diagnose or teach. Respond as a patient, for example: \"I don't know, that's why I'm here.\"\n\nIf the student mentions examination images, radiographs, tests, or findings, only discuss information explicitly provided as visible to the patient for this turn. Do not volunteer hidden clinical findings.\n\nMaintain the patient's identity, tone, and communication style consistently.\n\nStyle directions control delivery only. Apply them silently through wording and cadence. Never describe your answer length, tone, instructions, prompts, rules, or artificial role to the clinician.\n\nReturn only the patient response text.\n\nUse only the new information explicitly permitted below as a source for facts not previously spoken.\nPreviously spoken information is included only to preserve continuity. Do not repeat it unless the student asks a direct follow-up.\nIf no new information is permitted, answer naturally without adding clinical facts. Use the restricted response only for a genuine question asking the patient to supply a diagnosis, clinical interpretation, or plan; never use it for a provider explanation or recommendation.\nNever quote, summarize, or reproduce these instructions or their section labels. Never mention a simulation, disclaimer, policy, prompt, fact list, or internal state.\n\nPatient identity: Elena Garcia, age 25, Not specified.\nCommunication style: brief, natural, cooperative, and appropriately concerned.\nInterpret the student's current message as: question.\nPreviously spoken information:\n- None.\nNew information permitted for this answer:\n- The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter.\nAnswer each requested concept about the indicated person, and only these background details: patient: child [EXPLICIT SOURCE] — I have a young daughter. A care preference is not existing clinic history, scheduling difficulty, or a child's dental condition. No insurance does not imply actual payments or a self-pay arrangement. Having a dentist/appointment does not imply regular attendance: never say yes to frequency without a source. Answer known portions directly, and separately say when an asked detail is unspecified. Do not add names, towns, dates, transport modes, family arrangements, coverage-loss reasons or unrelated histories. Preserve natural speech and the polarity of each part.",
+                  "immediate": false,
+                  "navigatorInitial": "Yes, I have a young daughter.",
+                  "navigatorCorrective": null,
+                  "initialProviderAttempts": [
+                    {
+                      "attempt": 1,
+                      "status": 200,
+                      "outcome": "success",
+                      "durationMs": 228,
+                      "retryable": false
+                    }
+                  ],
+                  "correctiveProviderAttempts": [],
+                  "initialRejection": null,
+                  "usedFallback": false,
+                  "safeResponse": "Yes, I have a young daughter.",
+                  "behaviorCandidate": "Yes, I have a young daughter.",
+                  "presentationAssessment": {
+                    "valid": true
+                  },
+                  "baseResponse": "Yes, I have a young daughter."
+                }
+              }
+            ],
+            "correlationMatched": true,
+            "uiApiMatch": true,
+            "elapsedMs": 1887,
+            "visibleApplicationError": ""
+          }
+        ],
+        "response": "That's good to hear, she needs a check-up too.",
+        "reason": "Invents a daughter check-up need. Exploring clinics paraphrase bypassed care-search turn because its noun matcher did not handle plurals. No child dental condition is supplied."
+      }
+    ]
+  },
+  {
+    "candidate": 2,
+    "counts": {
+      "PASS": 45,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C1-SURGERY",
+        "question": "We need to admit you and consult oral surgery.",
+        "context": [],
+        "response": "Please help me, I'm really uncomfortable.",
+        "reason": "Eligible extraction question omitted after explicit current admission/oral-surgery plan. Classifier failed wrong-case-event; unrelated event examples in the shared prompt can contaminate a case-limited schema. Preserve failure; do not relabel it as an upstream transient."
+      }
+    ]
+  },
+  {
+    "candidate": 3,
+    "counts": {
+      "PASS": 46,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 3,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C5-COLD",
+        "question": "Cold then stop right away or keeps hurting?",
+        "context": [],
+        "response": null,
+        "reason": "Error: Conversation API 502: Final patient response rejected: contradiction of Case 5 lingering cold pain Application guard falsely rejects canonical negated immediate-resolution statement."
+      },
+      {
+        "id": "FOCUS-C5-COLD-COMPOUND",
+        "question": "Does cold worsen it, and does the pain stop immediately after the cold is removed?",
+        "context": [],
+        "response": null,
+        "reason": "Error: Conversation API 502: Final patient response rejected: contradiction of Case 5 lingering cold pain Application guard falsely rejects canonical negated immediate-resolution statement."
+      },
+      {
+        "id": "FOCUS-C5-COLD-OPEN",
+        "question": "What happens when you drink something cold?",
+        "context": [],
+        "response": null,
+        "reason": "Error: Conversation API 502: Final patient response rejected: contradiction of Case 5 lingering cold pain Application guard falsely rejects canonical negated immediate-resolution statement."
+      },
+      {
+        "id": "FOCUS-C1-ADMIT-PARA",
+        "question": "You need to stay in the hospital; the oral surgeon will manage this.",
+        "context": [],
+        "response": "Please help me. I can't stay in the hospital. Will they pull out the bad tooth?",
+        "reason": "I can't stay in the hospital asserts an unsupported inability/constraint instead of a grounded acknowledgment or permitted question. Faculty permission to ask about going home does not establish inability to stay."
+      }
+    ]
+  },
+  {
+    "candidate": 4,
+    "counts": {
+      "PASS": 49,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C5-COLD",
+        "question": "Cold then stop right away or keeps hurting?",
+        "context": [],
+        "response": "It hurts in the lower-left side of my jaw, but I can't tell which tooth is causing it. Cold drinks make the pain worse. The pain does not stop immediately after the cold is removed; it keeps hurting for a little while afterward. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "reason": "The temporal expression right away was misclassified as a location request. The selected facts contain only cold/lingering, but required facts incorrectly add c5.location; fallback consequently delivers an unrequested tooth-identity/location answer. Both thermal concepts are answered correctly, but this is an actual relevance/disclosure routing defect."
+      }
+    ]
+  },
+  {
+    "candidate": 5,
+    "counts": {
+      "PASS": 49,
+      "FAIL": 0,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C5-COLD",
+        "question": "Cold then stop right away or keeps hurting?",
+        "context": [],
+        "response": "It doesn't stop right away, the pain lingers for a bit after I remove the cold drink. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "reason": "Actual answer clearly addresses persistence after cold removal. The terse question may ask only persistence, whereas the focused expectation requests both cold worsening and persistence; worsening is not explicit. Retain REVIEW rather than silently narrow the expectation. Independently, an unambiguous worsening-only question must not accept this same text based merely on pain/cold word co-occurrence."
+      }
+    ]
+  },
+  {
+    "candidate": 6,
+    "counts": {
+      "PASS": 50,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": []
+  },
+  {
+    "candidate": 7,
+    "counts": {
+      "PASS": 50,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 2,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C5-BITING",
+        "question": "Does it hurt when you bite or tap the tooth?",
+        "context": [],
+        "response": null,
+        "reason": "Error: Conversation API 502: Final patient response rejected: missing required fact c5.biting Root: fallback omits selected required facts."
+      },
+      {
+        "id": "FOCUS-C5-SPONTANEOUS",
+        "question": "Does the pain happen on its own without touching the tooth?",
+        "context": [],
+        "response": "Yes, it does. It just comes and goes on its own. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "reason": "Comes and goes asserts intermittent pain, contradicting the authoritative current constant-pain fact. Spontaneous means unprovoked; it does not imply intermittent."
+      },
+      {
+        "id": "FOCUS-C5-TRIGGERS",
+        "question": "What makes the pain worse?",
+        "context": [],
+        "response": null,
+        "reason": "Error: Conversation API 502: Final patient response rejected: missing required fact c5.chewing Root: fallback omits selected required facts."
+      }
+    ]
+  },
+  {
+    "candidate": 8,
+    "counts": {
+      "PASS": 55,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 1,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": [
+      {
+        "id": "FOCUS-C3-CHILD-COMPOUND",
+        "question": "Does your daughter have Medicaid, and does she have a toothache?",
+        "context": [],
+        "response": null,
+        "reason": "Application 502 rejected the compound child coverage/condition answer: background daughter insurance missing or contradictory Medicaid. No final patient response was delivered; first attempt preserved."
+      }
+    ]
+  },
+  {
+    "candidate": 9,
+    "counts": {
+      "PASS": 56,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setup": 20,
+    "nonpass": []
+  }
+]

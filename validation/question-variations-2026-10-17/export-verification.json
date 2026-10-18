@@ -1,0 +1,15 @@
+{
+  "primaryRows": 340,
+  "painContextRows": 20,
+  "exactWordingPreserved": true,
+  "csvJsonRoundTripEqual": true,
+  "oneScoredResponsePerId": true,
+  "allUiApiResponsesEqual": true,
+  "allProvidersNavigator": true,
+  "syntheticEncounters": 363,
+  "retainedInitialErrors": 3,
+  "retainedInitialStopRecords": 217,
+  "checkedFailureReviewErrorTraces": 85,
+  "applicationFilesUnchanged": 213,
+  "existingRegressionMatchersUnchanged": true
+}

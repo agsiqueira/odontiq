@@ -1,0 +1,29 @@
+[
+  {
+    "testId": "C03-G10-Q01",
+    "method": "Manually inspected preserved screenshot",
+    "patientResponse": null,
+    "visibleUserMessage": "The patient response was interrupted. Your question was saved. Select ‘Retry response’ to try again.",
+    "apiStatus": 502,
+    "apiError": "Final patient response rejected: unsupported family composition",
+    "reason": "Canonical Case3 establishes a young daughter on Medicaid. The actual frozen application rejected the response and delivered no patient answer; count ERROR, not semantic PASS."
+  },
+  {
+    "testId": "C03-G10-Q02",
+    "method": "Manually inspected preserved screenshot",
+    "patientResponse": null,
+    "visibleUserMessage": "The patient response was interrupted. Your question was saved. Select ‘Retry response’ to try again.",
+    "apiStatus": 502,
+    "apiError": "Final patient response rejected: unsupported family composition",
+    "reason": "Canonical Case3 establishes a young daughter on Medicaid. The actual frozen application rejected the response and delivered no patient answer; count ERROR, not semantic PASS."
+  },
+  {
+    "testId": "C03-G10-Q03",
+    "method": "Manually inspected preserved screenshot",
+    "patientResponse": null,
+    "visibleUserMessage": "The patient response was interrupted. Your question was saved. Select ‘Retry response’ to try again.",
+    "apiStatus": 502,
+    "apiError": "Final patient response rejected: unsupported family composition",
+    "reason": "Canonical Case3 establishes a young daughter on Medicaid. The actual frozen application rejected the response and delivered no patient answer; count ERROR, not semantic PASS."
+  }
+]

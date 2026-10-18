@@ -1,0 +1,11 @@
+[
+  {
+    "testId": "C05-TARGET-5",
+    "v4Outcome": "PASS",
+    "v5Outcome": "FAIL",
+    "responseIdentical": true,
+    "question": "Thank you for explaining that.",
+    "actualResponseBothVersions": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "explanation": "The opening clinical narrative does not acknowledge a neutral thank-you and volunteers unrequested nocturnal pain. Approved antibiotic catalog text is exempt, but the preceding narrative is not. Preserve the original V4 PASS as historical evidence; the V5 FAIL corrects an overly permissive baseline judgment. This outcome-label regression is not evidence of changed response behavior."
+  }
+]

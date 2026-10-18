@@ -1,0 +1,2582 @@
+[
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q01-PAIN_71961595-6837-46df-bd09-6c4a0a469f57.json",
+    "testId": "C01-G03-Q01-PAIN",
+    "question": "Can you travel for affordable care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q01",
+    "runId": "71961595-6837-46df-bd09-6c4a0a469f57",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "80ea92d4-9a89-4040-b008-743366e5cd5f"
+    ],
+    "startedAt": "2026-10-17T14:46:34.281Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248397019-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248397019-1-response",
+            "encounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248397019-1-response",
+            "responseEncounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3442,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248401555-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248401555-2-response",
+            "encounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248401555-2-response",
+            "responseEncounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2778,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I can arrange for travel if needed. I have reliable transportation and can go outside Alachua County for affordable dental care.",
+    "apiFinalResponse": "Yes, I can arrange for travel if needed. I have reliable transportation and can go outside Alachua County for affordable dental care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+    "requestId": "case-01-1792248405469-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248405469-3-response",
+        "encounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+        "requestMessage": "Can you travel for affordable care?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I can arrange for travel if needed. I have reliable transportation and can go outside Alachua County for affordable dental care.",
+        "responseRequestId": "case-01-1792248405469-3-response",
+        "responseEncounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q01-PAIN_71961595-6837-46df-bd09-6c4a0a469f57.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q01-PAIN_71961595-6837-46df-bd09-6c4a0a469f57.zip",
+    "freshState": {
+      "boundEncounterId": "4f3b7c84-ff54-41f3-882c-c7daf8fa95e9",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2228,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:46:48.343Z",
+    "firstAttemptRunId": "80ea92d4-9a89-4040-b008-743366e5cd5f",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "71961595-6837-46df-bd09-6c4a0a469f57",
+      "responseSha256": "548e632bf0b7270f69756ae6e4e3e6c71ea7792a90eec065409ff79f7ed2d274",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q02-PAIN_70d04377-ae1b-40dd-ac72-5f28992207dc.json",
+    "testId": "C01-G03-Q02-PAIN",
+    "question": "Would you travel out of Alachua County?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q02",
+    "runId": "70d04377-ae1b-40dd-ac72-5f28992207dc",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "bbcda7ff-169d-43f4-acc3-42c41b2b2742"
+    ],
+    "startedAt": "2026-10-17T14:46:48.350Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248411654-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248411654-1-response",
+            "encounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248411654-1-response",
+            "responseEncounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2888,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248415635-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248415635-2-response",
+            "encounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248415635-2-response",
+            "responseEncounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2816,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I have reliable transportation and would travel if it means getting the care I need.",
+    "apiFinalResponse": "Yes, I have reliable transportation and would travel if it means getting the care I need.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+    "requestId": "case-01-1792248419552-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248419552-3-response",
+        "encounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+        "requestMessage": "Would you travel out of Alachua County?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have reliable transportation and would travel if it means getting the care I need.",
+        "responseRequestId": "case-01-1792248419552-3-response",
+        "responseEncounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q02-PAIN_70d04377-ae1b-40dd-ac72-5f28992207dc.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q02-PAIN_70d04377-ae1b-40dd-ac72-5f28992207dc.zip",
+    "freshState": {
+      "boundEncounterId": "422f97d0-64e1-4e6e-9bca-c659ec8ffb1e",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2151,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:47:02.109Z",
+    "firstAttemptRunId": "bbcda7ff-169d-43f4-acc3-42c41b2b2742",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "70d04377-ae1b-40dd-ac72-5f28992207dc",
+      "responseSha256": "3ba8ca182425f2da237cb04345e22b84d63037bc9ac403b6363a43254267480e",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q03-PAIN_9754b7c5-b242-44aa-bfa0-24e737c75795.json",
+    "testId": "C01-G03-Q03-PAIN",
+    "question": "Can you get to a dental clinic in another county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q03",
+    "runId": "9754b7c5-b242-44aa-bfa0-24e737c75795",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "5fdcde86-5997-4b6d-94c3-1cf36f591fac"
+    ],
+    "startedAt": "2026-10-17T14:47:02.115Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248425152-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248425152-1-response",
+            "encounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248425152-1-response",
+            "responseEncounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3030,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248429271-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248429271-2-response",
+            "encounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248429271-2-response",
+            "responseEncounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2703,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I have reliable transportation, so I can travel to another county if needed.",
+    "apiFinalResponse": "Yes, I have reliable transportation, so I can travel to another county if needed.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+    "requestId": "case-01-1792248433070-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248433070-3-response",
+        "encounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+        "requestMessage": "Can you get to a dental clinic in another county?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have reliable transportation, so I can travel to another county if needed.",
+        "responseRequestId": "case-01-1792248433070-3-response",
+        "responseEncounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q03-PAIN_9754b7c5-b242-44aa-bfa0-24e737c75795.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q03-PAIN_9754b7c5-b242-44aa-bfa0-24e737c75795.zip",
+    "freshState": {
+      "boundEncounterId": "7431b333-0b0d-4917-9314-9692153573d8",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2661,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:47:16.095Z",
+    "firstAttemptRunId": "5fdcde86-5997-4b6d-94c3-1cf36f591fac",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "9754b7c5-b242-44aa-bfa0-24e737c75795",
+      "responseSha256": "85ef3321079efd267a520777d0f260943a693b9c81910056ffd4f3397fd14eb5",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q04-PAIN_d5976b6f-ce4d-489f-b95f-3e99c6374fbe.json",
+    "testId": "C01-G03-Q04-PAIN",
+    "question": "Would you travel farther if the dental treatment were free?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q04",
+    "runId": "d5976b6f-ce4d-489f-b95f-3e99c6374fbe",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "9e599b42-84e7-40a0-bc92-3ceb3155bc44"
+    ],
+    "startedAt": "2026-10-17T14:47:16.101Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248439136-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248439136-1-response",
+            "encounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248439136-1-response",
+            "responseEncounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2454,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248442701-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248442701-2-response",
+            "encounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248442701-2-response",
+            "responseEncounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3432,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I have reliable transportation and would travel outside Alachua County if the treatment were free or low-cost.",
+    "apiFinalResponse": "Yes, I have reliable transportation and would travel outside Alachua County if the treatment were free or low-cost.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+    "requestId": "case-01-1792248447253-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248447253-3-response",
+        "encounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+        "requestMessage": "Would you travel farther if the dental treatment were free?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have reliable transportation and would travel outside Alachua County if the treatment were free or low-cost.",
+        "responseRequestId": "case-01-1792248447253-3-response",
+        "responseEncounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q04-PAIN_d5976b6f-ce4d-489f-b95f-3e99c6374fbe.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q04-PAIN_d5976b6f-ce4d-489f-b95f-3e99c6374fbe.zip",
+    "freshState": {
+      "boundEncounterId": "29c3e436-ca43-4425-b69a-20203fdf248b",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1884,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:47:29.458Z",
+    "firstAttemptRunId": "9e599b42-84e7-40a0-bc92-3ceb3155bc44",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "d5976b6f-ce4d-489f-b95f-3e99c6374fbe",
+      "responseSha256": "4ad9f3628f2ac99578786a71f4d18bc937abe371272177504a5dfefdd2de8db3",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q05-PAIN_58c5c00c-2aad-4082-8d64-8de01477b088.json",
+    "testId": "C01-G03-Q05-PAIN",
+    "question": "Do you have reliable transportation to get affordable dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q05",
+    "runId": "58c5c00c-2aad-4082-8d64-8de01477b088",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "97a99707-6964-4bd7-b54c-b6f8c95d1160"
+    ],
+    "startedAt": "2026-10-17T14:47:29.463Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248452401-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248452401-1-response",
+            "encounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248452401-1-response",
+            "responseEncounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3581,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248457067-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248457067-2-response",
+            "encounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248457067-2-response",
+            "responseEncounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2579,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+    "requestId": "case-01-1792248460750-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248460750-3-response",
+        "encounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+        "requestMessage": "Do you have reliable transportation to get affordable dental care?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+        "responseRequestId": "case-01-1792248460750-3-response",
+        "responseEncounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q05-PAIN_58c5c00c-2aad-4082-8d64-8de01477b088.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q05-PAIN_58c5c00c-2aad-4082-8d64-8de01477b088.zip",
+    "freshState": {
+      "boundEncounterId": "3c3fd385-7c6a-4074-ab8a-2f98d44fb46d",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2324,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:47:43.429Z",
+    "firstAttemptRunId": "97a99707-6964-4bd7-b54c-b6f8c95d1160",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "58c5c00c-2aad-4082-8d64-8de01477b088",
+      "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q06-PAIN_771cccf9-4a66-4fb9-b337-ed2792f43ad1.json",
+    "testId": "C01-G03-Q06-PAIN",
+    "question": "Could you travel outside your county for a low-cost dental appointment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q06",
+    "runId": "771cccf9-4a66-4fb9-b337-ed2792f43ad1",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "2984cd12-fb21-4695-8989-efa95740c0ee"
+    ],
+    "startedAt": "2026-10-17T14:47:43.435Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248466500-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248466500-1-response",
+            "encounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248466500-1-response",
+            "responseEncounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2617,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248470234-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248470234-2-response",
+            "encounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248470234-2-response",
+            "responseEncounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2124,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need at a lower cost.",
+    "apiFinalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need at a lower cost.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+    "requestId": "case-01-1792248473501-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248473501-3-response",
+        "encounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+        "requestMessage": "Could you travel outside your county for a low-cost dental appointment?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need at a lower cost.",
+        "responseRequestId": "case-01-1792248473501-3-response",
+        "responseEncounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q06-PAIN_771cccf9-4a66-4fb9-b337-ed2792f43ad1.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q06-PAIN_771cccf9-4a66-4fb9-b337-ed2792f43ad1.zip",
+    "freshState": {
+      "boundEncounterId": "225ae233-cd55-4c60-8ac1-fe89f8b480f8",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2700,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:47:56.628Z",
+    "firstAttemptRunId": "2984cd12-fb21-4695-8989-efa95740c0ee",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "771cccf9-4a66-4fb9-b337-ed2792f43ad1",
+      "responseSha256": "c467f5a29973e1f0a4af9795b5b693d45ddeefdbc64794dbe24b4d47dce1a0ab",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q07-PAIN_7f8ab04e-e3fa-498c-a91b-b66678003bc9.json",
+    "testId": "C01-G03-Q07-PAIN",
+    "question": "Would you be willing to leave Alachua County for dental treatment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q07",
+    "runId": "7f8ab04e-e3fa-498c-a91b-b66678003bc9",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "291284c0-04a5-406f-b09b-97e86a12d28a"
+    ],
+    "startedAt": "2026-10-17T14:47:56.635Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248480133-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248480133-1-response",
+            "encounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248480133-1-response",
+            "responseEncounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2960,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248484200-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248484200-2-response",
+            "encounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248484200-2-response",
+            "responseEncounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3163,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I'm not sure, it depends on the situation.",
+    "apiFinalResponse": "I'm not sure, it depends on the situation.",
+    "outcome": "FAIL",
+    "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+    "encounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+    "requestId": "case-01-1792248488500-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248488500-3-response",
+        "encounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+        "requestMessage": "Would you be willing to leave Alachua County for dental treatment?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure, it depends on the situation.",
+        "responseRequestId": "case-01-1792248488500-3-response",
+        "responseEncounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q07-PAIN_7f8ab04e-e3fa-498c-a91b-b66678003bc9.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q07-PAIN_7f8ab04e-e3fa-498c-a91b-b66678003bc9.zip",
+    "freshState": {
+      "boundEncounterId": "594e2c37-fbe6-43e1-b5c8-d7f9d973c55e",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2592,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:48:11.482Z",
+    "firstAttemptRunId": "291284c0-04a5-406f-b09b-97e86a12d28a",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "7f8ab04e-e3fa-498c-a91b-b66678003bc9",
+      "responseSha256": "c3592b7a030476b289144ec6c12e508d963e64731345bd10d767e9b0a992b7bf",
+      "outcome": "FAIL",
+      "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q08-PAIN_109d72d0-6b15-4d26-b5c5-e2c78214227f.json",
+    "testId": "C01-G03-Q08-PAIN",
+    "question": "If the closest affordable clinic is outside the county, could you go?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q08",
+    "runId": "109d72d0-6b15-4d26-b5c5-e2c78214227f",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "be7a8274-96d2-4329-a24b-e7e007311157"
+    ],
+    "startedAt": "2026-10-17T14:48:11.487Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248494966-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248494966-1-response",
+            "encounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248494966-1-response",
+            "responseEncounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2373,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248498467-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248498467-2-response",
+            "encounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248498467-2-response",
+            "responseEncounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3681,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I have reliable transportation, so if there's a clinic outside the county that can help, I'm willing to travel.",
+    "apiFinalResponse": "Yes, I have reliable transportation, so if there's a clinic outside the county that can help, I'm willing to travel.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+    "requestId": "case-01-1792248503247-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248503247-3-response",
+        "encounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+        "requestMessage": "If the closest affordable clinic is outside the county, could you go?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have reliable transportation, so if there's a clinic outside the county that can help, I'm willing to travel.",
+        "responseRequestId": "case-01-1792248503247-3-response",
+        "responseEncounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q08-PAIN_109d72d0-6b15-4d26-b5c5-e2c78214227f.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q08-PAIN_109d72d0-6b15-4d26-b5c5-e2c78214227f.zip",
+    "freshState": {
+      "boundEncounterId": "2b76d0e6-f2af-4ea4-8449-322bb8f4a006",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1962,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:48:25.573Z",
+    "firstAttemptRunId": "be7a8274-96d2-4329-a24b-e7e007311157",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "109d72d0-6b15-4d26-b5c5-e2c78214227f",
+      "responseSha256": "55f5bd3fa1ff4b2bb7394c949b6810480497a1f4dac7a08336dd6bffe64994cf",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q09-PAIN_8515a220-bcbe-4b50-9b17-c9e6b00642bb.json",
+    "testId": "C01-G03-Q09-PAIN",
+    "question": "Do you have a dependable way to reach a dental clinic out of county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q09",
+    "runId": "8515a220-bcbe-4b50-9b17-c9e6b00642bb",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "ee09d7e9-e24b-42db-94f6-8a86938cec53"
+    ],
+    "startedAt": "2026-10-17T14:48:25.580Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248508514-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248508514-1-response",
+            "encounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248508514-1-response",
+            "responseEncounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2397,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248512014-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248512014-2-response",
+            "encounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248512014-2-response",
+            "responseEncounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2689,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I've been trying to get an appointment with a dentist in the neighboring county, but it's been tough.",
+    "apiFinalResponse": "I've been trying to get an appointment with a dentist in the neighboring county, but it's been tough.",
+    "outcome": "FAIL",
+    "reason": "Does not answer whether transportation is dependable; substitutes difficulty obtaining a neighboring-county appointment and adds an unspecified neighboring-county search history.",
+    "encounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+    "requestId": "case-01-1792248515831-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248515831-3-response",
+        "encounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+        "requestMessage": "Do you have a dependable way to reach a dental clinic out of county?",
+        "provider": "navigator",
+        "finalResponse": "I've been trying to get an appointment with a dentist in the neighboring county, but it's been tough.",
+        "responseRequestId": "case-01-1792248515831-3-response",
+        "responseEncounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q09-PAIN_8515a220-bcbe-4b50-9b17-c9e6b00642bb.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q09-PAIN_8515a220-bcbe-4b50-9b17-c9e6b00642bb.zip",
+    "freshState": {
+      "boundEncounterId": "890fc8c9-75f3-4c4c-a9c6-f054c9104fae",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2695,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:48:38.963Z",
+    "firstAttemptRunId": "ee09d7e9-e24b-42db-94f6-8a86938cec53",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "8515a220-bcbe-4b50-9b17-c9e6b00642bb",
+      "responseSha256": "b10516f58873ce47cd47ac081269e6e42d47d7a70ff3f0ee0a99f66039e13ddf",
+      "outcome": "FAIL",
+      "reason": "Does not answer whether transportation is dependable; substitutes difficulty obtaining a neighboring-county appointment and adds an unspecified neighboring-county search history.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q10-PAIN_dd77cd37-28db-4ba8-ad46-fdcb24eb82c6.json",
+    "testId": "C01-G03-Q10-PAIN",
+    "question": "Can you arrange reliable transportation for a low-cost dental visit?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q10",
+    "runId": "dd77cd37-28db-4ba8-ad46-fdcb24eb82c6",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "c50d8717-db6f-4e68-a0d4-5364d2dbbcb8"
+    ],
+    "startedAt": "2026-10-17T14:48:38.969Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248522048-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248522048-1-response",
+            "encounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248522048-1-response",
+            "responseEncounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2497,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248525630-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248525630-2-response",
+            "encounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248525630-2-response",
+            "responseEncounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2501,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I can travel outside Alachua County if needed, and I have reliable transportation.",
+    "apiFinalResponse": "I can travel outside Alachua County if needed, and I have reliable transportation.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+    "requestId": "case-01-1792248529231-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248529231-3-response",
+        "encounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+        "requestMessage": "Can you arrange reliable transportation for a low-cost dental visit?",
+        "provider": "navigator",
+        "finalResponse": "I can travel outside Alachua County if needed, and I have reliable transportation.",
+        "responseRequestId": "case-01-1792248529231-3-response",
+        "responseEncounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q10-PAIN_dd77cd37-28db-4ba8-ad46-fdcb24eb82c6.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q10-PAIN_dd77cd37-28db-4ba8-ad46-fdcb24eb82c6.zip",
+    "freshState": {
+      "boundEncounterId": "a6d8dc6e-9809-467c-a6ec-60630a2ed2ff",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2567,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:48:52.236Z",
+    "firstAttemptRunId": "c50d8717-db6f-4e68-a0d4-5364d2dbbcb8",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "dd77cd37-28db-4ba8-ad46-fdcb24eb82c6",
+      "responseSha256": "2f2aa13d162a9b23be51b8ad98373c6722fe4850991cbbf7ce6fbcce6cdc6783",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q11-PAIN_50e58ec6-a8be-4229-8799-b63fa5806a58.json",
+    "testId": "C01-G03-Q11-PAIN",
+    "question": "Would a free dental clinic in a neighboring county work for you?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q11",
+    "runId": "50e58ec6-a8be-4229-8799-b63fa5806a58",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "59cf2393-4d4a-4470-8620-767c2ea44f6f"
+    ],
+    "startedAt": "2026-10-17T14:48:52.243Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248535147-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248535147-1-response",
+            "encounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248535147-1-response",
+            "responseEncounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2300,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248538581-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248538581-2-response",
+            "encounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248538581-2-response",
+            "responseEncounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2703,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "apiFinalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+    "requestId": "case-01-1792248542396-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248542396-3-response",
+        "encounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+        "requestMessage": "Would a free dental clinic in a neighboring county work for you?",
+        "provider": "navigator",
+        "finalResponse": "I smoke about one pack per day. No, I do not use alcohol. No, I do not use illicit drugs. I live in Alachua County. I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+        "responseRequestId": "case-01-1792248542396-3-response",
+        "responseEncounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q11-PAIN_50e58ec6-a8be-4229-8799-b63fa5806a58.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q11-PAIN_50e58ec6-a8be-4229-8799-b63fa5806a58.zip",
+    "freshState": {
+      "boundEncounterId": "e27852cb-1eff-4857-af73-73d8598f78f8",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2796,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:49:05.553Z",
+    "firstAttemptRunId": "59cf2393-4d4a-4470-8620-767c2ea44f6f",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "50e58ec6-a8be-4229-8799-b63fa5806a58",
+      "responseSha256": "d351c3f823313ab32816a9229d345380ab7d95a86d9deedd67d1b7b89bac033c",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q12-PAIN_97453ad5-1f4c-46a5-b68e-219efbe20e59.json",
+    "testId": "C01-G03-Q12-PAIN",
+    "question": "Is traveling outside Alachua County an option for affordable dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q12",
+    "runId": "97453ad5-1f4c-46a5-b68e-219efbe20e59",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "39213f25-d205-4a42-aa34-f6d588f9e5b6"
+    ],
+    "startedAt": "2026-10-17T14:49:05.561Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248548598-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248548598-1-response",
+            "encounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248548598-1-response",
+            "responseEncounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2317,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248552015-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248552015-2-response",
+            "encounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248552015-2-response",
+            "responseEncounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3001,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I'm not sure, I've never considered traveling for dental care.",
+    "apiFinalResponse": "I'm not sure, I've never considered traveling for dental care.",
+    "outcome": "FAIL",
+    "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+    "encounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+    "requestId": "case-01-1792248556128-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248556128-3-response",
+        "encounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+        "requestMessage": "Is traveling outside Alachua County an option for affordable dental care?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure, I've never considered traveling for dental care.",
+        "responseRequestId": "case-01-1792248556128-3-response",
+        "responseEncounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q12-PAIN_97453ad5-1f4c-46a5-b68e-219efbe20e59.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q12-PAIN_97453ad5-1f4c-46a5-b68e-219efbe20e59.zip",
+    "freshState": {
+      "boundEncounterId": "dab5c37a-984f-4b70-bc0b-6bc37cd24827",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1945,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:49:18.451Z",
+    "firstAttemptRunId": "39213f25-d205-4a42-aa34-f6d588f9e5b6",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "97453ad5-1f4c-46a5-b68e-219efbe20e59",
+      "responseSha256": "8fd26424e24257fe3b927d4f09508dc7abb1671e3c75fc8e18edacfd06aeab9d",
+      "outcome": "FAIL",
+      "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q13-PAIN_6b5b169e-2036-444d-af8b-fcfbb900d28e.json",
+    "testId": "C01-G03-Q13-PAIN",
+    "question": "Could you get yourself to a dental appointment outside your county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q13",
+    "runId": "6b5b169e-2036-444d-af8b-fcfbb900d28e",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "d7c2623e-dd19-4f64-b220-a8a52dd2088c"
+    ],
+    "startedAt": "2026-10-17T14:49:18.458Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248561379-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248561379-1-response",
+            "encounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248561379-1-response",
+            "responseEncounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2024,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248564564-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248564564-2-response",
+            "encounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248564564-2-response",
+            "responseEncounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2259,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need.",
+    "apiFinalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+    "requestId": "case-01-1792248567914-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248567914-3-response",
+        "encounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+        "requestMessage": "Could you get yourself to a dental appointment outside your county?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and I'm willing to travel if it means I can get the care I need.",
+        "responseRequestId": "case-01-1792248567914-3-response",
+        "responseEncounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q13-PAIN_6b5b169e-2036-444d-af8b-fcfbb900d28e.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q13-PAIN_6b5b169e-2036-444d-af8b-fcfbb900d28e.zip",
+    "freshState": {
+      "boundEncounterId": "d0ed0b7e-7555-482c-b9f2-ecd0cef5a0d5",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1925,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:49:30.204Z",
+    "firstAttemptRunId": "d7c2623e-dd19-4f64-b220-a8a52dd2088c",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "6b5b169e-2036-444d-af8b-fcfbb900d28e",
+      "responseSha256": "13ea21cb455425c24f14879745aedac1142c1d3fa51e4bb1addc38a83b6bf946",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q14-PAIN_6172df1f-786a-4bca-b5f5-55e2d169812e.json",
+    "testId": "C01-G03-Q14-PAIN",
+    "question": "Are you able and willing to travel for cheaper dental treatment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q14",
+    "runId": "6172df1f-786a-4bca-b5f5-55e2d169812e",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "e2de04b5-898d-45a9-a493-10d6b1035087"
+    ],
+    "startedAt": "2026-10-17T14:49:30.210Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248573162-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248573162-1-response",
+            "encounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248573162-1-response",
+            "responseEncounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2339,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248576647-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248576647-2-response",
+            "encounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248576647-2-response",
+            "responseEncounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3358,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation, and I'm willing to travel if it means getting the treatment I need.",
+    "apiFinalResponse": "I have reliable transportation, and I'm willing to travel if it means getting the treatment I need.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+    "requestId": "case-01-1792248581132-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248581132-3-response",
+        "encounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+        "requestMessage": "Are you able and willing to travel for cheaper dental treatment?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation, and I'm willing to travel if it means getting the treatment I need.",
+        "responseRequestId": "case-01-1792248581132-3-response",
+        "responseEncounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q14-PAIN_6172df1f-786a-4bca-b5f5-55e2d169812e.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q14-PAIN_6172df1f-786a-4bca-b5f5-55e2d169812e.zip",
+    "freshState": {
+      "boundEncounterId": "5e12f62c-b1f4-47a0-9755-05618d52493c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1906,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:49:43.361Z",
+    "firstAttemptRunId": "e2de04b5-898d-45a9-a493-10d6b1035087",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "6172df1f-786a-4bca-b5f5-55e2d169812e",
+      "responseSha256": "8230528e74514416335a38ff7c2a6357366f134b78912f8b3e9075572a6cc212",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q15-PAIN_17eda520-34eb-4cfe-abc9-3994c4364d80.json",
+    "testId": "C01-G03-Q15-PAIN",
+    "question": "can you travel for Affordable Care",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q15",
+    "runId": "17eda520-34eb-4cfe-abc9-3994c4364d80",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "823b059b-9a3b-4fb5-8abf-8f39e47d1b6f"
+    ],
+    "startedAt": "2026-10-17T14:49:43.366Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248586296-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248586296-1-response",
+            "encounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248586296-1-response",
+            "responseEncounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3074,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248590545-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248590545-2-response",
+            "encounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248590545-2-response",
+            "responseEncounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3195,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I can travel if needed for affordable care. I have reliable transportation.",
+    "apiFinalResponse": "Yes, I can travel if needed for affordable care. I have reliable transportation.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+    "requestId": "case-01-1792248594862-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248594862-3-response",
+        "encounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+        "requestMessage": "can you travel for Affordable Care",
+        "provider": "navigator",
+        "finalResponse": "Yes, I can travel if needed for affordable care. I have reliable transportation.",
+        "responseRequestId": "case-01-1792248594862-3-response",
+        "responseEncounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q15-PAIN_17eda520-34eb-4cfe-abc9-3994c4364d80.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q15-PAIN_17eda520-34eb-4cfe-abc9-3994c4364d80.zip",
+    "freshState": {
+      "boundEncounterId": "1262fac3-1040-4905-8f2b-677ed2859e80",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2749,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:49:58.161Z",
+    "firstAttemptRunId": "823b059b-9a3b-4fb5-8abf-8f39e47d1b6f",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "17eda520-34eb-4cfe-abc9-3994c4364d80",
+      "responseSha256": "5e0c1bffeced28f16909b34dad792e71036de58ef5a0d8925a1b25bd39a06a43",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q16-PAIN_e730fb82-d62f-415a-8168-0a8cb20a8564.json",
+    "testId": "C01-G03-Q16-PAIN",
+    "question": "You can travel outside the county for low cost care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q16",
+    "runId": "e730fb82-d62f-415a-8168-0a8cb20a8564",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "d18f6ac6-6bc0-48ce-b968-5430f42ce6e5"
+    ],
+    "startedAt": "2026-10-17T14:49:58.166Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248601594-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248601594-1-response",
+            "encounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248601594-1-response",
+            "responseEncounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2556,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248605286-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248605286-2-response",
+            "encounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248605286-2-response",
+            "responseEncounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2248,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I can travel if I find a place that can do the extraction at a price I can afford. My car is reliable, and I can manage the travel.",
+    "apiFinalResponse": "Yes, I can travel if I find a place that can do the extraction at a price I can afford. My car is reliable, and I can manage the travel.",
+    "outcome": "FAIL",
+    "reason": "Correctly affirms travel but invents a reliable personal car ('My car is reliable'). Defined reliable transportation does not establish car ownership or a specific transport mode.",
+    "encounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+    "requestId": "case-01-1792248608645-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248608645-3-response",
+        "encounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+        "requestMessage": "You can travel outside the county for low cost care?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I can travel if I find a place that can do the extraction at a price I can afford. My car is reliable, and I can manage the travel.",
+        "responseRequestId": "case-01-1792248608645-3-response",
+        "responseEncounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q16-PAIN_e730fb82-d62f-415a-8168-0a8cb20a8564.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q16-PAIN_e730fb82-d62f-415a-8168-0a8cb20a8564.zip",
+    "freshState": {
+      "boundEncounterId": "c607e9b1-2d13-4ed5-8483-26884b61e3a4",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3090,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:50:12.125Z",
+    "firstAttemptRunId": "d18f6ac6-6bc0-48ce-b968-5430f42ce6e5",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "e730fb82-d62f-415a-8168-0a8cb20a8564",
+      "responseSha256": "a5a1fbe416806326f2e806fa76cb38c72ceb0281a7dcbdd31bb875e75704856b",
+      "outcome": "FAIL",
+      "reason": "Correctly affirms travel but invents a reliable personal car ('My car is reliable'). Defined reliable transportation does not establish car ownership or a specific transport mode.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q17-PAIN_3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4.json",
+    "testId": "C01-G03-Q17-PAIN",
+    "question": "Would you goes to another county if the dentist is free?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q17",
+    "runId": "3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "d8485e8a-c3ec-4c8b-abed-8824f4805ee5"
+    ],
+    "startedAt": "2026-10-17T14:50:12.130Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248615110-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248615110-1-response",
+            "encounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248615110-1-response",
+            "responseEncounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2225,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248618427-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248618427-2-response",
+            "encounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248618427-2-response",
+            "responseEncounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2461,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I don't know, that's why I'm here. I can't afford the extraction here, let alone traveling to another county.",
+    "apiFinalResponse": "I don't know, that's why I'm here. I can't afford the extraction here, let alone traveling to another county.",
+    "outcome": "FAIL",
+    "reason": "Claims travel to another county is unaffordable despite the defined ability/willingness to travel for free/low-cost care. This unsupported transportation limitation is not justified by the inability to afford the needed extraction.",
+    "encounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+    "requestId": "case-01-1792248622027-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248622027-3-response",
+        "encounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+        "requestMessage": "Would you goes to another county if the dentist is free?",
+        "provider": "navigator",
+        "finalResponse": "I don't know, that's why I'm here. I can't afford the extraction here, let alone traveling to another county.",
+        "responseRequestId": "case-01-1792248622027-3-response",
+        "responseEncounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q17-PAIN_3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q17-PAIN_3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4.zip",
+    "freshState": {
+      "boundEncounterId": "c6fdcfd6-f1b8-4bb8-a3cf-9d79cbf9be32",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2287,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:50:24.731Z",
+    "firstAttemptRunId": "d8485e8a-c3ec-4c8b-abed-8824f4805ee5",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4",
+      "responseSha256": "0081b494a0dea81618f278e109122f20056da97575bc4966543a542e7816ef46",
+      "outcome": "FAIL",
+      "reason": "Claims travel to another county is unaffordable despite the defined ability/willingness to travel for free/low-cost care. This unsupported transportation limitation is not justified by the inability to afford the needed extraction.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q18-PAIN_c251f08e-f488-4f68-8283-d0625a697def.json",
+    "testId": "C01-G03-Q18-PAIN",
+    "question": "Can you get transport for a cheaper dental clinic?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q18",
+    "runId": "c251f08e-f488-4f68-8283-d0625a697def",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "b7aee1e2-ef0d-4399-ad62-80c993ec8c04"
+    ],
+    "startedAt": "2026-10-17T14:50:24.736Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248627694-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248627694-1-response",
+            "encounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248627694-1-response",
+            "responseEncounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2603,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248631392-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248631392-2-response",
+            "encounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248631392-2-response",
+            "responseEncounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3147,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation, so I can travel outside Alachua County if needed for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation, so I can travel outside Alachua County if needed for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+    "requestId": "case-01-1792248635676-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248635676-3-response",
+        "encounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+        "requestMessage": "Can you get transport for a cheaper dental clinic?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation, so I can travel outside Alachua County if needed for free or low-cost care.",
+        "responseRequestId": "case-01-1792248635676-3-response",
+        "responseEncounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q18-PAIN_c251f08e-f488-4f68-8283-d0625a697def.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q18-PAIN_c251f08e-f488-4f68-8283-d0625a697def.zip",
+    "freshState": {
+      "boundEncounterId": "ee70e2bd-0b0a-459c-b70f-db79a6b682d5",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3318,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:50:39.377Z",
+    "firstAttemptRunId": "b7aee1e2-ef0d-4399-ad62-80c993ec8c04",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "c251f08e-f488-4f68-8283-d0625a697def",
+      "responseSha256": "b2528d24825966d521a45b977b4c7fcf34fe2afc25a447afcdb360ba1bc5ee2f",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q19-PAIN_cced5a04-6a54-42ed-859b-951b20149e25.json",
+    "testId": "C01-G03-Q19-PAIN",
+    "question": "If dental care cost less out of town, you can go?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q19",
+    "runId": "cced5a04-6a54-42ed-859b-951b20149e25",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "0f5a8958-1b47-4ba6-b94e-4edaaaa01bd1"
+    ],
+    "startedAt": "2026-10-17T14:50:39.382Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248642893-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248642893-1-response",
+            "encounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248642893-1-response",
+            "responseEncounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2464,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248646460-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248646460-2-response",
+            "encounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248646460-2-response",
+            "responseEncounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3230,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "Yes, I have reliable transportation, and I can travel if it means I can afford the care.",
+    "apiFinalResponse": "Yes, I have reliable transportation, and I can travel if it means I can afford the care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+    "requestId": "case-01-1792248650844-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248650844-3-response",
+        "encounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+        "requestMessage": "If dental care cost less out of town, you can go?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have reliable transportation, and I can travel if it means I can afford the care.",
+        "responseRequestId": "case-01-1792248650844-3-response",
+        "responseEncounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q19-PAIN_cced5a04-6a54-42ed-859b-951b20149e25.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q19-PAIN_cced5a04-6a54-42ed-859b-951b20149e25.zip",
+    "freshState": {
+      "boundEncounterId": "55c5ccfe-f64a-4517-8bb8-166029bfe859",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2796,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:50:54.007Z",
+    "firstAttemptRunId": "0f5a8958-1b47-4ba6-b94e-4edaaaa01bd1",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "cced5a04-6a54-42ed-859b-951b20149e25",
+      "responseSha256": "e2b0f8dee993b18cda7d25de839e6b0ea289cf144e8719d7e448f50db9415e41",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  },
+  {
+    "rawFile": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\raw\\C01-G03-Q20-PAIN_d4f483f9-13c5-48f6-b472-7724071f7d85.json",
+    "testId": "C01-G03-Q20-PAIN",
+    "question": "Do you has reliable transportation for dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q20",
+    "runId": "d4f483f9-13c5-48f6-b472-7724071f7d85",
+    "attempt": 1,
+    "attemptKind": "continuation-first-executed-attempt",
+    "priorAttemptRunIds": [
+      "a9d2b71e-4241-4fc7-8e57-071418bf8849"
+    ],
+    "startedAt": "2026-10-17T14:50:54.013Z",
+    "setupTurns": [
+      {
+        "question": "How severe is your pain right now?",
+        "requestId": "case-01-1792248657195-1-response",
+        "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "apiFinalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248657195-1-response",
+            "encounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+            "requestMessage": "How severe is your pain right now?",
+            "provider": "navigator",
+            "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+            "responseRequestId": "case-01-1792248657195-1-response",
+            "responseEncounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2939,
+        "visibleApplicationError": ""
+      },
+      {
+        "question": "How are you feeling with the pain?",
+        "requestId": "case-01-1792248661263-2-response",
+        "finalResponse": "At first, the pain was about three out of ten.",
+        "apiFinalResponse": "At first, the pain was about three out of ten.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-01-1792248661263-2-response",
+            "encounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+            "requestMessage": "How are you feeling with the pain?",
+            "provider": "navigator",
+            "finalResponse": "At first, the pain was about three out of ten.",
+            "responseRequestId": "case-01-1792248661263-2-response",
+            "responseEncounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 3608,
+        "visibleApplicationError": ""
+      }
+    ],
+    "finalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "encounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+    "requestId": "case-01-1792248665992-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792248665992-3-response",
+        "encounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+        "requestMessage": "Do you has reliable transportation for dental care?",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+        "responseRequestId": "case-01-1792248665992-3-response",
+        "responseEncounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\screenshots\\C01-G03-Q20-PAIN_d4f483f9-13c5-48f6-b472-7724071f7d85.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\question-variations-2026-10-17\\traces\\C01-G03-Q20-PAIN_d4f483f9-13c5-48f6-b472-7724071f7d85.zip",
+    "freshState": {
+      "boundEncounterId": "c386f2cb-6e89-474e-bdb5-68500218b79c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2217,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T14:51:08.596Z",
+    "firstAttemptRunId": "a9d2b71e-4241-4fc7-8e57-071418bf8849",
+    "firstAttemptOutcome": "BLOCKED",
+    "firstAttemptReason": "Error: Execution stopped after repeated infrastructure failures: {\n  \"testId\": \"C03-G08-Q03\",\n  \"at\": \"2026-10-17T14:22:42.492Z\",\n  \"reason\": \"OdontiqBrowserInteractionError: Could not select case-03. Visible patient names: Amara Johnson | Marcus Lee | Elena Garcia | Noah Patel | Sofia Williams. Visible card actions: Resume Case | Resume Case | Resume Case | Resume Case | Resume Case. Candidate Priya Patel cards: 0. Candidate card text: [none]. Scoped action count: 0; visible: false; enabled: false. Screenshot: C:\\\\240 - odontIQ\\\\odontiq-phase-t\\\\artifacts\\\\screenshots\\\\case-selection-failure-2026-10-17T14-22-42-312Z.png. Trace: artifacts/traces/browser-case01-happy-path-Case-1-happy-path-browser-journey-authenticated-chromium/trace.zip. Current URL: http://localhost:3000/cases\",\n  \"consecutiveInfrastructureErrors\": 3\n}",
+    "automatedOutcome": "REVIEW",
+    "automatedReason": "Awaiting semantic adjudication of the actual final response.",
+    "adjudicator": "Assistant semantic review; question, setup, response and defined facts",
+    "adjudication": {
+      "runId": "d4f483f9-13c5-48f6-b472-7724071f7d85",
+      "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+      "outcome": "PASS",
+      "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+      "reviewedAt": "2026-10-17T14:52:22.957Z"
+    },
+    "setupObservations": [
+      "The second setup response gives historical initial 3/10 pain instead of answering current feelings. The first setup explicitly established current 8/10 severe pain; historical 3/10 does not replace current severity. This setup non-responsiveness is not scored as a travel answer."
+    ],
+    "attempts": 2
+  }
+]

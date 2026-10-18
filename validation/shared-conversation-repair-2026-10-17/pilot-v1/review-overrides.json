@@ -1,0 +1,15 @@
+{
+  "C01-G01-Q08": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Uninsured status is correct, but 'I'm paying out of pocket' could imply an actual current payment arrangement or history that is unspecified. It may instead describe lack of an insurer. Retain full response for human inspection."
+    }
+  },
+  "C02-G05-Q20": {
+    "factualCorrectness": {"status":"FAIL","reason":"Correctly places Medicaid loss within the last year but invents that it followed the end of the patient's last job. No job-loss cause is defined."}
+  },
+  "C02-G06-Q11": {
+    "completeness": {"status":"FAIL","reason":"The question asks whether residency is already established. Stating Collier County residence does not answer that defined not-established status."},
+    "relevance": {"status":"FAIL","reason":"Answers home county instead of the requested established-residency status."}
+  }
+}

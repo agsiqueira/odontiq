@@ -1,0 +1,30 @@
+{
+  "rawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v8-focused3-2026-10-17/raw/V8-C3-CONSENT_51510a5b-ffe2-4c65-b286-3b435be8ddac.json",
+  "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+  "context": [],
+  "actualFinal": "Yes, that’s okay.",
+  "classification": {
+    "success": true,
+    "classification": {
+      "schemaVersion": 1,
+      "caseId": "case-03",
+      "analyzedStudentMessageId": "case-03-1792291383468-1",
+      "detectedEvents": {
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": true,
+        "patientAgreedToIncisionAndDrainage": true
+      },
+      "confidence": 1,
+      "evidenceAliases": [
+        "student-current",
+        "patient-draft"
+      ],
+      "evidenceMessageIds": [
+        "case-03-1792291383468-1",
+        "27354818-5cc9-47f5-a6d3-a8a6faace776"
+      ]
+    }
+  },
+  "selectedQuestionId": null,
+  "sourceDefinition": "temporaryTreatmentActive includes active incision and drainage; faculty paragraphs49-51 require agreement then follow-up question."
+}

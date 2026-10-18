@@ -1,0 +1,34 @@
+[
+  {
+    "issue": "Fresh checkout standalone tsc lacked generated Next PageProps",
+    "repair": "Run next typegen; all later typechecks include generation first."
+  },
+  {
+    "issue": "Early V7 regression fixture omitted caseId from V5 corrections",
+    "repair": "Derive case from stable testId, without changing grading."
+  },
+  {
+    "issue": "Early positive-source fixture lacked raw case questionIntents",
+    "repair": "Test the subject/provenance interpreter directly using typed facts."
+  },
+  {
+    "issue": "Standalone jiti cannot resolve added @/data/cases import",
+    "repair": "Relative import; affected legacy tests passed."
+  },
+  {
+    "issue": "Legacy source-spelling assertion expected input.baseResponse.trim",
+    "repair": "Assert controlled baseAnswer assembly; patient language behavior remains covered."
+  },
+  {
+    "issue": "Unsolicited-question unit expected total generic fallback",
+    "repair": "V7 now preserves valid Okay while withholding question; expected behavior changed explicitly, no grading relaxation."
+  },
+  {
+    "issue": "UTF-8 test file rejected by Python default cp1252 reader before write",
+    "repair": "Use UTF-8 Node editing; no application mutation from failed edit."
+  },
+  {
+    "issue": "Git checkout changed prior evidence line endings",
+    "repair": "Restore original V6 bytes; comprehensive1055-file baseline manifest and restoration record."
+  }
+]

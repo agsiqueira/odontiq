@@ -1,0 +1,932 @@
+[
+  {
+    "testId": "C01-G01-Q08",
+    "question": "Are you paying for dental care without insurance?",
+    "caseId": "case-01",
+    "groupId": "G01",
+    "groupTitle": "Dental insurance",
+    "expectedMeaning": "Patient has no dental insurance.",
+    "contextRequirement": "None required.",
+    "cohort": "primary",
+    "setupQuestions": [],
+    "runId": "4c481a78-c5c7-46bf-b167-07c302b07502",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T20:21:41.813Z",
+    "setupTurns": [],
+    "finalResponse": "I don't have insurance.",
+    "apiFinalResponse": "I don't have insurance.",
+    "outcome": "REVIEW",
+    "reason": "completeness: The response correctly states uninsured status and invents no payment arrangement. The question can also ask whether actual payments are being made, which canonical facts do not establish; retain that genuine question ambiguity rather than assume a payment event or award a forced yes/no pass.",
+    "encounterId": "9bd1f714-0646-4b85-a48f-b450235e794f",
+    "requestId": "case-01-1792268504730-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792268504730-1-response",
+        "encounterId": "9bd1f714-0646-4b85-a48f-b450235e794f",
+        "requestMessage": "Are you paying for dental care without insurance?",
+        "provider": "navigator",
+        "finalResponse": "I don't have insurance.",
+        "responseRequestId": "case-01-1792268504730-1-response",
+        "responseEncounterId": "9bd1f714-0646-4b85-a48f-b450235e794f",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C01-G01-Q08_4c481a78-c5c7-46bf-b167-07c302b07502.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C01-G01-Q08_4c481a78-c5c7-46bf-b167-07c302b07502.zip",
+    "freshState": {
+      "boundEncounterId": "9bd1f714-0646-4b85-a48f-b450235e794f",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2486,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T20:21:47.566Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C01-G01-Q08_4c481a78-c5c7-46bf-b167-07c302b07502.json",
+    "lastAttemptedTurn": {
+      "question": "Are you paying for dental care without insurance?",
+      "requestId": "case-01-1792268504730-1-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "I don't have insurance.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "NOT_APPLICABLE",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All20 exact insurance questions and final responses read: uninsured status and polarity correct, no actual-payment arrangement invented, complete coverage answers and no leakage. Q08 retains completenessREVIEW for an unestablished actual-payment presupposition."
+      },
+      "completeness": {
+        "status": "REVIEW",
+        "reason": "The response correctly states uninsured status and invents no payment arrangement. The question can also ask whether actual payments are being made, which canonical facts do not establish; retain that genuine question ambiguity rather than assume a payment event or award a forced yes/no pass."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All20 exact insurance questions and final responses read: uninsured status and polarity correct, no actual-payment arrangement invented, complete coverage answers and no leakage. Q08 retains completenessREVIEW for an unestablished actual-payment presupposition."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All20 exact insurance questions and final responses read: uninsured status and polarity correct, no actual-payment arrangement invented, complete coverage answers and no leakage. Q08 retains completenessREVIEW for an unestablished actual-payment presupposition."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "4c481a78-c5c7-46bf-b167-07c302b07502"
+    ]
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+    "caseId": "case-03",
+    "groupId": "G11",
+    "groupTitle": "Shared clinic preference",
+    "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+    "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+    "cohort": "primary",
+    "setupQuestions": [
+      "Do you have any children?",
+      "I'm looking into dental care options for you and your daughter."
+    ],
+    "runId": "5d874bbd-82a4-424d-af8f-7483166f34cb",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T20:41:33.858Z",
+    "setupTurns": [
+      {
+        "question": "Do you have any children?",
+        "requestId": "case-03-1792269696928-1-response",
+        "finalResponse": "Yes, I have a young daughter.",
+        "apiFinalResponse": "Yes, I have a young daughter.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792269696928-1-response",
+            "encounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+            "requestMessage": "Do you have any children?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I have a young daughter.",
+            "responseRequestId": "case-03-1792269696928-1-response",
+            "responseEncounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 2256,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-Q06",
+          "runId": "5d874bbd-82a4-424d-af8f-7483166f34cb",
+          "caseId": "case-03",
+          "setupTurnIndex": 0,
+          "question": "Do you have any children?",
+          "finalResponse": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "reviewedAt": "2026-10-17T20:40:45.584Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            }
+          },
+          "outcome": "PASS"
+        }
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "requestId": "case-03-1792269700277-2-response",
+        "finalResponse": "That's good to hear. We both need it.",
+        "apiFinalResponse": "That's good to hear. We both need it.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792269700277-2-response",
+            "encounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+            "requestMessage": "I'm looking into dental care options for you and your daughter.",
+            "provider": "navigator",
+            "finalResponse": "That's good to hear. We both need it.",
+            "responseRequestId": "case-03-1792269700277-2-response",
+            "responseEncounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1941,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-Q06",
+          "runId": "5d874bbd-82a4-424d-af8f-7483166f34cb",
+          "caseId": "case-03",
+          "setupTurnIndex": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "finalResponse": "That's good to hear. We both need it.",
+          "responseSha256": "3dcfd05b9d65b05526b426b7eef3fd0ee5ed0cf19f8921aedd23acf789a742fd",
+          "reviewedAt": "2026-10-17T20:43:35.723Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment or general value of dental care in the parent/daughter context; no specific dental condition, established clinic, attendance or payment arrangement asserted."
+            }
+          },
+          "outcome": "PASS"
+        }
+      }
+    ],
+    "finalResponse": "Yes, it would be more convenient if we could both receive care at the same clinic as my daughter's.",
+    "apiFinalResponse": "Yes, it would be more convenient if we could both receive care at the same clinic as my daughter's.",
+    "outcome": "FAIL",
+    "reason": "factualCorrectness: The phrase \"the same clinic as my daughter's\" presupposes the daughter already has an established clinic. The case specifies only her Medicaid and a preference to share a clinic; neither setup establishes her existing provider.",
+    "encounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+    "requestId": "case-03-1792269703327-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792269703327-3-response",
+        "encounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+        "requestMessage": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+        "provider": "navigator",
+        "finalResponse": "Yes, it would be more convenient if we could both receive care at the same clinic as my daughter's.",
+        "responseRequestId": "case-03-1792269703327-3-response",
+        "responseEncounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C03-G11-Q06_5d874bbd-82a4-424d-af8f-7483166f34cb.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C03-G11-Q06_5d874bbd-82a4-424d-af8f-7483166f34cb.zip",
+    "freshState": {
+      "boundEncounterId": "af5b9fde-0cd1-4aaa-b695-13227975ce20",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2375,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T20:41:46.286Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C03-G11-Q06_5d874bbd-82a4-424d-af8f-7483166f34cb.json",
+    "lastAttemptedTurn": {
+      "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+      "requestId": "case-03-1792269703327-3-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Yes, it would be more convenient if we could both receive care at the same clinic as my daughter's.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The phrase \"the same clinic as my daughter's\" presupposes the daughter already has an established clinic. The case specifies only her Medicaid and a preference to share a clinic; neither setup establishes her existing provider."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected questions, both child/care setup turns and final answers: shared-clinic preference answers the request without unnecessary history; explicit unsupported existing-clinic claim is separately failed by override. Setup condition invention is separately failed."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected questions, both child/care setup turns and final answers: shared-clinic preference answers the request without unnecessary history; explicit unsupported existing-clinic claim is separately failed by override. Setup condition invention is separately failed."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected questions, both child/care setup turns and final answers: shared-clinic preference answers the request without unnecessary history; explicit unsupported existing-clinic claim is separately failed by override. Setup condition invention is separately failed."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "5d874bbd-82a4-424d-af8f-7483166f34cb"
+    ]
+  },
+  {
+    "testId": "C03-G11-H01",
+    "caseId": "case-03",
+    "groupId": "G11",
+    "groupTitle": "Shared clinic preference",
+    "cohort": "former-holdout-regression",
+    "question": "Would one office meeting both your dental needs be easier?",
+    "setupQuestions": [
+      "Do you have any children?",
+      "I'm looking into dental care options for you and your daughter."
+    ],
+    "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+    "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts.",
+    "runId": "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T21:04:21.825Z",
+    "setupTurns": [
+      {
+        "question": "Do you have any children?",
+        "requestId": "case-03-1792271064120-1-response",
+        "finalResponse": "Yes, I have a young daughter.",
+        "apiFinalResponse": "Yes, I have a young daughter.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792271064120-1-response",
+            "encounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+            "requestMessage": "Do you have any children?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I have a young daughter.",
+            "responseRequestId": "case-03-1792271064120-1-response",
+            "responseEncounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1985,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-H01",
+          "runId": "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9",
+          "caseId": "case-03",
+          "setupTurnIndex": 0,
+          "question": "Do you have any children?",
+          "finalResponse": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "reviewedAt": "2026-10-17T20:40:45.584Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            }
+          },
+          "outcome": "PASS"
+        }
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "requestId": "case-03-1792271067204-2-response",
+        "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+        "apiFinalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792271067204-2-response",
+            "encounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+            "requestMessage": "I'm looking into dental care options for you and your daughter.",
+            "provider": "navigator",
+            "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+            "responseRequestId": "case-03-1792271067204-2-response",
+            "responseEncounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1955,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-H01",
+          "runId": "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9",
+          "caseId": "case-03",
+          "setupTurnIndex": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+          "responseSha256": "4c05b9b9010597fbd51ea5c929cfc99015de69d734fcbf175ac31af54df35dcb",
+          "reviewedAt": "2026-10-17T21:05:01.746Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            }
+          },
+          "outcome": "PASS"
+        }
+      }
+    ],
+    "finalResponse": "Yes, it would be much easier if we could both see the dentist at the same clinic. It's already a struggle to coordinate schedules for appointments, and it would be convenient if my daughter and I could receive care in the same place.",
+    "apiFinalResponse": "Yes, it would be much easier if we could both see the dentist at the same clinic. It's already a struggle to coordinate schedules for appointments, and it would be convenient if my daughter and I could receive care in the same place.",
+    "outcome": "FAIL",
+    "reason": "factualCorrectness: The final answer invents an existing struggle coordinating appointment schedules. The case specifies only a preference for the same clinic and the patient's own next-week appointment; neither canonical facts nor the two setup turns establish scheduling difficulty.",
+    "encounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+    "requestId": "case-03-1792271070272-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792271070272-3-response",
+        "encounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+        "requestMessage": "Would one office meeting both your dental needs be easier?",
+        "provider": "navigator",
+        "finalResponse": "Yes, it would be much easier if we could both see the dentist at the same clinic. It's already a struggle to coordinate schedules for appointments, and it would be convenient if my daughter and I could receive care in the same place.",
+        "responseRequestId": "case-03-1792271070272-3-response",
+        "responseEncounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C03-G11-H01_52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C03-G11-H01_52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9.zip",
+    "freshState": {
+      "boundEncounterId": "37e83681-2c61-4b12-8172-efc3f54b027b",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2564,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T21:04:33.175Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C03-G11-H01_52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9.json",
+    "lastAttemptedTurn": {
+      "question": "Would one office meeting both your dental needs be easier?",
+      "requestId": "case-03-1792271070272-3-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Yes, it would be much easier if we could both see the dentist at the same clinic. It's already a struggle to coordinate schedules for appointments, and it would be convenient if my daughter and I could receive care in the same place.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The final answer invents an existing struggle coordinating appointment schedules. The case specifies only a preference for the same clinic and the patient's own next-week appointment; neither canonical facts nor the two setup turns establish scheduling difficulty."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "52d3cfaa-0e1c-4c08-88da-23f10ba1c0b9"
+    ]
+  },
+  {
+    "testId": "C03-G11-H03",
+    "caseId": "case-03",
+    "groupId": "G11",
+    "groupTitle": "Shared clinic preference",
+    "cohort": "former-holdout-regression",
+    "question": "Keeping both of you at one clinic sounds preferable to you?",
+    "setupQuestions": [
+      "Do you have any children?",
+      "I'm looking into dental care options for you and your daughter."
+    ],
+    "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+    "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts.",
+    "runId": "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T21:04:47.988Z",
+    "setupTurns": [
+      {
+        "question": "Do you have any children?",
+        "requestId": "case-03-1792271090970-1-response",
+        "finalResponse": "Yes, I have a young daughter.",
+        "apiFinalResponse": "Yes, I have a young daughter.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792271090970-1-response",
+            "encounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+            "requestMessage": "Do you have any children?",
+            "provider": "navigator",
+            "finalResponse": "Yes, I have a young daughter.",
+            "responseRequestId": "case-03-1792271090970-1-response",
+            "responseEncounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1826,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-H03",
+          "runId": "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac",
+          "caseId": "case-03",
+          "setupTurnIndex": 0,
+          "question": "Do you have any children?",
+          "finalResponse": "Yes, I have a young daughter.",
+          "responseSha256": "be293c5d29b8f8b1b964175a0f458520a8d7b40fbe6729031d2678e07233ff7a",
+          "reviewedAt": "2026-10-17T20:40:45.584Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Canonical young daughter establishes the child referent; no age, cohabitation, number of other children or clinic history invented."
+            }
+          },
+          "outcome": "PASS"
+        }
+      },
+      {
+        "question": "I'm looking into dental care options for you and your daughter.",
+        "requestId": "case-03-1792271093903-2-response",
+        "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+        "apiFinalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+        "provider": "navigator",
+        "httpStatus": 200,
+        "apiAttempts": [
+          {
+            "httpStatus": 200,
+            "requestId": "case-03-1792271093903-2-response",
+            "encounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+            "requestMessage": "I'm looking into dental care options for you and your daughter.",
+            "provider": "navigator",
+            "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+            "responseRequestId": "case-03-1792271093903-2-response",
+            "responseEncounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+            "error": null,
+            "retryAfter": null
+          }
+        ],
+        "correlationMatched": true,
+        "uiApiMatch": true,
+        "elapsedMs": 1931,
+        "visibleApplicationError": "",
+        "assessment": {
+          "testId": "C03-G11-H03",
+          "runId": "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac",
+          "caseId": "case-03",
+          "setupTurnIndex": 1,
+          "question": "I'm looking into dental care options for you and your daughter.",
+          "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+          "responseSha256": "4c05b9b9010597fbd51ea5c929cfc99015de69d734fcbf175ac31af54df35dcb",
+          "reviewedAt": "2026-10-17T21:05:01.746Z",
+          "dimensions": {
+            "factualCorrectness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "completeness": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "relevance": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            },
+            "leakage": {
+              "status": "PASS",
+              "reason": "Natural acknowledgment/general value of parent and daughter dental health, without specific condition, scheduling difficulty or established clinic."
+            }
+          },
+          "outcome": "PASS"
+        }
+      }
+    ],
+    "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier, especially since she's on Medicaid and we'd like to stick with the same provider for consistency.",
+    "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier, especially since she's on Medicaid and we'd like to stick with the same provider for consistency.",
+    "outcome": "REVIEW",
+    "reason": "factualCorrectness: The phrase we'd like to stick with the same provider for consistency may presuppose an established shared provider, which facts/setup do not establish. It can also express a prospective shared-provider preference. Preserve the unresolved presupposition rather than invent clinic history or silently pass it.",
+    "encounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+    "requestId": "case-03-1792271096971-3-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792271096971-3-response",
+        "encounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+        "requestMessage": "Keeping both of you at one clinic sounds preferable to you?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier, especially since she's on Medicaid and we'd like to stick with the same provider for consistency.",
+        "responseRequestId": "case-03-1792271096971-3-response",
+        "responseEncounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C03-G11-H03_9e91bd18-5eb3-4f12-9b32-f5401f96c1ac.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C03-G11-H03_9e91bd18-5eb3-4f12-9b32-f5401f96c1ac.zip",
+    "freshState": {
+      "boundEncounterId": "b501c14e-76d5-47fc-907c-26b6a41c476a",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2340,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T21:04:59.842Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C03-G11-H03_9e91bd18-5eb3-4f12-9b32-f5401f96c1ac.json",
+    "lastAttemptedTurn": {
+      "question": "Keeping both of you at one clinic sounds preferable to you?",
+      "requestId": "case-03-1792271096971-3-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier, especially since she's on Medicaid and we'd like to stick with the same provider for consistency.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "REVIEW",
+        "reason": "The phrase we'd like to stick with the same provider for consistency may presuppose an established shared provider, which facts/setup do not establish. It can also express a prospective shared-provider preference. Preserve the unresolved presupposition rather than invent clinic history or silently pass it."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three shared-clinic questions, both setup turns and exact final answers inspected: preference is canonical, but invented existing scheduling struggle failed in H01 and ambiguous stick-with-provider presupposition remains REVIEW in H03; H02 contains only preference and known daughter Medicaid."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "9e91bd18-5eb3-4f12-9b32-f5401f96c1ac"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-5",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "69388fb7-4c8c-48f6-82af-b745955461bd",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T21:09:38.466Z",
+    "setupTurns": [],
+    "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "apiFinalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "outcome": "FAIL",
+    "reason": "relevance: After a neutral thank-you, the response restarts the opening complaint and volunteers persistent pain and nocturnal waking rather than acknowledging the student. The antibiotic catalog question is permitted, but does not exempt the unrelated opening narrative. V4 labeled the identical text PASS; this is a stricter corrected semantic judgment of the same behavior, not evidence of a newly introduced text regression.",
+    "encounterId": "b11f25d1-4ad2-434a-aaed-56338ea454b5",
+    "requestId": "case-05-1792271381491-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792271381491-1-response",
+        "encounterId": "b11f25d1-4ad2-434a-aaed-56338ea454b5",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseRequestId": "case-05-1792271381491-1-response",
+        "responseEncounterId": "b11f25d1-4ad2-434a-aaed-56338ea454b5",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C05-TARGET-5_69388fb7-4c8c-48f6-82af-b745955461bd.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C05-TARGET-5_69388fb7-4c8c-48f6-82af-b745955461bd.zip",
+    "freshState": {
+      "boundEncounterId": "b11f25d1-4ad2-434a-aaed-56338ea454b5",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2421,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T21:09:44.195Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C05-TARGET-5_69388fb7-4c8c-48f6-82af-b745955461bd.json",
+    "lastAttemptedTurn": {
+      "question": "Thank you for explaining that.",
+      "requestId": "case-05-1792271381491-1-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "NOT_APPLICABLE",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read all six Case5 household/neutral prompts and exact responses: household unknowns not invented; brief canonical pain concern acceptable for care offers, catalog antibiotic text allowed. Q5 fails relevance for restarting clinical narrative after thanks; identical V4 text had an overly permissive PASS, explicitly documented."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read all six Case5 household/neutral prompts and exact responses: household unknowns not invented; brief canonical pain concern acceptable for care offers, catalog antibiotic text allowed. Q5 fails relevance for restarting clinical narrative after thanks; identical V4 text had an overly permissive PASS, explicitly documented."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "After a neutral thank-you, the response restarts the opening complaint and volunteers persistent pain and nocturnal waking rather than acknowledging the student. The antibiotic catalog question is permitted, but does not exempt the unrelated opening narrative. V4 labeled the identical text PASS; this is a stricter corrected semantic judgment of the same behavior, not evidence of a newly introduced text regression."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all six Case5 household/neutral prompts and exact responses: household unknowns not invented; brief canonical pain concern acceptable for care offers, catalog antibiotic text allowed. Q5 fails relevance for restarting clinical narrative after thanks; identical V4 text had an overly permissive PASS, explicitly documented."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "69388fb7-4c8c-48f6-82af-b745955461bd"
+    ]
+  },
+  {
+    "testId": "C03-G09-V4H2",
+    "question": "Do you already see a dentist regularly?",
+    "caseId": "case-03",
+    "groupId": "G09",
+    "groupTitle": "Insurance and existing dentist",
+    "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+    "contextRequirement": "None required.",
+    "cohort": "fresh-holdout",
+    "setupQuestions": [],
+    "runId": "a9dd9b24-e5ef-4991-902e-a0985b2aaae7",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T21:18:07.180Z",
+    "setupTurns": [],
+    "finalResponse": "Yes, I have my own dentist and an appointment next week.",
+    "apiFinalResponse": "Yes, I have my own dentist and an appointment next week.",
+    "outcome": "FAIL",
+    "reason": "factualCorrectness: The question explicitly asks whether visits already occur regularly. The initial Yes affirms regular attendance; having one's own dentist and a next-week appointment does not establish visit frequency. The response is now focused rather than dumping history, but still asserts an unsupported regularity.",
+    "encounterId": "8f3d6d2f-8568-4361-9dbe-432840276fbf",
+    "requestId": "case-03-1792271890126-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792271890126-1-response",
+        "encounterId": "8f3d6d2f-8568-4361-9dbe-432840276fbf",
+        "requestMessage": "Do you already see a dentist regularly?",
+        "provider": "navigator",
+        "finalResponse": "Yes, I have my own dentist and an appointment next week.",
+        "responseRequestId": "case-03-1792271890126-1-response",
+        "responseEncounterId": "8f3d6d2f-8568-4361-9dbe-432840276fbf",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C03-G09-V4H2_a9dd9b24-e5ef-4991-902e-a0985b2aaae7.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C03-G09-V4H2_a9dd9b24-e5ef-4991-902e-a0985b2aaae7.zip",
+    "freshState": {
+      "boundEncounterId": "8f3d6d2f-8568-4361-9dbe-432840276fbf",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1962,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T21:18:12.368Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C03-G09-V4H2_a9dd9b24-e5ef-4991-902e-a0985b2aaae7.json",
+    "lastAttemptedTurn": {
+      "question": "Do you already see a dentist regularly?",
+      "requestId": "case-03-1792271890126-1-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Yes, I have my own dentist and an appointment next week.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "NOT_APPLICABLE",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The question explicitly asks whether visits already occur regularly. The initial Yes affirms regular attendance; having one's own dentist and a next-week appointment does not establish visit frequency. The response is now focused rather than dumping history, but still asserts an unsupported regularity."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact provider questions and final responses read: own dentist and next-week appointment answer usual/established-provider questions. Explicit regularly query H2 still affirms unsupported attendance and is failed separately; no blanket history fallback remains."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact provider questions and final responses read: own dentist and next-week appointment answer usual/established-provider questions. Explicit regularly query H2 still affirms unsupported attendance and is failed separately; no blanket history fallback remains."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact provider questions and final responses read: own dentist and next-week appointment answer usual/established-provider questions. Explicit regularly query H2 still affirms unsupported attendance and is failed separately; no blanket history fallback remains."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "a9dd9b24-e5ef-4991-902e-a0985b2aaae7"
+    ]
+  },
+  {
+    "testId": "C05-G16-V4H1",
+    "question": "Would an insurance policy contribute to your dental costs?",
+    "caseId": "case-05",
+    "groupId": "G16",
+    "groupTitle": "Insurance",
+    "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+    "contextRequirement": "None required.",
+    "cohort": "fresh-holdout",
+    "setupQuestions": [],
+    "runId": "7299ebff-6cd6-4ffb-a17b-f355e5dd4705",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T21:20:27.247Z",
+    "setupTurns": [],
+    "finalResponse": "Without insurance, the costs will be out of pocket.",
+    "apiFinalResponse": "Without insurance, the costs will be out of pocket.",
+    "outcome": "FAIL",
+    "reason": "factualCorrectness: The answer says costs will be out of pocket, asserting a future personal-payment arrangement from uninsured status. Case5 cannot pay anything and prefers free care; no scheduled bill, obligatory charge, self-pay arrangement or exclusion of free/charitable care is established. The requested insurance contribution should be answered from coverage facts alone.",
+    "encounterId": "31938383-2579-4348-a8d7-4be36d1a03de",
+    "requestId": "case-05-1792272029496-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792272029496-1-response",
+        "encounterId": "31938383-2579-4348-a8d7-4be36d1a03de",
+        "requestMessage": "Would an insurance policy contribute to your dental costs?",
+        "provider": "navigator",
+        "finalResponse": "Without insurance, the costs will be out of pocket.",
+        "responseRequestId": "case-05-1792272029496-1-response",
+        "responseEncounterId": "31938383-2579-4348-a8d7-4be36d1a03de",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\screenshots\\C05-G16-V4H1_7299ebff-6cd6-4ffb-a17b-f355e5dd4705.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v5-2026-10-17\\traces\\C05-G16-V4H1_7299ebff-6cd6-4ffb-a17b-f355e5dd4705.zip",
+    "freshState": {
+      "boundEncounterId": "31938383-2579-4348-a8d7-4be36d1a03de",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2200,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T21:20:31.974Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v5-2026-10-17/raw/C05-G16-V4H1_7299ebff-6cd6-4ffb-a17b-f355e5dd4705.json",
+    "lastAttemptedTurn": {
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "requestId": "case-05-1792272029496-1-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "Without insurance, the costs will be out of pocket.",
+      "error": null
+    },
+    "implementationVersion": "V5",
+    "setupOutcome": "NOT_APPLICABLE",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "The answer says costs will be out of pocket, asserting a future personal-payment arrangement from uninsured status. Case5 cannot pay anything and prefers free care; no scheduled bill, obligatory charge, self-pay arrangement or exclusion of free/charitable care is established. The requested insurance contribution should be answered from coverage facts alone."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact insurance-contribution prompts and final responses read: H2/H3 correctly uninsured; H1 incorrectly turns absence of coverage into a future out-of-pocket arrangement and is failed separately."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact insurance-contribution prompts and final responses read: H2/H3 correctly uninsured; H1 incorrectly turns absence of coverage into a future out-of-pocket arrangement and is failed separately."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact insurance-contribution prompts and final responses read: H2/H3 correctly uninsured; H1 incorrectly turns absence of coverage into a future out-of-pocket arrangement and is failed separately."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "7299ebff-6cd6-4ffb-a17b-f355e5dd4705"
+    ]
+  }
+]

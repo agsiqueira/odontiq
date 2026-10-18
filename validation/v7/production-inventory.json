@@ -1,0 +1,661 @@
+{
+  "tests": [
+    {
+      "testId": "C01-G01-Q08",
+      "question": "Are you paying for dental care without insurance?",
+      "caseId": "case-01",
+      "groupId": "SMOKE",
+      "groupTitle": "Dental insurance",
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "production-smoke",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ]
+    },
+    {
+      "testId": "C03-G11-H01",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "production-smoke",
+      "question": "Would one office meeting both your dental needs be easier?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C03-G11-H03",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Shared clinic preference",
+      "cohort": "production-smoke",
+      "question": "Keeping both of you at one clinic sounds preferable to you?",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ],
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C05-TARGET-5",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [],
+      "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "question": "Do you already see a dentist regularly?",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Insurance and existing dentist",
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G11-Q11",
+      "question": "Do you have a preference about whether you both use the same dental clinic?",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "production-smoke",
+      "setupQuestions": [
+        "Do you have any children?",
+        "I'm looking into dental care options for you and your daughter."
+      ]
+    },
+    {
+      "testId": "C01-G03-Q01",
+      "question": "Can you travel for affordable care?",
+      "caseId": "case-01",
+      "groupId": "SMOKE",
+      "groupTitle": "Transportation and travel",
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G05-Q01",
+      "question": "When did you lose Medicaid?",
+      "caseId": "case-02",
+      "groupId": "SMOKE",
+      "groupTitle": "Medicaid loss timing",
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "For “that coverage” or “Medicaid stop” follow-ups, first establish that the patient lost Medicaid. Accept a relative answer tied to that context.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G14-Q01",
+      "question": "Could you pay a sliding-scale fee?",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G17-Q01",
+      "question": "Could you afford a small fee?",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "PROD-CLOSURE-1",
+      "caseId": "case-01",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint"
+    },
+    {
+      "testId": "PROD-CLOSURE-2",
+      "caseId": "case-02",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint"
+    },
+    {
+      "testId": "PROD-CLOSURE-3",
+      "caseId": "case-03",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint"
+    },
+    {
+      "testId": "PROD-CLOSURE-4",
+      "caseId": "case-04",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint"
+    },
+    {
+      "testId": "PROD-CLOSURE-5",
+      "caseId": "case-05",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Closure after clinical context",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "What brings you here today?"
+      ],
+      "expectedMeaning": "Brief acknowledgment without restarting history or an unsolicited question.",
+      "contextRequirement": "After actual chief complaint"
+    },
+    {
+      "testId": "PROD-APPROPRIATE-C4-QUESTION",
+      "caseId": "case-04",
+      "question": "I'm referring you to a dentist for follow-up, and we will manage your pain with ibuprofen.",
+      "expectedMeaning": "Natural patient acknowledgment; catalog antibiotic question is eligible after this actual provider pain-treatment/follow-up plan.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Patient question positive controls",
+      "setupQuestions": [],
+      "contextRequirement": "Fresh encounter with actual triggering event in this turn"
+    },
+    {
+      "testId": "PROD-APPROPRIATE-C5-QUESTION",
+      "caseId": "case-05",
+      "question": "What does your tooth pain feel like, and what makes it worse?",
+      "expectedMeaning": "Canonical current-pain attributes answer question; catalog antibiotic request is eligible only after substantive pain description.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "Patient question positive controls",
+      "setupQuestions": [],
+      "contextRequirement": "Fresh encounter with actual triggering event in this turn"
+    },
+    {
+      "testId": "C03-TARGET-6",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "I'm looking into dental care options for you and your daughter.",
+      "setupQuestions": [],
+      "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "C04-TARGET-6",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "I'm looking into dental care options for you and your daughter.",
+      "setupQuestions": [],
+      "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "C05-TARGET-6",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "I'm looking into dental care options for you and your daughter.",
+      "setupQuestions": [],
+      "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "C03-G09-H01",
+      "caseId": "case-03",
+      "groupId": "SMOKE",
+      "groupTitle": "Insurance and existing dentist",
+      "cohort": "production-smoke",
+      "question": "Are you insured, and who's your dentist normally?",
+      "setupQuestions": [],
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "Separate setup turns shown in setupQuestions; evaluate actual question and all requested concepts against canonical facts."
+    },
+    {
+      "testId": "C04-G12-Q02",
+      "question": "What county do you live in?",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G13-Q01",
+      "question": "Do you have insurance?",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-TARGET-2",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "Does your daughter live with you?",
+      "setupQuestions": [],
+      "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "C05-G17-Q10",
+      "question": "Should I focus on free dental clinics because you cannot pay?",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "production-smoke",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-TARGET-1",
+      "caseId": "case-05",
+      "groupId": "SMOKE",
+      "groupTitle": "Household boundary and neutral acknowledgement",
+      "cohort": "production-smoke",
+      "question": "Who do you live with?",
+      "setupQuestions": [],
+      "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+      "contextRequirement": "None required."
+    },
+    {
+      "testId": "FOCUS-C5-OPEN",
+      "caseId": "case-05",
+      "question": "What brings you in today?",
+      "setupQuestions": [],
+      "expectedMeaning": "Opening pain attributes permit antibiotic request; relevant canonical complaint.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C5-LATER",
+      "caseId": "case-05",
+      "question": "What does your tooth pain feel like?",
+      "setupQuestions": [
+        "What is your name?"
+      ],
+      "expectedMeaning": "Quality answer and eligible request; no turn threshold.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C4-PLAN-PARA",
+      "caseId": "case-04",
+      "question": "For now, take ibuprofen for relief; your next step is a dentist within three days.",
+      "setupQuestions": [],
+      "expectedMeaning": "Actual pain/followup plan permits antibiotic-needed question.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C4-PROMPT",
+      "caseId": "case-04",
+      "question": "Describe how your tooth feels.",
+      "setupQuestions": [],
+      "expectedMeaning": "Answer pain; clinician symptom question is not a plan.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C4-PLAN-THANKS",
+      "caseId": "case-04",
+      "question": "Thank you for explaining that.",
+      "setupQuestions": [
+        "We will manage your pain with ibuprofen and refer you to a dentist."
+      ],
+      "expectedMeaning": "Acknowledge closure; do not restart.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C3-CARE-PARA",
+      "caseId": "case-03",
+      "question": "We are exploring clinics for both you and your daughter.",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Care-search acknowledgment and sourced preference, no child condition or attendance.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C3-CHILD-CONDITION",
+      "caseId": "case-03",
+      "question": "Does your daughter have dental problems?",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Child condition unknown, preserve family facts.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C3-CHILD-PROVIDER",
+      "caseId": "case-03",
+      "question": "Does your daughter have a regular dentist?",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Child provider unspecified; do not imply existing clinic.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C1-SURGERY",
+      "caseId": "case-01",
+      "question": "We need to admit you and consult oral surgery.",
+      "setupQuestions": [],
+      "expectedMeaning": "Extraction question eligible.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C2-ABX",
+      "caseId": "case-02",
+      "question": "We will start antibiotic therapy now.",
+      "setupQuestions": [],
+      "expectedMeaning": "Antibiotic-effect question eligible.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C3-TEMP",
+      "caseId": "case-03",
+      "question": "I recommend acetaminophen for pain relief.",
+      "setupQuestions": [],
+      "expectedMeaning": "Temporary-treatment followup question eligible under application contract.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-C3-ATTEND-PARA",
+      "caseId": "case-03",
+      "question": "How often do you visit your dentist?",
+      "setupQuestions": [],
+      "expectedMeaning": "Existing dentist and appointment do not establish attendance frequency.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 focused candidate verification",
+      "contextRequirement": "Exact setup required."
+    },
+    {
+      "testId": "FOCUS-MIXED-PLAN",
+      "caseId": "case-04",
+      "question": "I will give you ibuprofen for pain. What county do you live in?",
+      "setupQuestions": [],
+      "expectedMeaning": "Give county answer and allow question after explicit current plan.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-ABX-EXPLAINED",
+      "caseId": "case-04",
+      "question": "Antibiotics are not indicated. I will give ibuprofen for pain and refer you to a dentist.",
+      "setupQuestions": [],
+      "expectedMeaning": "Acknowledge plan; no antibiotic question after explicit explanation.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-ABX-HISTORY",
+      "caseId": "case-04",
+      "question": "Have you ever taken antibiotics before?",
+      "setupQuestions": [],
+      "expectedMeaning": "History question does not authorize patient question.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-C5-GENERIC",
+      "caseId": "case-05",
+      "question": "Does your tooth hurt?",
+      "setupQuestions": [],
+      "expectedMeaning": "Generic yes it hurts alone does not permit antibiotic request.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-C5-AFTER-GENERIC",
+      "caseId": "case-05",
+      "question": "What does the pain feel like?",
+      "setupQuestions": [
+        "Does your tooth hurt?"
+      ],
+      "expectedMeaning": "A substantive later quality answer permits request even when withheld earlier.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-C3-SHARED-PARA",
+      "caseId": "case-03",
+      "question": "We are searching dental clinics for both of you.",
+      "setupQuestions": [
+        "Do you have any children?"
+      ],
+      "expectedMeaning": "Care-search grammar and plural noun variants stay grounded.",
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 2 focused verification",
+      "contextRequirement": "Execute exact setup."
+    },
+    {
+      "testId": "FOCUS-C5-COLD",
+      "question": "Cold then stop right away or keeps hurting?",
+      "caseId": "case-05",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 3 focused verification",
+      "contextRequirement": "None",
+      "expectedMeaning": "Cold worsens pain and pain lingers after cold removal; substantive attribute permits once-only antibiotic request."
+    },
+    {
+      "testId": "FOCUS-C5-COLD-COMPOUND",
+      "question": "Does cold worsen it, and does the pain stop immediately after the cold is removed?",
+      "caseId": "case-05",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 3 focused verification",
+      "contextRequirement": "None",
+      "expectedMeaning": "Cold worsens pain and pain lingers after cold removal; substantive attribute permits once-only antibiotic request."
+    },
+    {
+      "testId": "FOCUS-C5-COLD-OPEN",
+      "question": "What happens when you drink something cold?",
+      "caseId": "case-05",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "groupTitle": "V7 candidate 3 focused verification",
+      "contextRequirement": "None",
+      "expectedMeaning": "Cold worsens pain and pain lingers after cold removal; substantive attribute permits once-only antibiotic request."
+    },
+    {
+      "testId": "FOCUS-C1-ADMIT-PARA",
+      "question": "You need to stay in the hospital; the oral surgeon will manage this.",
+      "caseId": "case-01",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "expectedMeaning": "Current admission/surgery permits extraction question.",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-BITING",
+      "caseId": "case-05",
+      "question": "Does it hurt when you bite or tap the tooth?",
+      "expectedMeaning": "Slight biting/percussion discomfort; substantive attribute permits request.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-SPONTANEOUS",
+      "caseId": "case-05",
+      "question": "Does the pain happen on its own without touching the tooth?",
+      "expectedMeaning": "Spontaneous current pain is supported and permits request.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-TRIGGERS",
+      "caseId": "case-05",
+      "question": "What makes the pain worse?",
+      "expectedMeaning": "Cold worsens pain, chewing is uncomfortable, slight biting/percussion discomfort; do not omit requested factors.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C4-CHILD-UNKNOWN",
+      "caseId": "case-04",
+      "question": "Does your daughter have a toothache?",
+      "expectedMeaning": "Unspecified family/condition: scoped uncertainty without affirming a daughter or giving adult pain history.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C3-CHILD-COMPOUND",
+      "caseId": "case-03",
+      "question": "Does your daughter have Medicaid, and does she have a toothache?",
+      "expectedMeaning": "Known daughter Medicaid plus unknown child condition, no adult symptom dump.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C3-CONDITIONAL-PREF",
+      "caseId": "case-03",
+      "question": "Would you prefer the same clinic if your daughter needed a filling?",
+      "expectedMeaning": "Supported preference; hypothetical filling is not an established child condition.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "C04-G14-Q19",
+      "question": "Is sliding scale payment something you open to?",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "v7-production",
+      "setupQuestions": []
+    }
+  ],
+  "note": "Frozen production smoke includes the 56 focused cases plus the remaining development timing FAIL C04-G14-Q19. No application change."
+}

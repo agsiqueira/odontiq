@@ -1,0 +1,50 @@
+{
+  "testId": "C03-G11-Q13",
+  "question": "Would you like me to look for somewhere that can treat you both?",
+  "finalResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+  "encounterId": "c78b5003-2500-45f0-93aa-8a8ca815d41f",
+  "requestId": "case-03-1792258549595-3-response",
+  "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G11-Q13_8c88c492-1d0f-4b08-80a1-0edf4e353f64.json",
+  "diagnostics": {
+    "encounterId": "c78b5003-2500-45f0-93aa-8a8ca815d41f",
+    "requestId": "case-03-1792258549595-3-response",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "shared_clinic",
+          "subject": "patient",
+          "sourceId": "c3.background-family_care",
+          "value": "same_clinic",
+          "answer": "I'd prefer the same clinic for my daughter and me."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "providerMessageIntent": "question",
+    "selectedFacts": [
+      {
+        "id": "c3.background-family_care",
+        "topic": "social_history",
+        "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+      }
+    ],
+    "requiredFacts": [
+      {
+        "id": "c3.background-family_care",
+        "topic": "social_history",
+        "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+      }
+    ],
+    "immediate": false,
+    "navigatorInitial": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+    "navigatorCorrective": null,
+    "initialRejection": null,
+    "usedFallback": false,
+    "safeResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+    "behaviorCandidate": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+    "presentationAssessment": {
+      "valid": true
+    },
+    "baseResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too."
+  }
+}

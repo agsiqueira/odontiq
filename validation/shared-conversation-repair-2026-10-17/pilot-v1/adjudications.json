@@ -1,0 +1,3962 @@
+[
+  {
+    "testId": "C01-G01-Q01",
+    "cohort": "primary",
+    "runId": "09ade32c-8e18-4552-9257-c8eeb67c7792",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.344Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q02",
+    "cohort": "primary",
+    "runId": "883f3b55-d0cc-41c2-b348-e7c615d344b9",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q03",
+    "cohort": "primary",
+    "runId": "8ede964a-3c90-429e-92ef-2c65d576c091",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q04",
+    "cohort": "primary",
+    "runId": "e0e909a2-fb73-4b5b-a3fd-7b8bcc55de77",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q05",
+    "cohort": "primary",
+    "runId": "0fc5a801-aeae-4cdb-a646-3a2d896c1f99",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q06",
+    "cohort": "primary",
+    "runId": "388fbc84-cf75-4922-aca9-58cd18bc4ac7",
+    "responseSha256": "fcc5bddc0084a447c88d5e0f9f048a0c60f2133d126c86f0a424b57f996df713",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q07",
+    "cohort": "primary",
+    "runId": "4ec84c65-9d3b-4ce8-8eeb-21f7b4579492",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q08",
+    "cohort": "primary",
+    "runId": "55f023fb-7393-407f-96db-4d9777fb751f",
+    "responseSha256": "444867366a7bc1cac4ecb1bc1290c76f7d6fdebcb8a22f71b980467354a2bbfa",
+    "outcome": "REVIEW",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "REVIEW",
+        "reason": "Uninsured status is correct, but 'I'm paying out of pocket' could imply an actual current payment arrangement or history that is unspecified. It may instead describe lack of an insurer. Retain full response for human inspection."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q09",
+    "cohort": "primary",
+    "runId": "f1a43a39-92c2-4c98-a9cc-aa5606ccae50",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q10",
+    "cohort": "primary",
+    "runId": "bdeda1fe-e892-49c1-98b3-cd2fbaf35daf",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q11",
+    "cohort": "primary",
+    "runId": "acf0a675-7ab8-427b-8552-9f184e816dd2",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q12",
+    "cohort": "primary",
+    "runId": "c2c25023-284c-48ce-97f1-10414d102bcf",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q13",
+    "cohort": "primary",
+    "runId": "5c5da501-9c73-41e1-a360-83d6beec8197",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q14",
+    "cohort": "primary",
+    "runId": "6f427641-b56a-4c30-8acd-76a4ddc55e48",
+    "responseSha256": "e29918d81d33d27032be1a496d049fd5dc846d1a7bce2209c176c4efebe72f8b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q15",
+    "cohort": "primary",
+    "runId": "545b3ccb-b583-4a48-90f3-d8f636910ae9",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q16",
+    "cohort": "primary",
+    "runId": "436c7d0f-641b-48aa-9b5f-895b03725a01",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q17",
+    "cohort": "primary",
+    "runId": "db38d40e-4ccf-4491-ac93-c775bf3fa3d2",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q18",
+    "cohort": "primary",
+    "runId": "3f28f9cd-515b-45f3-91c0-e6a5deddcf5c",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q19",
+    "cohort": "primary",
+    "runId": "e3476cac-fc7d-473e-985f-dee5cf32c10e",
+    "responseSha256": "827a196fe7028e2985f6ea1f63700501cc7d27e7a0e0b8f9e93399174231ec26",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G01-Q20",
+    "cohort": "primary",
+    "runId": "5ae9c319-c659-4664-97e0-bd64993ff8a2",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.347Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q01",
+    "cohort": "primary",
+    "runId": "01e6d684-4fcb-4c5c-8f86-6ce81bca62f1",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.548Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q02",
+    "cohort": "primary",
+    "runId": "64e90bb4-7481-4f87-91e5-76b543288870",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q03",
+    "cohort": "primary",
+    "runId": "ffaffbe1-e501-40ed-9858-fe9dc5fc69a6",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q04",
+    "cohort": "primary",
+    "runId": "bfbce2fa-6f94-4f8d-ac1a-6cfc0a3b3984",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q05",
+    "cohort": "primary",
+    "runId": "0718abaa-e998-4b15-a8d4-80047e382475",
+    "responseSha256": "24c4cdc8a8ae9e621e40ff114481b3089236669e7327c1e72ab7c33e8a19ffbc",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q06",
+    "cohort": "primary",
+    "runId": "dda157fd-8e3e-4bf2-a686-a08ab75b0845",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q07",
+    "cohort": "primary",
+    "runId": "130dd5b3-9de4-41c3-856e-158adad5f9c9",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q08",
+    "cohort": "primary",
+    "runId": "f7279880-23f6-4ff1-81de-a87eaea97d78",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q09",
+    "cohort": "primary",
+    "runId": "bb7fc9ac-fe77-4330-ab1f-53097b546668",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q10",
+    "cohort": "primary",
+    "runId": "68adeedb-aab8-44b8-bbce-56e0e1514df8",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q11",
+    "cohort": "primary",
+    "runId": "e82d1ce6-0ffa-45be-9ec5-b3b441633072",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q12",
+    "cohort": "primary",
+    "runId": "ba6c4d3d-c605-4013-be5c-99f8169a222c",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q13",
+    "cohort": "primary",
+    "runId": "2509b2a2-ef14-4216-88cd-2483622902d8",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q14",
+    "cohort": "primary",
+    "runId": "f302a6af-f615-4783-b401-8641c7cbe2cf",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q15",
+    "cohort": "primary",
+    "runId": "5803811b-fed2-4b03-ac25-10b12754e4e8",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q16",
+    "cohort": "primary",
+    "runId": "c093931d-fddb-4f52-bc3d-2dba5e73c985",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q17",
+    "cohort": "primary",
+    "runId": "bfa09aee-6a2f-48c2-9935-bd1402a0e9ac",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.550Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q18",
+    "cohort": "primary",
+    "runId": "ca7de6a9-3eb2-4695-9bcb-5b6216d57fc4",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.551Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q19",
+    "cohort": "primary",
+    "runId": "083598ef-f248-47d9-b03a-834c6ee6e5d9",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.551Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G02-Q20",
+    "cohort": "primary",
+    "runId": "4c0763bb-600c-4aa6-8fa6-aa37feb01051",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:28:11.551Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q01",
+    "cohort": "primary",
+    "runId": "9ce17ef1-fe90-4fbf-b43e-e6071174af40",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.445Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q02",
+    "cohort": "primary",
+    "runId": "60a758c8-fad6-4948-a18a-15ac14c9fbc2",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.447Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q03",
+    "cohort": "primary",
+    "runId": "62e56ba3-78e6-4d94-baf7-c744f9094d2f",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.447Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q04",
+    "cohort": "primary",
+    "runId": "1eae6492-ccf7-49d3-b45b-aa4d0c8aeb8c",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.447Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q05",
+    "cohort": "primary",
+    "runId": "e5167f49-bb80-460e-bdb7-f9ff7fd26b60",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q06",
+    "cohort": "primary",
+    "runId": "a232da88-9cc1-4a14-8029-99ff21a50532",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q07",
+    "cohort": "primary",
+    "runId": "7a4ea5f7-cd73-4614-81f0-4ecb5e1536fb",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q08",
+    "cohort": "primary",
+    "runId": "327b9e77-7517-4497-ae7d-fd9cf7c0d098",
+    "responseSha256": "fd653af3676bfe2eedb913b38fd8c2033299f9ae84f4aad45e98dba400b953a5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q09",
+    "cohort": "primary",
+    "runId": "b4ab84da-2cb1-4d46-81f1-a489f45fda46",
+    "responseSha256": "f2f8eb44716be0544a1ce040dd3aa06595ff6f11e0877febfe2d399acc5597ad",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q10",
+    "cohort": "primary",
+    "runId": "99bad698-bdd7-40f8-9089-d61bcb952020",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q11",
+    "cohort": "primary",
+    "runId": "56b7eebf-1ecd-470a-8b60-00f10822b0d3",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q12",
+    "cohort": "primary",
+    "runId": "94dd77b1-f150-4286-a946-fa966d41b86d",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q13",
+    "cohort": "primary",
+    "runId": "f5a296ac-9427-4f2e-86fc-b0f2a88b0044",
+    "responseSha256": "fd653af3676bfe2eedb913b38fd8c2033299f9ae84f4aad45e98dba400b953a5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q14",
+    "cohort": "primary",
+    "runId": "1c65731d-efc9-4e98-ae3e-128c4c21fb32",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q15",
+    "cohort": "primary",
+    "runId": "77d27111-7622-404c-906a-1179d45b84f3",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q16",
+    "cohort": "primary",
+    "runId": "7663b441-9b74-4c8a-8e65-3930560fa9b7",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q17",
+    "cohort": "primary",
+    "runId": "d9935df1-41da-418b-b6b6-ab3a8ac1f378",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q18",
+    "cohort": "primary",
+    "runId": "df581837-3062-44b0-b124-2394e673c2c1",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q19",
+    "cohort": "primary",
+    "runId": "991c7d87-cee8-45eb-a1b5-19e0d6302abd",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C01-G03-Q20",
+    "cohort": "primary",
+    "runId": "3cb715a8-280e-4f79-8aaf-727d493ef7f7",
+    "responseSha256": "5fc4377e4e606e7ed6d431d6ba625028d6999fcc6dd61e3e928117eb590708b5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-01 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:30:19.448Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q01",
+    "cohort": "primary",
+    "runId": "4998491f-7ebb-4f21-a714-91de0c74b861",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.504Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q02",
+    "cohort": "primary",
+    "runId": "293c5f80-ba03-4122-9d85-3ff6912c6b16",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.505Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q03",
+    "cohort": "primary",
+    "runId": "fff77dc7-cbaf-4ee5-96d2-cc1e0b60bf84",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.505Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q04",
+    "cohort": "primary",
+    "runId": "91500f82-05bd-441d-ba45-543ac7c3f8ce",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.505Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q05",
+    "cohort": "primary",
+    "runId": "a73acb40-5b8f-4346-b2be-2aafa2fc21a7",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.505Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q06",
+    "cohort": "primary",
+    "runId": "f374accf-2193-458c-9338-fcf83077cf29",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.505Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q07",
+    "cohort": "primary",
+    "runId": "ccbe031b-caf4-4856-bcae-ba22bf06bc57",
+    "responseSha256": "f7b93d871b4313de71bd0e0c10c4c95d61b8fbdb3a9224bdf5d1125dbf30a8da",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q08",
+    "cohort": "primary",
+    "runId": "cf2333b7-f246-43c2-994f-c14803d55fe4",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q09",
+    "cohort": "primary",
+    "runId": "e1668070-db42-476e-a3f1-2a7270970299",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q10",
+    "cohort": "primary",
+    "runId": "daeca181-9088-4fb9-9380-48e78ce61faa",
+    "responseSha256": "3d87a97d557bd06a79c8ee44e164f7c9e100e4991b9414e78a3659b731795ebc",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q11",
+    "cohort": "primary",
+    "runId": "523a48d6-36c9-424c-8705-eaa486595644",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q12",
+    "cohort": "primary",
+    "runId": "23db171f-aee4-4aaf-92d7-091535fdea07",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q13",
+    "cohort": "primary",
+    "runId": "4bb05e4c-793a-4846-b5b6-d4ace82cd789",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q14",
+    "cohort": "primary",
+    "runId": "c50cdb96-162c-4b1d-b5c5-8d329311523c",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q15",
+    "cohort": "primary",
+    "runId": "ffd14add-2f25-49ce-815d-7c3be1aa3248",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q16",
+    "cohort": "primary",
+    "runId": "30c6e296-8864-4393-8ceb-cddee9c089ea",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q17",
+    "cohort": "primary",
+    "runId": "46d90469-2fbe-4558-9e67-fdabbc6a64b6",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q18",
+    "cohort": "primary",
+    "runId": "4b6071cf-c9f2-4260-bfdb-3f8c6c7b98b7",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q19",
+    "cohort": "primary",
+    "runId": "3952698d-bc32-4634-bac1-cb2039336569",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G04-Q20",
+    "cohort": "primary",
+    "runId": "39e408b9-e499-4f00-a9b3-3c004d117c79",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:32:56.506Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q01",
+    "cohort": "primary",
+    "runId": "c2f8fe48-8960-4b98-b3c2-983e9f5dc736",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.417Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q02",
+    "cohort": "primary",
+    "runId": "0b1d980b-1c9e-4993-96c7-92a500cd00d7",
+    "responseSha256": "074ae56fb4dc49b3a75da6430f243fb4db60b49c059c332bcab550840c177a24",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q03",
+    "cohort": "primary",
+    "runId": "547bf29a-1cdc-4f7c-a0e0-bd51c66a0365",
+    "responseSha256": "646270feef4c6f9f3c2a2ad6a7685841773175f535d7dbaad76c9269aab1f345",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q04",
+    "cohort": "primary",
+    "runId": "1fc10c90-1af8-4d1e-be73-e1ddb7b7f700",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q05",
+    "cohort": "primary",
+    "runId": "ea028ef7-3093-459c-9a65-66c9317d5cb9",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q06",
+    "cohort": "primary",
+    "runId": "e5ef64e0-7820-4396-a158-0c5dbff0e745",
+    "responseSha256": "074ae56fb4dc49b3a75da6430f243fb4db60b49c059c332bcab550840c177a24",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q07",
+    "cohort": "primary",
+    "runId": "27944fce-7870-4634-b395-2ae709d44e28",
+    "responseSha256": "59ddd3bbc21271fe39a74488453d668498e6d45e54648a5092b0df1cd7e94cc5",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q08",
+    "cohort": "primary",
+    "runId": "7f82e95a-3120-42f2-813b-4a3f549e71d5",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q09",
+    "cohort": "primary",
+    "runId": "0ce0b413-2fca-480a-9233-47f7c12233d7",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q10",
+    "cohort": "primary",
+    "runId": "4c4fa986-5834-4114-af1d-24f04419199d",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q11",
+    "cohort": "primary",
+    "runId": "924ef703-b1d6-4498-8ae1-77605bdcd0fb",
+    "responseSha256": "646270feef4c6f9f3c2a2ad6a7685841773175f535d7dbaad76c9269aab1f345",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q12",
+    "cohort": "primary",
+    "runId": "4728e515-7e72-4372-a260-d671a24ec030",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q13",
+    "cohort": "primary",
+    "runId": "c24f4554-f4d4-485c-9fa3-9ce1ef6dfde3",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q14",
+    "cohort": "primary",
+    "runId": "a8b6c631-14f4-4158-9443-f72d50698dfd",
+    "responseSha256": "fb60bdb179d99f79a407214c08edd308cf49a22d308da18b61278fe74dc1129c",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q15",
+    "cohort": "primary",
+    "runId": "2dbef575-e8b6-4fb6-863e-f5dd41a49849",
+    "responseSha256": "074ae56fb4dc49b3a75da6430f243fb4db60b49c059c332bcab550840c177a24",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q16",
+    "cohort": "primary",
+    "runId": "56d0d102-e097-487e-b297-bd6cf78c64c9",
+    "responseSha256": "646270feef4c6f9f3c2a2ad6a7685841773175f535d7dbaad76c9269aab1f345",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q17",
+    "cohort": "primary",
+    "runId": "7f3594f1-fe38-43e8-b035-076b902b28a3",
+    "responseSha256": "fb60bdb179d99f79a407214c08edd308cf49a22d308da18b61278fe74dc1129c",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q18",
+    "cohort": "primary",
+    "runId": "b2773ca8-b4d9-4d1c-a7f0-a4f5f07d1706",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q19",
+    "cohort": "primary",
+    "runId": "a1655202-49b7-47ca-882e-b0bc0be20f24",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G05-Q20",
+    "cohort": "primary",
+    "runId": "ecb093af-e37a-4257-9898-88f7f725146d",
+    "responseSha256": "e42567fdca8c18d0b576e5b72e82002660357792350823915fa1be5966e5b27d",
+    "outcome": "FAIL",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Correctly places Medicaid loss within the last year but invents that it followed the end of the patient's last job. No job-loss cause is defined."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:35:15.419Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q01",
+    "cohort": "primary",
+    "runId": "16c70576-39f8-4b5a-b573-7adf82fffcdc",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.331Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q02",
+    "cohort": "primary",
+    "runId": "a00651f1-801f-43bc-9cd7-afb59450f6db",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q03",
+    "cohort": "primary",
+    "runId": "3a12cf5d-888b-45a1-842d-99838c689b14",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q04",
+    "cohort": "primary",
+    "runId": "f0771714-528b-4eba-88c4-f15ee1167d63",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q05",
+    "cohort": "primary",
+    "runId": "d79345a9-ab66-4603-87d0-56a505dae0aa",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q06",
+    "cohort": "primary",
+    "runId": "12b130db-4ed1-4cd6-9ea4-d9ff95b66db4",
+    "responseSha256": "65084f6f9739d16801560a4901f9ec9d2e88207bf9ba6b9c6678c46c3fe457b9",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q07",
+    "cohort": "primary",
+    "runId": "98ab15b5-ea44-43d1-a825-85674e57ad18",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q08",
+    "cohort": "primary",
+    "runId": "a1a818b8-b134-4cd0-98eb-918a8a320bf7",
+    "responseSha256": "d0d47dfad0d577aa2444de5a0a06f1be93467a8d40099f6291b9210c79caa76d",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q09",
+    "cohort": "primary",
+    "runId": "89e701c5-a400-426c-a82d-1545cb50ede5",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q10",
+    "cohort": "primary",
+    "runId": "0aa901f8-a515-4bbc-86e8-52aa7d74546d",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q11",
+    "cohort": "primary",
+    "runId": "ca07e784-6cd4-45a2-b8c7-5e78c93193e5",
+    "responseSha256": "abfd6c8e0cdb6e2b79d50c697696289a8e7c069cda362d734e7b3ddbac81d96b",
+    "outcome": "FAIL",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "The question asks whether residency is already established. Stating Collier County residence does not answer that defined not-established status."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "Answers home county instead of the requested established-residency status."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q12",
+    "cohort": "primary",
+    "runId": "be45932c-f774-4d19-ae08-804f0303abec",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q13",
+    "cohort": "primary",
+    "runId": "8d2922bc-848d-48a6-b181-b84652604ad2",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.334Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q14",
+    "cohort": "primary",
+    "runId": "c14357d1-1be8-4776-88a8-75a0736b8bae",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q15",
+    "cohort": "primary",
+    "runId": "4a696875-aa2e-490c-b58b-28a417a393c0",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q16",
+    "cohort": "primary",
+    "runId": "61baa402-9fdc-4675-988b-c2ad76ec3596",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q17",
+    "cohort": "primary",
+    "runId": "a8103582-bb5c-4da9-abfd-3722fd43fa06",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q18",
+    "cohort": "primary",
+    "runId": "58ca5dfe-9b6c-42d1-ad64-0942f330b11b",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q19",
+    "cohort": "primary",
+    "runId": "adbdd7b2-6781-413f-852b-fa1ff4db17e1",
+    "responseSha256": "fd0b0cd116fd9328ee8fc2f840be5989ee231515265d64a5d22085c3972bdc12",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G06-Q20",
+    "cohort": "primary",
+    "runId": "baab896d-2ed8-47f0-847e-438e39ea1e0c",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed with case-02 facts and actual setup: no contradiction or unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact question: answers the requested concept(s), including each independently requested part and correct subject."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Responsive and concise; no unrelated history dump. Brief related context and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No internal instructions, serialization, role drift or policy text identified."
+      }
+    },
+    "reviewedAt": "2026-10-17T15:36:10.335Z",
+    "method": "Assistant semantic review of exact question/setup/full final response; explicit group approval after reading observations. No keyword-only PASS."
+  },
+  {
+    "testId": "C02-G07-Q01",
+    "runId": "3fc6bd81-f62b-4b0f-8662-4ece5ab62b06",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q02",
+    "runId": "b99dd3fd-2841-42ca-ac75-6498e1b45f49",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q03",
+    "runId": "a8332e6d-3c7e-435c-9569-af0150a67b5f",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q04",
+    "runId": "efccf8e7-1a1f-4ad0-a2f8-5b518166cb7f",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q05",
+    "runId": "c1053259-9717-4440-84a9-d597808480b1",
+    "responseSha256": "d7ce13d75d273da4706d847b71e1a69b1dcc7c2848b2c156b5a2da7da96a8f63",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q06",
+    "runId": "7970f473-0ff7-459a-a852-fc677316a5f0",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q07",
+    "runId": "728c4e38-e320-4ba1-8762-588605968a6d",
+    "responseSha256": "13bfe26312a730e102067f5d61ebd5ec79696a018a7fd692bb811c6eb6eeb764",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q08",
+    "runId": "9d402af1-1569-4cb3-86de-0627786c140a",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q09",
+    "runId": "ae27d97b-6b2d-4fc6-a2e3-f3c0cc6e6d4d",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q10",
+    "runId": "e528768a-2a0a-4b9a-ba16-15936484163d",
+    "responseSha256": "a504f102c87e773ce623b023574e50d1aa291c09470cb91cfe4c941b75c8e7cd",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q11",
+    "runId": "b2447126-a5ae-4f19-9446-bb53bf2103d1",
+    "responseSha256": "9a24417da1ec2aa936c5f6deeb3e505012ae63121dc2e57a77700b76648a2386",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q12",
+    "runId": "70ef1df5-654b-4f11-927b-0a636db107c1",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q13",
+    "runId": "1255d61d-393a-4cd5-a8ca-1ad76fe67c0b",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q14",
+    "runId": "004ad49b-6c3c-452b-852c-26edcef44b34",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q15",
+    "runId": "b6b20954-b7b6-48cb-81d4-519dbd02910c",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q16",
+    "runId": "dbc1d214-cde6-4646-8c4b-3ced92eea8be",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q17",
+    "runId": "6e4d31bb-0eec-47c3-8b8a-ab39f5e1e71c",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q18",
+    "runId": "7a70ed2f-0e27-4742-9592-8cdf4137a4fb",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q19",
+    "runId": "5b4a54ec-2c35-404e-b3f5-8ba2323bac55",
+    "responseSha256": "d7ce13d75d273da4706d847b71e1a69b1dcc7c2848b2c156b5a2da7da96a8f63",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C02-G07-Q20",
+    "runId": "b5691e4a-b423-473e-b143-72e1d5d6f681",
+    "responseSha256": "a0563c0afee1c13134a8d1e180f108ebce3aaa44d7230edc35e90555ad6a0648",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q01",
+    "runId": "0291ab7a-4d39-45a5-9f25-d10fe8c23a84",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q02",
+    "runId": "9e7c7a98-fa47-4a84-8cac-b43dfcfea02e",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q03",
+    "runId": "fbc259a3-9e64-4269-a43c-63e502c7d912",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q04",
+    "runId": "093a2edd-d7d6-4bcd-b326-ec8360b58dcc",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q05",
+    "runId": "c7b2df74-f598-4f08-a79d-3683f8c91b4c",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q06",
+    "runId": "512c2792-1908-4883-99bf-af22f57f3524",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q07",
+    "runId": "dc436ee2-2172-4363-b65f-e9687b56479e",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q08",
+    "runId": "b83e4d5c-e51b-4eaf-9624-63daafa2921e",
+    "responseSha256": "cf30a9d428fce52e84393f5b40615c57ffbd03bbdf711094f3ddbc143f852b64",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q09",
+    "runId": "9c04cac6-b68b-4341-84f5-bf028a43e717",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  },
+  {
+    "testId": "C03-G08-Q10",
+    "runId": "03538586-62be-4df3-ad80-9f9f410a3f95",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full pilot question/response and case facts: correct unreliable out-of-town transport or Hillsborough residence, responsive and no unsupported detail/leakage."
+      }
+    }
+  }
+]

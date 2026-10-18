@@ -1,0 +1,412 @@
+{
+  "generatedAt": "2026-10-17T16:46:25.164Z",
+  "executionComplete": true,
+  "adjudicatedCount": 411,
+  "cohorts": {
+    "primary": {
+      "PASS": 338,
+      "FAIL": 1,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "pain-context": {
+      "PASS": 20,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "holdout": {
+      "PASS": 44,
+      "FAIL": 6,
+      "REVIEW": 1,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  },
+  "byCase": {
+    "primary": [
+      {
+        "caseId": "case-01",
+        "PASS": 59,
+        "FAIL": 0,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-02",
+        "PASS": 80,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-03",
+        "PASS": 80,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-04",
+        "PASS": 59,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-05",
+        "PASS": 60,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ],
+    "pain-context": [
+      {
+        "caseId": "case-01",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ],
+    "holdout": [
+      {
+        "caseId": "case-01",
+        "PASS": 7,
+        "FAIL": 2,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-02",
+        "PASS": 11,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-03",
+        "PASS": 10,
+        "FAIL": 1,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-04",
+        "PASS": 8,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "caseId": "case-05",
+        "PASS": 8,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ]
+  },
+  "byGroup": {
+    "primary": [
+      {
+        "groupId": "G01",
+        "PASS": 19,
+        "FAIL": 0,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G02",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G03",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G04",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G05",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G06",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G07",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G08",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G09",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G10",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G11",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G12",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G13",
+        "PASS": 19,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G14",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G15",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G16",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G17",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ],
+    "pain-context": [
+      {
+        "groupId": "G03",
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ],
+    "holdout": [
+      {
+        "groupId": "G01",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G02",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G03",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G04",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G05",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G06",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G07",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G08",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G09",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G10",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G11",
+        "PASS": 2,
+        "FAIL": 0,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G12",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G13",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G14",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G15",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G16",
+        "PASS": 2,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      },
+      {
+        "groupId": "G17",
+        "PASS": 3,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    ]
+  }
+}

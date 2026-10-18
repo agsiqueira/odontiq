@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-18T01:51:07.994Z",
+  "items": [
+    {
+      "testId": "FOCUS-C5-BITING",
+      "runId": "4676c758-7ede-4362-81d3-7b5111541d5d",
+      "responseSha256": "948dd4fd8593daa9bde190b5b22ee6bb0d8e97aadf3fe8b5ac386a2c740b165a"
+    },
+    {
+      "testId": "FOCUS-C5-SPONTANEOUS",
+      "runId": "6fd1f73d-5875-4a1c-8766-d5ff263fb8de",
+      "responseSha256": "bc4bf00cf158874e68bc50cc043d022dab9703e3e52aa4640f9a5b3bcea4d1ff"
+    },
+    {
+      "testId": "FOCUS-C5-TRIGGERS",
+      "runId": "5037e002-3bee-4728-8468-9c6eb193a4ce",
+      "responseSha256": "4b8ecdda2adc01f1280f9cb852946a2304fb564151b794cd51342981fcb5b784"
+    },
+    {
+      "testId": "FOCUS-C4-CHILD-UNKNOWN",
+      "runId": "797d0c8a-983f-401a-88ce-d569405b9ca6",
+      "responseSha256": "04e7e95e8dba81dd25f948d35d63f5a9b891c16f2c7c80d4dbfa8ee6acea36e7"
+    },
+    {
+      "testId": "FOCUS-C3-CHILD-COMPOUND",
+      "runId": "65d5c496-1543-4d9c-b3d1-41f4ec5739b2",
+      "responseSha256": "8392ce7d56ac286ab8555887a27785fa43956b8371c1d071abf210375d747bb6"
+    },
+    {
+      "testId": "FOCUS-C3-CONDITIONAL-PREF",
+      "runId": "b266db18-8a7e-44d6-855a-2741f2bdaaa9",
+      "responseSha256": "f502db6c4338b8f802a42e4804269ce5648af91c3aa3d394f2ab1027ee66de19"
+    },
+    {
+      "testId": "C04-G14-Q19",
+      "runId": "9d7d9b2f-8713-4959-91dd-823ea303ec77",
+      "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f"
+    }
+  ],
+  "setups": []
+}

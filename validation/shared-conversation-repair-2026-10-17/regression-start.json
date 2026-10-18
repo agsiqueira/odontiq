@@ -1,0 +1,11 @@
+{
+  "startedAt": "2026-10-17T16:35:37.8670419Z",
+  "config": "playwright.shared-repair-regressions.config.ts",
+  "workers": 1,
+  "automaticRetries": 0,
+  "specs": [
+    "patient-background.spec.ts",
+    "patient-residence-recovery.spec.ts",
+    "patient-travel-distinction.spec.ts"
+  ]
+}

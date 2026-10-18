@@ -1,0 +1,6 @@
+{
+  "eligibleIds": ["C03-G08-Q14"],
+  "maxAdditionalAttempts": 1,
+  "reason": "Transient database availability failure after encounter creation, before any setup or scored conversation request. Trace records four GET /api/home/progression500 responses; server log records PrismaP1001 from EncounterRepository.findActiveByUserAndCase. Later items continued successfully. Preserve the original ERROR and screenshot/trace; after main run, execute one separate labeled continuation for this never-submitted question. No delivered semantic failure is eligible.",
+  "outcomePolicy": "Final scored outcomes select the first actual scored request only for this documented pre-submission recovery. First-attempt ERROR counts, original raw record, retry outcome and both encounter IDs remain separate and explicit."
+}

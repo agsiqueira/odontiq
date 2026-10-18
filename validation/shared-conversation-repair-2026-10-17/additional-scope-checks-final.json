@@ -1,0 +1,35 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase01FacultyFacts",
+      "chunk_id": "631657",
+      "wall_time_seconds": 0.7949245,
+      "exit_code": 1,
+      "original_token_count": 122,
+      "output": "AssertionError [ERR_ASSERTION]: Who do you live with? must not unlock an invented fact\n\n1 !== 0\n\n    at C:/240 - odontIQ/odontiq/scripts/validateCase01FacultyFacts.ts:51:19\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase01PenicillinConsistency",
+      "chunk_id": "41f27a",
+      "wall_time_seconds": 0.8400612,
+      "exit_code": 0,
+      "original_token_count": 13,
+      "output": "Case 1 penicillin-consistency validation passed.\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "name": "validateCase03AllergyResponseRelevance",
+      "chunk_id": "86e4a0",
+      "wall_time_seconds": 5.6795670000000005,
+      "exit_code": 0,
+      "original_token_count": 14,
+      "output": "Case 3 allergy-response relevance validation passed.\n"
+    }
+  }
+]

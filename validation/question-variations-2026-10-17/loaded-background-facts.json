@@ -1,0 +1,82 @@
+[
+  {
+    "caseId": "case-01",
+    "factId": "c1.background-insurance",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-01",
+    "factId": "c1.background-residence",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-01",
+    "factId": "c1.background-transportation",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-02",
+    "factId": "c2.background-insurance",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-02",
+    "factId": "c2.background-residence",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-02",
+    "factId": "c2.background-transportation",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-03",
+    "factId": "c3.background-insurance",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-03",
+    "factId": "c3.background-residence",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-03",
+    "factId": "c3.background-regular_dentist",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-03",
+    "factId": "c3.background-family_care",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-04",
+    "factId": "c4.background-insurance",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-04",
+    "factId": "c4.background-residence",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-04",
+    "factId": "c4.background-care_cost",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-05",
+    "factId": "c5.background-insurance",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-05",
+    "factId": "c5.background-residence",
+    "foundInActiveRouteBundle": true
+  },
+  {
+    "caseId": "case-05",
+    "factId": "c5.background-care_cost",
+    "foundInActiveRouteBundle": true
+  }
+]

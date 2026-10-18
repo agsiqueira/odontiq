@@ -1,0 +1,10 @@
+import { CASE_DATA } from '../src/data/cases';
+import { buildPatientDisclosureState, classifyQuestion } from '../src/lib/patientDisclosure';
+import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
+import { assessPatientOutputIntegrity } from '../src/lib/patientOutputGuard';
+import { patientImmediateResponse } from '../src/lib/patientImmediateResponse';
+const q = 'Would you travel out of Alachua County?';
+const c = CASE_DATA[0];
+const s = buildPatientDisclosureState({caseData:c, conversation:[], latestStudentMessage:q});
+const required = requiredFactsForTurn(s,q,c.supportingInfo.patientFacts);
+console.log(JSON.stringify({question:q, classification:classifyQuestion(q), selected:s.allowedThisTurn,required,immediate:patientImmediateResponse({caseId:c.metadata.id,message:q,disclosureState:s})??null,residenceOnlyAccepted:assessPatientOutputIntegrity('I live in Alachua County.',c.supportingInfo.patientFacts??[],[],required)},null,2));

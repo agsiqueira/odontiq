@@ -1,0 +1,579 @@
+{
+  "createdAt": "2026-10-17T18:48:28.888Z",
+  "implementationFrozenAt": "2026-10-17T18:47:57.588Z",
+  "tests": [
+    {
+      "testId": "C01-G01-V4H1",
+      "question": "Would your dental visit be billed to an insurer?",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G01-V4H2",
+      "question": "Do you have coverage to put toward dental costs?",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G01-V4H3",
+      "question": "Is there dental insurance in your own name?",
+      "caseId": "case-01",
+      "groupId": "G01",
+      "groupTitle": "Dental insurance",
+      "expectedMeaning": "Patient has no dental insurance.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G02-V4H1",
+      "question": "Which county contains the place you call home?",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G02-V4H2",
+      "question": "In what county do you make your home?",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G02-V4H3",
+      "question": "Could you name your home county?",
+      "caseId": "case-01",
+      "groupId": "G02",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Alachua County. Do not answer with tooth/pain location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G03-V4H1",
+      "question": "If dental care were cheaper across the county line, could you get there?",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G03-V4H2",
+      "question": "Could you make a trip to a different county for affordable treatment?",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C01-G03-V4H3",
+      "question": "Is another county within reach for lower-cost dental care?",
+      "caseId": "case-01",
+      "groupId": "G03",
+      "groupTitle": "Transportation and travel",
+      "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G04-V4H1",
+      "question": "Do you have insurance benefits for your teeth right now?",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G04-V4H2",
+      "question": "Is your dental care currently paid for by an insurance plan?",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G04-V4H3",
+      "question": "Would you be using any insurance for this dental work?",
+      "caseId": "case-02",
+      "groupId": "G04",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is currently uninsured. Do not imply current Medicaid coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G05-V4H1",
+      "question": "Did your Medicaid end within the past twelve months?",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "For “that coverage” or “Medicaid stop” follow-ups, first establish that the patient lost Medicaid. Accept a relative answer tied to that context.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G05-V4H2",
+      "question": "How long has it been since Medicaid stopped covering you?",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "For “that coverage” or “Medicaid stop” follow-ups, first establish that the patient lost Medicaid. Accept a relative answer tied to that context.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G05-V4H3",
+      "question": "Was your loss of Medicaid less than a year ago?",
+      "caseId": "case-02",
+      "groupId": "G05",
+      "groupTitle": "Medicaid loss timing",
+      "expectedMeaning": "Patient lost Medicaid within the past year. An exact date/month is unspecified and must not be invented.",
+      "contextRequirement": "For “that coverage” or “Medicaid stop” follow-ups, first establish that the patient lost Medicaid. Accept a relative answer tied to that context.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G06-V4H1",
+      "question": "Is your residency in Collier already established?",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "“There” refers to Collier County. Establish this location before testing that follow-up. Questions do not require proof-of-residency details.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G06-V4H2",
+      "question": "Would you describe your Collier County residency as established?",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "“There” refers to Collier County. Establish this location before testing that follow-up. Questions do not require proof-of-residency details.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G06-V4H3",
+      "question": "Have you established your residency in Collier County yet?",
+      "caseId": "case-02",
+      "groupId": "G06",
+      "groupTitle": "Residency status",
+      "expectedMeaning": "Patient lives in Collier County but has not established residency there. Do not invent documentation or legal/immigration status.",
+      "contextRequirement": "“There” refers to Collier County. Establish this location before testing that follow-up. Questions do not require proof-of-residency details.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G07-V4H1",
+      "question": "Can you reliably get transportation for dental visits outside town?",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G07-V4H2",
+      "question": "Would travel outside town depend on uncertain transportation?",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C02-G07-V4H3",
+      "question": "Can you always arrange transportation to a dentist in another town?",
+      "caseId": "case-02",
+      "groupId": "G07",
+      "groupTitle": "Out-of-town transportation",
+      "expectedMeaning": "Patient has unreliable transportation out of town. Do not infer that travel is absolutely impossible or that reliable local transport exists.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G08-V4H1",
+      "question": "For your treatment, is any insurance available?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G08-V4H2",
+      "question": "Are your own dental expenses insured?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G08-V4H3",
+      "question": "Do you carry a plan for your dental care?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G09-V4H1",
+      "question": "Is there a dentist you consider your usual provider?",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "question": "Do you already see a dentist regularly?",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G09-V4H3",
+      "question": "Are you established with a dentist of your own?",
+      "caseId": "case-03",
+      "groupId": "G09",
+      "groupTitle": "Insurance and existing dentist",
+      "expectedMeaning": "Patient is uninsured and has an existing dentist. These are combined questions: both insurance and dentist status must be answered. Do not substitute an appointment statement for insurance status.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G10-V4H1",
+      "question": "What kind of coverage does your daughter have?",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "For “she” or “your child,” first establish that the discussion concerns the young daughter. No exact age is defined.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C03-G10-V4H2",
+      "question": "Would Medicaid cover your daughter?",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "For “she” or “your child,” first establish that the discussion concerns the young daughter. No exact age is defined.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C03-G10-V4H3",
+      "question": "Is Medicaid your daughter's insurance?",
+      "caseId": "case-03",
+      "groupId": "G10",
+      "groupTitle": "Daughter coverage",
+      "expectedMeaning": "Patient has a young daughter covered by Medicaid. Distinguish daughter coverage from the uninsured parent. Do not invent age or plan details.",
+      "contextRequirement": "For “she” or “your child,” first establish that the discussion concerns the young daughter. No exact age is defined.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C03-G11-V4H1",
+      "question": "Would one dental practice for both you and your daughter suit you?",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C03-G11-V4H2",
+      "question": "Would you prefer to receive care where your daughter could also be treated?",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C03-G11-V4H3",
+      "question": "Should I seek a clinic that could see you as well as your daughter?",
+      "caseId": "case-03",
+      "groupId": "G11",
+      "groupTitle": "Shared clinic preference",
+      "expectedMeaning": "Patient prefers a clinic where both the uninsured parent and Medicaid-covered daughter can receive care. Preference is not an absolute refusal of separate clinics.",
+      "contextRequirement": "First establish the daughter and the search for dental care for both. “Same clinic,” “both,” and “you two” refer to parent and daughter.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": [
+        "Do you have a daughter?"
+      ]
+    },
+    {
+      "testId": "C04-G12-V4H1",
+      "question": "What county should I use as your home county?",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G12-V4H2",
+      "question": "Which county do you currently call your home?",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G12-V4H3",
+      "question": "What is your county of residence at present?",
+      "caseId": "case-04",
+      "groupId": "G12",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Duval County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G13-V4H1",
+      "question": "Would your own dental appointment go through insurance?",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G13-V4H2",
+      "question": "Is there insurance you could use when visiting a dentist?",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G13-V4H3",
+      "question": "Does any insurance plan cover you personally?",
+      "caseId": "case-04",
+      "groupId": "G13",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not replace insurance status with payment willingness.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G14-V4H1",
+      "question": "Would you consider a dentist whose charges depend on income?",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G14-V4H2",
+      "question": "Would fees based on your earnings be an option?",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C04-G14-V4H3",
+      "question": "Does a sliding-fee dental clinic sound acceptable?",
+      "caseId": "case-04",
+      "groupId": "G14",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G15-V4H1",
+      "question": "Which county is your current home in?",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G15-V4H2",
+      "question": "In which county have you made your home?",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G15-V4H3",
+      "question": "Could you tell me your current county of residence?",
+      "caseId": "case-05",
+      "groupId": "G15",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Marion County. Do not substitute pain/tooth location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G16-V4H2",
+      "question": "Is any part of your dental care covered by insurance?",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G16-V4H3",
+      "question": "Do you have insurance available for dental treatment today?",
+      "caseId": "case-05",
+      "groupId": "G16",
+      "groupTitle": "Insurance",
+      "expectedMeaning": "Patient is uninsured. Do not confuse no insurance with daughter/other case coverage.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G17-V4H1",
+      "question": "Would you prefer a dental appointment with no fee?",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G17-V4H2",
+      "question": "Is a small charge manageable, or would free treatment be better?",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C05-G17-V4H3",
+      "question": "Would you need free care instead of paying even a little?",
+      "caseId": "case-05",
+      "groupId": "G17",
+      "groupTitle": "Ability to pay and free care",
+      "expectedMeaning": "Patient cannot pay anything for dental care and prefers a free clinic. Do not agree to a small fee, invent a budget, or substitute willingness for ability.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    }
+  ]
+}

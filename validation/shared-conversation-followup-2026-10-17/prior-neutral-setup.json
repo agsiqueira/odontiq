@@ -1,0 +1,26 @@
+{
+  "question": "I'm looking into dental care options for you and your daughter.",
+  "finalResponse": "I appreciate that, doctor. It's been tough finding time for both of us.",
+  "requestId": "case-03-1792253192397-2-response",
+  "encounterId": "f2394eff-3c64-4807-a83d-8c45b86c3d11",
+  "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C03-G11-Q01_a94046ee-34a8-490e-a9fd-a4eefed268ff.json",
+  "diagnostics": {
+    "encounterId": "f2394eff-3c64-4807-a83d-8c45b86c3d11",
+    "requestId": "case-03-1792253192397-2-response",
+    "interpretation": null,
+    "providerMessageIntent": "other",
+    "selectedFacts": [],
+    "requiredFacts": [],
+    "immediate": false,
+    "navigatorInitial": "I appreciate that, doctor. It's been tough finding time for both of us.",
+    "navigatorCorrective": null,
+    "initialRejection": null,
+    "usedFallback": false,
+    "safeResponse": "I appreciate that, doctor. It's been tough finding time for both of us.",
+    "behaviorCandidate": "I appreciate that, doctor. It's been tough finding time for both of us.",
+    "presentationAssessment": {
+      "valid": true
+    },
+    "baseResponse": "I appreciate that, doctor. It's been tough finding time for both of us."
+  }
+}

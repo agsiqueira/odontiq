@@ -39,10 +39,12 @@ export type AIProviderResponse = {
     provider: string;
     status?: number;
     contentType?: string;
+    attempts?: import("./navigatorTransport").NavigatorHttpAttempt[];
   };
 };
 
 export type AITextGenerationInput = {
+  requestId?: string;
   systemPrompt: string;
   messages: ConversationChatMessage[];
   temperature?: number;

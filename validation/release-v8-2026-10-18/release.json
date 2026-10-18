@@ -1,0 +1,153 @@
+{
+  "version": "V8",
+  "preparationOnly": true,
+  "at": "2026-10-18T04:46:38.862Z",
+  "testedApplicationCommit": "aef3ae11296598d3b41417088d616e3f788fa2aa",
+  "manualAcceptedCandidate": "429abb46bda97f75c5435a046a6a3f54c2e5860d",
+  "manualAcceptance": {
+    "source": "User message: V8 manual acceptance passed.",
+    "reportedOutcome": "PASS",
+    "specificListeningConfirmed": false,
+    "humanSpeechAudibility": "UNVERIFIED"
+  },
+  "freeze": {
+    "applicationFiles": 409,
+    "changedApplication": [],
+    "compiledArtifacts": 843,
+    "changedCompiledArtifacts": [],
+    "priorEvidenceFiles": 1212,
+    "priorEvidenceChanged": [],
+    "rebuildNeeded": false
+  },
+  "validation": {
+    "originalAutomated": "41/41 PASS including production build",
+    "newIntegration": "13/13 PASS including strict parity/reachability,typecheck,lint,auth,questions,retries,speech wiring",
+    "liveScored": "546/546 PASS",
+    "setups": "119/119 PASS",
+    "productionScored": "68/68 PASS",
+    "productionSetups": "22/22 PASS",
+    "regressionsAgainstV7": 0,
+    "fullLiveRerun": false,
+    "reason": "No application change, main movement or concrete integration issue requiring rerun"
+  },
+  "review": {
+    "authentication": "Clerk proxy, sign-in and user-resolution unchanged. Conversation route requires authenticated owned case context before duplicate response lookup.",
+    "caseFacts": "Background facts/routes are in cumulative PR; clinical canonical fixtures unchanged; strict parity/reachability zero findings.",
+    "dialogue": "Shared factual/request boundaries across generation,retry,fallback,rendering,assembly; closure acknowledgment retained.",
+    "patientQuestions": "Typed current-event eligibility and clinical-plan witness; Case3 drainage/agreement implication; once-only markers remain durable.",
+    "transactions": "Final validation before writes inside Serializable transaction; actual9-control verification retained; idempotency/concurrency and rollback covered.",
+    "retries": "Max2 attempts only explicit502/503/504 with250ms backoff,30s shared timeout; no network/app-rejection blind retry.",
+    "speech": "Audio generation/playback components unchanged from main; existing displayed-text-to-playback wiring passes fresh tests; listening unspecified.",
+    "schemaAndDependencies": "No schema,migration,dependency,auth-config or deployment-config diff against current live/main.",
+    "materialApplicationDefectFound": false,
+    "cosmeticWarnings": "git diff --check reports six new blank lines at EOF in frozen source/tests; retained to avoid gratuitous candidate change; no conflict markers or behavior impact."
+  },
+  "deployment": {
+    "workspaceId": "tea-d8o8psugvqtc7382gun0",
+    "serviceId": "srv-d9a2aq3eo5us739be670",
+    "name": "odontiq",
+    "url": "https://odontiq.onrender.com",
+    "dashboard": "https://dashboard.render.com/web/srv-d9a2aq3eo5us739be670",
+    "runtime": "node",
+    "region": "virginia",
+    "branch": "main",
+    "autoDeploy": "no",
+    "autoDeployTrigger": "off",
+    "mergeTriggersDeploy": false,
+    "previewGeneration": "off",
+    "currentLiveDeploy": "dep-daa3655ckfvc73d0lmj0",
+    "currentLiveCommit": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+    "currentLiveTrigger": "deployed_by_render",
+    "build": "npm ci --include=dev && npx prisma generate && npx prisma migrate deploy && npm run build",
+    "preDeploy": "",
+    "start": "npm start",
+    "port": 10000,
+    "platformHealthCheck": "TCP; healthCheckPath is empty",
+    "applicationHealth": "/api/health HTTP200",
+    "databaseReadiness": "/api/readiness HTTP200 ready",
+    "configurationDrift": "render.yaml instead declares build without migration, a migrate-deploy preDeploy command and /api/health HTTP check. Actual service settings govern this release; no remote settings changed.",
+    "requiredEnvironmentNames": [
+      "NODE_ENV",
+      "DATABASE_URL",
+      "DIRECT_URL",
+      "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+      "CLERK_SECRET_KEY",
+      "NEXT_PUBLIC_CLERK_SIGN_IN_URL",
+      "NEXT_PUBLIC_CLERK_SIGN_UP_URL",
+      "NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL",
+      "NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL",
+      "AI_PROVIDER",
+      "NAVIGATOR_API_KEY",
+      "NAVIGATOR_BASE",
+      "NAVIGATOR_MODEL"
+    ],
+    "newCodeRequiredEnvironmentVariables": [],
+    "testedNonSecretValues": {
+      "NODE_ENV": "production",
+      "AI_PROVIDER": "navigator",
+      "NAVIGATOR_MODEL": "granite-3.3-8b-instruct",
+      "NAVIGATOR_BASE": "https://api.ai.it.ufl.edu",
+      "node": "24.14.1",
+      "next": "16.2.10"
+    },
+    "speechOptionalEnvironment": {
+      "NAVIGATOR_TTS_MODEL": "kokoro default",
+      "NAVIGATOR_TTS_VOICE": "af_heart fallback; case-specific voice settings apply",
+      "NAVIGATOR_TTS_SPEED": "1 fallback; case-specific speeds apply",
+      "NAVIGATOR_TTS_TIMEOUT_MS": "60000 default"
+    },
+    "valuesNotExposed": true,
+    "productionEnvironmentValuesIndividuallyInspected": false,
+    "reasonEnvironmentNotInspected": "Render connector exposes service/deploy settings but not read-only env-vars; CLI absent and browser dashboard signed out. Existing production readiness/auth checked; exact model/Node/secret configuration must be confirmed in authenticated dashboard before deploy.",
+    "newMigrations": 0,
+    "migrationCommand": "Existing migrate deploy remains in actual build; expected no-op for this PR; production migration ledger not queried and unexpected pending migrations must stop release."
+  },
+  "deploymentSteps": [
+    "Refresh PR head, current main and current live Render deploy; stop if application tree differs from tested V8 or another production deployment is active.",
+    "In authenticated Render Environment/Settings, confirm existing required variables are configured without exposing values. Confirm AI_PROVIDER=navigator, NAVIGATOR_MODEL=granite-3.3-8b-instruct, UF origin and existing Clerk/Neon/TTS configuration. Confirm Node24.14.1 for tested-runtime parity; investigate a different Node/runtime before deploying. Do not save environment changes with a deploy during preparation.",
+    "After explicit merge authorization, merge the reviewed PR2 head into main and record resulting merge SHA. Auto-deploy remains OFF, so merge alone does not deploy.",
+    "After explicit production-deploy authorization, open the named service Deploys > Manual Deploy > Deploy a specific commit and supply that exact main merge SHA. Retain auto-deploy OFF; do not separately trigger a second deployment.",
+    "Monitor the new deploy ID through build/migrations/start until live. Stop on failed build, unexpected pending migration or failed readiness; do not treat queued/accepted as success.",
+    "Confirm both /api/health and /api/readiness, login/owned encounter access, actual deployed commit, all-five-case openings, fresh Case4 finance-without-question followed by valid-plan question, Case3 consent/followup, thank-you closure and UI/audio text correspondence. Record production observations; do not erase first failures with retries."
+  ],
+  "rollback": {
+    "targetDeployId": "dep-daa3655ckfvc73d0lmj0",
+    "targetCommit": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+    "targetStatusAtInspection": "live",
+    "artifactEligibility": "Current live deploy identified; retained rollback-button/build eligibility not independently exposed by connector. Verify when acting; exact-commit rebuild fallback provided.",
+    "steps": [
+      "If the candidate build or readiness fails before traffic switch, confirm Render keeps the current live version; do not deploy again blindly.",
+      "For a regression after go-live, use service Deploys, locate the captured target deploy ID and select Rollback > Rollback to this deploy, only with authorization. Confirm auto-deploy remains OFF and wait for rollback live.",
+      "If that build artifact is unavailable, use Manual Deploy > Deploy a specific commit with edae56cb34e9a99ada0e1e2e10544686b126dd61, retaining compatible baseline environment and OFF auto-deploy; this rebuilds, so recheck build/runtime rather than claiming identical artifact.",
+      "After rollback, verify live target commit, health/readiness, login and a representative encounter; retain incident and first-response evidence."
+    ],
+    "dataLimitations": "No PR migration/backfill/destructive data change. Rollback does not undo new encounters, transcripts, question emissions, research/test data or external service effects. State schemaVersion1 and question IDs are unchanged; existing emitted markers remain. Do not reset/reverse the DB automatically. Existing out-of-band pending migrations or environment changes would require renewed compatibility review.",
+    "platformConfig": "Dashboard rollback restores target build/start/health/env details subject to current platform rules; environment-group values/platform runtime and external database state are not restored. Keep current config snapshot and consult official rollback documentation."
+  },
+  "limitations": [
+    "Existing faculty/application question-timing gaps in validation/v7/AUTHORITY.md and CONTRACT.md remain unresolved.",
+    "Finite English-oriented tests and assistant semantic review, not independent clinician review. Previously exposed holdouts are regression data.",
+    "One production question-classifier network failure failed closed and remains preserved separately; no retry hid it.",
+    "Raw browser traces/screenshots/ledgers and separate harness working tree remain local; app PR contains reports,hashes and results,not the entire external test repository.",
+    "User manual acceptance passed but listening was not explicitly confirmed, so human speech audibility remains unverified.",
+    "Remote env/model/Node parity and exact production migration ledger not inspected; confirm before deployment."
+  ],
+  "references": {
+    "v8Report": "validation/v8/REPORT.md",
+    "v8Freeze": "validation/v8/implementation-freeze.json",
+    "v8Production": "validation/v8/production-smoke.json",
+    "v8InternalFailure": "validation/v8/production-internal-failure.json",
+    "authority": "validation/v7/AUTHORITY.md",
+    "contract": "validation/v7/CONTRACT.md",
+    "deployDocumentation": "https://render.com/docs/deploys",
+    "healthDocumentation": "https://render.com/docs/health-checks",
+    "rollbackDocumentation": "https://render.com/docs/rollbacks"
+  },
+  "mutationsPerformed": {
+    "application": false,
+    "production": false,
+    "merge": false,
+    "deploy": false
+  },
+  "awaitingAuthorization": "Authorize merge of the final reviewed PR2 head into main; separately authorize a manual Render deployment of resulting exact merge SHA only after environment/runtime and migration preflight."
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "cohort": "primary",
+    "rows": 340,
+    "csvRoundTrip": true,
+    "nonPassTraceIntegrity": true
+  },
+  {
+    "cohort": "pain-context",
+    "rows": 20,
+    "csvRoundTrip": true,
+    "nonPassTraceIntegrity": true
+  },
+  {
+    "cohort": "former-holdout-regression",
+    "rows": 51,
+    "csvRoundTrip": true,
+    "nonPassTraceIntegrity": true
+  },
+  {
+    "cohort": "targeted-live",
+    "rows": 30,
+    "csvRoundTrip": true,
+    "nonPassTraceIntegrity": true
+  },
+  {
+    "cohort": "fresh-holdout",
+    "rows": 54,
+    "csvRoundTrip": true,
+    "nonPassTraceIntegrity": true
+  }
+]

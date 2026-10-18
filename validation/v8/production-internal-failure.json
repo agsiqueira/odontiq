@@ -1,0 +1,32 @@
+{
+  "kind": "internal-upstream-failure-not-delivered-response-failure",
+  "testId": "FOCUS-C3-CHILD-PROVIDER",
+  "stage": "setup",
+  "question": "Do you have any children?",
+  "response": "Yes, I have a young daughter.",
+  "requestId": "case-03-1792296218029-1-response",
+  "encounterId": "a0d83f2d-3ed1-476b-8cbb-7c83d87c92a6",
+  "upstreamAttempt": {
+    "sequence": 75,
+    "operationId": "a1daaef1-45f3-487d-b4e6-da15705e3475",
+    "generation": 1,
+    "attempt": 1,
+    "status": null,
+    "outcome": "network-error",
+    "durationMs": 10659,
+    "retryable": false,
+    "logEntrySha256": "80e8d32af42a091b0cd3f33cb0df6991d6a6a18877ce0bee057787cffa7051bf"
+  },
+  "observedApplicationLog": {
+    "event": "patient_question_classification_failed",
+    "correlationId": "case-03-1792296218029-1-response",
+    "reason": "provider-failure",
+    "providerErrorCategory": "network"
+  },
+  "stateVersion": 0,
+  "selectedQuestionId": null,
+  "scoredResponse": "I'm not sure about her dental provider.",
+  "explanation": "Question-classifier transport failed on children background setup. Failed closed with no question or state transition (version0), preserving supported base answer. No question was eligible on this screening turn. Later daughter-provider question correctly left unspecified provider unknown. No live or transport retry; initial failure retained.",
+  "sourceLog": "dev-output/v8-production-server.log",
+  "sourceLogSha256": "3ba91ceff16657d3348e10bc0ec2cf4401062c4d938e07efa934dccc0aceb0e3"
+}

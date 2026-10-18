@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-18T02:48:40.992Z",
+  "applicationCommit": "aef3ae11296598d3b41417088d616e3f788fa2aa",
+  "passed": true,
+  "method": "Offline replay of exact saved V7 parsed classifier output and base answer against fresh V8 state; not a live request or scored item.",
+  "originalModelClassification": {
+    "schemaVersion": 1,
+    "currentProviderAct": "current_plan",
+    "currentPlanEvidence": "Is sliding scale payment something you open to?",
+    "caseId": "case-04",
+    "analyzedStudentMessageId": "case-04-1792285932503-1",
+    "detectedEvents": {
+      "painManagementOrDispositionDiscussed": true,
+      "antibioticsRecommended": false,
+      "antibioticsNotIndicatedExplained": false
+    },
+    "confidence": 1,
+    "evidenceAliases": [
+      "student-current"
+    ],
+    "evidenceMessageIds": [
+      "case-04-1792285932503-1"
+    ]
+  },
+  "baseAnswer": "I'm open to paying a sliding-scale fee.",
+  "constrainedClassification": {
+    "schemaVersion": 1,
+    "currentProviderAct": "current_plan",
+    "currentPlanEvidence": "Is sliding scale payment something you open to?",
+    "caseId": "case-04",
+    "analyzedStudentMessageId": "case-04-1792285932503-1",
+    "detectedEvents": {
+      "painManagementOrDispositionDiscussed": false,
+      "antibioticsRecommended": false,
+      "antibioticsNotIndicatedExplained": false
+    },
+    "confidence": 1,
+    "evidenceAliases": [
+      "student-current"
+    ],
+    "evidenceMessageIds": [
+      "case-04-1792285932503-1"
+    ]
+  },
+  "transition": {
+    "state": {
+      "schemaVersion": 1,
+      "version": 1,
+      "detectedEvents": {
+        "hospitalAdmissionOrSurgicalManagementDiscussed": false,
+        "antibioticsRecommendedAsCurrentPlan": false,
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": false,
+        "patientAgreedToIncisionAndDrainage": false,
+        "promptDentalFollowUpConfirmed": false,
+        "drainageTemporaryOrNondefinitiveExplained": false,
+        "definitiveDentalTreatmentExplained": false,
+        "painManagementOrDispositionDiscussed": false,
+        "antibioticsRecommended": false,
+        "antibioticsNotIndicatedExplained": false,
+        "patientPainDescribed": false
+      },
+      "emittedQuestionIds": []
+    }
+  }
+}

@@ -1,4 +1,8 @@
 import "server-only";
+import { constrainQuestionClassification, patientAnswerWithoutQuestions } from "@/lib/patientQuestions/eligibility";
+import type { ConversationMessage } from "@/lib/conversationEngine";
+import { assertPatientFinalResponse } from "@/lib/patientFinalResponse";
+import { loadCase } from "@/data/cases";
 
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/persistence/repositories/prisma";
@@ -78,10 +82,12 @@ export class PatientQuestionService {
     studentMessageId: string;
     patientMessageId: string;
     baseResponse: string;
+    validateFinalResponse?: (text: string) => void;
     providerName: string;
     behaviorIntentId?: string;
     behaviorAnswerClear?: boolean;
     classification?: PatientQuestionClassification;
+    questionEvidence?: { studentMessage: string; conversation: readonly ConversationMessage[] };
     questionText: (id: string) => string | undefined;
     retryAttempt?: number;
   }): Promise<StoredConversationTurn | "not-found" | "case-mismatch"> {
@@ -110,11 +116,16 @@ export class PatientQuestionService {
           where: { encounterId: input.encounterId },
         });
         const previous = parseState(storedState?.state);
-        const transition = input.classification
+        const baseAnswer = patientAnswerWithoutQuestions(input.baseResponse);
+        const groundedClassification = input.classification && input.questionEvidence
+          ? constrainQuestionClassification({ classification: input.classification, ...input.questionEvidence,
+              patientResponse: baseAnswer, facts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [] })
+          : undefined;
+        const transition = groundedClassification
           ? applyPatientQuestionClassification({
               caseId: input.caseId,
               state: previous,
-              classification: input.classification,
+              classification: groundedClassification,
             })
           : { state: previous, selectedQuestionId: undefined };
 
@@ -130,17 +141,25 @@ export class PatientQuestionService {
           });
           if (alreadyEmitted) {
             selectedQuestionId = undefined;
-            transition.state.emittedQuestionIds =
-              transition.state.emittedQuestionIds.filter((id) => id !== transition.selectedQuestionId);
+            // Preserve the durable marker when an emission already exists.
+            if (!transition.state.emittedQuestionIds.includes(transition.selectedQuestionId!)) {
+              transition.state.emittedQuestionIds.push(transition.selectedQuestionId!);
+            }
           }
         }
 
         const questionText = selectedQuestionId
           ? input.questionText(selectedQuestionId)
           : undefined;
+        if (selectedQuestionId && !questionText?.trim()) throw new Error("Selected patient question has no renderable text.");
         const responseText = questionText
-          ? `${input.baseResponse.trim()} ${questionText}`.trim()
-          : input.baseResponse.trim();
+          ? `${baseAnswer} ${questionText}`.trim()
+          : baseAnswer;
+        // Validate after every addition, before any state or dialogue writes.
+        assertPatientFinalResponse(responseText, {
+          canonicalFacts: loadCase(input.caseId)?.supportingInfo.patientFacts ?? [],
+        });
+        input.validateFinalResponse?.(responseText);
 
         await transaction.patientQuestionState.upsert({
           where: { encounterId: input.encounterId },

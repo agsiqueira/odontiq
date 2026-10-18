@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-10-17T14:09:19.6544128Z",
+  "listener": {
+    "LocalAddress": "::",
+    "OwningProcess": 24364
+  },
+  "process": {
+    "ProcessId": 24364,
+    "ParentProcessId": 20920,
+    "CommandLine": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\240 - odontIQ\\odontiq\\node_modules\\next\\dist\\server\\lib\\start-server.js\"",
+    "CreationDate": "2026-10-17T09:35:50.191401-04:00"
+  }
+}

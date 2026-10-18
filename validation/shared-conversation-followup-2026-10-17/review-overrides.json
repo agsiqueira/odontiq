@@ -1,0 +1,100 @@
+{
+  "C01-G01-Q08": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Correct uninsured status. Paying out of pocket may simply describe no insurer or imply an unspecified actual payment arrangement. This remains an evaluator ambiguity, not a confirmed application defect; raw response retained."
+    }
+  },
+  "C02-G05-Q20": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "States within the last year, but I think / cannot quite remember may hedge the defined interval or refer only to an unspecified exact date. No employment story or alternative interval is invented. Retain for human semantic review rather than enforcing rigid wording."
+    }
+  },
+  "C03-G11-Q08": {
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Asks whether a clinic seeing the uninsured parent and Medicaid-covered daughter suits the shared-care preference. Daughter Medicaid alone does not answer preference."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Responds only to supplied coverage context rather than the requested shared-clinic preference; approved questions are not the issue."
+    }
+  },
+  "C03-G11-Q13": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The shared-clinic preference is answered, but claiming that the daughter sees a dentist at a certain clinic invents an existing clinic/provider history. Daughter Medicaid and preference do not establish that history."
+    }
+  },
+  "C02-TARGET-3": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "I live alone invents household composition. No canonical fact establishes living alone; adding uncertainty afterward does not remove the unsupported assertion."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "The mixed living-alone assertion and uncertainty fail to preserve the unknown household boundary; no county disclosure is needed."
+    }
+  },
+  "C03-TARGET-6": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "This is about me, not my daughter may focus the current symptomatic encounter or reject the defined shared-care interest. No household/provider history is asserted, but the intended preference implication is ambiguous."
+    },
+    "relevance": {
+      "status": "REVIEW",
+      "reason": "A curt redirection may be natural focus on the current complaint, or an unhelpful refusal of the offered shared-care planning. Retain for human inspection."
+    }
+  },
+  "C04-TARGET-6": {
+    "relevance": {
+      "status": "FAIL",
+      "reason": "The offer is to look into care for the patient and his daughter, not an assertion that the patient is the daughter. I am not your daughter, I am Noah corrects an identity claim that was never made. No unsupported daughter existence is required, but the actual statement is misread."
+    }
+  },
+  "C02-G04-N2": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Introduces uncertainty and an unsupported claim of not checking despite current uninsured status being defined."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Policy paying toward care asks current coverage, not affordability; the reply never states lack of coverage."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Cost worry replaces the actual current-insurance answer."
+    }
+  },
+  "C03-G09-N1": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Invents Dr. Smith as the usual dentist; canonical facts define an own dentist but no name."
+    }
+  },
+  "C03-G09-N3": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Denies having a regular dentist, contradicting the existing own dentist and next-week appointment."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "The negative answer gives the wrong current-provider status."
+    }
+  },
+  "C04-G13-N2": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Whether they accept my insurance presupposes an insurance arrangement despite defined uninsured status. A generic concern about provider experience alone is not treated as a false concrete fact."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Does not answer whether there is an insurance policy to consider."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Dentist experience preferences replace the actual policy/coverage question; approved antibiotic question is not the problem."
+    }
+  }
+}

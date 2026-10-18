@@ -1,0 +1,4920 @@
+{
+  "generatedAt": "2026-10-18T03:58:39.353Z",
+  "encounters": [
+    {
+      "encounterId": "8dd3b878-5f2a-482b-bd91-0bd0916c456a",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:58:47.866Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "768ada1a-f4ad-405d-a5fb-539c21707773",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:58:53.993Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c8bebdd9-1acd-4c8d-9721-0a77f59dfd25",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:58:59.972Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2994bf2f-13b7-4312-a48e-d8e9dac75146",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:07.418Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "25eeec9a-a8a1-4a89-970a-c737203d879c",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:13.796Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d4b8d6b3-244f-41a7-94f5-b7599e15f729",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:19.857Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7a8224b7-d9d1-453a-8fe0-f1b7e04b9e90",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:26.005Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "47a2710b-eed4-41d2-a381-890fceaf9f00",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:32.076Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2fb986b2-f01f-4a61-9612-4e2bddb757fb",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:38.154Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d49a0a7a-67fd-4165-a6fb-bef31add1d9b",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:43.579Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2a2a2e36-498e-47a5-9867-4ec6ab9e320d",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:49.042Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8c778209-7452-4f8e-8e01-9439447be944",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T02:59:55.148Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "834fdb71-2e52-4717-add1-3b806711d441",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:01.171Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5332d41e-a3c0-4788-a4bd-10dee0c7945f",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:06.516Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dbc56ebb-9b3a-4680-8b91-bcf34f4c2192",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:11.584Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "19f5fbaf-3a28-4635-afb5-a7c2cd2697bb",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:17.091Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fc63f4ec-428a-4c6e-a9e7-e567a01a3f0d",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:22.988Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "32cdf061-5f73-4309-9848-eec49f15ca78",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:29.102Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "07bcfdd8-5569-4396-a4f0-472879fe3d00",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:35.187Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9ffcaf2c-ce79-49e3-aca9-0e0dc9575de1",
+      "caseId": "case-01",
+      "testId": "C01-G01-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:41.263Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c94abaaf-09ae-404c-9401-a4aa7c4b0ddc",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:49.126Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cfbee6c4-4704-4987-99ce-bf632b1eb05b",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:00:54.925Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "63dbf71e-49f4-456a-a418-06fc5389afb9",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:01.299Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "72ca5a82-402b-437a-80fd-8bf243104b76",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:06.691Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bdfa8004-0474-42f0-bdde-cdee7b0c15c3",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:12.156Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b60d7b04-2945-41d8-8fe8-3d703e6b7274",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:17.977Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c321b751-2011-4d90-8778-126979a6ba58",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:23.340Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e1104a9d-2915-4d20-9b52-d78da9604ffe",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:28.917Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d4b3c12b-2492-4823-9bce-5a0593a08a1b",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:34.436Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8b816ec5-df26-4e5e-9c73-6d6d5dbd0334",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:40.254Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e4223bbb-1da1-4d3c-9fd2-5155915797fb",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:45.730Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3dfb808b-fbd9-4427-958f-1009d4948b1a",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:51.009Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "114b7edc-c817-44a3-8d12-5af6016f1001",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:01:56.328Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c734a09c-4dfd-4abb-9503-2f322dc8a87f",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:01.681Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "109ee4d9-5bc7-4cc5-88bf-4f39c9134219",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:06.865Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c4f751e4-9a5b-49a8-8205-cfa45722fe42",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:12.596Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5172a031-eead-4757-bdf5-e6f986bbde1d",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:17.790Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1549a374-7821-47e3-893b-b88da2c85d9b",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:23.422Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6eb9f8c3-1598-43c2-b104-ed69666b0ea5",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:29.366Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a329c947-0449-4566-8ca5-a4d5de5b1de8",
+      "caseId": "case-01",
+      "testId": "C01-G02-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:35.362Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "14abae56-9b23-429d-827e-fd3692b466a0",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:41.239Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d031447b-7c0c-46d7-ad51-b9ef101e918e",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:47.808Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "16d84c6c-8f77-46e2-bb81-b42aa99ee74e",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:54.014Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8907cd39-25e3-49ef-801a-cdcd4dea32c4",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:02:59.754Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "72a18ae8-2d14-4d90-bf3f-7d22c7e5b691",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:05.968Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "425d2414-9ac8-4394-a530-dd699b97d6ed",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:12.021Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7dd20154-7c95-400d-a176-efde75b43ba4",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:18.358Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2060c6b8-b215-417c-b563-2e722be8ed59",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:24.695Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "07a6b4f3-3e5f-4e03-97f2-ea799de32ac2",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:30.856Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e4affc9d-b4a2-40ff-8899-8c260f4bb3a3",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:37.194Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0fb99db5-7d96-4f70-8254-b9319f633687",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:42.873Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "722d2de3-c16c-47ee-9bd2-66f06d5dfa53",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:49.240Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ec3e3651-f647-4252-b47c-71bc2da6ebd6",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:03:55.912Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b67d8dcf-136f-42ba-97b9-b962fb65d594",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:02.099Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3015b05b-2ac3-410a-994e-d104c8b544d8",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:07.845Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c7cdd0de-820a-4c49-acb1-42d144cc6de7",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:15.950Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0d72e363-1d16-4301-b21a-c2a1fbe47291",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:22.761Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ac5eacd1-cc45-427e-9f9c-a962ff3271fe",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:28.452Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "77dbd46b-21f0-4a72-af7d-4efaf158e25e",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:35.796Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2e3a2dac-51e3-42f0-8b85-871f82d02f4e",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:41.414Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "42df7b49-c7d5-4e63-a04c-43535d39e840",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:47.473Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "af0a9f91-3910-4f23-8eab-96b9367b86a6",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:53.014Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "20dacbe0-4468-4c64-9039-e5cc33531755",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:04:58.211Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1efd7750-0734-4376-a76d-b9295997b9f5",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:03.599Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "855a4412-3711-4c2e-ab93-a1acefe32a0c",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:09.488Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "707ed952-3947-45e4-9634-5662a18ce8bd",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:14.891Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "600507cc-3dc2-4d1c-850d-3bb6b09a05df",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:20.507Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "06d21476-4b9b-4ca4-b11c-4c715fcc8abb",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:25.946Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7f419b7d-bf1a-4bab-b7bc-6ce466d85baa",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:32.832Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d986d9da-2320-4aea-bfcc-6108d1b03ef8",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:39.208Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c9642608-e792-40c8-82d5-d9494fd04679",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:45.818Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ebcd7be9-1454-40a9-a26d-858bee54c80d",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:50.828Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9403005e-7920-4c5d-9d3f-5a9ed79bc152",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:05:56.223Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "844323d9-eca2-4e9f-aa64-0662015c905d",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:01.425Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f2f28d3c-68b3-47b5-ae86-369072333eca",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:06.840Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5b7c6a0b-1b77-4463-9cd4-3ef1417de252",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:12.834Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d9961f4c-18a9-44a1-b947-28e35490200e",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:18.179Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "34c58091-8a5b-444c-9d05-a5a74155edcf",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:23.722Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "02f97e66-f7f5-4087-a5c3-8f3cf83ad151",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:29.037Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "38fad4e3-5d42-43ef-a0ae-3a35790b2787",
+      "caseId": "case-02",
+      "testId": "C02-G04-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:34.766Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3af279e1-3ff7-407b-be09-2ef39063ff61",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:40.326Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f3f17958-a2a2-4c65-967e-df744cd430c1",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:53.307Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "af2e574d-5a93-411c-b168-3446842c859c",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:06:58.672Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1598f622-be91-4ee2-8555-a67b064f4594",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:10.916Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f7ccb803-ff7a-495e-abd4-4afc7d3c529c",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:16.820Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "51d7c418-686d-4edc-ac3f-4aba5749f666",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:21.958Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "42f366c9-bb62-42d4-9b66-25b7d61b1b04",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:27.034Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c7b67773-c1c7-4417-b95e-5fb803bfb43e",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:32.023Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "aa4e27b9-28ca-4e0a-8c11-953612ca88cc",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:37.451Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f6ef277b-7cff-4d60-aa33-dc0e3b579b00",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:42.866Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b3ecd39f-48d5-4b93-9d90-b9fc059deb47",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:07:48.001Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "83ab2cbe-779e-487d-bddd-1b237588be7f",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:00.604Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1a7e6797-1fa3-49bf-abeb-6e61c4f22a14",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:05.778Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c754fcb3-da59-425a-b16e-d92bb8452ad7",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:10.885Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "10ea2c79-14a7-4c80-9a91-80d10f0a6358",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:16.286Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4df88f22-0022-4314-b20c-428bc4e50f41",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:21.906Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e342f560-be2d-493e-b921-c0ddf88be43c",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:35.666Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7fc417c3-6780-4f32-9252-b92f9c9dd24b",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:42.449Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fa2ca462-ec91-43ca-b127-81972e38227a",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:48.118Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ae20b6bc-62c0-4529-bc33-762bb713eb6a",
+      "caseId": "case-02",
+      "testId": "C02-G05-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:08:54.032Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4e908ffa-e2f2-4cff-9f66-a2e873262b97",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:01.350Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5bf3394a-39d9-4083-b4f2-0a65e9e5e95a",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:07.568Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e77560ea-486c-4e34-a832-086087951f33",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:14.827Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b4cfd12b-32e4-411b-a7d0-7e5e799b9157",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:20.866Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7acb8b81-36f9-4474-a6c1-927c1793f2b5",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:27.167Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "95995abc-385c-4dc7-b55e-f93e285c3112",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:33.335Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "77d1a3ce-fc8e-4516-b22f-b53c373c13c1",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:38.764Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "94f79a71-32cc-4862-90b9-414d180ac0f5",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:44.297Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ceb71bb7-bc83-401f-a202-eb2479d57232",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:50.437Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "636adcc8-e80c-4ade-8e24-a82879189d80",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:09:57.044Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2e74dbd8-4831-4ac8-88c1-df333ef4cef6",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:02.171Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c653982c-8cc4-4ac7-8a12-b71840495c17",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:08.420Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "db1de3ae-2c6d-4d05-88cc-196492a63408",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:14.289Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "77756699-224a-4eaf-8e92-6f4ef353f28e",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:19.671Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "91f66a06-5acf-42b1-a839-9f9806a3dcfb",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:25.713Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "673db5ab-50ec-4c28-96b2-99b30e5356bc",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:31.596Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a0350c02-9ff9-4349-b94f-44fc8ae8f33c",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:39.816Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fb045383-2648-48dc-96d8-d6f9b20812ac",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:46.036Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0dbe9cbe-5424-467a-a7d9-715dd32ff060",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:52.504Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a62bbb0e-ab21-442f-9831-700938fe010f",
+      "caseId": "case-02",
+      "testId": "C02-G06-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:10:58.080Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ce8b4086-a0db-416d-80fe-150ffbfd43ba",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:04.528Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c63384a9-0920-472d-956a-cec2a5bc81b0",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:09.909Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7da3ab9d-88ce-4a8d-815f-ef319c4b6988",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:15.364Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "880812d3-6ece-4807-8028-6781e81149de",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:21.050Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "eaf2d6de-cbfd-4cb4-ac12-f348fde5f85d",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:26.111Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5f083907-0153-495b-9ec9-1d5da2a3da66",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:33.323Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a36b6a61-c51e-4a1f-9e0e-95875d5bb838",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:40.371Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "427eb609-cb24-4b1b-8c4d-ad6aa6c54f38",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:46.297Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ab31eb79-6f7a-44b3-8974-02579b41ec33",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:51.383Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a37f980c-50bf-4a45-87c9-42779c1d2499",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:11:56.479Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d7e1f3d4-37c4-4648-82a8-7f7ae823b517",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:02.062Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "39d6caf5-9256-4d61-af3d-2efbc68f1d81",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:07.530Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f30fdbc2-aeed-430a-9d7a-59a036bb17a3",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:13.061Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "10ca612a-53ac-4003-b630-0978ee299ec0",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:18.121Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5a361637-5a12-46e5-9cc4-96cd3c6a9103",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:23.237Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a867d8c9-18e7-4b32-9cd0-4bcb4ef60bb7",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:29.127Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "80c581b8-0b29-4b79-9737-ace58b84b4b6",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:34.296Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "81177173-ef79-49c6-9822-873645b08e6f",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:39.380Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "90e8df26-9a45-48ab-b0fa-314e97f0e453",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:44.916Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6fa910fb-a30b-478b-9c6b-ee1c88b43c01",
+      "caseId": "case-02",
+      "testId": "C02-G07-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:51.100Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b9a80a85-fe1c-4a66-9986-4cd05acbe9bd",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:12:56.948Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cc0e32e0-5f3b-4e21-b347-ca2c2d17a5a6",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:02.401Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2192f91b-9740-44c4-b00e-019ccacc0ee3",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:08.275Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2a2d2ee2-acc5-4f42-93ff-6d2dbf49716a",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:13.656Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c7ad3099-e4f8-46fc-a806-c7b908941d10",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:18.941Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "19c2b04f-979b-4589-b7ee-bf2a80d19c32",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:24.126Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "533f471f-49d2-4fc0-bb51-4a400e5b0e5c",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:29.159Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "93b14ffd-656e-43cc-98d7-2d86abc4a556",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:34.379Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b9004fc7-c986-41c4-aee9-8ed3d9833fd2",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:40.014Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "99916761-6b6e-40f7-b52a-613170064bcd",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:46.716Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "09af1820-98cc-4d76-848f-91262f4a2a81",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:52.690Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e8044a7f-e5da-41dd-b81a-03c051c54e1d",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:13:59.566Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "49e840bd-5e09-471b-af52-0094c3c4e2e7",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:05.131Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e52622b8-9b36-4cd6-baf1-7f6b6084e750",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:10.567Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0bbd151b-8797-40a1-b8df-668b35c9b917",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:15.819Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1d5a94df-0615-4799-b996-e54c75809663",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:21.066Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "86e3a4b1-7c18-4fd8-a104-ccd0690a8281",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:26.481Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cc03aa2d-d274-4c42-83a4-cce305131429",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:32.581Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "63b614a5-7667-497a-b885-fc0ac1d14213",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:37.888Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2f4affe4-ca89-449f-b7c8-44c082b291e2",
+      "caseId": "case-03",
+      "testId": "C03-G08-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:43.300Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "acf5a6b7-1f26-46bd-93e7-0bc938577354",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:50.532Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e77cca2e-74ac-438b-9b1c-f71ca8a3de74",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:14:55.883Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f85aafba-116e-44dd-bbc6-427c070d4fdb",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:01.130Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "35e17e7a-fc60-4e46-81af-1a37ddd9c8ca",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:06.651Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e98d7ca0-9a32-4023-ba77-98c0ce46d088",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:11.882Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2c1e99bb-d416-4c60-844c-58cf8d49b16e",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:17.426Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bafecc24-4818-4000-8954-18add95c3524",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:22.823Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5945dc07-48d6-467b-913e-7e9a5c5bcba6",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:28.410Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "201730d5-f74b-458d-93ab-edc98b964371",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:34.731Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fbcd68d5-78d7-4243-b5cb-94870211c684",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:40.023Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7e5ba7ea-980b-40f0-8865-647885509ad8",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:46.756Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d31a5eed-ccdd-4832-8efa-7fa93d8ac86b",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:52.225Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0aa7d966-cb47-4905-b50d-8cb4fa6ec44a",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:15:57.640Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e915d770-90fa-4e2b-ac39-284ac6932d0c",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:02.796Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "68af3a69-0ec4-46dd-b4d2-bd9a58635f65",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:08.470Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "20d489d7-37ed-4966-8202-caef921aa360",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:13.735Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a6b81cae-ae0a-4b96-afcd-d08f4378206c",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:19.539Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fab48a63-03b5-444f-99f6-6f220f5ddc59",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:24.851Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "23a6272c-5395-4257-a910-ec19981d725a",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:30.407Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d1972901-0cb0-4183-91d1-e60468761204",
+      "caseId": "case-03",
+      "testId": "C03-G09-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:37.089Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "948cf12a-eca3-48b7-8f95-13f213eeae10",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:43.355Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "20224c8c-347f-41e4-beb1-5f8af43102ed",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:48.525Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9ef55c47-9e71-46d0-9c3e-7a8ff26bb43d",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:53.643Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "20d473cf-f0bc-4b0f-ac71-e18ce3c70eeb",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:16:59.747Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2f041396-a767-4e8b-8d93-3549a8265f7d",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:04.971Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a9c69ef2-dcb7-4671-a657-03be6b2347fd",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:10.108Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4d44a0d4-b037-4b1b-9d45-5d6fc3ba559c",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:17.216Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "16ac7565-97d8-465f-b9d4-d7dc0cdf8e4e",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:22.702Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a1bb5a55-e33b-4e2b-9fcf-afce4ba28b2d",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:28.364Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5b7e1153-1883-4d43-bb65-9a2d6c3591ce",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:33.547Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dc28d846-1341-48a6-8913-e454192dd9a7",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:38.628Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d4e3d8db-3a5d-482c-9a84-2ff5e682f77f",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:44.792Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0f641829-b6a5-40a4-9c66-82755888edcb",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:49.814Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4f391897-cfd9-4c7e-b078-83bc0dfe4798",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:17:55.209Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bf1a4fa0-3e33-4d3d-ba74-601ecb1c356d",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:03.437Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "944e2ba6-5771-416b-be69-9c4c6f7a9566",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:10.710Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2a2b57d7-1799-482a-afae-a4dbded72026",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:16.000Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e759c570-4b1d-49b9-af00-9327d2a63c8e",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:24.306Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "446eb938-0ba3-49e4-851d-27b05e0cb1b1",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:29.749Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e9171b0f-3a0d-4b5c-b024-619ed517ea57",
+      "caseId": "case-03",
+      "testId": "C03-G10-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:35.288Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8575dc82-dafe-4397-83b5-ebe6ae3c8e12",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:42.525Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "41c70d55-5b44-4a70-bbfb-b025894100ba",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:18:56.674Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8f67f8db-8176-4b63-983b-b269feadf3e6",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:19:09.054Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c7ebbc63-b150-466e-96ed-fd321c43d0cf",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:19:21.140Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a2a79475-caaf-4e4a-942f-54e2847e9899",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:19:32.699Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "588386aa-b801-41b6-915a-5c45634be2c5",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:19:45.274Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "27fdcc3e-f9c2-47b1-84f8-0a7df137bd33",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:19:58.093Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "14f5a22c-9fb6-477f-b96d-030e733d6f44",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:20:10.866Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e8c28b05-a4da-4195-807a-3a773046f569",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:20:23.218Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bd5426a8-f89a-486e-9dcc-a232ce48b905",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:20:34.884Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5ae9f5ad-131a-4b26-a625-1a68f1ebec11",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:20:46.204Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8eb2b040-e6c4-48d4-99ce-00ba37383bdf",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:21:02.834Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "461fe833-51a3-43d3-8452-61ae7bd854cf",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:21:14.786Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "42a74b8f-40be-4a74-80e2-601ead34803b",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:21:26.748Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9a23cbe6-4cbb-44f6-9331-d8df61d23207",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:21:39.013Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "57a0fa96-2bf2-4b3b-afdb-e235d6ba3197",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:21:50.436Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "94af3686-5c46-4f96-aa95-f69822505197",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:02.525Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3e6c16e7-33aa-46aa-ab26-e66b03654a8b",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:15.065Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2c17b912-5dee-4165-b90e-f1521ca6a44d",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:27.484Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c3c19653-aa0a-4d01-8a85-5a1c28483dd6",
+      "caseId": "case-03",
+      "testId": "C03-G11-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:40.183Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "681c77e0-ac7a-459e-9d72-b3dd5cbac178",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:53.605Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f2494ad1-9c89-4d9c-b6f2-dbbef8d3c7f5",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:22:59.711Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e1372c7c-c4db-4373-9ed8-67fdc18ecd51",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:05.094Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "46caf93d-ce2c-47c3-a117-8e11abfc939d",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:11.273Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5a290fa2-f65e-4524-8033-c8e819eac775",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:16.481Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b70ebd2f-c47d-47af-909b-0ce583066116",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:21.763Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "549efcc2-73aa-43bc-a753-fa19f7c8a825",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:26.910Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c7a17bf8-be7a-4dbf-9c6e-d1e91329c635",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:32.649Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "127bbe02-8914-4c1a-ba5b-5017ced19d07",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:38.073Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f496c4bc-a0d1-4d97-94bc-a792f013dd99",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:43.981Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "94188dce-3405-479a-913d-7c449edf3790",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:50.086Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7010af74-5994-44b5-b61e-359ee58c7715",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:23:55.830Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e5d12e7c-4968-4e31-b5dd-103a30b0caaf",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:02.403Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "afec0b14-848b-49b9-83d8-0a242b250339",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:08.662Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8e16b1d6-09aa-4455-ab25-4f71ec2cca62",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:14.931Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5450611c-338b-4389-8cd1-c7eedd1bfaa0",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:20.192Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b345f417-153a-4e21-92c5-db5c42569323",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:25.542Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ee425d71-b233-4159-aadb-c9beda7a8aed",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:31.143Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3b85052c-afb1-4bd8-9cba-995307eeef62",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:37.539Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2a6a2d70-e2f9-452c-a3c0-a03bf9cd208a",
+      "caseId": "case-04",
+      "testId": "C04-G12-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:42.970Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "02e8c977-12e8-454b-a95b-753852621036",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:49.412Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2143ef53-7cad-45a2-8859-5d10f1b3c314",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:24:56.876Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "78553fff-08b1-44f1-b9d3-19d41efd571b",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:02.331Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7c8a7147-05dc-4bcb-8608-b1ca7734da55",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:09.151Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8ff10e3b-06da-4a30-beb2-3c9182bbc7f6",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:14.700Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1a588373-d3f2-4230-82df-742f7bcf4ecf",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:20.099Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "21c4bcd6-ee24-4273-b8ad-1e0ac6249d76",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:25.213Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "40a6fbce-2d4f-434e-b03c-8395d23642f3",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:31.407Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d6f26b10-4377-4a58-b01a-af29ac9b75b3",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:37.073Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "52ec2781-35b1-4d2b-ad13-c1adf93200fe",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:43.292Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4ae6c1b8-a62a-4a80-92fa-61f1832b4c17",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:49.807Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2438027e-1577-421d-affd-287bd8ce2148",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:25:55.194Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ca5198c1-0639-4855-ae03-8b034a144623",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:00.447Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a5d66da5-cfef-4d92-a40c-a895eca7c041",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:05.651Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8fc09c17-94ee-4a16-ab6a-b11f6f95d1bf",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:12.312Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "88fe7d4c-93a9-4d62-979f-46d51e1c2497",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:17.425Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e4cddcb7-658d-4f46-ac19-1d72afd0e461",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:22.857Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "43bcf003-08bc-4269-83e6-036328008d98",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:28.360Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "150f5f98-95a7-4b77-bf75-866dd4bd99e0",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:33.985Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ba6efb3e-6f34-4440-a361-d251c1823051",
+      "caseId": "case-04",
+      "testId": "C04-G13-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:39.196Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "313f88b0-9e7e-4f32-8491-e21b5dc08a38",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:45.050Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "971c56d9-67f4-4988-bd4b-205ce12f0771",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:50.389Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b8024f71-3edb-48fd-9a99-7db149e3b19a",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:26:56.165Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "654c0e9c-ec2d-449b-ab64-7f7a0f08ce9b",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:01.545Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c018fa4c-2abe-4bc7-9a77-385360ccbdaf",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:06.637Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "eafe150c-70b1-4363-bfd2-8e9e89ab1794",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:12.316Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "27974411-07c9-449b-ab10-ed0e1437c47e",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:18.693Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f81b1125-82bc-4c59-9688-6f8150920428",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:25.324Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dee0c82f-ae6e-439d-8ef1-ece566ad5359",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:30.761Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d52d96d2-5bf5-4184-822b-db27a5c4c99a",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:39.750Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3d8a4d4c-d21f-4068-8387-5b61efbd8c6c",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:45.285Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "25e151d2-2500-4aed-b768-b7255db0c515",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:50.879Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fdf4ca7e-7ff2-476d-8a3c-c295f5c00a71",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:27:56.505Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "51529e65-ff41-4ebc-8bf6-74bf89fa9f83",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:02.292Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bf2636d9-897d-4902-a9c9-f39197021920",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:07.673Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a1126586-35e8-498c-ab14-b87e50840c74",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:12.954Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "72251544-0b8e-4aa7-9dfb-e6782b80e248",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:18.232Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fe79c75e-bbd5-41ca-81b9-3445286270cc",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:25.596Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "707ff8af-a84d-44e5-93a0-3124a3e0cd00",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:31.058Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fbee6f65-7f5e-4795-bb16-a6e99cfeb2a1",
+      "caseId": "case-04",
+      "testId": "C04-G14-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:36.622Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "55cc034a-fd17-47f8-8c37-edffe478cb6c",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:42.765Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b9876651-f8b9-48cf-901c-6bc11d92c54d",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:48.673Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "369710dc-aaf8-43ab-b46d-6fedea4d62d5",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:28:54.991Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "185a3090-ff84-4607-96e5-d2d472c9bfeb",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:00.786Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ab8a985f-716a-4884-a0fc-92a755bab7dd",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:06.675Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4a1d4d96-2241-4b45-a81b-6e8958a9cbd8",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:11.936Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d4811c7c-b435-45b0-a782-06131eff0e3d",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:17.518Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "59664626-3ab2-4216-bc01-ec3683d1f081",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:23.582Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "13332ec0-7a6b-44e8-936e-2690c7792380",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:29.364Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b04a15ae-9790-40fd-b882-93e8366bcee1",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:34.670Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "412511dd-73ba-4607-b61b-92991c683273",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:40.158Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a3c2b0d6-b5cb-4f66-9cb8-c400fe25162d",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:45.418Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "761b1f83-7cdf-4d98-9029-0fe3ed58fbc8",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:50.935Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8700f111-1767-465c-946f-7b9263b641b0",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:29:56.495Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b4f93528-bed2-482b-90bd-1f57b50f9925",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:01.850Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "64942381-d8bd-48cf-9474-a3479dde61a4",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:07.177Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cd6849f7-f33e-4984-988f-54b636148e2b",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:12.275Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d82d895a-5dac-4b2d-a417-38e8c5c66619",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:17.652Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "231d822b-a5c1-49f8-b254-0dc0780fdefa",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:22.645Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1733c311-0429-4731-ae41-b5e8c600545a",
+      "caseId": "case-05",
+      "testId": "C05-G15-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:27.795Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d614c355-c49d-423a-b883-2c369e90271f",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:35.032Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "67c83c0e-862a-44a9-9676-e5ad2c0feeaa",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:40.251Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6d5984c8-7427-42e1-b7e2-4bbd9a16141e",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:45.478Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3ff80ae3-f065-4d2b-abd6-73fa174a65ca",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:51.285Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "96057c56-1693-4d02-b995-f5d7daf7e92d",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:30:56.796Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "12b90f1e-aa4c-446d-a58b-7fc904cec260",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:02.750Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5f0c8b71-a7f9-4441-8f35-c52558c7b3e9",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:08.370Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c178ae06-5e91-46e6-bec9-22143178d86d",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:13.931Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "47b04877-8951-4ff7-adf4-9e0740c8873a",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:18.852Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7d3d4204-ed82-41e4-900a-d6902b19324b",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:23.959Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0e144612-92e6-4dbe-aa0f-21098486d296",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:29.134Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "71b3073b-5d26-45b2-8d06-e2836abae477",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:35.203Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "26b47a69-3ec4-4c3b-ab4b-fb1a8bb47f04",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:40.454Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e82dc410-f81f-4a40-bc40-b671355be64f",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:45.352Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cc18c21b-bcfb-402c-9a2a-d90913f9b7d1",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:50.877Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "662d66f3-1d9e-41e6-bdfd-cd5d3bda2cc4",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:31:56.066Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b84f2998-2701-4485-9448-970be549abc5",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:01.812Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "352c976d-57be-43b7-be4c-dae14580136b",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:07.679Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "85817a4a-017f-4c2d-84e7-83592b51fdca",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:12.637Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "03d894dc-2013-4627-a4a5-b0f0203d437f",
+      "caseId": "case-05",
+      "testId": "C05-G16-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:18.520Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5f06b309-f3ac-4e31-8c6d-509903328107",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q01",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:24.955Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "137a273c-f728-4194-854d-66bfeb8a692b",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q02",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:30.659Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dfc62aee-7efe-4337-802c-15a36820d956",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q03",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:36.034Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d0593077-f0ce-4a8b-8e0b-f070717e4ccb",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q04",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:41.319Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "da75c363-2d51-4b4f-8076-3f3ab1811ead",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q05",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:46.764Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "99a58eb0-a2f6-49bf-ab05-310456de2bb5",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q06",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:52.933Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "792e94a1-cf70-42e9-a2f1-5b45b9a51dd1",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q07",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:32:57.937Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "be6fd61a-c31a-4acb-9ab6-9a34ccb02657",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q08",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:03.968Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4add16c1-864f-4ca5-96a1-bf2293a2c855",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q09",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:08.935Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dc24ec71-1486-4f47-97f8-efbe88124680",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q10",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:14.182Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "17dc1cae-5299-4f77-bf02-a47222117dba",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q11",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:19.536Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "18da7dff-6869-4b40-a3b5-15afb21b014d",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q12",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:25.144Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b3cb905f-1c16-47c7-b73e-6627b2fe3a40",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q13",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:30.622Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "42d74a11-78b0-48f3-80cc-452d12823224",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q14",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:36.226Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9b15d26c-b32f-4bfa-a047-f4ded09226ad",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q15",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:41.251Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "caeab73f-876d-413f-82e8-ac45dd7497ee",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q16",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:47.337Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bae9ddd5-4aef-4ce8-bb6d-28bb0a7736a6",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q17",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:52.897Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "459009f1-a145-4c35-86e5-6503e2c756b7",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q18",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:33:58.778Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5fbad140-f0d4-40cc-baf0-b29e449cf98f",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q19",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:34:04.523Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "70afed67-a575-4278-ae98-0a2074045f80",
+      "caseId": "case-05",
+      "testId": "C05-G17-Q20",
+      "cohort": "primary",
+      "createdAt": "2026-10-18T03:34:11.119Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "16d9a61e-a22d-4f50-87e5-c0a3a61ad9dd",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q01-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:34:17.485Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ca4dae52-308d-445f-977c-f4387487a8ef",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q02-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:34:31.120Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "810ce111-6b1f-4786-8518-bf2ab626d4bb",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q03-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:34:44.846Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "28f2ccce-0735-4f7f-ae46-509b12aa1100",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q04-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:34:56.600Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "77414c75-e953-4367-8819-4ef647a93167",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q05-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:35:09.663Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "19a9dd5f-e565-4910-acad-7d02abadfa83",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q06-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:35:22.263Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c05600a7-8f66-498d-8eee-19e876e0d7af",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q07-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:35:35.471Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c37e877d-8f83-4220-8acd-bfa22f37b8c8",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q08-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:35:47.977Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9c3e2163-c154-46cd-8865-fcdae94aaed1",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q09-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:35:59.373Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a386dbd3-44ad-42d5-bf32-70fdd7f62d27",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q10-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:36:10.904Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6a357617-4e48-4348-b50e-0208eef597bf",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q11-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:36:23.987Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a607f112-149f-4c88-ac85-54cee224cd45",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q12-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:36:36.597Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "67ab6e5c-15df-4801-b530-6b1f821a37a7",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q13-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:36:50.435Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ecfaaeb3-0ec2-428e-8b9a-9a94a5d76b94",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q14-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:37:02.990Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3506789d-6ed7-4c90-8a85-b971674e536d",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q15-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:37:16.139Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e212f036-45e2-4205-8aaf-1f6a41842b8f",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q16-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:37:29.438Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "079c417c-7fcb-4c36-a8e2-5bf259da84fb",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q17-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:37:42.623Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "81f47713-5b79-4656-95a1-cb5d9f019e31",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q18-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:37:56.619Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dee2afb4-3016-4f69-95c8-d4ed181f1609",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q19-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:38:14.304Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3d6a7ca2-b320-4174-a156-3b7e7770d631",
+      "caseId": "case-01",
+      "testId": "C01-G03-Q20-PAIN",
+      "cohort": "pain-context",
+      "createdAt": "2026-10-18T03:38:29.363Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "09f10cdd-6cc2-4317-82ac-8dac9e9ebe29",
+      "caseId": "case-01",
+      "testId": "C01-G01-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:38:47.737Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "041d2f8a-ca97-45dc-9f57-b6e272f2e7c9",
+      "caseId": "case-01",
+      "testId": "C01-G01-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:38:58.231Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "295f57c0-146e-4f45-af5b-61c28ff78b95",
+      "caseId": "case-01",
+      "testId": "C01-G01-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:07.624Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3e758082-8579-4792-9af9-ce4c8f2b9f75",
+      "caseId": "case-01",
+      "testId": "C01-G02-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:14.655Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c45286ff-64ec-446a-b5fc-7c0171090837",
+      "caseId": "case-01",
+      "testId": "C01-G02-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:21.425Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "652190c3-ddc8-4eb0-b07c-5817544d15c9",
+      "caseId": "case-01",
+      "testId": "C01-G02-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:26.732Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b42f082e-5195-4cd3-ba58-b34afe19c0cb",
+      "caseId": "case-01",
+      "testId": "C01-G03-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:32.495Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6bec65fc-e87e-4e50-8cbb-df195489eae8",
+      "caseId": "case-01",
+      "testId": "C01-G03-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:40.215Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "399eb0ca-8ff5-4a85-a2b1-b4caaa733627",
+      "caseId": "case-01",
+      "testId": "C01-G03-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:45.682Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d73c22f6-489e-4952-a854-d7384c565469",
+      "caseId": "case-02",
+      "testId": "C02-G04-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:51.819Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "152b306c-ed2b-48aa-916a-a445df027018",
+      "caseId": "case-02",
+      "testId": "C02-G04-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:39:58.085Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5a35570d-3f3a-48e0-a549-d7ecb17103a3",
+      "caseId": "case-02",
+      "testId": "C02-G04-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:03.942Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b86df98b-7e5e-4552-a3af-497bed3d257f",
+      "caseId": "case-02",
+      "testId": "C02-G05-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:09.586Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "531adb6e-28a8-4596-a1b3-781317d5b665",
+      "caseId": "case-02",
+      "testId": "C02-G05-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:22.742Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7da7311b-ea11-45ef-9e86-819606f931ac",
+      "caseId": "case-02",
+      "testId": "C02-G05-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:34.443Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2d0eb4d7-fad9-422d-90c9-172046982ae7",
+      "caseId": "case-02",
+      "testId": "C02-G06-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:48.016Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "886ede59-fcd0-49a2-bde3-daf40c5e2724",
+      "caseId": "case-02",
+      "testId": "C02-G06-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:40:56.361Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b38492bd-4fd2-4313-9edc-35ddb34771a4",
+      "caseId": "case-02",
+      "testId": "C02-G06-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:04.680Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "71ff0cff-4c01-4763-a817-1adf1b134b8f",
+      "caseId": "case-02",
+      "testId": "C02-G07-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:13.679Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "fdc960fa-8cf8-49f1-88e3-b91420141682",
+      "caseId": "case-02",
+      "testId": "C02-G07-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:18.825Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "50d66a3b-dbc3-437b-9392-4d7a03d3d411",
+      "caseId": "case-02",
+      "testId": "C02-G07-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:23.996Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4e7420ee-9d21-4fd0-bbd0-aac6a3ea4ba5",
+      "caseId": "case-03",
+      "testId": "C03-G08-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:29.519Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b8a4d4da-6824-463a-bed0-e875a45f2d1f",
+      "caseId": "case-03",
+      "testId": "C03-G08-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:34.754Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e939bf54-8cbf-4e6c-b55d-93b8737ce526",
+      "caseId": "case-03",
+      "testId": "C03-G08-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:40.880Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "14448b59-2fb6-4985-ae04-0e7c1e19785b",
+      "caseId": "case-03",
+      "testId": "C03-G09-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:46.490Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dc65a586-6b52-4a57-8189-2cad847414ef",
+      "caseId": "case-03",
+      "testId": "C03-G09-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:51.643Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ec336315-421f-43d3-a86e-4c78b675ecd4",
+      "caseId": "case-03",
+      "testId": "C03-G09-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:41:57.540Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ff690a9c-cc6f-4ebf-9ed9-7ba3c9aaa998",
+      "caseId": "case-03",
+      "testId": "C03-G10-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:04.139Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f32908ca-6717-44c2-b0ea-59fd2590e172",
+      "caseId": "case-03",
+      "testId": "C03-G10-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:12.747Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "28210494-ba14-4493-9660-8129ed0658d9",
+      "caseId": "case-03",
+      "testId": "C03-G10-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:22.050Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "aa3882d7-51b7-46ff-8771-78b5b5f4aa35",
+      "caseId": "case-03",
+      "testId": "C03-G11-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:33.276Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d22ecaff-88ad-4725-a8c5-f4bfb576442e",
+      "caseId": "case-03",
+      "testId": "C03-G11-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:45.236Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "09b92b93-423b-4533-912d-6d3a25abf314",
+      "caseId": "case-03",
+      "testId": "C03-G11-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:42:57.290Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a6443080-4186-4098-b175-6bc2dcdaddf2",
+      "caseId": "case-04",
+      "testId": "C04-G12-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:08.898Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f05e8387-62d6-4fd1-a674-32be1f9d9d53",
+      "caseId": "case-04",
+      "testId": "C04-G12-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:14.051Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cc82bee3-9be0-4fe8-a348-bc17a40ce6b8",
+      "caseId": "case-04",
+      "testId": "C04-G12-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:19.475Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "470017c3-f3bb-41a3-8da8-d06051b4aa3a",
+      "caseId": "case-04",
+      "testId": "C04-G13-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:25.223Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9f879997-ebd9-4c58-82d3-db19e0b72de5",
+      "caseId": "case-04",
+      "testId": "C04-G13-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:31.730Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cf880e83-4666-4d05-b018-7313549a3448",
+      "caseId": "case-04",
+      "testId": "C04-G13-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:38.370Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6d9a19d8-e26f-46cb-afb6-fa0caff526f1",
+      "caseId": "case-04",
+      "testId": "C04-G14-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:44.754Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "280e8330-a780-4fbe-b9c6-c23938417abc",
+      "caseId": "case-04",
+      "testId": "C04-G14-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:50.518Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "13ecd6d2-470f-47ad-871c-0657f3bf7c63",
+      "caseId": "case-04",
+      "testId": "C04-G14-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:43:56.009Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4967de10-5dd0-444c-8c35-dfae7f30e367",
+      "caseId": "case-05",
+      "testId": "C05-G15-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:03.397Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c1b2c66c-f98c-47ef-bd87-1e7f2b53ba46",
+      "caseId": "case-05",
+      "testId": "C05-G15-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:08.921Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "98e3feb1-e51f-4c95-83e0-92ca73d76e5c",
+      "caseId": "case-05",
+      "testId": "C05-G15-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:14.115Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "052f1b4b-6fb2-4419-89fc-6b9183713e4a",
+      "caseId": "case-05",
+      "testId": "C05-G16-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:19.895Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cf81a57b-4bed-459c-8417-de4fea8afd7f",
+      "caseId": "case-05",
+      "testId": "C05-G16-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:26.014Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f4998ea6-ec72-48e8-bd3b-fc9dcdab4dc2",
+      "caseId": "case-05",
+      "testId": "C05-G16-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:31.554Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3c8011af-0476-4e75-8097-f475153ed045",
+      "caseId": "case-05",
+      "testId": "C05-G17-H01",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:37.020Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9a04961c-9667-4600-a9ad-f580fe99d33e",
+      "caseId": "case-05",
+      "testId": "C05-G17-H02",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:42.398Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2322c9fe-a6e5-43b4-b9ac-10cd104bdf90",
+      "caseId": "case-05",
+      "testId": "C05-G17-H03",
+      "cohort": "former-holdout-regression",
+      "createdAt": "2026-10-18T03:44:47.756Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0ce1b064-fa7c-4ec3-8944-f1c8862d05af",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-1",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:44:53.650Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3d73699a-9da4-4f05-b2d3-8679dbfa7429",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-2",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:44:58.561Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "088a116d-ce91-4803-98f1-7c78e3cd3e2f",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-3",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:03.590Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "141a3d15-2a11-4d4a-9f61-f09828baa15a",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-4",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:09.443Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9a9ead1c-f5c4-416e-8d8d-d20bcd04ac96",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-5",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:14.648Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3deea75a-37c4-4dd0-af60-5ec12191a265",
+      "caseId": "case-01",
+      "testId": "C01-TARGET-6",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:18.844Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6f9f1e0f-66fa-468d-9c12-0e6f921bfdf5",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-1",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:23.626Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a607c838-c492-4dbf-929c-0f50b8c5d51e",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-2",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:28.512Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "aa854afb-a280-4d83-9855-abea126a0507",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-3",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:33.390Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7570d2ee-e31d-4977-9a87-a0a9375e0ea1",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-4",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:37.959Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7705ca09-65b6-492e-bcd1-af31b0ff2016",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-5",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:42.761Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0f299b7e-f48b-4641-b41e-cba308ee9a62",
+      "caseId": "case-02",
+      "testId": "C02-TARGET-6",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:47.033Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "79847ee1-667b-4e44-b0b4-13a72e0708e9",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-1",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:52.089Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "17f10a72-4009-4e47-b0eb-c1047c63c0ab",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-2",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:45:56.947Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d40219db-6dcf-455e-a2d2-940c1e6aad3a",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-3",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:01.899Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3ecda7c4-5cfc-47bf-901c-6ec509f74352",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-4",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:06.554Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bf05ff87-62c4-4560-8f54-e9aacb5d4796",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-5",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:11.389Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ed0426bc-474f-4ad4-a45b-a0b651631e33",
+      "caseId": "case-03",
+      "testId": "C03-TARGET-6",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:15.691Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f906868d-fa34-4024-9151-7e3af1ba398f",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-1",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:20.415Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "bef5782f-4fa7-4fbc-8d74-c34f412ccfa6",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-2",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:26.109Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7cda83d6-2a2e-4f2a-a0eb-8ab9c8ad745c",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-3",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:30.963Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3b25393c-bbb0-4c92-a8d8-4644263a3261",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-4",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:36.126Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3cb080c9-6b54-4188-9f6b-e61bab6d9749",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-5",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:41.075Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5df11d37-a15c-4cfb-bfce-3fc5ae43df8b",
+      "caseId": "case-04",
+      "testId": "C04-TARGET-6",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:45.890Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "37850ca0-b3a9-434f-8b61-b9acd63fb672",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-1",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:50.998Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "58bb7c1e-7f93-472f-af62-6a87482f944b",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-2",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:46:56.187Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c8428dce-2e04-4749-81b2-833e48a4d432",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-3",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:47:01.495Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "331061d1-dbc9-4656-bfec-10cbc9f4539e",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-4",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:47:06.351Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c6aeff17-71ba-48a6-af01-ade8d349985d",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-5",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:47:11.263Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "826e9d53-1f8a-4017-aada-a47007fe4b2d",
+      "caseId": "case-05",
+      "testId": "C05-TARGET-6",
+      "cohort": "targeted-live",
+      "createdAt": "2026-10-18T03:47:16.872Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dec9a5f1-8ca8-4649-aec1-4b15a2d55ac3",
+      "caseId": "case-01",
+      "testId": "C01-G01-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:22.573Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3c0ab667-272e-4896-8b38-d19fec4bc5f5",
+      "caseId": "case-01",
+      "testId": "C01-G01-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:28.726Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5441f146-178d-45b1-b087-9c9e56659da9",
+      "caseId": "case-01",
+      "testId": "C01-G01-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:34.217Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8d676a0a-0a4d-45b9-a3ae-bfbe0b78acdd",
+      "caseId": "case-01",
+      "testId": "C01-G02-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:39.584Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3e85fb01-988d-463c-a214-fd252280a00e",
+      "caseId": "case-01",
+      "testId": "C01-G02-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:44.691Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ff360f9f-2d90-4b6b-93f6-d6089eab2376",
+      "caseId": "case-01",
+      "testId": "C01-G02-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:49.706Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "de9ca07e-708c-4304-8860-840c81a44fe9",
+      "caseId": "case-01",
+      "testId": "C01-G03-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:47:55.620Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "78625a78-f6dd-4b88-bfc2-a1da0602fa73",
+      "caseId": "case-01",
+      "testId": "C01-G03-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:00.919Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "55320044-55d8-49d8-85be-7b98fcd7a8c9",
+      "caseId": "case-01",
+      "testId": "C01-G03-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:06.196Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3c21f88a-c4c0-49df-a291-bf21fdb8b49b",
+      "caseId": "case-02",
+      "testId": "C02-G04-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:12.833Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "15265f02-e1a2-40d7-ae9d-0253783f2432",
+      "caseId": "case-02",
+      "testId": "C02-G04-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:18.062Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "961b6d8e-fb84-4aa0-a9b8-11695f100380",
+      "caseId": "case-02",
+      "testId": "C02-G04-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:23.056Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4c5cfd06-792a-4aba-83ff-7250a13994c6",
+      "caseId": "case-02",
+      "testId": "C02-G05-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:30.753Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d4127366-c30b-4aa2-82a2-d65c038a1d19",
+      "caseId": "case-02",
+      "testId": "C02-G05-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:36.790Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "aee210e1-b130-4833-892f-8a9727c55c57",
+      "caseId": "case-02",
+      "testId": "C02-G05-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:41.977Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "426f32dc-7cd2-4a47-88a0-5b225d8a3e03",
+      "caseId": "case-02",
+      "testId": "C02-G06-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:47.740Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d8fbebac-ee6c-40b6-b485-024584e42c47",
+      "caseId": "case-02",
+      "testId": "C02-G06-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:53.798Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7a811cc5-1ac4-462a-9233-86ee8228f893",
+      "caseId": "case-02",
+      "testId": "C02-G06-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:48:59.809Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f23953bb-f937-499d-8395-d991396efe61",
+      "caseId": "case-02",
+      "testId": "C02-G07-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:05.988Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ff8b6de5-c4a4-4cd8-b58f-3d7be49e9d83",
+      "caseId": "case-02",
+      "testId": "C02-G07-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:13.268Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7197b078-081d-4706-b87a-976b5e4e05cb",
+      "caseId": "case-02",
+      "testId": "C02-G07-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:19.887Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "96d864c9-9b63-4ac6-aecd-638fa51382c2",
+      "caseId": "case-03",
+      "testId": "C03-G08-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:25.850Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "23542358-eaac-44d1-a0fc-e3f2c2115b27",
+      "caseId": "case-03",
+      "testId": "C03-G08-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:31.489Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "41cb52cd-37b1-423a-a1fb-1805bf495a45",
+      "caseId": "case-03",
+      "testId": "C03-G08-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:36.932Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a7167f38-682c-42d0-aedc-ef0c772f1cbf",
+      "caseId": "case-03",
+      "testId": "C03-G08-N4",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:42.286Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "faa6ca32-b42b-47d3-b579-e67204c8ca74",
+      "caseId": "case-03",
+      "testId": "C03-G08-N5",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:47.761Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "384450b0-6229-4a65-872c-a875c49d49f6",
+      "caseId": "case-03",
+      "testId": "C03-G08-N6",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:53.130Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f93a4c6d-5da7-4e79-b932-42991452e62d",
+      "caseId": "case-03",
+      "testId": "C03-G09-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:49:59.543Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "57c01e42-37ab-4fcd-9704-98d36afa3f04",
+      "caseId": "case-03",
+      "testId": "C03-G09-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:04.962Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "043f1881-b5a7-4fbb-b720-f06c0935ce84",
+      "caseId": "case-03",
+      "testId": "C03-G09-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:10.768Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4315ed2a-f107-44e2-87ef-fcb9cc6c17c9",
+      "caseId": "case-03",
+      "testId": "C03-G10-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:16.395Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "abe3b937-c701-49a8-942b-dc1021a63cd2",
+      "caseId": "case-03",
+      "testId": "C03-G10-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:25.489Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "738fae38-c583-44fb-9067-a6b768275f3e",
+      "caseId": "case-03",
+      "testId": "C03-G10-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:33.628Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b11fda4e-4714-47c0-9f83-3bd8d3e07aa1",
+      "caseId": "case-03",
+      "testId": "C03-G11-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:42.642Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "51c5f2e6-34ec-4006-afad-35f912bb5824",
+      "caseId": "case-03",
+      "testId": "C03-G11-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:50:51.946Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2b254b19-3a49-4cce-a944-7422beac9e1b",
+      "caseId": "case-03",
+      "testId": "C03-G11-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:01.533Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c448fe56-5d4e-4fe1-8f01-da18637cbffe",
+      "caseId": "case-04",
+      "testId": "C04-G12-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:11.424Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0faeced4-f406-4a44-a097-800db9839b2f",
+      "caseId": "case-04",
+      "testId": "C04-G12-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:17.505Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6de373fb-bb19-4340-a694-7e85776bb086",
+      "caseId": "case-04",
+      "testId": "C04-G12-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:22.681Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "400a9b2d-c79a-4397-9a97-a6489da65f43",
+      "caseId": "case-04",
+      "testId": "C04-G13-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:28.199Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0d9f04e3-b556-4138-8214-79b347b3707b",
+      "caseId": "case-04",
+      "testId": "C04-G13-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:33.454Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cf00703a-2e99-460b-8949-d19ccb534165",
+      "caseId": "case-04",
+      "testId": "C04-G13-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:39.980Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "95f231cd-5519-44e7-8a02-97b9e6bea46a",
+      "caseId": "case-04",
+      "testId": "C04-G14-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:46.273Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1d94a036-6c57-4d59-9695-b3c6786f0ef1",
+      "caseId": "case-04",
+      "testId": "C04-G14-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:52.265Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "68c5ac63-c064-4d35-8a31-78626f0608e8",
+      "caseId": "case-04",
+      "testId": "C04-G14-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:51:57.506Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "ca4a35db-25ed-41ad-9d64-8e140fa4cc9e",
+      "caseId": "case-05",
+      "testId": "C05-G15-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:03.667Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "4b0c27e0-555b-45ac-bb4a-b2e94f377006",
+      "caseId": "case-05",
+      "testId": "C05-G15-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:08.821Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5fd15bfa-66cc-42b6-97cb-bca7ed163b40",
+      "caseId": "case-05",
+      "testId": "C05-G15-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:13.876Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "41da2fc7-baa9-49ff-80f6-4df49826d97a",
+      "caseId": "case-05",
+      "testId": "C05-G16-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:20.263Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b8510314-a7fe-43f3-8d46-3ba532644cbc",
+      "caseId": "case-05",
+      "testId": "C05-G16-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:25.289Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3fca5e7f-09b3-4e5b-9834-0eaf3a0d11f5",
+      "caseId": "case-05",
+      "testId": "C05-G16-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:30.219Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "812bd566-a904-4dad-b550-5d6136520e66",
+      "caseId": "case-05",
+      "testId": "C05-G17-N1",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:35.701Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0e96a4ec-388f-46bf-aeb7-1061d2c946c9",
+      "caseId": "case-05",
+      "testId": "C05-G17-N2",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:40.831Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2f8885ae-830f-4376-b44b-1cb3ec775611",
+      "caseId": "case-05",
+      "testId": "C05-G17-N3",
+      "cohort": "v3-holdout-regression",
+      "createdAt": "2026-10-18T03:52:46.316Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "cb9ec38d-f0ee-4693-9049-a62aae3f82ae",
+      "caseId": "case-01",
+      "testId": "C01-G01-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:52:53.858Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0ce8a3a5-3fa9-43e7-b361-2f5ce0636d93",
+      "caseId": "case-01",
+      "testId": "C01-G01-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:52:59.227Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7a9b0a49-6d46-40a4-aa6c-ac18ab7caab8",
+      "caseId": "case-01",
+      "testId": "C01-G01-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:05.330Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e973dfec-f194-4692-800d-19692917ef90",
+      "caseId": "case-01",
+      "testId": "C01-G02-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:10.724Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "95057af2-4684-4026-9e30-10a7cff59894",
+      "caseId": "case-01",
+      "testId": "C01-G02-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:15.868Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0b3510c8-4b18-4c1f-ba9a-5d7bccb405f9",
+      "caseId": "case-01",
+      "testId": "C01-G02-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:21.693Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "64df86bd-7226-4e44-903d-8224fcd02f81",
+      "caseId": "case-01",
+      "testId": "C01-G03-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:27.142Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2ad164b6-e8c3-46f8-a53e-dc4360cd431b",
+      "caseId": "case-01",
+      "testId": "C01-G03-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:33.037Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "d224735f-ed8c-4d9d-a033-e55af8bfa675",
+      "caseId": "case-01",
+      "testId": "C01-G03-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:39.954Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1162553c-99e8-4cbc-926a-ffc5e45fc93c",
+      "caseId": "case-02",
+      "testId": "C02-G04-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:45.945Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b8ef4280-2b68-4cc9-a1f3-a7dd890ebda8",
+      "caseId": "case-02",
+      "testId": "C02-G04-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:51.714Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0423e296-2871-4f01-9b65-7a9f40d7ae6a",
+      "caseId": "case-02",
+      "testId": "C02-G04-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:53:57.366Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "eb78d542-6f60-47b9-8f31-e8086329c6f0",
+      "caseId": "case-02",
+      "testId": "C02-G05-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:04.066Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "5702a483-f192-4bb2-865a-4114d3800e23",
+      "caseId": "case-02",
+      "testId": "C02-G05-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:10.870Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8bd5c14b-fcf9-4104-bd20-90122350a80c",
+      "caseId": "case-02",
+      "testId": "C02-G05-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:17.336Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0efb6c3a-cf3b-4e17-994c-bf3f667066f4",
+      "caseId": "case-02",
+      "testId": "C02-G06-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:24.631Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "65b21433-0d82-49ff-8f8d-ec17c766c364",
+      "caseId": "case-02",
+      "testId": "C02-G06-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:30.345Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c2f7ab43-5510-4706-9048-36535e43565a",
+      "caseId": "case-02",
+      "testId": "C02-G06-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:35.850Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "eab89cb0-2e34-4ca1-9106-44503e24c36c",
+      "caseId": "case-02",
+      "testId": "C02-G07-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:41.701Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "8d4ee94c-02f5-4ca3-98a3-9a7b076e0f13",
+      "caseId": "case-02",
+      "testId": "C02-G07-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:47.928Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b5b6e903-78e0-487c-aea7-3c065595436e",
+      "caseId": "case-02",
+      "testId": "C02-G07-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:53.744Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "9e1c21bb-cc3b-4632-89f8-289e3c71037b",
+      "caseId": "case-03",
+      "testId": "C03-G08-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:54:59.865Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "2e45d274-aeb1-4f42-9948-018ac3b8e0d2",
+      "caseId": "case-03",
+      "testId": "C03-G08-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:05.352Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3847efee-2dee-454f-9747-0bc2ec4a9dc7",
+      "caseId": "case-03",
+      "testId": "C03-G08-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:10.812Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "1a992503-6802-412d-b150-263153b69ddc",
+      "caseId": "case-03",
+      "testId": "C03-G09-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:17.739Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "766e7158-8939-4cab-b8c0-1edfe09bc242",
+      "caseId": "case-03",
+      "testId": "C03-G09-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:23.169Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "31267577-3481-4983-9826-30d339cb18c9",
+      "caseId": "case-03",
+      "testId": "C03-G09-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:28.735Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "7fd106b8-e087-4974-bc4e-c574b7e45b47",
+      "caseId": "case-03",
+      "testId": "C03-G10-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:34.665Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c0ccb263-47b4-45da-ae12-7727be1c45c9",
+      "caseId": "case-03",
+      "testId": "C03-G10-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:43.223Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f45d1d0a-5b0d-4587-b34c-b672523001ff",
+      "caseId": "case-03",
+      "testId": "C03-G10-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:55:51.449Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "089a0dc7-5299-438d-9fec-a351734f98eb",
+      "caseId": "case-03",
+      "testId": "C03-G11-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:00.024Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a5738aa4-34f2-4170-b8bc-77bffda803bf",
+      "caseId": "case-03",
+      "testId": "C03-G11-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:08.707Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "59e8c11c-952d-497b-92e6-e714d60aeb24",
+      "caseId": "case-03",
+      "testId": "C03-G11-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:18.502Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "048cb7ff-0d14-4de7-ad30-095798542b9b",
+      "caseId": "case-04",
+      "testId": "C04-G12-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:27.829Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6d90d361-fe3b-4942-bd71-4f56ad6d8753",
+      "caseId": "case-04",
+      "testId": "C04-G12-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:33.413Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "76e30ddd-a0d7-4d33-bf4d-bf68abdb3178",
+      "caseId": "case-04",
+      "testId": "C04-G12-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:38.641Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "333f5224-9766-4b83-8898-b2a7be487948",
+      "caseId": "case-04",
+      "testId": "C04-G13-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:44.147Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3f861656-b094-4d41-8fae-8106aa8a6821",
+      "caseId": "case-04",
+      "testId": "C04-G13-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:49.417Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "68af38e5-9583-4cbe-aa47-69abe8da291f",
+      "caseId": "case-04",
+      "testId": "C04-G13-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:56:55.412Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "b4545ed4-4c0f-4834-81d3-7d236a14d0d6",
+      "caseId": "case-04",
+      "testId": "C04-G14-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:01.054Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "f8bcc071-9cae-4e07-9ffb-3c45a855c3de",
+      "caseId": "case-04",
+      "testId": "C04-G14-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:06.641Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "3c73aa95-801d-4672-9f59-98feaf14658d",
+      "caseId": "case-04",
+      "testId": "C04-G14-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:13.063Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c89f1765-76ab-4d24-a9c0-d09049f92b7b",
+      "caseId": "case-05",
+      "testId": "C05-G15-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:19.931Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "536138fc-6765-4987-8cff-e1cc538de63f",
+      "caseId": "case-05",
+      "testId": "C05-G15-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:25.284Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "a8c37d95-60eb-43a9-b3ed-5cfa78064ffb",
+      "caseId": "case-05",
+      "testId": "C05-G15-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:31.193Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "e5eccb62-7521-4bb1-9d4f-9b9569f57f8e",
+      "caseId": "case-05",
+      "testId": "C05-G16-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:37.958Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0dc0cd69-910d-464c-9686-f2e192e13f93",
+      "caseId": "case-05",
+      "testId": "C05-G16-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:44.298Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "6178511d-099c-4ebb-9a92-1ebf8b94b19f",
+      "caseId": "case-05",
+      "testId": "C05-G16-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:49.413Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "c23a7040-df01-41b8-ab74-3e3d41664ad7",
+      "caseId": "case-05",
+      "testId": "C05-G17-V4H1",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:57:54.770Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "0f3578ad-1ea9-497d-b802-eb446b4b7f09",
+      "caseId": "case-05",
+      "testId": "C05-G17-V4H2",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:58:00.550Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    },
+    {
+      "encounterId": "dab1db38-16be-427b-8d00-e0a4bbac6a66",
+      "caseId": "case-05",
+      "testId": "C05-G17-V4H3",
+      "cohort": "fresh-holdout",
+      "createdAt": "2026-10-18T03:58:06.862Z",
+      "researchExclusion": true,
+      "purpose": "Synthetic frozen V8 546-item verification; exclude from participant research"
+    }
+  ],
+  "rule": "Synthetic V8 study encounters only; exclude from participant research."
+}

@@ -1,0 +1,221 @@
+[
+  {
+    "testId": "C01-EXACT-01",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Independent exact-wording fresh-encounter repeat",
+    "cohort": "diagnostic-exact-repeat",
+    "question": "can you travel for Affordable Care",
+    "setupQuestions": [],
+    "expectedMeaning": "Affirm defined reliable transportation and ability/willingness to travel for free or low-cost care; no invented limitation or mode.",
+    "contextRequirement": "Fresh encounter; no setup or expected-answer coaching.",
+    "runId": "3b7f3782-4bd9-469f-9872-828da4a0dc74",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T16:43:17.436Z",
+    "setupTurns": [],
+    "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed exact original question and final response: reliable transportation and travel capability/willingness affirmed; no unsupported mode/limit, unrelated history or leakage.",
+    "encounterId": "74e9a817-41f8-4791-9bc5-f8ad8d570a7a",
+    "requestId": "case-01-1792255399937-1-response",
+    "provider": "navigator",
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\screenshots\\C01-EXACT-01_3b7f3782-4bd9-469f-9872-828da4a0dc74.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\traces\\C01-EXACT-01_3b7f3782-4bd9-469f-9872-828da4a0dc74.zip",
+    "freshState": {
+      "boundEncounterId": "74e9a817-41f8-4791-9bc5-f8ad8d570a7a",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2994,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T16:43:23.289Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-exact-repeats/raw/C01-EXACT-01_3b7f3782-4bd9-469f-9872-828da4a0dc74.json",
+    "implementationVersion": "final-v2",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      }
+    },
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792255399937-1-response",
+        "encounterId": "74e9a817-41f8-4791-9bc5-f8ad8d570a7a",
+        "requestMessage": "can you travel for Affordable Care",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+        "responseRequestId": "case-01-1792255399937-1-response",
+        "responseEncounterId": "74e9a817-41f8-4791-9bc5-f8ad8d570a7a",
+        "error": null,
+        "retryAfter": null
+      }
+    ]
+  },
+  {
+    "testId": "C01-EXACT-02",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Independent exact-wording fresh-encounter repeat",
+    "cohort": "diagnostic-exact-repeat",
+    "question": "can you travel for Affordable Care",
+    "setupQuestions": [],
+    "expectedMeaning": "Affirm defined reliable transportation and ability/willingness to travel for free or low-cost care; no invented limitation or mode.",
+    "contextRequirement": "Fresh encounter; no setup or expected-answer coaching.",
+    "runId": "79e1d857-a434-4567-9da2-5991a1ad4d0e",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T16:43:23.297Z",
+    "setupTurns": [],
+    "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed exact original question and final response: reliable transportation and travel capability/willingness affirmed; no unsupported mode/limit, unrelated history or leakage.",
+    "encounterId": "216a9bac-8ffc-4c1c-93f5-f8ba5ed6ffa5",
+    "requestId": "case-01-1792255406367-1-response",
+    "provider": "navigator",
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\screenshots\\C01-EXACT-02_79e1d857-a434-4567-9da2-5991a1ad4d0e.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\traces\\C01-EXACT-02_79e1d857-a434-4567-9da2-5991a1ad4d0e.zip",
+    "freshState": {
+      "boundEncounterId": "216a9bac-8ffc-4c1c-93f5-f8ba5ed6ffa5",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2211,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T16:43:29.050Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-exact-repeats/raw/C01-EXACT-02_79e1d857-a434-4567-9da2-5991a1ad4d0e.json",
+    "implementationVersion": "final-v2",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      }
+    },
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792255406367-1-response",
+        "encounterId": "216a9bac-8ffc-4c1c-93f5-f8ba5ed6ffa5",
+        "requestMessage": "can you travel for Affordable Care",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+        "responseRequestId": "case-01-1792255406367-1-response",
+        "responseEncounterId": "216a9bac-8ffc-4c1c-93f5-f8ba5ed6ffa5",
+        "error": null,
+        "retryAfter": null
+      }
+    ]
+  },
+  {
+    "testId": "C01-EXACT-03",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Independent exact-wording fresh-encounter repeat",
+    "cohort": "diagnostic-exact-repeat",
+    "question": "can you travel for Affordable Care",
+    "setupQuestions": [],
+    "expectedMeaning": "Affirm defined reliable transportation and ability/willingness to travel for free or low-cost care; no invented limitation or mode.",
+    "contextRequirement": "Fresh encounter; no setup or expected-answer coaching.",
+    "runId": "077b7fd5-e749-4fdc-a14f-28ba03480510",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T16:43:29.058Z",
+    "setupTurns": [],
+    "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "apiFinalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed exact original question and final response: reliable transportation and travel capability/willingness affirmed; no unsupported mode/limit, unrelated history or leakage.",
+    "encounterId": "daf9229f-26c2-495e-ac34-a7b1a4ca8527",
+    "requestId": "case-01-1792255412001-1-response",
+    "provider": "navigator",
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\screenshots\\C01-EXACT-03_077b7fd5-e749-4fdc-a14f-28ba03480510.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-repair-2026-10-17-exact-repeats\\traces\\C01-EXACT-03_077b7fd5-e749-4fdc-a14f-28ba03480510.zip",
+    "freshState": {
+      "boundEncounterId": "daf9229f-26c2-495e-ac34-a7b1a4ca8527",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2424,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T16:43:34.818Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-exact-repeats/raw/C01-EXACT-03_077b7fd5-e749-4fdc-a14f-28ba03480510.json",
+    "implementationVersion": "final-v2",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Full exact-repeat question/response individually reviewed against Case 01 facts."
+      }
+    },
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792255412001-1-response",
+        "encounterId": "daf9229f-26c2-495e-ac34-a7b1a4ca8527",
+        "requestMessage": "can you travel for Affordable Care",
+        "provider": "navigator",
+        "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+        "responseRequestId": "case-01-1792255412001-1-response",
+        "responseEncounterId": "daf9229f-26c2-495e-ac34-a7b1a4ca8527",
+        "error": null,
+        "retryAfter": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+from pathlib import Path
+p=Path('src/lib/patientOutputGuard.ts');s=p.read_text(encoding='utf8').replace('(?:spontaneous|on its own|','(?:spontaneous\\w*|on its own|');s=s.replace('(?:bit\\w*|tap\\w*)','(?:bit\\w*|tap\\w*|percussion)');s=s.replace('(?:hurt|pain|tender)\\b','(?:hurt\\w*|pain|tender|discomfort|uncomfortable)\\b');s=s.replace('(?:uncomfortable|hurt|pain)\\b','(?:uncomfortable|hurt\\w*|pain)\\b');p.write_text(s,encoding='utf8')
+p=Path('scripts/validateV7PatientRepair.ts');s=p.read_text(encoding='utf8').replace("import { requiredFactsForTurn }", "import { expressesRequiredFact } from '../src/lib/patientOutputGuard';\nimport { requiredFactsForTurn }");marker="const coldFact=";s=s.replace(marker,'''for(const fact of facts('case-05').filter(f=>/^c5\\.(?:location|duration|constant|quality|severity|spontaneous|nocturnal|cold|lingering|chewing|biting)$/.test(f.id)))assert(expressesRequiredFact(fact.text,fact), `Canonical positive attribute rejected: ${fact.id}`);
+const bitingFact=facts('case-05').find(f=>f.id==='c5.biting')!;
+for(const text of ['There is a little discomfort when I bite or tap the tooth.','Tapping causes slight discomfort.'])assert(expressesRequiredFact(text,bitingFact),text);
+const coldFact=''' );p.write_text(s,encoding='utf8')

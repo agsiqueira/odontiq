@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-10-17T21:21:35.221Z",
+  "planned": 546,
+  "realAttempted": 546,
+  "delivered": 546,
+  "reviewed": 546,
+  "rawRecords": 546,
+  "counts": {
+    "PASS": 539,
+    "FAIL": 5,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "cohorts": {
+    "primary": {
+      "total": 340,
+      "outcomes": {
+        "PASS": 338,
+        "FAIL": 1,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "pain-context": {
+      "total": 20,
+      "outcomes": {
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "former-holdout-regression": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 49,
+        "FAIL": 1,
+        "REVIEW": 1,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "targeted-live": {
+      "total": 30,
+      "outcomes": {
+        "PASS": 29,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "v3-holdout-regression": {
+      "total": 54,
+      "outcomes": {
+        "PASS": 54,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "fresh-holdout": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 49,
+        "FAIL": 2,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    }
+  },
+  "v4Counts": {
+    "PASS": 474,
+    "FAIL": 5,
+    "REVIEW": 10,
+    "ERROR": 17,
+    "BLOCKED": 40
+  },
+  "regressionsFromV4Pass": [
+    {
+      "testId": "C05-TARGET-5",
+      "question": "Thank you for explaining that.",
+      "v4Outcome": "PASS",
+      "v5Outcome": "FAIL",
+      "v4Response": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "v5Response": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "v5Reason": "relevance: After a neutral thank-you, the response restarts the opening complaint and volunteers persistent pain and nocturnal waking rather than acknowledging the student. The antibiotic catalog question is permitted, but does not exempt the unrelated opening narrative. V4 labeled the identical text PASS; this is a stricter corrected semantic judgment of the same behavior, not evidence of a newly introduced text regression.",
+      "assessed": true,
+      "regressionFromV4Pass": true
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "v4Outcome": "PASS",
+      "v5Outcome": "FAIL",
+      "v4Response": "Without insurance, it's going to be expensive.",
+      "v5Response": "Without insurance, the costs will be out of pocket.",
+      "v5Reason": "factualCorrectness: The answer says costs will be out of pocket, asserting a future personal-payment arrangement from uninsured status. Case5 cannot pay anything and prefers free care; no scheduled bill, obligatory charge, self-pay arrangement or exclusion of free/charitable care is established. The requested insurance contribution should be answered from coverage facts alone.",
+      "assessed": true,
+      "regressionFromV4Pass": true
+    }
+  ],
+  "unreviewedDelivered": [],
+  "unreviewedSetups": [],
+  "parseErrors": []
+}

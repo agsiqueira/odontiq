@@ -1,0 +1,1873 @@
+[
+  {
+    "caseId": "case-01",
+    "patient": {
+      "name": "Amara Johnson",
+      "age": 52,
+      "sex": "Not specified"
+    },
+    "patientFacts": [
+      {
+        "id": "c1.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is an uninsured adult.",
+        "questionIntents": [
+          "background_insurance"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c1.background-residence",
+        "topic": "social_history",
+        "text": "The patient lives in Alachua County.",
+        "questionIntents": [
+          "background_residence"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c1.background-transportation",
+        "topic": "social_history",
+        "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+        "questionIntents": [
+          "background_transportation"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c1.pain",
+        "topic": "pain",
+        "text": "The pain began gradually as a dull toothache and progressed rapidly despite over-the-counter analgesics.",
+        "questionIntents": [
+          "pain_quality"
+        ]
+      },
+      {
+        "id": "c1.initial-severity",
+        "topic": "pain",
+        "text": "The initial dull toothache was approximately 3/10.",
+        "questionIntents": [
+          "initial_pain_severity"
+        ]
+      },
+      {
+        "id": "c1.severity",
+        "topic": "pain",
+        "text": "The current pain is 8/10.",
+        "questionIntents": [
+          "pain_severity"
+        ]
+      },
+      {
+        "id": "c1.onset-uncertain",
+        "topic": "onset_duration",
+        "text": "The patient does not know the exact original onset time; the acute worsening dental pain has lasted four days.",
+        "questionIntents": [
+          "onset_certainty"
+        ]
+      },
+      {
+        "id": "c1.otc-unknown",
+        "topic": "medications",
+        "text": "The patient tried an over-the-counter pain medicine but does not know or cannot identify the exact product or dose.",
+        "questionIntents": [
+          "otc_identity"
+        ]
+      },
+      {
+        "id": "c1.duration",
+        "topic": "onset_duration",
+        "text": "The left lower molar pain has worsened over four days.",
+        "questionIntents": [
+          "duration"
+        ]
+      },
+      {
+        "id": "c1.location",
+        "topic": "location",
+        "text": "The bad tooth is a decayed left mandibular molar.",
+        "questionIntents": [
+          "location"
+        ]
+      },
+      {
+        "id": "c1.swelling-location",
+        "topic": "swelling",
+        "text": "The swelling is bilateral under the jaw and under the tongue.",
+        "questionIntents": [
+          "swelling_location"
+        ]
+      },
+      {
+        "id": "c1.swelling-progression",
+        "topic": "swelling",
+        "text": "The swelling has progressed rapidly.",
+        "questionIntents": [
+          "swelling_progression"
+        ]
+      },
+      {
+        "id": "c1.dysphagia",
+        "topic": "medical_history",
+        "text": "Swallowing is very difficult.",
+        "questionIntents": [
+          "swallowing"
+        ]
+      },
+      {
+        "id": "c1.liquids",
+        "topic": "medical_history",
+        "text": "The patient cannot swallow liquids normally.",
+        "questionIntents": [
+          "swallowing_liquids"
+        ]
+      },
+      {
+        "id": "c1.dyspnea",
+        "topic": "medical_history",
+        "text": "The patient feels short of breath.",
+        "questionIntents": [
+          "breathing"
+        ]
+      },
+      {
+        "id": "c1.dyspnea-supine",
+        "topic": "medical_history",
+        "text": "Breathing becomes worse when lying flat, with a choking sensation, so the patient must sit upright.",
+        "questionIntents": [
+          "positional_breathing"
+        ]
+      },
+      {
+        "id": "c1.airway-duration",
+        "topic": "onset_duration",
+        "text": "Difficulty swallowing and shortness of breath when lying down began approximately 12 hours ago.",
+        "questionIntents": [
+          "airway_duration"
+        ]
+      },
+      {
+        "id": "c1.upright-breathing",
+        "topic": "medical_history",
+        "text": "The patient is not short of breath while sitting upright.",
+        "questionIntents": [
+          "upright_breathing"
+        ]
+      },
+      {
+        "id": "c1.drooling",
+        "topic": "medical_history",
+        "text": "The patient is drooling.",
+        "questionIntents": [
+          "drooling"
+        ]
+      },
+      {
+        "id": "c1.voice",
+        "topic": "medical_history",
+        "text": "The patient's voice sounds muffled.",
+        "questionIntents": [
+          "voice_change"
+        ]
+      },
+      {
+        "id": "c1.noisy-breathing",
+        "topic": "medical_history",
+        "text": "The patient's breathing has started making a slight noise.",
+        "questionIntents": [
+          "noisy_breathing"
+        ]
+      },
+      {
+        "id": "c1.tongue",
+        "topic": "medical_history",
+        "text": "The patient feels the tongue is pushed upward.",
+        "questionIntents": [
+          "tongue_position"
+        ]
+      },
+      {
+        "id": "c1.fever",
+        "topic": "medical_history",
+        "text": "The patient has felt subjectively feverish and very hot.",
+        "questionIntents": [
+          "fever"
+        ]
+      },
+      {
+        "id": "c1.home-temperature",
+        "topic": "medical_history",
+        "text": "The patient did not measure a temperature at home and does not know an exact home temperature.",
+        "questionIntents": [
+          "temperature_checked"
+        ]
+      },
+      {
+        "id": "c1.chest-pain",
+        "topic": "medical_history",
+        "text": "The patient does not have chest pain.",
+        "questionIntents": [
+          "chest_pain"
+        ]
+      },
+      {
+        "id": "c1.chills",
+        "topic": "medical_history",
+        "text": "The patient has had chills.",
+        "questionIntents": [
+          "chills"
+        ]
+      },
+      {
+        "id": "c1.diabetes",
+        "topic": "medical_history",
+        "text": "The patient has type 2 diabetes mellitus.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c1.hypertension",
+        "topic": "medical_history",
+        "text": "The patient has hypertension.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c1.metformin",
+        "topic": "medications",
+        "text": "The patient takes metformin.",
+        "questionIntents": [
+          "medications"
+        ]
+      },
+      {
+        "id": "c1.lisinopril",
+        "topic": "medications",
+        "text": "The patient takes lisinopril.",
+        "questionIntents": [
+          "medications"
+        ]
+      },
+      {
+        "id": "c1.opioid",
+        "topic": "medical_history",
+        "text": "The patient has no history of opioid or narcotic use, opioid misuse, or opioid dependence.",
+        "questionIntents": [
+          "opioid_history"
+        ]
+      },
+      {
+        "id": "c1.ibuprofen",
+        "topic": "medications",
+        "text": "The patient has no contraindication to ibuprofen, Motrin, or Advil.",
+        "questionIntents": [
+          "ibuprofen_tolerance"
+        ]
+      },
+      {
+        "id": "c1.prior-antibiotics-unknown",
+        "topic": "medications",
+        "text": "Whether the patient previously took antibiotics for this dental problem is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "prior_antibiotics"
+        ]
+      },
+      {
+        "id": "c1.nkda",
+        "topic": "allergies",
+        "text": "The patient has no known drug allergies and no penicillin allergy.",
+        "questionIntents": [
+          "allergies"
+        ]
+      },
+      {
+        "id": "c1.smoking",
+        "topic": "social_history",
+        "text": "The patient smokes about one pack per day.",
+        "questionIntents": [
+          "smoking"
+        ]
+      },
+      {
+        "id": "c1.alcohol",
+        "topic": "social_history",
+        "text": "The patient does not use alcohol.",
+        "questionIntents": [
+          "alcohol_use"
+        ]
+      },
+      {
+        "id": "c1.illicit-drugs",
+        "topic": "social_history",
+        "text": "The patient does not use illicit drugs.",
+        "questionIntents": [
+          "illicit_drug_use"
+        ]
+      },
+      {
+        "id": "c1.prior-root-canal-unknown",
+        "topic": "dental_history",
+        "text": "Whether the affected tooth previously had root-canal treatment is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "prior_root_canal"
+        ]
+      },
+      {
+        "id": "c1.prior-extraction-unknown",
+        "topic": "dental_history",
+        "text": "Whether the patient has any prior extraction history is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "prior_extraction"
+        ]
+      },
+      {
+        "id": "c1.access",
+        "topic": "dental_history",
+        "text": "The patient has no insurance and cannot afford the needed extraction.",
+        "questionIntents": [
+          "dental_access"
+        ]
+      },
+      {
+        "id": "c1.cold",
+        "topic": "pain",
+        "text": "The tooth was sensitive to cold, so the patient avoided cold triggers.",
+        "questionIntents": [
+          "thermal"
+        ]
+      },
+      {
+        "id": "c1.biting",
+        "topic": "pain",
+        "text": "Biting pressure hurt the tooth, so the patient avoided biting on it.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c1.dental-attempt",
+        "topic": "dental_history",
+        "text": "The patient knew the tooth needed treatment and tried to see a dentist.",
+        "questionIntents": [
+          "dental_visit_attempt"
+        ]
+      }
+    ],
+    "hpiFacts": [
+      "Four days of worsening left lower molar pain.",
+      "Rapidly progressive swelling under the jaw and tongue.",
+      "Dysphagia and dyspnea developed over approximately 12 hours.",
+      "Dull pain progressed to 8/10 despite unspecified over-the-counter analgesics.",
+      "Drooling and muffled voice are present.",
+      "Cannot lie flat because of choking and breathlessness.",
+      "Fever and chills are present.",
+      "The patient feels the tongue is pushed upward."
+    ]
+  },
+  {
+    "caseId": "case-02",
+    "patient": {
+      "name": "Marcus Lee",
+      "age": 21,
+      "sex": "Not specified"
+    },
+    "patientFacts": [
+      {
+        "id": "c2.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured and lost Medicaid within the past year.",
+        "questionIntents": [
+          "background_insurance"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c2.background-residence",
+        "topic": "social_history",
+        "text": "The patient lives in Collier County but has not yet established residency.",
+        "questionIntents": [
+          "background_residence"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c2.background-transportation",
+        "topic": "social_history",
+        "text": "The patient has unreliable transportation out of town.",
+        "questionIntents": [
+          "background_transportation"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c2.duration",
+        "topic": "onset_duration",
+        "text": "The upper-right dental pain has worsened over seven days.",
+        "questionIntents": [
+          "duration"
+        ]
+      },
+      {
+        "id": "c2.location",
+        "topic": "location",
+        "text": "The painful tooth is an upper-right back molar.",
+        "questionIntents": [
+          "location"
+        ]
+      },
+      {
+        "id": "c2.current-pain",
+        "topic": "pain",
+        "text": "The pain is now constant, severe, throbbing, and 8/10.",
+        "questionIntents": [
+          "current_pain",
+          "pain"
+        ]
+      },
+      {
+        "id": "c2.severity",
+        "topic": "pain",
+        "text": "The current pain is 8/10.",
+        "questionIntents": [
+          "pain_severity"
+        ]
+      },
+      {
+        "id": "c2.thermal-history",
+        "topic": "pain",
+        "text": "Earlier in the illness, hot and cold triggered the pain; it has now become constant.",
+        "questionIntents": [
+          "thermal"
+        ]
+      },
+      {
+        "id": "c2.biting",
+        "topic": "pain",
+        "text": "Chewing is painful, and the involved tooth is extremely painful to touch.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c2.percussion",
+        "topic": "pain",
+        "text": "Tapping the upper-right back tooth causes marked pain.",
+        "questionIntents": [
+          "percussion"
+        ]
+      },
+      {
+        "id": "c2.swelling",
+        "topic": "swelling",
+        "text": "The right cheek swelling has increased over approximately 24 hours.",
+        "questionIntents": [
+          "facial_swelling",
+          "swelling_progression"
+        ]
+      },
+      {
+        "id": "c2.systemic-timeline",
+        "topic": "onset_duration",
+        "text": "Subjective fever, chills, fatigue, and increasing right-cheek swelling developed over approximately 24 hours.",
+        "questionIntents": [
+          "systemic_timeline"
+        ]
+      },
+      {
+        "id": "c2.fever",
+        "topic": "medical_history",
+        "text": "The patient has felt feverish and hot.",
+        "questionIntents": [
+          "fever"
+        ]
+      },
+      {
+        "id": "c2.temperature-unknown",
+        "topic": "medical_history",
+        "text": "The patient feels feverish but does not know an exact temperature.",
+        "questionIntents": [
+          "temperature_checked"
+        ]
+      },
+      {
+        "id": "c2.chills",
+        "topic": "medical_history",
+        "text": "The patient has had chills.",
+        "questionIntents": [
+          "chills"
+        ]
+      },
+      {
+        "id": "c2.weak",
+        "topic": "medical_history",
+        "text": "The patient feels weak, fatigued, and systemically ill.",
+        "questionIntents": [
+          "systemic_illness"
+        ]
+      },
+      {
+        "id": "c2.lymph-nodes",
+        "topic": "medical_history",
+        "text": "The patient has enlarged lymph nodes but does not know an exact node location or size.",
+        "questionIntents": [
+          "lymph_nodes"
+        ]
+      },
+      {
+        "id": "c2.healthy",
+        "topic": "medical_history",
+        "text": "General health is excellent; the patient has no known medical problems.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c2.med",
+        "topic": "medications",
+        "text": "The patient takes ibuprofen 400 mg as needed, approximately every six hours.",
+        "questionIntents": [
+          "medications"
+        ],
+        "canonicalFactIds": [
+          "c2.med",
+          "c2.med-cadence"
+        ]
+      },
+      {
+        "id": "c2.ibuprofen",
+        "topic": "medications",
+        "text": "The patient has no contraindication to ibuprofen, Motrin, or Advil.",
+        "questionIntents": [
+          "ibuprofen_tolerance"
+        ]
+      },
+      {
+        "id": "c2.opioid",
+        "topic": "medical_history",
+        "text": "The patient has no history of opioid or narcotic use, opioid misuse, or opioid abuse.",
+        "questionIntents": [
+          "opioid_history"
+        ]
+      },
+      {
+        "id": "c2.nkda",
+        "topic": "allergies",
+        "text": "The patient has no known drug allergies and no penicillin allergy.",
+        "questionIntents": [
+          "allergies"
+        ]
+      },
+      {
+        "id": "c2.breathing-negative",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty breathing.",
+        "questionIntents": [
+          "breathing"
+        ],
+        "canonicalFactIds": [
+          "c2.airway-negative"
+        ]
+      },
+      {
+        "id": "c2.liquids-positive",
+        "topic": "medical_history",
+        "text": "The patient can swallow liquids.",
+        "questionIntents": [
+          "swallowing_liquids"
+        ],
+        "canonicalFactIds": [
+          "c2.airway-negative"
+        ]
+      },
+      {
+        "id": "c2.voice-negative",
+        "topic": "medical_history",
+        "text": "The patient's voice has not changed.",
+        "questionIntents": [
+          "voice_change"
+        ],
+        "canonicalFactIds": [
+          "c2.airway-negative"
+        ]
+      },
+      {
+        "id": "c2.drooling-negative",
+        "topic": "medical_history",
+        "text": "The patient is not drooling.",
+        "questionIntents": [
+          "drooling"
+        ],
+        "canonicalFactIds": [
+          "c2.airway-negative"
+        ]
+      },
+      {
+        "id": "c2.mouth-opening",
+        "topic": "medical_history",
+        "text": "The patient can open the mouth, although it is uncomfortable.",
+        "questionIntents": [
+          "mouth_opening"
+        ]
+      },
+      {
+        "id": "c2.smoking",
+        "topic": "social_history",
+        "text": "The patient smokes approximately one-half pack of cigarettes per day.",
+        "questionIntents": [
+          "smoking"
+        ]
+      },
+      {
+        "id": "c2.alcohol",
+        "topic": "social_history",
+        "text": "The patient uses alcohol rarely.",
+        "questionIntents": [
+          "alcohol_use"
+        ]
+      },
+      {
+        "id": "c2.illicit-drugs",
+        "topic": "social_history",
+        "text": "The patient denies illicit-drug use.",
+        "questionIntents": [
+          "illicit_drug_use"
+        ]
+      },
+      {
+        "id": "c2.access",
+        "topic": "dental_history",
+        "text": "The patient has not seen a dentist since losing Medicaid last year.",
+        "questionIntents": [
+          "dental_access"
+        ]
+      },
+      {
+        "id": "c2.cavities-belief",
+        "topic": "dental_history",
+        "text": "The patient thinks the teeth are in poor condition and has seen spots that may be untreated cavities, without a dentist-confirmed diagnosis.",
+        "questionIntents": [
+          "dental_condition"
+        ]
+      },
+      {
+        "id": "c2.prior-antibiotics-unknown",
+        "topic": "medications",
+        "text": "Prior antibiotic use for this problem is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "prior_antibiotics"
+        ]
+      },
+      {
+        "id": "c2.prior-root-canal-unknown",
+        "topic": "dental_history",
+        "text": "Prior root-canal treatment of the affected tooth is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "prior_root_canal"
+        ]
+      },
+      {
+        "id": "c2.prior-treatment-unknown",
+        "topic": "dental_history",
+        "text": "Other prior treatment of the affected tooth is not established; the patient does not recall having treatment done on that tooth.",
+        "questionIntents": [
+          "prior_treatment"
+        ]
+      },
+      {
+        "id": "c2.painful-tooth-not-extracted",
+        "topic": "dental_history",
+        "text": "The currently painful upper-right molar is present, so that same tooth was not previously extracted.",
+        "questionIntents": [
+          "affected_tooth_extraction"
+        ]
+      },
+      {
+        "id": "c2.other-extraction-unknown",
+        "topic": "dental_history",
+        "text": "Whether the patient has had another tooth extracted is not established; the patient does not know or recall.",
+        "questionIntents": [
+          "other_extraction"
+        ]
+      },
+      {
+        "id": "c2.heart-rate-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not know the exact measured heart rate unless told by the clinician.",
+        "questionIntents": [
+          "heart_rate_knowledge"
+        ]
+      },
+      {
+        "id": "c2.sirs-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not independently know whether clinical SIRS criteria are met.",
+        "questionIntents": [
+          "sirs_knowledge"
+        ]
+      }
+    ],
+    "hpiFacts": [
+      "Seven days of worsening upper-right molar pain.",
+      "Earlier hot/cold provocation progressed to constant severe throbbing 8/10 pain.",
+      "Chewing and touching the tooth are very painful.",
+      "Increasing right cheek swelling over approximately 24 hours.",
+      "Fever, chills, fatigue, weakness, and systemic illness are present.",
+      "Mouth opening is uncomfortable but possible.",
+      "No drooling, voice change, dyspnea, or inability to swallow liquids."
+    ]
+  },
+  {
+    "caseId": "case-03",
+    "patient": {
+      "name": "Elena Garcia",
+      "age": 25,
+      "sex": "Not specified"
+    },
+    "patientFacts": [
+      {
+        "id": "c3.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured.",
+        "questionIntents": [
+          "background_insurance"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c3.background-residence",
+        "topic": "social_history",
+        "text": "The patient is a resident of Hillsborough County.",
+        "questionIntents": [
+          "background_residence"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c3.background-regular_dentist",
+        "topic": "social_history",
+        "text": "The patient currently has their own dentist and has an appointment next week.",
+        "questionIntents": [
+          "background_regular_dentist"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c3.background-family_care",
+        "topic": "social_history",
+        "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter.",
+        "questionIntents": [
+          "background_family_care",
+          "background_care_preference"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c3.location",
+        "topic": "location",
+        "text": "The painful tooth is a right mandibular posterior tooth.",
+        "questionIntents": [
+          "location"
+        ]
+      },
+      {
+        "id": "c3.duration",
+        "topic": "onset_duration",
+        "text": "The pain has progressively worsened for three days.",
+        "questionIntents": [
+          "duration"
+        ]
+      },
+      {
+        "id": "c3.pain-quality",
+        "topic": "pain",
+        "text": "The pain is constant and throbbing.",
+        "questionIntents": [
+          "current_pain",
+          "pain_quality"
+        ],
+        "canonicalFactIds": [
+          "c3.pain"
+        ]
+      },
+      {
+        "id": "c3.pain-severity",
+        "topic": "pain",
+        "text": "The pain is severe, rated 8/10.",
+        "questionIntents": [
+          "pain_severity"
+        ],
+        "canonicalFactIds": [
+          "c3.pain"
+        ]
+      },
+      {
+        "id": "c3.radiation",
+        "topic": "pain",
+        "text": "The pain radiates toward the right ear.",
+        "questionIntents": [
+          "radiation"
+        ]
+      },
+      {
+        "id": "c3.biting",
+        "topic": "pain",
+        "text": "Biting and chewing on the affected tooth cause severe pain.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c3.percussion",
+        "topic": "pain",
+        "text": "Tapping the affected tooth causes marked pain and tenderness.",
+        "questionIntents": [
+          "percussion"
+        ]
+      },
+      {
+        "id": "c3.gum-palpation",
+        "topic": "pain",
+        "text": "Pressing or palpating the affected gum area causes tenderness and pain.",
+        "questionIntents": [
+          "gum_palpation"
+        ]
+      },
+      {
+        "id": "c3.cold",
+        "topic": "pain",
+        "text": "Drinking something cold is not painful.",
+        "questionIntents": [
+          "cold_current"
+        ]
+      },
+      {
+        "id": "c3.swelling",
+        "topic": "swelling",
+        "text": "The lower-right side of the face feels mildly puffy.",
+        "questionIntents": [
+          "facial_swelling"
+        ]
+      },
+      {
+        "id": "c3.oral-swelling",
+        "topic": "swelling",
+        "text": "There is painful swelling in the gum inside the mouth.",
+        "questionIntents": [
+          "oral_swelling"
+        ]
+      },
+      {
+        "id": "c3.no-fever",
+        "topic": "medical_history",
+        "text": "The patient has not had a fever.",
+        "questionIntents": [
+          "fever"
+        ]
+      },
+      {
+        "id": "c3.mouth-opening",
+        "topic": "medical_history",
+        "text": "The patient can open the mouth normally and has no trismus.",
+        "questionIntents": [
+          "mouth_opening"
+        ]
+      },
+      {
+        "id": "c3.breathing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty breathing.",
+        "questionIntents": [
+          "breathing"
+        ]
+      },
+      {
+        "id": "c3.swallowing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty swallowing.",
+        "questionIntents": [
+          "swallowing"
+        ]
+      },
+      {
+        "id": "c3.voice",
+        "topic": "medical_history",
+        "text": "The patient has no voice change.",
+        "questionIntents": [
+          "voice_change"
+        ]
+      },
+      {
+        "id": "c3.chest-pain-negative",
+        "topic": "medical_history",
+        "text": "The patient has no chest pain.",
+        "questionIntents": [
+          "chest_pain"
+        ]
+      },
+      {
+        "id": "c3.neck-stiffness-negative",
+        "topic": "medical_history",
+        "text": "The patient has no neck stiffness.",
+        "questionIntents": [
+          "neck_stiffness"
+        ]
+      },
+      {
+        "id": "c3.ulcers",
+        "topic": "medical_history",
+        "text": "The patient has stomach ulcers but is otherwise healthy and does not have diabetes.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c3.surgery-negative",
+        "topic": "medical_history",
+        "text": "The patient has no surgical history.",
+        "questionIntents": [
+          "surgical_history"
+        ]
+      },
+      {
+        "id": "c3.pepcid",
+        "topic": "medications",
+        "text": "The patient takes Pepcid as needed.",
+        "questionIntents": [
+          "medications"
+        ]
+      },
+      {
+        "id": "c3.ibuprofen",
+        "topic": "medications",
+        "text": "Ibuprofen upsets the patient's stomach in the context of stomach ulcers and is poorly tolerated.",
+        "questionIntents": [
+          "ibuprofen_tolerance"
+        ]
+      },
+      {
+        "id": "c3.nkda",
+        "topic": "allergies",
+        "text": "The patient has no known drug allergies and no penicillin allergy.",
+        "questionIntents": [
+          "allergies"
+        ]
+      },
+      {
+        "id": "c3.opioid-negative",
+        "topic": "medical_history",
+        "text": "The patient has no history of opioid use, misuse, or abuse.",
+        "questionIntents": [
+          "opioid_history"
+        ]
+      },
+      {
+        "id": "c3.alcohol",
+        "topic": "social_history",
+        "text": "The patient uses alcohol occasionally.",
+        "questionIntents": [
+          "alcohol_use"
+        ]
+      },
+      {
+        "id": "c3.illicit-drugs-negative",
+        "topic": "social_history",
+        "text": "The patient does not use illicit drugs.",
+        "questionIntents": [
+          "illicit_drug_use"
+        ]
+      },
+      {
+        "id": "c3.crown",
+        "topic": "dental_history",
+        "text": "The affected right mandibular posterior tooth has a crown.",
+        "questionIntents": [
+          "root_canal_history"
+        ]
+      },
+      {
+        "id": "c3.rct",
+        "topic": "dental_history",
+        "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment.",
+        "questionIntents": [
+          "root_canal_history"
+        ]
+      },
+      {
+        "id": "c3.dental-work",
+        "topic": "dental_history",
+        "text": "The patient has had a lot of dental work in the past.",
+        "questionIntents": [
+          "prior_dental_work"
+        ]
+      },
+      {
+        "id": "c3.treated-teeth-unknown",
+        "topic": "dental_history",
+        "text": "The patient does not remember exactly which teeth were treated.",
+        "questionIntents": [
+          "treated_teeth"
+        ]
+      },
+      {
+        "id": "c3.painful-tooth-not-extracted",
+        "topic": "dental_history",
+        "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted.",
+        "questionIntents": [
+          "affected_tooth_extraction"
+        ]
+      },
+      {
+        "id": "c3.smoking",
+        "topic": "social_history",
+        "text": "The patient does not smoke.",
+        "questionIntents": [
+          "smoking"
+        ]
+      },
+      {
+        "id": "c3.dentist-contact",
+        "topic": "dental_history",
+        "text": "The patient called the dentist a couple of days ago.",
+        "questionIntents": [
+          "dentist_contact"
+        ]
+      },
+      {
+        "id": "c3.appointment",
+        "topic": "dental_history",
+        "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care.",
+        "questionIntents": [
+          "dental_appointment"
+        ]
+      },
+      {
+        "id": "c3.pepcid-details-unknown",
+        "topic": "medications",
+        "text": "The exact Pepcid dose and frequency are not specified; the patient only knows it is taken as needed.",
+        "questionIntents": [
+          "medication_details"
+        ]
+      },
+      {
+        "id": "c3.prior-antibiotics-unknown",
+        "topic": "medications",
+        "text": "Antibiotic use before arrival is not specified; the patient does not remember.",
+        "questionIntents": [
+          "prior_antibiotics"
+        ]
+      },
+      {
+        "id": "c3.prior-acetaminophen-unknown",
+        "topic": "medications",
+        "text": "Acetaminophen use before arrival is not specified; the patient does not remember.",
+        "questionIntents": [
+          "prior_acetaminophen"
+        ]
+      },
+      {
+        "id": "c3.temperature-unknown",
+        "topic": "medical_history",
+        "text": "The patient has not had a fever but does not know an exact measured temperature.",
+        "questionIntents": [
+          "temperature_knowledge"
+        ]
+      },
+      {
+        "id": "c3.heart-rate-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not know an exact measured heart rate.",
+        "questionIntents": [
+          "heart_rate_knowledge"
+        ]
+      },
+      {
+        "id": "c3.diagnosis-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not independently know the diagnosis.",
+        "questionIntents": [
+          "diagnosis_knowledge"
+        ]
+      }
+    ],
+    "hpiFacts": [
+      "Three days of progressive right mandibular posterior tooth pain.",
+      "Constant throbbing severe 8/10 pain radiating toward the right ear.",
+      "Biting and chewing cause severe pain.",
+      "Mild right mandibular facial puffiness.",
+      "No fever, dyspnea, dysphagia, voice change, or trismus."
+    ]
+  },
+  {
+    "caseId": "case-04",
+    "patient": {
+      "name": "Noah Patel",
+      "age": 38,
+      "sex": "Not specified"
+    },
+    "patientFacts": [
+      {
+        "id": "c4.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured.",
+        "questionIntents": [
+          "background_insurance"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c4.background-residence",
+        "topic": "social_history",
+        "text": "The patient is a resident of Duval County.",
+        "questionIntents": [
+          "background_residence"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c4.background-care_cost",
+        "topic": "social_history",
+        "text": "The patient is open to paying for dental care on a sliding-scale fee.",
+        "questionIntents": [
+          "background_care_cost",
+          "background_care_preference"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c4.location",
+        "topic": "location",
+        "text": "The painful tooth is a lower-left molar.",
+        "questionIntents": [
+          "location"
+        ]
+      },
+      {
+        "id": "c4.duration",
+        "topic": "onset_duration",
+        "text": "The returned pain has worsened over five days, especially during the last 48 hours.",
+        "questionIntents": [
+          "duration"
+        ]
+      },
+      {
+        "id": "c4.sequence",
+        "topic": "onset_duration",
+        "text": "Severe pain occurred about a week ago, stopped, then returned and worsened.",
+        "questionIntents": [
+          "symptom_sequence"
+        ]
+      },
+      {
+        "id": "c4.filling-present",
+        "topic": "dental_history",
+        "text": "A large filling is present on the lower-left molar and was placed approximately twenty years ago.",
+        "questionIntents": [
+          "filling_history"
+        ]
+      },
+      {
+        "id": "c4.filling-break-belief",
+        "topic": "dental_history",
+        "text": "The patient thinks the old filling may have broken but does not know that it definitely broke.",
+        "questionIntents": [
+          "symptom_sequence"
+        ]
+      },
+      {
+        "id": "c4.hard-object-unknown",
+        "topic": "trauma_injury",
+        "text": "Whether the patient bit a hard object is not specified; the patient is not sure.",
+        "questionIntents": [
+          "hard_object_injury"
+        ]
+      },
+      {
+        "id": "c4.constant",
+        "topic": "pain",
+        "text": "The current pain is constant.",
+        "questionIntents": [
+          "current_pain"
+        ],
+        "canonicalFactIds": [
+          "c4.pain"
+        ]
+      },
+      {
+        "id": "c4.severity",
+        "topic": "pain",
+        "text": "The pain is rated 7/10.",
+        "questionIntents": [
+          "pain_severity"
+        ],
+        "canonicalFactIds": [
+          "c4.pain"
+        ]
+      },
+      {
+        "id": "c4.biting",
+        "topic": "pain",
+        "text": "Biting, chewing, and tapping cause sharp severe pain.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c4.cold-prior",
+        "topic": "pain",
+        "text": "Cold hurt previously, earlier in the illness.",
+        "questionIntents": [
+          "cold_prior"
+        ]
+      },
+      {
+        "id": "c4.cold-now",
+        "topic": "pain",
+        "text": "Cold does not cause pain now; formal absent response is an examination finding.",
+        "questionIntents": [
+          "cold_current"
+        ]
+      },
+      {
+        "id": "c4.no-swelling",
+        "topic": "swelling",
+        "text": "The patient has no swelling.",
+        "questionIntents": [
+          "facial_swelling"
+        ],
+        "canonicalFactIds": [
+          "c4.no-infection"
+        ]
+      },
+      {
+        "id": "c4.no-drainage",
+        "topic": "medical_history",
+        "text": "The patient has no pus or drainage.",
+        "questionIntents": [
+          "drainage"
+        ],
+        "canonicalFactIds": [
+          "c4.no-infection"
+        ]
+      },
+      {
+        "id": "c4.no-fever",
+        "topic": "medical_history",
+        "text": "The patient has no fever or chills.",
+        "questionIntents": [
+          "fever"
+        ],
+        "canonicalFactIds": [
+          "c4.no-infection"
+        ]
+      },
+      {
+        "id": "c4.swallowing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty swallowing.",
+        "questionIntents": [
+          "swallowing"
+        ]
+      },
+      {
+        "id": "c4.drooling",
+        "topic": "medical_history",
+        "text": "The patient is not drooling.",
+        "questionIntents": [
+          "drooling"
+        ]
+      },
+      {
+        "id": "c4.breathing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty breathing.",
+        "questionIntents": [
+          "breathing"
+        ]
+      },
+      {
+        "id": "c4.mouth-opening",
+        "topic": "medical_history",
+        "text": "The patient can open the mouth normally.",
+        "questionIntents": [
+          "mouth_opening"
+        ]
+      },
+      {
+        "id": "c4.voice",
+        "topic": "medical_history",
+        "text": "The patient's voice is normal and has not changed.",
+        "questionIntents": [
+          "voice_change"
+        ]
+      },
+      {
+        "id": "c4.no-gum-swelling",
+        "topic": "swelling",
+        "text": "There is no gingival swelling, fluctuance, purulence, or intraoral abscess.",
+        "questionIntents": [
+          "oral_swelling"
+        ]
+      },
+      {
+        "id": "c4.penicillin",
+        "topic": "allergies",
+        "text": "The patient is allergic to penicillin.",
+        "questionIntents": [
+          "allergies"
+        ],
+        "canonicalFactIds": [
+          "c4.allergy"
+        ]
+      },
+      {
+        "id": "c4.hives",
+        "topic": "allergies",
+        "text": "Penicillin causes hives.",
+        "questionIntents": [
+          "allergy_reaction"
+        ],
+        "canonicalFactIds": [
+          "c4.allergy"
+        ]
+      },
+      {
+        "id": "c4.medication",
+        "topic": "medications",
+        "text": "The patient has taken ibuprofen 400 mg as needed without adequate relief.",
+        "questionIntents": [
+          "medications"
+        ]
+      },
+      {
+        "id": "c4.healthy",
+        "topic": "medical_history",
+        "text": "The patient's general health is excellent with no known medical problems.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c4.ibuprofen-suitable",
+        "topic": "medications",
+        "text": "The patient has no known contraindication to ibuprofen.",
+        "questionIntents": [
+          "ibuprofen_tolerance"
+        ]
+      },
+      {
+        "id": "c4.opioid-negative",
+        "topic": "medical_history",
+        "text": "The patient has no history of opioid use, misuse, or abuse.",
+        "questionIntents": [
+          "opioid_history"
+        ]
+      },
+      {
+        "id": "c4.smoking",
+        "topic": "social_history",
+        "text": "The patient smokes approximately one pack per day.",
+        "questionIntents": [
+          "smoking"
+        ]
+      },
+      {
+        "id": "c4.alcohol",
+        "topic": "social_history",
+        "text": "The patient drinks alcohol occasionally.",
+        "questionIntents": [
+          "alcohol_use"
+        ]
+      },
+      {
+        "id": "c4.illicit-drugs-negative",
+        "topic": "social_history",
+        "text": "The patient does not use illicit drugs.",
+        "questionIntents": [
+          "illicit_drug_use"
+        ]
+      },
+      {
+        "id": "c4.goal",
+        "topic": "dental_history",
+        "text": "The patient wants to save the tooth if possible.",
+        "questionIntents": [
+          "patient_goal"
+        ]
+      },
+      {
+        "id": "c4.last-dentist",
+        "topic": "dental_history",
+        "text": "The patient's last dental visit was approximately five years ago.",
+        "questionIntents": [
+          "last_dental_visit"
+        ]
+      },
+      {
+        "id": "c4.access",
+        "topic": "dental_history",
+        "text": "The patient has no dental insurance or currently accessible dentist, so prompt dental access will take time to arrange.",
+        "questionIntents": [
+          "dental_appointment",
+          "background_insurance"
+        ]
+      },
+      {
+        "id": "c4.surgery-unknown",
+        "topic": "medical_history",
+        "text": "Surgical history is not specified; the patient is not sure.",
+        "questionIntents": [
+          "surgical_history"
+        ]
+      },
+      {
+        "id": "c4.ibuprofen-frequency-unknown",
+        "topic": "medications",
+        "text": "The exact ibuprofen frequency and number of doses are not specified.",
+        "questionIntents": [
+          "medication_details"
+        ]
+      },
+      {
+        "id": "c4.prior-acetaminophen-unknown",
+        "topic": "medications",
+        "text": "Acetaminophen use before arrival is not specified; the patient does not remember.",
+        "questionIntents": [
+          "prior_acetaminophen"
+        ]
+      },
+      {
+        "id": "c4.prior-antibiotics-unknown",
+        "topic": "medications",
+        "text": "Antibiotic use before arrival is not specified; the patient does not remember.",
+        "questionIntents": [
+          "prior_antibiotics"
+        ]
+      },
+      {
+        "id": "c4.root-canal-unknown",
+        "topic": "dental_history",
+        "text": "Prior root-canal treatment is not specified; the patient is not sure.",
+        "questionIntents": [
+          "prior_root_canal"
+        ]
+      },
+      {
+        "id": "c4.painful-tooth-not-extracted",
+        "topic": "dental_history",
+        "text": "The currently painful filled lower-left molar is present, so that same tooth was not previously extracted.",
+        "questionIntents": [
+          "affected_tooth_extraction"
+        ]
+      },
+      {
+        "id": "c4.temperature-unknown",
+        "topic": "medical_history",
+        "text": "The patient has no fever but does not know an exact temperature.",
+        "questionIntents": [
+          "temperature_knowledge"
+        ]
+      },
+      {
+        "id": "c4.diagnosis-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not independently know the diagnosis.",
+        "questionIntents": [
+          "diagnosis_knowledge"
+        ]
+      },
+      {
+        "id": "c4.tooth-percentage-unknown",
+        "topic": "dental_history",
+        "text": "The patient does not know an exact percentage of remaining tooth structure.",
+        "questionIntents": [
+          "tooth_structure_knowledge"
+        ]
+      }
+    ],
+    "hpiFacts": [
+      "Five days of worsening left mandibular first-molar pain after a prior severe episode stopped and returned.",
+      "Possible broken or failing old filling.",
+      "Constant 7/10 pain with sharp biting and chewing pain.",
+      "Cold caused pain earlier but no longer causes pain now.",
+      "No swelling, no drainage, no fever, no chills, no dysphagia, no drooling, and no dyspnea."
+    ]
+  },
+  {
+    "caseId": "case-05",
+    "patient": {
+      "name": "Sofia Williams",
+      "age": 32,
+      "sex": "Not specified"
+    },
+    "patientFacts": [
+      {
+        "id": "c5.background-insurance",
+        "topic": "social_history",
+        "text": "The patient is uninsured.",
+        "questionIntents": [
+          "background_insurance"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c5.background-residence",
+        "topic": "social_history",
+        "text": "The patient is a resident of Marion County.",
+        "questionIntents": [
+          "background_residence"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c5.background-care_cost",
+        "topic": "social_history",
+        "text": "The patient cannot pay anything for dental care and would prefer a free clinic.",
+        "questionIntents": [
+          "background_care_cost",
+          "background_care_preference"
+        ],
+        "broadEligible": false
+      },
+      {
+        "id": "c5.duration",
+        "topic": "onset_duration",
+        "text": "The pain has worsened over four days.",
+        "questionIntents": [
+          "duration"
+        ]
+      },
+      {
+        "id": "c5.location",
+        "topic": "location",
+        "text": "The pain is in the lower-left jaw; the patient does not know which tooth is causing it.",
+        "questionIntents": [
+          "location"
+        ]
+      },
+      {
+        "id": "c5.constant",
+        "topic": "pain",
+        "text": "The pain is now constant.",
+        "questionIntents": [
+          "current_pain"
+        ],
+        "canonicalFactIds": [
+          "c5.pain"
+        ]
+      },
+      {
+        "id": "c5.quality",
+        "topic": "pain",
+        "text": "The pain feels deep and throbbing.",
+        "questionIntents": [
+          "pain_quality"
+        ],
+        "canonicalFactIds": [
+          "c5.pain"
+        ]
+      },
+      {
+        "id": "c5.severity",
+        "topic": "pain",
+        "text": "The pain is severe, rated 9/10 (nine out of ten).",
+        "questionIntents": [
+          "pain_severity"
+        ],
+        "canonicalFactIds": [
+          "c5.pain"
+        ]
+      },
+      {
+        "id": "c5.spontaneous",
+        "topic": "pain",
+        "text": "The pain occurs spontaneously without anything touching the tooth.",
+        "questionIntents": [
+          "spontaneous_pain"
+        ]
+      },
+      {
+        "id": "c5.nocturnal",
+        "topic": "pain",
+        "text": "The pain wakes the patient at night and interrupts sleep.",
+        "questionIntents": [
+          "nocturnal_pain"
+        ]
+      },
+      {
+        "id": "c5.cold",
+        "topic": "pain",
+        "text": "Cold drinks worsen the pain.",
+        "questionIntents": [
+          "thermal"
+        ]
+      },
+      {
+        "id": "c5.lingering",
+        "topic": "pain",
+        "text": "The pain does not stop immediately after the cold is removed; it lingers for a little while afterward.",
+        "questionIntents": [
+          "thermal"
+        ]
+      },
+      {
+        "id": "c5.chewing",
+        "topic": "pain",
+        "text": "Chewing on the affected side is uncomfortable.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c5.biting",
+        "topic": "pain",
+        "text": "There is slight biting and percussion discomfort.",
+        "questionIntents": [
+          "biting"
+        ]
+      },
+      {
+        "id": "c5.no-swelling",
+        "topic": "swelling",
+        "text": "The patient has no facial or gingival swelling.",
+        "questionIntents": [
+          "facial_swelling"
+        ],
+        "canonicalFactIds": [
+          "c5.no-infection"
+        ]
+      },
+      {
+        "id": "c5.no-drainage",
+        "topic": "medical_history",
+        "text": "The patient has no pus or drainage.",
+        "questionIntents": [
+          "drainage"
+        ],
+        "canonicalFactIds": [
+          "c5.no-infection"
+        ]
+      },
+      {
+        "id": "c5.no-fever",
+        "topic": "medical_history",
+        "text": "The patient has no fever.",
+        "questionIntents": [
+          "fever"
+        ],
+        "canonicalFactIds": [
+          "c5.no-infection"
+        ]
+      },
+      {
+        "id": "c5.swallowing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty swallowing.",
+        "questionIntents": [
+          "swallowing"
+        ],
+        "canonicalFactIds": [
+          "c5.no-airway"
+        ]
+      },
+      {
+        "id": "c5.voice",
+        "topic": "medical_history",
+        "text": "The patient has no voice change.",
+        "questionIntents": [
+          "voice_change"
+        ]
+      },
+      {
+        "id": "c5.breathing",
+        "topic": "medical_history",
+        "text": "The patient has no difficulty breathing.",
+        "questionIntents": [
+          "breathing"
+        ],
+        "canonicalFactIds": [
+          "c5.no-airway"
+        ]
+      },
+      {
+        "id": "c5.med",
+        "topic": "medications",
+        "text": "The patient takes ibuprofen 400 mg as needed, without adequate relief.",
+        "questionIntents": [
+          "medications"
+        ]
+      },
+      {
+        "id": "c5.ibuprofen-frequency-unknown",
+        "topic": "medications",
+        "text": "The exact ibuprofen frequency is not specified; the patient only knows it was taken as needed.",
+        "questionIntents": [
+          "medication_frequency"
+        ]
+      },
+      {
+        "id": "c5.prior-acetaminophen-unknown",
+        "topic": "medications",
+        "text": "Whether the patient took acetaminophen before arrival is not specified.",
+        "questionIntents": [
+          "prior_acetaminophen"
+        ]
+      },
+      {
+        "id": "c5.prior-antibiotics-current-unknown",
+        "topic": "medications",
+        "text": "Antibiotic use for the current episode before arrival is not specified.",
+        "questionIntents": [
+          "prior_antibiotics"
+        ]
+      },
+      {
+        "id": "c5.nkda",
+        "topic": "allergies",
+        "text": "The patient has no known drug allergies and no penicillin allergy.",
+        "questionIntents": [
+          "allergies"
+        ]
+      },
+      {
+        "id": "c5.healthy",
+        "topic": "medical_history",
+        "text": "The patient is healthy and has no medical problems.",
+        "questionIntents": [
+          "medical_conditions"
+        ]
+      },
+      {
+        "id": "c5.ibuprofen-suitable",
+        "topic": "medications",
+        "text": "The patient has no contraindication to ibuprofen.",
+        "questionIntents": [
+          "ibuprofen_safety"
+        ]
+      },
+      {
+        "id": "c5.opioid-negative",
+        "topic": "medications",
+        "text": "The patient has no history of opioid use, misuse, or abuse.",
+        "questionIntents": [
+          "opioid_history"
+        ]
+      },
+      {
+        "id": "c5.surgery-unknown",
+        "topic": "medical_history",
+        "text": "Surgical history is not specified.",
+        "questionIntents": [
+          "surgical_history"
+        ]
+      },
+      {
+        "id": "c5.smoking",
+        "topic": "social_history",
+        "text": "The patient smokes approximately half-pack per day.",
+        "questionIntents": [
+          "smoking"
+        ]
+      },
+      {
+        "id": "c5.alcohol",
+        "topic": "social_history",
+        "text": "The patient drinks alcohol occasionally.",
+        "questionIntents": [
+          "alcohol"
+        ]
+      },
+      {
+        "id": "c5.illicit-drugs-negative",
+        "topic": "social_history",
+        "text": "The patient does not use illicit drugs.",
+        "questionIntents": [
+          "illicit_drugs"
+        ]
+      },
+      {
+        "id": "c5.dental-history",
+        "topic": "dental_history",
+        "text": "The last dental visit was approximately five years ago for an upper-tooth extraction; the patient has a history of cavities.",
+        "questionIntents": [
+          "dental_visit_history"
+        ]
+      },
+      {
+        "id": "c5.painful-tooth-not-extracted",
+        "topic": "dental_history",
+        "text": "The currently painful tooth was not the upper tooth extracted five years ago; the painful tooth is still present.",
+        "questionIntents": [
+          "painful_tooth_extraction"
+        ]
+      },
+      {
+        "id": "c5.root-canal-unknown",
+        "topic": "dental_history",
+        "text": "Root-canal history is not specified.",
+        "questionIntents": [
+          "root_canal_history"
+        ]
+      },
+      {
+        "id": "c5.filling-unknown",
+        "topic": "dental_history",
+        "text": "Filling history for the painful tooth is not specified.",
+        "questionIntents": [
+          "filling_history"
+        ]
+      },
+      {
+        "id": "c5.temperature-unknown",
+        "topic": "medical_history",
+        "text": "The patient has no fever but does not know an exact temperature.",
+        "questionIntents": [
+          "temperature_knowledge"
+        ]
+      },
+      {
+        "id": "c5.diagnosis-unknown",
+        "topic": "medical_history",
+        "text": "The patient does not independently know the diagnosis.",
+        "questionIntents": [
+          "diagnosis_knowledge"
+        ]
+      },
+      {
+        "id": "c5.appointment-negative",
+        "topic": "dental_history",
+        "text": "The patient has no current dentist or appointment and says arranging care will take time.",
+        "questionIntents": [
+          "current_appointment"
+        ]
+      },
+      {
+        "id": "c5.access",
+        "topic": "dental_history",
+        "text": "Unemployment, lack of insurance, and inability to pay anything for dental care create a dental access barrier; the patient prefers a free clinic and arranging treatment may take time.",
+        "questionIntents": [
+          "dental_access"
+        ]
+      },
+      {
+        "id": "c5.goal",
+        "topic": "dental_history",
+        "text": "The patient wants to save tooth if possible.",
+        "questionIntents": [
+          "patient_goal"
+        ]
+      }
+    ],
+    "hpiFacts": [
+      "Four days of worsening lower-left dental pain; the patient cannot identify the exact tooth.",
+      "Cold drinks worsen the pain.",
+      "The pain does not stop immediately after the cold is removed; it lingers for a little while afterward.",
+      "Pain is spontaneous, constant, deep, throbbing, severe, and 9/10.",
+      "Pain wakes the patient at night and interrupts sleep.",
+      "Chewing is uncomfortable with slight biting and percussion discomfort.",
+      "No fever, no facial or gingival swelling, no drainage, and no pus.",
+      "No dysphagia, voice change, dyspnea."
+    ]
+  }
+]

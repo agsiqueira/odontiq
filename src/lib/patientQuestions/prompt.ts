@@ -120,6 +120,20 @@ export function buildPatientQuestionClassifierPrompt(input: {
 Return exactly one JSON object and no Markdown or commentary.
 Determine meaning from the ordered messages, including paraphrases and clinical equivalents.
 Do not select a patient question. Application code determines question eligibility.
+An asserted event requires evidence of that exact event, not merely discussion of a related topic.
+Provider questions seeking history, symptoms, county, insurance or ability to pay are NOT treatment/disposition plans.
+Looking/searching for care options is NOT giving a plan. A plan chooses an actual current treatment, referral or follow-up action.
+A patient answer about county, insurance, payment or preferences is NOT a pain description.
+Do not infer events from the case scenario, intended future care or a patient's appended question.
+Use only the allowed event definitions for this case; never add a field for another case.
+${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
+A substantive pain description may occur in an opening complaint or later answer; never use turn count.
+Example: patient says tooth pain keeps waking me => patientPainDescribed=true.
+Example: patient says I am focused on my tooth pain => patientPainDescribed=false.` : ""}
+${input.caseId === "case-04" ? `A background-only exchange cannot establish a clinical plan. Financial screening, payment preferences, insurance, and hypothetical care options are not clinical plans even when dental treatment is mentioned.
+For mixed turns, distinguish an actual current clinical directive/commitment from the financial or hypothetical portion. Quote only the clinical action, not the entire screening question.
+Example: provider asks county; patient says Duval County => painManagementOrDispositionDiscussed=false.
+Example: provider gives ibuprofen plan and directs dentist follow-up => painManagementOrDispositionDiscussed=true.` : ""}
 
 Return exactly these top-level fields:
 - schemaVersion: the number 1
@@ -127,8 +141,13 @@ Return exactly these top-level fields:
 - events: an object containing every allowed event name exactly once, each with a boolean value
 - confidence: a number from 0 to 1 representing confidence in the event determinations
 - evidence: an array containing only supplied short message aliases that support asserted true events
+${input.caseId === "case-04" ? `- currentProviderAct: exactly one of current_plan, history_or_symptom_question, background_screening, care_search_offer, explanation, other
+- currentPlanEvidence: a verbatim quote from student-current that actually gives a current pain-treatment or disposition/follow-up plan, or an empty string if none.
+A current_plan chooses a specific current treatment or follow-up action. An access-screening question, county for referral, acceptable fees or offering to look for options does not choose a plan. A symptom-history question is not a plan. Do not use patient-draft or prior context as the current plan witness.
+For a mixed turn that both gives a plan and asks a background question, currentProviderAct may be current_plan; quote the actual plan portion only.
+Only current_plan with a nonempty valid quote can support painManagementOrDispositionDiscussed=true.` : ""}
 
-Do not return message IDs. Do not add fields or event names.
+Do not return message IDs. Do not add fields other than those specified for this case or add event names.
 
 Allowed event definitions for this request:
 ${eventDefinitions}`,

@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-17T16:46:28.109Z",
+  "implementationFrozenAt": "2026-10-17T15:45:52.619Z",
+  "changedFrozenFiles": [],
+  "changedFromOriginalStudy": [
+    "src/app/api/conversation/route.ts",
+    "src/lib/patientDisclosure.ts",
+    "src/lib/patientFinalResponse.ts",
+    "src/lib/patientImmediateResponse.ts",
+    "src/lib/patientRoleResponse.ts",
+    "src/lib/patientTurnFacts.ts"
+  ],
+  "caseFactFilesUnchanged": true,
+  "existingRegressionMatchersUnchanged": true,
+  "changedMatcherFiles": [],
+  "activeSharedContract": true,
+  "activeCorrectedEmploymentGuard": true
+}

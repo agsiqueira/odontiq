@@ -1,0 +1,16 @@
+{
+  "applicationProvider": "navigator",
+  "navigatorModel": "granite-3.3-8b-instruct",
+  "navigatorOrigin": "https://api.ai.it.ufl.edu",
+  "credentials": "Loaded through existing environment; neither read into reports nor printed",
+  "application": "Next.js 16.2.10",
+  "conversationTemperature": 0.4,
+  "conversationMaxTokens": 120,
+  "providerTimeoutMs": 30000,
+  "playwrightVersion": "1.61.1",
+  "browserProfile": "Desktop Chrome (bundled Chromium)",
+  "workers": 1,
+  "automaticBrowserRetries": 0,
+  "submissionMinimumIntervalMs": 1000,
+  "authentication": "Existing Phase T Clerk setup and dedicated account; credentials redacted"
+}

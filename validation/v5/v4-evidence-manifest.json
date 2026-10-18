@@ -1,0 +1,266 @@
+[
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/adjudications.json",
+    "sha256": "a0e84c9a407746095b13c0724df0bd76a13d38d33e81cdde9d96138971b26cec"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/all-recorded-attempts.json",
+    "sha256": "2272f4259b2399e5b1df1826cf6233faaef9a6465d0efbace8a205ee4485c381"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/approve-reviewed-setups.mjs",
+    "sha256": "105ed8c9e58c8c47e225e07ae8953bfa4e3ddf349b817cf0e29da64ba47ed3a7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/audit-state.mjs",
+    "sha256": "01dee5cab3ea0d39fdae9fdc3db6acf6bd0774fd3f45153f567b3ad4c2354567"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/automated-checks.json",
+    "sha256": "5e8c72c105485832f74e199ae89fae7727eaabdfa055aa8d74ad070d97d459e5"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/automated-first-attempt.json",
+    "sha256": "ec0a10b958156cd5aa2c4051e05e31e1ced0756c72c0b064b6a01a0ce6b99027"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/automated-fourth-attempt.json",
+    "sha256": "cb0273a5ee4ff0961641d6dabe9a073b777c9b69b569ce55159c2570518ab2c7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/automated-second-attempt.json",
+    "sha256": "4981c8accd6451284fe4a4008a5202719237aee5977560e57df8ee11be90a1f1"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/automated-third-attempt.json",
+    "sha256": "d94a6e74d46882e28971a4760dc3b1dcbb7bf46c4ab62ac19ee0c6fe58917530"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/before.json",
+    "sha256": "0d730ad59c4f0b5441316102c99856dd24ecd52e2c39413fe93dde97a9031d0d"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/capture-provider.mjs",
+    "sha256": "3c1652e5d2f0850da032b32d7607167e6d2867321a5ee95034aebcce21f9c0ef"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/complete-verification.mjs",
+    "sha256": "5d5d22eb536f260a84013a11d27e146d2f2b810956408a76a453e9cb15326a88"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/completion.json",
+    "sha256": "8989cd24f730b577f30937aac501400e501d7335b095c9cb722dc23fe920b1d7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/csv-verification.json",
+    "sha256": "dc975a167b192fe1f2a683b384590d2b6b06c981af46967bf9d75c9013b4d4af"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/current-state.json",
+    "sha256": "3d4d983194d6896a78bfb38b92a4c0b1c0293e2bde9f52b229bd444213d53815"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/deterministic-contract-replay.json",
+    "sha256": "7cc6ccec71d72ecfde6015b9f16eb6be83c3c355b8e6b38077d20ef654e0532d"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/development-check-attempts.json",
+    "sha256": "4eb60b013c58f4fb6f2f79557124108d93a5ab5ca35a47c667ef670bfd7b227e"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/EVALUATOR.md",
+    "sha256": "5887cf96071688a328b1accf466f9812f8241fb92aa1d677d9c29f9c6c301c20"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/execution-metadata.json",
+    "sha256": "caecf4fe244a834f48aa9c305b62af9fd73c604559b346631e4556d9b868d968"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/execution-observations.json",
+    "sha256": "7765074c3d58c80e765cc7ab4242dff0a578a68a335df9966f435603491818f1"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/export-results.mjs",
+    "sha256": "66d1534dbbf1607dad3c163772b4c72e560eabc6a8f0e329ce498260522abfcd"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/final-version-verification.json",
+    "sha256": "a012aaa322b9bc85284d29e9b3eb7dbae3a31cb763b3c928775a1af5ee63157f"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/former-holdout-regression-results.csv",
+    "sha256": "8c3e05ab0a2a9d4fcc99a4816865427ed21b01e1071e039e343d43363299ea2e"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/former-holdout-regression-results.json",
+    "sha256": "126decb07a255548e09cb1346ec41f5f420893d44749a6e455727320d7ff8836"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/fresh-holdout-inventory.json",
+    "sha256": "64a1f46efe945a42e6600160ff90a7043072daf4d48aceaeee7bedb9352c93cb"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/fresh-holdout-results.csv",
+    "sha256": "62b6b2bfca0b24c7a71286f46d95466e5505841354f4eb19cee4d4cf4fa1d4ab"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/fresh-holdout-results.json",
+    "sha256": "47d7f482f4cef0bc652070e1dc173eded2903b4855b46a4eeb187016d6bf5274"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/implementation-freeze.json",
+    "sha256": "935f738f28586c5d80716f4bc69cd1dc3eec5720eee1da234e0f14ac67cb37d7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/infrastructure-continuation.json",
+    "sha256": "fc76ab0ba0cf47e0d7cb7c782e1e94e7f585b64308687c50cd9a43f13e3daa82"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/live-execution-attempts.json",
+    "sha256": "8f43598c731017e4e1d133f25fad1393f60f624c6dc504443989bca685b05eaf"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/loaded-background-facts.json",
+    "sha256": "8f740cdf15add3360610727c2db5e30a8a0c5fe96a60c31f9b8c266c52336639"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/pain-context-results.csv",
+    "sha256": "ceae7910a0149d7191c7a476611ed7e256a310df5235f1f242b1aac3e5e07dbd"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/pain-context-results.json",
+    "sha256": "05cad2d8eb866cd9d4f20dd59020de004c89988db8be1bd9e52fee0331ca1ec8"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/prepare-continuation.mjs",
+    "sha256": "c29e84a69b30fc3acfa70be0df79e44a06ee3c5e4c8af0b9e52cb21e2e209c62"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/prepare-live.mjs",
+    "sha256": "14af28c7eaf9977d12cf5fbae829c74ab452ac00c70a7a98831769c451fb373a"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/primary-results.csv",
+    "sha256": "dc63c410c349eadf21a8cb8c36ac15163c316b4c392a460196d8465ceeca956d"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/primary-results.json",
+    "sha256": "3f4cfd977c896de3f633a4772fd9f0659e1fa5d66253624b7c5cfa48ee3cbdcb"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/provider-configuration.json",
+    "sha256": "34c368ce2b5c00e1f5e62a9984ebd0fcca6188e57c276b1d64744f208e4ecfc3"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/raw-artifact-manifest.json",
+    "sha256": "5f83d44fe3d9242d3a8a26b357174300c04f6741640cbc893a3cfbc66ca94877"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/record-fresh-findings.mjs",
+    "sha256": "3eb2020fdd3589fe0f0130024f81410ccf2c9066560cfc83b8ed40b53ec75af3"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/record-review.mjs",
+    "sha256": "a5eb6c3c70f105e8422da8a6db85defedbce8992cbddf18a07853f325fb1d6e8"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/REPORT.md",
+    "sha256": "af994f20829700597220d63327ab6a01bf8d5cde90f60958d3428616f7bd0f6d"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/report.mjs",
+    "sha256": "c3e3b8dcdf1178a991e8de0cbc23a13e2f64b300c2d097fe0ce5b59ac8663696"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/research-exclusion.json",
+    "sha256": "c4e0c971c65bf90be40523585ad955aa0c65a05ab6cf560f1c2e7c3c671bca95"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/results.json",
+    "sha256": "21bbf670c228727169e4f393b467a5a27d039526e8c71be4f655faeb388794cc"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/review-batch.mjs",
+    "sha256": "dfa1ced540432cc02be30c5495e69430b45cdc635765105f5c4dd65e71af9b06"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/review-overrides.json",
+    "sha256": "24bd872ec9a46db3dc637c131ff7b51f8f17c4d36a4005b8a9ec7af24969e22b"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/review-setups.mjs",
+    "sha256": "bf3fdfbaa3a660d416bd78440b47f632184538674badbc65572420cb52eb5834"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/run-checks.mjs",
+    "sha256": "e96ae5117c83f39cb4a2d2640cbcc1e10064e2d3484e2f409f107acd57b8a007"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/run-inventory.json",
+    "sha256": "2a27109e923c291369c979b353287cf9e747e166d3ade72266ec6694d0ffbfb7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/setup-adjudications.json",
+    "sha256": "0a1cacb937be4f2ec699cefc5d35c0252640ffdaffbd13b39e02078086e171ce"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/setup-variant-reviews.json",
+    "sha256": "3e9e004f795e168c4a5da1d84b297875ed28327c38aea92a1c7b2d35177284b6"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/summary.json",
+    "sha256": "d5ece95547528be7b591232032187b37254cb670a38617f198855dea390368ba"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/targeted-live-results.csv",
+    "sha256": "e790839f826e87a1c19308fb31eaa755fffbe13994be848e0c012c5a47ab7689"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/targeted-live-results.json",
+    "sha256": "de40cf0539e39eb79e219dbc07dbcfdd80aed70ff868bbf51b67daee7463a774"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/targeted-replays.json",
+    "sha256": "09f9c9c2830882c93bcc7d3a16d80040d13a1de67514126cfaa77b3a0253d5d0"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/trace-index.json",
+    "sha256": "322e40b8d06769f070aa966b6f44237492eec14a04a9a5c854f05939496b0aa7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/unresolved-items.json",
+    "sha256": "56a96304cee4638c6bd8011bb03b41cdf7c0d97e259cc5de4956f920ab93f3e9"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/v3-failure-replays.json",
+    "sha256": "978faacd87e6950d1e0cf08c320e8e26b89dbe7eb5329deb77f1390f3a199aec"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/v3-holdout-regression-results.csv",
+    "sha256": "377bc47b04a455088b7d1a4bf86a6b761678f993ef82e118091892c82212cc67"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/v3-holdout-regression-results.json",
+    "sha256": "502e6d73c1c461957c8eb30ee60cf8a0587888eb391067af2c0ec716e5d28ec7"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/verification-results.json",
+    "sha256": "a012aaa322b9bc85284d29e9b3eb7dbae3a31cb763b3c928775a1af5ee63157f"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/verify-loaded-facts.mjs",
+    "sha256": "885c44cd26ce2eb31c5db42f36bc611c5dde532fdba9fdfb251b1de5525af2df"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/verify-results.mjs",
+    "sha256": "bca3da3e91f3aab35ceec5a74b62a360e768db9d914f56a427cd3614f41dedb5"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/verify_csv.py",
+    "sha256": "aadc5d08ee5e16cbb861a6f8ff290dc13ef38979b31a5c24e6bd26fa67ec3190"
+  },
+  {
+    "path": "validation/shared-conversation-followup-2026-10-17/final-v4/WORK_STATE.md",
+    "sha256": "81c42ba414cde99cf2d9bd67aed28e0577498c8a023509f8572b4312c54fc098"
+  }
+]

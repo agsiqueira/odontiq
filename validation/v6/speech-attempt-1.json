@@ -1,0 +1,130 @@
+{
+  "startedAt": "2026-10-17T22:50:03.561Z",
+  "baseUrl": "http://localhost:3003",
+  "browser": "Playwright Chromium headless, default media/autoplay policy; passive play-promise/event instrumentation, no fake audio",
+  "tts": [
+    {
+      "requestText": "You're welcome.",
+      "at": 1792277411239,
+      "status": 200,
+      "success": true,
+      "error": null,
+      "reason": null,
+      "segments": [
+        {
+          "type": "speech",
+          "audioBytes": 18093,
+          "mimeType": "audio/mpeg"
+        }
+      ]
+    }
+  ],
+  "playback": [
+    {
+      "event": "play-called",
+      "at": 1792277409938,
+      "srcKind": "url"
+    },
+    {
+      "event": "playing",
+      "at": 1792277410004,
+      "srcKind": "url",
+      "currentTime": 0,
+      "duration": 0.00025,
+      "error": null
+    },
+    {
+      "event": "play-resolved",
+      "at": 1792277410004
+    },
+    {
+      "event": "play-called",
+      "at": 1792277410008,
+      "srcKind": "url"
+    },
+    {
+      "event": "playing",
+      "at": 1792277410569,
+      "srcKind": "url",
+      "currentTime": 0,
+      "duration": 0.00025,
+      "error": null
+    },
+    {
+      "event": "play-resolved",
+      "at": 1792277410569
+    },
+    {
+      "event": "play-called",
+      "at": 1792277411235,
+      "srcKind": "blob"
+    },
+    {
+      "event": "play-called",
+      "at": 1792277411282,
+      "srcKind": "url"
+    },
+    {
+      "event": "playing",
+      "at": 1792277411282,
+      "srcKind": "blob",
+      "currentTime": 0,
+      "duration": 1.128,
+      "error": null
+    },
+    {
+      "event": "play-resolved",
+      "at": 1792277411282
+    },
+    {
+      "event": "playing",
+      "at": 1792277411284,
+      "srcKind": "url",
+      "currentTime": 0.002087,
+      "duration": 5.943991,
+      "error": null
+    },
+    {
+      "event": "play-resolved",
+      "at": 1792277411284
+    },
+    {
+      "event": "ended",
+      "at": 1792277412484,
+      "srcKind": "url",
+      "currentTime": 0,
+      "duration": null,
+      "error": null
+    },
+    {
+      "event": "ended",
+      "at": 1792277412484,
+      "srcKind": "url",
+      "currentTime": 0,
+      "duration": null,
+      "error": null
+    },
+    {
+      "event": "ended",
+      "at": 1792277412484,
+      "srcKind": "url",
+      "currentTime": 0,
+      "duration": null,
+      "error": null
+    }
+  ],
+  "humanAudibility": "UNTESTED: no human listening/output-device measurement",
+  "encounterId": "7b144320-8cce-4dba-9c95-4ef8ae832112",
+  "browserSupport": {
+    "audio": true,
+    "speechSynthesis": true,
+    "voices": 0
+  },
+  "requestStartedAt": 1792277409954,
+  "finalResponse": "You're welcome.",
+  "correlationMatched": true,
+  "playbackWaitTimedOut": true,
+  "debugAudioEnabled": true,
+  "status": "AUTOMATED_PLAYBACK_STARTED_COMPLETION_UNCONFIRMED",
+  "completedAt": "2026-10-17T22:50:51.360Z"
+}

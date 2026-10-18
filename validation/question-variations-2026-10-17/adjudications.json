@@ -1,0 +1,2522 @@
+{
+  "C01-G01-Q01": {
+    "runId": "f2388320-bea1-47f1-beb8-b3378e11697f",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.952Z"
+  },
+  "C01-G01-Q02": {
+    "runId": "4e13c682-f475-49e4-b9c2-21d51f7abe78",
+    "responseSha256": "1f2fd19cd9c101aa8c8fd434a2daeb3c37b1b8cfc02f9ea63b673bdae653443c",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q03": {
+    "runId": "ad3836a5-c494-4e22-bc84-37b36a198362",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q04": {
+    "runId": "c9e04c60-8355-49c4-9277-dfe5d1f5587f",
+    "responseSha256": "cbcd746266165c6cf841b1d213219203535426bf8dd880ce7245dadfb3fca708",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q05": {
+    "runId": "4785f13a-c4d8-4fdf-836e-e2179efd614a",
+    "responseSha256": "827a196fe7028e2985f6ea1f63700501cc7d27e7a0e0b8f9e93399174231ec26",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q06": {
+    "runId": "3d941a70-1874-4656-83e9-25815249958a",
+    "responseSha256": "fcc5bddc0084a447c88d5e0f9f048a0c60f2133d126c86f0a424b57f996df713",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q07": {
+    "runId": "3b18adf0-0165-411a-a690-f8565bd0f346",
+    "responseSha256": "483ba813514fcfc724b5a97fdbac88746e8b49ebbd0b87921103fdd3dde061e6",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q10": {
+    "runId": "d3fc9542-f3b6-48e7-8b89-2b0c73275673",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q12": {
+    "runId": "f277364a-5a8b-44c5-a42b-d9aa33dcd658",
+    "responseSha256": "f6cad1b5d6c46a7c70ce3c24ae287e8cf4aeb0bb35da3c466e688bacafa25295",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q14": {
+    "runId": "a6837c04-db82-461c-9f06-dd84c316d1cd",
+    "responseSha256": "e29918d81d33d27032be1a496d049fd5dc846d1a7bce2209c176c4efebe72f8b",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q15": {
+    "runId": "b97002fa-b903-40ed-ab01-7cc8144899dd",
+    "responseSha256": "f6cad1b5d6c46a7c70ce3c24ae287e8cf4aeb0bb35da3c466e688bacafa25295",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q16": {
+    "runId": "b53b5641-432b-4ea4-893e-05dc616774d7",
+    "responseSha256": "f6cad1b5d6c46a7c70ce3c24ae287e8cf4aeb0bb35da3c466e688bacafa25295",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q17": {
+    "runId": "99ecdc5c-9bf6-457c-a1dc-562db712a562",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q18": {
+    "runId": "ca5b46e6-d0c9-4e93-9da2-652bf187e806",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q19": {
+    "runId": "1ffac60b-6471-4ec3-8f45-e84999593206",
+    "responseSha256": "827a196fe7028e2985f6ea1f63700501cc7d27e7a0e0b8f9e93399174231ec26",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q20": {
+    "runId": "08856cc9-0e35-473d-a562-279ab743b00e",
+    "responseSha256": "f6cad1b5d6c46a7c70ce3c24ae287e8cf4aeb0bb35da3c466e688bacafa25295",
+    "outcome": "PASS",
+    "reason": "Answers the insurance question with an explicit or unambiguous contextual denial of insurance. The extraction affordability concern, where present, agrees with the defined Case 01 access fact.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q08": {
+    "runId": "acadb028-475a-45ba-8ea6-808b874a438d",
+    "responseSha256": "d9e80dca6d71c78d33d92a36ef7b231ce97e9efbad9b921decefbb06d3f1bcc5",
+    "outcome": "REVIEW",
+    "reason": "Affordability concern without insurance suggests being uninsured, but could be hypothetical; the response does not clearly establish current coverage or directly answer the paying-without-insurance question.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q09": {
+    "runId": "dc048b86-5fc3-4550-8195-033857a3c9d3",
+    "responseSha256": "47aa67e599cf4df3fb7a3a31e5022ccdd140de8fc19b6f47426b3f020823611a",
+    "outcome": "FAIL",
+    "reason": "Expresses uncertainty or redirects to symptoms instead of answering the defined uninsured status.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q13": {
+    "runId": "af25b09d-98fd-40f5-9343-5853c79747e5",
+    "responseSha256": "5a4bea7777f6edd823461ab38eac585f27dbfc01fc8a14024d52a91443f4e195",
+    "outcome": "FAIL",
+    "reason": "Expresses uncertainty or redirects to symptoms instead of answering the defined uninsured status.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G01-Q11": {
+    "runId": "d0cf8076-14e1-4e95-8e06-90c6505f450a",
+    "responseSha256": "8ca57a0028e509801e4e13da589c644252f3dbf4cea3087b1da7e507f9609ccc",
+    "outcome": "FAIL",
+    "reason": "States tooth location instead of answering whether dental coverage exists; a true clinical fact does not answer the insurance question.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q01": {
+    "runId": "0a855752-880d-4a7e-95a7-421e3b2bdcf7",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q02": {
+    "runId": "c505d913-8b47-4e7a-9949-439766c900e0",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q03": {
+    "runId": "ecded271-2bdf-49bf-a04f-8862d30d8e72",
+    "responseSha256": "24c4cdc8a8ae9e621e40ff114481b3089236669e7327c1e72ab7c33e8a19ffbc",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q04": {
+    "runId": "d50579ec-7054-44f5-81c9-0ba4abc10288",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q06": {
+    "runId": "627e8ec5-559a-4025-bc86-86313854e54b",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q07": {
+    "runId": "5783d402-fe19-4de5-9f5e-1f14e1df665b",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q08": {
+    "runId": "c770bc63-93ba-45f1-9ebc-0749e2af9c2f",
+    "responseSha256": "24c4cdc8a8ae9e621e40ff114481b3089236669e7327c1e72ab7c33e8a19ffbc",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q09": {
+    "runId": "1252487f-1579-4ef0-b4b8-fa82d166058d",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q10": {
+    "runId": "8c40df2f-4767-4f74-85c8-9f9e178b12f1",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q11": {
+    "runId": "c156d40b-6b41-4c4c-9133-ebf96356af2f",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q13": {
+    "runId": "9b16b0c1-3fe2-4d0e-8078-e0c01121cf4e",
+    "responseSha256": "96e834fb33451dfc58e32cf32012903a8ff920af97b0206a815971a8b5b51b91",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q15": {
+    "runId": "b3728a4c-523c-4053-8297-bffd13c7dd69",
+    "responseSha256": "816a504ca28be08dff32da8c897752e85e36ee9c3aaa2a3c3935fbd34c9a513e",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q18": {
+    "runId": "2de3dd78-43ce-4ac1-a2a7-58ccf9cfdde0",
+    "responseSha256": "24c4cdc8a8ae9e621e40ff114481b3089236669e7327c1e72ab7c33e8a19ffbc",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q19": {
+    "runId": "7a268d26-dc22-4108-9260-7c1df091a470",
+    "responseSha256": "24c4cdc8a8ae9e621e40ff114481b3089236669e7327c1e72ab7c33e8a19ffbc",
+    "outcome": "PASS",
+    "reason": "Identifies Alachua County as the patient's residence or directly affirms the named home county; no unsupported residence details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q05": {
+    "runId": "feb70de6-8926-4010-a90f-4ba290375c4b",
+    "responseSha256": "c75464f0a05a1edbf7a35004fe88fe80d6de466f2a5733a118767f36a214803d",
+    "outcome": "FAIL",
+    "reason": "Does not answer the residence question; substitutes tooth location, pain/distress or an unknown-information response for the defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q14": {
+    "runId": "6c998b44-b681-42fa-99fc-24c28c907c30",
+    "responseSha256": "8ca57a0028e509801e4e13da589c644252f3dbf4cea3087b1da7e507f9609ccc",
+    "outcome": "FAIL",
+    "reason": "Does not answer the residence question; substitutes tooth location, pain/distress or an unknown-information response for the defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q16": {
+    "runId": "2494ac19-de71-4ab6-8a0b-5ed75fc35cfe",
+    "responseSha256": "8ca57a0028e509801e4e13da589c644252f3dbf4cea3087b1da7e507f9609ccc",
+    "outcome": "FAIL",
+    "reason": "Does not answer the residence question; substitutes tooth location, pain/distress or an unknown-information response for the defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q17": {
+    "runId": "596c081e-cabd-4500-b0dc-823d97b3e901",
+    "responseSha256": "153e8316c17ce8151ef1e1135d190640ef608b53766ea35230763cef1f96bed5",
+    "outcome": "FAIL",
+    "reason": "Does not answer the residence question; substitutes tooth location, pain/distress or an unknown-information response for the defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q20": {
+    "runId": "892b685a-9e6a-450a-8588-39905d36caa1",
+    "responseSha256": "8ca57a0028e509801e4e13da589c644252f3dbf4cea3087b1da7e507f9609ccc",
+    "outcome": "FAIL",
+    "reason": "Does not answer the residence question; substitutes tooth location, pain/distress or an unknown-information response for the defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G02-Q12": {
+    "runId": "d79405a7-8d8d-43e3-94a0-7d1b55153b07",
+    "responseSha256": "8e0bbbb5e8cdc3155f610e4e08bf194d950c34683462f7d6f7f7842ebfe28546",
+    "outcome": "FAIL",
+    "reason": "Invents Oak County as residence, contradicting the defined Alachua County residence.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q01": {
+    "runId": "4751a3a5-b9a2-4cef-95de-43debf1125d6",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q02": {
+    "runId": "faf48dd5-b7d9-47f6-b0b1-64058086160d",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q03": {
+    "runId": "1291719e-f3ea-493c-bea1-6fbd4c81dcf9",
+    "responseSha256": "231e3b89fb68324c6c7c7021cedffe8e045d1a059ce911bc5be8353b0bb4dd16",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q04": {
+    "runId": "a27ed1ad-d2d2-4c59-acb7-f07e821d2f0c",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q05": {
+    "runId": "61f3bd9a-f194-4081-9e93-4728c0b03e98",
+    "responseSha256": "fd653af3676bfe2eedb913b38fd8c2033299f9ae84f4aad45e98dba400b953a5",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q06": {
+    "runId": "e1e5cb34-4c99-4eb1-a97a-dd49f1d1f948",
+    "responseSha256": "bae36ef3957bb4751ef64defc46b4f0528457b6f64400bccb5e1813185dbc312",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q08": {
+    "runId": "91e5d984-d1f7-4bd4-b965-2fae3bdc0468",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q10": {
+    "runId": "a1153739-0c12-4577-a6f8-c7643033b34a",
+    "responseSha256": "3705d29f0e37a3ffe05ae0bf087116101760507d2901d57f0049bdc415e72254",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q13": {
+    "runId": "80fcc528-390e-48d1-ae9c-9f7cd6502009",
+    "responseSha256": "dac331703760ba61ca5e2f3607e0b297615f034bdde44fb2b99af698f4828aa6",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q14": {
+    "runId": "82a06a7b-ecac-4dd5-91f1-af47da0cfacc",
+    "responseSha256": "fd653af3676bfe2eedb913b38fd8c2033299f9ae84f4aad45e98dba400b953a5",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q15": {
+    "runId": "4e8f3847-bca2-48c3-9b9d-26d8e36ceea5",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q16": {
+    "runId": "a3672a7e-3050-4366-9372-c4b81b08bddd",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q18": {
+    "runId": "d500ceb7-330a-44ad-8155-6271c0daa0a9",
+    "responseSha256": "bf1706f4e3a3bce7427c1aef0fcba6c2da5e48d7dbfcb9cd0e8df18511c9f612",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q19": {
+    "runId": "dcfa46ac-86df-477b-94a9-31ad4ae8eabd",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q20": {
+    "runId": "57a2d538-dcd1-4cc0-8b9c-57275db2436a",
+    "responseSha256": "fd653af3676bfe2eedb913b38fd8c2033299f9ae84f4aad45e98dba400b953a5",
+    "outcome": "PASS",
+    "reason": "Directly affirms requested transportation capability/reliability or willingness to travel for affordable care, consistent with Case 01 and without a contradictory limit.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q11": {
+    "runId": "9cc17eea-d05e-4492-9764-2002a464d850",
+    "responseSha256": "d351c3f823313ab32816a9229d345380ab7d95a86d9deedd67d1b7b89bac033c",
+    "outcome": "PASS",
+    "reason": "Affirms reliable transportation and ability to travel outside Alachua County for free/low-cost care, answering the clinic option question. Also volunteers unrelated but defined smoking/substance-use facts; this is a verbosity/disclosure observation, not an invented fact or failure to answer.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q07": {
+    "runId": "7796eafa-47e9-4b9b-a0a9-664aa2b92d8a",
+    "responseSha256": "5155cce07eb69256d5848656fd0b6569b9a331a12e30f8ba5afd46b3f37ae608",
+    "outcome": "FAIL",
+    "reason": "Introduces unsupported hesitation/uncertainty instead of affirming the defined willingness/ability to travel outside the county for care.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q12": {
+    "runId": "2a717736-b337-43e5-b512-796a5b55f10d",
+    "responseSha256": "6e07d98f310b22f4bb2ab9ab62a1dc17c6009070cc07d25fbd69954b70cba47d",
+    "outcome": "FAIL",
+    "reason": "Introduces unsupported hesitation/uncertainty instead of affirming the defined willingness/ability to travel outside the county for care.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q09": {
+    "runId": "58ba86be-6106-4536-a870-113152fe9f7a",
+    "responseSha256": "62c2502c14099f9a2d8d0d7882a06dd094b5a3fabc01eb8956d73f35ece15fd3",
+    "outcome": "FAIL",
+    "reason": "Invents reliance on a sister who is out of town, adding an unsupported transportation limitation contrary to defined reliable transportation.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C01-G03-Q17": {
+    "runId": "74070978-e20f-4b8a-885c-0128426e0720",
+    "responseSha256": "184965331237d41a0c757496cf075cdbd930a07be933788c635dffde55f1f720",
+    "outcome": "FAIL",
+    "reason": "Does not answer willingness to travel for free care; rejects the free-care premise by claiming cost would still be too much, without affirming travel.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q01": {
+    "runId": "940b8494-f578-4921-ac06-87b1c9da9808",
+    "responseSha256": "15e4965c30517e36911462915a0801309d441f9b868eddb3d15db34c7288fdaf",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q02": {
+    "runId": "f66b06ac-0772-4742-a117-16ca9b8c244c",
+    "responseSha256": "000b692cf99e18b2e9298dbe65aef43fad488f7999798f89c057a6a6a7488089",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q04": {
+    "runId": "4aa14fb9-1dd2-4a50-a02a-9f6d8f19d8e8",
+    "responseSha256": "7c6263fd495a9e32f0acf00f2d0cd1642523be2b32310f25a8472e2515bff893",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q05": {
+    "runId": "c9ca367e-b2f0-4753-999e-0a466d58f686",
+    "responseSha256": "0d2d9cb3de9cadb0118ca8ec1f2fb438b58a654b8d03eae8ebf412ada7d1e9cf",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q06": {
+    "runId": "d4416fb7-e399-4b87-882a-68be8545d0ab",
+    "responseSha256": "2a42525257a2d7a80b751187c7105cf2beb7767819e014555cd0ae8ab25b43be",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q07": {
+    "runId": "5dc18112-52dd-4588-a0df-bbec09a2a3d8",
+    "responseSha256": "272e5f2a80f3639f221de01e1875b9749571b11628f0ebfc66077863614d754e",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q10": {
+    "runId": "edadf2d4-f1d0-434c-9a06-8de0b434e163",
+    "responseSha256": "29a1990eca965e3a24fe24ae09599e6402117f5e6902d13c04e40c12cf30b5a2",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q11": {
+    "runId": "7f74308f-4a21-4b67-bf3e-6b9c6ba1e4e2",
+    "responseSha256": "75f52fd1217e247c960c45861943b6a23fa3d239c7e388b194380162e236b933",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q12": {
+    "runId": "3ffbf802-ac98-47ac-85de-2f9fbe88c584",
+    "responseSha256": "fc85bc3c4493354fd7dc7e499621794a999ff325e21b144a3cd462b71135e819",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q13": {
+    "runId": "084b4e88-806d-46e6-92d5-50c81ebe6efc",
+    "responseSha256": "15e4965c30517e36911462915a0801309d441f9b868eddb3d15db34c7288fdaf",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q14": {
+    "runId": "5752e521-e649-44f3-b02f-676d115a427d",
+    "responseSha256": "5cdd4654cbebcecab16e108ec82fbdae3731b3f7123767cde1bc124288580d91",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q15": {
+    "runId": "989f211d-4bee-4415-b8e1-c9d46de2db36",
+    "responseSha256": "7c6263fd495a9e32f0acf00f2d0cd1642523be2b32310f25a8472e2515bff893",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q16": {
+    "runId": "be759555-afbc-470c-93ed-f722513fe7c9",
+    "responseSha256": "36a0ba326ee8147770a964318e3a440bb8222714cb0a9533052e14ddabe41ca0",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q18": {
+    "runId": "1a38897b-74d2-4cb6-b9cd-3f0ab80e2d5e",
+    "responseSha256": "7c6263fd495a9e32f0acf00f2d0cd1642523be2b32310f25a8472e2515bff893",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q20": {
+    "runId": "1e98d2af-20d5-4bd0-bb58-56b43720459e",
+    "responseSha256": "a3b8f4e18fb9f5fc1fc77614c7bc58836cf2e27593a3298a5fa64a1dad730494",
+    "outcome": "PASS",
+    "reason": "Directly denies current insurance or current Medicaid as asked, consistent with the uninsured patient and prior Medicaid loss; any dentist-access history agrees with case facts.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q03": {
+    "runId": "2f8fa83d-92e2-4602-87e4-c1a87a3acf3d",
+    "responseSha256": "be00f909646a4d27eb28d5ae5217e24b9f5bcbb368e98f9fbe634130d1cdb604",
+    "outcome": "REVIEW",
+    "reason": "Mentions past Medicaid loss and lack of dental visits, suggesting no coverage but not clearly stating current overall insurance status; cannot confidently infer absence of another current plan. Clinical tooth location, where present, does not resolve that ambiguity.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q19": {
+    "runId": "a7dc3dfa-14c4-428a-b56c-ac195941c2f5",
+    "responseSha256": "9a39511d485ca31d18a569b658ea4bd82fe98c4120c29c04efede326c226a720",
+    "outcome": "REVIEW",
+    "reason": "Mentions past Medicaid loss and lack of dental visits, suggesting no coverage but not clearly stating current overall insurance status; cannot confidently infer absence of another current plan. Clinical tooth location, where present, does not resolve that ambiguity.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q08": {
+    "runId": "ccf6adb8-4eae-4428-b952-aa78e5d90c74",
+    "responseSha256": "acdb393953113372d1f6446fcfa3d26d762758aafa76d4b2379ff3ea06c5ed57",
+    "outcome": "FAIL",
+    "reason": "Correctly denies coverage but invents inability to afford insurance, a financial circumstance not defined for Case 02.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q09": {
+    "runId": "b8763e23-f223-4781-a6ce-aae6f983af51",
+    "responseSha256": "f32cc326be8b17e47083323473704d9b2ec8e6f8ed60c32c6ab6ce3cf8dc4a5f",
+    "outcome": "FAIL",
+    "reason": "Does not answer current insurance/Medicaid coverage; substitutes an unknown-information response or tooth location for the defined uninsured status.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G04-Q17": {
+    "runId": "bf8d87f5-7664-4c4c-8df6-7cd0a155cc87",
+    "responseSha256": "6108bafc2df558857f1bca4fdc67a43ade1371af9352953ac74c6ab23d4446c4",
+    "outcome": "FAIL",
+    "reason": "Does not answer current insurance/Medicaid coverage; substitutes an unknown-information response or tooth location for the defined uninsured status.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q01": {
+    "runId": "e6ecd76c-8618-4ca0-a915-21a94003e2ee",
+    "responseSha256": "e672a0249ed7979be9541a68368d201ec5856caa0446e0d5b23cca94b593edfe",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q03": {
+    "runId": "3cd70acc-dd3b-4dad-87d7-6f5fd0f0ab93",
+    "responseSha256": "8e779c74ab7109427c375dc914078f2ab494875437b26fb8b9091ef494a779fe",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q04": {
+    "runId": "be31acf7-748b-4511-8a28-a98fd6de3b0a",
+    "responseSha256": "59ddd3bbc21271fe39a74488453d668498e6d45e54648a5092b0df1cd7e94cc5",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q06": {
+    "runId": "2e30ee25-943d-486b-9b7c-ff3fea759185",
+    "responseSha256": "074ae56fb4dc49b3a75da6430f243fb4db60b49c059c332bcab550840c177a24",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q07": {
+    "runId": "a1a55a36-45fa-4b53-839f-fc76868c17cb",
+    "responseSha256": "8901a11575a235bcd62b56adc98ca4897bc2bdfc59cdcbfbaa398803ad33808c",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q08": {
+    "runId": "dd2465ca-6957-428d-a9f0-ec9bffdbbbe3",
+    "responseSha256": "3071bd2170cd35e8f522153fe175c8340092e2229bdd7384a60aec9418d69afc",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q09": {
+    "runId": "bf9a9209-c130-42b1-b309-e3b604f6968f",
+    "responseSha256": "4a0ad309c0a690521fb270bfd69f27b806228a3c4e148e2617cf2e0bcfd117a4",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q10": {
+    "runId": "9379f990-124d-4522-96bb-49daf9dc11e1",
+    "responseSha256": "bdc28f1bd0912c7d8f57bb4b500578a239c19ae692898345b395014cc233b5af",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q12": {
+    "runId": "a68d7d40-9b38-42bd-a5de-6ec5932c20f2",
+    "responseSha256": "f40973b3e07394a297b9666098bdd01b0af0e4efe0ad757067f9418b976e182b",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q13": {
+    "runId": "60926518-2d63-43c0-8fa3-8ed83bb606e5",
+    "responseSha256": "e672a0249ed7979be9541a68368d201ec5856caa0446e0d5b23cca94b593edfe",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q14": {
+    "runId": "abf1a183-eb98-4b61-8df6-1c2c0afdaed9",
+    "responseSha256": "fb60bdb179d99f79a407214c08edd308cf49a22d308da18b61278fe74dc1129c",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q15": {
+    "runId": "f75c8c83-30ac-4455-ac60-53e8d534bb6d",
+    "responseSha256": "e672a0249ed7979be9541a68368d201ec5856caa0446e0d5b23cca94b593edfe",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q17": {
+    "runId": "7b1a2456-6f03-4f90-a08b-ec7daf8d04ed",
+    "responseSha256": "fb60bdb179d99f79a407214c08edd308cf49a22d308da18b61278fe74dc1129c",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q18": {
+    "runId": "dd95d49d-ca66-4f67-952b-8e54540f7226",
+    "responseSha256": "62d4bcaa25ca47c409506b0f157c750f3bb0a8559da5fbc810d69ac72cff2e70",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q20": {
+    "runId": "cbdd1801-b9ba-462e-8e49-88016df55223",
+    "responseSha256": "3071bd2170cd35e8f522153fe175c8340092e2229bdd7384a60aec9418d69afc",
+    "outcome": "PASS",
+    "reason": "Answers Medicaid-loss timing with an approximate year or within-past-year relative answer, without an invented exact date/month. Context resolves pronouns where needed. Approximate 'about a year' is treated as compatible with the case's last-year/past-year wording, not exact precision.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q02": {
+    "runId": "84a8e366-a390-4543-bc8c-3ce5763b181a",
+    "responseSha256": "7bd76c13c17eed6c16837e3220ac330951dffaf3fff77a3d408f2f16ccc15343",
+    "outcome": "FAIL",
+    "reason": "Answers Medicaid-loss duration with the seven-day worsening dental-pain timeline instead of the defined past-year coverage-loss timeline, even when coverage context was established.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q05": {
+    "runId": "c931dd0a-a221-4711-a55b-ea555da2f269",
+    "responseSha256": "7bd76c13c17eed6c16837e3220ac330951dffaf3fff77a3d408f2f16ccc15343",
+    "outcome": "FAIL",
+    "reason": "Answers Medicaid-loss duration with the seven-day worsening dental-pain timeline instead of the defined past-year coverage-loss timeline, even when coverage context was established.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q11": {
+    "runId": "ca82ee32-9df9-4a18-801f-f64e1cffd60c",
+    "responseSha256": "dbc7a693732f20387f4adaab7885ea47011398d760a64e6268806e7a20f2dc58",
+    "outcome": "FAIL",
+    "reason": "Answers Medicaid-loss duration with the seven-day worsening dental-pain timeline instead of the defined past-year coverage-loss timeline, even when coverage context was established.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q16": {
+    "runId": "d0a4caf5-e40d-4d88-9f3a-d1cd3609d891",
+    "responseSha256": "dbc7a693732f20387f4adaab7885ea47011398d760a64e6268806e7a20f2dc58",
+    "outcome": "FAIL",
+    "reason": "Answers Medicaid-loss duration with the seven-day worsening dental-pain timeline instead of the defined past-year coverage-loss timeline, even when coverage context was established.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G05-Q19": {
+    "runId": "e3c05027-55ce-4970-9874-1f19b9236b37",
+    "responseSha256": "392dbe93bca0b149e57f66e22f921be29cd75a8f48b9e57c356cf27f035be08b",
+    "outcome": "FAIL",
+    "reason": "Invents a six-month Medicaid-loss interval. Only loss within the past year is defined; a specific number of months is unsupported even though it falls within that year.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q01": {
+    "runId": "d558d526-a34a-4cda-826e-5c751c6012c9",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q02": {
+    "runId": "0624364b-0507-4978-9317-192cefdfcc45",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q03": {
+    "runId": "6f68d57c-0100-4ba3-8511-c471aa9be44b",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q04": {
+    "runId": "ed68c235-1682-42e3-abbe-49dddaf9995b",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q05": {
+    "runId": "384ba473-e7f4-4434-8d1c-4a17f2e19d19",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q06": {
+    "runId": "7b72e3c0-c6b8-4239-8e64-d6c44580c8d8",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q07": {
+    "runId": "3a07cd8c-6d0c-44c0-88e1-3298a2ea43ac",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q08": {
+    "runId": "cbe2f92a-1f55-4156-bc6c-19bfab9033a6",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q09": {
+    "runId": "79653067-edf9-4096-bf37-a5b1d3f6df66",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q10": {
+    "runId": "d9a4fb96-fc8a-4db7-aac6-dd439b757da0",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q11": {
+    "runId": "0dcff74f-1265-47db-81cf-7c70614fdc95",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q12": {
+    "runId": "0980cce4-d66f-4499-a498-5544cebdaede",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q13": {
+    "runId": "ed4df82b-721b-4331-b74c-aec35e4c913c",
+    "responseSha256": "edce8c58d5a188a12f29bf567552d80bf8c982b356e8b046aa6f88a986b0d215",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q14": {
+    "runId": "c26811eb-f644-4caf-bbea-c33f6729a411",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q15": {
+    "runId": "3e57644c-efd3-4148-9491-afc31653c7ef",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q16": {
+    "runId": "b64868e4-d9b2-40b8-9044-ffaa6445098d",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q17": {
+    "runId": "d2a90deb-5967-4a14-b44c-3288c2478663",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q19": {
+    "runId": "99a8214f-d414-4f4d-bdad-f6bc4c64335b",
+    "responseSha256": "e80b4432f138672a10523dfeff77ef973adb597888b0119bb5e709599347c4fb",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q20": {
+    "runId": "15d4589b-84b2-44b9-92d2-f57178bf9641",
+    "responseSha256": "8631e56d02b15cc82ef171d9947b7b1fb58925b539a97144bcf29d5e054d14a9",
+    "outcome": "PASS",
+    "reason": "Distinguishes living in Collier County from not having established residency; answers all requested residence/establishment parts. The contextual 'there' item has a valid Collier setup. No specific document or immigration status is invented.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G06-Q18": {
+    "runId": "03b130b8-1ba2-42ae-9706-2851360bb6f2",
+    "responseSha256": "8489e46aedc281c24945ddb4650b852660ba72065f63b8817f0f43b2f415e616",
+    "outcome": "FAIL",
+    "reason": "Correctly denies established residency but invents having 'just moved' to Collier County. The timing of moving is unspecified and cannot be inferred solely from unestablished residency.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q01": {
+    "runId": "1ce45e4c-77b2-461c-ad4f-c0f898ce9000",
+    "responseSha256": "cdf5036bd8724831eeeb8df4cc8781345990e6fb2a65cd7da879f3b19d1fb735",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q02": {
+    "runId": "383e1e4d-76a5-4d5c-a50c-dfc178e486d9",
+    "responseSha256": "505b907c46431205d151d5e704a151243e71e9b6c4fc98ef9dba140f46fe643b",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q03": {
+    "runId": "e4efbe75-b79f-4f49-b971-711fd7aa6619",
+    "responseSha256": "979f42bbffdc5d8ad1249606b2bb18651d69dc6292fd63552984cb3b6d9d07ac",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q04": {
+    "runId": "b74cbc31-f5d1-42b4-9ed8-867503eeb5e2",
+    "responseSha256": "420ffb1f15b936d4da06087c27ac7c64244ecfa699574ce86cc963d2c3f34eab",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q05": {
+    "runId": "d9122f94-dd2b-4f35-ad27-73357bec5149",
+    "responseSha256": "3ef3e255856d852fb7d26e824318a80829f24a9380ac2c9bd710603f5797e88e",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q06": {
+    "runId": "1f627b0f-38af-48fc-80bf-7654b53efa34",
+    "responseSha256": "979f42bbffdc5d8ad1249606b2bb18651d69dc6292fd63552984cb3b6d9d07ac",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q08": {
+    "runId": "f5993d9b-1abb-4072-830b-726025c7ea02",
+    "responseSha256": "fac37aece9fef83b8f375f25260c2d28ea5ec684b8c5a787b6954ec3b8e3c3d4",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q09": {
+    "runId": "4f1dd504-483a-4c6d-88e6-0f44c05f885b",
+    "responseSha256": "358288b6e32418c295fe6b7062d76cfafbd225973aeac21d41eabe72b55a1a3b",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q11": {
+    "runId": "783ea55d-86e0-45e8-9a67-d0038c06a563",
+    "responseSha256": "7d599758c08a928dd0eceb6e1fba87e4f0af1b9f3c4c3c1be21a164b6d0b4df0",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q12": {
+    "runId": "a9594d04-f701-412b-a270-1263641518bd",
+    "responseSha256": "cdf5036bd8724831eeeb8df4cc8781345990e6fb2a65cd7da879f3b19d1fb735",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q13": {
+    "runId": "d860c593-5c1d-4a70-9c25-2151c234ccab",
+    "responseSha256": "7ab7fc0947608078932c47e637019fa3911cb375591e7bb05d3c823e70f789e6",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q14": {
+    "runId": "08876e67-c307-4858-b153-5999894cb68e",
+    "responseSha256": "082b2f2a2167081b4fe3b672ce0f5f578e9ae2795fc32a6e3e8b2a8e8a37c369",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q15": {
+    "runId": "911c9bf8-7658-4e98-bf9d-921c4a487e43",
+    "responseSha256": "505b907c46431205d151d5e704a151243e71e9b6c4fc98ef9dba140f46fe643b",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q16": {
+    "runId": "ab48d38d-8a5a-447a-b451-3a84a352175d",
+    "responseSha256": "420ffb1f15b936d4da06087c27ac7c64244ecfa699574ce86cc963d2c3f34eab",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q18": {
+    "runId": "ffc976f4-cee4-408b-a292-bd7c2a83d2b9",
+    "responseSha256": "505b907c46431205d151d5e704a151243e71e9b6c4fc98ef9dba140f46fe643b",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q19": {
+    "runId": "8e75456f-1837-4d4c-b566-7c62a06e01fb",
+    "responseSha256": "9dab060a693bb8609b52b8d7dfd1598a1f6a1b7fae8d673168df00f0fc9814e0",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q20": {
+    "runId": "2b75e0cf-d935-4f1d-82fc-bbca2594bbd7",
+    "responseSha256": "1229dffd40c7f02266858b179cb3d370a7de89199b416a09166a0cf85bad0741",
+    "outcome": "PASS",
+    "reason": "Communicates unreliable out-of-town transportation or associated difficulty, answering the actual reliability/access question without claiming absolute inability, reliable local transport, or a specific invented arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q07": {
+    "runId": "de8dc65a-9537-4b5c-8439-6ca1734d6c86",
+    "responseSha256": "40c4410ac1febd496dc7ac150db73736ccf44b989f91a3a8c4a207e2d7959077",
+    "outcome": "FAIL",
+    "reason": "Expresses uncertainty/hope or redirects to pain instead of communicating the defined unreliable out-of-town transportation in response to the access/reliability question.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q10": {
+    "runId": "c232de43-3bf3-4605-9fa5-b49fa07e1713",
+    "responseSha256": "f1cb8c8ad547067a431a364344c82b46badd5a2f1f728df6110cb86480773db2",
+    "outcome": "FAIL",
+    "reason": "Expresses uncertainty/hope or redirects to pain instead of communicating the defined unreliable out-of-town transportation in response to the access/reliability question.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C02-G07-Q17": {
+    "runId": "e0dd0658-204b-4015-8b52-1752d83a300b",
+    "responseSha256": "2d0454259fe2f6cb54a35cbeb82514924ecf647396ae99d309f50e9348333785",
+    "outcome": "REVIEW",
+    "reason": "Describes trying to obtain dental care and difficulty since Medicaid loss; this may imply access difficulty, but does not clearly distinguish out-of-town transportation reliability from financial/coverage access.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C03-G08-Q01": {
+    "runId": "edbfa42d-f23d-469c-a821-e14a435fb1a1",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C03-G08-Q02": {
+    "runId": "9a95e11c-e472-4c4e-b255-b6e0bbb97ec1",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C03-G08-Q03": {
+    "runId": "3d7685c0-8da7-4ca9-9360-7ab800c6c23f",
+    "responseSha256": "cf30a9d428fce52e84393f5b40615c57ffbd03bbdf711094f3ddbc143f852b64",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C03-G08-Q04": {
+    "runId": "6aee1a7e-0b92-4ecb-b9dd-896b691a2adf",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.954Z"
+  },
+  "C03-G08-Q05": {
+    "runId": "e1c2bab1-de4d-4ec9-82dc-5ac5bd5d47de",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q06": {
+    "runId": "cccf08fe-a7a3-4eca-a8d2-2d0ff39b1902",
+    "responseSha256": "cf30a9d428fce52e84393f5b40615c57ffbd03bbdf711094f3ddbc143f852b64",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q09": {
+    "runId": "d7ab44b6-196c-423a-bcf0-35704f1b7365",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q10": {
+    "runId": "39a612f2-c0ee-48be-af1b-2cde5d49ff56",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q11": {
+    "runId": "48659ab5-2402-4ac0-82c3-c4536f6680ba",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q12": {
+    "runId": "e523c0cd-edf7-4625-83fa-8aa1e341cef5",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q13": {
+    "runId": "e0bd341e-412c-4135-966d-df5151369818",
+    "responseSha256": "f4f4c11664c976c5cad0f00565f1d227d9cd3974caa1ab1250dc5b3370d7ed01",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q14": {
+    "runId": "9da14c2e-fec2-4302-a3e1-81b4afc85189",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q16": {
+    "runId": "5e665cf8-0f4c-4029-a31c-feb2c9c09abf",
+    "responseSha256": "cf30a9d428fce52e84393f5b40615c57ffbd03bbdf711094f3ddbc143f852b64",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q18": {
+    "runId": "a72ccdfe-f061-4f3e-bae2-4b9c3fe70a6e",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q19": {
+    "runId": "d0b7b71e-4fa9-4b26-b1a9-00b1f7417350",
+    "responseSha256": "cf30a9d428fce52e84393f5b40615c57ffbd03bbdf711094f3ddbc143f852b64",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q20": {
+    "runId": "10022d0d-0cc9-49cd-b66d-5ad74369db50",
+    "responseSha256": "a428270ad8cbf99048925635e3399a6c82f62fdd3e117890b07b0e0f9828054a",
+    "outcome": "PASS",
+    "reason": "Identifies Hillsborough County as home or unambiguously confirms the named county in a residence question, without unsupported location details.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q07": {
+    "runId": "e081ebcc-56b3-46cb-96cd-9ebb89eefae9",
+    "responseSha256": "1e69b4ecc403b05368bc3d8fa173a93c1895038e870fb303fad8ec5763ca1630",
+    "outcome": "FAIL",
+    "reason": "Substitutes clinical tooth location or an unknown-information response for the requested defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q08": {
+    "runId": "1efa2891-2674-4098-98cc-e380ae4b263f",
+    "responseSha256": "f32cc326be8b17e47083323473704d9b2ec8e6f8ed60c32c6ab6ce3cf8dc4a5f",
+    "outcome": "FAIL",
+    "reason": "Substitutes clinical tooth location or an unknown-information response for the requested defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q15": {
+    "runId": "4abd5f32-52a0-4340-a76b-c146e634a8f6",
+    "responseSha256": "1e69b4ecc403b05368bc3d8fa173a93c1895038e870fb303fad8ec5763ca1630",
+    "outcome": "FAIL",
+    "reason": "Substitutes clinical tooth location or an unknown-information response for the requested defined home county.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G08-Q17": {
+    "runId": "8b55c774-4206-4deb-8048-3ee1cb29dcbb",
+    "responseSha256": "9f83446bdb710af5d470d15fe86190e41a27ff1af3adb42f404178aa22b97892",
+    "outcome": "FAIL",
+    "reason": "Denies living in the defined Hillsborough County and substitutes an unspecified city, Tampa. A city assertion does not justify denying the county.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q02": {
+    "runId": "dafd3a5a-632f-41a0-ad69-62cd2e7162c2",
+    "responseSha256": "d026e0763257aecf3a57dcdfb4dcd130116d25ae41d85304a6ca5a5e7fddabb9",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q06": {
+    "runId": "ae1e3bd8-76ae-4321-a064-3593f99137f2",
+    "responseSha256": "a3c0f76b8a2f0304247d5beef3590a1c3c27d647c08f8d9b319954d562c4a726",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q07": {
+    "runId": "502e99c2-f416-4018-8840-d4eb6897018b",
+    "responseSha256": "efbd1883ada00ca61bdfb64a44b996c0a2a0aec7b2ccee0484564bf02adf808f",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q10": {
+    "runId": "8fdd5f67-1f7f-423d-afbf-be8d524222b1",
+    "responseSha256": "a0142a112a69841048be2ec20775765490416b1f861cdb1a665655e829edc033",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q12": {
+    "runId": "5f989e55-add6-473c-8b2b-28ac7d219f4e",
+    "responseSha256": "8cb4ff530d6f530658efbb47ac51e2410c055323d567f4a8446918064a989124",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q15": {
+    "runId": "9f96394f-c137-4326-ac18-156ffd469a82",
+    "responseSha256": "f115c9ee8d12b217e5407765c7d362602fbaccd136d5cf0f04b37ac9d207cb5b",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q16": {
+    "runId": "f74beb20-44df-4820-9e4d-7ca36476b2e8",
+    "responseSha256": "bc9529531ac7d28bcf28e09f9ee32bf6aa08c249854ed725fb68158d2b8b6af2",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q20": {
+    "runId": "cc1337af-f15e-4748-8400-0a81a2a249cb",
+    "responseSha256": "d648642df8164405910fc0aae29268f8cd493cb980fa88747d6e09490b07e047",
+    "outcome": "PASS",
+    "reason": "Answers both required parts: the adult is uninsured and has an existing dentist. The appointment next week is a defined, consistent additional detail.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q01": {
+    "runId": "4fc708ea-d6d0-4eba-bd27-b3dac0108661",
+    "responseSha256": "d5a8c6ec2bb9010fc34c1f795e470c2c2fda18fbc9069f74fa6e9be59f19334a",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q03": {
+    "runId": "e3981604-dbbb-4d8c-b3b2-1109f167ab6b",
+    "responseSha256": "c40cde5d0b81f2e94f7773e84e28d94b1a4a44a8db92c7ee7fc86d088a90bf7c",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q05": {
+    "runId": "50670244-9801-484e-ba9d-af0725c36e85",
+    "responseSha256": "ce162093402eb3377566c0c99d2e95daac914cdb3eb95ef53db9b33b3fa6d0bb",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q08": {
+    "runId": "e9be2b5f-edab-4b3e-bf3a-a8484298b988",
+    "responseSha256": "d76ba364630c21828a2a6b40da54e4bd18fa90542986072129c0997f91c5df95",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q09": {
+    "runId": "f01a933a-0772-4864-82d1-b96a0431a149",
+    "responseSha256": "f1caab81100d62744df0e0d06a0db57f38aeabb65fb14b6fd4aa771e5b720051",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q17": {
+    "runId": "37642470-ae91-4e6b-ad75-fc1065ddf7d4",
+    "responseSha256": "4cb3f0921834bb0f3bb7bad3bcf2f3cee1846cd7a0bd63f96de47c9414da70f6",
+    "outcome": "FAIL",
+    "reason": "Correctly denies insurance but denies or fails to affirm the defined existing dentist in this combined question; the two required statuses are not both correctly answered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q04": {
+    "runId": "df1c2f12-81a4-4ae5-8930-6effe850ba02",
+    "responseSha256": "5cd4d29750147e2d319e8d22e68e1384ee721d1e63a94cebc3a963dfad551958",
+    "outcome": "FAIL",
+    "reason": "Answers uninsured/existing dentist status but invents the dentist's name, Dr. Smith, which is not defined.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q11": {
+    "runId": "4d4b0337-52cc-47cb-a68a-a29d57a7026a",
+    "responseSha256": "f32cc326be8b17e47083323473704d9b2ec8e6f8ed60c32c6ab6ce3cf8dc4a5f",
+    "outcome": "FAIL",
+    "reason": "Does not answer both insurance and existing-dentist status; substitutes an unknown-information response or clinical tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q19": {
+    "runId": "66ef9953-d24a-4bde-aea1-d5b5d2537a60",
+    "responseSha256": "1e69b4ecc403b05368bc3d8fa173a93c1895038e870fb303fad8ec5763ca1630",
+    "outcome": "FAIL",
+    "reason": "Does not answer both insurance and existing-dentist status; substitutes an unknown-information response or clinical tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q13": {
+    "runId": "9db374fc-e037-4bd7-82c8-879a1f927393",
+    "responseSha256": "b561147ad04675b163d225ac9cdf9c80d7c3aedba0147f110c897cda395687be",
+    "outcome": "FAIL",
+    "reason": "Affirms an existing dentist and appointment but does not establish uninsured status. The supplied group explicitly requires both parts; the conditional 'even if' in the question is not an assertion of actual coverage status.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q14": {
+    "runId": "c0d0eb18-d429-4346-bd04-fbb242b60012",
+    "responseSha256": "1ac9e60b2e0999ed38e90b5c50e0dbe28ce283c53aa8d1b10b4d605b44cf1fcf",
+    "outcome": "FAIL",
+    "reason": "States uninsured status but does not identify/affirm the existing dentist. Saying the patient handles their own care, or only saying uninsured, does not complete the combined question.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G09-Q18": {
+    "runId": "ae9b7721-f718-4e93-832d-89ed25a99c82",
+    "responseSha256": "5e88fec2fed2235a4d48ad4975871bb8b6f581ef29904777204999f87a4485db",
+    "outcome": "FAIL",
+    "reason": "States uninsured status but does not identify/affirm the existing dentist. Saying the patient handles their own care, or only saying uninsured, does not complete the combined question.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q02": {
+    "runId": "e8d5152e-7eae-4cbf-a182-46214ed119dc",
+    "responseSha256": "608dfe102f658ce5c2b6972ffaaf432378c52fd4b124e41efd5596f9745b21eb",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q03": {
+    "runId": "a3abc807-9841-4a2f-809a-7a1151890239",
+    "responseSha256": "0b7e47ba284966a1c0b5cd9164f6bd02d0508cc68a3d5ffd0d4bcb2d2892ad61",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q04": {
+    "runId": "6ec4ce79-4e41-4517-9111-d0dc7c8fdbd8",
+    "responseSha256": "ed105371736008914decf9caabb069fbc2ff53a4b93fad6b973daadd677aad7b",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q06": {
+    "runId": "9db02aad-a6f6-4684-993d-c842e4226405",
+    "responseSha256": "8fa066fcf4cfc4af2f211be266c0f097027d8e7e31c3dc593233cae8e485b6ac",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q07": {
+    "runId": "f66860aa-a371-433c-914b-0e0bd0918820",
+    "responseSha256": "8c68f478d99fca7dbdbefb44d223d783fd986853850b9ef5d66eff7f4fecc1cb",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q08": {
+    "runId": "8eb1de0f-22b5-4ea1-afef-dbc681e3f7ea",
+    "responseSha256": "ff5e89f171547440907c97ac8cc26db27bfcb0b0ac19b312181cfcc18f60d8d3",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q09": {
+    "runId": "ce9d6514-4a5d-449f-a2e4-0e286fcf3b3f",
+    "responseSha256": "8fa066fcf4cfc4af2f211be266c0f097027d8e7e31c3dc593233cae8e485b6ac",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q10": {
+    "runId": "fb392aff-057a-442e-bd84-5ee7d3a928b2",
+    "responseSha256": "15ff2bcacaf8c371895df993c09dc5f15327a3b4b44f84b8fd9483f640e18c8e",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q11": {
+    "runId": "02f22b1f-2dd2-4abb-9501-ad7f6557e8d9",
+    "responseSha256": "10a37e324553119e647b39976286314399c6700ef94fa5bf276f3886a794dc03",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q12": {
+    "runId": "3d22c118-4787-46ea-970a-f848472e682f",
+    "responseSha256": "89cd0f4e735d823fcecc9e4249d7345c42d66d85be9f1e1ed90f9b834efe03a5",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q13": {
+    "runId": "819535d1-e11b-4c17-8ba3-83eed5203847",
+    "responseSha256": "d242c3c10ac039f40576b8194d6970f593a767988ec36e772cdb247ba39c01c9",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q14": {
+    "runId": "049e0e3f-a2e4-4f69-a29b-f032fb72f41a",
+    "responseSha256": "67b6459b4cdbdd02163aab66c1a0389b25160139828319014d0233b795e3c87d",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q15": {
+    "runId": "04d15c5d-5627-42c8-aefb-f8ad327843de",
+    "responseSha256": "608dfe102f658ce5c2b6972ffaaf432378c52fd4b124e41efd5596f9745b21eb",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q16": {
+    "runId": "c5451437-a6ca-4ca1-a645-cc222aa3f255",
+    "responseSha256": "8fa066fcf4cfc4af2f211be266c0f097027d8e7e31c3dc593233cae8e485b6ac",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q18": {
+    "runId": "59c276fb-6791-487d-ad72-b35c82a5d026",
+    "responseSha256": "569e9bc481e5acb708ed9054c457b17cec0e9525c2e0640415d316483c19cb9b",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q19": {
+    "runId": "7bdcaccd-9b9f-4eeb-adb0-1d9a937cc788",
+    "responseSha256": "fd36d92d568e9545ac83510311ce29a6279a4d012dae950ea5813a03ba60c81c",
+    "outcome": "PASS",
+    "reason": "Identifies the daughter as Medicaid-covered, or unambiguously affirms her named Medicaid coverage in context. The combined daughter/coverage item answers both parts; child-reference setup is valid where required. Does not assign Medicaid to the uninsured adult.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q01": {
+    "runId": "0521710b-36a5-423a-a954-ef34749f4a00",
+    "responseSha256": "69c8fda97aee529a4bc97cac53cb987bbc705a9283b896ca1422927ce0a8b933",
+    "outcome": "FAIL",
+    "reason": "Denies having children, contradicting the defined young daughter and failing to answer her Medicaid coverage.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q20": {
+    "runId": "59ccd769-35fd-409c-89db-3146dc058f03",
+    "responseSha256": "8090c678a1d8ce8447c2665c47382256d80e4d6ef934caa152bcf0df381861f1",
+    "outcome": "FAIL",
+    "reason": "Denies having children, contradicting the defined young daughter and failing to answer her Medicaid coverage.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q05": {
+    "runId": "5c74a349-29a1-487c-8fac-1f323f86413f",
+    "responseSha256": "5367c868f98f34a1a45fe48e81f2a483e70be434bbde4ab7d447c24c25a629cf",
+    "outcome": "FAIL",
+    "reason": "Does not answer the daughter's defined Medicaid coverage; invents involvement of the patient's parents and uncertainty about the insurance arrangement.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G10-Q17": {
+    "runId": "308f4dbb-d756-4e36-a8f9-b0559ca735fa",
+    "responseSha256": "d0f11fc8e85f3de31b991c151b730cdd44d874f478fc9c20a7eae51fbde60854",
+    "outcome": "FAIL",
+    "reason": "Despite a valid daughter setup, denies/expresses uncertainty about her Medicaid and invents an unchecked eligibility process. The daughter is defined as Medicaid-covered.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q03": {
+    "runId": "2fd39765-55ab-4612-bba2-0f471d716693",
+    "responseSha256": "a21dceb8fb008b6a46ef41231a997e6e7c1a662412283c9c2cca711ee1612882",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q04": {
+    "runId": "17e30597-1442-4435-b900-1bcd0ab31041",
+    "responseSha256": "199dfaadb60fd26386f02147d2063b96d21eb61196c1916f576a29be6775a208",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q05": {
+    "runId": "9314aae0-5730-4051-8468-c2d5de01d246",
+    "responseSha256": "faaad4ef7ca4b4cb54d79366357204f9761fbd54f705d0268ff11bc42e5cd4aa",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q06": {
+    "runId": "b3db3cda-39bb-430e-9884-ce02db7b811e",
+    "responseSha256": "956e6cb49c385662f279382ca6107dd55e18f3d428acb105fb7b651812fb7d91",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q08": {
+    "runId": "e124a4a6-a969-4b9f-947b-9b9a16ac16cd",
+    "responseSha256": "418a52b3afb69158f329e0fee35830225bb51c91065eb0720042031970249fcb",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q09": {
+    "runId": "e92ab9ee-fc09-48c3-ae15-c633673518f7",
+    "responseSha256": "fca4489c91ba1c1f8c3d259734afd09e4bfd9ae1514b097adfc7d81ac22fe8f1",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q11": {
+    "runId": "4c477d2e-3ad5-423b-b787-6d60ca6ec9d7",
+    "responseSha256": "66971f34e3f2216dabe279a512c73cb6cc85b5d8d5d9d99f481b5750866e68b0",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q12": {
+    "runId": "547fd3ef-f541-49c0-b3b1-a2f0733d22da",
+    "responseSha256": "6c447f3be717d4487aa9ad20c4b24451df5243c6451c62046c57c9a9ccf0cb5e",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q13": {
+    "runId": "e4973d17-4085-4c09-b7f3-a6376302021e",
+    "responseSha256": "62ec0b7e53249b8a02ef691e6f1b81d4c681fbe680d36b22fdef3ffd5d74968a",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q14": {
+    "runId": "42cb3cea-80b4-4f89-a0e6-c4207ffea210",
+    "responseSha256": "33336a97de98415a20863d1dd7e7f7301117b59884de0b7427d3c37a41df1e94",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q15": {
+    "runId": "e2d61763-437c-480b-97e6-8dff65e19012",
+    "responseSha256": "9af2fb2e2d07fe48180af221a27da1bdb605875e640db02b879956b48c52f174",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q17": {
+    "runId": "3395c98c-658f-4681-8097-68cf6c9ebf1a",
+    "responseSha256": "04b08996b35c6cb55f8f2f3330809fbbf0353d059bb6b9b9789eda5a0892ea05",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q19": {
+    "runId": "ba87091d-fa74-4042-a2ce-e8e81b908c69",
+    "responseSha256": "b6b21a977898ae8e61accabe28899a64e2444eff62932079bac6de5a8fd27bc4",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q20": {
+    "runId": "eddcc026-5f31-489d-9aea-73b005dc0873",
+    "responseSha256": "bd3a2c024ef09dac4ac103f5df0eb31cc8e9c440e531a66890b56c5c43c1fb8d",
+    "outcome": "PASS",
+    "reason": "Expresses the preference for parent and daughter to receive care together at the same clinic, directly or through unambiguous contextual assent. Daughter/both context was established; convenience explanations do not impose an absolute refusal of separate care.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q01": {
+    "runId": "fd68e872-e129-40ab-85c3-985e8afaa068",
+    "responseSha256": "55e15e99482db033b5a2de0026cebde7fc8b410d81b15775a8e61c97542f9469",
+    "outcome": "FAIL",
+    "reason": "Correctly prefers shared care but invents an existing clinic/doctor attendance history ('already see her doctors there', 'usually go', or 'already go there'). Prior clinic attendance is unspecified.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q02": {
+    "runId": "0b031b28-a97a-42c9-8ae8-cbff713a00ff",
+    "responseSha256": "61cf7690bf1ea097208df908e62909dfd7d7e5d380caeffaa5e5cd65d7c072e0",
+    "outcome": "FAIL",
+    "reason": "Correctly prefers shared care but invents an existing clinic/doctor attendance history ('already see her doctors there', 'usually go', or 'already go there'). Prior clinic attendance is unspecified.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q16": {
+    "runId": "2a5c10a4-b757-4c29-9dfb-994cdb255125",
+    "responseSha256": "54421e0bd5568e60d56ff638c293320d102f10cdb0d29107b94613d65feb10e0",
+    "outcome": "FAIL",
+    "reason": "Correctly prefers shared care but invents an existing clinic/doctor attendance history ('already see her doctors there', 'usually go', or 'already go there'). Prior clinic attendance is unspecified.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q07": {
+    "runId": "c925808c-6555-4145-b786-39cf2e737e60",
+    "responseSha256": "1e69b4ecc403b05368bc3d8fa173a93c1895038e870fb303fad8ec5763ca1630",
+    "outcome": "FAIL",
+    "reason": "Does not answer the shared-clinic preference despite established daughter/both context; substitutes tooth location or an extended clinical dental-history answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q18": {
+    "runId": "d7724e26-4a6c-4a51-80a7-c69defde3dd9",
+    "responseSha256": "a18503e55cb79353c598d2e7cb3833d8d2f3c07744b975dd508d7d251822faa5",
+    "outcome": "FAIL",
+    "reason": "Does not answer the shared-clinic preference despite established daughter/both context; substitutes tooth location or an extended clinical dental-history answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C03-G11-Q10": {
+    "runId": "74715c55-779e-46b5-9137-a6c7e25bf091",
+    "responseSha256": "ba8446fe773e441469365354677bd029fcda6360e960d085e1add578761c312d",
+    "outcome": "REVIEW",
+    "reason": "Affirms shared care but 'the same clinic where she's on Medicaid' could imply an unspecified existing clinic or merely a clinic accepting the daughter's defined Medicaid. Meaning of the extra clinic assertion is ambiguous; retain for human inspection.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q01": {
+    "runId": "e87b8a56-76c3-4b2c-a948-2070a565bb58",
+    "responseSha256": "5ab5e3f28af280b37f9008a7c07ffc26ae558d1a1bd5080638c8ea213925adac",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q02": {
+    "runId": "14371899-01a0-4ff1-9623-9fe5e15702d5",
+    "responseSha256": "14c86e10572e0f80e12035ce494095ed09f18f1bcbf1083640c0536946238265",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q03": {
+    "runId": "0c3ac12c-f71b-44fc-a6d5-f0f4f9548659",
+    "responseSha256": "14c86e10572e0f80e12035ce494095ed09f18f1bcbf1083640c0536946238265",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q04": {
+    "runId": "7bfe83ce-84a3-42e8-a2b4-544220dbda5e",
+    "responseSha256": "fc1a6f9c426ee56c50cc81392520cf37fccd4d1e0b514b269582a60a6df8090d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q05": {
+    "runId": "1e7dca4f-f5b8-4adb-b5ac-6589562cfa55",
+    "responseSha256": "fc1a6f9c426ee56c50cc81392520cf37fccd4d1e0b514b269582a60a6df8090d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q06": {
+    "runId": "9c5c6407-9433-431c-a6af-1512701acbfa",
+    "responseSha256": "5ab5e3f28af280b37f9008a7c07ffc26ae558d1a1bd5080638c8ea213925adac",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q07": {
+    "runId": "de27e450-30b0-4c38-8b67-5df37a93160d",
+    "responseSha256": "5d149ede51b1c5821617603f0a3f46e5cb45499632aed4ed154ee69b991553ac",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q09": {
+    "runId": "a50b6f49-ffbd-406a-9238-fcd9438fd161",
+    "responseSha256": "ba7ff88ceab532a271a2ca87784dd0841f2d327357cb898ad27d0c07a5edca13",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q10": {
+    "runId": "74a08c8d-2f06-440a-b9c3-e77c77a500c1",
+    "responseSha256": "3482f8f07a139050b53512ba4375bad1b0d1d6106a092d685655d47a70028fe7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q13": {
+    "runId": "163acf71-a7cc-4df1-9e9c-193ca1eaedc9",
+    "responseSha256": "fc1a6f9c426ee56c50cc81392520cf37fccd4d1e0b514b269582a60a6df8090d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q14": {
+    "runId": "8c67253c-efea-4dd5-842a-43dafb033755",
+    "responseSha256": "14c86e10572e0f80e12035ce494095ed09f18f1bcbf1083640c0536946238265",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q16": {
+    "runId": "05919a42-b69e-4375-a7ff-90b9fcf4d8f8",
+    "responseSha256": "14c86e10572e0f80e12035ce494095ed09f18f1bcbf1083640c0536946238265",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q17": {
+    "runId": "ca715e30-f225-4710-b9af-6e1884e5f65a",
+    "responseSha256": "fc1a6f9c426ee56c50cc81392520cf37fccd4d1e0b514b269582a60a6df8090d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q19": {
+    "runId": "de19c6d8-4bd9-47a1-bfeb-1d7792fa0890",
+    "responseSha256": "5d149ede51b1c5821617603f0a3f46e5cb45499632aed4ed154ee69b991553ac",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q20": {
+    "runId": "460d9584-c5d4-4e74-8ec3-a67cec4a2e5d",
+    "responseSha256": "92f5aaf20d5027099cfc60a58c85ffafc2dbee639cfe2b4c16879d2045468b86",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Duval County as residence. Any appended 'Do I need an antibiotic?' is a catalogued patient question, not an assertion of treatment need; the additional five-day pain fact where present is defined and does not replace the correct residence answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q08": {
+    "runId": "348409fc-4fc6-4129-b28e-5d1f8730acca",
+    "responseSha256": "512ed5c3a95e21ad80fc8b1528aec035fc7502d4dcd0bf2fc4187c027e3efd4d",
+    "outcome": "FAIL",
+    "reason": "Does not supply the defined Duval County residence; substitutes tooth location, unknown-area wording, dentist follow-up access, or a city-versus-county misconception. Appended patient questions do not answer residence.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q11": {
+    "runId": "6f2d3157-0843-4328-9530-ead4e46acd3f",
+    "responseSha256": "a64894d2af193e791b4dee07d1cfd84c2d40828c59f63d41cd464283f30c7b60",
+    "outcome": "FAIL",
+    "reason": "Does not supply the defined Duval County residence; substitutes tooth location, unknown-area wording, dentist follow-up access, or a city-versus-county misconception. Appended patient questions do not answer residence.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q12": {
+    "runId": "8f093a97-9ee9-4e0e-984c-9f36e0e27903",
+    "responseSha256": "c9d76e68468540377ee1299c9d5773ad3badcaa89797b19da78e565dac5c1f24",
+    "outcome": "FAIL",
+    "reason": "Does not supply the defined Duval County residence; substitutes tooth location, unknown-area wording, dentist follow-up access, or a city-versus-county misconception. Appended patient questions do not answer residence.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q15": {
+    "runId": "811bf162-3816-4363-954f-7f75209ffffd",
+    "responseSha256": "512ed5c3a95e21ad80fc8b1528aec035fc7502d4dcd0bf2fc4187c027e3efd4d",
+    "outcome": "FAIL",
+    "reason": "Does not supply the defined Duval County residence; substitutes tooth location, unknown-area wording, dentist follow-up access, or a city-versus-county misconception. Appended patient questions do not answer residence.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G12-Q18": {
+    "runId": "8512c4ca-c56f-4cff-9aa0-6c3c2117f5f4",
+    "responseSha256": "a08c316a62e8e08fef4dc24eda6b6cd14d3321778c2dcead8322dfe0dfb62fd7",
+    "outcome": "FAIL",
+    "reason": "Does not supply the defined Duval County residence; substitutes tooth location, unknown-area wording, dentist follow-up access, or a city-versus-county misconception. Appended patient questions do not answer residence.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q01": {
+    "runId": "85feaca0-66b9-4cfb-9897-765608848997",
+    "responseSha256": "a9046f53fb8b08797b071ffcd76f9565c77bd512329ae69444854a794358426c",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q02": {
+    "runId": "177e33cc-64b7-4e62-8a7e-886fe858cbcc",
+    "responseSha256": "4502279e49633ba860bc5a192da470e0cbe3cae8fbe90879cae8bf2cbd1ab698",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q03": {
+    "runId": "5819d3c5-601c-4627-b40d-d5e15d099142",
+    "responseSha256": "eea3a665b57857e046f1061dd64eccd7be8a6aa7a1803fff2f0d9c3f8b1135d2",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q04": {
+    "runId": "ff551901-6ad7-45f8-8908-48055ec99776",
+    "responseSha256": "688f086b81e7ca3e639d1bb0b4663a7cbb91e0675deba4e43a6379de5f62f39f",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q05": {
+    "runId": "afb36d7b-5040-44ad-b7e9-721503769a1c",
+    "responseSha256": "a9046f53fb8b08797b071ffcd76f9565c77bd512329ae69444854a794358426c",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q06": {
+    "runId": "bafddf1b-c3f2-4559-a632-65144f6ac277",
+    "responseSha256": "9f85538af7bcc156346b2c653a73101cc548847ba95db359e64c2f5dfd0a1890",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q07": {
+    "runId": "ca9126a0-92c2-4fbc-ba4f-0fbb97fe6079",
+    "responseSha256": "eea3a665b57857e046f1061dd64eccd7be8a6aa7a1803fff2f0d9c3f8b1135d2",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q08": {
+    "runId": "2ed46303-520e-46d2-baef-a8d7164de22c",
+    "responseSha256": "f1cfebfc0e29e3516c6be5a94d664609dc9031e8937a4e48b14ecede148bcd1b",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q09": {
+    "runId": "b057e2f7-8409-4d5c-83e1-a2d9175d9ce1",
+    "responseSha256": "3098e23fd652eb35dc4c06582eb1a8359733b90d8136e3afac25e5007dbdbd05",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q11": {
+    "runId": "2c6c22ea-126d-4db7-ac59-d264968e5e0f",
+    "responseSha256": "3098e23fd652eb35dc4c06582eb1a8359733b90d8136e3afac25e5007dbdbd05",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q12": {
+    "runId": "a29ecb98-ab25-464a-9ab9-77d032eeaadf",
+    "responseSha256": "3098e23fd652eb35dc4c06582eb1a8359733b90d8136e3afac25e5007dbdbd05",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q13": {
+    "runId": "84451b76-d571-4a61-9009-049bca59d6ca",
+    "responseSha256": "5411dcea0e4124dc2f7b873ec87ebd130194fcaba1be02fa0c029a68f654d92e",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q14": {
+    "runId": "46636a33-656d-4340-82cd-03dce680acba",
+    "responseSha256": "fd380abbc7cf9ffca74383c7c472122c16ddbf5663e4a4f8c3a023f0d1ab40bc",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q15": {
+    "runId": "7a7f365b-cf3b-4a52-9d79-c9915ecc93b4",
+    "responseSha256": "77a9d8688b54c7a8e3356a24df69887cadf52e4be800168ff4793a0be0336341",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q16": {
+    "runId": "3b064e1f-2416-483d-b017-acf632a4cd39",
+    "responseSha256": "a9046f53fb8b08797b071ffcd76f9565c77bd512329ae69444854a794358426c",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q17": {
+    "runId": "33771f98-095a-4948-ad0b-d30b016d338a",
+    "responseSha256": "3098e23fd652eb35dc4c06582eb1a8359733b90d8136e3afac25e5007dbdbd05",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q18": {
+    "runId": "d5cb3c9e-0709-4443-9146-028c57d94f98",
+    "responseSha256": "77a9d8688b54c7a8e3356a24df69887cadf52e4be800168ff4793a0be0336341",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q19": {
+    "runId": "dd34fcac-aea0-4e28-8ccb-51b9c07d46a6",
+    "responseSha256": "4502279e49633ba860bc5a192da470e0cbe3cae8fbe90879cae8bf2cbd1ab698",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q20": {
+    "runId": "ddf53e2a-07ef-41be-b59e-56ff5f83624b",
+    "responseSha256": "d87c8f7123d8fe024487b5ee1fe20dcbfc6216a1f9fa7247224cfd35e779f15c",
+    "outcome": "PASS",
+    "reason": "Explicitly or contextually denies insurance in the dental-care setting, correctly establishing uninsured status. Appended catalogued patient questions and defined pain/filling/access details do not contradict or replace that insurance answer.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G13-Q10": {
+    "runId": "947d93df-caeb-452d-aac2-b9ee166eb720",
+    "responseSha256": "5afb238f92c82e50344f838cba22b67af50a09198048043747f615924d5ea7b8",
+    "outcome": "FAIL",
+    "reason": "Expresses uncertainty and claims coverage has not been checked rather than stating the defined uninsured status. The appended antibiotic question does not answer coverage.",
+    "reviewedAt": "2026-10-17T14:52:22.955Z"
+  },
+  "C04-G14-Q01": {
+    "runId": "cfcae219-00d5-4c97-8981-3a4e58e78286",
+    "responseSha256": "752be7eb6bdb04ccac5ad4765654176abb2c81b84bae4ef1a1f9c35fcc8c8f8a",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q02": {
+    "runId": "f62d471b-5afa-480d-9e51-cda75a20aacc",
+    "responseSha256": "2b3716f982825c1f3be83b4b58c9fb6bee467f1c00a3283194fc88ae88972f0f",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q04": {
+    "runId": "c5fdd34b-4a68-4f1f-a22d-c79e602b15d3",
+    "responseSha256": "d5908282d99428f45d0b8a9f8a1e19a5f87d87fd579a488885afd0055d9d37ef",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q05": {
+    "runId": "6878cede-a2ad-47a2-abc5-32cb3faf0d42",
+    "responseSha256": "2b9b9870d68883845cf893f085b49703fe2cfa568e6390e0501277853abb7e36",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q06": {
+    "runId": "70e249ea-a250-46f6-bd92-b3872acfdcc3",
+    "responseSha256": "fd086a3bf61f152a3635de1586a7f5bd43e4e47dab362d49d881b80718a585f8",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q07": {
+    "runId": "8b42785a-1fa9-4c6b-9070-2e6f85eacac4",
+    "responseSha256": "41c817fbe1c77921fe9d11c864a3189e55f70a9da49f3b38ef0c6b92c62e8689",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q08": {
+    "runId": "bab0434f-eee3-4d69-8836-eab0c9281f31",
+    "responseSha256": "02b5fb236a6fd4e9619a652c9b98d9285f4633ace9309bd2149a017faeb7fdaf",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q09": {
+    "runId": "67836435-a543-41f1-a0aa-9f5af4aa6955",
+    "responseSha256": "e8e74cd532c0bb59349eada7eac310f204b591f88fe4530afaf9b11d1fe51323",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q10": {
+    "runId": "eb90a96a-03b4-4268-a8c0-fdf99bcaae89",
+    "responseSha256": "8c1cada081c3f34651aa4a2b9d6d495ccf6f44e468a6a3de51b2a9223646e2c3",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q11": {
+    "runId": "bc5a1b16-bd4c-4484-8fa1-942dbbf354b0",
+    "responseSha256": "76be855d31c54418daeb6eac00f50b583fb0b1d9a1c55b32ea331ba6f24ba8d9",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q14": {
+    "runId": "93300e4e-0c57-4596-a5d7-fa08a405d6ed",
+    "responseSha256": "245766f9a16ca5b63e7c50463317c0164e0ba1d5d2b5fe3cb74343f44f172d32",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q15": {
+    "runId": "562f1fb4-67c4-4307-a193-7eee647bdfed",
+    "responseSha256": "174c9e9ae598640abcf27a6a90a93568c2272672db82b2f8c8083c6e5841038a",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q16": {
+    "runId": "c5426ac5-ebed-4863-997f-19d62f42bf39",
+    "responseSha256": "174c9e9ae598640abcf27a6a90a93568c2272672db82b2f8c8083c6e5841038a",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q17": {
+    "runId": "8a67383b-adb9-4d28-960f-f01fe6c97a24",
+    "responseSha256": "2b3716f982825c1f3be83b4b58c9fb6bee467f1c00a3283194fc88ae88972f0f",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q18": {
+    "runId": "57adb78a-c455-48f4-ab62-30db4d29b446",
+    "responseSha256": "7874635e14298c1a7f4ea1f4abff8662c02ee8f682d82ab318397a1f3174c069",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q19": {
+    "runId": "acb220e6-7af6-4810-9422-437d42b57831",
+    "responseSha256": "85ed9078817bd8e84e8e93faf2900522f0f353b25f7566b90c737373422ea4a8",
+    "outcome": "PASS",
+    "reason": "Expresses openness/willingness to consider sliding-scale or income-based fees, including unambiguous contextual assent to the specified option. Does not invent income, eligibility or a monetary limit. Appended patient questions do not change that answer.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q03": {
+    "runId": "b7798674-45d5-49e8-aa62-4abb6ea60da6",
+    "responseSha256": "46a77735c82bb95d07a09a0cbad018508dcb12ccbf5d138697d50fb948ba81bb",
+    "outcome": "FAIL",
+    "reason": "Does not answer willingness to consider the specified sliding-scale/income-based fee; substitutes unknown-information wording, dentist follow-up access, or tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q12": {
+    "runId": "787c381b-5ce1-4662-aa16-00410f1dcf3f",
+    "responseSha256": "b4987544db5c3ac0365d590d82129b319c4f450f31f786288771f52f100cfbd6",
+    "outcome": "FAIL",
+    "reason": "Does not answer willingness to consider the specified sliding-scale/income-based fee; substitutes unknown-information wording, dentist follow-up access, or tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q13": {
+    "runId": "273508a1-be19-4a1f-afc8-01d8eb01f40b",
+    "responseSha256": "512ed5c3a95e21ad80fc8b1528aec035fc7502d4dcd0bf2fc4187c027e3efd4d",
+    "outcome": "FAIL",
+    "reason": "Does not answer willingness to consider the specified sliding-scale/income-based fee; substitutes unknown-information wording, dentist follow-up access, or tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C04-G14-Q20": {
+    "runId": "ec591fe5-0c55-43db-a6cf-6380698b741a",
+    "responseSha256": "69fefc33fd5bb97d49311a6a49340d5cd9de0d0f03d964a27397f87fbf400fc1",
+    "outcome": "FAIL",
+    "reason": "Accepts an income-based option but invents inability to afford expensive dental care. Case 04 defines willingness to pay sliding-scale fees, not a separate affordability ceiling or inability to pay higher fees.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q01": {
+    "runId": "4ffd2b1e-e01d-46cc-bb4b-03f37d89a85b",
+    "responseSha256": "3e88c70ba36c8fdb90207758cf1c89ff0c341063400aa4301543e77f67fc3a7a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q02": {
+    "runId": "bdbda0b9-62d0-405e-bc6f-a6b871c3fe62",
+    "responseSha256": "3e88c70ba36c8fdb90207758cf1c89ff0c341063400aa4301543e77f67fc3a7a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q03": {
+    "runId": "3e133a24-c021-4f90-92a5-96d5a765f693",
+    "responseSha256": "83c118e2b38547426f3c4fb6dc733b21681bb32f6117ceea16c675c7b2b0aec7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q04": {
+    "runId": "112f6530-9d26-4ebf-800a-cc688d8dc971",
+    "responseSha256": "46e656640006c5f6b8f10fc0379cb06628a0a0fa001cd89c262c7edff33d274d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q05": {
+    "runId": "1d7c5be8-27b8-4da8-8c7e-478efe10b7c1",
+    "responseSha256": "46e656640006c5f6b8f10fc0379cb06628a0a0fa001cd89c262c7edff33d274d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q06": {
+    "runId": "4b6cdbca-45bd-4a87-97b4-65ede2fdd24b",
+    "responseSha256": "83c118e2b38547426f3c4fb6dc733b21681bb32f6117ceea16c675c7b2b0aec7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q07": {
+    "runId": "d64bbcd6-0e1e-4024-983e-ceaadd8ea11d",
+    "responseSha256": "83c118e2b38547426f3c4fb6dc733b21681bb32f6117ceea16c675c7b2b0aec7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q08": {
+    "runId": "e5af299c-13dd-46d1-95f0-3695e8e364fc",
+    "responseSha256": "17105e5b22f22655227aeda6e771360a8ebaab66ae55f20e663767bdf003b59a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q09": {
+    "runId": "6f4a7ac0-6382-477d-9f9c-e51c47eb233b",
+    "responseSha256": "46e656640006c5f6b8f10fc0379cb06628a0a0fa001cd89c262c7edff33d274d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q12": {
+    "runId": "a4eb337b-2f6b-4e49-9876-29587252d75b",
+    "responseSha256": "46e656640006c5f6b8f10fc0379cb06628a0a0fa001cd89c262c7edff33d274d",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q13": {
+    "runId": "d8161fac-91ee-49db-84e2-e3bae6be2efc",
+    "responseSha256": "3e88c70ba36c8fdb90207758cf1c89ff0c341063400aa4301543e77f67fc3a7a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q14": {
+    "runId": "c07ea096-12a8-46a4-9c15-6ccca989825c",
+    "responseSha256": "83c118e2b38547426f3c4fb6dc733b21681bb32f6117ceea16c675c7b2b0aec7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q16": {
+    "runId": "c357c0a8-9847-42ee-87c6-90f0ba1499c5",
+    "responseSha256": "83c118e2b38547426f3c4fb6dc733b21681bb32f6117ceea16c675c7b2b0aec7",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q18": {
+    "runId": "d957ef81-ab39-465f-9fea-b904475cfc0b",
+    "responseSha256": "3e88c70ba36c8fdb90207758cf1c89ff0c341063400aa4301543e77f67fc3a7a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q19": {
+    "runId": "4ee445d6-4f41-40c0-b2b5-e68815f3d52a",
+    "responseSha256": "fc3a5350d79d048165f5be776e84d372a7095b981382b2b4c663a19991cc5427",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q20": {
+    "runId": "3de2edff-ae2b-457b-8c6f-0378ddeca4b8",
+    "responseSha256": "3e88c70ba36c8fdb90207758cf1c89ff0c341063400aa4301543e77f67fc3a7a",
+    "outcome": "PASS",
+    "reason": "Identifies or confirms Marion County as home in the residence-question context. A county-only answer or 'I'm from Marion County' directly responding to current residence is accepted as contextual residence identification.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q10": {
+    "runId": "2b11253c-8681-4d36-aa78-cd344b8b3053",
+    "responseSha256": "37da61b87e64b8b77b1dbb287c2fd547483832bc8e6f40992fd9d081429a2144",
+    "outcome": "FAIL",
+    "reason": "Does not answer the home-county question; substitutes a refusal/unknown clinic-search answer or clinical pain/tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q15": {
+    "runId": "231f19b2-c0cb-4341-a9d6-1ee8a8d03c2e",
+    "responseSha256": "fd930ea47f8da74b392f221be798508f19a417b4de4288b223d8880a8c56e511",
+    "outcome": "FAIL",
+    "reason": "Does not answer the home-county question; substitutes a refusal/unknown clinic-search answer or clinical pain/tooth location.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q11": {
+    "runId": "bf4d25db-80ff-46c5-9722-90bce09d65a0",
+    "responseSha256": "8e0bbbb5e8cdc3155f610e4e08bf194d950c34683462f7d6f7f7842ebfe28546",
+    "outcome": "FAIL",
+    "reason": "Invents Oak County as residence instead of the defined Marion County.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G15-Q17": {
+    "runId": "5977d34a-73b3-41d7-a13f-886abc240fd5",
+    "responseSha256": "a83dcdff64e9107748ca32e46364c4e79296ed47eede44d87d1d45c3af44f5a7",
+    "outcome": "FAIL",
+    "reason": "Denies the defined Marion County residence and invents Springfield as the home city.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q01": {
+    "runId": "5a2b020a-a72c-4bab-9af6-33d20d14c144",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q02": {
+    "runId": "1101c578-0650-413f-8f86-91406b3f0344",
+    "responseSha256": "cbcd746266165c6cf841b1d213219203535426bf8dd880ce7245dadfb3fca708",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q03": {
+    "runId": "c7427aea-b2f0-4595-bbf8-7a35635b01e4",
+    "responseSha256": "ec51a3fdf16324cb28bded981ebd4f9bb47e17c8691f094cbdefaa08cd4c6fd8",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q04": {
+    "runId": "9516183c-9332-4c69-809c-3fce6da01c66",
+    "responseSha256": "8dcf7f76ad0a9c95a3cfe399fe710e923a25918d52ba798798967013bf3d7143",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q05": {
+    "runId": "bebf19fa-a2d6-4e86-9799-88e07890d487",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q06": {
+    "runId": "591bb35f-77df-4bdb-b55f-3cf7be184c7f",
+    "responseSha256": "6280b9d1f3c27cd9c6573433d34ef55d46ddfaa22ad2c5b93318a3b21b08952f",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q07": {
+    "runId": "75cbc065-19fb-4442-acb4-d9a6664fc1d0",
+    "responseSha256": "926ef930d51e8754a29517a0d5b38ebc440a20870fa14c1c07aca20f66f0ecfe",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q08": {
+    "runId": "85fedd2b-4d59-417f-ac23-96c0b6a8380c",
+    "responseSha256": "250fd0b694d2c94ffcfe6c5469421335bbbd44067762a206a734891d2b68deaa",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q10": {
+    "runId": "d9bf0e32-467c-4cf3-bc86-7482055b430d",
+    "responseSha256": "fac48e1c38fb5e27235ec1dc108f425617e1f26b383444adae0cfaeb8900f0d1",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q12": {
+    "runId": "fe3fef19-dd92-4bd7-97ea-20507ae3c8f3",
+    "responseSha256": "ef223462ce4d2b28387bf071322c605c6cdf0d9efbf387ee5bd67269c1ef6f5e",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q13": {
+    "runId": "5a21c4f7-ed1b-4be9-94a3-cda20a3617bf",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q14": {
+    "runId": "1f04a5b0-5a90-4f8e-afe2-bee7c27021a6",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q15": {
+    "runId": "a545b053-9221-47bf-bc67-8c31910542cf",
+    "responseSha256": "827a196fe7028e2985f6ea1f63700501cc7d27e7a0e0b8f9e93399174231ec26",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q16": {
+    "runId": "47f138cf-8531-4d41-9532-ae7fe9f68439",
+    "responseSha256": "ad9e018d688d9965467096676cb518353710b95323c8666407f7050c988d399d",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q17": {
+    "runId": "149181ed-819e-41f5-bac7-8bc043383447",
+    "responseSha256": "ec51a3fdf16324cb28bded981ebd4f9bb47e17c8691f094cbdefaa08cd4c6fd8",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q18": {
+    "runId": "0a0ef95a-8114-4245-a2f6-0d3f217da8cc",
+    "responseSha256": "827a196fe7028e2985f6ea1f63700501cc7d27e7a0e0b8f9e93399174231ec26",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q19": {
+    "runId": "1478dd59-e4e2-40b4-ae2d-2ae4c3079eff",
+    "responseSha256": "d8e9b8ec99d9afbe74d75904532bec6730912ae35523cfc26d554b14fe0fe078",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q20": {
+    "runId": "a77339e5-8fb7-4b03-8b61-ac31fc51c427",
+    "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500",
+    "outcome": "PASS",
+    "reason": "Directly or unambiguously contextually establishes no current insurance. Any statement of inability to pay anything agrees with the defined Case 05 financial facts; no other person's coverage is substituted.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q09": {
+    "runId": "6e34a173-1d10-4a41-b7c4-a6fde3baf33f",
+    "responseSha256": "121b14fbb1790d5438e6c0f2d375e576b15457e330b2041e4e431028c0d3470d",
+    "outcome": "FAIL",
+    "reason": "Hopes insurance can be used instead of stating the defined uninsured status; does not answer the actual coverage question consistently with the case.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G16-Q11": {
+    "runId": "b35f2e8c-5e67-4f89-ad21-41fa2c10e9aa",
+    "responseSha256": "fd930ea47f8da74b392f221be798508f19a417b4de4288b223d8880a8c56e511",
+    "outcome": "FAIL",
+    "reason": "Substitutes clinical pain/tooth location and a patient antibiotic question for the requested uninsured status.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q01": {
+    "runId": "bfd7cb44-22c8-4329-babb-c7b28cef2eb2",
+    "responseSha256": "ea0f7d638554b5887da41ef5b95cd88d662d459e25c3b70340108b17c35a7b3a",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q02": {
+    "runId": "6efcc740-da2f-483d-9b2a-2460288a79b6",
+    "responseSha256": "20ced83da4516414b63a3e82d74f1fa64762e14dc72875736260beeba502a364",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q06": {
+    "runId": "eab22a3d-f22b-4bea-ac0a-34a9ea818888",
+    "responseSha256": "984cf453bc4ee05a9c29ac3a6f7cc5e0acce0924f3e2c79a3f7babdcd123628d",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q07": {
+    "runId": "98053fd8-2784-44e4-b50a-d5ad25aa274e",
+    "responseSha256": "cb0b37832b04a87e41d2f8c13985374e981f70c2d1121fb49034bcd199b99986",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q08": {
+    "runId": "5d654203-aa2b-45b2-87ff-5a519041a90c",
+    "responseSha256": "eb9c09737a85f14b019e210e795c83d005794514556298f312c3edfbf7076647",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q09": {
+    "runId": "5c3f2541-a4ea-4777-8b81-80819ab93acf",
+    "responseSha256": "c5cd41912d679bda0ecd862781620cf357a6295341d648f31cb72b178fcea915",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q10": {
+    "runId": "c45c8054-bc53-476d-9a03-42632906cf51",
+    "responseSha256": "bf6a3cbcd594d1e349300ab465827e210278d3d31b5207d38c5d9673ffd8482a",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q13": {
+    "runId": "b1556a76-e60a-45b7-9f38-5d9c9ac8119d",
+    "responseSha256": "4d08bd23b7aa444ca40fbe95ea338145545eceb98bd83c2318cf9479848bbdb0",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q15": {
+    "runId": "4cbf5c5a-3a4b-430f-a480-a3c85bcaf9e5",
+    "responseSha256": "9b6eebdfd3510c9d986142b476e7b55fb09d86a5da62d18f533a92b3e5cfc3e1",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q16": {
+    "runId": "51ff8f5c-8e64-40d6-9e16-b5369fc1c07f",
+    "responseSha256": "028e2c2d56cbfc57e48884f4f71eee83978f83cf93f8083ac628aa9167f51d54",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q18": {
+    "runId": "24d9d7e1-4e34-4cdb-9e9d-3cc9c19f54e6",
+    "responseSha256": "81c6da87abb6de26ceeebb805fa15d355b2a7ca8a741ce63d384d3e5228da6b8",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q19": {
+    "runId": "b734ccac-39d1-4dc3-8273-fc847acd77d7",
+    "responseSha256": "ce9089ed1c347ae1029c3d51a9ec5e3ef30d67af7b18cb23bdef499377a36b0e",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q20": {
+    "runId": "d036ab18-2c3f-4026-934e-824040fc4632",
+    "responseSha256": "edb9c02320eb0d775e2b90c85a2f67441b3f117ade1e9024dfd973db5a9f44d4",
+    "outcome": "PASS",
+    "reason": "Denies ability to pay the requested fee/any charge, or affirms need for free care in context, consistent with zero dental payment ability. 'I wish I could' contextually denies ability to contribute a small amount. Any generic uncertainty preface is resolved by the explicit inability-to-pay clause; unemployment/insurance details are defined.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q03": {
+    "runId": "543a2082-7677-4895-85f0-f969a95ce4a7",
+    "responseSha256": "6f90a2feca26b7574ab79d90b9945dff8e4f21deabcd49b20c9dd1b70b77cc6e",
+    "outcome": "FAIL",
+    "reason": "Leaves open or accepts paying a reduced/small fee instead of communicating the defined inability to pay anything. 'Can't afford much' or willingness to take low-cost care does not establish zero payment ability.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q04": {
+    "runId": "230c2dc4-c3e0-44cb-9568-576f1b69c734",
+    "responseSha256": "2d8d5dd9f12e6c3910aa2fb0eb990a8c88467030643b73b3b9bba85d7e077d53",
+    "outcome": "FAIL",
+    "reason": "Leaves open or accepts paying a reduced/small fee instead of communicating the defined inability to pay anything. 'Can't afford much' or willingness to take low-cost care does not establish zero payment ability.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q14": {
+    "runId": "18e7d259-65bb-4709-ae2e-15d44b6c7177",
+    "responseSha256": "96fbc3af1efd48c97cefc4b55080bb0c0d91494664e95b248471b5ef501e2fcc",
+    "outcome": "FAIL",
+    "reason": "Leaves open or accepts paying a reduced/small fee instead of communicating the defined inability to pay anything. 'Can't afford much' or willingness to take low-cost care does not establish zero payment ability.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q05": {
+    "runId": "63929d95-749d-415b-8039-29b7db43c7fb",
+    "responseSha256": "f6932004b9d7da9ca3c538258d117684b9c03b68ea53a4d20a46abe78c240996",
+    "outcome": "FAIL",
+    "reason": "Does not answer payment ability; substitutes pain discomfort, a general hope for affordable care, or a patient antibiotic question for the defined inability to pay anything.",
+    "reviewedAt": "2026-10-17T14:52:22.956Z"
+  },
+  "C05-G17-Q17": {
+    "runId": "6a143bd9-9180-47d0-bd5d-2000959b2899",
+    "responseSha256": "7f9538fe224e7cfdf18629c7dc9a34c010e2bc0e96ce9df763a875c67f19ebce",
+    "outcome": "FAIL",
+    "reason": "Does not answer payment ability; substitutes pain discomfort, a general hope for affordable care, or a patient antibiotic question for the defined inability to pay anything.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C05-G17-Q12": {
+    "runId": "e27f3d4d-da6a-4a6e-9e15-286833a189b4",
+    "responseSha256": "a2171b0194906f4261ec8f943a4095301ad5924ca5687ac7f5b64e29f969a45b",
+    "outcome": "FAIL",
+    "reason": "States inability to pay but omits the requested free-clinic preference. This combined question explicitly requires both preference and ability.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C05-G17-Q11": {
+    "runId": "72bfed0c-0fe7-46b5-bf2d-28f85d25af87",
+    "responseSha256": "c0896025be538aba4f04d0b1e2a422d0fa757206338caedcb5aa4269f3da91fe",
+    "outcome": "REVIEW",
+    "reason": "Combines uncertainty about affordability with 'I don't have any money right now.' The latter suggests inability to pay, but the answer does not clearly commit to whether even a modest charge is unaffordable; retain the ambiguous meaning for human review.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q01-PAIN": {
+    "runId": "71961595-6837-46df-bd09-6c4a0a469f57",
+    "responseSha256": "548e632bf0b7270f69756ae6e4e3e6c71ea7792a90eec065409ff79f7ed2d274",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q02-PAIN": {
+    "runId": "70d04377-ae1b-40dd-ac72-5f28992207dc",
+    "responseSha256": "3ba8ca182425f2da237cb04345e22b84d63037bc9ac403b6363a43254267480e",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q03-PAIN": {
+    "runId": "9754b7c5-b242-44aa-bfa0-24e737c75795",
+    "responseSha256": "85ef3321079efd267a520777d0f260943a693b9c81910056ffd4f3397fd14eb5",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q04-PAIN": {
+    "runId": "d5976b6f-ce4d-489f-b95f-3e99c6374fbe",
+    "responseSha256": "4ad9f3628f2ac99578786a71f4d18bc937abe371272177504a5dfefdd2de8db3",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q05-PAIN": {
+    "runId": "58c5c00c-2aad-4082-8d64-8de01477b088",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q06-PAIN": {
+    "runId": "771cccf9-4a66-4fb9-b337-ed2792f43ad1",
+    "responseSha256": "c467f5a29973e1f0a4af9795b5b693d45ddeefdbc64794dbe24b4d47dce1a0ab",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q08-PAIN": {
+    "runId": "109d72d0-6b15-4d26-b5c5-e2c78214227f",
+    "responseSha256": "55f5bd3fa1ff4b2bb7394c949b6810480497a1f4dac7a08336dd6bffe64994cf",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q10-PAIN": {
+    "runId": "dd77cd37-28db-4ba8-ad46-fdcb24eb82c6",
+    "responseSha256": "2f2aa13d162a9b23be51b8ad98373c6722fe4850991cbbf7ce6fbcce6cdc6783",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q11-PAIN": {
+    "runId": "50e58ec6-a8be-4229-8799-b63fa5806a58",
+    "responseSha256": "d351c3f823313ab32816a9229d345380ab7d95a86d9deedd67d1b7b89bac033c",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q13-PAIN": {
+    "runId": "6b5b169e-2036-444d-af8b-fcfbb900d28e",
+    "responseSha256": "13ea21cb455425c24f14879745aedac1142c1d3fa51e4bb1addc38a83b6bf946",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q14-PAIN": {
+    "runId": "6172df1f-786a-4bca-b5f5-55e2d169812e",
+    "responseSha256": "8230528e74514416335a38ff7c2a6357366f134b78912f8b3e9075572a6cc212",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q15-PAIN": {
+    "runId": "17eda520-34eb-4cfe-abc9-3994c4364d80",
+    "responseSha256": "5e0c1bffeced28f16909b34dad792e71036de58ef5a0d8925a1b25bd39a06a43",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q18-PAIN": {
+    "runId": "c251f08e-f488-4f68-8283-d0625a697def",
+    "responseSha256": "b2528d24825966d521a45b977b4c7fcf34fe2afc25a447afcdb360ba1bc5ee2f",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q19-PAIN": {
+    "runId": "cced5a04-6a54-42ed-859b-951b20149e25",
+    "responseSha256": "e2b0f8dee993b18cda7d25de839e6b0ea289cf144e8719d7e448f50db9415e41",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q20-PAIN": {
+    "runId": "d4f483f9-13c5-48f6-b472-7724071f7d85",
+    "responseSha256": "6b370f5001e66a01a21ff3c72cb44fd67cfa5f2061ade7f211009295c1180808",
+    "outcome": "PASS",
+    "reason": "After separately establishing current severe pain, directly affirms the requested travel capability/reliability or willingness without an unsupported limit. Any volunteered smoking/substance/residence facts are defined; they do not replace the transportation answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q07-PAIN": {
+    "runId": "7f8ab04e-e3fa-498c-a91b-b66678003bc9",
+    "responseSha256": "c3592b7a030476b289144ec6c12e508d963e64731345bd10d767e9b0a992b7bf",
+    "outcome": "FAIL",
+    "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q12-PAIN": {
+    "runId": "97453ad5-1f4c-46a5-b68e-219efbe20e59",
+    "responseSha256": "8fd26424e24257fe3b927d4f09508dc7abb1671e3c75fc8e18edacfd06aeab9d",
+    "outcome": "FAIL",
+    "reason": "Introduces uncertainty about defined willingness/ability to travel after a severe-pain discussion, rather than answering affirmatively. A claim of never considering travel, where present, does not supply the required capability/willingness answer.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q09-PAIN": {
+    "runId": "8515a220-bcbe-4b50-9b17-c9e6b00642bb",
+    "responseSha256": "b10516f58873ce47cd47ac081269e6e42d47d7a70ff3f0ee0a99f66039e13ddf",
+    "outcome": "FAIL",
+    "reason": "Does not answer whether transportation is dependable; substitutes difficulty obtaining a neighboring-county appointment and adds an unspecified neighboring-county search history.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q16-PAIN": {
+    "runId": "e730fb82-d62f-415a-8168-0a8cb20a8564",
+    "responseSha256": "a5a1fbe416806326f2e806fa76cb38c72ceb0281a7dcbdd31bb875e75704856b",
+    "outcome": "FAIL",
+    "reason": "Correctly affirms travel but invents a reliable personal car ('My car is reliable'). Defined reliable transportation does not establish car ownership or a specific transport mode.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  },
+  "C01-G03-Q17-PAIN": {
+    "runId": "3f8ebdb9-1a1d-43f3-b4f7-6b77596cccc4",
+    "responseSha256": "0081b494a0dea81618f278e109122f20056da97575bc4966543a542e7816ef46",
+    "outcome": "FAIL",
+    "reason": "Claims travel to another county is unaffordable despite the defined ability/willingness to travel for free/low-cost care. This unsupported transportation limitation is not justified by the inability to afford the needed extraction.",
+    "reviewedAt": "2026-10-17T14:52:22.957Z"
+  }
+}

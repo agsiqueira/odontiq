@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const root='validation/v6',phase='C:/240 - odontIQ/odontiq-phase-t',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+fs.copyFileSync(`${root}/speech-test.json`,`${root}/speech-attempt-1.json`);fs.copyFileSync(`${root}/speech-production.png`,`${root}/speech-attempt-1.png`);
+let spec=fs.readFileSync(`${phase}/tests/browser/patient-v6-speech.spec.ts`,'utf8');
+spec=spec.replace("const el=this;w.__v6Audio.push", "const el=this;const sourceKindAtPlay=el.src.startsWith('blob:')?'blob':'url';let durationAtPlaying:number|null=null;w.__v6Audio.push");
+spec=spec.replace("()=>w.__v6Audio.push({event,at:Date.now(),srcKind:el.src.startsWith('blob:')?'blob':'url',currentTime:el.currentTime,duration:Number.isFinite(el.duration)?el.duration:null,error:el.error?.code??null}),{once:true}","()=>{if(event==='playing'&&Number.isFinite(el.duration))durationAtPlaying=el.duration;w.__v6Audio.push({event,at:Date.now(),srcKind:sourceKindAtPlay,durationAtPlaying,currentTime:el.currentTime,duration:Number.isFinite(el.duration)?el.duration:null,error:el.error?.code??null});},{once:true,capture:true}");
+spec=spec.replace("e.event==='ended'&&e.currentTime>0","e.event==='ended'&&(e.currentTime>0||e.durationAtPlaying>0)");
+spec=spec.replace("startedAt:new Date().toISOString(),baseUrl", "attempt:2,retestReason:'Verification probe captured mutable src after application ended cleanup; capture immutable source at play and observe ended before cleanup. First attempt preserved separately.',startedAt:new Date().toISOString(),baseUrl");
+spec=spec.replace("testId:'PROD-SPEECH'","testId:'PROD-SPEECH-RETEST'");
+const cfg=fs.readFileSync(`${phase}/playwright.v6-speech.config.ts`,'utf8').replace('patient-v6-speech\\.spec','patient-v6-speech-retest\\.spec');
+fs.writeFileSync(`${phase}/tests/browser/patient-v6-speech-retest.spec.ts`,spec);fs.writeFileSync(`${phase}/playwright.v6-speech-retest.config.ts`,cfg);
+fs.writeFileSync(`${root}/speech-infrastructure-recovery.json`,JSON.stringify({at:new Date().toISOString(),maxAdditionalAttempts:1,applicationUnchanged:true,reason:'Passive observation captured mutable audio src after the app cleared it on ended. Preserve first playback-started/completion-unconfirmed result. Repeat with immutable source identifier and capture-phase observation; no playback behavior mocked or changed.',firstResult:'speech-attempt-1.json',files:['tests/browser/patient-v6-speech-retest.spec.ts','playwright.v6-speech-retest.config.ts'].map(p=>({path:`${phase}/${p}`,sha256:sha(fs.readFileSync(`${phase}/${p}`))}))},null,2));

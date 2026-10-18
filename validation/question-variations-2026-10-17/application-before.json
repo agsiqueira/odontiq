@@ -1,0 +1,1033 @@
+{
+  "capturedAt": "2026-10-17T14:05:39.622Z",
+  "head": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "workingTreeStatus": " M scripts/validateCase04ClosingPhraseConsistency.ts\n M scripts/validateCase04DentistStatus.ts\n M scripts/validateCase05IrreversiblePulpitis.ts\n M src/app/api/conversation/route.ts\n M src/data/cases/case-01/case.json\n M src/data/cases/case-02/case.json\n M src/data/cases/case-03/case.json\n M src/data/cases/case-04/case.json\n M src/data/cases/case-05/case.json\n M src/lib/patientBehavior/renderer.ts\n M src/lib/patientBehavior/stages.ts\n M src/lib/patientDisclosure.ts\n M src/lib/patientImmediateResponse.ts\n M src/lib/patientOutputGuard.ts\n M src/lib/patientRoleGuard.ts\n M src/lib/patientRoleResponse.ts\n M src/lib/persistence/services/patientQuestionService.ts\n?? .cache/\n?? .codex-grading/\n?? scripts/investigateTransportation.ts\n?? scripts/reportTransportationIncident.mjs\n?? scripts/traceTravelTurn.ts\n?? scripts/validatePatientBackground.ts\n?? scripts/validatePatientBackgroundConflicts.ts\n?? scripts/validatePatientInstructionLeakage.ts\n?? scripts/validatePatientResidence.ts\n?? scripts/validatePatientTravel.ts\n?? scripts/validateRecordedTransportation.ts\n?? scripts/validateResidenceRecovery.ts\n?? src/lib/patientFinalResponse.ts\n?? src/lib/patientInstructionLeakage.ts\n?? src/lib/patientResidence.ts\n?? src/lib/patientTransportation.ts\n?? src/lib/patientTurnFacts.ts\n?? validation/question-variations-2026-10-17/\n?? validation/transportation-2026-10-17/\n",
+  "files": [
+    {
+      "path": "src/app/api/completed-attempts/[attemptId]/reconcile/route.ts",
+      "sha256": "ce49a4a786833363f35038517b2e22edfe9a0373a6a329cfb1d1f7606fb5a1f5"
+    },
+    {
+      "path": "src/app/api/completed-attempts/[attemptId]/route.ts",
+      "sha256": "82cbf662790221f1a78984964dab243f380b490c3215622541708c963fe286b9"
+    },
+    {
+      "path": "src/app/api/conversation/route.ts",
+      "sha256": "a16b36cf892fe821932c9fa6b018635f5b368a377d14775c4046e118e7308a46"
+    },
+    {
+      "path": "src/app/api/debrief/chat/route.ts",
+      "sha256": "328866e40e632db215ca0d0ceef93a6324791b32a72b968eed1306d09f46538d"
+    },
+    {
+      "path": "src/app/api/debrief/route.ts",
+      "sha256": "3882962fde0bb8e76b58416a8410747ddfd9df42b9cdf9d8fd04310499e603c2"
+    },
+    {
+      "path": "src/app/api/dev/voice-audition/route.ts",
+      "sha256": "37043909840eb0121f8e4caa548365411a3a9f23c4c0821a941f2878e31317cc"
+    },
+    {
+      "path": "src/app/api/encounters/start/route.ts",
+      "sha256": "d7579ce1b20a5860855c19fef37037aa41b524d90103ac32c9e5d9b32ff00097"
+    },
+    {
+      "path": "src/app/api/encounters/[encounterId]/complete/route.ts",
+      "sha256": "bdab418a9a967a6709c3f1fd924bd39c9a02a2b01a15113009333254d170a99c"
+    },
+    {
+      "path": "src/app/api/encounters/[encounterId]/route.ts",
+      "sha256": "5aca6bbdbc10766c18df716d6c947d6f0ab79d9696b3dd21cdc2281800fb8637"
+    },
+    {
+      "path": "src/app/api/faculty-rubric/evaluate/route.ts",
+      "sha256": "5e24d1ac47d635e0923fd011f25ca602de0795f804d0e3f5ab2a1dfad7c51ae9"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "sha256": "2b77aa2eef5cd25ab1912fc7787d2c14dac023a60de2d2603bc679e03e3ad7aa"
+    },
+    {
+      "path": "src/app/api/home/progression/route.ts",
+      "sha256": "7ded65249a169e14df2ec6f3d3e17d805a44faf9027ff2aca52da0ed80a2ebca"
+    },
+    {
+      "path": "src/app/api/me/route.ts",
+      "sha256": "42f6cc9eb9a8902eac20bdf4d32c39474f94779ca52f6aee68d0d2c1ad43ad29"
+    },
+    {
+      "path": "src/app/api/readiness/route.ts",
+      "sha256": "c0b85144c193143fe4628cfb65de56ca8ed28f6bbd8cc0f0a284d131563d1c57"
+    },
+    {
+      "path": "src/app/api/report/route.ts",
+      "sha256": "bd6de6aa95ff8fae0d86f40270455369b86de9c0702c628b3154712f9877f7d2"
+    },
+    {
+      "path": "src/app/api/reports/dashboard/route.ts",
+      "sha256": "2a764c4fa785aef1718bd1f4bcf4b52773aedec34588bd696eab1f8026172c3b"
+    },
+    {
+      "path": "src/app/api/reports/[attemptId]/route.ts",
+      "sha256": "c4664ec083d8f56c508d58176fb040036200e7c89925e7cd944eb9aa53df5597"
+    },
+    {
+      "path": "src/app/api/voice/mentor/route.ts",
+      "sha256": "67eab6e6a2dc031b2452efbce6d2abf646f54f0539e151f1b3bbdcc779364ab0"
+    },
+    {
+      "path": "src/app/api/voice/speak/route.ts",
+      "sha256": "5d428cd2d34ac44400feef922d2a95999e6126146928bf68c9bdd9165ab6976d"
+    },
+    {
+      "path": "src/app/cases/page.tsx",
+      "sha256": "5ac0bf99eb3d05062dd4223f2d00aa56348e8a88ad072eeec0579582ebcaeed8"
+    },
+    {
+      "path": "src/app/dev/amara-behavior/page.tsx",
+      "sha256": "9f574394f6136a490e24e2a564163cf4b25fe16c1e28b40ace6789fefe84a61f"
+    },
+    {
+      "path": "src/app/dev/faculty-report/compare/FacultyReportCompareClient.tsx",
+      "sha256": "a25a10faede644780fe99ce0d1df8c4e252d8f7efaa74fc9dbb32bdecdc3608a"
+    },
+    {
+      "path": "src/app/dev/faculty-report/compare/page.tsx",
+      "sha256": "70b270c334706ee109f989b4ff635cb2210599556b53793237ae97ec78854158"
+    },
+    {
+      "path": "src/app/dev/faculty-report/FacultyReportPreviewClient.tsx",
+      "sha256": "59392dde679673938480d62135a00e4c450019ad2df544de67a7deb108c239c6"
+    },
+    {
+      "path": "src/app/dev/faculty-report/page.tsx",
+      "sha256": "6054f6cdb9a996f22ce068028f7adbb1c14615ef0672b1908dc03c5e1fbed9e8"
+    },
+    {
+      "path": "src/app/dev/faculty-rubric/FacultyRubricInspectorClient.tsx",
+      "sha256": "5e39e56843ba5c3ca7d34c6f7d67ea152210b9dc6c418bf5dd69cde9ab6864aa"
+    },
+    {
+      "path": "src/app/dev/faculty-rubric/page.tsx",
+      "sha256": "ce399e9e4fe66d2d1804b77ca6505d208291dc00c4a5e9153af2f6f6b7ba4bcc"
+    },
+    {
+      "path": "src/app/dev/patient-language/page.tsx",
+      "sha256": "01c373dc6d688ae20e4a323856ae9c7ced844168b1d09ddfd22de2f31cc3108c"
+    },
+    {
+      "path": "src/app/dev/voices/page.tsx",
+      "sha256": "06efb95833a8cc8ef795f8b062f9cb408e31115c2abcee098c31ba56302c8691"
+    },
+    {
+      "path": "src/app/dev/voices/VoiceAuditionClient.tsx",
+      "sha256": "40a3a6c73352d662670263d13680dbac2e22a904c5dfe11d86a238697de428e8"
+    },
+    {
+      "path": "src/app/encounter/[caseId]/page.tsx",
+      "sha256": "1e0f7d7a887ec164bcc1c128658c80e6e7e887671af263a9d152176df557cf1a"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "c81891e834340f22db6a447ed1aae466f3f51e261ed685a5885d55865aaa5095"
+    },
+    {
+      "path": "src/app/home/page.tsx",
+      "sha256": "e5e11c4076ccf0b5ce1384c9df6885a41db2461bbcbe55ce77d9be832dcf0a1b"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "df8e4409b9396ba060118e2296f62da07bd8d84d24b57c6572db843c022c9dcf"
+    },
+    {
+      "path": "src/app/login/[[...sign-in]]/page.tsx",
+      "sha256": "4e8d245cad4451006bbd3b59a190ebff8d4d990d5f6c6ba7ad8d2f53630cf930"
+    },
+    {
+      "path": "src/app/mentor/[caseId]/page.tsx",
+      "sha256": "b64b5bb21b281be5ff073e2d9d63027ecf9ab6138fe86957ce9bbd9f374d7b3a"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "14390e9f3c37c4429bb4eaa3f31d250f61960725638131fc25fa9534f81be9fb"
+    },
+    {
+      "path": "src/app/reports/page.tsx",
+      "sha256": "1db83c5e1acc59b096f48b61dfbf590ce965736e6ca83f17f13692d18853b6f8"
+    },
+    {
+      "path": "src/app/reports/[caseId]/page.tsx",
+      "sha256": "06f78a8758ac4d7dc26f89c441290c3dfcc6fe15ffd5e13fb8f2303c7e4972da"
+    },
+    {
+      "path": "src/app/settings/page.tsx",
+      "sha256": "6508e75d155e9595278daabc9ae3eca09058251d638805d63dfe6968692f3681"
+    },
+    {
+      "path": "src/app/signup/[[...sign-up]]/page.tsx",
+      "sha256": "be55651ae9d9d9c427e21b8b6e9caa0f65507bd66616001d9a677dd022a35b92"
+    },
+    {
+      "path": "src/components/AppShell.tsx",
+      "sha256": "2a1684db8d6b30b0e2d1fd0d7f8364411f7575a8d3b664f729207260a27dd52c"
+    },
+    {
+      "path": "src/components/AudioDebugPanel.tsx",
+      "sha256": "cafeeae9784ea5dc65aeb9d3c6bae3fd348340a8f689ebd59ffe9dbecb0ad82d"
+    },
+    {
+      "path": "src/components/BottomNavigation.tsx",
+      "sha256": "8d189cfb82db3eed4d2edf52199bd01c8cfeacf3ccabd65d4e281a295b0bcf06"
+    },
+    {
+      "path": "src/components/CanonicalCaseReport.tsx",
+      "sha256": "6ac2b8f4304c0a70420d835ea8bd24d887785ad7de87cdc51ec175406155270c"
+    },
+    {
+      "path": "src/components/CaseReport.tsx",
+      "sha256": "ad8cbd08ee66250024d080fff554b94b63d120917df6ee0f50439cdec7155029"
+    },
+    {
+      "path": "src/components/CasesCarousel.tsx",
+      "sha256": "a55b49b758017c7584787e3b80400f39ada5800266aa9f7a3fe3292a56c4743f"
+    },
+    {
+      "path": "src/components/EncounterConversation.tsx",
+      "sha256": "3dd48894cf121f0b1e7f4e655cf64742f4144d2c8cd33c0b10d656b10d484cd4"
+    },
+    {
+      "path": "src/components/EncounterExperience.tsx",
+      "sha256": "b69a3b76a609c66868c192b56424ec8c2c97f7d463ef14d9f31332cd62e5906c"
+    },
+    {
+      "path": "src/components/EncounterKeyboardFocus.tsx",
+      "sha256": "c8b0951b5b51703bedc75f4c497932215745844c67aa06ccb41c288f0291a351"
+    },
+    {
+      "path": "src/components/EncounterOnboarding.tsx",
+      "sha256": "5a7677d74e22f4db0abe9a19e3b9512b7a5787414096e359b9ff3a18ec6f3db0"
+    },
+    {
+      "path": "src/components/FacultyCaseReport.tsx",
+      "sha256": "40240c8391a55e7d9514e35562f63e54ecd4a1388235a5eade94189da427b5a1"
+    },
+    {
+      "path": "src/components/HomeProgressionCard.tsx",
+      "sha256": "850dc2ead7da004ae4cc0e82fc69029b8d612d2493733bbe4661ef1fc74f7f3e"
+    },
+    {
+      "path": "src/components/InteractionCharacterStage.tsx",
+      "sha256": "de1ce59e4324b9a9d571b04bc05a29b8da450c3c05d6d1ea6744d67bc65b6b12"
+    },
+    {
+      "path": "src/components/InteractionComposer.tsx",
+      "sha256": "bc8fd1e089fa915ccf735d0b877ac0c960bcea5aca9e0f190f7ed2097cfabb37"
+    },
+    {
+      "path": "src/components/InteractionConversation.tsx",
+      "sha256": "6628892016d309f60d326b23a8cef25bdd8fe0e840428d4b29cfd21333780257"
+    },
+    {
+      "path": "src/components/InteractionExperienceShell.tsx",
+      "sha256": "fb38006bb32c3687f81e4ee53b829429ac072d1b9ea5b5f87d8c5bee2d41d24b"
+    },
+    {
+      "path": "src/components/LearnerCaseReport.tsx",
+      "sha256": "119d40af77111915ec68b675dc681f3bb472167baa08862e0d34bd83fa489919"
+    },
+    {
+      "path": "src/components/LocalEncounterStorageScope.tsx",
+      "sha256": "8d385b484e7021d3c32aef09976ce3bf6073e8da24649c2a1d23ca512e5f949d"
+    },
+    {
+      "path": "src/components/MentorGeneratedDebrief.tsx",
+      "sha256": "477d2609a6947cef73cc58f0fb31d3b66c9b23d3db97ea95fc3e58d5b99ac0c1"
+    },
+    {
+      "path": "src/components/MentorLocalSummary.tsx",
+      "sha256": "ac1f228adfc243154d83773a10782d18320e7a7aee593cc0f99c2069ae4e3a83"
+    },
+    {
+      "path": "src/components/PatientProfileCard.tsx",
+      "sha256": "e3bf124fbabb48af9862d51596aac2ff8116833c60b035a797786b50da767380"
+    },
+    {
+      "path": "src/components/RetryCaseButton.tsx",
+      "sha256": "6157a720935870fa349d4f973f0fb728cbdf81a10ef749d76f00c8adc463be82"
+    },
+    {
+      "path": "src/components/TopBar.tsx",
+      "sha256": "bcb52251962ed60fafa434e3495118636d95429c4cd6b165b2c5b1df07889eb7"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "9ce417985b97956fbb3a73c84b0eb60230fd0a9844c5111df92e061731440a3f"
+    },
+    {
+      "path": "src/components/VoiceInputControl.tsx",
+      "sha256": "5ce477518780253cf39dbf8440c9680205b5703fe6591709f4a27b3369b16994"
+    },
+    {
+      "path": "src/components/ZoomableExaminationImage.tsx",
+      "sha256": "01a10afde878c0202c202fcb99a3612bf657c4f1c15e4a300c2a61c8d9076bf5"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/case-01.ts",
+      "sha256": "3e711a855a11a96b8193019fc8e625cba9dfcdac3786447a7c6a8fb53af96932"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/case-02.ts",
+      "sha256": "490d43c456a5e5f5bbb1cfb975bd1d02ddfa044e4ddfde22019c1e4184cc15d4"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/case-03.ts",
+      "sha256": "cbb84f7e0554e3cab81946144dbd148b3227ac6553a907f77b2b82d533ef732d"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/case-04.ts",
+      "sha256": "ed4c883df47ea3d76c36b7751b84aec0ff348bfbb720d9d5e378f2785af0a013"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/case-05.ts",
+      "sha256": "5da56ef5c1cb6c8738258b6880f7fb4cff3cc4b08c7773ff613fcec98c59f953"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/helpers.ts",
+      "sha256": "255f176874d34bb4d797958cdffd44a282af754b8846208c4ba3f809d5fa12fd"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/index.ts",
+      "sha256": "015e126b8cace33f03a512b9a6f44f68d59c73308da045f2e77b656380ae2b85"
+    },
+    {
+      "path": "src/data/canonicalCaseSpecs/schema.ts",
+      "sha256": "c578d83afa55ce1fa8404d1854ef4084e0adf71905f4c77b89ecca762fd642b8"
+    },
+    {
+      "path": "src/data/cases/case-01/case.json",
+      "sha256": "a4c907355f4f5f3669b08e70d73f1f3f70d7dddaa79219bafff75c80a3ac78c5"
+    },
+    {
+      "path": "src/data/cases/case-02/case.json",
+      "sha256": "82ee26fb9dcc8dc5821119d8a85143a4c6fe19eaa5ec571f0fc5b273c157624a"
+    },
+    {
+      "path": "src/data/cases/case-03/case.json",
+      "sha256": "d7756bad578e3f86a5c7130c5feaa0e947a44448296412c65cea1b871d034e6c"
+    },
+    {
+      "path": "src/data/cases/case-04/case.json",
+      "sha256": "676faf78ee623a07797c35d53b2b75252e83a6a70865e556403b6299ee6f1c3d"
+    },
+    {
+      "path": "src/data/cases/case-05/case.json",
+      "sha256": "6922f20f1f55b9bfc56b3b4d68d149c327109c8b95e0f3c905c16eecdfc62bfd"
+    },
+    {
+      "path": "src/data/cases/index.ts",
+      "sha256": "1d3cd8cba9fa7f318e4d8d3e5d42f47ea9bd40cc7850330f5a85871b0a5d499d"
+    },
+    {
+      "path": "src/hooks/useMentorSpeechPlayback.ts",
+      "sha256": "417307ab29b2d261b75d1db68e5f864d8bb3de2b33feb9f310e2b5d9095e80e1"
+    },
+    {
+      "path": "src/hooks/useSpeechRecognition.ts",
+      "sha256": "8438ca6dfdf095df1f9d48613b2d29962f9c85388e53435f6d4fd63503d3bd54"
+    },
+    {
+      "path": "src/hooks/useSpeechSynthesisPlayback.ts",
+      "sha256": "4fc625d6704f9a2a5f6cd5525b9a4c4bd1ab8cac4ed1178d19752a56e1ee8bbb"
+    },
+    {
+      "path": "src/lib/ai/index.ts",
+      "sha256": "c5454cc3d85ff02b262c05b2e8029762641fd0e624571611c9c7da03d6f761f0"
+    },
+    {
+      "path": "src/lib/ai/mockProvider.ts",
+      "sha256": "ebcb21d90d11b1f4c559d9752f6626e4a15ef4348b6c86d619493ded0c05d655"
+    },
+    {
+      "path": "src/lib/ai/navigatorProvider.ts",
+      "sha256": "a67102f460777df70312ee3022c61e4156254f6718877339fb976f66f95173e7"
+    },
+    {
+      "path": "src/lib/ai/navigatorSpeech.ts",
+      "sha256": "e54624b6eab1e0be57405b3e512ff52236f1ced94858711b89107ae1204ef9a5"
+    },
+    {
+      "path": "src/lib/ai/provider.ts",
+      "sha256": "3ea7116549a1cc84af3397acef6335bea6528e0174ca00c9dfea6d9700f5c792"
+    },
+    {
+      "path": "src/lib/amaraBreathingAnimation.ts",
+      "sha256": "40084220ec7968bff004513efe4f3c2cc7da332b7e2ae8ac59ac56515d9e430a"
+    },
+    {
+      "path": "src/lib/audioDiagnostics.ts",
+      "sha256": "009cdc885b42eb4f5ad1b7e9377e4e69a5a58d8bf361452a8cff93a005ad4a55"
+    },
+    {
+      "path": "src/lib/case1PlanAcknowledgement.ts",
+      "sha256": "59a642cd925537b1122493a751bac89c9cdab4e72a81a997f2e0d28c36706eee"
+    },
+    {
+      "path": "src/lib/case3ConsentResponse.ts",
+      "sha256": "1ca7b8b2150399bbe81a5dcb895df6e50a0ff715a71065b642ec26b77f25c24d"
+    },
+    {
+      "path": "src/lib/caseDisplay.ts",
+      "sha256": "7a369a43f13979583694be1b64a23c2895511a9091514d588c4e48696cb0c631"
+    },
+    {
+      "path": "src/lib/cases.ts",
+      "sha256": "3eb9e0931fed5f83537e44588cfe4a36d2d4cd89433873bd30239e58874fbb08"
+    },
+    {
+      "path": "src/lib/checklistCoverage.ts",
+      "sha256": "4803bc021c018bd3d9723a281e93929d30b86fdab777c8b54c3bc6cf9b35e14f"
+    },
+    {
+      "path": "src/lib/checklistEvaluation.ts",
+      "sha256": "564e76cbc2300904902ae2045873b44e20c7ec2ab40639a9e622907590279b4d"
+    },
+    {
+      "path": "src/lib/conversationEngine.ts",
+      "sha256": "e0a2a45e72c5a321eb690c9ef3f8251e88328d226ac941b7507bbaa34856aaff"
+    },
+    {
+      "path": "src/lib/encounter/encounterDocument.ts",
+      "sha256": "d8b0aa1851b825c49e11d5334ec087ee20474006157cde1c0b91ea0547c703e6"
+    },
+    {
+      "path": "src/lib/encounter/encounterDocumentBuilder.ts",
+      "sha256": "8b053f5eb4d89ac990515ed6f87050442eb95f5ea5e8a13d4f074be40e170e56"
+    },
+    {
+      "path": "src/lib/encounterOnboarding.ts",
+      "sha256": "2a30870e1a1ef59a6569d8e5c30577f0b6345d37e1446026667715e76d44bc7e"
+    },
+    {
+      "path": "src/lib/facultyRubric/calibration/caseCalibration.ts",
+      "sha256": "49c737566943a6125d9764efac6289c3f5d3d14ca2757f79f0a8c5cc5376bc0e"
+    },
+    {
+      "path": "src/lib/facultyRubric/calibration/index.ts",
+      "sha256": "0dcbdad7234fe3a432e883f088455357103a1fd55aa4066b75eb8026efb021c2"
+    },
+    {
+      "path": "src/lib/facultyRubric/calibration/policy.ts",
+      "sha256": "907deec4604584e6592ad80aa5c626a55045c3d1228c9c46fd88d111cba2f583"
+    },
+    {
+      "path": "src/lib/facultyRubric/calibration/types.ts",
+      "sha256": "412b4ae7ac057f898999396d98d3cb6a5126723bc6ecf0dc9ba5e2b10c80bd2b"
+    },
+    {
+      "path": "src/lib/facultyRubric/calibration/validation.ts",
+      "sha256": "b0097cced1cc00d02619a21a662648d1344cebb8fd7e91ae1c386a275dff7b60"
+    },
+    {
+      "path": "src/lib/facultyRubric/caseRubrics.ts",
+      "sha256": "33309e4124871aaa183e2a59ef90e983e41119f1c0cb360de43a28a2e09c60b6"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/deterministic.ts",
+      "sha256": "cdf3e7850a55e2b29a4fe4f079ad670955b8496ac874bbb6b746eff3123d454a"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/evidence.ts",
+      "sha256": "c630942cd342f058e01ea265fc33ebd0e024efb47866436cd9168cafbd8b205b"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/finalization.ts",
+      "sha256": "ae1229a3812d16b94d4a0244eb84052a6b0eb907711a9e01415c906a8f12fb4a"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/index.ts",
+      "sha256": "383a572474e25f86d91b95714e64d1f625bb7b7d6abb6cfccb25a7d62a467db6"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/merge.ts",
+      "sha256": "01ec6a57e073ef2ef509778bd333f495a21b38922db2f6d6479e588ccda3a195"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/orchestrator.ts",
+      "sha256": "291dabe776315800b21f29ae45fc5aaadb6ea10bdeef6eef679373fe7d9aa663"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/providerFailure.ts",
+      "sha256": "bb2091123f42f9504a96cb279bc02e92933e0d893fbe644370385b8dab5daf1e"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/retry.ts",
+      "sha256": "90d2b0384ddb38384dc3e2250b874849bd1f04172df20c06931b91084ce0c34b"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/semantic.ts",
+      "sha256": "474602f94017d8a42e091b746ab2960059ee95d2717a3ced39263e9de9bdedac"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/semanticEvidenceRules.ts",
+      "sha256": "6beeb3c4516ce225efb2074b83aa08bbfd54ce71c6f5327ba40cb2e69527ea83"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/semanticPrompt.ts",
+      "sha256": "19d9ebf77868826da69c2fcd4baac1ca932a172e96439d79dd8f051a758d91f3"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/semanticSchema.ts",
+      "sha256": "4d33763d56793a0476b83733b8a45cbf364d08b6458d9263ad3e769feb6e1607"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/state.ts",
+      "sha256": "8d1e8cb50b2eb74563a645fa8b30e8ac09ec071fc3ad1501496b1153bb9e6cec"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/types.ts",
+      "sha256": "6211978c791b25e6acba4c62b567be48c0041d4ee233580d9d2fa7f4995c6145"
+    },
+    {
+      "path": "src/lib/facultyRubric/evaluation/validation.ts",
+      "sha256": "c1e2da3472702ba50182393241232cbf8ba7bb388f7c48a8d6254bbf3ff3df92"
+    },
+    {
+      "path": "src/lib/facultyRubric/index.ts",
+      "sha256": "5ec19dc8f5048b247d365667a68fa7c111c3fd7b18a79125549f6c071387422d"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/artifactIntegrity.ts",
+      "sha256": "32b6f70d3a2e9a81b7a7a75e606f8b06775fc65aa2a8a6049e391a70f48e0eb2"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/builder.ts",
+      "sha256": "6effe481adfdccdfff13f3feccd6f5e1af63cf2e9f1f9d25b1867d99c2be09c4"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/clientGeneration.ts",
+      "sha256": "7ac17e80b19836a61e34b7318368f39d8bee6df73849affd9e961180bb391068"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/comparison.ts",
+      "sha256": "9c753e6d43da213bbc90cc6e6b99b0eae90e98e52bc0d53a931ee7634a3972c1"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/displayContent.ts",
+      "sha256": "d6350a04d956064f1b553304bcba226e8200bd5b1bffbe32a535a5cb49e63423"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/generationOwnership.ts",
+      "sha256": "0335a5a461f98c70dc3db5c67322e389c1d8f62515ef901eb74a6a7addb09df9"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/index.ts",
+      "sha256": "8f870b0ad540baad528e6e10a8e8922eac4b5230d58e7ad6bea22ccea0362508"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/legacyAdapter.ts",
+      "sha256": "e4cdb9061d95f2960271a65948c575922c3bc9899181af41f13f41e010956878"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/messaging.ts",
+      "sha256": "c2f4edd1a43721f13ac6727f58ff5c95ffcf2c979f67e56b673a880a482dabee"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/pdf.ts",
+      "sha256": "0038335381e2419ff07ffe238a73e6f5f90f2d7ec394e91e54c12f34ca9a4702"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/presentation.ts",
+      "sha256": "dd6c57c5934313698978ada43c5b8e32024a5b82f84a874d858b4e100e718da9"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/types.ts",
+      "sha256": "e7951bf6288d133d369f15c0e4d0c5e0c032330c509144cf02c22e3ebf32d2e2"
+    },
+    {
+      "path": "src/lib/facultyRubric/report/validation.ts",
+      "sha256": "bf2e01293f8d3c742628fd09f17de37b3b7c1147139cb8b787e2d4ae44f67ec3"
+    },
+    {
+      "path": "src/lib/facultyRubric/scoring.ts",
+      "sha256": "3eef16ee84fea70c3e373fd6c1b633f812c3355f1eda69d277fdab11336d626a"
+    },
+    {
+      "path": "src/lib/facultyRubric/sharedCriteria.ts",
+      "sha256": "8e192f92ab478276d83f2002efdc62bdc9bb007d578ba54d05aa90a24fbb1423"
+    },
+    {
+      "path": "src/lib/facultyRubric/types.ts",
+      "sha256": "dfdebd20af4d26c267451dcff363e87314144b7037ca98f8c436afc881e4e508"
+    },
+    {
+      "path": "src/lib/facultyRubric/validation.ts",
+      "sha256": "beefcadc9ffddc9336c8636690dfc1548350178bdbf2736d3b4553309b8df0ed"
+    },
+    {
+      "path": "src/lib/homeProgression.ts",
+      "sha256": "61c927c5be724c954faf831fb26f35216aa260462595af0502ada93015ca4fde"
+    },
+    {
+      "path": "src/lib/interfaceTerminology.ts",
+      "sha256": "db1cf287578a0034d0a61c6e5a3d447e021d38a6ceab87dec7714ea70de76287"
+    },
+    {
+      "path": "src/lib/learnerReportPdf.ts",
+      "sha256": "ca20285d00d6c5a84742ffd738ec5923b99cef6258bdc52dd2c65023e69992f3"
+    },
+    {
+      "path": "src/lib/localEncounter.ts",
+      "sha256": "de176c6bd35943280d0ca2fe35b421109f29dae5717dd7d2f5a95cfbda0e6eb6"
+    },
+    {
+      "path": "src/lib/mentorIntervention.ts",
+      "sha256": "fe6ff401af279f719cdcc58650668dec485418de3f7273d239c5915b319f6aea"
+    },
+    {
+      "path": "src/lib/patientAudioPlan.ts",
+      "sha256": "9e3a592a952d89212b28eb22cbd1481c58a90bbe874c56fe843d680b63da5a21"
+    },
+    {
+      "path": "src/lib/patientAudioPlaybackController.ts",
+      "sha256": "ecece70ada6c98df47872c528397ad8f756fde4b55f8646ffced4d69c8b497a4"
+    },
+    {
+      "path": "src/lib/patientAudioSequence.ts",
+      "sha256": "e164cbf667c4510d13c69a48fe30fd4e525928f008a1bb05604caa61a5660432"
+    },
+    {
+      "path": "src/lib/patientBehavior/amaraContract.ts",
+      "sha256": "adc024ba7663c3b0d657e0e27ef1b8e880ae0935422371eca4fe9ce9abf999ae"
+    },
+    {
+      "path": "src/lib/patientBehavior/amaraFixtures.ts",
+      "sha256": "5668a024013d330982f40fd7876ae5304623d9adfea416103e1a94b53596a6c1"
+    },
+    {
+      "path": "src/lib/patientBehavior/amaraRenderer.ts",
+      "sha256": "8b3b3e1f20d1de3d1672515b7baf7b338b5a25866509a4e8b6af5fe936f182d3"
+    },
+    {
+      "path": "src/lib/patientBehavior/factPreservation.ts",
+      "sha256": "3140d80d9e10cf2640caf7160afe72a2bb5c0b56ce8fbab2bf71aae55a296cd3"
+    },
+    {
+      "path": "src/lib/patientBehavior/governedFacts.ts",
+      "sha256": "b27c338f207163f27a100661f1666a9b9685f176331544b1d04be938deeef443"
+    },
+    {
+      "path": "src/lib/patientBehavior/index.ts",
+      "sha256": "7bbee6dd4de78a3a2e4c94aed73b9d62b23b912dd514c8acb5a2bcc7ee8e20f2"
+    },
+    {
+      "path": "src/lib/patientBehavior/renderer.ts",
+      "sha256": "6f723d46441aa5c435e69825276348d744aee5d1a96ca799e8595f686107e7c2"
+    },
+    {
+      "path": "src/lib/patientBehavior/repetition.ts",
+      "sha256": "95190537d031b54e2fef273ce723a731d45cc81ffd5b7a379fc39ea2a09d0433"
+    },
+    {
+      "path": "src/lib/patientBehavior/stages.ts",
+      "sha256": "764d475be86ce827e00258901678371d20599f3cf6900997567c130f16f202f3"
+    },
+    {
+      "path": "src/lib/patientBehavior/types.ts",
+      "sha256": "b5aa76d433b0ccb404ffd427731c8bed35c8c69685dc96a4b6d34b4e802ddae2"
+    },
+    {
+      "path": "src/lib/patientCardPresentation.ts",
+      "sha256": "e17e37f8fc450f59114902a41b44ea7c10d374183938d3474874f210eb7907f3"
+    },
+    {
+      "path": "src/lib/patientCoreResponse.ts",
+      "sha256": "083d28b48b26802cd23434ee17b5e75ff4357afc55f0b5ad9cee3ad54992a407"
+    },
+    {
+      "path": "src/lib/patientDialogue.ts",
+      "sha256": "2eb2f4b80caea37c3f382efd8678b664d87f4c244f1f663e574b064466f593bd"
+    },
+    {
+      "path": "src/lib/patientDisclosure.ts",
+      "sha256": "c425cdb838ee21418364b6a5781b79fb7dcd12c7f9c86a5a9cff4711a14f22eb"
+    },
+    {
+      "path": "src/lib/patientFinalResponse.ts",
+      "sha256": "dfef40dd8143fa3e40c8fe3e585f3aa898eb14e2e5804ea9b3beef32caf57d53"
+    },
+    {
+      "path": "src/lib/patientImmediateResponse.ts",
+      "sha256": "42300075f09893d9722a6474d301af754cb7050e5eb82cfc9a3dd1979d72d211"
+    },
+    {
+      "path": "src/lib/patientInstructionLeakage.ts",
+      "sha256": "0f668116cd2b53c6d5c6914c19ef900c0e0c42202dd4e77b9fb1e1587e946bcb"
+    },
+    {
+      "path": "src/lib/patientLanguagePolicy.ts",
+      "sha256": "a802302e6430bcd679492978de83ebf8b5dcb65a9e01f2fc394d278cc259bb50"
+    },
+    {
+      "path": "src/lib/patientOutputGuard.ts",
+      "sha256": "2620b4d250ee7ab7aea0cb846ce52d78171ff6e389313becfb902d131bb57cbc"
+    },
+    {
+      "path": "src/lib/patientQuestions/catalog.ts",
+      "sha256": "847b1d7be6eedad0c596f3d41697612e6d3247f91a4f5f751e3ff2252324ff42"
+    },
+    {
+      "path": "src/lib/patientQuestions/classifier.ts",
+      "sha256": "89fadad8fca3da60cfd04ba4b06418951992b516acc69a1123d2080479ccbaae"
+    },
+    {
+      "path": "src/lib/patientQuestions/prompt.ts",
+      "sha256": "9cffa3f107c000da6af5969ded7688844dc9cdd42fccc28d37a15e4f87d62c67"
+    },
+    {
+      "path": "src/lib/patientQuestions/schema.ts",
+      "sha256": "b6eea4fb44e4ce054ad82b54902cccb122cd6804107beb2c8c20fd384d0711c5"
+    },
+    {
+      "path": "src/lib/patientQuestions/stateMachine.ts",
+      "sha256": "0e37f5350a89a3e2e6b7a38ce1e0e557d68e019d6d327cb65d18a73f9a198841"
+    },
+    {
+      "path": "src/lib/patientQuestions/types.ts",
+      "sha256": "f569b9f9840ec5130048f54fb3a064a957e822bdc00e6ef20cb421f27a215d62"
+    },
+    {
+      "path": "src/lib/patientResidence.ts",
+      "sha256": "583849518496d268da4a70755caf827d6b5aea0efdf33a1473ecfd9fbdcc851e"
+    },
+    {
+      "path": "src/lib/patientRoleGuard.ts",
+      "sha256": "06493b36e9fe8d2cd6c2226b3edfdef07c4131d5368020049cf8d3c57107ea75"
+    },
+    {
+      "path": "src/lib/patientRoleResponse.ts",
+      "sha256": "7913e43b546355a2d3557e63330b8f92a6cd7cc64010d3586729fddf0db9295a"
+    },
+    {
+      "path": "src/lib/patientTransportation.ts",
+      "sha256": "aad6b44eda8ada30ae773a9f6d34e49a584f5c208f27df51cd701fe03135ff53"
+    },
+    {
+      "path": "src/lib/patientTurnFacts.ts",
+      "sha256": "2d3d61debabcff9b592c5761241091826495ae8419531d43a98f611e145b5cd4"
+    },
+    {
+      "path": "src/lib/persistence/completedAttemptClient.ts",
+      "sha256": "4302e46039043da51daebebaec6ea678d0689c6f8b0ad8c640d2fdaae3069566"
+    },
+    {
+      "path": "src/lib/persistence/databaseResilience.ts",
+      "sha256": "aa71a705f13bc39a774a2c837f2035940cd566e9ccb1db1c4ef8b6a5b2974c0c"
+    },
+    {
+      "path": "src/lib/persistence/repositories/completedAttemptPolicy.ts",
+      "sha256": "b57aac9728e7ef5829c502092f3f766b05b1e4cadc6c9dde0a816cdf69ecbe7c"
+    },
+    {
+      "path": "src/lib/persistence/repositories/completedAttemptRepository.ts",
+      "sha256": "f2e3fedfcdc98c78a7b7bf7baee9832899dcbc24aa423eb461decfee4226523e"
+    },
+    {
+      "path": "src/lib/persistence/repositories/encounterRepository.ts",
+      "sha256": "1b04326ef20c144d3651bf58057072d10e9785926c5a06bb3316e7838501d77d"
+    },
+    {
+      "path": "src/lib/persistence/repositories/facultyArtifactRepository.ts",
+      "sha256": "c621a8e50d9e316b10db82ce4510d5a2f0e859ce066ac9ca1d6e79d6b5788197"
+    },
+    {
+      "path": "src/lib/persistence/repositories/prisma.ts",
+      "sha256": "556a42da4cf7e093649eb5b6096373d38bddc77199ea3d188a2dd37e6a211459"
+    },
+    {
+      "path": "src/lib/persistence/repositories/readinessRepository.ts",
+      "sha256": "7057c970ec50598fb92d4367c6701358c8186a6b7123e1da5e10d4c43272fbf6"
+    },
+    {
+      "path": "src/lib/persistence/repositories/userRepository.ts",
+      "sha256": "7d32d48a5d0a350fce2929e50597f8761391d162ca72fa8d678c4d627bf73404"
+    },
+    {
+      "path": "src/lib/persistence/services/completedAttempts.ts",
+      "sha256": "2cb2c02296b08fddf70fad2eb132a3a754b12ce2b544b54a347727f2cd4dd0ce"
+    },
+    {
+      "path": "src/lib/persistence/services/completedAttemptService.ts",
+      "sha256": "4b5d54e26004d208fab6358f9fb930685e6cd4b51ace07893e036f5bc67084bd"
+    },
+    {
+      "path": "src/lib/persistence/services/databaseCircuit.ts",
+      "sha256": "073d3c4339b7a6caeec6ff44df11d095018f6ece15f7b3d27e07e6fa32c814eb"
+    },
+    {
+      "path": "src/lib/persistence/services/encounters.ts",
+      "sha256": "d279c6395c97c6f33ed85a074f829917071fc528ba30bfd3a5cbd765daa69942"
+    },
+    {
+      "path": "src/lib/persistence/services/encounterService.ts",
+      "sha256": "02e2f16f6f2e1f9db95a5ded2793ba4733b05dd0c1e4cd2deb3b239fa52425b0"
+    },
+    {
+      "path": "src/lib/persistence/services/encounterSyncService.ts",
+      "sha256": "3718e9412110a881cc807cf260330a11392fcfc5260d020c76736286bbf990a0"
+    },
+    {
+      "path": "src/lib/persistence/services/homeProgression.ts",
+      "sha256": "2d205489f02ad824598918890bbc9148d00ee31b370cd1471c5e995f1737e9ae"
+    },
+    {
+      "path": "src/lib/persistence/services/homeProgressionService.ts",
+      "sha256": "f427f5e62e5b5e25a426de4ce7c725470a7ddee2d69681f4b9740aa58905dc99"
+    },
+    {
+      "path": "src/lib/persistence/services/index.ts",
+      "sha256": "f64eb84fa578924b1797a9675824ab8777273d5e8d0c25dd7192adf3a9a9d7e4"
+    },
+    {
+      "path": "src/lib/persistence/services/patientQuestionService.ts",
+      "sha256": "18d2f16854283a2f57412ffa4fce848f429e4ec940c3436f166c3e5f38ae2509"
+    },
+    {
+      "path": "src/lib/persistence/services/readiness.ts",
+      "sha256": "8449d358bc08c3c23d69b5994df92c68a0648cdd734610ea130a7c31ccea4720"
+    },
+    {
+      "path": "src/lib/persistence/services/readinessService.ts",
+      "sha256": "7d7865220ea567439dff428b6b2e57f9aa6b0070d4e5f7f24725ba4b7d7a9ea9"
+    },
+    {
+      "path": "src/lib/persistence/services/reports.ts",
+      "sha256": "78c23e2e5224be02cdbfd544d93a15a77a39d322f3bedee9c0d3db80f8dc8295"
+    },
+    {
+      "path": "src/lib/persistence/services/reportsService.ts",
+      "sha256": "e2b13cfbc6fdb7bf7d424657ff9797518e9fedd84bb395a5c031e4454092c41c"
+    },
+    {
+      "path": "src/lib/persistence/services/userService.ts",
+      "sha256": "511b9b29b169ed77f94e524194ce4e4c7d8a3100a5ddd5693687014cd60c899c"
+    },
+    {
+      "path": "src/lib/reportDisplay.ts",
+      "sha256": "9771771f1ce1e189067900b44109398cec05c897c1bbe286333836f71e9a0dd6"
+    },
+    {
+      "path": "src/lib/reportPdf.ts",
+      "sha256": "f5a6a7984a15fddea820d51467440f49c78b3e53085135214d89cdfc7c5173bd"
+    },
+    {
+      "path": "src/lib/reportTypes.ts",
+      "sha256": "30e0a2f5d29dbaad4292b6632d73a7bc926efc873b587c53a54e5b341baba9bd"
+    },
+    {
+      "path": "src/lib/requireAppUser.ts",
+      "sha256": "c4b4f5fb2b4243f794a1fb93a405d97513323882e9f12d5540e8b53dc04175a7"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "path": "src/lib/voiceCatalog.ts",
+      "sha256": "113db816a7ceeb75c430d69f08f434e6e7bc8a36892f1b603e6b7d1ff0d26c52"
+    },
+    {
+      "path": "src/proxy.ts",
+      "sha256": "1b7b6b2fb4be14f88a9481ba3d769506b5ec12320a87b42991b37c07c3775c7b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e02cfd8f7b38dc640f084b384108d6ffb72c17bdc2e402eb5b32928ddf5a67c4"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "25140d87ed6930218db90c3a4deae28983a775bb6c7fa6517ff7eff88dbf1817"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "fd9b8c1d9b09d08b038c6d2b1206a2f20402db881f3ae2a86294489e039a4cc5"
+    }
+  ],
+  "caseFacts": [
+    {
+      "caseId": "case-01",
+      "backgroundFacts": [
+        {
+          "id": "c1.background-insurance",
+          "topic": "social_history",
+          "text": "The patient is an uninsured adult.",
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c1.background-residence",
+          "topic": "social_history",
+          "text": "The patient lives in Alachua County.",
+          "questionIntents": [
+            "background_residence"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c1.background-transportation",
+          "topic": "social_history",
+          "text": "The patient has reliable transportation and can travel outside Alachua County if necessary for free or low-cost care.",
+          "questionIntents": [
+            "background_transportation"
+          ],
+          "broadEligible": false
+        }
+      ]
+    },
+    {
+      "caseId": "case-02",
+      "backgroundFacts": [
+        {
+          "id": "c2.background-insurance",
+          "topic": "social_history",
+          "text": "The patient is uninsured and lost Medicaid within the past year.",
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c2.background-residence",
+          "topic": "social_history",
+          "text": "The patient lives in Collier County but has not yet established residency.",
+          "questionIntents": [
+            "background_residence"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c2.background-transportation",
+          "topic": "social_history",
+          "text": "The patient has unreliable transportation out of town.",
+          "questionIntents": [
+            "background_transportation"
+          ],
+          "broadEligible": false
+        }
+      ]
+    },
+    {
+      "caseId": "case-03",
+      "backgroundFacts": [
+        {
+          "id": "c3.background-insurance",
+          "topic": "social_history",
+          "text": "The patient is uninsured.",
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c3.background-residence",
+          "topic": "social_history",
+          "text": "The patient is a resident of Hillsborough County.",
+          "questionIntents": [
+            "background_residence"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c3.background-regular_dentist",
+          "topic": "social_history",
+          "text": "The patient currently has their own dentist and has an appointment next week.",
+          "questionIntents": [
+            "background_regular_dentist"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c3.background-family_care",
+          "topic": "social_history",
+          "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter.",
+          "questionIntents": [
+            "background_family_care",
+            "background_care_preference"
+          ],
+          "broadEligible": false
+        }
+      ]
+    },
+    {
+      "caseId": "case-04",
+      "backgroundFacts": [
+        {
+          "id": "c4.background-insurance",
+          "topic": "social_history",
+          "text": "The patient is uninsured.",
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c4.background-residence",
+          "topic": "social_history",
+          "text": "The patient is a resident of Duval County.",
+          "questionIntents": [
+            "background_residence"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c4.background-care_cost",
+          "topic": "social_history",
+          "text": "The patient is open to paying for dental care on a sliding-scale fee.",
+          "questionIntents": [
+            "background_care_cost",
+            "background_care_preference"
+          ],
+          "broadEligible": false
+        }
+      ]
+    },
+    {
+      "caseId": "case-05",
+      "backgroundFacts": [
+        {
+          "id": "c5.background-insurance",
+          "topic": "social_history",
+          "text": "The patient is uninsured.",
+          "questionIntents": [
+            "background_insurance"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c5.background-residence",
+          "topic": "social_history",
+          "text": "The patient is a resident of Marion County.",
+          "questionIntents": [
+            "background_residence"
+          ],
+          "broadEligible": false
+        },
+        {
+          "id": "c5.background-care_cost",
+          "topic": "social_history",
+          "text": "The patient cannot pay anything for dental care and would prefer a free clinic.",
+          "questionIntents": [
+            "background_care_cost",
+            "background_care_preference"
+          ],
+          "broadEligible": false
+        }
+      ]
+    }
+  ]
+}

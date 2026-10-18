@@ -1,0 +1,104 @@
+{
+  "C01-G01-Q08": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Uninsured is correct. Paying out of pocket may describe lack of insurer or imply an unspecified actual payment arrangement; retain the same semantic ambiguity as the earlier versions."
+    }
+  },
+  "C02-G05-Q02": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-Q06": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-Q07": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-Q14": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-Q15": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-Q17": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical fact specifies loss within the past year, without a more precise interval. About a year ago may be a loose compatible approximation but narrows the time toward twelve months; retain for review rather than silently accepting additional precision."
+    }
+  },
+  "C02-G05-N1": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical loss is within the past year without a more precise interval. About a year ago may be a loose compatible approximation but narrows toward twelve months; retain unresolved additional precision consistently with primary timing REVIEWs."
+    }
+  },
+  "C01-G03-V4H2": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Invents needing time off work and uncertainty about travel. The canonical patient has reliable transportation and can travel outside Alachua County for free or low-cost care; no employment or schedule constraint is established."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "The question asks whether a trip to another county for affordable treatment is possible. The response substitutes uncertainty and unestablished conditions instead of the known positive travel capability."
+    }
+  },
+  "C02-G05-V4H1": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical loss is within the past year with no narrower interval. About a year may be a compatible loose approximation but narrows toward twelve months; preserve unresolved additional precision consistently with the other timing REVIEWs."
+    }
+  },
+  "C02-G05-V4H2": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Canonical loss is within the past year with no narrower interval. About a year may be a compatible loose approximation but narrows toward twelve months; preserve unresolved additional precision consistently with the other timing REVIEWs."
+    }
+  },
+  "C03-G08-V4H3": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Claims it has been a while since the patient visited the dentist, an attendance interval absent from the authoritative case facts. The patient is uninsured and has an existing dentist/next-week appointment; no last-visit date is established."
+    },
+    "completeness": {
+      "status": "REVIEW",
+      "reason": "Not really may loosely deny an insurance plan, but the following attendance history suggests the question was read as care planning rather than coverage. The actual uninsured status is not made clear."
+    }
+  },
+  "C03-G09-V4H1": {
+    "relevance": {
+      "status": "FAIL",
+      "reason": "A narrow question about having an established/usual dentist triggers a seven-sentence dump about the crown, root canal uncertainty, prior dental work, unknown treated teeth, extraction and dentist contact. These details are canonical but not requested. My dentist/next-week appointment sufficiently implies an existing dentist; factual correctness does not cure the relevance failure."
+    }
+  },
+  "C03-G09-V4H3": {
+    "relevance": {
+      "status": "FAIL",
+      "reason": "A narrow question about having an established/usual dentist triggers a seven-sentence dump about the crown, root canal uncertainty, prior dental work, unknown treated teeth, extraction and dentist contact. These details are canonical but not requested. My dentist/next-week appointment sufficiently implies an existing dentist; factual correctness does not cure the relevance failure."
+    }
+  },
+  "C03-G09-V4H2": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Not really, I have not in a while invents an unspecified gap in dental attendance and risks denying the established dentist relationship. The canonical patient has their own dentist and next-week appointment; no last attendance interval is given."
+    },
+    "completeness": {
+      "status": "REVIEW",
+      "reason": "Regularly may refer to attendance frequency rather than an established provider. The response states an unsupported attendance gap instead of clearly establishing the known own-dentist relationship; the next-week appointment is correct."
+    }
+  }
+}

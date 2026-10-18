@@ -1,0 +1,8 @@
+{
+  "V8-C3-CONSENT": {
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Actual current I&D proposal and patient agreement satisfy documented Case3 follow-up eligibility. Response only says Yes, that’s okay. Classifier sets incisionAndDrainageProposed=true and patientAgreedToIncisionAndDrainage=true but temporaryTreatmentActive=false; state machine fails to enforce that implication and omits the eligible follow-up question. Expected answer not relaxed."
+    }
+  }
+}

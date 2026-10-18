@@ -1,0 +1,56 @@
+[
+  {
+    "check": "validatePatientBackground",
+    "stage": "development",
+    "failure": "Case 05 access fact omitted from selected facts for an affordability question",
+    "resolution": "Retained the relevant authoritative access fact; unchanged suite subsequently passed."
+  },
+  {
+    "check": "validatePatientBackgroundConflicts",
+    "stage": "development",
+    "failure": "A request to get a dental appointment was interpreted as transportation without a travel/reliability destination cue",
+    "resolution": "Separated appointment access from personal transportation; unchanged suite subsequently passed."
+  },
+  {
+    "check": "validateCase02SystemicInfection / validateCase05IrreversiblePulpitis",
+    "stage": "development",
+    "failure": "The fee stem matched 'feel' and misclassified clinical feelings questions",
+    "resolution": "Bound fee/fees as complete words; unchanged suites subsequently passed."
+  },
+  {
+    "check": "validateCase03PeriapicalAbscess",
+    "stage": "development",
+    "failure": "'Does it travel anywhere?' was interpreted as patient transportation",
+    "resolution": "Excluded clinical 'does it' radiation subject; unchanged suite subsequently passed."
+  },
+  {
+    "check": "validateCase05IrreversiblePulpitis",
+    "stage": "development",
+    "failure": "Required canonical access/background fact ordering changed",
+    "resolution": "Preserved clinical/access facts before background fact ordering; unchanged suite subsequently passed."
+  },
+  {
+    "check": "validateSharedBackgroundTurn",
+    "stage": "development",
+    "failure": "Seven inventory contract/fallback failures: insurance payment wording was treated as personal payment ability, three shared-clinic references were missed, and completely free care wording was missed",
+    "resolution": "Corrected shared contextual interpretation and financial subject boundaries; all 360 deterministic interpretations/fallback checks subsequently passed. This was before implementation freeze and holdout creation."
+  },
+  {
+    "check": "validateCase01Ludwigs",
+    "stage": "final",
+    "failure": "A spoken drooling fact is expected in alreadyDisclosed, but is absent there",
+    "resolution": "Unresolved. Reproduces with the shared interpreter disabled in a reconstructed control; not an archived baseline binary."
+  },
+  {
+    "check": "validateCase04DentistStatus",
+    "stage": "pilot and final correction",
+    "failure": "Immediate helper returns undefined for 'Do you have a dentist?' instead of the expected governed string",
+    "resolution": "Corrected before final-v2 freeze: restored existing immediate dentist response, retained authoritative access source/required fact, excluded prior-visit history from current dentist status and deduplicated selected fact IDs. Unchanged suite now passes. Intermediate source-selection/history/dedup assertion failures were retained in the tool record."
+  },
+  {
+    "check": "validateCase01FacultyFacts",
+    "stage": "final scope check",
+    "failure": "Who do you live with? unlocks the residence fact instead of remaining an unspecified household question.",
+    "resolution": "Unresolved interpretation regression. Frozen final implementation retained for comparable primary/pain/holdout results; no matcher weakened."
+  }
+]

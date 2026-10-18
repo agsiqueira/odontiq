@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('src/lib/patientDisclosure.ts');s=p.read_text().replace('what.*feel|describe.*pain|(?:describe|how).*\\b(?:tooth|pain)\\b.*feel|','what.*feel\\w*|describe.*pain|(?:describe|how).*\\b(?:tooth|pain)\\b.*feel\\w*|');p.write_text(s)
+p=Path('scripts/validatePatientInitiatedQuestions.ts');s=p.read_text().replace('  SAFE_PATIENT_BASE_RESPONSE_FALLBACK,\n','').replace('assert.equal(inventedQuestion.text, SAFE_PATIENT_BASE_RESPONSE_FALLBACK);','// V7 preserves the independently valid acknowledgment while withholding the question.\nassert.equal(inventedQuestion.text, "Okay.");\nassert.equal(inventedQuestion.repeatedDrift, false);');p.write_text(s)

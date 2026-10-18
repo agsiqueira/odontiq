@@ -1,0 +1,618 @@
+[
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.955Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What happened to that coverage?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid before, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"I live in Collier County.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that, doctor. She needs good care too.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.957Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. My daughter's dental care is important to me.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that, doctor. Good dental care is important for both of us.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. We both need it.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. Dental care is important for both of us.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. She needs it, too.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that. It's important for both of us to have good dental health.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that. Dental care is important for both of us.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear, doctor. We both need it.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. My daughter's dental health is important to me.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear, doctor. Dental care is important for both of us.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that. We both need good care.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear, doctor. We both need good care.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"That's good to hear. We both need to take care of our teeth.\"]",
+    "reviewedAt": "2026-10-17T17:48:34.958Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all 19 completed primary setup variants and their occurrence contexts. Medicaid loss within past year, Collier residence, and young daughter references are canonical; neutral replies express general care concern/acknowledgement, without concrete schedules, disease, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How severe is your pain right now?\",\"The painful tooth is my lower-left molar. The pain is eight out of ten now.\"]",
+    "reviewedAt": "2026-10-17T17:54:26.201Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling pretty uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T17:54:26.203Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T17:54:26.204Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with the pain.\"]",
+    "reviewedAt": "2026-10-17T17:54:26.212Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling pretty uncomfortable, to be honest.\"]",
+    "reviewedAt": "2026-10-17T17:54:26.213Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all forty pain setup turns and five new exact variants. Current eight-out-of-ten pain and brief current discomfort answer their clinical setup questions; no historical-rating substitution, unsupported concrete circumstance, or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid before, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T18:11:25.711Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"Collier County.\"]",
+    "reviewedAt": "2026-10-17T18:11:25.728Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have a daughter?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-17T18:11:25.790Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"I appreciate that, doctor. Dental care is important for both of us.\"]",
+    "reviewedAt": "2026-10-17T18:11:25.803Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed the final four additional setup variants and all occurrence contexts: prior Medicaid loss, Collier referent, young daughter, and general care acknowledgement are canonical/contextually sufficient; no invented scheduling, clinic history, family composition or leakage."
+      }
+    }
+  }
+]

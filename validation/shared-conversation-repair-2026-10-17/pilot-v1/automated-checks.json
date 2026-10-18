@@ -1,0 +1,274 @@
+[
+  {
+    "name": "validateSharedBackgroundTurn",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateSharedBackgroundTurn.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Shared contract checks passed: 360 inventory interpretations/fallbacks, clinical controls, combined subjects, premise handling, unsupported claims and final guards. These are deterministic checks, not live Navigator observations.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientBackground",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBackground.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient background validation passed (18 targeted questions, all five cases, clinical/grading scope checks).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientBackgroundConflicts",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBackgroundConflicts.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient background conflict validation passed (25 exact/paraphrase/combined questions through final response guards).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientTravel",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientTravel.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Travel validation passed: 80 fresh/history checks, five residence controls, combined intent and clinical radiation.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientResidence",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientResidence.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient residence validation passed (30 residence/history checks, 10 clinical location checks, mixed intent preserved).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateResidenceRecovery",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateResidenceRecovery.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Residence recovery validation passed (40 captured-output variants, all five counties, fact-backed fallback, final assembly facts/leakage).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientInstructionLeakage",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientInstructionLeakage.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Instruction-leakage validation passed (15 leak variants, 10 natural controls, 120 stage renders, behavior rollback and model retry/fallback).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientOutputIntegrity",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientOutputIntegrity.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient output-integrity validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientInitiatedQuestions",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientInitiatedQuestions.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient-initiated question validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientBehavioralStages",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBehavioralStages.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient behavioral-stage validation passed: 91 focused assertions.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientBehavioralPhraseDiversity",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBehavioralPhraseDiversity.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Amara Johnson optional accents: turn 4: I'm trying to keep going. | turn 8: I'm exhausted. | turn 10: This is wearing me down.\nMarcus Lee optional accents: turn 3: That makes me nervous. | turn 5: I'm kind of worried. | turn 8: That makes me nervous. | turn 11: I'm kind of worried.\nElena Garcia optional accents: none\nNoah Patel optional accents: turn 5: That's it. | turn 11: That's it.\nSofia Williams optional accents: turn 5: This is wearing on me. | turn 8: I'm frustrated with this. | turn 10: This is frustrating.\nCross-patient behavioral phrase-diversity validation passed: 308 assertions across five 12-turn transcripts.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateBehavioralPhraseGovernance",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateBehavioralPhraseGovernance.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Behavioral phrase-governance validation passed: 193 focused assertions.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientMessageIntent",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientMessageIntent.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient message intent validation passed (10 intent cases).\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientResponseRetry",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientResponseRetry.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Patient-response same-request retry validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePhase5ProgressiveDisclosure",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePhase5ProgressiveDisclosure.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Phase 5 progressive-disclosure validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCase01Ludwigs",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase01Ludwigs.ts"
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "AssertionError [ERR_ASSERTION]: A spoken fact must remain available for continuity\n    at C:/240 - odontIQ/odontiq/scripts/validateCase01Ludwigs.ts:83:21\n    at async Function.import (C:\\240 - odontIQ\\odontiq\\node_modules\\jiti\\dist\\jiti.cjs:1:187718)\n    at async file:///C:/240%20-%20odontIQ/odontiq/node_modules/jiti/lib/jiti-cli.mjs:31:1 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n"
+  },
+  {
+    "name": "validateCase02SystemicInfection",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase02SystemicInfection.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Case 2 systemic-infection validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCase03PeriapicalAbscess",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03PeriapicalAbscess.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Case 3 periapical-abscess validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCase04NecroticPulp",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase04NecroticPulp.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Case 4 necrotic-pulp validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCase05IrreversiblePulpitis",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase05IrreversiblePulpitis.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Case 5 irreversible-pulpitis validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCanonicalCases",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCanonicalCases.ts",
+      "--strict"
+    ],
+    "exitCode": 0,
+    "stdout": "\ncase-01 (35 canonical facts, 0 parity mismatches)\n\ncase-02 (38 canonical facts, 0 parity mismatches)\n\ncase-03 (17 canonical facts, 0 parity mismatches)\n\ncase-04 (14 canonical facts, 0 parity mismatches)\n\ncase-05 (18 canonical facts, 0 parity mismatches)\n\nCanonical schema/parity validation: 0 mismatch(es); mode=strict.\n",
+    "stderr": ""
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "src/lib/patientBackgroundTurn.ts",
+      "src/lib/patientDisclosure.ts",
+      "src/lib/patientTurnFacts.ts",
+      "src/lib/patientImmediateResponse.ts",
+      "src/lib/patientRoleResponse.ts",
+      "src/lib/patientFinalResponse.ts",
+      "src/app/api/conversation/route.ts",
+      "scripts/validateSharedBackgroundTurn.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build",
+    "command": [
+      "node",
+      "node_modules/next/dist/bin/next",
+      "build"
+    ],
+    "exitCode": 0,
+    "stdout": "▲ Next.js 16.2.10 (Turbopack)\n- Environments: .env.local, .env\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 6.3s\n  Running TypeScript ...\n  Finished TypeScript in 8.6s ...\n  Collecting page data using 15 workers ...\n  Generating static pages using 15 workers (0/26) ...\n  Generating static pages using 15 workers (6/26) \r\n  Generating static pages using 15 workers (12/26) \r\n  Generating static pages using 15 workers (19/26) \r\n✓ Generating static pages using 15 workers (26/26) in 519ms\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├ ƒ /api/completed-attempts/[attemptId]\n├ ƒ /api/completed-attempts/[attemptId]/reconcile\n├ ƒ /api/conversation\n├ ƒ /api/debrief\n├ ƒ /api/debrief/chat\n├ ƒ /api/dev/voice-audition\n├ ƒ /api/encounters/[encounterId]\n├ ƒ /api/encounters/[encounterId]/complete\n├ ƒ /api/encounters/start\n├ ƒ /api/faculty-rubric/evaluate\n├ ƒ /api/health\n├ ƒ /api/home/progression\n├ ƒ /api/me\n├ ƒ /api/readiness\n├ ƒ /api/report\n├ ƒ /api/reports/[attemptId]\n├ ƒ /api/reports/dashboard\n├ ƒ /api/voice/mentor\n├ ƒ /api/voice/speak\n├ ○ /cases\n├ ○ /dev/amara-behavior\n├ ○ /dev/faculty-report\n├ ○ /dev/faculty-report/compare\n├ ○ /dev/faculty-rubric\n├ ○ /dev/patient-language\n├ ○ /dev/voices\n├ ƒ /encounter/[caseId]\n├ ○ /home\n├ ƒ /login/[[...sign-in]]\n├ ƒ /mentor/[caseId]\n├ ○ /reports\n├ ƒ /reports/[caseId]\n├ ○ /settings\n└ ƒ /signup/[[...sign-up]]\n\n\nƒ Proxy (Middleware)\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n",
+    "stderr": ""
+  }
+]

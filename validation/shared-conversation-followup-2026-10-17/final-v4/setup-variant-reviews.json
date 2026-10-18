@@ -1,0 +1,288 @@
+[
+  {
+    "variantKey": "[\"case-01\",\"How severe is your pain right now?\",\"The painful tooth is my lower-left molar. The pain is eight out of ten now.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.505Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Canonical lower-left tooth and current eight-of-ten severity; answers current severity without reverting to initial severity."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Canonical lower-left tooth and current eight-of-ten severity; answers current severity without reverting to initial severity."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Canonical lower-left tooth and current eight-of-ten severity; answers current severity without reverting to initial severity."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Canonical lower-left tooth and current eight-of-ten severity; answers current severity without reverting to initial severity."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling pretty uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm feeling quite uncomfortable with the pain.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"I'm pretty uncomfortable with this pain.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"It's pretty uncomfortable, to be honest.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Natural directly requested discomfort after established severe pain; no new concrete circumstance, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid before, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Prior Medicaid and loss within the past year are canonical; correct historical yes and current context, no invented reason or date."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What happened to that coverage?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct canonical lost coverage and timing; no invented loss reason, complete and no leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct canonical lost coverage and timing; no invented loss reason, complete and no leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct canonical lost coverage and timing; no invented loss reason, complete and no leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct canonical lost coverage and timing; no invented loss reason, complete and no leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"Collier County.\"]",
+    "reviewedAt": "2026-10-17T19:29:32.508Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct county; establishes the later location referent without inventing household/address."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct county; establishes the later location referent without inventing household/address."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct county; establishes the later location referent without inventing household/address."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct county; establishes the later location referent without inventing household/address."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-17T19:32:42.332Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid correctly implies prior coverage and establishes the referent; canonical interval, no invented loss reason or leakage."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid correctly implies prior coverage and establishes the referent; canonical interval, no invented loss reason or leakage."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid correctly implies prior coverage and establishes the referent; canonical interval, no invented loss reason or leakage."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Loss of Medicaid correctly implies prior coverage and establishes the referent; canonical interval, no invented loss reason or leakage."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"I live in Collier County.\"]",
+    "reviewedAt": "2026-10-17T19:32:42.334Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Correct county and location referent, complete residence answer, no household or address invention."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Correct county and location referent, complete residence answer, no household or address invention."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Correct county and location referent, complete residence answer, no household or address invention."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Correct county and location referent, complete residence answer, no household or address invention."
+      }
+    }
+  }
+]

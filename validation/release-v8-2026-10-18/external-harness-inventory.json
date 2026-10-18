@@ -1,0 +1,520 @@
+{
+  "repository": "https://github.com/agsiqueira/odontiq-phase-t",
+  "branch": "feature/expand-behavioral-journeys",
+  "head": "1ebc18870a010a8acdb4a3c6b7676a7a07345d55",
+  "includedInApplicationPR": false,
+  "packagingOutstanding": true,
+  "files": [
+    {
+      "status": " M",
+      "path": "package.json",
+      "sha256": "7386622d19015ab4ea5719d69560e2e159f0c999e3cadb47d1fc4a579cda0711"
+    },
+    {
+      "status": " M",
+      "path": "playwright.config.ts",
+      "sha256": "9dc03c7b3e9b6dceda8782e29182c60e0376b58f5dc63e1746a5e67c4b691563"
+    },
+    {
+      "status": " M",
+      "path": "src/evaluators/deterministicEvaluator.ts",
+      "sha256": "47bdf82bfd7f7f2d944cc456165ac705a4ee8725989aca751625fb45dc271a1b"
+    },
+    {
+      "status": " M",
+      "path": "src/scenarios/behavioralScenarios.ts",
+      "sha256": "598fe8013434fcb6ab391d238d651fa63b0c6b108262d218b4788a2dc3e6315d"
+    },
+    {
+      "status": " M",
+      "path": "src/scenarios/case02HappyPath.ts",
+      "sha256": "f45deeb398eaaa63192e3b71e144f255720173d4c1c81b547529f248a5aa69eb"
+    },
+    {
+      "status": " M",
+      "path": "src/types/scenario.ts",
+      "sha256": "6a14e4a2a6b5af7606382204450792838812877ebfb5535e8272580f68e00d24"
+    },
+    {
+      "status": " M",
+      "path": "tests/auth/global.setup.ts",
+      "sha256": "b19d6b658f41a7c4d6942c1ade59d40850cea4710140672ab7638136e9084b0d"
+    },
+    {
+      "status": " M",
+      "path": "tests/unit/encounterLease.spec.ts",
+      "sha256": "eecd2128e4658e9fc0cdd1b844e29285e0987f4227af0f27185c7502061473a3"
+    },
+    {
+      "status": "??",
+      "path": "playwright.questions.config.ts",
+      "sha256": "8512c3df35935d57cca3e93e85673e6b58fa8f41f4a1f859ffe55f314beddf79"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-followup-supplement.config.ts",
+      "sha256": "51d99f248996cd1997ffa1a0fda0c30e6a8ad7a262720bea50a3fd53cec3a997"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-followup.config.ts",
+      "sha256": "4bb2d3e21ddcc6cc4ddc1ebc02893b53e5fe2e50987c5e6cc810dd41965cc443"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-repair-exact.config.ts",
+      "sha256": "e6e8e08f1f2864bc55b966f25a274ad0031ae1cea8184b502e8255851c2fca27"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-repair-final.config.ts",
+      "sha256": "1465c226f2a0537b367a359eecca2d45ef95424f5000a869e669226768632ec2"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-repair-regressions.config.ts",
+      "sha256": "4ceda45a79cbc9bfcb06e5061a411f83de2192ba9e9f85e5b091cb3c3aed6868"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-repair.config.ts",
+      "sha256": "89a2030d1821a598f64fd094b5e26f6069866554878a492a22a9cda3de5e8dd3"
+    },
+    {
+      "status": "??",
+      "path": "playwright.shared-v4-continuation.config.ts",
+      "sha256": "a2cd72a1e781867881b1eea45a656f058ee229d399bf0f7af560a70a357d00d0"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v5.config.ts",
+      "sha256": "0a645a18ad2b997f49f8383479ea2e0a9a89257c39981c4df7dff4920bc4a7cd"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v6-continuation.config.ts",
+      "sha256": "1c5433d9f4f5d87ed414d3c9ba6d00ed3ad370cbceaf5064b9753834b4474556"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v6-production.config.ts",
+      "sha256": "e9042f7b70404f1bb4f5e524427e27887d724455c1ff4dc6042883e40227505d"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v6-speech-retest.config.ts",
+      "sha256": "d38b2f106853a84d925dbba1c95c6f1872d322c144a651a008791d0d4aed3739"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v6-speech.config.ts",
+      "sha256": "d57dcef14d5410c7eaa622eb3326fc6bb9c55eaf581c8cdd59ccbc2f48af101e"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v6.config.ts",
+      "sha256": "94e6266d14459b848b9c5586a383b708a07d472e8c9128d8316004a44cb0fdf4"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused.config.ts",
+      "sha256": "f4df60374d7715937261e1f8ba0cd353dd54152377c9f67d64534ae1fcb8d532"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused2.config.ts",
+      "sha256": "1883bf872f212b57b76f159826c962c75850f7c64e9246e4b34be8823fbf7c0b"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused3.config.ts",
+      "sha256": "873f8b64d3a5998010254fb49c181495c2df393676e7c5df2250106722391d5a"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused4.config.ts",
+      "sha256": "c7d3759691dad01386372c79ddb7b658cd06d4d3186d8185d90101b95d71e39e"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused5.config.ts",
+      "sha256": "6e2d96d7b8aca28157830ea57d49748445f349aace86f54ce1d31dcf41ff46ac"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused6.config.ts",
+      "sha256": "630704d48510b8eb8dccce6e72d52ad0f6fe53a4b70f7389abb9cab8900b8974"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused7.config.ts",
+      "sha256": "4661b1ff91bf85fe0870d4cadcfb32c6055686c9c881b1578a21a897b07cbc40"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused8.config.ts",
+      "sha256": "933471b1c2e80f9a287131d9e826d60c6fc2091e0198a1bada5a369bcbed751f"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-focused9.config.ts",
+      "sha256": "acc4f265e1a4e33121c0e1abaee47c9ccb600c803712455672038b8a6ab2cc30"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7-production.config.ts",
+      "sha256": "8b7e291910009a691a1dd30480fea2e1e5492f11fcba4d40fdae3332f230b01a"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v7.config.ts",
+      "sha256": "05b1e055234f19d853bfbd26f89bd2cf281c3f9fbdb952bc3a3d61ec67d5e99c"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8-focused.config.ts",
+      "sha256": "f6747517d64e774da3c00ad13417939418eeff3c8d73378b2e9f607ae14c7d6b"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8-focused2.config.ts",
+      "sha256": "17cc68920e3359a77fbf338f01afd07b20ae21f05d5a0f08cb8459f9e6a9b392"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8-focused3.config.ts",
+      "sha256": "ba9554d3f6aa03c49185dd549c3467cbc461e3fab350c4d779df26436108e1f9"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8-focused4.config.ts",
+      "sha256": "5730811279592612b7e5ae19903b9c8375ceceac05b9a267c5db119465afb21c"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8-production.config.ts",
+      "sha256": "1876b1437e760d6fd7081ade43479cc008f7fbc848ee3ebccd6b6df1c57108b5"
+    },
+    {
+      "status": "??",
+      "path": "playwright.v8.config.ts",
+      "sha256": "7b2a5fb55f7a1ec8a56dc00b7e60da750899897c1357abcf492f40264e804528"
+    },
+    {
+      "status": "??",
+      "path": "src/scenarios/patientCoreResponseScenarios.ts",
+      "sha256": "a7428580e85b9d94cc9106cb14db09f08f09eaaba4fb85cdaca3182fe84f64b4"
+    },
+    {
+      "status": "??",
+      "path": "src/scenarios/semanticTerms.ts",
+      "sha256": "8cca46a42c9c216546198939ab52c6d69ead7e4ab0d62045a9e519ead4eee5b2"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v5.global.setup.ts",
+      "sha256": "5ca75e6847e7d48c1d57d7007d8fc812ffe78feb8291a3145f82e12f0b5bf141"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v6-production.global.setup.ts",
+      "sha256": "42c9404148d0586b8f7d467fc6f4033210f83003c1fdfd2bb3a3623a11cfad32"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v6.global.setup.ts",
+      "sha256": "4510554789318adc9d5074addc5cdbaa6204f0788ddcaaeedd573bbf467e5321"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused.global.setup.ts",
+      "sha256": "5e159bc18e3d49df1a7f69ac52a3330b2cdefd959ffb7872e1673d2fa4562faa"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused2.global.setup.ts",
+      "sha256": "b050725e7cc50f5be54b2983bfbb39c4237714cc3b7dec59332ca1e85f22f975"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused3.global.setup.ts",
+      "sha256": "98b21398f28de07fd3d772c7886a93481cc8a04802790f0365ced1c3170fba32"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused4.global.setup.ts",
+      "sha256": "0e84fa3a13e15cc33bc520e55af244946395e0c7a98fab62c0ed14ca5714d906"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused5.global.setup.ts",
+      "sha256": "d81c78643dee8533c7ffa04957d12d766bba543f208ea12eca9f3c2f3168a8fa"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused6.global.setup.ts",
+      "sha256": "0c5a4b3a3d73ec8b98b6469cd5451b19b70133c022a9493c93dacbecdac16e25"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused7.global.setup.ts",
+      "sha256": "a288721c6e9a431388d62c5dfb55a1f5acc561f08eb11120534c3bbd8bf209b9"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused8.global.setup.ts",
+      "sha256": "6c2157da1715fa09db103509385f3a41d0385ed24dddaa4f3b59c2d743a41f71"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-focused9.global.setup.ts",
+      "sha256": "46907399c800447012d4c0368aa9ac9fcc9c552560ae794c0e6dc4e1c016f669"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7-production.global.setup.ts",
+      "sha256": "0549a7e12f6e9d1cde7a2f6ff772055be0121cb5200b70d486e6ab27f761f607"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v7.global.setup.ts",
+      "sha256": "6e429398020afd8bf16d5549c4e2abbe34578ce4d12d6c10048256788a586aa0"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8-focused.global.setup.ts",
+      "sha256": "78fdf92f18d34420af64e41a0b0151675ffc61a45b85788bcc1a04945d14d9db"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8-focused2.global.setup.ts",
+      "sha256": "c2f153a7015bb5dd0138b230a190be1a2258a4b9df9f1c79cc56965265c1add5"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8-focused3.global.setup.ts",
+      "sha256": "72b7d835bfd2bd4fbf2e2757bb485168cedb179e0f387144659ed58972e3182c"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8-focused4.global.setup.ts",
+      "sha256": "3cc443ce48bc42cbf0b0fa330355c47ae8593c4a7a2280bc6df68f9bf3ef6aa5"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8-production.global.setup.ts",
+      "sha256": "f14a8af20ab76e9d60ae546af432b2379336fb248d64991dae0a7ca01be1466f"
+    },
+    {
+      "status": "??",
+      "path": "tests/auth/v8.global.setup.ts",
+      "sha256": "5548f4d4ce9c62bbfe85fb85c9cfd6c9f13037ba9382c1595a5be0de3bfa131b"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-background.spec.ts",
+      "sha256": "749958e778c8112f96753d59a5fa29a33c735fea2b96b407acb357e08c203cc9"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-core-responses.spec.ts",
+      "sha256": "949fcf02f30361f9afe4708722d3b36eee27dca0a2237d7daa6c8c3a539897e8"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-instruction-leakage.spec.ts",
+      "sha256": "4f81b8f19c7cd892a1ba19ca0346fbe5464ba1bbd5b5dd9cd1a084e882d4f282"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-question-variations.spec.ts",
+      "sha256": "b66bc15d6527b93a3badd44ae3ccb2961ab66efa10420cf1178090620e6e7780"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-residence-recovery.spec.ts",
+      "sha256": "afe9c041aea9a219c98fc1e5daae17e0ff75d57d9d9b1ef4fdf17485bfe85996"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-shared-conversation-repair.spec.ts",
+      "sha256": "7b3cb335d5af5cf373c3f8a3050c45261e4ba976bb0d3ce01923ecb5ddc6404c"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-shared-conversation-v4-continuation.spec.ts",
+      "sha256": "bde8ba13734d947fbb6c58366594263003f2e33b4629e94b6616e0a863c702c9"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-transportation-capability.spec.ts",
+      "sha256": "d8d755163b66f96522d90d082de822118a80814b94ef011c111f4c198474e375"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-travel-distinction.spec.ts",
+      "sha256": "a66e332440178293b0ced3087f89b362dd6e6dc9ad478086c7e73ac1a918b1b0"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v5-verification.spec.ts",
+      "sha256": "589b408fed59a7f8d3e50a49d11861320e6a95eb5d56b18b7a394d3e7c414ccb"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v6-continuation.spec.ts",
+      "sha256": "ea67814908c95ed7c446a1f9f2d9df66154f3ffd977afddbb9f4f3d251d02b56"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v6-production.spec.ts",
+      "sha256": "bb2cd5131133d7f9f6b1031ff26109880d285163181fc3a5c5cfa4841e77716d"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v6-speech-retest.spec.ts",
+      "sha256": "270ddb1d59260042a0f3acda76b046dcf16ad93f75fba2baba62e64117710558"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v6-speech.spec.ts",
+      "sha256": "0d20ebcd4836ebb8f7bd942e5ed1f8c4fea07c2209a47e22e0b4e60207387d32"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v6-verification.spec.ts",
+      "sha256": "1e2f4dd81d33c9074f31121b93136287d394e4329cd1fa2c72ce5091639f754b"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused.spec.ts",
+      "sha256": "b793b7868161e3e47746a997f3b55646630994e1fde29bc75871407e4272da5c"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused2.spec.ts",
+      "sha256": "2fef8cd593b1d603c2740ed79d1cde16c54ee4fa903df50a47d57a414dd29fb2"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused3.spec.ts",
+      "sha256": "868ae324733d39a8a0551f8baacacddc0dba22349fcad8763e721d27227a0f44"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused4.spec.ts",
+      "sha256": "bafd6b0a3ac4f205f327292bb33490e8e24015062650633dc873af1e571a8aea"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused5.spec.ts",
+      "sha256": "048bc5f8d04d156eb3bb4d56f1b1402a60d056e118fc2a1ad1539fe7222d3264"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused6.spec.ts",
+      "sha256": "016964c6248dddc6719c3f264c1c12ed4c9311adbd10a8cffdfa1892d403d2e9"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused7.spec.ts",
+      "sha256": "8bb494e5c6abc9cf6397923e84db79860e2a05df658aed28b8435373e2035601"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused8.spec.ts",
+      "sha256": "c1017f27ace2a5d3a80f5da8d4d60d5f58a699798201feb8dde6727c3dc3d238"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-focused9.spec.ts",
+      "sha256": "64b43c1018e7282d59459280fdc69a27a77ce1c092fd52800db9dabdb4b2f02d"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-production.spec.ts",
+      "sha256": "7a2ab8bd9613e33ae3166069a39e6ae27e344dc169204831a118c088be365f16"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v7-verification.spec.ts",
+      "sha256": "e33b54c286f0d4baed97d94acc4a9f3a3dc3100b6cc1b572743bf6efcd10c9a7"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-focused.spec.ts",
+      "sha256": "142f2191b1d8b98b1a7f541c9f0b966953d06817f268a830789ff9ad2ddd353f"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-focused2.spec.ts",
+      "sha256": "74e71e9f873a2a86b8148dab0c0ea3b78de56f976f821f6ed6af93046b7c2fa6"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-focused3.spec.ts",
+      "sha256": "4978c172c3f33cc61d7bef47c44db5764ab96d309f69f97d11f263e2069a4e62"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-focused4.spec.ts",
+      "sha256": "ae6266d17358ad2fe26963b9613533b26e1d320fe98e11d525ed9f9f8780288e"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-production.spec.ts",
+      "sha256": "214253c2f6b07192ce0bf6317bb05ea71a5c7113a1381e33b35102576f69db33"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patient-v8-verification.spec.ts",
+      "sha256": "555a28242b060743f89f3bb995676cb7a2affa5c7d67e05ac1fcdb14dc5ba9fe"
+    },
+    {
+      "status": "??",
+      "path": "tests/browser/patientDialogueLeakage.ts",
+      "sha256": "18033e6eb4cc926a474dcdb0fdf89d5099e2abdabfda27d208499196329c074b"
+    },
+    {
+      "status": "??",
+      "path": "tests/data/question-variations-340.json",
+      "sha256": "81ad547046f045c81c3a1ec884a53929675a0949574d525727696362f0f01f50"
+    },
+    {
+      "status": "??",
+      "path": "tests/data/shared-conversation-exact-repeats.json",
+      "sha256": "ace8ccfd531246109fde8453c3e7dd0b1acf1a6ce5ef951fa8861bc78c1e78a3"
+    },
+    {
+      "status": "??",
+      "path": "tests/data/shared-conversation-repair-411.json",
+      "sha256": "45efa8e9232f0c4e40c294a841557c1a495fe38a9ebd5d4c881663a1e8b39032"
+    },
+    {
+      "status": "??",
+      "path": "tests/data/shared-conversation-repair-final-411.json",
+      "sha256": "11df7cdd90007b035d9b225a9f6752643976df999451acef22567132c1a87e3f"
+    },
+    {
+      "status": "??",
+      "path": "tests/patient-dialogue-audit.ts",
+      "sha256": "2397faaf752caf87eb2b7abdce8b0c19c496468dfba75182997aefcaabd97d70"
+    },
+    {
+      "status": "??",
+      "path": "tests/residence-recovery-report.ts",
+      "sha256": "4d49085e3e3e0918b10435916e2723daaa8cb1f5dc1e1c7c32c3ea9192a54d83"
+    },
+    {
+      "status": "??",
+      "path": "tests/travel-distinction-report.ts",
+      "sha256": "3242819212c16b9df0d341f3ada8a197835d87d9f22d677e318c2426c8642afa"
+    },
+    {
+      "status": "??",
+      "path": "tests/unit/case02HappyPathExpectation.spec.ts",
+      "sha256": "690d1c8972c6546655254d1335002811d71e5afa7decd06128eb546c4562072d"
+    }
+  ],
+  "excluded": "Ignored/generated browser authentication state, .env secrets, raw artifacts and unrelated caches are not published."
+}

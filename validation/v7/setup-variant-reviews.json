@@ -1,0 +1,244 @@
+[
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-18T00:51:21.573Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What happened to that coverage?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-18T00:51:21.573Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed coverage-history finals and both setup variants: prior Medicaid and loss within the past year are authoritative. No narrower date or reason invented; mild worry is compatible with the patient behavior. Asked timing answered, context preserved, no premature question/leakage, UI/API and IDs matched."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"I live in Collier County.\"]",
+    "reviewedAt": "2026-10-18T00:54:41.710Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed each residency final and county setup: Collier residence and not-yet-established residency correctly resolve pronouns and leading wording. Initial travel answers preserve unreliable out-of-town transport without asserting absolute inability. No added moving particulars, history or patient questions; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed each residency final and county setup: Collier residence and not-yet-established residency correctly resolve pronouns and leading wording. Initial travel answers preserve unreliable out-of-town transport without asserting absolute inability. No added moving particulars, history or patient questions; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed each residency final and county setup: Collier residence and not-yet-established residency correctly resolve pronouns and leading wording. Initial travel answers preserve unreliable out-of-town transport without asserting absolute inability. No added moving particulars, history or patient questions; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed each residency final and county setup: Collier residence and not-yet-established residency correctly resolve pronouns and leading wording. Initial travel answers preserve unreliable out-of-town transport without asserting absolute inability. No added moving particulars, history or patient questions; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T01:02:23.963Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected daughter coverage and actual children setup. Young daughter and her Medicaid coverage are authoritative; she/child references resolve correctly without asserting patient coverage, dental condition, regular attendance or provider identity. Asked concepts complete/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected daughter coverage and actual children setup. Young daughter and her Medicaid coverage are authoritative; she/child references resolve correctly without asserting patient coverage, dental condition, regular attendance or provider identity. Asked concepts complete/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected daughter coverage and actual children setup. Young daughter and her Medicaid coverage are authoritative; she/child references resolve correctly without asserting patient coverage, dental condition, regular attendance or provider identity. Asked concepts complete/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected daughter coverage and actual children setup. Young daughter and her Medicaid coverage are authoritative; she/child references resolve correctly without asserting patient coverage, dental condition, regular attendance or provider identity. Asked concepts complete/relevant, no premature question/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T01:03:32.049Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full two-turn setup and shared-clinic finals: young daughter and same-clinic preference are sourced, convenience wording expresses that preference without a concrete scheduling hardship or existing provider. Care-search acknowledgment introduces no daughter condition. Complete/relevant, no premature question or leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full two-turn setup and shared-clinic finals: young daughter and same-clinic preference are sourced, convenience wording expresses that preference without a concrete scheduling hardship or existing provider. Care-search acknowledgment introduces no daughter condition. Complete/relevant, no premature question or leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full two-turn setup and shared-clinic finals: young daughter and same-clinic preference are sourced, convenience wording expresses that preference without a concrete scheduling hardship or existing provider. Care-search acknowledgment introduces no daughter condition. Complete/relevant, no premature question or leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full two-turn setup and shared-clinic finals: young daughter and same-clinic preference are sourced, convenience wording expresses that preference without a concrete scheduling hardship or existing provider. Care-search acknowledgment introduces no daughter condition. Complete/relevant, no premature question or leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How severe is your pain right now?\",\"It's an 8 out of 10.\"]",
+    "reviewedAt": "2026-10-18T01:18:58.734Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"The pain is eight out of ten now.\"]",
+    "reviewedAt": "2026-10-18T01:18:58.734Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each final and new severe-pain setup individually inspected. Case5 inability to pay/free preference remains sourced. Case1 setup severity eight of ten matches source; severe pain does not negate reliable travel, and actual travel finals preserve that fact without unrelated symptom history. No premature questions/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-18T01:24:30.557Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact holdout questions, context and finals. Case1 reliable affordable-care travel, Case2 uninsured status and prior Medicaid loss within past year are source-backed; both required facets answered where compound. New Yeah setup variant grounded. No invented date/cause/history/question; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact holdout questions, context and finals. Case1 reliable affordable-care travel, Case2 uninsured status and prior Medicaid loss within past year are source-backed; both required facets answered where compound. New Yeah setup variant grounded. No invented date/cause/history/question; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact holdout questions, context and finals. Case1 reliable affordable-care travel, Case2 uninsured status and prior Medicaid loss within past year are source-backed; both required facets answered where compound. New Yeah setup variant grounded. No invented date/cause/history/question; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed exact holdout questions, context and finals. Case1 reliable affordable-care travel, Case2 uninsured status and prior Medicaid loss within past year are source-backed; both required facets answered where compound. New Yeah setup variant grounded. No invented date/cause/history/question; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid, but I lost it within the last year.\"]",
+    "reviewedAt": "2026-10-18T01:25:41.026Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"Collier County.\"]",
+    "reviewedAt": "2026-10-18T01:25:41.026Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed full holdout conversations: Medicaid loss within past year, Collier residence/not established residency, and unreliable out-of-town transport are sourced. Conditional inability to guarantee attendance is tied only to explicit transport unreliability. New setup variants grounded; no invented dates, family or question. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have a daughter?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T01:35:37.277Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed provider relationship and family-context holdouts plus daughter setup. Own dentist/appointment, young daughter, her Medicaid and shared-clinic preference are all sourced. Neither attendance frequency, existing shared provider nor child condition is inferred. Answers direct/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed provider relationship and family-context holdouts plus daughter setup. Own dentist/appointment, young daughter, her Medicaid and shared-clinic preference are all sourced. Neither attendance frequency, existing shared provider nor child condition is inferred. Answers direct/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed provider relationship and family-context holdouts plus daughter setup. Own dentist/appointment, young daughter, her Medicaid and shared-clinic preference are all sourced. Neither attendance frequency, existing shared provider nor child condition is inferred. Answers direct/relevant, no premature question/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed provider relationship and family-context holdouts plus daughter setup. Own dentist/appointment, young daughter, her Medicaid and shared-clinic preference are all sourced. Neither attendance frequency, existing shared provider nor child condition is inferred. Answers direct/relevant, no premature question/leakage; UI/API and IDs match."
+      }
+    }
+  }
+]

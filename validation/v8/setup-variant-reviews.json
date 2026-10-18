@@ -1,0 +1,244 @@
+[
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-18T03:07:23.770Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What happened to that coverage?\",\"I lost Medicaid within the past year.\"]",
+    "reviewedAt": "2026-10-18T03:07:23.770Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed all eight final responses and both Medicaid setup turns. Current uninsured status and loss within past year match case2 facts. Followup retains established context; mild worry fits encounter without invented clinical or financial facts. No premature question. UI/API and correlation match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yeah, I had Medicaid before, but I lost it within the last year.\"]",
+    "reviewedAt": "2026-10-18T03:09:24.443Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed six coverage-timing finals, two residency finals and new prior-Medicaid setup variant. Timing remains within source timeframe; living in Collier is correctly distinguished from established residency. No inference of legal or administrative details or premature patient question; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed six coverage-timing finals, two residency finals and new prior-Medicaid setup variant. Timing remains within source timeframe; living in Collier is correctly distinguished from established residency. No inference of legal or administrative details or premature patient question; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed six coverage-timing finals, two residency finals and new prior-Medicaid setup variant. Timing remains within source timeframe; living in Collier is correctly distinguished from established residency. No inference of legal or administrative details or premature patient question; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed six coverage-timing finals, two residency finals and new prior-Medicaid setup variant. Timing remains within source timeframe; living in Collier is correctly distinguished from established residency. No inference of legal or administrative details or premature patient question; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"Collier County.\"]",
+    "reviewedAt": "2026-10-18T03:11:22.742Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed eight residency finals, two transport finals and county setup. Correct Collier/unestablished distinction and unreliable out-of-town transport. Q14 mildly repeats county but remains accurate, relevant and complete under unchanged V7 rubric. No premature question or unsupported constraints. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed eight residency finals, two transport finals and county setup. Correct Collier/unestablished distinction and unreliable out-of-town transport. Q14 mildly repeats county but remains accurate, relevant and complete under unchanged V7 rubric. No premature question or unsupported constraints. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed eight residency finals, two transport finals and county setup. Correct Collier/unestablished distinction and unreliable out-of-town transport. Q14 mildly repeats county but remains accurate, relevant and complete under unchanged V7 rubric. No premature question or unsupported constraints. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed eight residency finals, two transport finals and county setup. Correct Collier/unestablished distinction and unreliable out-of-town transport. Q14 mildly repeats county but remains accurate, relevant and complete under unchanged V7 rubric. No premature question or unsupported constraints. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T03:18:22.792Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read all ten daughter-insurance finals and child setup. Correct Medicaid and young-daughter facts, correct pronoun/context resolution, no invented daughter illness, care activity, clinic or provider. Insurance screening does not trigger a patient question. UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read all ten daughter-insurance finals and child setup. Correct Medicaid and young-daughter facts, correct pronoun/context resolution, no invented daughter illness, care activity, clinic or provider. Insurance screening does not trigger a patient question. UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read all ten daughter-insurance finals and child setup. Correct Medicaid and young-daughter facts, correct pronoun/context resolution, no invented daughter illness, care activity, clinic or provider. Insurance screening does not trigger a patient question. UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all ten daughter-insurance finals and child setup. Correct Medicaid and young-daughter facts, correct pronoun/context resolution, no invented daughter illness, care activity, clinic or provider. Insurance screening does not trigger a patient question. UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T03:19:23.091Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed four remaining daughter-coverage finals, two family-clinic preference finals and dental-options setup. Answers express the explicit same-clinic preference without claiming current shared provider, existing care, scheduling hardship or daughter condition. Coverage facts correct; relevant acknowledgment in setup. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed four remaining daughter-coverage finals, two family-clinic preference finals and dental-options setup. Answers express the explicit same-clinic preference without claiming current shared provider, existing care, scheduling hardship or daughter condition. Coverage facts correct; relevant acknowledgment in setup. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed four remaining daughter-coverage finals, two family-clinic preference finals and dental-options setup. Answers express the explicit same-clinic preference without claiming current shared provider, existing care, scheduling hardship or daughter condition. Coverage facts correct; relevant acknowledgment in setup. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed four remaining daughter-coverage finals, two family-clinic preference finals and dental-options setup. Answers express the explicit same-clinic preference without claiming current shared provider, existing care, scheduling hardship or daughter condition. Coverage facts correct; relevant acknowledgment in setup. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How severe is your pain right now?\",\"It's an 8 out of 10.\"]",
+    "reviewedAt": "2026-10-18T03:35:38.426Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"How are you feeling with the pain?\",\"The pain is eight out of ten now.\"]",
+    "reviewedAt": "2026-10-18T03:35:38.426Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read five pain-context travel finals and both setup variants. Source supports pain 8/10, reliable transportation and affordable out-of-county willingness. Finals answer transport despite prior pain context without unrelated history or invented limitation. No case1 surgical question absent admission/disposition trigger. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"Have you ever had Medicaid?\",\"Yes, I had Medicaid, but I lost it within the past year.\"]",
+    "reviewedAt": "2026-10-18T03:40:47.238Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Reviewed seven holdout finals and new Medicaid setup variant. Case1 affordable travel/reliability facts correct; case2 uninsured and prior loss within year correct, contextual coverage references resolved. Mild worry fits patient affect, no invented source of loss or clinical/financial activity. No ineligible question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Reviewed seven holdout finals and new Medicaid setup variant. Case1 affordable travel/reliability facts correct; case2 uninsured and prior loss within year correct, contextual coverage references resolved. Mild worry fits patient affect, no invented source of loss or clinical/financial activity. No ineligible question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Reviewed seven holdout finals and new Medicaid setup variant. Case1 affordable travel/reliability facts correct; case2 uninsured and prior loss within year correct, contextual coverage references resolved. Mild worry fits patient affect, no invented source of loss or clinical/financial activity. No ineligible question. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Reviewed seven holdout finals and new Medicaid setup variant. Case1 affordable travel/reliability facts correct; case2 uninsured and prior loss within year correct, contextual coverage references resolved. Mild worry fits patient affect, no invented source of loss or clinical/financial activity. No ineligible question. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What county do you live in?\",\"I live in Collier County.\"]",
+    "reviewedAt": "2026-10-18T03:41:48.881Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read nine holdout finals and Collier setup variant. Correct Medicaid timing, Collier residence without established residency, unreliable out-of-town transport and Hillsborough residence. Dependable-attendance question answered via explicit transport fact, no invented regular attendance or work barriers. No premature question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read nine holdout finals and Collier setup variant. Correct Medicaid timing, Collier residence without established residency, unreliable out-of-town transport and Hillsborough residence. Dependable-attendance question answered via explicit transport fact, no invented regular attendance or work barriers. No premature question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read nine holdout finals and Collier setup variant. Correct Medicaid timing, Collier residence without established residency, unreliable out-of-town transport and Hillsborough residence. Dependable-attendance question answered via explicit transport fact, no invented regular attendance or work barriers. No premature question. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read nine holdout finals and Collier setup variant. Correct Medicaid timing, Collier residence without established residency, unreliable out-of-town transport and Hillsborough residence. Dependable-attendance question answered via explicit transport fact, no invented regular attendance or work barriers. No premature question. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"Do you have a daughter?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T03:51:07.104Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read eight finals and daughter setup. Correct Hillsborough/own dentist/appointment facts; own-provider relationship is supported and is not an attendance-frequency claim. Daughter Medicaid and prospective same-clinic preference correct without condition or present provider inference. No premature question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read eight finals and daughter setup. Correct Hillsborough/own dentist/appointment facts; own-provider relationship is supported and is not an attendance-frequency claim. Daughter Medicaid and prospective same-clinic preference correct without condition or present provider inference. No premature question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read eight finals and daughter setup. Correct Hillsborough/own dentist/appointment facts; own-provider relationship is supported and is not an attendance-frequency claim. Daughter Medicaid and prospective same-clinic preference correct without condition or present provider inference. No premature question. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read eight finals and daughter setup. Correct Hillsborough/own dentist/appointment facts; own-provider relationship is supported and is not an attendance-frequency claim. Daughter Medicaid and prospective same-clinic preference correct without condition or present provider inference. No premature question. UI/API and IDs match."
+      }
+    }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-18T02:56:36.422Z",
+  "items": [
+    {
+      "testId": "V8-HYPOTHETICAL-QUESTION",
+      "runId": "ce12cf63-cce8-4273-9332-30525c21ed31",
+      "responseSha256": "c9d76e68468540377ee1299c9d5773ad3badcaa89797b19da78e565dac5c1f24"
+    },
+    {
+      "testId": "V8-HYPOTHETICAL-STATEMENT",
+      "runId": "547cb60c-34b6-4ed3-826a-d27576faa8a9",
+      "responseSha256": "056b5511850d7220521ab23974d915a8ba840316d578fc0d5ef638b342865bac"
+    },
+    {
+      "testId": "V8-ELIGIBLE-AFTER-FINANCE",
+      "runId": "6eb97864-1fb3-4f55-9f65-84ab91c883c1",
+      "responseSha256": "5bdd30fd81f8a24b687333f8af6f49388db8264d9a87adeddae9d556bfc2ae60"
+    },
+    {
+      "testId": "V8-ONCE-AFTER-PLAN",
+      "runId": "0a0df9c3-fd53-4de9-878a-5868ca91c1b0",
+      "responseSha256": "df56e342c6cc7d500f64c657d26b4ac2b93a103cc35bab61959e02f01bb27a4d"
+    },
+    {
+      "testId": "V8-FINANCIAL-OBJECT",
+      "runId": "95e10890-e17b-4a02-b566-63bbfb099d96",
+      "responseSha256": "8acc72e5022710ca2e22a98a718af245ebe18819ed9f098f97d3b20e35e25834"
+    },
+    {
+      "testId": "V8-CLINICAL-FEE-MODIFIER",
+      "runId": "bdbd9201-38f7-4cca-aa6c-e11daba57db5",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31"
+    },
+    {
+      "testId": "V8-C3-CONSENT",
+      "runId": "824be5dd-ddd4-4bd8-8887-008e7bd597dc",
+      "responseSha256": "3ea3a800254406156341dcdbd4c6d518ddec39834022ff91d68f8296b06b5bb0"
+    }
+  ],
+  "setups": [
+    {
+      "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+      "caseId": "case-04",
+      "question": "Is sliding scale payment something you open to?",
+      "response": "Yes, I'm open to paying a sliding-scale fee."
+    },
+    {
+      "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Alright, thank you. Do I need an antibiotic?\"]",
+      "caseId": "case-04",
+      "question": "I will give you ibuprofen for pain.",
+      "response": "Alright, thank you. Do I need an antibiotic?"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "conversationTurns": 608,
+  "apiAttempts": 608,
+  "providers": [
+    "navigator"
+  ],
+  "httpStatuses": [
+    200
+  ],
+  "immediateTurns": 0,
+  "internalCorrectiveGenerations": 124,
+  "internalFallbacks": 80,
+  "observedConversationGenerations": 732,
+  "rateLimitAttempts": 0,
+  "latencyMs": {
+    "method": "Browser client elapsed response time; observational sequential same-stack comparison; not controlled.",
+    "previousComparable411": {
+      "count": 411,
+      "p50": 2144,
+      "p90": 2920,
+      "p95": 3158
+    },
+    "currentComparable411": {
+      "count": 411,
+      "p50": 2157,
+      "p90": 2868,
+      "p95": 2979
+    },
+    "currentAll": {
+      "count": 495,
+      "p50": 2165,
+      "p90": 2882,
+      "p95": 3014
+    },
+    "byCohort": {
+      "primary": {
+        "count": 340,
+        "p50": 2148,
+        "p90": 2867,
+        "p95": 2978
+      },
+      "pain-context": {
+        "count": 20,
+        "p50": 1963,
+        "p90": 2798,
+        "p95": 2864
+      },
+      "former-holdout-regression": {
+        "count": 51,
+        "p50": 2286,
+        "p90": 2900,
+        "p95": 3018
+      },
+      "targeted-live": {
+        "count": 30,
+        "p50": 2238,
+        "p90": 3030,
+        "p95": 3132
+      },
+      "fresh-holdout": {
+        "count": 54,
+        "p50": 2178,
+        "p90": 2884,
+        "p95": 3089
+      }
+    }
+  },
+  "generationCountLimit": "Excludes separate approved-patient-question classifier calls.",
+  "workerCount": 1,
+  "automaticBrowserRetries": 0,
+  "minimumSubmissionIntervalMs": 1000,
+  "rawDirectory": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw"
+}

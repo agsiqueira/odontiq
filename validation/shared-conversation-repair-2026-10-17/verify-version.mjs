@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const root='validation/shared-conversation-repair-2026-10-17';
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const route='.next/dev/server/app/api/conversation/route.js',content=fs.readFileSync(route,'utf8');
+const chunks=[...content.matchAll(/R\.c\("([^"]+)"\)/g)].map(m=>`.next/dev/${m[1]}`);
+const evidence=chunks.map(p=>{const source=fs.readFileSync(p);return {path:p,sha256:hash(source),containsSharedContract:source.includes('interpretBackgroundTurn'),containsEmploymentGuard:source.includes('unsupported employment or income assertion')};});
+fs.writeFileSync(`${root}/active-server-chunks.json`,JSON.stringify({capturedAt:new Date().toISOString(),route,routeSha256:hash(content),chunks:evidence},null,2));
+const freeze=JSON.parse(fs.readFileSync(`${root}/implementation-freeze.json`));
+const changes=Object.entries(freeze.files).filter(([p,h])=>hash(fs.readFileSync(p))!==h).map(([p])=>p);
+const baseline=JSON.parse(fs.readFileSync('validation/question-variations-2026-10-17/application-before.json'));
+const changed=baseline.files.filter(f=>hash(fs.readFileSync(f.path))!==f.sha256).map(f=>f.path);
+const regressions=JSON.parse(fs.readFileSync('validation/question-variations-2026-10-17/existing-phase-regressions.json'));
+const changedMatchers=regressions.filter(f=>hash(fs.readFileSync(f.path)).toLowerCase()!==f.sha256.toLowerCase());
+fs.writeFileSync(`${root}/final-version-verification.json`,JSON.stringify({checkedAt:new Date().toISOString(),implementationFrozenAt:freeze.frozenAt,changedFrozenFiles:changes,changedFromOriginalStudy:changed,caseFactFilesUnchanged:!changed.some(p=>p.startsWith('src/data/cases')),existingRegressionMatchersUnchanged:changedMatchers.length===0,changedMatcherFiles:changedMatchers.map(f=>f.path),activeSharedContract:evidence.some(e=>e.containsSharedContract),activeCorrectedEmploymentGuard:evidence.some(e=>e.containsEmploymentGuard)},null,2));
+console.log({changedFrozenFiles:changes,caseFactFilesUnchanged:!changed.some(p=>p.startsWith('src/data/cases')),changedMatchers:changedMatchers.length,activeCorrectedCode:evidence.some(e=>e.containsEmploymentGuard)});

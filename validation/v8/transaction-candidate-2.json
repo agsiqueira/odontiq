@@ -1,0 +1,322 @@
+{
+  "at": "2026-10-18T02:21:21.444Z",
+  "purpose": "Synthetic V8 verification only; exclude from participant research",
+  "userIds": [
+    "d861586d-103a-4a58-8dfc-6c1851ff137c",
+    "72f6b0be-a5db-4420-a5fc-beae908cd88d"
+  ],
+  "encounters": [
+    "d606665a-455b-4f56-9065-ccb5941316df",
+    "507f13e9-5da1-4bc5-86f7-6ec75dbdb5fb"
+  ],
+  "attempts": [
+    {
+      "name": "final-validation-rejection",
+      "outcome": "PASS",
+      "expectedRejection": "Error: Intentional synthetic final validation failure",
+      "after": {
+        "state": null,
+        "turns": [],
+        "emissions": []
+      }
+    },
+    {
+      "name": "missing-question-text",
+      "outcome": "PASS",
+      "expectedRejection": "Error: Selected patient question has no renderable text.",
+      "after": {
+        "state": null,
+        "turns": [],
+        "emissions": []
+      }
+    },
+    {
+      "name": "blank-question-text",
+      "outcome": "PASS",
+      "expectedRejection": "Error: Selected patient question has no renderable text.",
+      "after": {
+        "state": null,
+        "turns": [],
+        "emissions": []
+      }
+    },
+    {
+      "name": "invalid-generated-final",
+      "outcome": "PASS",
+      "expectedRejection": "Error: Final patient response rejected: unsupported family composition",
+      "after": {
+        "state": null,
+        "turns": [],
+        "emissions": []
+      }
+    },
+    {
+      "name": "false-model-financial-event-rejected",
+      "outcome": "PASS",
+      "result": {
+        "requestId": "f70822c3-fe55-4ee5-bc91-f6e7d83e98e4",
+        "patientMessageId": "ffb906d6-86bf-458e-ae79-e8db8941bc0c",
+        "responseText": "I'm open to paying a sliding-scale fee.",
+        "providerName": "synthetic-transaction-test",
+        "stateVersion": 1
+      },
+      "after": {
+        "state": {
+          "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+          "version": 1,
+          "state": {
+            "version": 1,
+            "schemaVersion": 1,
+            "detectedEvents": {
+              "patientPainDescribed": false,
+              "antibioticsRecommended": false,
+              "temporaryTreatmentActive": false,
+              "incisionAndDrainageProposed": false,
+              "promptDentalFollowUpConfirmed": false,
+              "antibioticsNotIndicatedExplained": false,
+              "definitiveDentalTreatmentExplained": false,
+              "patientAgreedToIncisionAndDrainage": false,
+              "antibioticsRecommendedAsCurrentPlan": false,
+              "painManagementOrDispositionDiscussed": false,
+              "drainageTemporaryOrNondefinitiveExplained": false,
+              "hospitalAdmissionOrSurgicalManagementDiscussed": false
+            },
+            "emittedQuestionIds": []
+          },
+          "createdAt": "2026-10-18T02:21:18.093Z",
+          "updatedAt": "2026-10-18T02:21:18.093Z"
+        },
+        "turns": [
+          {
+            "id": "cd2b13c3-02d1-40c3-8d60-ff1b8df6ac41",
+            "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+            "requestId": "f70822c3-fe55-4ee5-bc91-f6e7d83e98e4",
+            "studentMessageId": "d07d71d7-279a-43e7-adf9-06ed0d78fbb2",
+            "patientMessageId": "ffb906d6-86bf-458e-ae79-e8db8941bc0c",
+            "responseText": "I'm open to paying a sliding-scale fee.",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 1,
+            "createdAt": "2026-10-18T02:21:18.167Z"
+          }
+        ],
+        "emissions": []
+      }
+    },
+    {
+      "name": "failed-classifier-does-not-unlock-or-consume",
+      "outcome": "PASS",
+      "result": {
+        "requestId": "e35497c1-1125-4eb7-a80c-cc98b726292e",
+        "patientMessageId": "177e6e78-cdb5-4f64-9f7b-3230c98d40af",
+        "responseText": "I don't have insurance.",
+        "providerName": "synthetic-transaction-test",
+        "stateVersion": 1
+      }
+    },
+    {
+      "name": "later-valid-plan-and-idempotent-request",
+      "outcome": "PASS",
+      "result": {
+        "requestId": "e1614bc8-af03-429f-b955-d7b4b438fb81",
+        "patientMessageId": "fdc493fb-1a56-440c-8666-d1bcb5fe2de5",
+        "responseText": "Okay, thank you. Do I need an antibiotic?",
+        "providerName": "synthetic-transaction-test",
+        "selectedQuestionId": "c4-antibiotic-needed-question",
+        "stateVersion": 2
+      },
+      "duplicate": {
+        "requestId": "e1614bc8-af03-429f-b955-d7b4b438fb81",
+        "patientMessageId": "fdc493fb-1a56-440c-8666-d1bcb5fe2de5",
+        "responseText": "Okay, thank you. Do I need an antibiotic?",
+        "providerName": "synthetic-transaction-test",
+        "selectedQuestionId": "c4-antibiotic-needed-question",
+        "stateVersion": 2
+      },
+      "after": {
+        "state": {
+          "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+          "version": 3,
+          "state": {
+            "version": 2,
+            "schemaVersion": 1,
+            "detectedEvents": {
+              "patientPainDescribed": false,
+              "antibioticsRecommended": false,
+              "temporaryTreatmentActive": false,
+              "incisionAndDrainageProposed": false,
+              "promptDentalFollowUpConfirmed": false,
+              "antibioticsNotIndicatedExplained": false,
+              "definitiveDentalTreatmentExplained": false,
+              "patientAgreedToIncisionAndDrainage": false,
+              "antibioticsRecommendedAsCurrentPlan": false,
+              "painManagementOrDispositionDiscussed": true,
+              "drainageTemporaryOrNondefinitiveExplained": false,
+              "hospitalAdmissionOrSurgicalManagementDiscussed": false
+            },
+            "emittedQuestionIds": [
+              "c4-antibiotic-needed-question"
+            ]
+          },
+          "createdAt": "2026-10-18T02:21:18.093Z",
+          "updatedAt": "2026-10-18T02:21:19.145Z"
+        },
+        "turns": [
+          {
+            "id": "cd2b13c3-02d1-40c3-8d60-ff1b8df6ac41",
+            "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+            "requestId": "f70822c3-fe55-4ee5-bc91-f6e7d83e98e4",
+            "studentMessageId": "d07d71d7-279a-43e7-adf9-06ed0d78fbb2",
+            "patientMessageId": "ffb906d6-86bf-458e-ae79-e8db8941bc0c",
+            "responseText": "I'm open to paying a sliding-scale fee.",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 1,
+            "createdAt": "2026-10-18T02:21:18.167Z"
+          },
+          {
+            "id": "edaeb168-ddc0-4c09-b989-3acd8c5f78a8",
+            "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+            "requestId": "e35497c1-1125-4eb7-a80c-cc98b726292e",
+            "studentMessageId": "0b00f1d1-e2a4-4e8f-864d-a81f3ccaafdc",
+            "patientMessageId": "177e6e78-cdb5-4f64-9f7b-3230c98d40af",
+            "responseText": "I don't have insurance.",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 1,
+            "createdAt": "2026-10-18T02:21:18.659Z"
+          },
+          {
+            "id": "4dc37941-b8a0-4f3c-9fd9-edc83622a382",
+            "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+            "requestId": "e1614bc8-af03-429f-b955-d7b4b438fb81",
+            "studentMessageId": "aafef062-5632-434e-a527-6798f71ecbf0",
+            "patientMessageId": "fdc493fb-1a56-440c-8666-d1bcb5fe2de5",
+            "responseText": "Okay, thank you. Do I need an antibiotic?",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": "c4-antibiotic-needed-question",
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 2,
+            "createdAt": "2026-10-18T02:21:19.181Z"
+          }
+        ],
+        "emissions": [
+          {
+            "id": "d2fb6917-b31a-4d56-ba7a-e7da0f7a32f3",
+            "encounterId": "d606665a-455b-4f56-9065-ccb5941316df",
+            "questionId": "c4-antibiotic-needed-question",
+            "turnId": "4dc37941-b8a0-4f3c-9fd9-edc83622a382",
+            "emittedAt": "2026-10-18T02:21:19.261Z"
+          }
+        ]
+      }
+    },
+    {
+      "name": "once-only-later-plan",
+      "outcome": "PASS",
+      "result": {
+        "requestId": "6c52abb4-9b43-447b-89c9-093c4002e4b5",
+        "patientMessageId": "0766d583-3291-4330-9d48-8d052f3a1f69",
+        "responseText": "Okay, thank you.",
+        "providerName": "synthetic-transaction-test",
+        "stateVersion": 3
+      }
+    },
+    {
+      "name": "serializable-concurrent-once-only",
+      "outcome": "PASS",
+      "results": [
+        {
+          "requestId": "bc19dee9-ade5-458a-86db-5ced3f01edd8",
+          "patientMessageId": "7b8bd165-e483-412a-8f1f-49c4d993230d",
+          "responseText": "Okay, thank you. Do I need an antibiotic?",
+          "providerName": "synthetic-transaction-test",
+          "selectedQuestionId": "c4-antibiotic-needed-question",
+          "stateVersion": 1
+        },
+        {
+          "requestId": "75f36813-c057-4cbd-b49e-2def73dad8b1",
+          "patientMessageId": "f3bd03f0-2ddd-467e-a973-a0f1ba424fa0",
+          "responseText": "Okay, thank you.",
+          "providerName": "synthetic-transaction-test",
+          "stateVersion": 2
+        }
+      ],
+      "after": {
+        "state": {
+          "encounterId": "507f13e9-5da1-4bc5-86f7-6ec75dbdb5fb",
+          "version": 2,
+          "state": {
+            "version": 2,
+            "schemaVersion": 1,
+            "detectedEvents": {
+              "patientPainDescribed": false,
+              "antibioticsRecommended": false,
+              "temporaryTreatmentActive": false,
+              "incisionAndDrainageProposed": false,
+              "promptDentalFollowUpConfirmed": false,
+              "antibioticsNotIndicatedExplained": false,
+              "definitiveDentalTreatmentExplained": false,
+              "patientAgreedToIncisionAndDrainage": false,
+              "antibioticsRecommendedAsCurrentPlan": false,
+              "painManagementOrDispositionDiscussed": true,
+              "drainageTemporaryOrNondefinitiveExplained": false,
+              "hospitalAdmissionOrSurgicalManagementDiscussed": false
+            },
+            "emittedQuestionIds": [
+              "c4-antibiotic-needed-question"
+            ]
+          },
+          "createdAt": "2026-10-18T02:21:20.720Z",
+          "updatedAt": "2026-10-18T02:21:21.055Z"
+        },
+        "turns": [
+          {
+            "id": "e771ed84-b229-459c-9d0a-666f9d8f0244",
+            "encounterId": "507f13e9-5da1-4bc5-86f7-6ec75dbdb5fb",
+            "requestId": "bc19dee9-ade5-458a-86db-5ced3f01edd8",
+            "studentMessageId": "520eacc7-b37b-4945-901f-fb74423bb797",
+            "patientMessageId": "7b8bd165-e483-412a-8f1f-49c4d993230d",
+            "responseText": "Okay, thank you. Do I need an antibiotic?",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": "c4-antibiotic-needed-question",
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 1,
+            "createdAt": "2026-10-18T02:21:20.755Z"
+          },
+          {
+            "id": "f9c40a87-0995-4a33-ad66-f76ab6ca0293",
+            "encounterId": "507f13e9-5da1-4bc5-86f7-6ec75dbdb5fb",
+            "requestId": "75f36813-c057-4cbd-b49e-2def73dad8b1",
+            "studentMessageId": "b28abed7-a42b-495a-9fd8-8aa304914108",
+            "patientMessageId": "f3bd03f0-2ddd-467e-a973-a0f1ba424fa0",
+            "responseText": "Okay, thank you.",
+            "providerName": "synthetic-transaction-test",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 2,
+            "createdAt": "2026-10-18T02:21:21.127Z"
+          }
+        ],
+        "emissions": [
+          {
+            "id": "30eafbf2-5647-4fdf-94bd-4cf1ed2a6ff9",
+            "encounterId": "507f13e9-5da1-4bc5-86f7-6ec75dbdb5fb",
+            "questionId": "c4-antibiotic-needed-question",
+            "turnId": "e771ed84-b229-459c-9d0a-666f9d8f0244",
+            "emittedAt": "2026-10-18T02:21:20.792Z"
+          }
+        ]
+      }
+    }
+  ]
+}

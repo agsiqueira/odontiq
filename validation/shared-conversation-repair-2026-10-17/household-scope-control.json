@@ -1,0 +1,21 @@
+{
+  "method": "Deterministic retained legacy selection versus the new contract. Not a historical binary or live Navigator response.",
+  "question": "Who do you live with?",
+  "legacySelected": [],
+  "currentSelected": [
+    "c1.background-residence"
+  ],
+  "currentInterpretation": {
+    "requests": [
+      {
+        "concept": "residence",
+        "subject": "patient",
+        "sourceId": "c1.background-residence",
+        "value": "Alachua",
+        "answer": "I live in Alachua County."
+      }
+    ],
+    "clinicalRequested": false
+  },
+  "expected": "Household composition is unspecified; a known county does not answer a who-with question."
+}

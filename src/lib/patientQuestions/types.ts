@@ -39,6 +39,8 @@ export type PatientQuestionClassification = {
   confidence: number;
   evidenceMessageIds: string[];
   evidenceAliases: string[];
+  currentProviderAct?: "current_plan" | "history_or_symptom_question" | "background_screening" | "care_search_offer" | "explanation" | "other";
+  currentPlanEvidence?: string;
 };
 
 export type PatientQuestionClassificationFailureReason =

@@ -1,0 +1,24 @@
+[
+  {
+    "command": "Phase T: patient-transportation-capability.spec.ts (initial)",
+    "exitCode": 0,
+    "playwrightTestsPassed": 5,
+    "liveTurnsPassed": 39
+  },
+  {
+    "command": "Phase T: patient-background.spec.ts patient-residence-recovery.spec.ts patient-travel-distinction.spec.ts",
+    "exitCode": 0,
+    "playwrightTestsPassed": 23,
+    "liveTurnsPassed": 125
+  },
+  {
+    "command": "Phase T: patient-transportation-capability.spec.ts (final verification)",
+    "exitCode": 0,
+    "playwrightTestsPassed": 5,
+    "liveTurnsPassed": 39
+  },
+  {
+    "command": "App typecheck; Phase T typecheck; targeted ESLint; production build; strict canonical parity; git diff --check",
+    "exitCode": 0
+  }
+]

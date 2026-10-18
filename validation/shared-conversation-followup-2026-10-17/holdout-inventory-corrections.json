@@ -1,0 +1,26 @@
+[
+  {
+    "testId": "C03-G08-N1",
+    "question": "Is there insurance covering your own dental visits?",
+    "originalGroupId": "G08",
+    "originalExpectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+    "evaluationExpectedMeaning": "The adult patient is uninsured. Answer the actual insurance question, not county residence.",
+    "reason": "New holdout inventory authoring error, identified before any holdout execution; original wording and metadata retained. Added N4-N6 provide the three actual G08 residence paraphrases."
+  },
+  {
+    "testId": "C03-G08-N2",
+    "question": "Do you personally have a dental insurance policy?",
+    "originalGroupId": "G08",
+    "originalExpectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+    "evaluationExpectedMeaning": "The adult patient is uninsured. Answer the actual insurance question, not county residence.",
+    "reason": "New holdout inventory authoring error, identified before any holdout execution; original wording and metadata retained. Added N4-N6 provide the three actual G08 residence paraphrases."
+  },
+  {
+    "testId": "C03-G08-N3",
+    "question": "Would any insurer pay for your treatment?",
+    "originalGroupId": "G08",
+    "originalExpectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+    "evaluationExpectedMeaning": "The adult patient is uninsured. Answer the actual insurance question, not county residence.",
+    "reason": "New holdout inventory authoring error, identified before any holdout execution; original wording and metadata retained. Added N4-N6 provide the three actual G08 residence paraphrases."
+  }
+]

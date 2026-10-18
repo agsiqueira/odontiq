@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-17T21:44:45.301Z",
+  "baseUrl": "http://localhost:3003",
+  "items": 19,
+  "workers": 1,
+  "browserRetries": 0,
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v6-production.spec.ts",
+      "sha256": "bb2cd5131133d7f9f6b1031ff26109880d285163181fc3a5c5cfa4841e77716d"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v6-production.global.setup.ts",
+      "sha256": "42c9404148d0586b8f7d467fc6f4033210f83003c1fdfd2bb3a3623a11cfad32"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v6-production.config.ts",
+      "sha256": "e9042f7b70404f1bb4f5e524427e27887d724455c1ff4dc6042883e40227505d"
+    }
+  ]
+}

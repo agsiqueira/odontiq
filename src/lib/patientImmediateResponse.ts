@@ -1,6 +1,8 @@
 import type { PatientDisclosureState } from "./patientDisclosure";
 import { case3ConsentResponse } from "./case3ConsentResponse";
 import { case1PlanAcknowledgement } from "./case1PlanAcknowledgement";
+import { backgroundFallback } from "./patientBackgroundTurn";
+import { isPatientConversationClosure } from "./patientConversationClosure";
 
 const NPO_INSTRUCTION_PATTERN =
   /\b(?:npo|nothing by mouth|do not eat or drink|don'?t eat or drink|cannot have anything to eat or drink|can'?t have anything to eat or drink|no food or liquids?)\b/i;
@@ -45,6 +47,12 @@ export function patientImmediateResponse({
   emittedQuestionIds?: readonly string[];
   priorPatientDialogue?: readonly string[];
 }): string | undefined {
+  if (isPatientConversationClosure(message)) return "You're welcome.";
+  const background = disclosureState.backgroundTurn;
+  if (background && !background.clinicalRequested && background.requests.some(r => r.value === "unknown" || r.concept === "care_coordination")) return backgroundFallback(background);
+  if (disclosureState.backgroundTurn && !(caseId === "case-04"
+    && !disclosureState.backgroundTurn.clinicalRequested
+    && disclosureState.backgroundTurn.requests.every(request => request.concept === "dentist" || request.concept === "attendance" && request.value === "no_current"))) return undefined;
   const planAcknowledgement = case1PlanAcknowledgement({
     caseId,
     message,
@@ -60,7 +68,11 @@ export function patientImmediateResponse({
   const case4ThermalResponse = case4GovernedThermalResponse(caseId, message);
   if (case4ThermalResponse) return case4ThermalResponse;
 
-  const case4DentistResponse = case4GovernedDentistResponse(caseId, message);
+  const asksBackgroundDetails = disclosureState.allowedThisTurn.some((fact) =>
+    fact.id.includes(".background-"));
+  const case4DentistResponse = asksBackgroundDetails
+    ? undefined
+    : case4GovernedDentistResponse(caseId, message);
   if (case4DentistResponse) return case4DentistResponse;
 
   if (
@@ -164,4 +176,16 @@ export function case4GovernedDentistResponse(
 function isDirectCase3Question(message: string) {
   const trimmed = message.trim();
   return QUESTION_PATTERN.test(trimmed) || /^any\b/i.test(trimmed);
+}
+
+/** A plan-only speech act calls for acknowledgment, with no new personal constraints.
+ * This selects wording only: semantic question eligibility remains separate. */
+export function planOnlyAcknowledgment(input: {
+  intent: PatientDisclosureState["providerMessageIntent"];
+  hasGovernedAnswer: boolean;
+  requiredFacts: readonly unknown[];
+}): string | undefined {
+  return !input.hasGovernedAnswer && input.requiredFacts.length === 0
+    && ["disposition_plan", "medication_plan", "treatment_plan"].includes(input.intent)
+    ? "Okay, thank you." : undefined;
 }

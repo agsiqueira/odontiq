@@ -1,0 +1,20 @@
+[
+  {
+    "testId": "C01-G01-Q08",
+    "originalOutcome": "REVIEW",
+    "originalResponse": "Yes, I don't have insurance, so I'm paying for this out of pocket.",
+    "currentOutcome": "REVIEW",
+    "currentResponse": "Yes, I don't have insurance, so I'm paying out of pocket.",
+    "originalLabelChanged": false,
+    "reason": "Out-of-pocket remains an unresolved semantic ambiguity, not a confirmed application failure."
+  },
+  {
+    "testId": "C03-G11-H01",
+    "originalOutcome": "REVIEW",
+    "originalResponse": "It might be more convenient, but I'm not sure if it would cover all our needs.",
+    "currentOutcome": "PASS",
+    "currentResponse": "Probably, as long as they cater to adults and children's needs.",
+    "originalLabelChanged": false,
+    "reason": "The new response is a contextual affirmative, conditional on clinic capabilities; this can coexist with shared-care preference. Historical uncertainty response remains REVIEW, not retroactively relabeled."
+  }
+]

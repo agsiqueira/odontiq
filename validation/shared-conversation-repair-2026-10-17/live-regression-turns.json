@@ -1,0 +1,3499 @@
+[
+  {
+    "id": "residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254971612-1-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2571,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254974286-2-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2156,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I'm living in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254976554-3-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2159,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254978785-4-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2022,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "transport",
+    "question": "Do you have reliable transportation?",
+    "actualFinalPatientResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care. This is wearing me down.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care. This is wearing me down.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254980902-5-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 3159,
+    "meaning": [
+      {
+        "meaning": "Reliable transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "travel",
+    "question": "Can you travel outside Alachua County for free or low-cost dental care?",
+    "actualFinalPatientResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254984153-6-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2116,
+    "meaning": [
+      {
+        "meaning": "Can travel outside county",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "clinical-location-1",
+    "question": "Where does it hurt?",
+    "actualFinalPatientResponse": "It's my left mandibular molar that's causing me pain.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "It's my left mandibular molar that's causing me pain.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254986386-7-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2193,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "clinical-location-2",
+    "question": "Which tooth hurts?",
+    "actualFinalPatientResponse": "I said, my left mandibular molar is the one that's decayed and causing me pain.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I said, my left mandibular molar is the one that's decayed and causing me pain.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792254988706-8-response",
+    "encounterId": "db9118f9-9eba-4b83-b387-b2924edf3023",
+    "elapsedMs": 2225,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "patient-background",
+    "runId": "8328f87a-d16b-4602-979f-3ea1055ff51d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-background_2026-10-17T16-36-05-982Z_8328f87a-d16b-4602-979f-3ea1055ff51d.json"
+  },
+  {
+    "id": "fresh-residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255095636-1-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 3504,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "fresh-residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255099214-2-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2086,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "fresh-residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255101402-3-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2150,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255103648-4-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2109,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "payment-context",
+    "question": "Can you afford the extraction?",
+    "actualFinalPatientResponse": "I can't afford the extraction.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I can't afford the extraction.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255105847-5-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2140,
+    "meaning": [],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "post-financial-residence-1",
+    "question": "Which county is home for you?",
+    "actualFinalPatientResponse": "Alachua County is my home.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Alachua County is my home.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255108131-6-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2692,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "post-financial-residence-2",
+    "question": "In which county do you reside?",
+    "actualFinalPatientResponse": "I reside in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I reside in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255110896-7-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2068,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "post-financial-residence-3",
+    "question": "Where are you living now?",
+    "actualFinalPatientResponse": "I'm living in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255113047-8-response",
+    "encounterId": "6d23a1a8-6683-45b6-a35e-d08e1a4999cf",
+    "elapsedMs": 2126,
+    "meaning": [
+      {
+        "meaning": "Lives in Alachua County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "residence-matrix-case-01",
+    "runId": "9c4bc366-527f-4bcb-ba92-6cf96891d096",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-residence-recovery_2026-10-17T16-38-12-681Z_9c4bc366-527f-4bcb-ba92-6cf96891d096.json"
+  },
+  {
+    "id": "residence-before",
+    "question": "Do you live in Alachua County?",
+    "actualFinalPatientResponse": "Yes, I live in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255263694-1-response",
+    "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+    "elapsedMs": 1996,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "travel-distinction-case-01",
+    "runId": "86714e51-2568-4a55-a3d1-1f16954b1210",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+  },
+  {
+    "id": "travel-1",
+    "question": "Would you travel out of Alachua County?",
+    "actualFinalPatientResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255265845-2-response",
+    "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+    "elapsedMs": 2119,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "travel-distinction-case-01",
+    "runId": "86714e51-2568-4a55-a3d1-1f16954b1210",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+  },
+  {
+    "id": "travel-2",
+    "question": "Can you get to a clinic in another county?",
+    "actualFinalPatientResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255268075-3-response",
+    "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+    "elapsedMs": 2110,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "travel-distinction-case-01",
+    "runId": "86714e51-2568-4a55-a3d1-1f16954b1210",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+  },
+  {
+    "id": "travel-3",
+    "question": "Would you travel outside your county for cheaper care?",
+    "actualFinalPatientResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care. I'm trying to keep going.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I have reliable transportation and can travel outside Alachua County if needed for free or low-cost care. I'm trying to keep going.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255270288-4-response",
+    "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+    "elapsedMs": 2105,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "travel-distinction-case-01",
+    "runId": "86714e51-2568-4a55-a3d1-1f16954b1210",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+  },
+  {
+    "id": "residence-after",
+    "question": "Do you live in Alachua County?",
+    "actualFinalPatientResponse": "Yes, I live in Alachua County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Alachua County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-01-1792255272525-5-response",
+    "encounterId": "b86fa006-c5ea-4c7c-b684-0a18065df6be",
+    "elapsedMs": 2143,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-01",
+    "scenarioId": "travel-distinction-case-01",
+    "runId": "86714e51-2568-4a55-a3d1-1f16954b1210",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-01_patient-travel-distinction_2026-10-17T16-41-00-836Z_86714e51-2568-4a55-a3d1-1f16954b1210.json"
+  },
+  {
+    "id": "residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792254998772-1-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 1900,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255000787-2-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2095,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255002969-3-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2686,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255005737-4-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 3705,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "medicaid",
+    "question": "When did you lose your Medicaid?",
+    "actualFinalPatientResponse": "I lost it within the past year. I'm worried about this.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I lost it within the past year. I'm worried about this.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255009535-5-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2089,
+    "meaning": [
+      {
+        "meaning": "Lost Medicaid within past year",
+        "passed": true
+      },
+      {
+        "meaning": "Within past year",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "residency",
+    "question": "Have you established residency in Collier County yet?",
+    "actualFinalPatientResponse": "I live in Collier County, but I haven't established residency yet.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Collier County, but I haven't established residency yet.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255011719-6-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2680,
+    "meaning": [
+      {
+        "meaning": "Residency not established",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "transport",
+    "question": "Do you have reliable transportation out of town?",
+    "actualFinalPatientResponse": "My transportation out of town is unreliable.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My transportation out of town is unreliable.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255014505-7-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2655,
+    "meaning": [
+      {
+        "meaning": "Unreliable out-of-town transport",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "clinical-location-1",
+    "question": "Where does it hurt?",
+    "actualFinalPatientResponse": "It's my upper-right back molar that's causing the pain.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "It's my upper-right back molar that's causing the pain.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255017252-8-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2119,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "clinical-location-2",
+    "question": "Which tooth hurts?",
+    "actualFinalPatientResponse": "My upper-right back molar is the one that's hurting.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My upper-right back molar is the one that's hurting.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255019469-9-response",
+    "encounterId": "bb681cfd-3082-4dc4-9a2f-3739ad7622be",
+    "elapsedMs": 2099,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "patient-background",
+    "runId": "9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-background_2026-10-17T16-36-36-356Z_9c305e14-37a7-4f0b-9169-cc5f1a3d1a7e.json"
+  },
+  {
+    "id": "fresh-residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255117782-1-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 1880,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "fresh-residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255119769-2-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2072,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "fresh-residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I'm living in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255121913-3-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2071,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255124097-4-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2094,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "payment-context",
+    "question": "Can you pay anything for dental care?",
+    "actualFinalPatientResponse": "I'm not sure what I can afford. That makes me nervous.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure what I can afford. That makes me nervous.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255126279-5-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2133,
+    "meaning": [],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "post-financial-residence-1",
+    "question": "Which county is home for you?",
+    "actualFinalPatientResponse": "I live in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255128498-6-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2075,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "post-financial-residence-2",
+    "question": "In which county do you reside?",
+    "actualFinalPatientResponse": "I reside in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I reside in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255130664-7-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2053,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "post-financial-residence-3",
+    "question": "Where are you living now?",
+    "actualFinalPatientResponse": "I'm living in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255132797-8-response",
+    "encounterId": "11e71482-7623-4e8c-95cd-149b10020c25",
+    "elapsedMs": 2055,
+    "meaning": [
+      {
+        "meaning": "Lives in Collier County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "residence-matrix-case-02",
+    "runId": "283b8604-b0f9-4d5b-9410-94c731cc7a8d",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-residence-recovery_2026-10-17T16-38-35-595Z_283b8604-b0f9-4d5b-9410-94c731cc7a8d.json"
+  },
+  {
+    "id": "residence-before",
+    "question": "Do you live in Collier County?",
+    "actualFinalPatientResponse": "Yeah, I live in Collier County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yeah, I live in Collier County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255278242-1-response",
+    "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+    "elapsedMs": 1894,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "travel-distinction-case-02",
+    "runId": "1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+  },
+  {
+    "id": "travel-1",
+    "question": "Would you travel out of Alachua County?",
+    "actualFinalPatientResponse": "My transportation out of town is unreliable.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My transportation out of town is unreliable.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255280224-2-response",
+    "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+    "elapsedMs": 2044,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "travel-distinction-case-02",
+    "runId": "1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+  },
+  {
+    "id": "travel-2",
+    "question": "Can you get to a clinic in another county?",
+    "actualFinalPatientResponse": "My transportation out of town is unreliable. I'm kind of worried.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My transportation out of town is unreliable. I'm kind of worried.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255282376-3-response",
+    "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+    "elapsedMs": 2088,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "travel-distinction-case-02",
+    "runId": "1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+  },
+  {
+    "id": "travel-3",
+    "question": "Would you travel outside your county for cheaper care?",
+    "actualFinalPatientResponse": "If it's cheaper, I'd try to make it work, but my transportation out of town is unreliable.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "If it's cheaper, I'd try to make it work, but my transportation out of town is unreliable.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255284538-4-response",
+    "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+    "elapsedMs": 2115,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "travel-distinction-case-02",
+    "runId": "1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+  },
+  {
+    "id": "residence-after",
+    "question": "Do you live in Collier County?",
+    "actualFinalPatientResponse": "Yes, I live in Collier County. I'm worried about this.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Collier County. I'm worried about this.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-02-1792255286740-5-response",
+    "encounterId": "77b7653f-f309-4e32-ac3e-d247bb766805",
+    "elapsedMs": 2115,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-02",
+    "scenarioId": "travel-distinction-case-02",
+    "runId": "1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-02_patient-travel-distinction_2026-10-17T16-41-15-056Z_1ce4c1af-5ad6-419c-967d-abbf9a7aa7a9.json"
+  },
+  {
+    "id": "residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255030554-1-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2460,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255033135-2-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2170,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I'm living in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255035401-3-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2091,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255037602-4-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2099,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "dentist",
+    "question": "Do you currently have your own dentist?",
+    "actualFinalPatientResponse": "Yes, I have my own dentist.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I have my own dentist.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255039818-5-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2680,
+    "meaning": [
+      {
+        "meaning": "Has own dentist",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "daughter",
+    "question": "Do you have a daughter, and what insurance does she have?",
+    "actualFinalPatientResponse": "Yes, I have a daughter, and she has Medicaid.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I have a daughter, and she has Medicaid.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255042583-6-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2070,
+    "meaning": [
+      {
+        "meaning": "Young daughter",
+        "passed": true
+      },
+      {
+        "meaning": "Daughter has Medicaid",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "shared-clinic",
+    "question": "Would you prefer to receive care at the same clinic as your daughter?",
+    "actualFinalPatientResponse": "Yes, I'd prefer the same clinic for my daughter and me.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I'd prefer the same clinic for my daughter and me.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255044750-7-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2686,
+    "meaning": [
+      {
+        "meaning": "Prefers shared clinic",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "clinical-location-1",
+    "question": "Where does it hurt?",
+    "actualFinalPatientResponse": "It's my right lower tooth that's hurting.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "It's my right lower tooth that's hurting.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255047521-8-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 2082,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "clinical-location-2",
+    "question": "Which tooth hurts?",
+    "actualFinalPatientResponse": "My right lower tooth, I think it's number 31.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My right lower tooth, I think it's number 31.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255049700-9-response",
+    "encounterId": "a74e2d8d-4ea2-4efc-a97d-b0346a56d563",
+    "elapsedMs": 3176,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "patient-background",
+    "runId": "b93b74d3-90ac-4544-81c9-67664a232382",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-background_2026-10-17T16-37-06-958Z_b93b74d3-90ac-4544-81c9-67664a232382.json"
+  },
+  {
+    "id": "fresh-residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255138696-1-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2457,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "fresh-residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255141247-2-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2128,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "fresh-residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I'm living in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255143446-3-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2084,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255145646-4-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2159,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "payment-context",
+    "question": "Can you pay anything for dental care?",
+    "actualFinalPatientResponse": "I'm not sure what I can afford.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure what I can afford.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255147914-5-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2116,
+    "meaning": [],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "post-financial-residence-1",
+    "question": "Which county is home for you?",
+    "actualFinalPatientResponse": "I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255150113-6-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 3206,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "post-financial-residence-2",
+    "question": "In which county do you reside?",
+    "actualFinalPatientResponse": "I reside in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I reside in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255153411-7-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2068,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "post-financial-residence-3",
+    "question": "Where are you living now?",
+    "actualFinalPatientResponse": "I'm living in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255155561-8-response",
+    "encounterId": "d81709b1-35dc-4513-9039-27d584e3db74",
+    "elapsedMs": 2136,
+    "meaning": [
+      {
+        "meaning": "Lives in Hillsborough County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "residence-matrix-case-03",
+    "runId": "3a76572a-7874-42da-b9e7-3e0c579a3c1b",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-residence-recovery_2026-10-17T16-38-55-339Z_3a76572a-7874-42da-b9e7-3e0c579a3c1b.json"
+  },
+  {
+    "id": "residence-before",
+    "question": "Do you live in Hillsborough County?",
+    "actualFinalPatientResponse": "Yes, I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255292109-1-response",
+    "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+    "elapsedMs": 2499,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "travel-distinction-case-03",
+    "runId": "7a529d0b-1af1-4310-a5a7-6cfe23294615",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+  },
+  {
+    "id": "travel-1",
+    "question": "Would you travel out of Alachua County?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255294707-2-response",
+    "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+    "elapsedMs": 2140,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "travel-distinction-case-03",
+    "runId": "7a529d0b-1af1-4310-a5a7-6cfe23294615",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+  },
+  {
+    "id": "travel-2",
+    "question": "Can you get to a clinic in another county?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255296938-3-response",
+    "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+    "elapsedMs": 2084,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "travel-distinction-case-03",
+    "runId": "7a529d0b-1af1-4310-a5a7-6cfe23294615",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+  },
+  {
+    "id": "travel-3",
+    "question": "Would you travel outside your county for cheaper care?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255299106-4-response",
+    "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+    "elapsedMs": 2067,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "travel-distinction-case-03",
+    "runId": "7a529d0b-1af1-4310-a5a7-6cfe23294615",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+  },
+  {
+    "id": "residence-after",
+    "question": "Do you live in Hillsborough County?",
+    "actualFinalPatientResponse": "Yes, I live in Hillsborough County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Hillsborough County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-03-1792255301274-5-response",
+    "encounterId": "6be61379-d4c0-4e35-a4ef-2c5682bec076",
+    "elapsedMs": 3236,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-03",
+    "scenarioId": "travel-distinction-case-03",
+    "runId": "7a529d0b-1af1-4310-a5a7-6cfe23294615",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-03_patient-travel-distinction_2026-10-17T16-41-29-288Z_7a529d0b-1af1-4310-a5a7-6cfe23294615.json"
+  },
+  {
+    "id": "residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255056061-1-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 2423,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255058567-2-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 2067,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255060714-3-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 1509,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255062317-4-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 1548,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "sliding-scale",
+    "question": "Would you be willing to pay for dental care on a sliding-scale fee?",
+    "actualFinalPatientResponse": "Yes, I'm open to paying a sliding-scale fee. That's it.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee. That's it.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255063951-5-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 1550,
+    "meaning": [
+      {
+        "meaning": "Open to sliding-scale payment",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "clinical-location-1",
+    "question": "Where does it hurt?",
+    "actualFinalPatientResponse": "It's my lower-left molar. It's really painful.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "It's my lower-left molar. It's really painful.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255065583-6-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 2095,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "clinical-location-2",
+    "question": "Which tooth hurts?",
+    "actualFinalPatientResponse": "My lower-left molar.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "My lower-left molar.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255067786-7-response",
+    "encounterId": "2a69d52e-0060-4364-a871-8b6f6a6cc61b",
+    "elapsedMs": 1522,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "patient-background",
+    "runId": "5e3bbefc-47ec-4b89-b710-0d1f4ede072e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-background_2026-10-17T16-37-33-299Z_5e3bbefc-47ec-4b89-b710-0d1f4ede072e.json"
+  },
+  {
+    "id": "fresh-residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255160913-1-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 3033,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "fresh-residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255163963-2-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 3155,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "fresh-residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255167195-3-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1520,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255168794-4-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1558,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "payment-context",
+    "question": "Would you be willing to pay for dental care on a sliding-scale fee?",
+    "actualFinalPatientResponse": "Yes, I'm open to paying a sliding-scale fee. That's it.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee. That's it.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255170445-5-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1516,
+    "meaning": [
+      {
+        "meaning": "Open to sliding-scale payment",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "post-financial-residence-1",
+    "question": "Which county is home for you?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255172043-6-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1534,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "post-financial-residence-2",
+    "question": "In which county do you reside?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255173661-7-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1503,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "post-financial-residence-3",
+    "question": "Where are you living now?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255175244-8-response",
+    "encounterId": "5f753343-f5a4-468b-a676-f85c09d50d7b",
+    "elapsedMs": 1505,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-matrix-case-04",
+    "runId": "12d372f1-5b07-4feb-b396-6495f5bf577e",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-18-132Z_12d372f1-5b07-4feb-b396-6495f5bf577e.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255201644-1-response",
+    "encounterId": "0092a160-4145-4f1f-8891-588db1130e1b",
+    "elapsedMs": 1932,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-1",
+    "runId": "e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-58-699Z_e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255203698-2-response",
+    "encounterId": "0092a160-4145-4f1f-8891-588db1130e1b",
+    "elapsedMs": 2127,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-1",
+    "runId": "e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-58-699Z_e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255205927-3-response",
+    "encounterId": "0092a160-4145-4f1f-8891-588db1130e1b",
+    "elapsedMs": 1595,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-1",
+    "runId": "e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-39-58-699Z_e9bcacbc-dcf4-4e6d-9fb9-4223e9d4a2ac.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255210780-1-response",
+    "encounterId": "f45f8b64-9d76-4b38-a618-9ae56e2e007e",
+    "elapsedMs": 1960,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-2",
+    "runId": "6e6cb65c-72b3-4821-8263-ca3cdfad986f",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-07-958Z_6e6cb65c-72b3-4821-8263-ca3cdfad986f.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255212824-2-response",
+    "encounterId": "f45f8b64-9d76-4b38-a618-9ae56e2e007e",
+    "elapsedMs": 2051,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-2",
+    "runId": "6e6cb65c-72b3-4821-8263-ca3cdfad986f",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-07-958Z_6e6cb65c-72b3-4821-8263-ca3cdfad986f.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255215003-3-response",
+    "encounterId": "f45f8b64-9d76-4b38-a618-9ae56e2e007e",
+    "elapsedMs": 1550,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-2",
+    "runId": "6e6cb65c-72b3-4821-8263-ca3cdfad986f",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-07-958Z_6e6cb65c-72b3-4821-8263-ca3cdfad986f.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255224761-1-response",
+    "encounterId": "f56d4f7c-4075-4656-b835-3a4e93620463",
+    "elapsedMs": 2994,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-3",
+    "runId": "029b3289-74c8-4686-9604-1abdcfebdbb5",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-21-972Z_029b3289-74c8-4686-9604-1abdcfebdbb5.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255227774-2-response",
+    "encounterId": "f56d4f7c-4075-4656-b835-3a4e93620463",
+    "elapsedMs": 3190,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-3",
+    "runId": "029b3289-74c8-4686-9604-1abdcfebdbb5",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-21-972Z_029b3289-74c8-4686-9604-1abdcfebdbb5.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255231059-3-response",
+    "encounterId": "f56d4f7c-4075-4656-b835-3a4e93620463",
+    "elapsedMs": 1537,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178671631-3-response-3",
+    "runId": "029b3289-74c8-4686-9604-1abdcfebdbb5",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-21-972Z_029b3289-74c8-4686-9604-1abdcfebdbb5.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255235779-1-response",
+    "encounterId": "3e73b5b9-a270-4f7c-b220-62a57891fd98",
+    "elapsedMs": 1942,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-1",
+    "runId": "a5553dd8-1976-4f76-849d-c84d185bf757",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-32-972Z_a5553dd8-1976-4f76-849d-c84d185bf757.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255237742-2-response",
+    "encounterId": "3e73b5b9-a270-4f7c-b220-62a57891fd98",
+    "elapsedMs": 2043,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-1",
+    "runId": "a5553dd8-1976-4f76-849d-c84d185bf757",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-32-972Z_a5553dd8-1976-4f76-849d-c84d185bf757.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255239875-3-response",
+    "encounterId": "3e73b5b9-a270-4f7c-b220-62a57891fd98",
+    "elapsedMs": 1496,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-1",
+    "runId": "a5553dd8-1976-4f76-849d-c84d185bf757",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-32-972Z_a5553dd8-1976-4f76-849d-c84d185bf757.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255244375-1-response",
+    "encounterId": "b56bce62-1318-48b0-9f07-a1a551a9fcd1",
+    "elapsedMs": 2465,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-2",
+    "runId": "ab7ee5dd-46e0-41ec-87ff-2d987f315d01",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-41-745Z_ab7ee5dd-46e0-41ec-87ff-2d987f315d01.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255246941-2-response",
+    "encounterId": "b56bce62-1318-48b0-9f07-a1a551a9fcd1",
+    "elapsedMs": 2081,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-2",
+    "runId": "ab7ee5dd-46e0-41ec-87ff-2d987f315d01",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-41-745Z_ab7ee5dd-46e0-41ec-87ff-2d987f315d01.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255249108-3-response",
+    "encounterId": "b56bce62-1318-48b0-9f07-a1a551a9fcd1",
+    "elapsedMs": 1514,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-2",
+    "runId": "ab7ee5dd-46e0-41ec-87ff-2d987f315d01",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-41-745Z_ab7ee5dd-46e0-41ec-87ff-2d987f315d01.json"
+  },
+  {
+    "id": "historical-sequence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255254160-1-response",
+    "encounterId": "49d1801c-f995-4c8d-a931-0ba07525243b",
+    "elapsedMs": 2499,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-3",
+    "runId": "c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-51-021Z_c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3.json"
+  },
+  {
+    "id": "historical-sequence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255256677-2-response",
+    "encounterId": "49d1801c-f995-4c8d-a931-0ba07525243b",
+    "elapsedMs": 2061,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-3",
+    "runId": "c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-51-021Z_c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3.json"
+  },
+  {
+    "id": "historical-sequence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Duval County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Duval County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255258841-3-response",
+    "encounterId": "49d1801c-f995-4c8d-a931-0ba07525243b",
+    "elapsedMs": 1517,
+    "meaning": [
+      {
+        "meaning": "Lives in Duval County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "residence-replay-case-04-1792178808993-3-response-3",
+    "runId": "c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-residence-recovery_2026-10-17T16-40-51-021Z_c7fec2fa-2ff9-4b81-95eb-5bf1334c20c3.json"
+  },
+  {
+    "id": "residence-before",
+    "question": "Do you live in Duval County?",
+    "actualFinalPatientResponse": "Yes, I live in Duval County. Do I need an antibiotic?",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Duval County. Do I need an antibiotic?",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255307866-1-response",
+    "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+    "elapsedMs": 2435,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "travel-distinction-case-04",
+    "runId": "44e9f37a-efa0-4ba4-8f6c-4da4b78f4402",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+  },
+  {
+    "id": "travel-1",
+    "question": "Would you travel out of Alachua County?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255310372-2-response",
+    "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+    "elapsedMs": 1515,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "travel-distinction-case-04",
+    "runId": "44e9f37a-efa0-4ba4-8f6c-4da4b78f4402",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+  },
+  {
+    "id": "travel-2",
+    "question": "Can you get to a clinic in another county?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255311972-3-response",
+    "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+    "elapsedMs": 2058,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "travel-distinction-case-04",
+    "runId": "44e9f37a-efa0-4ba4-8f6c-4da4b78f4402",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+  },
+  {
+    "id": "travel-3",
+    "question": "Would you travel outside your county for cheaper care?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255314122-4-response",
+    "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+    "elapsedMs": 1487,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "travel-distinction-case-04",
+    "runId": "44e9f37a-efa0-4ba4-8f6c-4da4b78f4402",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+  },
+  {
+    "id": "residence-after",
+    "question": "Do you live in Duval County?",
+    "actualFinalPatientResponse": "Yes, I live in Duval County. That's it.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Duval County. That's it.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-04-1792255315705-5-response",
+    "encounterId": "00e8292d-ce3f-4693-bbbe-8f3864393a4f",
+    "elapsedMs": 1529,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-04",
+    "scenarioId": "travel-distinction-case-04",
+    "runId": "44e9f37a-efa0-4ba4-8f6c-4da4b78f4402",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-04_patient-travel-distinction_2026-10-17T16-41-45-049Z_44e9f37a-efa0-4ba4-8f6c-4da4b78f4402.json"
+  },
+  {
+    "id": "residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255072484-1-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 1869,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255074414-2-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2060,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255076549-3-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2044,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255078681-4-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2065,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "payment",
+    "question": "How much can you pay for dental care?",
+    "actualFinalPatientResponse": "I can't pay anything for dental care. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I can't pay anything for dental care. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255080832-5-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2098,
+    "meaning": [
+      {
+        "meaning": "Cannot pay anything, including a small fee",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "small-fee",
+    "question": "Could you pay even a small fee for dental care?",
+    "actualFinalPatientResponse": "I'm sorry, I can't afford even a small fee.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm sorry, I can't afford even a small fee.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255083016-6-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2115,
+    "meaning": [
+      {
+        "meaning": "Cannot pay anything, including a small fee",
+        "passed": true
+      },
+      {
+        "meaning": "Does not agree to a small fee",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "free-clinic",
+    "question": "Would you prefer a free clinic for your dental care?",
+    "actualFinalPatientResponse": "I can't pay anything for dental care. I'd prefer a free clinic.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I can't pay anything for dental care. I'd prefer a free clinic.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255085230-7-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 3225,
+    "meaning": [
+      {
+        "meaning": "Prefers free clinic",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "clinical-location-1",
+    "question": "Where does it hurt?",
+    "actualFinalPatientResponse": "It hurts in my lower-left jaw. I'm not sure which tooth it's coming from.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "It hurts in my lower-left jaw. I'm not sure which tooth it's coming from.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255088531-8-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 2080,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "clinical-location-2",
+    "question": "Which tooth hurts?",
+    "actualFinalPatientResponse": "I'm not sure, it's just a general pain in my lower-left jaw.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure, it's just a general pain in my lower-left jaw.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255090733-9-response",
+    "encounterId": "9523fe0e-83a3-48ca-a1f7-38f680928ab7",
+    "elapsedMs": 1525,
+    "meaning": [
+      {
+        "meaning": "Correct clinical location",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "patient-background",
+    "runId": "0f7cf000-a0de-454c-80de-c36d965ecbea",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-background_2026-10-17T16-37-49-700Z_0f7cf000-a0de-454c-80de-c36d965ecbea.json"
+  },
+  {
+    "id": "fresh-residence-1",
+    "question": "Where do you live?",
+    "actualFinalPatientResponse": "I live in Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I live in Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255179563-1-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2962,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "fresh-residence-2",
+    "question": "What county do you live in?",
+    "actualFinalPatientResponse": "Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255182612-2-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2064,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "fresh-residence-3",
+    "question": "Where are you living?",
+    "actualFinalPatientResponse": "In Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "In Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255184759-3-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2581,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "insurance",
+    "question": "Do you have dental insurance?",
+    "actualFinalPatientResponse": "No, I don't have insurance.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "No, I don't have insurance.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255187425-4-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2071,
+    "meaning": [
+      {
+        "meaning": "Patient has no insurance",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "payment-context",
+    "question": "Could you pay even a small fee for dental care?",
+    "actualFinalPatientResponse": "I'm sorry, I can't afford to pay anything for dental care. This is frustrating.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm sorry, I can't afford to pay anything for dental care. This is frustrating.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255189560-5-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2022,
+    "meaning": [
+      {
+        "meaning": "Cannot pay anything, including a small fee",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "post-financial-residence-1",
+    "question": "Which county is home for you?",
+    "actualFinalPatientResponse": "Marion County is my home.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Marion County is my home.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255191701-6-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2071,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "post-financial-residence-2",
+    "question": "In which county do you reside?",
+    "actualFinalPatientResponse": "I reside in Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I reside in Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255193842-7-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2131,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "post-financial-residence-3",
+    "question": "Where are you living now?",
+    "actualFinalPatientResponse": "I'm living in Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm living in Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255196079-8-response",
+    "encounterId": "487fa2f2-c8f3-44c5-a8c9-5294a285658e",
+    "elapsedMs": 2153,
+    "meaning": [
+      {
+        "meaning": "Lives in Marion County",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "residence-matrix-case-05",
+    "runId": "d6c1f29d-d0a5-4c05-85ad-9247586da617",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-residence-recovery_2026-10-17T16-39-37-158Z_d6c1f29d-d0a5-4c05-85ad-9247586da617.json"
+  },
+  {
+    "id": "residence-before",
+    "question": "Do you live in Marion County?",
+    "actualFinalPatientResponse": "Yes, I live in Marion County.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Marion County.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255320372-1-response",
+    "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+    "elapsedMs": 1883,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "travel-distinction-case-05",
+    "runId": "375aa497-7cf8-47e9-90d7-2f83b13510e9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+  },
+  {
+    "id": "travel-1",
+    "question": "Would you travel out of Alachua County?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255322353-2-response",
+    "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+    "elapsedMs": 2054,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "travel-distinction-case-05",
+    "runId": "375aa497-7cf8-47e9-90d7-2f83b13510e9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+  },
+  {
+    "id": "travel-2",
+    "question": "Can you get to a clinic in another county?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255324505-3-response",
+    "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+    "elapsedMs": 2082,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "travel-distinction-case-05",
+    "runId": "375aa497-7cf8-47e9-90d7-2f83b13510e9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+  },
+  {
+    "id": "travel-3",
+    "question": "Would you travel outside your county for cheaper care?",
+    "actualFinalPatientResponse": "I'm not sure about transportation or traveling for care.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "I'm not sure about transportation or traveling for care.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255326686-4-response",
+    "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+    "elapsedMs": 2113,
+    "meaning": [
+      {
+        "meaning": "Answers travel question without inventing transportation",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "travel-distinction-case-05",
+    "runId": "375aa497-7cf8-47e9-90d7-2f83b13510e9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+  },
+  {
+    "id": "residence-after",
+    "question": "Do you live in Marion County?",
+    "actualFinalPatientResponse": "Yes, I live in Marion County. I'm frustrated with this.",
+    "api": {
+      "httpStatus": 200,
+      "provider": "navigator",
+      "finalResponse": "Yes, I live in Marion County. I'm frustrated with this.",
+      "error": null
+    },
+    "httpStatus": 200,
+    "requestId": "case-05-1792255328941-5-response",
+    "encounterId": "ad5e617c-49ad-428b-86bc-824fcbb4e46e",
+    "elapsedMs": 2776,
+    "meaning": [
+      {
+        "meaning": "Answers residence",
+        "passed": true
+      }
+    ],
+    "status": "PASS",
+    "reasons": [],
+    "screenshot": null,
+    "caseId": "case-05",
+    "scenarioId": "travel-distinction-case-05",
+    "runId": "375aa497-7cf8-47e9-90d7-2f83b13510e9",
+    "reportPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/runs/local_case-05_patient-travel-distinction_2026-10-17T16-41-57-612Z_375aa497-7cf8-47e9-90d7-2f83b13510e9.json"
+  }
+]

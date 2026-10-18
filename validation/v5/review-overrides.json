@@ -1,0 +1,44 @@
+{
+  "C01-G01-Q08": {
+    "completeness": {
+      "status": "REVIEW",
+      "reason": "The response correctly states uninsured status and invents no payment arrangement. The question can also ask whether actual payments are being made, which canonical facts do not establish; retain that genuine question ambiguity rather than assume a payment event or award a forced yes/no pass."
+    }
+  },
+  "C03-G11-Q06": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The phrase \"the same clinic as my daughter's\" presupposes the daughter already has an established clinic. The case specifies only her Medicaid and a preference to share a clinic; neither setup establishes her existing provider."
+    }
+  },
+  "C03-G11-H01": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The final answer invents an existing struggle coordinating appointment schedules. The case specifies only a preference for the same clinic and the patient's own next-week appointment; neither canonical facts nor the two setup turns establish scheduling difficulty."
+    }
+  },
+  "C03-G11-H03": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "The phrase we'd like to stick with the same provider for consistency may presuppose an established shared provider, which facts/setup do not establish. It can also express a prospective shared-provider preference. Preserve the unresolved presupposition rather than invent clinic history or silently pass it."
+    }
+  },
+  "C05-TARGET-5": {
+    "relevance": {
+      "status": "FAIL",
+      "reason": "After a neutral thank-you, the response restarts the opening complaint and volunteers persistent pain and nocturnal waking rather than acknowledging the student. The antibiotic catalog question is permitted, but does not exempt the unrelated opening narrative. V4 labeled the identical text PASS; this is a stricter corrected semantic judgment of the same behavior, not evidence of a newly introduced text regression."
+    }
+  },
+  "C03-G09-V4H2": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The question explicitly asks whether visits already occur regularly. The initial Yes affirms regular attendance; having one's own dentist and a next-week appointment does not establish visit frequency. The response is now focused rather than dumping history, but still asserts an unsupported regularity."
+    }
+  },
+  "C05-G16-V4H1": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "The answer says costs will be out of pocket, asserting a future personal-payment arrangement from uninsured status. Case5 cannot pay anything and prefers free care; no scheduled bill, obligatory charge, self-pay arrangement or exclusion of free/charitable care is established. The requested insurance contribution should be answered from coverage facts alone."
+    }
+  }
+}

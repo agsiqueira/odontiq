@@ -1,0 +1,349 @@
+{
+  "checkedAt": "2026-10-17T19:49:14.657Z",
+  "commit": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "workingTree": "Preexisting uncommitted V4 changes are identified by the 216-file freeze manifest; HEAD alone is not the tested implementation.",
+  "frozenAt": "2026-10-17T18:47:57.588Z",
+  "frozenFiles": 216,
+  "changedFrozenFiles": [],
+  "configuration": {
+    "baseUrl": "http://localhost:3000",
+    "server": "next dev",
+    "provider": "navigator",
+    "workers": 1,
+    "automaticBrowserRetries": 0,
+    "inventory": "validation/shared-conversation-followup-2026-10-17/final-v4/run-inventory.json",
+    "inventorySha256": "2a27109e923c291369c979b353287cf9e747e166d3ade72266ec6694d0ffbfb7",
+    "rawDirectory": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17-final-v4/raw",
+    "diagnosticHeader": "x-odontiq-synthetic-diagnostic: phase-t",
+    "configFiles": [
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.shared-followup.config.ts",
+        "sha256": "4bb2d3e21ddcc6cc4ddc1ebc02893b53e5fe2e50987c5e6cc810dd41965cc443"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-shared-conversation-repair.spec.ts",
+        "sha256": "7b3cb335d5af5cf373c3f8a3050c45261e4ba976bb0d3ce01923ecb5ddc6404c"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/src/config/environment.ts",
+        "sha256": "34dd5b3593808eb2468becd83e5ef4a9cc14dfbf6d6bda1cfd5cf5294030f8f0"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/src/clients/odontiqBrowserClient.ts",
+        "sha256": "c9294e05bf6af7e43f6fa4526dac5cbc55b6c72234b7337e3ffd905901cd2741"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.shared-v4-continuation.config.ts",
+        "sha256": "a2cd72a1e781867881b1eea45a656f058ee229d399bf0f7af560a70a357d00d0"
+      },
+      {
+        "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-shared-conversation-v4-continuation.spec.ts",
+        "sha256": "bde8ba13734d947fbb6c58366594263003f2e33b4629e94b6616e0a863c702c9"
+      }
+    ]
+  },
+  "planned": 546,
+  "recordedAttempts": 732,
+  "uniqueRecorded": 546,
+  "reviewed": 489,
+  "reviewOutcomes": {
+    "PASS": 474,
+    "FAIL": 5,
+    "REVIEW": 10
+  },
+  "executionErrors": [
+    {
+      "testId": "C03-G10-H01",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-H02",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-H03",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-N1",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-N2",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-N3",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q01",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q02",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q03",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q04",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q05",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q06",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q08",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q09",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q10",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q11",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q13",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q14",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q15",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q16",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q17",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q18",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q19",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-Q20",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-V4H1",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-V4H2",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G10-V4H3",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-H01",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-H02",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-H03",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-N1",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-N2",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-N3",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q01",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q02",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q03",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q04",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q05",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q07",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q08",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q09",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q10",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q11",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q12",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q13",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q14",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q15",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q16",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q17",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q18",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q19",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-Q20",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-V4H1",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-V4H2",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C03-G11-V4H3",
+      "outcome": "BLOCKED",
+      "reason": "Error: Conversation API 502: Final patient response rejected: unsupported family composition"
+    },
+    {
+      "testId": "C04-G14-Q10",
+      "outcome": "ERROR",
+      "reason": "Error: Conversation API 502: Navigator request failed with status 502"
+    }
+  ],
+  "uiApiChecks": {
+    "executed": 489,
+    "mismatches": [],
+    "correlationFailures": []
+  },
+  "realAttemptedItems": 546,
+  "freezeManifestSha256": "935f738f28586c5d80716f4bc69cd1dc3eec5720eee1da234e0f14ac67cb37d7",
+  "noRequestPlaceholders": 186
+}

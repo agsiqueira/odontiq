@@ -28,6 +28,7 @@ export function parsePatientQuestionClassification(input: {
     "events",
     "confidence",
     "evidence",
+    ...(input.caseId === "case-04" ? ["currentProviderAct", "currentPlanEvidence"] : []),
   ]);
   if (
     parsed.schemaVersion !== 1 ||
@@ -113,6 +114,10 @@ export function parsePatientQuestionClassification(input: {
     return { success: false, reason: "incompatible-evidence-semantics", safeMetadata };
   }
 
+  const providerActs = ["current_plan", "history_or_symptom_question", "background_screening", "care_search_offer", "explanation", "other"] as const;
+  if (input.caseId === "case-04" && (!providerActs.includes(parsed.currentProviderAct as typeof providerActs[number]) || typeof parsed.currentPlanEvidence !== "string")) {
+    return { success: false, reason: "missing-evidence", safeMetadata };
+  }
   const detectedEvents: Partial<PatientQuestionEvents> = {};
   for (const event of input.allowedEvents) {
     detectedEvents[event] = parsedEvents[event] as boolean;
@@ -121,6 +126,10 @@ export function parsePatientQuestionClassification(input: {
     success: true,
     classification: {
       schemaVersion: 1,
+      ...(input.caseId === "case-04" ? {
+        currentProviderAct: parsed.currentProviderAct as typeof providerActs[number],
+        currentPlanEvidence: parsed.currentPlanEvidence as string,
+      } : {}),
       caseId: input.caseId,
       analyzedStudentMessageId: input.studentMessageId,
       detectedEvents,

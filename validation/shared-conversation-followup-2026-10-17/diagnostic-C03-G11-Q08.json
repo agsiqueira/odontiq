@@ -1,0 +1,50 @@
+{
+  "testId": "C03-G11-Q08",
+  "question": "Would a clinic accepting your daughter on Medicaid and seeing you uninsured suit your preference?",
+  "finalResponse": "My daughter has Medicaid.",
+  "encounterId": "77b650bf-f06b-478b-8a7d-0c3d22240038",
+  "requestId": "case-03-1792258487269-3-response",
+  "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-G11-Q08_037b6850-d8ac-49a6-9df9-fba62276b350.json",
+  "diagnostics": {
+    "encounterId": "77b650bf-f06b-478b-8a7d-0c3d22240038",
+    "requestId": "case-03-1792258487269-3-response",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "insurance",
+          "subject": "daughter",
+          "sourceId": "c3.background-family_care",
+          "value": "medicaid",
+          "answer": "My daughter has Medicaid."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "providerMessageIntent": "question",
+    "selectedFacts": [
+      {
+        "id": "c3.background-family_care",
+        "topic": "social_history",
+        "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+      }
+    ],
+    "requiredFacts": [
+      {
+        "id": "c3.background-family_care",
+        "topic": "social_history",
+        "text": "The patient has a young daughter on Medicaid and would prefer to receive care at the same clinic as the daughter."
+      }
+    ],
+    "immediate": false,
+    "navigatorInitial": "Yes, that would be ideal. I'd prefer to have my appointments at the same clinic as my daughter to make things easier for both of us.",
+    "navigatorCorrective": "Yes, that would be ideal. I'd prefer to have my daughter and me receive care at the same clinic.",
+    "initialRejection": "background daughter insurance: missing or contradictory medicaid",
+    "usedFallback": true,
+    "safeResponse": "My daughter has Medicaid.",
+    "behaviorCandidate": "My daughter has Medicaid.",
+    "presentationAssessment": {
+      "valid": true
+    },
+    "baseResponse": "My daughter has Medicaid."
+  }
+}

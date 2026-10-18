@@ -1,0 +1,39 @@
+{
+  "createdAt": "2026-10-17T17:28:49.268Z",
+  "implementationFrozenAt": "2026-10-17T17:11:42.329Z",
+  "tests": [
+    {
+      "testId": "C03-G08-N4",
+      "question": "Which county contains the home you live in?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G08-N5",
+      "question": "Where do you reside, in county terms?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    },
+    {
+      "testId": "C03-G08-N6",
+      "question": "Is Hillsborough the county you call home?",
+      "caseId": "case-03",
+      "groupId": "G08",
+      "groupTitle": "Residence",
+      "expectedMeaning": "Patient lives in Hillsborough County. Do not answer with a clinical location.",
+      "contextRequirement": "None required.",
+      "cohort": "fresh-holdout",
+      "setupQuestions": []
+    }
+  ]
+}

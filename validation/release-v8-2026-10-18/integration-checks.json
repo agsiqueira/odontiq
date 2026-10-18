@@ -1,0 +1,175 @@
+[
+  {
+    "name": "validateAppUserResolution",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateAppUserResolution.ts"
+    ],
+    "at": "2026-10-18T04:41:51.729Z",
+    "elapsedMs": 418,
+    "exitCode": 0,
+    "stdout": "App-user resolution validation passed.\n",
+    "stderr": "Retrying idempotent database read after P1001. {\n  event: 'database_p1001_retry',\n  retryCount: 1,\n  elapsedMs: 0,\n  delayMs: 300\n}\nRetrying idempotent database read after P1001. {\n  event: 'database_p1001_retry',\n  retryCount: 2,\n  elapsedMs: 300,\n  delayMs: 1000\n}\n"
+  },
+  {
+    "name": "validatePatientInitiatedQuestions",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientInitiatedQuestions.ts"
+    ],
+    "at": "2026-10-18T04:41:52.082Z",
+    "elapsedMs": 344,
+    "exitCode": 0,
+    "stdout": "Patient-initiated question validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientResponseRetry",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientResponseRetry.ts"
+    ],
+    "at": "2026-10-18T04:41:52.265Z",
+    "elapsedMs": 178,
+    "exitCode": 0,
+    "stdout": "Patient-response same-request retry validation passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientLanguageGovernance",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientLanguageGovernance.ts"
+    ],
+    "at": "2026-10-18T04:41:52.603Z",
+    "elapsedMs": 333,
+    "exitCode": 0,
+    "stdout": "Patient language governance validation passed: 136 focused assertions.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientAudioPlayback",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientAudioPlayback.ts"
+    ],
+    "at": "2026-10-18T04:41:53.162Z",
+    "elapsedMs": 553,
+    "exitCode": 0,
+    "stdout": "Patient audio playback validation passed: 11 focused scenarios.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCaseReleaseReadiness",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCaseReleaseReadiness.ts"
+    ],
+    "at": "2026-10-18T04:41:53.607Z",
+    "elapsedMs": 440,
+    "exitCode": 0,
+    "stdout": "Case remediation release-readiness invariants passed for Cases 1-5.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCaseReachability",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCaseReachability.ts"
+    ],
+    "at": "2026-10-18T04:41:54.041Z",
+    "elapsedMs": 429,
+    "exitCode": 0,
+    "stdout": "\ncase-01 (0 unreachable rubric-required fact families)\n\ncase-02 (0 unreachable rubric-required fact families)\n\ncase-03 (0 unreachable rubric-required fact families)\n\ncase-04 (0 unreachable rubric-required fact families)\n\ncase-05 (0 unreachable rubric-required fact families)\n\nReachability validation: 0 issue(s); 26 deterministic questions; mode=report.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCanonicalCases",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCanonicalCases.ts"
+    ],
+    "at": "2026-10-18T04:41:54.277Z",
+    "elapsedMs": 231,
+    "exitCode": 0,
+    "stdout": "\ncase-01 (35 canonical facts, 0 parity mismatches)\n\ncase-02 (38 canonical facts, 0 parity mismatches)\n\ncase-03 (17 canonical facts, 0 parity mismatches)\n\ncase-04 (14 canonical facts, 0 parity mismatches)\n\ncase-05 (18 canonical facts, 0 parity mismatches)\n\nCanonical schema/parity validation: 0 mismatch(es); mode=report.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validatePatientMessageIntent",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientMessageIntent.ts"
+    ],
+    "at": "2026-10-18T04:41:54.501Z",
+    "elapsedMs": 219,
+    "exitCode": 0,
+    "stdout": "Patient message intent validation passed (10 intent cases).\n",
+    "stderr": ""
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit",
+      "--incremental",
+      "false"
+    ],
+    "at": "2026-10-18T04:42:09.419Z",
+    "elapsedMs": 14913,
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "lint",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/eslint/bin/eslint.js",
+      "src"
+    ],
+    "at": "2026-10-18T04:42:32.968Z",
+    "elapsedMs": 23542,
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "validateCanonicalCasesStrict",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCanonicalCases.ts",
+      "--strict"
+    ],
+    "at": "2026-10-18T04:44:15.572Z",
+    "elapsedMs": 308,
+    "exitCode": 0,
+    "stdout": "\ncase-01 (35 canonical facts, 0 parity mismatches)\n\ncase-02 (38 canonical facts, 0 parity mismatches)\n\ncase-03 (17 canonical facts, 0 parity mismatches)\n\ncase-04 (14 canonical facts, 0 parity mismatches)\n\ncase-05 (18 canonical facts, 0 parity mismatches)\n\nCanonical schema/parity validation: 0 mismatch(es); mode=strict.\n",
+    "stderr": ""
+  },
+  {
+    "name": "validateCaseReachabilityStrict",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCaseReachability.ts",
+      "--strict"
+    ],
+    "at": "2026-10-18T04:44:15.875Z",
+    "elapsedMs": 299,
+    "exitCode": 0,
+    "stdout": "\ncase-01 (0 unreachable rubric-required fact families)\n\ncase-02 (0 unreachable rubric-required fact families)\n\ncase-03 (0 unreachable rubric-required fact families)\n\ncase-04 (0 unreachable rubric-required fact families)\n\ncase-05 (0 unreachable rubric-required fact families)\n\nReachability validation: 0 issue(s); 26 deterministic questions; mode=strict.\n",
+    "stderr": ""
+  }
+]

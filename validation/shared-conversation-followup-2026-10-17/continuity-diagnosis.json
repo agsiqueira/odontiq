@@ -1,0 +1,27 @@
+{
+  "actualEarlierRevision": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "earlier": {
+    "allowed": [],
+    "disclosed": [
+      "c1.drooling"
+    ],
+    "topics": [],
+    "isBroad": false,
+    "intent": "question",
+    "background": null
+  },
+  "current": {
+    "allowed": [
+      "c1.drooling"
+    ],
+    "disclosed": [
+      "c1.drooling"
+    ],
+    "topics": [],
+    "isBroad": false,
+    "intent": "question",
+    "background": null
+  },
+  "priorWorkingTreeDisclosedPredicate": [],
+  "explanation": "Earlier revision excludes already spoken drooling from allowedThisTurn; accumulated working-tree classification selects it again. The former alreadyDisclosed predicate then removed selected facts from continuity. Continuity is now independently retained whether or not selected again. No new fact is marked disclosed by asking alone."
+}

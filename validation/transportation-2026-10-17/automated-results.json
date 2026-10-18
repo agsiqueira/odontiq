@@ -1,0 +1,47 @@
+[
+  {
+    "suite": "validatePatientTravel",
+    "exitCode": 0,
+    "output": "Travel validation passed: 80 fresh/history checks, five residence controls, combined intent and clinical radiation."
+  },
+  {
+    "suite": "validatePatientBackground",
+    "exitCode": 0,
+    "output": "Patient background validation passed (18 targeted questions, all five cases, clinical/grading scope checks)."
+  },
+  {
+    "suite": "validatePatientBackgroundConflicts",
+    "exitCode": 0,
+    "output": "Patient background conflict validation passed (25 exact/paraphrase/combined questions through final response guards)."
+  },
+  {
+    "suite": "validatePatientResidence",
+    "exitCode": 0,
+    "output": "Patient residence validation passed (30 residence/history checks, 10 clinical location checks, mixed intent preserved)."
+  },
+  {
+    "suite": "validateResidenceRecovery",
+    "exitCode": 0,
+    "output": "Residence recovery validation passed (40 captured-output variants, all five counties, fact-backed fallback, final assembly facts/leakage)."
+  },
+  {
+    "suite": "validatePatientInstructionLeakage",
+    "exitCode": 0,
+    "output": "Instruction-leakage validation passed (15 leak variants, 10 natural controls, 120 stage renders, behavior rollback and model retry/fallback)."
+  },
+  {
+    "suite": "validatePatientOutputIntegrity",
+    "exitCode": 0,
+    "output": "Patient output-integrity validation passed."
+  },
+  {
+    "suite": "validatePatientInitiatedQuestions",
+    "exitCode": 0,
+    "output": "Patient-initiated question validation passed."
+  },
+  {
+    "suite": "validatePatientBehavioralStages",
+    "exitCode": 0,
+    "output": "Patient behavioral-stage validation passed: 91 focused assertions."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "initialTestFixture": "New V8 test first used an incorrect helper signature; fixed to existing initialOutput/retry API, then passed.",
+  "priorOutputRestoration": [
+    "validation/v7/focused-regressions.json"
+  ],
+  "reason": "Standalone inherited V7 regression default wrote its output into V7 evidence. Captured current result under V8 and immediately restored exact baseline bytes; original V7 worktree untouched. All subsequent legacy checks redirected to V8.",
+  "automatedCandidate1": {
+    "checks": 41,
+    "passed": 40,
+    "failed": "validateV7PatientRepair historical input path erroneously redirected from V6 results to nonexistent V8 results; restored historical input, output stays V8; candidate2 all41 passed.",
+    "subsequentOutcome": "Correction: candidate2 passed39/41, not41. Typecheck/lint/build passed, but two existing checks caught an application regression: request scoping removed Case3 consent proposal context. This was initially overstated in commentary, then corrected upon inspection of the full results. Candidate3 will preserve consent context using existing predicate and rerun all checks before live focus."
+  },
+  "transactionFixture": "First actual transaction run passed initial safety checks but second encounter hit existing DB unique(userId,caseId) constraint. Saved first attempt, then isolated synthetic owner per encounter and reran successfully; final nine controls include whitespace question-text rejection.",
+  "logDirectory": "Initial redirected automated command did not start because dev-output directory was absent; created directory and executed checks.",
+  "freezeMetadata": "Caught copied harness root changed from240 to241 by numeric replacement; corrected path before any freeze or final suite execution.",
+  "fullRunLogDefault": "Post-run evidence parser retained a V7 default filename; initial no-argument read failed without changing results. Parsed explicit V8 log successfully and corrected helper default under validation/v8 only. All 1384 actual upstream attempts were HTTP200 with zero retry operations.",
+  "productionReviewWrite": "One evidence-only write automatic approval review timed out; retried once successfully after all snapshot responses re-inspected. A non-escalated diagnostic write was blocked by known filesystem scope. No application change, live request duplication, discarded result or approval-policy workaround."
+}

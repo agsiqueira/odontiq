@@ -1,0 +1,402 @@
+[
+  {
+    "testId": "C01-G03-Q01-PAIN",
+    "question": "Can you travel for affordable care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q01",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q02-PAIN",
+    "question": "Would you travel out of Alachua County?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q02",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q03-PAIN",
+    "question": "Can you get to a dental clinic in another county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q03",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q04-PAIN",
+    "question": "Would you travel farther if the dental treatment were free?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q04",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q05-PAIN",
+    "question": "Do you have reliable transportation to get affordable dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q05",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q06-PAIN",
+    "question": "Could you travel outside your county for a low-cost dental appointment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q06",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q07-PAIN",
+    "question": "Would you be willing to leave Alachua County for dental treatment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q07",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q08-PAIN",
+    "question": "If the closest affordable clinic is outside the county, could you go?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q08",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q09-PAIN",
+    "question": "Do you have a dependable way to reach a dental clinic out of county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q09",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q10-PAIN",
+    "question": "Can you arrange reliable transportation for a low-cost dental visit?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q10",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q11-PAIN",
+    "question": "Would a free dental clinic in a neighboring county work for you?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q11",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q12-PAIN",
+    "question": "Is traveling outside Alachua County an option for affordable dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q12",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q13-PAIN",
+    "question": "Could you get yourself to a dental appointment outside your county?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q13",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q14-PAIN",
+    "question": "Are you able and willing to travel for cheaper dental treatment?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q14",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q15-PAIN",
+    "question": "can you travel for Affordable Care",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q15",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q16-PAIN",
+    "question": "You can travel outside the county for low cost care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q16",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q17-PAIN",
+    "question": "Would you goes to another county if the dentist is free?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q17",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q18-PAIN",
+    "question": "Can you get transport for a cheaper dental clinic?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q18",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q19-PAIN",
+    "question": "If dental care cost less out of town, you can go?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q19",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  },
+  {
+    "testId": "C01-G03-Q20-PAIN",
+    "question": "Do you has reliable transportation for dental care?",
+    "caseId": "case-01",
+    "groupId": "G03",
+    "groupTitle": "Transportation and travel",
+    "expectedMeaning": "Patient has reliable transportation and can/will travel outside Alachua County if necessary for free or low-cost dental care. Answer the requested ability/willingness directly.",
+    "contextRequirement": "None required.",
+    "cohort": "pain-context",
+    "setupQuestions": [
+      "How severe is your pain right now?",
+      "How are you feeling with the pain?"
+    ],
+    "primaryTestId": "C01-G03-Q20",
+    "finalResponse": null,
+    "outcome": "BLOCKED",
+    "reason": "Pilot deliberately stopped for independent clinical regression correction; not executed. The retired holdout was never used.",
+    "encounterId": null,
+    "requestId": null
+  }
+]

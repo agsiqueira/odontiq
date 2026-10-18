@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-10-17T19:57:42.144Z",
+  "source": "C:/240 - odontIQ/odontiq",
+  "target": "C:/Users/agomesdesiqueira/.codex/worktrees/odontiq-v5/odontiq",
+  "baseCommit": "edae56cb34e9a99ada0e1e2e10544686b126dd61",
+  "v4FrozenFiles": 216,
+  "v4FrozenMismatches": [],
+  "baselineFiles": {
+    "REPORT.md": "af994f20829700597220d63327ab6a01bf8d5cde90f60958d3428616f7bd0f6d",
+    "results.json": "21bbf670c228727169e4f393b467a5a27d039526e8c71be4f655faeb388794cc",
+    "unresolved-items.json": "56a96304cee4638c6bd8011bb03b41cdf7c0d97e259cc5de4956f920ab93f3e9",
+    "completion.json": "8989cd24f730b577f30937aac501400e501d7335b095c9cb722dc23fe920b1d7",
+    "implementation-freeze.json": "935f738f28586c5d80716f4bc69cd1dc3eec5720eee1da234e0f14ac67cb37d7"
+  },
+  "note": "Exact frozen V4 source and supporting scripts copied before any repair. V4 evidence copied byte-for-byte. Ignored local environment retained locally; credentials are not included in Git. Dependencies are a local junction."
+}

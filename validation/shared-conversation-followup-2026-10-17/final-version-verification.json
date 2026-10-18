@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-10-17T18:11:28.677Z",
+  "changedFrozenFiles": [],
+  "caseFactFilesUnchanged": true,
+  "existingMatchersUnchanged": true,
+  "checks": [
+    {
+      "name": "No implementation change after freeze",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Case facts unchanged relative to starting dirty worktree",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Existing Phase T matchers unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "primary: exact unique inventory",
+      "passed": true,
+      "detail": 340
+    },
+    {
+      "name": "primary: all responses individually adjudicated in four dimensions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pain-context: exact unique inventory",
+      "passed": true,
+      "detail": 20
+    },
+    {
+      "name": "pain-context: all responses individually adjudicated in four dimensions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "former-holdout-regression: exact unique inventory",
+      "passed": true,
+      "detail": 51
+    },
+    {
+      "name": "former-holdout-regression: all responses individually adjudicated in four dimensions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "targeted-live: exact unique inventory",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "name": "targeted-live: all responses individually adjudicated in four dimensions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "fresh-holdout: exact unique inventory",
+      "passed": true,
+      "detail": 54
+    },
+    {
+      "name": "fresh-holdout: all responses individually adjudicated in four dimensions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "All real Navigator final responses equal UI/API with encounter/request correlation",
+      "passed": true,
+      "detail": 495
+    },
+    {
+      "name": "Every scored item uses a distinct fresh encounter",
+      "passed": true,
+      "detail": 495
+    },
+    {
+      "name": "At least three fresh paraphrases per original group created after freeze",
+      "passed": true,
+      "detail": "2026-10-17T17:12:20.348Z"
+    },
+    {
+      "name": "Deduplicated exclusion registry includes every scored encounter",
+      "passed": true,
+      "detail": 495
+    },
+    {
+      "name": "All preserved raw artifact hashes match",
+      "passed": true,
+      "detail": 495
+    },
+    {
+      "name": "All scored failures/reviews have screenshots and scoped traces",
+      "passed": true,
+      "detail": [
+        "C01-G01-Q08",
+        "C02-G05-Q20",
+        "C03-G11-Q08",
+        "C03-G11-Q13",
+        "C02-TARGET-3",
+        "C03-TARGET-6",
+        "C04-TARGET-6",
+        "C02-G04-N2",
+        "C03-G09-N1",
+        "C03-G09-N3",
+        "C04-G13-N2"
+      ]
+    },
+    {
+      "name": "Every setup has separate semantic assessment",
+      "passed": true,
+      "detail": 113
+    }
+  ]
+}

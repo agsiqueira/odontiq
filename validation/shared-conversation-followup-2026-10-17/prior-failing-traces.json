@@ -1,0 +1,185 @@
+[
+  {
+    "testId": "C04-G13-Q11",
+    "scored": true,
+    "question": "Do you have insurance we should consider when finding a clinic?",
+    "encounterId": "8e0a5e81-1229-477e-ab24-a531945248ae",
+    "requestId": "case-04-1792253634003-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "coverage_timing",
+          "subject": "patient",
+          "sourceId": "c4.background-insurance",
+          "value": "unknown",
+          "answer": "I'm not sure about that coverage history."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [
+      "c4.background-insurance"
+    ],
+    "requiredFactIds": [
+      "c4.background-insurance"
+    ],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C04-G13-Q11_c96f9113-65f0-400c-a7ec-bdeba99c5a9b.json"
+  },
+  {
+    "testId": "C01-G02-H03",
+    "scored": true,
+    "question": "Where's your place, county-wise?",
+    "encounterId": "11429277-16ea-4ada-ba59-d10fba01a5d1",
+    "requestId": "case-01-1792254428366-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": null,
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [],
+    "requiredFactIds": [],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C01-G02-H03_47294447-5c92-44c6-b92f-8e42af3a1026.json"
+  },
+  {
+    "testId": "C01-G03-H01",
+    "scored": true,
+    "question": "Would crossing county lines to get low-cost treatment be workable?",
+    "encounterId": "d9518a19-cace-442c-9d95-e27033d4adf6",
+    "requestId": "case-01-1792254434966-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "payment_ability",
+          "subject": "patient",
+          "sourceId": "c1.access",
+          "value": "unknown",
+          "answer": "I'm not sure what I can afford."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [
+      "c1.access"
+    ],
+    "requiredFactIds": [],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C01-G03-H01_7948264f-465e-479d-9660-1ebc6fc509e8.json"
+  },
+  {
+    "testId": "C02-G04-H02",
+    "scored": true,
+    "question": "What plan insures you for a visit, if one does?",
+    "encounterId": "b1c9006a-332e-4d46-9845-c883a57d386e",
+    "requestId": "case-02-1792254457814-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": null,
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [],
+    "requiredFactIds": [],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C02-G04-H02_557d479f-bd2d-443c-a29e-5ae85fd70c2e.json"
+  },
+  {
+    "testId": "C03-G09-H02",
+    "scored": true,
+    "question": "Do you already see a dental provider of your own, whether you're insured or not?",
+    "encounterId": "bcd71c8c-93ba-43b9-bced-3e7e33cc6375",
+    "requestId": "case-03-1792254575856-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "insurance",
+          "subject": "patient",
+          "sourceId": "c3.background-insurance",
+          "value": "uninsured",
+          "answer": "I don't have insurance."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [
+      "c3.background-insurance"
+    ],
+    "requiredFactIds": [
+      "c3.background-insurance"
+    ],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C03-G09-H02_6f8f9ad2-f2a1-4483-a65d-6ddf3333d293.json"
+  },
+  {
+    "testId": "C04-G13-H02",
+    "scored": true,
+    "question": "Who covers your dental care, if anyone?",
+    "encounterId": "8fdf623b-f93b-46cd-aa92-b1af676b6924",
+    "requestId": "case-04-1792254677069-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": null,
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [],
+    "requiredFactIds": [],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C04-G13-H02_0addc7eb-6760-4605-9ada-f79134081bae.json"
+  },
+  {
+    "testId": "C05-G16-H01",
+    "scored": true,
+    "question": "Is an insurer available to cover a dental visit for you?",
+    "encounterId": "54f47365-f57e-4b1c-baf8-bad523e007be",
+    "requestId": "case-05-1792254724617-1-response",
+    "provider": "navigator",
+    "httpStatus": 200,
+    "interpretation": null,
+    "immediate": false,
+    "correctiveRetryPerformed": false,
+    "selectedFactIds": [],
+    "requiredFactIds": [],
+    "initialRejection": null,
+    "usedFallback": false,
+    "presentationAssessment": {
+      "valid": true
+    },
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17-final-v2/raw/C05-G16-H01_c4cf99b1-abc1-4226-a86a-c1fe3149cd3c.json"
+  }
+]

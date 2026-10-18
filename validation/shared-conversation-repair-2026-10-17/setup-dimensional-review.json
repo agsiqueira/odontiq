@@ -1,0 +1,3319 @@
+[
+  {
+    "testId": "C01-G03-Q01-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "b623b018-954f-4c3c-bdcc-42c02e7d8bdf",
+    "requestId": "case-01-1792254143458-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q01-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm quite uncomfortable with this pain.",
+    "encounterId": "b623b018-954f-4c3c-bdcc-42c02e7d8bdf",
+    "requestId": "case-01-1792254147442-2-response",
+    "variantId": "fa5daa9f090e9b67b9376a0b435fca9733dc9992125772b656ceacefe2f045ef",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q02-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "9bdcc0ed-8071-4cae-9547-c61bf557ceda",
+    "requestId": "case-01-1792254156323-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q02-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "9bdcc0ed-8071-4cae-9547-c61bf557ceda",
+    "requestId": "case-01-1792254159809-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q03-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "ed7364d2-ffcf-49e2-b0b9-ce9d18ddeac4",
+    "requestId": "case-01-1792254168923-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q03-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "ed7364d2-ffcf-49e2-b0b9-ce9d18ddeac4",
+    "requestId": "case-01-1792254172573-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q04-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "ea5dfdc7-6f39-4ef6-b889-bbbefb5837f6",
+    "requestId": "case-01-1792254181374-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q04-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "ea5dfdc7-6f39-4ef6-b889-bbbefb5837f6",
+    "requestId": "case-01-1792254184841-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q05-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "c0d0626d-77b1-4158-85ac-ed3476a2e25b",
+    "requestId": "case-01-1792254193856-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q05-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "c0d0626d-77b1-4158-85ac-ed3476a2e25b",
+    "requestId": "case-01-1792254197572-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q06-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "657086d6-386e-47f6-b138-6059a774fc48",
+    "requestId": "case-01-1792254206933-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q06-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "657086d6-386e-47f6-b138-6059a774fc48",
+    "requestId": "case-01-1792254210766-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q07-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "3bfa4e87-4646-4847-be1b-ea25ad114ea4",
+    "requestId": "case-01-1792254220832-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q07-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm not doing well with the pain, to be honest. It's quite uncomfortable.",
+    "encounterId": "3bfa4e87-4646-4847-be1b-ea25ad114ea4",
+    "requestId": "case-01-1792254224352-2-response",
+    "variantId": "c83bd169abafaf3e599edda53a6fd03a907bdbbb8af98f136b8646e5f9b15189",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q08-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "02c03b3c-4bbf-4e95-87c9-a6118ba805db",
+    "requestId": "case-01-1792254233449-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q08-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "02c03b3c-4bbf-4e95-87c9-a6118ba805db",
+    "requestId": "case-01-1792254237766-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q09-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "964613f2-aeef-471a-9f12-4ba5ad8d1c72",
+    "requestId": "case-01-1792254247748-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q09-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "964613f2-aeef-471a-9f12-4ba5ad8d1c72",
+    "requestId": "case-01-1792254251082-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q10-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "66e0f604-b905-48b1-8274-3aac5208a6d3",
+    "requestId": "case-01-1792254259898-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q10-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "66e0f604-b905-48b1-8274-3aac5208a6d3",
+    "requestId": "case-01-1792254263250-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q11-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "2b34b9b3-6a99-4a5f-bb02-7daf0a35f262",
+    "requestId": "case-01-1792254273181-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q11-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "2b34b9b3-6a99-4a5f-bb02-7daf0a35f262",
+    "requestId": "case-01-1792254276595-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q12-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "07e43ead-850b-46f9-b5d8-44cccc536c56",
+    "requestId": "case-01-1792254284928-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q12-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "07e43ead-850b-46f9-b5d8-44cccc536c56",
+    "requestId": "case-01-1792254288495-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q13-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "22fdee1c-1fb5-49c6-a19e-7e5df45e4e1e",
+    "requestId": "case-01-1792254296778-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q13-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "22fdee1c-1fb5-49c6-a19e-7e5df45e4e1e",
+    "requestId": "case-01-1792254300128-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q14-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "aeaa387c-9ee2-4972-8670-297c4c40c767",
+    "requestId": "case-01-1792254308642-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q14-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "aeaa387c-9ee2-4972-8670-297c4c40c767",
+    "requestId": "case-01-1792254313494-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q15-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "2c56e7f5-cf01-4883-9617-9cc4010f9f07",
+    "requestId": "case-01-1792254322742-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q15-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "2c56e7f5-cf01-4883-9617-9cc4010f9f07",
+    "requestId": "case-01-1792254326143-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q16-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "02a89bf9-7c5c-4f0f-aa7a-3916116d992a",
+    "requestId": "case-01-1792254334708-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q16-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "02a89bf9-7c5c-4f0f-aa7a-3916116d992a",
+    "requestId": "case-01-1792254339040-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q17-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "bd367fa2-af54-4c24-95c5-7994c5f99ec1",
+    "requestId": "case-01-1792254348940-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q17-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "bd367fa2-af54-4c24-95c5-7994c5f99ec1",
+    "requestId": "case-01-1792254352291-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q18-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "4fe2e56c-319d-474c-8835-7ef180d9e988",
+    "requestId": "case-01-1792254360790-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q18-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling pretty uncomfortable with this pain.",
+    "encounterId": "4fe2e56c-319d-474c-8835-7ef180d9e988",
+    "requestId": "case-01-1792254364072-2-response",
+    "variantId": "af74cc623edbbe53b869781b513a44c1a64204a66499ad748b36f2c468810445",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q19-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "84def7c6-79a4-4e3c-a150-4d9227abe9b6",
+    "requestId": "case-01-1792254373040-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q19-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with this pain.",
+    "encounterId": "84def7c6-79a4-4e3c-a150-4d9227abe9b6",
+    "requestId": "case-01-1792254376422-2-response",
+    "variantId": "fd609f6c66499b466b3aca849ae1a15cb4fa836ed5f8fc8179740a89976f2bc7",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q20-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 0,
+    "question": "How severe is your pain right now?",
+    "finalResponse": "The painful tooth is my lower-left molar. The pain is eight out of ten now.",
+    "encounterId": "fb46ab29-66da-4636-82b4-8bf83f1c23d8",
+    "requestId": "case-01-1792254384787-1-response",
+    "variantId": "9bc6c8688a5b029b6343174f4ca7194d2e99240935da3515a76585cf268d690b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C01-G03-Q20-PAIN",
+    "caseId": "case-01",
+    "cohort": "pain-context",
+    "setupTurnIndex": 1,
+    "question": "How are you feeling with the pain?",
+    "finalResponse": "I'm feeling quite uncomfortable with the pain.",
+    "encounterId": "fb46ab29-66da-4636-82b4-8bf83f1c23d8",
+    "requestId": "case-01-1792254389204-2-response",
+    "variantId": "81da174a950740a06ce15bd184584f51ba0ff30402f4f0b9688b244cc4461f8b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H01",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "da6fffb2-31ce-48ab-a051-9a8903190115",
+    "requestId": "case-02-1792254469830-1-response",
+    "variantId": "8962ed670de12f54dff8ada77d361f2c0970a42a2e0b3c5edbafbf6564750053",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H01",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "da6fffb2-31ce-48ab-a051-9a8903190115",
+    "requestId": "case-02-1792254473163-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H02",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "encounterId": "a39e17e7-aec5-4bdb-b19f-4945311ab2d7",
+    "requestId": "case-02-1792254482396-1-response",
+    "variantId": "1ddb49bad8cb697ecc2bd228e39dacc12b24a3db87f704add3982159c44d7626",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H02",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "a39e17e7-aec5-4bdb-b19f-4945311ab2d7",
+    "requestId": "case-02-1792254485983-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H03",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "encounterId": "3b0ca384-23b8-4c41-a1e8-4873fe884c52",
+    "requestId": "case-02-1792254495679-1-response",
+    "variantId": "1ddb49bad8cb697ecc2bd228e39dacc12b24a3db87f704add3982159c44d7626",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-H03",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "3b0ca384-23b8-4c41-a1e8-4873fe884c52",
+    "requestId": "case-02-1792254499264-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q03",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "a45bb575-3b75-420a-bfd2-3734dba4f54f",
+    "requestId": "case-02-1792252473174-1-response",
+    "variantId": "8962ed670de12f54dff8ada77d361f2c0970a42a2e0b3c5edbafbf6564750053",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q03",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "a45bb575-3b75-420a-bfd2-3734dba4f54f",
+    "requestId": "case-02-1792252477410-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q11",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "encounterId": "858b1d1a-34b3-4b33-af9f-8400d7bb657a",
+    "requestId": "case-02-1792252524854-1-response",
+    "variantId": "1ddb49bad8cb697ecc2bd228e39dacc12b24a3db87f704add3982159c44d7626",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q11",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "858b1d1a-34b3-4b33-af9f-8400d7bb657a",
+    "requestId": "case-02-1792252528088-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q16",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Have you ever had Medicaid?",
+    "finalResponse": "Yes, I had Medicaid, but I lost it within the past year.",
+    "encounterId": "de720b7e-685e-4a9a-8dfc-b5abeba558dd",
+    "requestId": "case-02-1792252560219-1-response",
+    "variantId": "1ddb49bad8cb697ecc2bd228e39dacc12b24a3db87f704add3982159c44d7626",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G05-Q16",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "What happened to that coverage?",
+    "finalResponse": "I lost Medicaid within the past year.",
+    "encounterId": "de720b7e-685e-4a9a-8dfc-b5abeba558dd",
+    "requestId": "case-02-1792252563569-2-response",
+    "variantId": "52a0052ddbc3eca0f22ed136cd97be9436cf0bb73e84b4b4ce00cef931a75d96",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G06-H01",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "Collier County.",
+    "encounterId": "a9421478-c568-416c-9773-b7d7c3287826",
+    "requestId": "case-02-1792254508912-1-response",
+    "variantId": "4280ee8fab44a8d33a509e03a03e163c7d687da80d4f173fdf2faa8bd4833279",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G06-H02",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "I live in Collier County.",
+    "encounterId": "6d34e7f7-6c79-4bcc-a109-a7d5523c0583",
+    "requestId": "case-02-1792254517613-1-response",
+    "variantId": "6f12405a70500f4ce2bc85cf55ffdceb905d0e84eac7d837b38fe0b2c58e2a9a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G06-H03",
+    "caseId": "case-02",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "Collier County.",
+    "encounterId": "93308364-5851-484c-9b83-37bac6462b04",
+    "requestId": "case-02-1792254526027-1-response",
+    "variantId": "4280ee8fab44a8d33a509e03a03e163c7d687da80d4f173fdf2faa8bd4833279",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C02-G06-Q16",
+    "caseId": "case-02",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "What county do you live in?",
+    "finalResponse": "I live in Collier County.",
+    "encounterId": "152f6e22-4ff4-431a-81f7-3a5b2804ba33",
+    "requestId": "case-02-1792252683397-1-response",
+    "variantId": "6f12405a70500f4ce2bc85cf55ffdceb905d0e84eac7d837b38fe0b2c58e2a9a",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G10-H01",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "36f505cc-8ad7-4daa-a677-081425ed726d",
+    "requestId": "case-03-1792254586924-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G10-H02",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "61828d54-b0a7-4eb2-8e69-03933664a452",
+    "requestId": "case-03-1792254595671-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G10-H03",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "f84a6fbf-ed8c-40d9-b664-76c31d5ed93e",
+    "requestId": "case-03-1792254604389-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G10-Q14",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "5c8b64ea-1003-4113-8a59-1563571b7239",
+    "requestId": "case-03-1792253139261-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G10-Q17",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "856c98d8-27eb-42b7-991f-8bab19bdcc84",
+    "requestId": "case-03-1792253160246-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H01",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "bc4cf6fa-2a6f-4369-badb-7f10e27e8f58",
+    "requestId": "case-03-1792254614238-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H01",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that, doctor. We both need good care.",
+    "encounterId": "bc4cf6fa-2a6f-4369-badb-7f10e27e8f58",
+    "requestId": "case-03-1792254617314-2-response",
+    "variantId": "750287137eb6ae093fbc675890974ddb9c6ccf9b4af0254313c778dc5c1da72e",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H02",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "846838e0-4c75-434a-976f-6d042dd6817d",
+    "requestId": "case-03-1792254626055-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H02",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "encounterId": "846838e0-4c75-434a-976f-6d042dd6817d",
+    "requestId": "case-03-1792254629003-2-response",
+    "variantId": "dffa9fc2dbaba731b519b80f78e96971ad126b841769391aafd0c7f596b33291",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H03",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "e54f438d-afdc-4893-9eca-396b6a8c6386",
+    "requestId": "case-03-1792254637853-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-H03",
+    "caseId": "case-03",
+    "cohort": "holdout",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "encounterId": "e54f438d-afdc-4893-9eca-396b6a8c6386",
+    "requestId": "case-03-1792254640837-2-response",
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q01",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "f2394eff-3c64-4807-a83d-8c45b86c3d11",
+    "requestId": "case-03-1792253188796-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q01",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that, doctor. It's been tough finding time for both of us.",
+    "encounterId": "f2394eff-3c64-4807-a83d-8c45b86c3d11",
+    "requestId": "case-03-1792253192397-2-response",
+    "variantId": "6ca6a07d7d89e2f17b041f097732b2b8c0f05db928b81224eb71668d90e1a62e",
+    "outcome": "FAIL",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "Invents an actual difficulty finding time for parent and daughter. Shared-clinic preference does not establish a scheduling barrier. The first setup already established the daughter, so the scored preference question remains valid and is assessed separately against canonical facts."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q02",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "ffe3f88c-a387-4ef3-aa17-6c543f761caa",
+    "requestId": "case-03-1792253201644-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q02",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. My daughter needs good care too.",
+    "encounterId": "ffe3f88c-a387-4ef3-aa17-6c543f761caa",
+    "requestId": "case-03-1792253205250-2-response",
+    "variantId": "cd3e7530bcc513891d8e2273a36f767d876bdca3f4370daac332e81f1ff6b83f",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q03",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "819b3ef3-14b0-4961-9e7d-014a0e014268",
+    "requestId": "case-03-1792253216576-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q03",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "819b3ef3-14b0-4961-9e7d-014a0e014268",
+    "requestId": "case-03-1792253220178-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q04",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "d6557790-1b80-4004-a0a3-ed4611cc8bc9",
+    "requestId": "case-03-1792253229175-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q04",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it.",
+    "encounterId": "d6557790-1b80-4004-a0a3-ed4611cc8bc9",
+    "requestId": "case-03-1792253233278-2-response",
+    "variantId": "dffa9fc2dbaba731b519b80f78e96971ad126b841769391aafd0c7f596b33291",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q05",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "7acb3794-0ed9-476c-b67d-6812ed3bf7e3",
+    "requestId": "case-03-1792253243310-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q05",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor.",
+    "encounterId": "7acb3794-0ed9-476c-b67d-6812ed3bf7e3",
+    "requestId": "case-03-1792253246659-2-response",
+    "variantId": "9de2092e26cae43b081e77b2db0ef4f1586a7033e3bc62908826fee7cc5ff1ca",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "e18495bc-4041-4610-9d82-b83e0249cffa",
+    "requestId": "case-03-1792253256124-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "e18495bc-4041-4610-9d82-b83e0249cffa",
+    "requestId": "case-03-1792253259877-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q07",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "a57d94fc-c5ad-4192-b070-570122ef3b4a",
+    "requestId": "case-03-1792253270243-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q07",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+    "encounterId": "a57d94fc-c5ad-4192-b070-570122ef3b4a",
+    "requestId": "case-03-1792253273824-2-response",
+    "variantId": "d41b0278ae99189f9eca351faf7a0b7b01b214a6a40c5b67f4314a5f345b0aef",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q08",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "15edf1fa-8dce-42ea-938d-82ae8646e0fa",
+    "requestId": "case-03-1792253282941-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q08",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "15edf1fa-8dce-42ea-938d-82ae8646e0fa",
+    "requestId": "case-03-1792253286773-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q09",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "0f503024-89ff-4943-bf19-8e89f4ee405d",
+    "requestId": "case-03-1792253296224-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q09",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "0f503024-89ff-4943-bf19-8e89f4ee405d",
+    "requestId": "case-03-1792253300458-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q10",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "795b227d-c0cf-4559-8c4b-a7669c6bdbca",
+    "requestId": "case-03-1792253309858-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q10",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. We both need it, especially my daughter.",
+    "encounterId": "795b227d-c0cf-4559-8c4b-a7669c6bdbca",
+    "requestId": "case-03-1792253313572-2-response",
+    "variantId": "8ee9a309ff940b5bb5ad8e325e7ba9a7dd2d6675539f7c70358e3177486408b4",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "03a32690-2c65-46b4-bda8-0a4f1b2a0295",
+    "requestId": "case-03-1792253324308-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. I want what's best for her.",
+    "encounterId": "03a32690-2c65-46b4-bda8-0a4f1b2a0295",
+    "requestId": "case-03-1792253327306-2-response",
+    "variantId": "ed244ca281def966d99f829c7b79c498b28bee6c293471aa989bd9fb3a194946",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q12",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "b7355269-0a00-4a8a-8ab4-e8ca18c12cd5",
+    "requestId": "case-03-1792253336204-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q12",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. I want to make sure we both have the best care.",
+    "encounterId": "b7355269-0a00-4a8a-8ab4-e8ca18c12cd5",
+    "requestId": "case-03-1792253340456-2-response",
+    "variantId": "5ee0c5337f9e4127758efefe99d329a18d5141262753c30cf1a238022caa335d",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "0909efe1-a9fb-4160-b0b3-1d40438f6331",
+    "requestId": "case-03-1792253351788-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "0909efe1-a9fb-4160-b0b3-1d40438f6331",
+    "requestId": "case-03-1792253355654-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q14",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "cf84c63e-a1f9-4a44-9c51-dab7bba4a7d9",
+    "requestId": "case-03-1792253366241-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q14",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "encounterId": "cf84c63e-a1f9-4a44-9c51-dab7bba4a7d9",
+    "requestId": "case-03-1792253370255-2-response",
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q15",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "d2a2d751-8e00-4dc9-8036-acd9fc2caf77",
+    "requestId": "case-03-1792253381169-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q15",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. I want the best for her.",
+    "encounterId": "d2a2d751-8e00-4dc9-8036-acd9fc2caf77",
+    "requestId": "case-03-1792253384838-2-response",
+    "variantId": "aa9cd4a338f6503a315b3bfbd9e3872ab8c434b4ffc7edb219fcb056f7794930",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q16",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "93b56cb4-549d-4092-a8ba-a2bfebd30eb5",
+    "requestId": "case-03-1792253394920-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q16",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "encounterId": "93b56cb4-549d-4092-a8ba-a2bfebd30eb5",
+    "requestId": "case-03-1792253397953-2-response",
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q17",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "9289ac24-421e-4037-8db8-ed1848b6be94",
+    "requestId": "case-03-1792253408068-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q17",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "encounterId": "9289ac24-421e-4037-8db8-ed1848b6be94",
+    "requestId": "case-03-1792253411936-2-response",
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q18",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "7ef9f5f5-8269-49be-bb40-b3e3ceb14668",
+    "requestId": "case-03-1792253421568-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q18",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear, doctor. We both need it.",
+    "encounterId": "7ef9f5f5-8269-49be-bb40-b3e3ceb14668",
+    "requestId": "case-03-1792253424835-2-response",
+    "variantId": "d1ffef6467748b87cf6561d98f99f8555ae02f14ad8f681e8ad7a22d8580100b",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q19",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "ef530095-79fd-422a-a7bd-c8442f1c60ed",
+    "requestId": "case-03-1792253434236-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q19",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "I appreciate that. It's important for both of us to have good dental health.",
+    "encounterId": "ef530095-79fd-422a-a7bd-c8442f1c60ed",
+    "requestId": "case-03-1792253437302-2-response",
+    "variantId": "d41b0278ae99189f9eca351faf7a0b7b01b214a6a40c5b67f4314a5f345b0aef",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q20",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 0,
+    "question": "Do you have any children?",
+    "finalResponse": "Yes, I have a young daughter.",
+    "encounterId": "dfe81826-ebfb-4baf-a584-ee336124ff7c",
+    "requestId": "case-03-1792253448350-1-response",
+    "variantId": "f579e440b84cf71eef9aa9b085e8e61bd17da4a070084a5d67f6d6403f957282",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  },
+  {
+    "testId": "C03-G11-Q20",
+    "caseId": "case-03",
+    "cohort": "primary",
+    "setupTurnIndex": 1,
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "finalResponse": "That's good to hear. Dental care is important for both of us.",
+    "encounterId": "dfe81826-ebfb-4baf-a584-ee336124ff7c",
+    "requestId": "case-03-1792253451567-2-response",
+    "variantId": "7f8fb2996a69eeb063c001d8139ea9053c50bb4a49215f3e036404b74268cefe",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Actual setup variant individually reviewed against the canonical case facts; no unsupported assertion identified."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Answers the setup request or appropriately acknowledges the neutral care-planning statement; reference context remains usable."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Relevant to the setup; brief related concern and approved patient questions are permitted."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "No instruction leakage, internal state or role drift identified."
+      }
+    },
+    "method": "Assistant review of every observed case/question/response variant; identical variants inherit the same meaning. Separate from scored-question outcomes."
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "name": "validateSharedConversationFollowup",
+    "exitCode": 1,
+    "assertion": "assessCanonicalAssertions(\"I live with my diabetes.\", Case01 canonical facts).valid",
+    "reason": "Existing generic live-with-my concrete-circumstance pattern falsely rejected a canonical medical-condition statement; retained assertion, refined the person-versus-condition guard.",
+    "at": "2026-10-17T18:29:42.752Z"
+  }
+]

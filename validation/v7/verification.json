@@ -1,0 +1,245 @@
+{
+  "at": "2026-10-18T01:51:41.468Z",
+  "checks": [
+    {
+      "name": "Frozen application unchanged",
+      "passed": true,
+      "evidence": {
+        "files": 372,
+        "changed": []
+      }
+    },
+    {
+      "name": "All copied and original prior evidence unchanged",
+      "passed": true,
+      "evidence": 1055
+    },
+    {
+      "name": "Original frozen V6 implementation unchanged",
+      "passed": true,
+      "evidence": 370
+    },
+    {
+      "name": "Original frozen V5 implementation unchanged",
+      "passed": true,
+      "evidence": 368
+    },
+    {
+      "name": "Original frozen V4 implementation unchanged",
+      "passed": true,
+      "evidence": 216
+    },
+    {
+      "name": "Canonical facts unchanged from V6",
+      "passed": true,
+      "evidence": 14
+    },
+    {
+      "name": "546 identical scored questions/setup inventory",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "Exactly one recorded outcome per scored item",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "All delivered responses explicitly reviewed and hash-bound",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "Non-pass evidence retains context, response/error and concrete reason",
+      "passed": true,
+      "evidence": [
+        {
+          "id": "C04-G14-Q19",
+          "outcome": "FAIL"
+        }
+      ]
+    },
+    {
+      "name": "Final UI/API scored text and request/encounter correlation",
+      "passed": true,
+      "evidence": {
+        "delivered": 546,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "Every setup response reviewed separately",
+      "passed": true,
+      "evidence": {
+        "recorded": 119,
+        "reviewed": 119
+      }
+    },
+    {
+      "name": "Setup UI/API and request/encounter correlation",
+      "passed": true,
+      "evidence": {
+        "delivered": 119,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "Every API response has a persisted matching sent request",
+      "passed": true,
+      "evidence": {
+        "sent": 665,
+        "received": 665
+      }
+    },
+    {
+      "name": "No undocumented duplicate scored submissions",
+      "passed": true,
+      "evidence": {
+        "scoredRequests": 546,
+        "duplicates": [],
+        "recovery": {
+          "eligibleIds": []
+        }
+      }
+    },
+    {
+      "name": "Raw artifacts preserved with hashes",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "Every first attempt retained",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "Fresh encounters are unique and empty before setup",
+      "passed": true,
+      "evidence": 546
+    },
+    {
+      "name": "Frozen collector/client/config files unchanged",
+      "passed": true,
+      "evidence": 8
+    },
+    {
+      "name": "Frozen development environment-file hashes unchanged",
+      "passed": true,
+      "evidence": [
+        ".env",
+        ".env.local"
+      ]
+    },
+    {
+      "name": "All automated checks, typecheck, full application lint and production build passed",
+      "passed": true,
+      "evidence": 40
+    },
+    {
+      "name": "Focused stage completed before freeze",
+      "passed": true,
+      "evidence": {
+        "total": 56,
+        "nonpass": []
+      }
+    },
+    {
+      "name": "All live scored executions began after freeze",
+      "passed": true,
+      "evidence": "2026-10-18T00:41:40.453Z"
+    },
+    {
+      "name": "No identical-response behavioral improvement claimed",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "All 539 original V5 PASS and 456 V6 PASS IDs retested",
+      "passed": true,
+      "evidence": {
+        "v5": 539,
+        "v6": 456
+      }
+    },
+    {
+      "name": "Provider retries bounded and appropriate",
+      "passed": true,
+      "evidence": {
+        "httpAttempts": 1381,
+        "generationOperations": 1381,
+        "retryOperations": 0,
+        "recoveredAfterGatewayFailure": 0,
+        "httpStatusCounts": {
+          "200": 1380,
+          "null": 1
+        },
+        "violations": []
+      }
+    },
+    {
+      "name": "Production smoke complete with actual configuration and correlation",
+      "passed": true,
+      "evidence": {
+        "items": 57,
+        "configuration": "http://localhost:3005",
+        "buildId": "kYqMpyAiWsYJLasiCLmUi"
+      }
+    },
+    {
+      "name": "Production compiled artifacts and source immutable",
+      "passed": true,
+      "evidence": 843
+    },
+    {
+      "name": "All production setup responses separately reviewed",
+      "passed": true,
+      "evidence": 20
+    },
+    {
+      "name": "All production delivered responses explicitly reviewed and hash-bound",
+      "passed": true,
+      "evidence": 57
+    },
+    {
+      "name": "All production setup variants explicitly inspected",
+      "passed": true,
+      "evidence": 10
+    },
+    {
+      "name": "Production actual harness and environment hashes unchanged",
+      "passed": true,
+      "evidence": 8
+    },
+    {
+      "name": "Production sent/received request ledger complete without duplicate scored submission",
+      "passed": true,
+      "evidence": {
+        "sent": 77,
+        "received": 77,
+        "scored": 57
+      }
+    },
+    {
+      "name": "Development CSV and all raw screenshot/trace checks passed",
+      "passed": true,
+      "evidence": {
+        "rows": 546,
+        "csvRoundTrip": true,
+        "screenshotsExist": 546,
+        "traceZipIntegrityChecked": 546,
+        "allAttemptScreenshotsAndTraceZipIntegrityChecked": 546
+      }
+    },
+    {
+      "name": "Production raw screenshot/trace integrity passed",
+      "passed": true,
+      "evidence": {
+        "productionItems": 57,
+        "screenshotExistenceChecked": 57,
+        "traceZipIntegrityChecked": 57,
+        "exactUiApiAndCorrelation": true
+      }
+    }
+  ],
+  "allPassed": true
+}

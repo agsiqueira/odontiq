@@ -136,7 +136,7 @@ const encounter = await readFile("src/components/EncounterExperience.tsx", "utf8
 check(/text: data\.response/.test(encounter), "display receives persisted response");
 check(/speechPlayback\.speak\(patientConversationMessage\.text/.test(encounter), "TTS receives displayed response");
 const service = await readFile("src/lib/persistence/services/patientQuestionService.ts", "utf8");
-check(/responseText = questionText[\s\S]*input\.baseResponse\.trim\(\)/.test(service), "persistence retains exact base response without a patient question");
+check(/baseAnswer = patientAnswerWithoutQuestions\(input\.baseResponse\)/.test(service) && /responseText = questionText[\s\S]*: baseAnswer/.test(service), "persistence preserves the answer and adds only state-selected patient questions");
 
 console.log(`Patient language governance validation passed: ${assertions} focused assertions.`);
 

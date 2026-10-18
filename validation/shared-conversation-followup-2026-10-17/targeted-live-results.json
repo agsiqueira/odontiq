@@ -1,0 +1,2342 @@
+[
+  {
+    "testId": "C01-TARGET-1",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Who do you live with?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "961ca881-560f-4af7-9ad4-11bb6d8113d3",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:30.733Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "766abd03-fbc8-41ab-8a8f-b954942a060b",
+    "requestId": "case-01-1792259973001-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792259973001-1-response",
+        "encounterId": "766abd03-fbc8-41ab-8a8f-b954942a060b",
+        "requestMessage": "Who do you live with?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-01-1792259973001-1-response",
+        "responseEncounterId": "766abd03-fbc8-41ab-8a8f-b954942a060b",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-1_961ca881-560f-4af7-9ad4-11bb6d8113d3.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-1_961ca881-560f-4af7-9ad4-11bb6d8113d3.zip",
+    "freshState": {
+      "boundEncounterId": "766abd03-fbc8-41ab-8a8f-b954942a060b",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2221,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T17:59:36.136Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-1_961ca881-560f-4af7-9ad4-11bb6d8113d3.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "961ca881-560f-4af7-9ad4-11bb6d8113d3"
+    ]
+  },
+  {
+    "testId": "C01-TARGET-2",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Does your daughter live with you?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "d027ec1a-c0b5-423f-9879-de212f01ddbe",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:36.143Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "e25ab577-1299-4624-a320-e0da829b40f2",
+    "requestId": "case-01-1792259979353-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792259979353-1-response",
+        "encounterId": "e25ab577-1299-4624-a320-e0da829b40f2",
+        "requestMessage": "Does your daughter live with you?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-01-1792259979353-1-response",
+        "responseEncounterId": "e25ab577-1299-4624-a320-e0da829b40f2",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-2_d027ec1a-c0b5-423f-9879-de212f01ddbe.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-2_d027ec1a-c0b5-423f-9879-de212f01ddbe.zip",
+    "freshState": {
+      "boundEncounterId": "e25ab577-1299-4624-a320-e0da829b40f2",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2750,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T17:59:42.516Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-2_d027ec1a-c0b5-423f-9879-de212f01ddbe.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "d027ec1a-c0b5-423f-9879-de212f01ddbe"
+    ]
+  },
+  {
+    "testId": "C01-TARGET-3",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "With whom do you share your home?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "29e68cfd-2926-4b44-b639-47d3999559ca",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:42.524Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "b55da065-b283-47dc-8d14-2f4aa736fb76",
+    "requestId": "case-01-1792259985584-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792259985584-1-response",
+        "encounterId": "b55da065-b283-47dc-8d14-2f4aa736fb76",
+        "requestMessage": "With whom do you share your home?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-01-1792259985584-1-response",
+        "responseEncounterId": "b55da065-b283-47dc-8d14-2f4aa736fb76",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-3_29e68cfd-2926-4b44-b639-47d3999559ca.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-3_29e68cfd-2926-4b44-b639-47d3999559ca.zip",
+    "freshState": {
+      "boundEncounterId": "b55da065-b283-47dc-8d14-2f4aa736fb76",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2482,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T17:59:48.447Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-3_29e68cfd-2926-4b44-b639-47d3999559ca.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "29e68cfd-2926-4b44-b639-47d3999559ca"
+    ]
+  },
+  {
+    "testId": "C01-TARGET-4",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "1c16c0cb-f9c9-47f1-a167-b0dde9d78093",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:48.453Z",
+    "setupTurns": [],
+    "finalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+    "apiFinalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "4274c84a-5f71-415c-a0a6-7ba79572b128",
+    "requestId": "case-01-1792259991569-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792259991569-1-response",
+        "encounterId": "4274c84a-5f71-415c-a0a6-7ba79572b128",
+        "requestMessage": "I'm looking into dental care options for you.",
+        "provider": "navigator",
+        "finalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+        "responseRequestId": "case-01-1792259991569-1-response",
+        "responseEncounterId": "4274c84a-5f71-415c-a0a6-7ba79572b128",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-4_1c16c0cb-f9c9-47f1-a167-b0dde9d78093.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-4_1c16c0cb-f9c9-47f1-a167-b0dde9d78093.zip",
+    "freshState": {
+      "boundEncounterId": "4274c84a-5f71-415c-a0a6-7ba79572b128",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2244,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T17:59:54.211Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-4_1c16c0cb-f9c9-47f1-a167-b0dde9d78093.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "1c16c0cb-f9c9-47f1-a167-b0dde9d78093"
+    ]
+  },
+  {
+    "testId": "C01-TARGET-5",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "ec89317a-1958-4418-af46-8e141358ef3d",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:54.218Z",
+    "setupTurns": [],
+    "finalResponse": "Alright, thank you.",
+    "apiFinalResponse": "Alright, thank you.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "0129fa5c-9184-43f4-aa40-23dbcbe2212f",
+    "requestId": "case-01-1792259997352-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792259997352-1-response",
+        "encounterId": "0129fa5c-9184-43f4-aa40-23dbcbe2212f",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Alright, thank you.",
+        "responseRequestId": "case-01-1792259997352-1-response",
+        "responseEncounterId": "0129fa5c-9184-43f4-aa40-23dbcbe2212f",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-5_ec89317a-1958-4418-af46-8e141358ef3d.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-5_ec89317a-1958-4418-af46-8e141358ef3d.zip",
+    "freshState": {
+      "boundEncounterId": "0129fa5c-9184-43f4-aa40-23dbcbe2212f",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2167,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T17:59:59.917Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-5_ec89317a-1958-4418-af46-8e141358ef3d.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "ec89317a-1958-4418-af46-8e141358ef3d"
+    ]
+  },
+  {
+    "testId": "C01-TARGET-6",
+    "caseId": "case-01",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "d9f73cc7-0a52-4531-acfd-129963a3b128",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T17:59:59.923Z",
+    "setupTurns": [],
+    "finalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+    "apiFinalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "ccc7daef-c037-4ac1-9143-b3e612853be8",
+    "requestId": "case-01-1792260002983-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-01-1792260002983-1-response",
+        "encounterId": "ccc7daef-c037-4ac1-9143-b3e612853be8",
+        "requestMessage": "I'm looking into dental care options for you and your daughter.",
+        "provider": "navigator",
+        "finalResponse": "Please help me. My jaw is swollen, and I cannot lie back.",
+        "responseRequestId": "case-01-1792260002983-1-response",
+        "responseEncounterId": "ccc7daef-c037-4ac1-9143-b3e612853be8",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C01-TARGET-6_d9f73cc7-0a52-4531-acfd-129963a3b128.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C01-TARGET-6_d9f73cc7-0a52-4531-acfd-129963a3b128.zip",
+    "freshState": {
+      "boundEncounterId": "ccc7daef-c037-4ac1-9143-b3e612853be8",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2375,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:05.720Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C01-TARGET-6_d9f73cc7-0a52-4531-acfd-129963a3b128.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "d9f73cc7-0a52-4531-acfd-129963a3b128"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-1",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Who do you live with?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "ca49a561-dc2f-48c8-9e00-80525f3abeab",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:05.726Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "4bb9e817-4ce8-4f67-9217-f728bd458efb",
+    "requestId": "case-02-1792260008784-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260008784-1-response",
+        "encounterId": "4bb9e817-4ce8-4f67-9217-f728bd458efb",
+        "requestMessage": "Who do you live with?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-02-1792260008784-1-response",
+        "responseEncounterId": "4bb9e817-4ce8-4f67-9217-f728bd458efb",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-1_ca49a561-dc2f-48c8-9e00-80525f3abeab.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-1_ca49a561-dc2f-48c8-9e00-80525f3abeab.zip",
+    "freshState": {
+      "boundEncounterId": "4bb9e817-4ce8-4f67-9217-f728bd458efb",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2074,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:11.257Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-1_ca49a561-dc2f-48c8-9e00-80525f3abeab.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "ca49a561-dc2f-48c8-9e00-80525f3abeab"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-2",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Does your daughter live with you?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "6e2ffdd2-5734-409f-8a06-2b41ba27fe5e",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:11.264Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "dae76278-08f0-48b1-9f83-643b47a76365",
+    "requestId": "case-02-1792260014267-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260014267-1-response",
+        "encounterId": "dae76278-08f0-48b1-9f83-643b47a76365",
+        "requestMessage": "Does your daughter live with you?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-02-1792260014267-1-response",
+        "responseEncounterId": "dae76278-08f0-48b1-9f83-643b47a76365",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-2_6e2ffdd2-5734-409f-8a06-2b41ba27fe5e.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-2_6e2ffdd2-5734-409f-8a06-2b41ba27fe5e.zip",
+    "freshState": {
+      "boundEncounterId": "dae76278-08f0-48b1-9f83-643b47a76365",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2216,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:16.910Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-2_6e2ffdd2-5734-409f-8a06-2b41ba27fe5e.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "6e2ffdd2-5734-409f-8a06-2b41ba27fe5e"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-3",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "With whom do you share your home?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "e85da817-c028-43b3-8357-4a5e3d92cc4c",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:16.918Z",
+    "setupTurns": [],
+    "finalResponse": "I live alone, I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I live alone, I'm not sure what to tell you about my household.",
+    "outcome": "FAIL",
+    "reason": "factualCorrectness: I live alone invents household composition. No canonical fact establishes living alone; adding uncertainty afterward does not remove the unsupported assertion.; completeness: The mixed living-alone assertion and uncertainty fail to preserve the unknown household boundary; no county disclosure is needed.",
+    "encounterId": "d9f41da5-7022-477f-b28b-13a24d1f6438",
+    "requestId": "case-02-1792260020187-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260020187-1-response",
+        "encounterId": "d9f41da5-7022-477f-b28b-13a24d1f6438",
+        "requestMessage": "With whom do you share your home?",
+        "provider": "navigator",
+        "finalResponse": "I live alone, I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-02-1792260020187-1-response",
+        "responseEncounterId": "d9f41da5-7022-477f-b28b-13a24d1f6438",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-3_e85da817-c028-43b3-8357-4a5e3d92cc4c.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-3_e85da817-c028-43b3-8357-4a5e3d92cc4c.zip",
+    "freshState": {
+      "boundEncounterId": "d9f41da5-7022-477f-b28b-13a24d1f6438",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1973,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:22.597Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-3_e85da817-c028-43b3-8357-4a5e3d92cc4c.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "FAIL",
+        "reason": "I live alone invents household composition. No canonical fact establishes living alone; adding uncertainty afterward does not remove the unsupported assertion."
+      },
+      "completeness": {
+        "status": "FAIL",
+        "reason": "The mixed living-alone assertion and uncertainty fail to preserve the unknown household boundary; no county disclosure is needed."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "e85da817-c028-43b3-8357-4a5e3d92cc4c"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-4",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "a7ef0a3e-3b2b-40c4-b88e-aa8a8d2219c2",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:22.604Z",
+    "setupTurns": [],
+    "finalResponse": "Hello... I feel really sick.",
+    "apiFinalResponse": "Hello... I feel really sick.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "30c046da-5c57-4beb-8f48-41520d996288",
+    "requestId": "case-02-1792260025665-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260025665-1-response",
+        "encounterId": "30c046da-5c57-4beb-8f48-41520d996288",
+        "requestMessage": "I'm looking into dental care options for you.",
+        "provider": "navigator",
+        "finalResponse": "Hello... I feel really sick.",
+        "responseRequestId": "case-02-1792260025665-1-response",
+        "responseEncounterId": "30c046da-5c57-4beb-8f48-41520d996288",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-4_a7ef0a3e-3b2b-40c4-b88e-aa8a8d2219c2.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-4_a7ef0a3e-3b2b-40c4-b88e-aa8a8d2219c2.zip",
+    "freshState": {
+      "boundEncounterId": "30c046da-5c57-4beb-8f48-41520d996288",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2159,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:28.201Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-4_a7ef0a3e-3b2b-40c4-b88e-aa8a8d2219c2.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "a7ef0a3e-3b2b-40c4-b88e-aa8a8d2219c2"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-5",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "e43c9f9d-ea9e-4f3a-8d26-ebf52dd0fcf6",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:28.207Z",
+    "setupTurns": [],
+    "finalResponse": "Alright, thanks.",
+    "apiFinalResponse": "Alright, thanks.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "ea579c42-c8c9-4e16-9e7e-20424e095125",
+    "requestId": "case-02-1792260031201-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260031201-1-response",
+        "encounterId": "ea579c42-c8c9-4e16-9e7e-20424e095125",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Alright, thanks.",
+        "responseRequestId": "case-02-1792260031201-1-response",
+        "responseEncounterId": "ea579c42-c8c9-4e16-9e7e-20424e095125",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-5_e43c9f9d-ea9e-4f3a-8d26-ebf52dd0fcf6.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-5_e43c9f9d-ea9e-4f3a-8d26-ebf52dd0fcf6.zip",
+    "freshState": {
+      "boundEncounterId": "ea579c42-c8c9-4e16-9e7e-20424e095125",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2101,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:33.586Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-5_e43c9f9d-ea9e-4f3a-8d26-ebf52dd0fcf6.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "e43c9f9d-ea9e-4f3a-8d26-ebf52dd0fcf6"
+    ]
+  },
+  {
+    "testId": "C02-TARGET-6",
+    "caseId": "case-02",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "ee343e68-e9d3-4986-9216-41a6da900d65",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:33.592Z",
+    "setupTurns": [],
+    "finalResponse": "Hello... I feel really sick. I just want to get this over with.",
+    "apiFinalResponse": "Hello... I feel really sick. I just want to get this over with.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "b0072fa7-8005-491e-8fac-2ead986d2012",
+    "requestId": "case-02-1792260036632-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-02-1792260036632-1-response",
+        "encounterId": "b0072fa7-8005-491e-8fac-2ead986d2012",
+        "requestMessage": "I'm looking into dental care options for you and your daughter.",
+        "provider": "navigator",
+        "finalResponse": "Hello... I feel really sick. I just want to get this over with.",
+        "responseRequestId": "case-02-1792260036632-1-response",
+        "responseEncounterId": "b0072fa7-8005-491e-8fac-2ead986d2012",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C02-TARGET-6_ee343e68-e9d3-4986-9216-41a6da900d65.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C02-TARGET-6_ee343e68-e9d3-4986-9216-41a6da900d65.zip",
+    "freshState": {
+      "boundEncounterId": "b0072fa7-8005-491e-8fac-2ead986d2012",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1800,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:38.730Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C02-TARGET-6_ee343e68-e9d3-4986-9216-41a6da900d65.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "ee343e68-e9d3-4986-9216-41a6da900d65"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-1",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Who do you live with?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "8ecc1392-8519-4f8d-b48d-30a04c85d329",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:38.737Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "e621d01b-c6dc-49f2-a741-e0a462895d61",
+    "requestId": "case-03-1792260041832-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260041832-1-response",
+        "encounterId": "e621d01b-c6dc-49f2-a741-e0a462895d61",
+        "requestMessage": "Who do you live with?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-03-1792260041832-1-response",
+        "responseEncounterId": "e621d01b-c6dc-49f2-a741-e0a462895d61",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-1_8ecc1392-8519-4f8d-b48d-30a04c85d329.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-1_8ecc1392-8519-4f8d-b48d-30a04c85d329.zip",
+    "freshState": {
+      "boundEncounterId": "e621d01b-c6dc-49f2-a741-e0a462895d61",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2944,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:45.135Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-1_8ecc1392-8519-4f8d-b48d-30a04c85d329.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "8ecc1392-8519-4f8d-b48d-30a04c85d329"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-2",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Does your daughter live with you?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "ba4123a5-6b03-4958-addf-d6beb3703f89",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:45.142Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "53a13ca9-639d-4c65-b71b-f2a30c59ca75",
+    "requestId": "case-03-1792260048250-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260048250-1-response",
+        "encounterId": "53a13ca9-639d-4c65-b71b-f2a30c59ca75",
+        "requestMessage": "Does your daughter live with you?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-03-1792260048250-1-response",
+        "responseEncounterId": "53a13ca9-639d-4c65-b71b-f2a30c59ca75",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-2_ba4123a5-6b03-4958-addf-d6beb3703f89.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-2_ba4123a5-6b03-4958-addf-d6beb3703f89.zip",
+    "freshState": {
+      "boundEncounterId": "53a13ca9-639d-4c65-b71b-f2a30c59ca75",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3030,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:51.549Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-2_ba4123a5-6b03-4958-addf-d6beb3703f89.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "ba4123a5-6b03-4958-addf-d6beb3703f89"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-3",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "With whom do you share your home?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "c999dd39-488a-4d32-b362-d42a55fb6341",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:51.555Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "777e4b2a-23e6-4b06-812d-76c8e67f02ae",
+    "requestId": "case-03-1792260054497-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260054497-1-response",
+        "encounterId": "777e4b2a-23e6-4b06-812d-76c8e67f02ae",
+        "requestMessage": "With whom do you share your home?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-03-1792260054497-1-response",
+        "responseEncounterId": "777e4b2a-23e6-4b06-812d-76c8e67f02ae",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-3_c999dd39-488a-4d32-b362-d42a55fb6341.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-3_c999dd39-488a-4d32-b362-d42a55fb6341.zip",
+    "freshState": {
+      "boundEncounterId": "777e4b2a-23e6-4b06-812d-76c8e67f02ae",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2335,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:00:57.087Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-3_c999dd39-488a-4d32-b362-d42a55fb6341.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "c999dd39-488a-4d32-b362-d42a55fb6341"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-4",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "d19a42e9-1bd8-405d-ac9b-0dfb0677c293",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:00:57.092Z",
+    "setupTurns": [],
+    "finalResponse": "Hi, doctor. My tooth hurts all the time, and I can't chew on it.",
+    "apiFinalResponse": "Hi, doctor. My tooth hurts all the time, and I can't chew on it.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "809faec0-9e0a-40d0-b278-d1785b228e3c",
+    "requestId": "case-03-1792260061231-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260061231-1-response",
+        "encounterId": "809faec0-9e0a-40d0-b278-d1785b228e3c",
+        "requestMessage": "I'm looking into dental care options for you.",
+        "provider": "navigator",
+        "finalResponse": "Hi, doctor. My tooth hurts all the time, and I can't chew on it.",
+        "responseRequestId": "case-03-1792260061231-1-response",
+        "responseEncounterId": "809faec0-9e0a-40d0-b278-d1785b228e3c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-4_d19a42e9-1bd8-405d-ac9b-0dfb0677c293.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-4_d19a42e9-1bd8-405d-ac9b-0dfb0677c293.zip",
+    "freshState": {
+      "boundEncounterId": "809faec0-9e0a-40d0-b278-d1785b228e3c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2245,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:03.963Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-4_d19a42e9-1bd8-405d-ac9b-0dfb0677c293.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "d19a42e9-1bd8-405d-ac9b-0dfb0677c293"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-5",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "856c1624-355c-4779-9ac4-2a8658b34ef0",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:03.970Z",
+    "setupTurns": [],
+    "finalResponse": "Alright, I understand.",
+    "apiFinalResponse": "Alright, I understand.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "d82e5672-e784-44c2-a539-b903b5c3d82c",
+    "requestId": "case-03-1792260067332-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260067332-1-response",
+        "encounterId": "d82e5672-e784-44c2-a539-b903b5c3d82c",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Alright, I understand.",
+        "responseRequestId": "case-03-1792260067332-1-response",
+        "responseEncounterId": "d82e5672-e784-44c2-a539-b903b5c3d82c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-5_856c1624-355c-4779-9ac4-2a8658b34ef0.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-5_856c1624-355c-4779-9ac4-2a8658b34ef0.zip",
+    "freshState": {
+      "boundEncounterId": "d82e5672-e784-44c2-a539-b903b5c3d82c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2112,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:09.716Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-5_856c1624-355c-4779-9ac4-2a8658b34ef0.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "856c1624-355c-4779-9ac4-2a8658b34ef0"
+    ]
+  },
+  {
+    "testId": "C03-TARGET-6",
+    "caseId": "case-03",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "7338fea0-b025-4e71-a844-e8a9fcdfb5f5",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:09.721Z",
+    "setupTurns": [],
+    "finalResponse": "This is about me, not my daughter.",
+    "apiFinalResponse": "This is about me, not my daughter.",
+    "outcome": "REVIEW",
+    "reason": "factualCorrectness: This is about me, not my daughter may focus the current symptomatic encounter or reject the defined shared-care interest. No household/provider history is asserted, but the intended preference implication is ambiguous.; relevance: A curt redirection may be natural focus on the current complaint, or an unhelpful refusal of the offered shared-care planning. Retain for human inspection.",
+    "encounterId": "35835403-c1d1-4c7b-bc5f-0bf91c7ac9e5",
+    "requestId": "case-03-1792260072796-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-03-1792260072796-1-response",
+        "encounterId": "35835403-c1d1-4c7b-bc5f-0bf91c7ac9e5",
+        "requestMessage": "I'm looking into dental care options for you and your daughter.",
+        "provider": "navigator",
+        "finalResponse": "This is about me, not my daughter.",
+        "responseRequestId": "case-03-1792260072796-1-response",
+        "responseEncounterId": "35835403-c1d1-4c7b-bc5f-0bf91c7ac9e5",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C03-TARGET-6_7338fea0-b025-4e71-a844-e8a9fcdfb5f5.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C03-TARGET-6_7338fea0-b025-4e71-a844-e8a9fcdfb5f5.zip",
+    "freshState": {
+      "boundEncounterId": "35835403-c1d1-4c7b-bc5f-0bf91c7ac9e5",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1963,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:15.082Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C03-TARGET-6_7338fea0-b025-4e71-a844-e8a9fcdfb5f5.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "REVIEW",
+        "reason": "This is about me, not my daughter may focus the current symptomatic encounter or reject the defined shared-care interest. No household/provider history is asserted, but the intended preference implication is ambiguous."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "reason": "A curt redirection may be natural focus on the current complaint, or an unhelpful refusal of the offered shared-care planning. Retain for human inspection."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "7338fea0-b025-4e71-a844-e8a9fcdfb5f5"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-1",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Who do you live with?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "6d57f670-eec0-4ace-acc1-8f427ee0440b",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:15.090Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure, I'm just really focused on this tooth pain right now. Do I need an antibiotic?",
+    "apiFinalResponse": "I'm not sure, I'm just really focused on this tooth pain right now. Do I need an antibiotic?",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "cf9aef20-8ce7-4582-b491-d8a81a2c1417",
+    "requestId": "case-04-1792260078629-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260078629-1-response",
+        "encounterId": "cf9aef20-8ce7-4582-b491-d8a81a2c1417",
+        "requestMessage": "Who do you live with?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure, I'm just really focused on this tooth pain right now. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792260078629-1-response",
+        "responseEncounterId": "cf9aef20-8ce7-4582-b491-d8a81a2c1417",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-1_6d57f670-eec0-4ace-acc1-8f427ee0440b.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-1_6d57f670-eec0-4ace-acc1-8f427ee0440b.zip",
+    "freshState": {
+      "boundEncounterId": "cf9aef20-8ce7-4582-b491-d8a81a2c1417",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2345,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:21.276Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-1_6d57f670-eec0-4ace-acc1-8f427ee0440b.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "6d57f670-eec0-4ace-acc1-8f427ee0440b"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-2",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Does your daughter live with you?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "800ab49b-6d1f-46e8-8862-fa6731b0a993",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:21.283Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household. Do I need an antibiotic?",
+    "apiFinalResponse": "I'm not sure what to tell you about my household. Do I need an antibiotic?",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "3af2a99d-f1e2-47f1-8ce1-878d4f9a6f66",
+    "requestId": "case-04-1792260085114-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260085114-1-response",
+        "encounterId": "3af2a99d-f1e2-47f1-8ce1-878d4f9a6f66",
+        "requestMessage": "Does your daughter live with you?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792260085114-1-response",
+        "responseEncounterId": "3af2a99d-f1e2-47f1-8ce1-878d4f9a6f66",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-2_800ab49b-6d1f-46e8-8862-fa6731b0a993.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-2_800ab49b-6d1f-46e8-8862-fa6731b0a993.zip",
+    "freshState": {
+      "boundEncounterId": "3af2a99d-f1e2-47f1-8ce1-878d4f9a6f66",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3542,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:28.952Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-2_800ab49b-6d1f-46e8-8862-fa6731b0a993.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "800ab49b-6d1f-46e8-8862-fa6731b0a993"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-3",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "With whom do you share your home?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "fbc4d9f6-5370-42fd-aa2e-179adf654b76",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:28.959Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "acd120ef-4847-4192-b80f-bcc0d5981e76",
+    "requestId": "case-04-1792260092597-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260092597-1-response",
+        "encounterId": "acd120ef-4847-4192-b80f-bcc0d5981e76",
+        "requestMessage": "With whom do you share your home?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-04-1792260092597-1-response",
+        "responseEncounterId": "acd120ef-4847-4192-b80f-bcc0d5981e76",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-3_fbc4d9f6-5370-42fd-aa2e-179adf654b76.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-3_fbc4d9f6-5370-42fd-aa2e-179adf654b76.zip",
+    "freshState": {
+      "boundEncounterId": "acd120ef-4847-4192-b80f-bcc0d5981e76",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3141,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:36.015Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-3_fbc4d9f6-5370-42fd-aa2e-179adf654b76.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "fbc4d9f6-5370-42fd-aa2e-179adf654b76"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-4",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "10779a00-993a-429d-82da-8c198c977bb5",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:36.020Z",
+    "setupTurns": [],
+    "finalResponse": "Okay. Do I need an antibiotic?",
+    "apiFinalResponse": "Okay. Do I need an antibiotic?",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "c0d6550f-256b-4959-b007-b41ab4aad37a",
+    "requestId": "case-04-1792260099146-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260099146-1-response",
+        "encounterId": "c0d6550f-256b-4959-b007-b41ab4aad37a",
+        "requestMessage": "I'm looking into dental care options for you.",
+        "provider": "navigator",
+        "finalResponse": "Okay. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792260099146-1-response",
+        "responseEncounterId": "c0d6550f-256b-4959-b007-b41ab4aad37a",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-4_10779a00-993a-429d-82da-8c198c977bb5.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-4_10779a00-993a-429d-82da-8c198c977bb5.zip",
+    "freshState": {
+      "boundEncounterId": "c0d6550f-256b-4959-b007-b41ab4aad37a",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3010,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:42.593Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-4_10779a00-993a-429d-82da-8c198c977bb5.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "10779a00-993a-429d-82da-8c198c977bb5"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-5",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "6a207722-9ec8-46c8-8b41-95e544dcf4c5",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:42.598Z",
+    "setupTurns": [],
+    "finalResponse": "Alright, thank you. Do I need an antibiotic?",
+    "apiFinalResponse": "Alright, thank you. Do I need an antibiotic?",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "c8aece7c-495f-4bb0-b90e-ad19dac06967",
+    "requestId": "case-04-1792260105679-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260105679-1-response",
+        "encounterId": "c8aece7c-495f-4bb0-b90e-ad19dac06967",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Alright, thank you. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792260105679-1-response",
+        "responseEncounterId": "c8aece7c-495f-4bb0-b90e-ad19dac06967",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-5_6a207722-9ec8-46c8-8b41-95e544dcf4c5.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-5_6a207722-9ec8-46c8-8b41-95e544dcf4c5.zip",
+    "freshState": {
+      "boundEncounterId": "c8aece7c-495f-4bb0-b90e-ad19dac06967",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2881,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:48.917Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-5_6a207722-9ec8-46c8-8b41-95e544dcf4c5.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "6a207722-9ec8-46c8-8b41-95e544dcf4c5"
+    ]
+  },
+  {
+    "testId": "C04-TARGET-6",
+    "caseId": "case-04",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "30db6484-4983-4ad3-b690-cc63e330d370",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:48.922Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not your daughter, I'm Noah. Do I need an antibiotic?",
+    "apiFinalResponse": "I'm not your daughter, I'm Noah. Do I need an antibiotic?",
+    "outcome": "FAIL",
+    "reason": "relevance: The offer is to look into care for the patient and his daughter, not an assertion that the patient is the daughter. I am not your daughter, I am Noah corrects an identity claim that was never made. No unsupported daughter existence is required, but the actual statement is misread.",
+    "encounterId": "370bbf15-581c-4755-b90e-177abf068574",
+    "requestId": "case-04-1792260111930-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792260111930-1-response",
+        "encounterId": "370bbf15-581c-4755-b90e-177abf068574",
+        "requestMessage": "I'm looking into dental care options for you and your daughter.",
+        "provider": "navigator",
+        "finalResponse": "I'm not your daughter, I'm Noah. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792260111930-1-response",
+        "responseEncounterId": "370bbf15-581c-4755-b90e-177abf068574",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C04-TARGET-6_30db6484-4983-4ad3-b690-cc63e330d370.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C04-TARGET-6_30db6484-4983-4ad3-b690-cc63e330d370.zip",
+    "freshState": {
+      "boundEncounterId": "370bbf15-581c-4755-b90e-177abf068574",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1998,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:01:54.197Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C04-TARGET-6_30db6484-4983-4ad3-b690-cc63e330d370.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "The offer is to look into care for the patient and his daughter, not an assertion that the patient is the daughter. I am not your daughter, I am Noah corrects an identity claim that was never made. No unsupported daughter existence is required, but the actual statement is misread."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "30db6484-4983-4ad3-b690-cc63e330d370"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-1",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Who do you live with?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "1375807b-0af4-4e2d-887b-016b8d54e84d",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:01:54.202Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "b035e208-e13f-4268-a414-8a5509e4b666",
+    "requestId": "case-05-1792260117312-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260117312-1-response",
+        "encounterId": "b035e208-e13f-4268-a414-8a5509e4b666",
+        "requestMessage": "Who do you live with?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-05-1792260117312-1-response",
+        "responseEncounterId": "b035e208-e13f-4268-a414-8a5509e4b666",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-1_1375807b-0af4-4e2d-887b-016b8d54e84d.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-1_1375807b-0af4-4e2d-887b-016b8d54e84d.zip",
+    "freshState": {
+      "boundEncounterId": "b035e208-e13f-4268-a414-8a5509e4b666",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2157,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:00.002Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-1_1375807b-0af4-4e2d-887b-016b8d54e84d.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "1375807b-0af4-4e2d-887b-016b8d54e84d"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-2",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Does your daughter live with you?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "a1113f07-84a5-410b-9f0b-9916ac206b58",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:02:00.013Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "04664c16-ac02-488e-b603-3fd3039f35a3",
+    "requestId": "case-05-1792260123129-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260123129-1-response",
+        "encounterId": "04664c16-ac02-488e-b603-3fd3039f35a3",
+        "requestMessage": "Does your daughter live with you?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-05-1792260123129-1-response",
+        "responseEncounterId": "04664c16-ac02-488e-b603-3fd3039f35a3",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-2_a1113f07-84a5-410b-9f0b-9916ac206b58.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-2_a1113f07-84a5-410b-9f0b-9916ac206b58.zip",
+    "freshState": {
+      "boundEncounterId": "04664c16-ac02-488e-b603-3fd3039f35a3",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 3132,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:06.606Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-2_a1113f07-84a5-410b-9f0b-9916ac206b58.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "a1113f07-84a5-410b-9f0b-9916ac206b58"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-3",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "With whom do you share your home?",
+    "setupQuestions": [],
+    "expectedMeaning": "Household composition unspecified; do not disclose county as answer or invent cohabitation.",
+    "contextRequirement": "None required.",
+    "runId": "b9ba1df6-a0ff-41ed-9f1a-7627554fa1fd",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:02:06.612Z",
+    "setupTurns": [],
+    "finalResponse": "I'm not sure what to tell you about my household.",
+    "apiFinalResponse": "I'm not sure what to tell you about my household.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "c5f40a03-1a05-4cf7-8e82-5c45e4039f0c",
+    "requestId": "case-05-1792260129766-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260129766-1-response",
+        "encounterId": "c5f40a03-1a05-4cf7-8e82-5c45e4039f0c",
+        "requestMessage": "With whom do you share your home?",
+        "provider": "navigator",
+        "finalResponse": "I'm not sure what to tell you about my household.",
+        "responseRequestId": "case-05-1792260129766-1-response",
+        "responseEncounterId": "c5f40a03-1a05-4cf7-8e82-5c45e4039f0c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-3_b9ba1df6-a0ff-41ed-9f1a-7627554fa1fd.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-3_b9ba1df6-a0ff-41ed-9f1a-7627554fa1fd.zip",
+    "freshState": {
+      "boundEncounterId": "c5f40a03-1a05-4cf7-8e82-5c45e4039f0c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2238,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:12.483Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-3_b9ba1df6-a0ff-41ed-9f1a-7627554fa1fd.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "b9ba1df6-a0ff-41ed-9f1a-7627554fa1fd"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-4",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "df7030d1-194f-4540-bb1a-e0d21f52648f",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:02:12.489Z",
+    "setupTurns": [],
+    "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "apiFinalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "92876075-67cf-48c6-9f2e-ed536111cc2c",
+    "requestId": "case-05-1792260135510-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260135510-1-response",
+        "encounterId": "92876075-67cf-48c6-9f2e-ed536111cc2c",
+        "requestMessage": "I'm looking into dental care options for you.",
+        "provider": "navigator",
+        "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseRequestId": "case-05-1792260135510-1-response",
+        "responseEncounterId": "92876075-67cf-48c6-9f2e-ed536111cc2c",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-4_df7030d1-194f-4540-bb1a-e0d21f52648f.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-4_df7030d1-194f-4540-bb1a-e0d21f52648f.zip",
+    "freshState": {
+      "boundEncounterId": "92876075-67cf-48c6-9f2e-ed536111cc2c",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2521,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:18.320Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-4_df7030d1-194f-4540-bb1a-e0d21f52648f.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "df7030d1-194f-4540-bb1a-e0d21f52648f"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-5",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "Thank you for explaining that.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "91e4805e-2eb1-4759-a473-4f3f6f9d3c72",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:02:18.327Z",
+    "setupTurns": [],
+    "finalResponse": "Alright, I understand. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "apiFinalResponse": "Alright, I understand. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "5bde00db-0cc5-461a-8acd-2e755735afba",
+    "requestId": "case-05-1792260141461-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260141461-1-response",
+        "encounterId": "5bde00db-0cc5-461a-8acd-2e755735afba",
+        "requestMessage": "Thank you for explaining that.",
+        "provider": "navigator",
+        "finalResponse": "Alright, I understand. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseRequestId": "case-05-1792260141461-1-response",
+        "responseEncounterId": "5bde00db-0cc5-461a-8acd-2e755735afba",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-5_91e4805e-2eb1-4759-a473-4f3f6f9d3c72.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-5_91e4805e-2eb1-4759-a473-4f3f6f9d3c72.zip",
+    "freshState": {
+      "boundEncounterId": "5bde00db-0cc5-461a-8acd-2e755735afba",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2076,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:24.013Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-5_91e4805e-2eb1-4759-a473-4f3f6f9d3c72.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "91e4805e-2eb1-4759-a473-4f3f6f9d3c72"
+    ]
+  },
+  {
+    "testId": "C05-TARGET-6",
+    "caseId": "case-05",
+    "groupId": "TARGET",
+    "groupTitle": "Household boundary and neutral acknowledgement",
+    "cohort": "targeted-live",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "setupQuestions": [],
+    "expectedMeaning": "Brief natural acknowledgement/emotion without concrete invented circumstances. Daughter statement is not evidence that any unspecified family fact is true.",
+    "contextRequirement": "None required.",
+    "runId": "c33b36be-ea0a-4f08-9500-1eac598146cd",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-17T18:02:24.021Z",
+    "setupTurns": [],
+    "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "apiFinalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+    "outcome": "PASS",
+    "reason": "Individually reviewed; factually correct, complete, relevant and no leakage.",
+    "encounterId": "583fc5fa-7a33-4806-b151-6c81fcab92a7",
+    "requestId": "case-05-1792260147061-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-05-1792260147061-1-response",
+        "encounterId": "583fc5fa-7a33-4806-b151-6c81fcab92a7",
+        "requestMessage": "I'm looking into dental care options for you and your daughter.",
+        "provider": "navigator",
+        "finalResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+        "responseRequestId": "case-05-1792260147061-1-response",
+        "responseEncounterId": "583fc5fa-7a33-4806-b151-6c81fcab92a7",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\screenshots\\C05-TARGET-6_c33b36be-ea0a-4f08-9500-1eac598146cd.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\shared-conversation-followup-2026-10-17\\traces\\C05-TARGET-6_c33b36be-ea0a-4f08-9500-1eac598146cd.zip",
+    "freshState": {
+      "boundEncounterId": "583fc5fa-7a33-4806-b151-6c81fcab92a7",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 1936,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-17T18:02:29.331Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-followup-2026-10-17/raw/C05-TARGET-6_c33b36be-ea0a-4f08-9500-1eac598146cd.json",
+    "implementationVersion": "followup-v3",
+    "setupOutcome": "NOT_APPLICABLE",
+    "setupReason": "",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all thirty exact household/neutral statements and complete final responses across five cases. Unknown household replies answer without county/family disclosure; canonical first-contact complaints and brief thanks are natural, and approved patient-question text is permitted. C02 living-alone invention and C04 false identity correction fail separately; C03 encounter-focus versus shared-care refusal remains REVIEW. Other responses invent no concrete circumstances or leaked instructions."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "c33b36be-ea0a-4f08-9500-1eac598146cd"
+    ]
+  }
+]

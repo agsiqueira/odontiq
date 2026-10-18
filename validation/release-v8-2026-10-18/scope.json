@@ -1,0 +1,411 @@
+{
+  "at": "2026-10-18T04:46:38.837Z",
+  "inventory": [
+    {
+      "change": "Clerk authentication, user resolution and Neon/encounter persistence",
+      "branchCommit": "main: 21f90a7,5a4631c,07a1512,ce343f2",
+      "status": "Already in current production/main; inherited unchanged by PR2"
+    },
+    {
+      "change": "iPad playback unlock, deterministic breathing/speech and animation integration",
+      "branchCommit": "merged PR1/codex/audio-diagnostics-ipad:489d758,4490437; main:d205000,6317569",
+      "status": "Already in current production/main; branch tip4490437 is ancestor of V8"
+    },
+    {
+      "change": "Learner report/PDF, no scores/percentages, feedback retry/navigation, fresh case and interrupted-response retry",
+      "branchCommit": "main:9ed3c66,3fe4108,9004ba0,a029f76,0ab8998,d47d975,635f301,bebb1d8 and related main commits",
+      "status": "Already in current production/main; retained; not new PR2 UI changes"
+    },
+    {
+      "change": "Canonical five-case remediation and clinical response/timing fixes",
+      "branchCommit": "main case-remediation history through edae56c",
+      "status": "Already production; canonical clinical fixtures retained; PR2 adds accepted background facts/routing, not new clinical scenarios"
+    },
+    {
+      "change": "V4 background facts, repeated followups, transport/residence and instruction-leakage repairs",
+      "branchCommit": "8ccefb0,1715c39; earlier dirty original checkout",
+      "status": "Included in PR2; all37 dirty application/script files accounted for (27 equal V8,10 preserved earlier implementations)"
+    },
+    {
+      "change": "V5 grounding/final persistence validation and bounded Navigator gateway retry",
+      "branchCommit": "codex/odontiq-v5:9274d49,8b12253",
+      "status": "Included in PR2 via ancestry"
+    },
+    {
+      "change": "V6 unsupported-inference and conversational-closure repairs",
+      "branchCommit": "codex/odontiq-v6:1b0ae9c,0e36f5f",
+      "status": "Included in PR2 via ancestry"
+    },
+    {
+      "change": "V7 event eligibility, final assembly, source-scoped clinical facts and child-condition/provider safeguards",
+      "branchCommit": "codex/odontiq-v7:c747b05..b159cd0; evidence7e25196",
+      "status": "Included in PR2; earlier failing candidates and corrected grading retained"
+    },
+    {
+      "change": "V8 clinical-versus-financial witness, request scoping, consent/event reconciliation and transaction safety",
+      "branchCommit": "codex/odontiq-v8:e4e682c,8510ab0,a75e509,aef3ae1",
+      "status": "Included in PR2; application is exact verified V8 candidate"
+    },
+    {
+      "change": "V4-V8 automated/live/focused/production evidence and verification infrastructure",
+      "branchCommit": "PR2 evidence through429abb4",
+      "status": "Included in PR2; original evidence preserved"
+    },
+    {
+      "change": "Separate live-verification runner/config/auth/scenario tooling",
+      "branchCommit": "agsiqueira/odontiq-phase-t:feature/expand-behavioral-journeys@1ebc188 plus uncommitted work",
+      "status": "OUTSTANDING separate test-repository version-control packaging; no open companion PR; not deployed as OdontIQ runtime; preserved, not indiscriminately staged"
+    },
+    {
+      "change": "Unrelated grading work, temporary caches and original checkout",
+      "branchCommit": "Local .codex-grading/.cache and historical worktrees",
+      "status": "Excluded and preserved; not release application scope"
+    },
+    {
+      "change": "User manual acceptance and final release/rollback preparation",
+      "branchCommit": "This evidence-only release supplement",
+      "status": "Included in updated PR2 description; manual acceptance reported passed; listening not explicitly confirmed"
+    }
+  ],
+  "originalApplicationFiles": [
+    {
+      "status": " M",
+      "path": "scripts/validateCase04ClosingPhraseConsistency.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "05fb7f709e6039a573d440fc7260cab6762c6e32abef4b8d87a75e9a57648fba"
+    },
+    {
+      "status": " M",
+      "path": "scripts/validateCase04DentistStatus.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "4113f5b50a83c2e3035d98cbcf1a76f2c7b02c4dd01e6edd7b0724b29c833919"
+    },
+    {
+      "status": " M",
+      "path": "scripts/validateCase05IrreversiblePulpitis.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "ea62ed3b14da4fa62277adf33796aa0c3e69ae0b00d87375ebbdd0f5030dd251"
+    },
+    {
+      "status": " M",
+      "path": "src/app/api/conversation/route.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "cbee3599736b5eba719aac6afa11452a1dd3bfbde7666dc31cba8db5c6b8e67b",
+      "matchingPreservedCommits": [
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": " M",
+      "path": "src/data/cases/case-01/case.json",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "a4c907355f4f5f3669b08e70d73f1f3f70d7dddaa79219bafff75c80a3ac78c5"
+    },
+    {
+      "status": " M",
+      "path": "src/data/cases/case-02/case.json",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "82ee26fb9dcc8dc5821119d8a85143a4c6fe19eaa5ec571f0fc5b273c157624a"
+    },
+    {
+      "status": " M",
+      "path": "src/data/cases/case-03/case.json",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "d7756bad578e3f86a5c7130c5feaa0e947a44448296412c65cea1b871d034e6c"
+    },
+    {
+      "status": " M",
+      "path": "src/data/cases/case-04/case.json",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "676faf78ee623a07797c35d53b2b75252e83a6a70865e556403b6299ee6f1c3d"
+    },
+    {
+      "status": " M",
+      "path": "src/data/cases/case-05/case.json",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "6922f20f1f55b9bfc56b3b4d68d149c327109c8b95e0f3c905c16eecdfc62bfd"
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientBehavior/renderer.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "6f723d46441aa5c435e69825276348d744aee5d1a96ca799e8595f686107e7c2"
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientBehavior/stages.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "764d475be86ce827e00258901678371d20599f3cf6900997567c130f16f202f3"
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientDisclosure.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "641597bf47d5640bffddea0cfb2614fc1dbcd549202505e0a250e76e0bda2ba8",
+      "matchingPreservedCommits": [
+        "0e36f5f1c52f06a62b1a97b6aab853c48473b616",
+        "1b0ae9c5396c60c7a55b1e1b549db81da9d01de7",
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientImmediateResponse.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "350ab37201c80237a1c3520246f51d8ebd88cef2d6cb9c8f9fdf0c41048ce9c4",
+      "matchingPreservedCommits": [
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientOutputGuard.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "2620b4d250ee7ab7aea0cb846ce52d78171ff6e389313becfb902d131bb57cbc",
+      "matchingPreservedCommits": [
+        "0e36f5f1c52f06a62b1a97b6aab853c48473b616",
+        "1b0ae9c5396c60c7a55b1e1b549db81da9d01de7",
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientRoleGuard.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "06493b36e9fe8d2cd6c2226b3edfdef07c4131d5368020049cf8d3c57107ea75"
+    },
+    {
+      "status": " M",
+      "path": "src/lib/patientRoleResponse.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "9deafd68da979a56686f2978000b52e88536b64a0a96988978cdaa3bdc95df00",
+      "matchingPreservedCommits": [
+        "c747b05ab12fd06b5b8ebb2b441003d4cb6ac892",
+        "0e36f5f1c52f06a62b1a97b6aab853c48473b616",
+        "1b0ae9c5396c60c7a55b1e1b549db81da9d01de7",
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": " M",
+      "path": "src/lib/persistence/services/patientQuestionService.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "18d2f16854283a2f57412ffa4fce848f429e4ec940c3436f166c3e5f38ae2509",
+      "matchingPreservedCommits": [
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": "??",
+      "path": "scripts/investigateTransportation.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "19447d4380794c047094205afe2bf688fb3ce69cb7d335b19855d58f2e071b7b"
+    },
+    {
+      "status": "??",
+      "path": "scripts/replayLegacyBackgroundStudy.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "566491429e1c80238687b534455bff4aeadd67799fff4290db900f2b3895f163"
+    },
+    {
+      "status": "??",
+      "path": "scripts/reportTransportationIncident.mjs",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "91e9dbb3b684ca9a60858f8ab9a313b926d5289a6d3638d004578cedcd3640be"
+    },
+    {
+      "status": "??",
+      "path": "scripts/traceTravelTurn.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "ab65c4b6fecd13de15795e4e5f52e107fed5718c0cd55ce5125063451c64bec8"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validatePatientBackground.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "8ed1ea55806ac0520aeca9b4a0c731d89d52bf3410863530454c4803dfec4205"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validatePatientBackgroundConflicts.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "ab156a97605d44e8d95ecc2b82c4676cae1acdbbe1f71dc4feb092f3115b9b64"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validatePatientInstructionLeakage.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "714ab4520dbc4ec905ce2f746294a65f6e6d98d6805d596688f1a45639055f5e"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validatePatientResidence.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "8359cf8228096bd0ffcf9bddca3a42084d184327666de93fa37dc169ae7c5539"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validatePatientTravel.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "75fda856d90590cee78c897c6ff31f07a2339886b02a6bddcf5053950d386016"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validateRecordedTransportation.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "382aac0292c8902c3d48a9d7502f40aa225fee8489b80525ebe4d476f58b626c"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validateResidenceRecovery.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "10173fa1772f03efc8d883fd1de695e287a9741beaa9bad290d9b46360eb2890"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validateSharedBackgroundTurn.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "a9739943d1efeed25630adcc501c22495259c66833f508842c039f18d49a7661"
+    },
+    {
+      "status": "??",
+      "path": "scripts/validateSharedConversationFollowup.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "c666a43f2170fa6f10e26a4e3edd80b6d927f63793b38ef1d64909410870f80f"
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientBackgroundTurn.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "b3685dc72545d557218c0ce8b1c43872fcc6764c942a0c8391390a79b7586546",
+      "matchingPreservedCommits": [
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientCanonicalAssertions.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "3cf71dfc13836a5a3163f8a3d1fceed2db2c30b6424f5360fa76b8d31132f503",
+      "matchingPreservedCommits": [
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientFinalResponse.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "6d59fa98beb8d1a780d3a7cdcc4992a570b8c7b0c3b041982450995c53973aea",
+      "matchingPreservedCommits": [
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientInstructionLeakage.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "0f668116cd2b53c6d5c6914c19ef900c0e0c42202dd4e77b9fb1e1587e946bcb"
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientResidence.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "583849518496d268da4a70755caf827d6b5aea0efdf33a1473ecfd9fbdcc851e"
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientTransportation.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": true,
+      "mainWorktreeSha256": "aad6b44eda8ada30ae773a9f6d34e49a584f5c208f27df51cd701fe03135ff53"
+    },
+    {
+      "status": "??",
+      "path": "src/lib/patientTurnFacts.ts",
+      "v8FileExists": true,
+      "identicalToV8IgnoringCRLF": false,
+      "mainWorktreeSha256": "f5ef410810402969736b39839fe0284064f66f474af17040243c838d1f6cc129",
+      "matchingPreservedCommits": [
+        "e4e682c2bd194332862078c8774b808bb1fb802c",
+        "7e251965649ca189fd4ace4e75ca942ea1003ca7",
+        "b159cd03a768bf2416d4e3ce19074ee6debf62ba",
+        "628f108df0bafa13c8e86f477cae7f30dcabb52c",
+        "7d791260823c63b8d07be620e9a4587d756db348",
+        "932f06e97838e8e393d506c3dc26671f92873eaf",
+        "c57cb9e505c2d296d52dba41c6395cad73a19441",
+        "bf2d039e9daa3a18b890a2355cdd1726c836be24",
+        "11ad00a309402f24171c513e720376ccd515397b",
+        "08732bb613096bb17958e669b69bcd11e559d95d",
+        "cf6fe76662cb36cd4dc4768347e60a9f75497c69",
+        "f873c1649341af747ff9eada44f02a6a276dce75",
+        "07df368da7cbe9c4e6583b9023c1af9a43ac1004",
+        "c747b05ab12fd06b5b8ebb2b441003d4cb6ac892",
+        "0e36f5f1c52f06a62b1a97b6aab853c48473b616",
+        "1b0ae9c5396c60c7a55b1e1b549db81da9d01de7",
+        "8b1225367c047d9e8f2bd0c41f20fb81cf7b93cd",
+        "9274d49194512ec645ca8ab204972e78f7fde1fa",
+        "1715c396728f4d5e638655394cb9f6e6f02f3e35",
+        "8ccefb0e4b779465f33450f9ab41ba787f98b0e6"
+      ]
+    }
+  ],
+  "originalValidationContentExceptions": [],
+  "originalValidationLineEndingOnlyCount": 710,
+  "otherApplicationWorktrees": "No additional application-content differences; V5/V6/V7 and detached phase3 are ancestors or prior preserved states",
+  "otherAppPRs": "PR1 merged; PR2 only open",
+  "unrelatedWorkPreserved": true
+}

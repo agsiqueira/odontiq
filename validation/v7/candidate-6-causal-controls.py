@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('src/lib/patientOutputGuard.ts');s=p.read_text(encoding='utf8').replace('makes? (?:it|the pain|my tooth)', 'makes? (?:it|(?:the|my) (?:pain|tooth))');s=s.replace('"c5.cold": /\\bcold', '"c5.cold": /\\b(?:hurts?|painful)\\b.{0,15}\\b(?:when|with)\\b.{0,25}\\bcold\\b|\\bcold');p.write_text(s,encoding='utf8')
+p=Path('scripts/validateV7PatientRepair.ts');s=p.read_text(encoding='utf8').replace("'It gets worse when I drink something cold.'", "'It gets worse when I drink something cold.','It hurts when I drink cold water.','Cold drinks make the tooth hurt.'");p.write_text(s,encoding='utf8')

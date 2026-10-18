@@ -1,4 +1,5 @@
 import "server-only";
+import { fetchNavigatorWithGatewayRetry } from "./navigatorTransport";
 
 import type {
   AIProvider,
@@ -57,7 +58,8 @@ export class NavigatorProvider implements AIProvider {
     const timeout = setTimeout(() => controller.abort(), NAVIGATOR_TIMEOUT_MS);
 
     try {
-      const response = await fetch(`${baseUrl}/v1/chat/completions`, {
+      const operationId = input.requestId ?? crypto.randomUUID();
+      const { response, attempts } = await fetchNavigatorWithGatewayRetry(`${baseUrl}/v1/chat/completions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +67,7 @@ export class NavigatorProvider implements AIProvider {
         },
         body: JSON.stringify(buildNavigatorRequest(input, model)),
         signal: controller.signal,
-      });
+      }, attempt => console.info("navigator_http_attempt", { operationId, ...attempt }));
 
       if (!response.ok) {
         throw new NavigatorProviderError(
@@ -104,6 +106,7 @@ export class NavigatorProvider implements AIProvider {
           provider: this.name,
           status: response.status,
           contentType: response.headers.get("content-type") ?? undefined,
+          attempts,
         },
       };
     } catch (error) {
@@ -118,6 +121,7 @@ export class NavigatorProvider implements AIProvider {
   ): Promise<AIProviderResponse> {
     return this.generateText({
       systemPrompt: input.systemPrompt,
+      requestId: input.requestId,
       messages: input.messages,
       temperature: 0.4,
       maxTokens: 120,

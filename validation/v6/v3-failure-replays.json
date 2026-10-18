@@ -1,0 +1,147 @@
+[
+  {
+    "testId": "C03-G11-Q08",
+    "question": "Would a clinic accepting your daughter on Medicaid and seeing you uninsured suit your preference?",
+    "oldResponse": "My daughter has Medicaid.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "shared_clinic",
+          "subject": "patient",
+          "sourceId": "c3.background-family_care",
+          "value": "same_clinic",
+          "answer": "I'd prefer the same clinic for my daughter and me."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "yes"
+    },
+    "rejection": "background patient shared_clinic: missing or contradictory same_clinic",
+    "sourcedFallback": "I'd prefer the same clinic for my daughter and me."
+  },
+  {
+    "testId": "C03-G11-Q13",
+    "question": "Would you like me to look for somewhere that can treat you both?",
+    "oldResponse": "Yes, please. It would be easier if we could go to the same clinic for both of us. My daughter's on Medicaid, so she sees a dentist at a certain clinic. I'd prefer the same one for us too.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "shared_clinic",
+          "subject": "patient",
+          "sourceId": "c3.background-family_care",
+          "value": "same_clinic",
+          "answer": "I'd prefer the same clinic for my daughter and me."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "yes"
+    },
+    "rejection": "unsupported child provider or clinic history",
+    "sourcedFallback": "I'd prefer the same clinic for my daughter and me."
+  },
+  {
+    "testId": "C02-TARGET-3",
+    "question": "With whom do you share your home?",
+    "oldResponse": "I live alone, I'm not sure what to tell you about my household.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "household",
+          "subject": "patient",
+          "value": "unknown",
+          "answer": "I'm not sure what to tell you about my household."
+        }
+      ],
+      "clinicalRequested": false
+    },
+    "rejection": "unsupported household composition",
+    "sourcedFallback": "I'm not sure what to tell you about my household."
+  },
+  {
+    "testId": "C04-TARGET-6",
+    "question": "I'm looking into dental care options for you and your daughter.",
+    "oldResponse": "I'm not your daughter, I'm Noah. Do I need an antibiotic?",
+    "rejection": "misread coordinated care participants as patient identity",
+    "sourcedFallback": "Thank you."
+  },
+  {
+    "testId": "C02-G04-N2",
+    "question": "Is there a policy paying toward your dental treatment now?",
+    "oldResponse": "I'm not sure, I haven't really checked that out yet. I'm really worried about the cost.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "insurance",
+          "subject": "patient",
+          "sourceId": "c2.background-insurance",
+          "value": "uninsured",
+          "answer": "I don't have insurance."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "no"
+    },
+    "rejection": "background patient insurance: missing or contradictory uninsured",
+    "sourcedFallback": "I don't have insurance."
+  },
+  {
+    "testId": "C03-G09-N1",
+    "question": "Is there a dental provider you normally return to?",
+    "oldResponse": "I usually go to Dr. Smith.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "dentist",
+          "subject": "patient",
+          "sourceId": "c3.background-regular_dentist",
+          "value": "has_dentist",
+          "answer": "I have my own dentist and an appointment next week."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "yes"
+    },
+    "rejection": "unsupported named provider",
+    "sourcedFallback": "I have my own dentist and an appointment next week."
+  },
+  {
+    "testId": "C03-G09-N3",
+    "question": "Are you already a patient of a regular dental professional?",
+    "oldResponse": "No, not really. I haven't had a regular dentist in a while.",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "dentist",
+          "subject": "patient",
+          "sourceId": "c3.background-regular_dentist",
+          "value": "has_dentist",
+          "answer": "I have my own dentist and an appointment next week."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "yes"
+    },
+    "rejection": "canonical contradiction: existing dentist",
+    "sourcedFallback": "I have my own dentist and an appointment next week."
+  },
+  {
+    "testId": "C04-G13-N2",
+    "question": "Do you have a policy to consider while choosing a dental office?",
+    "oldResponse": "I care about the dentist's experience and if they accept my insurance. Do I need an antibiotic?",
+    "interpretation": {
+      "requests": [
+        {
+          "concept": "insurance",
+          "subject": "patient",
+          "sourceId": "c4.background-insurance",
+          "value": "uninsured",
+          "answer": "I don't have insurance."
+        }
+      ],
+      "clinicalRequested": false,
+      "shortAnswer": "no"
+    },
+    "rejection": "canonical contradiction: presupposed insurance arrangement",
+    "sourcedFallback": "I don't have insurance."
+  }
+]

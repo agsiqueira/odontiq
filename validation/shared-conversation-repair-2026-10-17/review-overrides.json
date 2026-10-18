@@ -1,0 +1,96 @@
+{
+  "C01-G01-Q08": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "Correct uninsured status, but 'I'm paying for this out of pocket' may imply an actual current payment arrangement/history that is unspecified. It may instead describe lack of an insurer; retain the full response for human inspection."
+    }
+  },
+  "C04-G13-Q11": {
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Asks whether current insurance should be considered when finding a clinic. Uncertainty about coverage history does not answer the defined current uninsured status."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Answers an unrequested historical-coverage question. The approved antibiotic question does not cause or compensate for this failure."
+    }
+  },
+  "C01-G02-H03": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Unsupported uncertainty about the defined Alachua County residence."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Does not identify the home county or answer the indirect residence question."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Redirects to jaw concern instead of residence."
+    }
+  },
+  "C01-G03-H01": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "The cost-checking clause could concern an unspecified treatment price, or imply unsupported uncertainty about defined travel ability/willingness. Retain full meaning for human inspection."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Crossing county lines for low-cost care asks travel workability; the reply never affirms the defined reliable transportation or willingness/ability to travel."
+    },
+    "relevance": {
+      "status": "FAIL",
+      "reason": "Answers uncertainty about a price rather than the actual travel question."
+    }
+  },
+  "C02-G04-H02": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Introduces uncertainty and an unsupported claim of not checking coverage despite defined current uninsured status."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Does not identify current coverage or state that no plan insures the patient."
+    }
+  },
+  "C03-G09-H02": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Denies having a dental provider, contradicting the existing dentist and next-week appointment."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "The principal request is whether an own dental provider exists, irrespective of insurance. The wrong denial fails; insurance is not mechanically required as a second declaration."
+    }
+  },
+  "C03-G11-H01": {
+    "factualCorrectness": {
+      "status": "REVIEW",
+      "reason": "The caveat about meeting all needs could be a legitimate uncertainty about unspecified clinic capability or an unsupported obstacle to the defined shared-clinic preference."
+    },
+    "completeness": {
+      "status": "REVIEW",
+      "reason": "Might be more convenient is tentative assent, but the subsequent caveat leaves unclear whether the defined shared-clinic preference is actually affirmed. Do not require the word prefer; retain the full contextual meaning for human inspection."
+    }
+  },
+  "C04-G13-H02": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Claims employer insurance covers dental care, contradicting the uninsured adult and inventing an employer plan."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Does not communicate the actual lack of current insurance covering the care."
+    }
+  },
+  "C05-G16-H01": {
+    "factualCorrectness": {
+      "status": "FAIL",
+      "reason": "Unsupported uncertainty about the defined absence of an insurer/current coverage."
+    },
+    "completeness": {
+      "status": "FAIL",
+      "reason": "Does not answer whether an insurer is available to cover the visit; known uninsured status is omitted."
+    }
+  }
+}

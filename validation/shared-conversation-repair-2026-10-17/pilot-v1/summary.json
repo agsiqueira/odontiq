@@ -1,0 +1,30 @@
+{
+  "reason": "Stopped to correct an independent existing Case 04 clinical regression and the two newly observed primary gaps. Entire final inventory rerun systematically, not selective semantic retries. No retired holdout was executed.",
+  "recordedScoredResponses": 150,
+  "syntheticEncounters": 151,
+  "cohorts": {
+    "primary": {
+      "PASS": 147,
+      "FAIL": 2,
+      "REVIEW": 1,
+      "ERROR": 1,
+      "BLOCKED": 189
+    },
+    "pain-context": {
+      "PASS": 0,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 20
+    },
+    "holdout": {
+      "PASS": 0,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 51
+    }
+  },
+  "retiredHoldoutNeverExecuted": true,
+  "rawDirectory": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/shared-conversation-repair-2026-10-17/raw"
+}
