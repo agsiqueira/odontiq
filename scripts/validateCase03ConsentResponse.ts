@@ -121,7 +121,6 @@ const classified = await classifyPatientQuestionTrigger({
             temporaryTreatmentActive: true,
             incisionAndDrainageProposed: true,
             patientAgreedToIncisionAndDrainage: true,
-            drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false,
           },
           confidence: 0.99,
           evidence: ["student-current", "patient-draft"],

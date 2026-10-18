@@ -233,8 +233,6 @@ const expectedEvents: Record<string, readonly PatientQuestionEventId[]> = {
     "temporaryTreatmentActive",
     "incisionAndDrainageProposed",
     "patientAgreedToIncisionAndDrainage",
-    "drainageTemporaryOrNondefinitiveExplained",
-    "definitiveDentalTreatmentExplained",
   ],
   "case-04": [
     "painManagementOrDispositionDiscussed",

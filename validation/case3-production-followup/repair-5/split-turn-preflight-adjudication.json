@@ -1,0 +1,19 @@
+{
+  "reviewedAt": "2026-10-18T06:51:57.444Z",
+  "rubric": "PR3 user-authorized durable validated explanations; independent witnesses required; historical verdicts preserved",
+  "rows": [
+    {
+      "id": "split-explanations-before-confirmation",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    }
+  ],
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "ERROR": 0
+  },
+  "note": "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger."
+}
