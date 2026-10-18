@@ -1,0 +1,33 @@
+{
+  "baseUrl": "http://localhost:3007",
+  "workers": 1,
+  "retries": 0,
+  "browser": "chromium",
+  "headless": true,
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v8-production.spec.ts"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v8-production.global.setup.ts"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v8-production.config.ts"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/src/clients/odontiqBrowserClient.ts"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/src/config/environment.ts"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/package.json"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/package-lock.json"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/.env"
+    }
+  ]
+}

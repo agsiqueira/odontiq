@@ -1,0 +1,266 @@
+[
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T02:36:11.896Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T02:36:11.897Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual final/context/setup individually reviewed under unchanged rubric. Payment arrangement unknown, shared preference/young daughter source-backed, attendance frequency unknown, closure/insurance/travel/coverage-loss/fee/zero-payment answers complete and relevant. Financial difficulty wording adds no amount or invented cause. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"What brings you here today?\",\"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.\"]",
+    "reviewedAt": "2026-10-18T02:37:56.058Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What brings you here today?\",\"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.\"]",
+    "reviewedAt": "2026-10-18T02:37:56.058Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"What brings you here today?\",\"My lower-right back tooth hurts all the time, and I can't chew on it.\"]",
+    "reviewedAt": "2026-10-18T02:37:56.058Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"What brings you here today?\",\"My left lower back tooth hurts really badly when I bite, and it is hard to chew.\"]",
+    "reviewedAt": "2026-10-18T02:37:56.058Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What brings you here today?\",\"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.\"]",
+    "reviewedAt": "2026-10-18T02:37:56.058Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final and all chief-complaint setups individually reviewed: authoritative symptoms grounded; thanks acknowledge without restart; real Case4 plan and substantive Case5 pain permit questions. Search offers preserve only known preferences, provider-name/household unknowns explicit, Duval/uninsured/free-care answers relevant. No premature questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What is your name?\",\"My name is Sofia Williams.\"]",
+    "reviewedAt": "2026-10-18T02:39:01.353Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"We will manage your pain with ibuprofen and refer you to a dentist.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:39:01.353Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected exact household/opening/later/plan/symptom/child responses and new setups. Known pain attributes and identity facts retained; only actual plans or substantive Case5 pain grant eligible questions. Symptom/unknown/background turns do not. Thanks closes after plan, child condition/provider unknown and search preference grounded. UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"Does your tooth hurt?\",\"Yes, it hurts.\"]",
+    "reviewedAt": "2026-10-18T02:40:08.572Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every actual displayed final/context/setup inspected: current antibiotics/temporary treatment and real mixed Case4 plan permit catalog questions, attendance unknown remains scoped. Already-not-indicated, history and generic pain do not grant questions; later quality does. Shared care acknowledgment grounded, no unasked history/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every actual displayed final/context/setup inspected: current antibiotics/temporary treatment and real mixed Case4 plan permit catalog questions, attendance unknown remains scoped. Already-not-indicated, history and generic pain do not grant questions; later quality does. Shared care acknowledgment grounded, no unasked history/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every actual displayed final/context/setup inspected: current antibiotics/temporary treatment and real mixed Case4 plan permit catalog questions, attendance unknown remains scoped. Already-not-indicated, history and generic pain do not grant questions; later quality does. Shared care acknowledgment grounded, no unasked history/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every actual displayed final/context/setup inspected: current antibiotics/temporary treatment and real mixed Case4 plan permit catalog questions, attendance unknown remains scoped. Already-not-indicated, history and generic pain do not grant questions; later quality does. Shared care acknowledgment grounded, no unasked history/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+    "reviewedAt": "2026-10-18T02:45:11.340Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Alright, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:45:11.340Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All displayed actual finals/context/setups individually reviewed: screening/hypotheticals do not grant questions; mixed actual plan/fee answer has no unasked severity; later plan after finance emits once; financial object alone does not unlock, actual sliding-fee referral does. Case3 consent explicitly retains completeness FAIL for omitted eligible question due inconsistent events. UI/API and IDs match."
+      }
+    }
+  }
+]

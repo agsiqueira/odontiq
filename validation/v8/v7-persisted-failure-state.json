@@ -1,0 +1,56 @@
+{
+  "readAt": "2026-10-18T02:02:14.085Z",
+  "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+  "state": {
+    "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+    "version": 1,
+    "state": {
+      "version": 1,
+      "schemaVersion": 1,
+      "detectedEvents": {
+        "patientPainDescribed": false,
+        "antibioticsRecommended": false,
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": false,
+        "promptDentalFollowUpConfirmed": false,
+        "antibioticsNotIndicatedExplained": false,
+        "definitiveDentalTreatmentExplained": false,
+        "patientAgreedToIncisionAndDrainage": false,
+        "antibioticsRecommendedAsCurrentPlan": false,
+        "painManagementOrDispositionDiscussed": true,
+        "drainageTemporaryOrNondefinitiveExplained": false,
+        "hospitalAdmissionOrSurgicalManagementDiscussed": false
+      },
+      "emittedQuestionIds": [
+        "c4-antibiotic-needed-question"
+      ]
+    },
+    "createdAt": "2026-10-18T01:12:14.139Z",
+    "updatedAt": "2026-10-18T01:12:14.139Z"
+  },
+  "turns": [
+    {
+      "id": "b3db3c76-4d14-454a-bbe4-06686e6efce6",
+      "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+      "requestId": "case-04-1792285932503-1-response",
+      "studentMessageId": "case-04-1792285932503-1",
+      "patientMessageId": "253837b8-ce6c-476c-9d24-3c56e8054816",
+      "responseText": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+      "providerName": "navigator",
+      "selectedQuestionId": "c4-antibiotic-needed-question",
+      "behaviorIntentId": null,
+      "behaviorAnswerClear": false,
+      "stateVersion": 1,
+      "createdAt": "2026-10-18T01:12:14.211Z"
+    }
+  ],
+  "emissions": [
+    {
+      "id": "64b1fca5-003f-4fd5-a5fc-657837d1c957",
+      "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+      "questionId": "c4-antibiotic-needed-question",
+      "turnId": "b3db3c76-4d14-454a-bbe4-06686e6efce6",
+      "emittedAt": "2026-10-18T01:12:14.284Z"
+    }
+  ]
+}

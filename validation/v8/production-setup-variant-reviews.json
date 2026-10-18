@@ -1,0 +1,266 @@
+[
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T04:00:22.126Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T04:00:22.126Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read production family-clinic final and both actual setup responses. Young daughter and preference are explicit facts; final answers preference without adopting existing shared clinic, daughter condition or attendance hardship. Setup acknowledgment relevant and grounded. UI/API and correlation match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"What brings you here today?\",\"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.\"]",
+    "reviewedAt": "2026-10-18T04:02:22.931Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What brings you here today?\",\"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.\"]",
+    "reviewedAt": "2026-10-18T04:02:22.931Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"What brings you here today?\",\"My lower-right back tooth hurts all the time, and I can't chew on it.\"]",
+    "reviewedAt": "2026-10-18T04:02:22.931Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"What brings you here today?\",\"My left lower back tooth hurts really badly when I bite, and it is hard to chew.\"]",
+    "reviewedAt": "2026-10-18T04:02:22.931Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What brings you here today?\",\"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.\"]",
+    "reviewedAt": "2026-10-18T04:02:22.931Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read ten production finals and all five opening setup variants. Openings use case-specific complaints; Case5 substantive pain opening legitimately includes its once-only antibiotic request. Thank-yous close every case without reemission. Actual current Case4 dentist referral plus ibuprofen plan appropriately elicits antibiotic question; Case5 pain attributes also legitimately do. Family care search preserves only supported preference. No invented daughter condition or provider facts; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What is your name?\",\"My name is Sofia Williams.\"]",
+    "reviewedAt": "2026-10-18T04:03:22.035Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read eleven production finals plus Case5 name setup. Correct provider-name uncertainty, Duval/uninsured/cannot-pay and unknown household responses. Case5 opening/later substantive pain correctly permits request; actual Case4 pain plan permits question, direct symptom prompt alone correctly does not. Names/pain details match facts, no daughter condition or premature followup. UI/API and correlation match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read eleven production finals plus Case5 name setup. Correct provider-name uncertainty, Duval/uninsured/cannot-pay and unknown household responses. Case5 opening/later substantive pain correctly permits request; actual Case4 pain plan permits question, direct symptom prompt alone correctly does not. Names/pain details match facts, no daughter condition or premature followup. UI/API and correlation match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read eleven production finals plus Case5 name setup. Correct provider-name uncertainty, Duval/uninsured/cannot-pay and unknown household responses. Case5 opening/later substantive pain correctly permits request; actual Case4 pain plan permits question, direct symptom prompt alone correctly does not. Names/pain details match facts, no daughter condition or premature followup. UI/API and correlation match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read eleven production finals plus Case5 name setup. Correct provider-name uncertainty, Duval/uninsured/cannot-pay and unknown household responses. Case5 opening/later substantive pain correctly permits request; actual Case4 pain plan permits question, direct symptom prompt alone correctly does not. Names/pain details match facts, no daughter condition or premature followup. UI/API and correlation match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"We will manage your pain with ibuprofen and refer you to a dentist.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T04:06:10.810Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"Does your tooth hurt?\",\"Yes, it hurts.\"]",
+    "reviewedAt": "2026-10-18T04:06:10.810Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually read all25 displayed finals and both setup variants, including earlier eight whose record write timed out. Correct closure/unknown daughter facts/attendance uncertainty; actual Case1 admission and Case2 antibiotic recommendation elicit eligible questions. Case3 temporary therapy retains documented-contract followup. Mixed Case4 real plan plus county prompt answers county and permits question; antibiotic unnecessary explanation suppresses it. Case5 generic hurt alone has no request, substantive deep/throbbing/cold/biting/spontaneous attributes permit once-only request and accurately use case facts. Compound daughter question answers Medicaid and leaves condition unknown; conditional preference does not assert disease. Original sliding-scale question gives fee answer only. No irrelevant history, unsupported assertions or premature questions. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+    "reviewedAt": "2026-10-18T04:07:11.091Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T04:07:11.091Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Read all eleven final production controls and both setup variants. Financial paraphrases/insurance/payment-object/hypothetical options do not elicit antibiotic question. Mixed real ibuprofen plan answers fee preference plus eligible question without unasked severity dump. Actual sliding-fee clinical referral retains eligibility. Financial setup does not consume question: later actual plan emits; already-emitted later plan does not repeat. Case3 drainage consent gives acceptance and eligible followup. Every answer grounded/relevant and UI/API/IDs match."
+      }
+    }
+  }
+]

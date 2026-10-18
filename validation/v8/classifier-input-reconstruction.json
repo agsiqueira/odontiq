@@ -1,0 +1,75 @@
+{
+  "label": "Reconstruction from V7 frozen prompt code; draft ID placeholder does not affect serialized aliases/content. Raw classifier provider JSON not retained by V7.",
+  "input": {
+    "caseId": "case-04",
+    "studentMessageId": "case-04-1792285932503-1",
+    "studentMessage": "Is sliding scale payment something you open to?",
+    "draftPatientMessageId": "draft-reconstructed-id",
+    "draftPatientResponse": "I'm open to paying a sliding-scale fee.",
+    "conversation": [],
+    "state": {
+      "schemaVersion": 1,
+      "version": 0,
+      "detectedEvents": {
+        "hospitalAdmissionOrSurgicalManagementDiscussed": false,
+        "antibioticsRecommendedAsCurrentPlan": false,
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": false,
+        "patientAgreedToIncisionAndDrainage": false,
+        "promptDentalFollowUpConfirmed": false,
+        "drainageTemporaryOrNondefinitiveExplained": false,
+        "definitiveDentalTreatmentExplained": false,
+        "painManagementOrDispositionDiscussed": false,
+        "antibioticsRecommended": false,
+        "antibioticsNotIndicatedExplained": false,
+        "patientPainDescribed": false
+      },
+      "emittedQuestionIds": []
+    }
+  },
+  "parsedOutput": {
+    "success": true,
+    "classification": {
+      "schemaVersion": 1,
+      "currentProviderAct": "current_plan",
+      "currentPlanEvidence": "Is sliding scale payment something you open to?",
+      "caseId": "case-04",
+      "analyzedStudentMessageId": "case-04-1792285932503-1",
+      "detectedEvents": {
+        "painManagementOrDispositionDiscussed": true,
+        "antibioticsRecommended": false,
+        "antibioticsNotIndicatedExplained": false
+      },
+      "confidence": 1,
+      "evidenceAliases": [
+        "student-current"
+      ],
+      "evidenceMessageIds": [
+        "case-04-1792285932503-1"
+      ]
+    }
+  },
+  "prompt": {
+    "systemPrompt": "Classify semantic events for one odontIQ case.\nReturn exactly one JSON object and no Markdown or commentary.\nDetermine meaning from the ordered messages, including paraphrases and clinical equivalents.\nDo not select a patient question. Application code determines question eligibility.\nAn asserted event requires evidence of that exact event, not merely discussion of a related topic.\nProvider questions seeking history, symptoms, county, insurance or ability to pay are NOT treatment/disposition plans.\nLooking/searching for care options is NOT giving a plan. A plan chooses an actual current treatment, referral or follow-up action.\nA patient answer about county, insurance, payment or preferences is NOT a pain description.\nDo not infer events from the case scenario, intended future care or a patient's appended question.\nUse only the allowed event definitions for this case; never add a field for another case.\n\nA background-only exchange cannot establish a clinical plan.\nExample: provider asks county; patient says Duval County => painManagementOrDispositionDiscussed=false.\nExample: provider gives ibuprofen plan and directs dentist follow-up => painManagementOrDispositionDiscussed=true.\n\nReturn exactly these top-level fields:\n- schemaVersion: the number 1\n- caseId: the supplied case ID\n- events: an object containing every allowed event name exactly once, each with a boolean value\n- confidence: a number from 0 to 1 representing confidence in the event determinations\n- evidence: an array containing only supplied short message aliases that support asserted true events\n- currentProviderAct: exactly one of current_plan, history_or_symptom_question, background_screening, care_search_offer, explanation, other\n- currentPlanEvidence: a verbatim quote from student-current that actually gives a current pain-treatment or disposition/follow-up plan, or an empty string if none.\nA current_plan chooses a specific current treatment or follow-up action. An access-screening question, county for referral, acceptable fees or offering to look for options does not choose a plan. A symptom-history question is not a plan. Do not use patient-draft or prior context as the current plan witness.\nFor a mixed turn that both gives a plan and asks a background question, currentProviderAct may be current_plan; quote the actual plan portion only.\nOnly current_plan with a nonempty valid quote can support painManagementOrDispositionDiscussed=true.\n\nDo not return message IDs. Do not add fields other than those specified for this case or add event names.\n\nAllowed event definitions for this request:\n- painManagementOrDispositionDiscussed: the provider gives a pain treatment plan or disposition/follow-up plan\n- antibioticsRecommended: the provider recommends antibiotics\n- antibioticsNotIndicatedExplained: the provider already explains antibiotics are unnecessary or not indicated",
+    "userPrompt": "{\"caseId\":\"case-04\",\"allowedEventNames\":[\"painManagementOrDispositionDiscussed\",\"antibioticsRecommended\",\"antibioticsNotIndicatedExplained\"],\"allowedEvidenceAliases\":[\"student-current\",\"patient-draft\"],\"messages\":[{\"alias\":\"student-current\",\"role\":\"student\",\"content\":\"Is sliding scale payment something you open to?\"},{\"alias\":\"patient-draft\",\"role\":\"patient\",\"content\":\"I'm open to paying a sliding-scale fee.\"}]}",
+    "allowedEvents": [
+      "painManagementOrDispositionDiscussed",
+      "antibioticsRecommended",
+      "antibioticsNotIndicatedExplained"
+    ],
+    "evidenceAliases": [
+      {
+        "alias": "student-current",
+        "messageId": "case-04-1792285932503-1",
+        "role": "student",
+        "content": "Is sliding scale payment something you open to?"
+      },
+      {
+        "alias": "patient-draft",
+        "messageId": "draft-reconstructed-id",
+        "role": "patient",
+        "content": "I'm open to paying a sliding-scale fee."
+      }
+    ]
+  }
+}

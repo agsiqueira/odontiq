@@ -1,0 +1,266 @@
+[
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T02:48:59.374Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T02:48:59.374Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual initial candidate4 final/context/setup individually reviewed: payment activity remains unknown, shared preference sourced without provider/condition/history claims, thanks acknowledged. No premature questions or leakage; exact UI/API text and request/encounter IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"What brings you here today?\",\"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.\"]",
+    "reviewedAt": "2026-10-18T02:50:10.905Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What brings you here today?\",\"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.\"]",
+    "reviewedAt": "2026-10-18T02:50:10.905Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"What brings you here today?\",\"My lower-right back tooth hurts all the time, and I can't chew on it.\"]",
+    "reviewedAt": "2026-10-18T02:50:10.905Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"What brings you here today?\",\"My left lower back tooth hurts really badly when I bite, and it is hard to chew.\"]",
+    "reviewedAt": "2026-10-18T02:50:10.905Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What brings you here today?\",\"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.\"]",
+    "reviewedAt": "2026-10-18T02:50:10.905Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact actual final/context/setup individually inspected. Known provider relationship retained without attendance frequency; preference/coverage/travel/timing/fee/free-care facts sourced. All five chief-complaint setups grounded and closures acknowledge without restart or new request. No unsupported history/leakage; exact UI/API text and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What is your name?\",\"My name is Sofia Williams.\"]",
+    "reviewedAt": "2026-10-18T02:52:20.945Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"We will manage your pain with ibuprofen and refer you to a dentist.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:52:20.945Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed every exact final/context/new setup. Opening/later source pain and actual clinical plans preserve eligible questions; symptom prompts do not create plan eligibility. Thanks closes after plan, search preference source-backed, child condition/provider unknowns retained. No unsupported history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"Does your tooth hurt?\",\"Yes, it hurts.\"]",
+    "reviewedAt": "2026-10-18T02:53:27.921Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context/setup inspected. Active antibiotics/temporary therapy and mixed actual plan retain eligible questions; history, not-indicated explanation, attendance unknown and generic pain do not grant them. Later quality and sourced shared preference preserved. No unsupported facts/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context/setup inspected. Active antibiotics/temporary therapy and mixed actual plan retain eligible questions; history, not-indicated explanation, attendance unknown and generic pain do not grant them. Later quality and sourced shared preference preserved. No unsupported facts/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context/setup inspected. Active antibiotics/temporary therapy and mixed actual plan retain eligible questions; history, not-indicated explanation, attendance unknown and generic pain do not grant them. Later quality and sourced shared preference preserved. No unsupported facts/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context/setup inspected. Active antibiotics/temporary therapy and mixed actual plan retain eligible questions; history, not-indicated explanation, attendance unknown and generic pain do not grant them. Later quality and sourced shared preference preserved. No unsupported facts/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+    "reviewedAt": "2026-10-18T02:57:18.113Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Alright, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:57:18.113Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All seven exact final controls and both setups individually inspected. Hypothetical options and financial arrangement alone do not unlock; later real plan after finance emits and subsequent plan does not repeat. Actual sliding-fee referral remains eligible. Case3 now gives governed consent plus required follow-up question under documented implication. Natural prospective acknowledgments add no completed treatment/history. UI/API and IDs match."
+      }
+    }
+  }
+]

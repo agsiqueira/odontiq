@@ -1,0 +1,551 @@
+{
+  "version": "V8",
+  "complete": true,
+  "completedAt": "2026-10-18T04:09:13.535Z",
+  "applicationCommit": "aef3ae11296598d3b41417088d616e3f788fa2aa",
+  "frozenAt": "2026-10-18T02:57:50.380Z",
+  "frozenFiles": 409,
+  "applicationHashesUnchanged": true,
+  "scored": {
+    "planned": 546,
+    "executed": 546,
+    "reviewed": 546,
+    "counts": {
+      "PASS": 546,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  },
+  "firstAttempt": {
+    "PASS": 546,
+    "FAIL": 0,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "setup": {
+    "reviewed": 119,
+    "counts": {
+      "PASS": 119,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  },
+  "production": {
+    "planned": 68,
+    "counts": {
+      "PASS": 68,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "nonpass": 0,
+    "scoredUiApiCorrelated": 68,
+    "setupUiApiCorrelated": 22,
+    "setupOutcomes": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "setupOutcomeCounts": {
+      "PASS": 22,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setupNonpass": 0
+  },
+  "regressionsAgainstV7": [],
+  "newHistoricalGradingChanges": [],
+  "automatedChecksPassed": 41,
+  "integrityChecksPassed": 41,
+  "repeatedAttempts": [
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-01",
+      "runId": "53d4976a-e269-4399-89fd-55f8e5c5a8a0",
+      "encounterId": "fc7c0885-1bd5-4afb-81ae-623a875f7f1d",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-02",
+      "runId": "7bbe99b9-7cc5-47f3-9d65-8265979169d5",
+      "encounterId": "e1992049-ab7c-4b1c-b7bc-1edf24c36a41",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-03",
+      "runId": "c289b206-df57-4438-8ea2-1d79e19010f5",
+      "encounterId": "7cd00ade-2e87-4c27-9521-ba5e5a5bbda5",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-04",
+      "runId": "25e76469-68d1-4fc4-8a07-ae3704d0c74c",
+      "encounterId": "641b6350-08fd-45b8-9bd4-8ec5d7c84ae2",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-05",
+      "runId": "78b0dbcc-e430-4beb-bf30-e4b002ec8ca9",
+      "encounterId": "3d6a7f70-5697-4995-b08a-c8a4f51fd46d",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-06",
+      "runId": "e804346b-5489-4887-bce6-2fd06e5778c1",
+      "encounterId": "59e755e1-34c6-437b-be67-a16d34cc4bb6",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-07",
+      "runId": "861e8e65-40fb-4d73-a9d8-0f3fe089da06",
+      "encounterId": "79f3badd-56cd-4369-a8ca-4b25938a25ea",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-08",
+      "runId": "fa37327d-c1c0-4177-8a23-35b938b3a537",
+      "encounterId": "176a6cff-d81d-4a3e-8baa-ffe7cc19d0f3",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-09",
+      "runId": "cc9cd17c-ffd4-4646-8f5c-aa1b91d3f9b0",
+      "encounterId": "c761f4a4-54bb-4879-bcaf-426d38d82311",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-1-results.json",
+      "testId": "V8-FEE-REPEAT-10",
+      "runId": "f33d710a-814d-4b57-b4ca-279d3126d218",
+      "encounterId": "b715085b-b461-47da-946a-64d46a0adbf0",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-01",
+      "runId": "f8adb53b-1d5f-4a9d-9919-a7a3b0f39821",
+      "encounterId": "4e5a4ecb-2e4d-44b3-b1bd-26c4ecdf415d",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-02",
+      "runId": "3e37d998-267b-400b-b570-852b0ffa4a83",
+      "encounterId": "80f8d5d1-2455-420a-af0f-92ab496175d7",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-03",
+      "runId": "dce07a71-8661-4f92-8d91-e46795d5711d",
+      "encounterId": "69dc1de0-f581-4464-abb3-9b691836db68",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-04",
+      "runId": "defd967a-ee54-4767-9554-782b32b7545c",
+      "encounterId": "4df23cb7-fddc-4f2e-9e9c-ded801ff3f1b",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-05",
+      "runId": "7ca37476-1800-46f2-9673-090ea08ea279",
+      "encounterId": "d45e21e3-9da1-4076-bdd7-df056a36037b",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-06",
+      "runId": "35e493a4-9aa3-4adb-9e33-e08f93812846",
+      "encounterId": "32ad9712-c8fe-43dc-ac70-127af01c4188",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-07",
+      "runId": "b10c267d-0acd-49f0-a860-b224b3a95364",
+      "encounterId": "c7023b20-e130-4db1-9dde-12bdd3eef4d2",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-08",
+      "runId": "946abcba-9431-4e44-90d4-cfd896ae4054",
+      "encounterId": "333d36a3-db56-43dd-86ee-2608d38e7bd1",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-09",
+      "runId": "bcccd317-056f-429c-896c-091748f387f6",
+      "encounterId": "02c0746e-d288-4353-83d4-2d07cf64b0be",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-2-results.json",
+      "testId": "V8-FEE-REPEAT-10",
+      "runId": "36c661d4-c68b-4d27-a40a-926d7d160bd3",
+      "encounterId": "1d63b229-eab3-4a66-bf51-e834cbfb48f2",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-01",
+      "runId": "4199f97f-37de-41aa-a9cb-ca756e996009",
+      "encounterId": "06f911e5-2ab3-4a78-8a4a-50fe860a8457",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-02",
+      "runId": "eca9b725-3a44-4e7f-95fa-7a000d0cf65c",
+      "encounterId": "6c94d359-8946-43d2-ad14-21dfe08f8713",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-03",
+      "runId": "8016a6c1-ed84-4db1-a3f2-30251e613be4",
+      "encounterId": "bf2d838b-cc35-46ce-973b-6e91c3fce5eb",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-04",
+      "runId": "605df817-1ee0-4849-a9b8-701905e861be",
+      "encounterId": "cdf4551e-d8d3-4c43-9f12-52eb4eac12ed",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-05",
+      "runId": "4fa8203a-c1ff-4598-9464-f61c95fdeedc",
+      "encounterId": "0dbc1629-6455-4268-94a7-46c65e244469",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-06",
+      "runId": "368b1066-c5a9-48eb-9392-59ae5c1f1550",
+      "encounterId": "9fb83c71-a5cf-42a2-8624-ba75bfcc6f40",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-07",
+      "runId": "19850061-b50a-440c-ae9b-358f2526f4bd",
+      "encounterId": "884e4a10-1510-497a-86a3-2d67a742e2fd",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-08",
+      "runId": "d4a18d9d-a31b-4bd8-9436-95cc223e0c66",
+      "encounterId": "f6e61bd1-5cae-4925-aaf1-ee3535e35feb",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-09",
+      "runId": "9342957a-e485-4354-aa6f-c23f849074e9",
+      "encounterId": "51248203-3321-461c-8c55-9abe3f8549c0",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-3-results.json",
+      "testId": "V8-FEE-REPEAT-10",
+      "runId": "f14be05f-f378-485b-9ae5-35dfb4a829eb",
+      "encounterId": "a30fb198-ca7f-44ba-9438-4c1989b8555d",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-01",
+      "runId": "5372454e-a48b-4837-a895-e34623dafa65",
+      "encounterId": "a88e9c7c-f729-479f-8050-9edbdf87ec33",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-02",
+      "runId": "0cbf492a-6f5f-4f51-83a2-2bd4a8792099",
+      "encounterId": "daa47397-eeb7-412f-9b17-f8c74c43c414",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-03",
+      "runId": "55bd9c92-504e-45df-8fe7-4dec340f4644",
+      "encounterId": "da1a2b26-7f58-4ed8-81ff-ec5457d5589c",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-04",
+      "runId": "092aaa76-1a8a-4c14-80a6-7ab3477dfe57",
+      "encounterId": "9bf9ef0c-6ae5-449a-bd83-27666b713bd1",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-05",
+      "runId": "31fd6c09-188c-49a3-8fbc-92d753c136c0",
+      "encounterId": "79a75740-3327-4901-9734-24dec3c37317",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-06",
+      "runId": "8b3f3f08-f42d-4157-84e1-bf24359bbdf2",
+      "encounterId": "8e4c9c19-3610-4a78-9a0c-e30c3bbdd5fa",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-07",
+      "runId": "23355c16-6bf9-4398-ac40-374c417864d0",
+      "encounterId": "5658266b-cb49-4be7-b5ae-0b32044e4c57",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yes, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-08",
+      "runId": "7177177d-2556-40fd-9f79-e45801318c95",
+      "encounterId": "32f5c2ea-632b-4a95-8ca8-bf76fe46c966",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-09",
+      "runId": "dabb2f64-0df5-44c4-93e6-4a45fb52d149",
+      "encounterId": "2405cc6e-52a6-41ff-8b1e-a0f05c19c344",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    },
+    {
+      "candidate": "focused-candidate-4-results.json",
+      "testId": "V8-FEE-REPEAT-10",
+      "runId": "afca8079-c5ee-44ec-9f9b-9721f4e51ca9",
+      "encounterId": "0deae9dd-81a3-4a4b-a27f-e48587ae7a0c",
+      "question": "Is sliding scale payment something you open to?",
+      "setupTurns": [],
+      "finalResponse": "Yeah, I'm open to paying a sliding-scale fee.",
+      "outcome": "PASS",
+      "reason": "Exact context, final response, grounding, requested facets, question timing and naturalness individually reviewed."
+    }
+  ],
+  "merged": false,
+  "deployed": false,
+  "speech": {
+    "unrelatedWorkRepeated": false,
+    "automatedPlayback": "Retained V6 tested evidence",
+    "humanAudibility": "UNVERIFIED"
+  },
+  "artifacts": {
+    "report": "validation/v8/REPORT.md",
+    "results": "validation/v8/results.json",
+    "unresolved": "validation/v8/unresolved-items.json",
+    "setup": "validation/v8/setup-adjudications.json",
+    "production": "validation/v8/production-smoke.json",
+    "freeze": "validation/v8/implementation-freeze.json",
+    "configuration": "validation/v8/production-configuration.json",
+    "integrity": "validation/v8/verification.json"
+  },
+  "internalProductionFailures": {
+    "count": 1,
+    "evidence": "validation/v8/production-internal-failure.json",
+    "liveRetries": 0
+  }
+}

@@ -1,0 +1,1978 @@
+[
+  {
+    "testId": "C01-G01-Q08",
+    "runId": "926be596-8404-4116-a3ed-8366eb0c8b51",
+    "responseSha256": "3d1c268237f85bede8e6445a827bee1805fb3bba7cf9a3bf8d25c9f9e0f0762e",
+    "reviewedAt": "2026-10-18T02:23:11.242Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G11-Q06",
+    "runId": "8e778f63-30a8-4471-a990-af9021e07732",
+    "responseSha256": "d99125a6bca93b37e48ca44479e9e5699908b792f036021f4868c8494d5fd523",
+    "reviewedAt": "2026-10-18T02:23:11.244Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G11-H01",
+    "runId": "caa68efb-bd5b-4d82-9ab8-a2468225e76b",
+    "responseSha256": "f63205aa437e9fce610f1ec8a37c949b0a36fb617eb07d000d18d43ee1efcd27",
+    "reviewedAt": "2026-10-18T02:25:02.132Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G11-H03",
+    "runId": "8298f05d-5b5c-451f-959b-882f36e76129",
+    "responseSha256": "d99125a6bca93b37e48ca44479e9e5699908b792f036021f4868c8494d5fd523",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-TARGET-5",
+    "runId": "fa53233a-411a-45a6-afa9-d9c423253148",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G09-V4H2",
+    "runId": "45cc7c6b-c05e-4ad9-b6d2-27cf0fb96364",
+    "responseSha256": "db31b770eeda3aa86fa729cf34b13018437006701758f299e69d7c294e86b800",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-G16-V4H1",
+    "runId": "007ba76b-4e6b-4bfe-a8c1-463546011aaa",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G11-Q11",
+    "runId": "96653295-c456-4f01-bda0-a0a6146ec2a8",
+    "responseSha256": "f502db6c4338b8f802a42e4804269ce5648af91c3aa3d394f2ab1027ee66de19",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C01-G03-Q01",
+    "runId": "e4f8d3c1-7090-4d6b-9a94-3bd0e2cc168f",
+    "responseSha256": "b386235e8fc25bba7c9223b07399324bfc79af4bc56f9a6c99588a10192f52e0",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C02-G05-Q01",
+    "runId": "f275ff9e-c138-43a6-b701-26c2203992af",
+    "responseSha256": "a00a1ca09bed9e42c7b2c7a904f0498fe399c36b669005afd0ee4b0329e78bba",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C04-G14-Q01",
+    "runId": "5c06e381-9b73-4630-a0f8-11bfc43a8388",
+    "responseSha256": "363e2dadcfd6938df98aea8018839ae07876bc86689ed98c0d711532b3386bf7",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-G17-Q01",
+    "runId": "92f2c739-2b77-4f3d-89cd-0713550e162f",
+    "responseSha256": "26ee8ef6bbd028e25c107b3ca9cfc7e90bf914469301344b9954ce6e6b9fce52",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-CLOSURE-1",
+    "runId": "551961a8-0081-4e61-9576-176cace84bc0",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-CLOSURE-2",
+    "runId": "84137e4a-9bee-4955-8b89-1d1263647473",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-CLOSURE-3",
+    "runId": "21e8cfd6-fd41-47aa-b131-a280b0d31b35",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-CLOSURE-4",
+    "runId": "50a59eb3-ceeb-46be-9c1b-43cf2423ee7d",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:26:48.074Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-CLOSURE-5",
+    "runId": "164e3e19-3125-4007-ad49-21a59ba08e9d",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-APPROPRIATE-C4-QUESTION",
+    "runId": "9765e274-4c80-4609-9aea-36f9e5ad6254",
+    "responseSha256": "872834d99cb4f266d3a937e5df5e405143b1e549eaa0192bea147ebe9a63d0ac",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "PROD-APPROPRIATE-C5-QUESTION",
+    "runId": "f09a39c0-11b8-4551-8f1c-c3692cd54dac",
+    "responseSha256": "6f091fd0c686a6839530f508841ae10503761447d5d0480d383b340e74d8201e",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-TARGET-6",
+    "runId": "8e7ac7ce-3346-44af-b103-8b72a190e52f",
+    "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C04-TARGET-6",
+    "runId": "dd312795-97d1-47ff-bea4-48c50ca20523",
+    "responseSha256": "635a03f017babdde4522b7949c2e6c51e3cfaa2276c65c3346a73860da8d364d",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-TARGET-6",
+    "runId": "afb8ee78-7b03-4ecb-a856-a42df84d3ec0",
+    "responseSha256": "635a03f017babdde4522b7949c2e6c51e3cfaa2276c65c3346a73860da8d364d",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C03-G09-H01",
+    "runId": "5219a32c-029a-4832-900e-1c4d8d65e437",
+    "responseSha256": "b8b21ce7abc3e4be774885e46c8bed18c21ce6f1c3689df1b1bc3488e4b247be",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C04-G12-Q02",
+    "runId": "490a6c09-4d65-4b98-8df4-b2fb01e2a1f9",
+    "responseSha256": "5ab5e3f28af280b37f9008a7c07ffc26ae558d1a1bd5080638c8ea213925adac",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C04-G13-Q01",
+    "runId": "e0c55e12-7a9d-46af-af90-acf241f47246",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C04-TARGET-2",
+    "runId": "0760e319-bbeb-4807-a942-b72bfb637ce1",
+    "responseSha256": "c6a55f1f01b5dae8799a03d4fc46cee474de6de513e7a789bd2642ca45c6215a",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-G17-Q10",
+    "runId": "b1795527-b547-4e83-8cc5-d18773fd2e2b",
+    "responseSha256": "e58143a8dcf814f33b0e95a49321198267dc6afe4ede390fe74beb9716120fb3",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "C05-TARGET-1",
+    "runId": "d39075f2-dcec-4ce9-b5d0-1a68e88cb0e7",
+    "responseSha256": "c6a55f1f01b5dae8799a03d4fc46cee474de6de513e7a789bd2642ca45c6215a",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-OPEN",
+    "runId": "00fccc94-28b1-42c0-a494-4d00e0d15c7c",
+    "responseSha256": "9102ff1723e7ab2e52b17ffe7318ccca11d2e620684a2b8c431959abe02aecf5",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-LATER",
+    "runId": "e32be5fe-d026-421f-a56c-db9ec513305a",
+    "responseSha256": "73f1c20c7222b74411fcab8c0cc9592b7d56bdc164a767283492c63b53d3bc8a",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C4-PLAN-PARA",
+    "runId": "15988b3e-aa62-4768-8499-ee32a0fec04c",
+    "responseSha256": "872834d99cb4f266d3a937e5df5e405143b1e549eaa0192bea147ebe9a63d0ac",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C4-PROMPT",
+    "runId": "0cb836d6-5fee-4de7-985f-772abdd565ba",
+    "responseSha256": "26e12c36c9e87d70dac30fc6c6aa3c0ada2c09baf8daf1cb8e8c40e774b29236",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C4-PLAN-THANKS",
+    "runId": "08e31467-7913-4e18-a39f-712bed698756",
+    "responseSha256": "124eb273f9a0a470e3d6930f97e1402f311a753dc9d656b1ef17ef12367caffa",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-CARE-PARA",
+    "runId": "0939bcaa-da69-41ef-8601-6dd47d2c6ffe",
+    "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+    "reviewedAt": "2026-10-18T02:28:49.366Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-CHILD-CONDITION",
+    "runId": "649d87b7-cb6f-432e-9d46-75514cb28084",
+    "responseSha256": "093e5d4979b9932e0837196ca79d785535cc39c3b62023fa73485c3562da2f03",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-CHILD-PROVIDER",
+    "runId": "494ce2b0-7e9e-4400-b401-bf384e007051",
+    "responseSha256": "d9bb8896a6ed178dcd24e3cf36f7d17246eae82ef95a950f386425d548ee27f6",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C1-SURGERY",
+    "runId": "65df53cb-e380-41fa-9fef-efe4f65a4755",
+    "responseSha256": "e8cf5bf061b600c1834f8ca6eb60abc7ff5d61c89f83a3643ba6da47df0d63cf",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C2-ABX",
+    "runId": "b09a45a5-be42-4251-8912-236aa980ddc4",
+    "responseSha256": "970d583deeeb6ac5446bc631ea9f0c9ac8c63725066649c31fbcfbec867d07cb",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-TEMP",
+    "runId": "6c3ef523-1524-4233-ba1a-fdf476b2621f",
+    "responseSha256": "038177272a3394986298e0b0a1f42fdc7825ca5e0718de8f68c915ee5a160320",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-ATTEND-PARA",
+    "runId": "169602ac-65f6-40d7-8854-8898468b59e0",
+    "responseSha256": "31c77a5a4f6fa23cf0e0b44660c028c8c40802efafad4f363c5921cdae4f5d38",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-MIXED-PLAN",
+    "runId": "0d7cf3ab-6794-42e6-a70c-efcf34d8cf44",
+    "responseSha256": "14c86e10572e0f80e12035ce494095ed09f18f1bcbf1083640c0536946238265",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-ABX-EXPLAINED",
+    "runId": "043dca95-32f1-4ba3-906c-085bc6197301",
+    "responseSha256": "056b5511850d7220521ab23974d915a8ba840316d578fc0d5ef638b342865bac",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-ABX-HISTORY",
+    "runId": "ed48e5cd-9e8a-4f93-b358-0aa4c6751c7c",
+    "responseSha256": "d20d6bb99b284aafaa8d02bed9bca5d92ad65065a31190d06716692ef256dd9d",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-GENERIC",
+    "runId": "0fbd6272-371b-42dd-949b-40b6ee3eef51",
+    "responseSha256": "f7061ed7b6448ed197ff25ce08110af932577c2cf05b74ff5ee1a2e7376835de",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-AFTER-GENERIC",
+    "runId": "5f8f05d0-1409-41c4-81db-f9f83e69e7f7",
+    "responseSha256": "73f1c20c7222b74411fcab8c0cc9592b7d56bdc164a767283492c63b53d3bc8a",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-SHARED-PARA",
+    "runId": "e3809206-7f53-49ef-9acd-683a163864f2",
+    "responseSha256": "c0d80bde8d91c783cf981c63dd608ec2a2e344c7ef7bd6bcb831465f598697dd",
+    "reviewedAt": "2026-10-18T02:29:58.799Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-COLD",
+    "runId": "39ae6ede-a675-4d00-8f07-19f826f528d0",
+    "responseSha256": "d0fd15f67fde525fc006776e81f22d118e968dc232dc6126d910a27cde54961b",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-COLD-COMPOUND",
+    "runId": "d21646be-0acd-4a6b-b96b-5b0373b251f7",
+    "responseSha256": "ed17859d647ad70c102ee4d1186ac521052ccaa7ea90a6450398096d69fc8600",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-COLD-OPEN",
+    "runId": "1eca0351-9fa8-4c13-96f4-5bca2759997f",
+    "responseSha256": "d0fd15f67fde525fc006776e81f22d118e968dc232dc6126d910a27cde54961b",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C1-ADMIT-PARA",
+    "runId": "0266d54a-2f30-4d3a-8d61-1a4a6f7a9149",
+    "responseSha256": "e8cf5bf061b600c1834f8ca6eb60abc7ff5d61c89f83a3643ba6da47df0d63cf",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-BITING",
+    "runId": "c17fe9ef-8cdd-4e12-8847-b8b294afab97",
+    "responseSha256": "948dd4fd8593daa9bde190b5b22ee6bb0d8e97aadf3fe8b5ac386a2c740b165a",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-SPONTANEOUS",
+    "runId": "f7d41dce-067a-412a-9245-9958e155d5a3",
+    "responseSha256": "bc4bf00cf158874e68bc50cc043d022dab9703e3e52aa4640f9a5b3bcea4d1ff",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C5-TRIGGERS",
+    "runId": "5b5d0fbb-7e56-4982-a858-a58468c2027f",
+    "responseSha256": "4b8ecdda2adc01f1280f9cb852946a2304fb564151b794cd51342981fcb5b784",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C4-CHILD-UNKNOWN",
+    "runId": "b23fa4ff-d864-4608-9a09-f9460f31ba17",
+    "responseSha256": "04e7e95e8dba81dd25f948d35d63f5a9b891c16f2c7c80d4dbfa8ee6acea36e7",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-CHILD-COMPOUND",
+    "runId": "6e7fefb3-6c0b-4b9c-994a-c003a8b19879",
+    "responseSha256": "8392ce7d56ac286ab8555887a27785fa43956b8371c1d071abf210375d747bb6",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "FOCUS-C3-CONDITIONAL-PREF",
+    "runId": "ea12a9f8-f740-4873-9fb9-4073044f773b",
+    "responseSha256": "f502db6c4338b8f802a42e4804269ce5648af91c3aa3d394f2ab1027ee66de19",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-01",
+    "runId": "f8adb53b-1d5f-4a9d-9919-a7a3b0f39821",
+    "responseSha256": "237dae5596a4c2697e51a36e4becd49b29414c7b6a831da1c0a64235afbc1e64",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-02",
+    "runId": "3e37d998-267b-400b-b570-852b0ffa4a83",
+    "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-03",
+    "runId": "dce07a71-8661-4f92-8d91-e46795d5711d",
+    "responseSha256": "237dae5596a4c2697e51a36e4becd49b29414c7b6a831da1c0a64235afbc1e64",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-04",
+    "runId": "defd967a-ee54-4767-9554-782b32b7545c",
+    "responseSha256": "237dae5596a4c2697e51a36e4becd49b29414c7b6a831da1c0a64235afbc1e64",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-05",
+    "runId": "7ca37476-1800-46f2-9673-090ea08ea279",
+    "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-06",
+    "runId": "35e493a4-9aa3-4adb-9e33-e08f93812846",
+    "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-07",
+    "runId": "b10c267d-0acd-49f0-a860-b224b3a95364",
+    "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f",
+    "reviewedAt": "2026-10-18T02:29:58.801Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each displayed exact final/context individually reviewed: source shared preference, cold worsening/lingering, biting/spontaneous/trigger facts and scoped child unknowns remain correct. Seven independent original-question fresh attempts give only fee willingness, no premature question. No leakage/unrequested history; UI/API text and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-08",
+    "runId": "946abcba-9431-4e44-90d4-cfd896ae4054",
+    "responseSha256": "363e2dadcfd6938df98aea8018839ae07876bc86689ed98c0d711532b3386bf7",
+    "reviewedAt": "2026-10-18T02:31:04.949Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-09",
+    "runId": "bcccd317-056f-429c-896c-091748f387f6",
+    "responseSha256": "237dae5596a4c2697e51a36e4becd49b29414c7b6a831da1c0a64235afbc1e64",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FEE-REPEAT-10",
+    "runId": "36c661d4-c68b-4d27-a40a-926d7d160bd3",
+    "responseSha256": "237dae5596a4c2697e51a36e4becd49b29414c7b6a831da1c0a64235afbc1e64",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FINANCE-PARA1",
+    "runId": "329d771a-9298-47b5-882e-9fb15150f11b",
+    "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FINANCE-PARA2",
+    "runId": "16ff281d-2d72-4877-9ebc-3cea115b8fe7",
+    "responseSha256": "363e2dadcfd6938df98aea8018839ae07876bc86689ed98c0d711532b3386bf7",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-INSURANCE-CLINICAL",
+    "runId": "e626b23d-43da-4bdc-a24e-c84b42f3afa7",
+    "responseSha256": "8405fd7f542a1b9746ade90bfc4daa3e4386371270d02e8343449e3b71f1f232",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-MIXED-FEE-PLAN",
+    "runId": "81baf0bb-89b5-4ea9-af32-220981d2a927",
+    "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-HYPOTHETICAL-QUESTION",
+    "runId": "3151e1a6-134a-49d1-bdd6-7c3b0a0f04b9",
+    "responseSha256": "c9d76e68468540377ee1299c9d5773ad3badcaa89797b19da78e565dac5c1f24",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-HYPOTHETICAL-STATEMENT",
+    "runId": "7d1a1806-c6d7-495b-9117-73d452ed5eed",
+    "responseSha256": "056b5511850d7220521ab23974d915a8ba840316d578fc0d5ef638b342865bac",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-ELIGIBLE-AFTER-FINANCE",
+    "runId": "5ad8c3f8-46f1-491e-8bcc-fc31002949b6",
+    "responseSha256": "7227a0259d8afdcbd1da3c64d74dd983c0ef9db3f6f2cf51a5ed4bc696271a5c",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-ONCE-AFTER-PLAN",
+    "runId": "a1ade916-7f69-4540-a4aa-82468881a44c",
+    "responseSha256": "270d75ca3d5cf256635c4dcfad675b24023f7a5502d448b9008485b50ad86c28",
+    "reviewedAt": "2026-10-18T02:31:48.783Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-FINANCIAL-OBJECT",
+    "runId": "650c2631-103e-4cd3-8828-23f796a0ce8b",
+    "responseSha256": "9d3d51f1e4f847aca741073a8efec14ead29dd8e8e5ad08f7173b321289d7c9e",
+    "reviewedAt": "2026-10-18T02:31:48.785Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  },
+  {
+    "testId": "V8-CLINICAL-FEE-MODIFIER",
+    "runId": "7c3b83ca-9253-40c1-ba5b-1d071e5933e4",
+    "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31",
+    "reviewedAt": "2026-10-18T02:31:48.785Z",
+    "outcome": "PASS",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      }
+    },
+    "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+  }
+]

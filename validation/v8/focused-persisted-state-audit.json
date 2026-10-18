@@ -1,0 +1,538 @@
+{
+  "at": "2026-10-18T02:57:19.918Z",
+  "allPassed": true,
+  "items": [
+    {
+      "testId": "V8-FEE-REPEAT-01",
+      "encounterId": "a88e9c7c-f729-479f-8050-9edbdf87ec33",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292054201-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-02",
+      "encounterId": "daa47397-eeb7-412f-9b17-f8c74c43c414",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292059550-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-03",
+      "encounterId": "da1a2b26-7f58-4ed8-81ff-ec5457d5589c",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292066435-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-04",
+      "encounterId": "9bf9ef0c-6ae5-449a-bd83-27666b713bd1",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292071904-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-05",
+      "encounterId": "79a75740-3327-4901-9734-24dec3c37317",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292077435-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-06",
+      "encounterId": "8e4c9c19-3610-4a78-9a0c-e30c3bbdd5fa",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292083482-1-response",
+          "response": "I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-07",
+      "encounterId": "5658266b-cb49-4be7-b5ae-0b32044e4c57",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292089618-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-08",
+      "encounterId": "32f5c2ea-632b-4a95-8ca8-bf76fe46c966",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292095133-1-response",
+          "response": "Yeah, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-09",
+      "encounterId": "2405cc6e-52a6-41ff-8b1e-a0f05c19c344",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292100834-1-response",
+          "response": "Yeah, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FEE-REPEAT-10",
+      "encounterId": "0deae9dd-81a3-4a4b-a27f-e48587ae7a0c",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292106397-1-response",
+          "response": "Yeah, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-ELIGIBLE-AFTER-FINANCE",
+      "encounterId": "8b200aed-490a-4fd9-8e26-bbd412add8b0",
+      "state": {
+        "version": 2,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": [
+          "c4-antibiotic-needed-question"
+        ]
+      },
+      "emissions": [
+        {
+          "id": "d62c255e-8343-4863-ab4c-a0aa118f9265",
+          "encounterId": "8b200aed-490a-4fd9-8e26-bbd412add8b0",
+          "questionId": "c4-antibiotic-needed-question",
+          "turnId": "b5ecff48-af7f-4e3a-9ec8-447f0a7ea207",
+          "emittedAt": "2026-10-18T02:55:54.142Z"
+        }
+      ],
+      "turns": [
+        {
+          "requestId": "case-04-1792292149397-1-response",
+          "response": "Yes, I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        },
+        {
+          "requestId": "case-04-1792292152563-2-response",
+          "response": "Alright, I'll take the ibuprofen for the pain. Do I need an antibiotic?",
+          "selectedQuestionId": "c4-antibiotic-needed-question",
+          "stateVersion": 2
+        }
+      ]
+    },
+    {
+      "testId": "V8-ONCE-AFTER-PLAN",
+      "encounterId": "7b30f63f-9370-45d1-9d8c-2bb3377dfe46",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": [
+          "c4-antibiotic-needed-question"
+        ]
+      },
+      "emissions": [
+        {
+          "id": "cf1e448f-b8b3-4043-958c-9dc5c4ec85a4",
+          "encounterId": "7b30f63f-9370-45d1-9d8c-2bb3377dfe46",
+          "questionId": "c4-antibiotic-needed-question",
+          "turnId": "91270fd7-d691-4a2b-a5ad-6eccfbbf49a1",
+          "emittedAt": "2026-10-18T02:56:00.070Z"
+        }
+      ],
+      "turns": [
+        {
+          "requestId": "case-04-1792292158296-1-response",
+          "response": "Alright, thank you. Do I need an antibiotic?",
+          "selectedQuestionId": "c4-antibiotic-needed-question",
+          "stateVersion": 1
+        },
+        {
+          "requestId": "case-04-1792292161848-2-response",
+          "response": "Okay, I'll make an appointment. Thanks for the ibuprofen.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-FINANCIAL-OBJECT",
+      "encounterId": "74961855-d211-4132-b743-0f2f92ae0f30",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": []
+      },
+      "emissions": [],
+      "turns": [
+        {
+          "requestId": "case-04-1792292166779-1-response",
+          "response": "Okay, thanks. I'm open to paying a sliding-scale fee.",
+          "selectedQuestionId": null,
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-CLINICAL-FEE-MODIFIER",
+      "encounterId": "73ba79d9-4d04-4500-b706-b90cdfd1be9a",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": false,
+          "incisionAndDrainageProposed": false,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": false,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": [
+          "c4-antibiotic-needed-question"
+        ]
+      },
+      "emissions": [
+        {
+          "id": "df99474c-3d8e-49fa-acf7-90845eac9d49",
+          "encounterId": "73ba79d9-4d04-4500-b706-b90cdfd1be9a",
+          "questionId": "c4-antibiotic-needed-question",
+          "turnId": "019d47fb-f3d8-4f53-9c04-078bb8e76297",
+          "emittedAt": "2026-10-18T02:56:23.780Z"
+        }
+      ],
+      "turns": [
+        {
+          "requestId": "case-04-1792292172313-1-response",
+          "response": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+          "selectedQuestionId": "c4-antibiotic-needed-question",
+          "stateVersion": 1
+        }
+      ]
+    },
+    {
+      "testId": "V8-C3-CONSENT",
+      "encounterId": "301e3835-1fb8-441e-b314-8ad2cdeb9021",
+      "state": {
+        "version": 1,
+        "schemaVersion": 1,
+        "detectedEvents": {
+          "patientPainDescribed": false,
+          "antibioticsRecommended": false,
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "promptDentalFollowUpConfirmed": false,
+          "antibioticsNotIndicatedExplained": false,
+          "definitiveDentalTreatmentExplained": false,
+          "patientAgreedToIncisionAndDrainage": true,
+          "antibioticsRecommendedAsCurrentPlan": false,
+          "painManagementOrDispositionDiscussed": false,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "hospitalAdmissionOrSurgicalManagementDiscussed": false
+        },
+        "emittedQuestionIds": [
+          "c3-follow-up-needed-question"
+        ]
+      },
+      "emissions": [
+        {
+          "id": "460d5596-dafd-48f4-a9ab-9f0f5e7d830d",
+          "encounterId": "301e3835-1fb8-441e-b314-8ad2cdeb9021",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "412e7d8c-bf29-422e-b3cd-ea81ded68aac",
+          "emittedAt": "2026-10-18T02:56:29.584Z"
+        }
+      ],
+      "turns": [
+        {
+          "requestId": "case-03-1792292187828-1-response",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "stateVersion": 1
+        }
+      ]
+    }
+  ]
+}

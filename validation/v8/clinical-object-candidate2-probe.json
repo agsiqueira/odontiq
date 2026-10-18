@@ -1,0 +1,39 @@
+[
+  {
+    "question": "I will arrange payment for a dentist.",
+    "assessment": {
+      "valid": false,
+      "reason": "no-current-clinical-action-in-evidence"
+    }
+  },
+  {
+    "question": "We will provide insurance for dental care.",
+    "assessment": {
+      "valid": false,
+      "reason": "no-current-clinical-action-in-evidence"
+    }
+  },
+  {
+    "question": "I recommend paying for ibuprofen.",
+    "assessment": {
+      "valid": false,
+      "reason": "no-current-clinical-action-in-evidence"
+    }
+  },
+  {
+    "question": "I will refer you to a sliding-fee dental clinic.",
+    "assessment": {
+      "valid": true,
+      "clause": "i will refer you to a sliding-fee dental clinic",
+      "reason": "current-clinical-action"
+    }
+  },
+  {
+    "question": "We will arrange an appointment with a dentist.",
+    "assessment": {
+      "valid": true,
+      "clause": "we will arrange an appointment with a dentist",
+      "reason": "current-clinical-action"
+    }
+  }
+]

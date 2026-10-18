@@ -1,0 +1,8 @@
+{
+  "turnsWithDiagnostics": 665,
+  "immediateTurns": 57,
+  "initialGuardRejections": 116,
+  "correctiveGenerations": 116,
+  "groundedFallbacks": 83,
+  "limit": "Guard flags and internal candidates are not delivered-response semantic judgments. Failed API calls without diagnostics remain in raw error records and the provider HTTP log."
+}

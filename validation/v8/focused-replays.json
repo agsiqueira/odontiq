@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-18T02:45:17.237Z",
+  "sevenNonpassReplays": [
+    {
+      "testId": "C01-G01-Q08",
+      "question": "Are you paying for dental care without insurance?",
+      "oldResponse": "I don't have insurance.",
+      "fallback": "I don't have insurance. I'm not sure about a payment arrangement.",
+      "final": "I don't have insurance. I'm not sure about a payment arrangement."
+    },
+    {
+      "testId": "C03-G11-Q06",
+      "question": "Is keeping your dental care and your daughter's care at one clinic important to you?",
+      "oldResponse": "Yes, it would be more convenient if we could both receive care at the same clinic as my daughter's.",
+      "fallback": "I'd prefer the same clinic for my daughter and me.",
+      "final": "I'd prefer the same clinic for my daughter and me."
+    },
+    {
+      "testId": "C03-G11-H01",
+      "question": "Would one office meeting both your dental needs be easier?",
+      "oldResponse": "Yes, it would be much easier if we could both see the dentist at the same clinic. It's already a struggle to coordinate schedules for appointments, and it would be convenient if my daughter and I could receive care in the same place.",
+      "fallback": "I'd prefer the same clinic for my daughter and me.",
+      "final": "I'd prefer the same clinic for my daughter and me."
+    },
+    {
+      "testId": "C03-G11-H03",
+      "question": "Keeping both of you at one clinic sounds preferable to you?",
+      "oldResponse": "Yes, I'd prefer the same clinic for my daughter and me. It would make things easier, especially since she's on Medicaid and we'd like to stick with the same provider for consistency.",
+      "fallback": "I'd prefer the same clinic for my daughter and me.",
+      "final": "I'd prefer the same clinic for my daughter and me."
+    },
+    {
+      "testId": "C05-TARGET-5",
+      "question": "Thank you for explaining that.",
+      "oldResponse": "Hi. This tooth pain won't go away, and it keeps waking me up at night. Can I get an antibiotic? It has helped in the past when I had a toothache.",
+      "fallback": "You're welcome.",
+      "final": "You're welcome."
+    },
+    {
+      "testId": "C03-G09-V4H2",
+      "question": "Do you already see a dentist regularly?",
+      "oldResponse": "Yes, I have my own dentist and an appointment next week.",
+      "fallback": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+      "final": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist."
+    },
+    {
+      "testId": "C05-G16-V4H1",
+      "question": "Would an insurance policy contribute to your dental costs?",
+      "oldResponse": "Without insurance, the costs will be out of pocket.",
+      "fallback": "I don't have insurance.",
+      "final": "I don't have insurance."
+    }
+  ],
+  "setupFailureAndNearbyNegativeControls": [
+    "That's good to hear. My daughter's teeth need more attention, I think.",
+    "My daughter has cavities.",
+    "She needs dental work.",
+    "We'd like to stick with the same provider for consistency.",
+    "We could receive care at the same clinic as my daughter's.",
+    "It's a struggle to coordinate appointments.",
+    "Our schedules make it hard."
+  ],
+  "positiveControls": "Supported daughter/provider/schedule/condition/frequency facts; natural preferences, mixed clinical requests and existing patient-question validations"
+}

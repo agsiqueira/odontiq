@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-18T04:07:00.943Z",
+  "items": [
+    {
+      "testId": "V8-FINANCE-PARA1",
+      "runId": "2d9f58eb-f4a5-481e-ba38-60f2425c2588",
+      "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f"
+    },
+    {
+      "testId": "V8-FINANCE-PARA2",
+      "runId": "7e84f5d9-3656-4aa7-b545-0cf02cd501be",
+      "responseSha256": "5f3b77f942f610724c29d86bdea1432c37a1c8467877bfca99dcd2aecc81768f"
+    },
+    {
+      "testId": "V8-INSURANCE-CLINICAL",
+      "runId": "7865219a-91d7-4012-baf9-c746bed3a9fd",
+      "responseSha256": "19f285eddb29e210992aca520b12eff97cdefe262e6b39971d3b7bbd47ae4500"
+    },
+    {
+      "testId": "V8-MIXED-FEE-PLAN",
+      "runId": "71948593-cf21-4873-b529-6a9b13aafe34",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31"
+    },
+    {
+      "testId": "V8-HYPOTHETICAL-QUESTION",
+      "runId": "4b6bb6c4-0a34-4fec-875c-b3883a76a560",
+      "responseSha256": "c9d76e68468540377ee1299c9d5773ad3badcaa89797b19da78e565dac5c1f24"
+    },
+    {
+      "testId": "V8-HYPOTHETICAL-STATEMENT",
+      "runId": "f986f2ba-3068-43d7-ba4c-6bb12e0504d8",
+      "responseSha256": "056b5511850d7220521ab23974d915a8ba840316d578fc0d5ef638b342865bac"
+    },
+    {
+      "testId": "V8-ELIGIBLE-AFTER-FINANCE",
+      "runId": "4db5b9be-8c84-4583-bc4b-4400b9757f42",
+      "responseSha256": "7227a0259d8afdcbd1da3c64d74dd983c0ef9db3f6f2cf51a5ed4bc696271a5c"
+    },
+    {
+      "testId": "V8-ONCE-AFTER-PLAN",
+      "runId": "814538aa-481d-461e-ade1-aa936bf2a362",
+      "responseSha256": "9fb47f2feee4b28acdce442f799af25377e760c1e5427083b5a057de0d6bca87"
+    },
+    {
+      "testId": "V8-FINANCIAL-OBJECT",
+      "runId": "1535c450-4115-432a-b58c-3f4507d85b35",
+      "responseSha256": "363e2dadcfd6938df98aea8018839ae07876bc86689ed98c0d711532b3386bf7"
+    },
+    {
+      "testId": "V8-CLINICAL-FEE-MODIFIER",
+      "runId": "c3d2585b-87b6-4690-a949-df5acae1db0d",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31"
+    },
+    {
+      "testId": "V8-C3-CONSENT",
+      "runId": "37ec7079-2c09-4a37-bc63-cf6bd38222a2",
+      "responseSha256": "3ea3a800254406156341dcdbd4c6d518ddec39834022ff91d68f8296b06b5bb0"
+    }
+  ],
+  "setups": [
+    {
+      "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+      "caseId": "case-04",
+      "question": "Is sliding scale payment something you open to?",
+      "response": "Yes, I'm open to paying a sliding-scale fee."
+    },
+    {
+      "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+      "caseId": "case-04",
+      "question": "I will give you ibuprofen for pain.",
+      "response": "Okay, thank you. Do I need an antibiotic?"
+    }
+  ]
+}

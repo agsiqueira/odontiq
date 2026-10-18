@@ -1,0 +1,266 @@
+[
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T02:23:11.244Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T02:23:11.244Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed current candidate2 question/context/final: uninsured/payment-activity uncertainty and same-clinic preference are source-backed and complete; both setup responses grounded. No condition/provider/history inference, premature question or leakage. Exact UI/API text and request/encounter IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"What brings you here today?\",\"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.\"]",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What brings you here today?\",\"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.\"]",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"What brings you here today?\",\"My lower-right back tooth hurts all the time, and I can't chew on it.\"]",
+    "reviewedAt": "2026-10-18T02:25:02.135Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed each actual current-candidate final and displayed setup: source shared preference, attendance unknown, coverage/travel/timing/fee facts retained, no family condition/provider inference. All chief complaints grounded and thank-yous acknowledged without restart. No premature screening questions/leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"What brings you here today?\",\"My left lower back tooth hurts really badly when I bite, and it is hard to chew.\"]",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What brings you here today?\",\"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.\"]",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What is your name?\",\"My name is Sofia Williams.\"]",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"We will manage your pain with ibuprofen and refer you to a dentist.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:26:48.076Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected every displayed actual question/context/final and new setup. Source symptoms, preferences, insurance/household/provider boundaries remain grounded. Eligible questions occur after actual plans or substantive Case5 pain; symptom/background prompts do not grant Case4 permission. Thanks closes after complaint/plan with no repetition. No unrequested history/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"Does your tooth hurt?\",\"Yes, it hurts.\"]",
+    "reviewedAt": "2026-10-18T02:28:49.368Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually reviewed all displayed actual finals and setup. Child condition/provider/attendance remain unknown, care preference grounded; actual surgery/antibiotic/temporary and mixed clinical plan questions remain eligible. Generic pain/history/not-indicated controls correctly withhold, later quality permits Case5 request. No leakage/unrequested history; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"Is sliding scale payment something you open to?\",\"Yes, I'm open to paying a sliding-scale fee.\"]",
+    "reviewedAt": "2026-10-18T02:31:04.952Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every displayed exact final/context inspected. Three final repetitions and financial/insurance paraphrases answer sourced facts without a question. Mixed real plan/fee response preserves requested fee answer and eligible question with no unasked severity. Hypothetical options do not unlock; actual later ibuprofen plan emits after financial setup. Grounded/relevant, no leakage; UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"I will give you ibuprofen for pain.\",\"Alright, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T02:31:48.785Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "All three exact finals and actual setup inspected. Prior emitted question does not repeat; financial payment arrangement alone is acknowledged without antibiotic question; actual referral to a sliding-fee clinic remains eligible. Fee willingness sourced and no unasked history/unsupported facts. UI/API and IDs match."
+      }
+    }
+  }
+]
