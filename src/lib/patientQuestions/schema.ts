@@ -5,6 +5,15 @@ import {
   type PatientQuestionEvents,
 } from "./types";
 import type { PatientQuestionEvidenceAlias } from "./prompt";
+import { case3ConsentResponse } from "../case3ConsentResponse";
+
+// Reuse the consent route's recognition for a current drainage proposal. This
+// supplements reference recognition only; semantic classification, source roles,
+// current-plan checks and once-only transactional emission remain required.
+function hasCurrentDrainageConsentReference(content: string) {
+  return case3ConsentResponse("case-03", content) !== undefined &&
+    !/\b(?:no|not|won't|will not|do not|don't|without|decline(?:d|s)?|refus(?:e|ed|es))\b/i.test(content);
+}
 
 export function parsePatientQuestionClassification(input: {
   text: string;
@@ -191,7 +200,7 @@ function eventHasSemanticallyCompatibleEvidence(
 function case3TemporaryTreatmentEvidenceIsCompatible(content: string) {
   const normalized = content.toLowerCase().replace(/[’]/g, "'");
   const treatmentReference = /\b(?:antibiotics?|antimicrobial (?:treatment|therapy)|local anesthe(?:tic|sia)|dental block|nerve block|mandibular block|inferior alveolar nerve block|acetaminophen|tylenol)\b|\b(?:incision and drainage|i\s*(?:&|and)\s*d)\b|\b(?:drain|drainage|draining)\b.{0,55}\b(?:abscess|infection|pus|pressure)\b|\b(?:abscess|infection|pus|pressure)\b.{0,55}\b(?:drain|drainage|draining)\b/;
-  if (!treatmentReference.test(normalized)) return false;
+  if (!treatmentReference.test(normalized) && !hasCurrentDrainageConsentReference(content)) return false;
 
   const rejectedContext = /\b(?:no|not|won't|will not|do not|don't|without|decline(?:d|s)?|refus(?:e|ed|es))\b.{0,80}\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
     || /\b(?:antibiotics?|antimicrobial|anesthe(?:tic|sia)|block|acetaminophen|tylenol|incision|drain|drainage|i\s*(?:&|and)\s*d)\b.{0,80}\b(?:not indicated|not recommended|unnecessary|declined|refused|won't|will not)\b/.test(normalized)
@@ -239,7 +248,7 @@ function case2AntibioticPlanEvidenceIsCompatible(content: string) {
 function case3DrainageProposalEvidenceIsCompatible(content: string) {
   const normalized = content.toLowerCase().replace(/[’]/g, "'");
   const drainageReference = /\b(?:incision and drainage|i\s*(?:&|and)\s*d)\b|\b(?:drain|drainage|draining)\b.{0,55}\b(?:abscess|infection|pus|pressure)\b|\b(?:abscess|infection|pus|pressure)\b.{0,55}\b(?:drain|drainage|draining)\b/;
-  if (!drainageReference.test(normalized)) return false;
+  if (!drainageReference.test(normalized) && !hasCurrentDrainageConsentReference(content)) return false;
 
   const negatedOrDeclined = /\b(?:no|not|won't|will not|do not|don't|decline(?:d|s)?|refus(?:e|ed|es)|without)\b.{0,70}\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b/.test(normalized)
     || /\b(?:incision|drain|drainage|i\s*(?:&|and)\s*d)\b.{0,70}\b(?:not indicated|not recommended|unnecessary|declined|refused|won't|will not)\b/.test(normalized);

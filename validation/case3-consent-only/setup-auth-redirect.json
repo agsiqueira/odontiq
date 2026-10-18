@@ -1,0 +1,67 @@
+{
+  "started": "2026-10-18T14:21:03.421Z",
+  "method": "Sequential paired local production builds; alternating order; original first attempts retained; no automatic test retries",
+  "tests": [
+    {
+      "scenario": "original-1",
+      "target": "candidate",
+      "history": false,
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "context": [],
+          "requestId": "consent-only-candidate-original-1-d078d933-3ba6-44b2-b9d9-8d7d62bb3047",
+          "payload": {
+            "caseId": "case-03",
+            "requestId": "consent-only-candidate-original-1-d078d933-3ba6-44b2-b9d9-8d7d62bb3047",
+            "studentMessageId": "d078d933-3ba6-44b2-b9d9-8d7d62bb3047",
+            "conversation": [],
+            "coveredChecklistItems": [],
+            "message": "What brings you in today?"
+          },
+          "sentAt": "2026-10-18T14:21:23.593Z",
+          "receivedAt": "2026-10-18T14:21:29.921Z",
+          "durationMs": 6329,
+          "status": 200,
+          "body": {
+            "nonJson": "<!DOCTYPE html><html lang=\"en\" class=\"h-full antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/1zp0_8pq4rwua.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/1e32e_r8dyuvo.js\"/><script src=\"/_next/static/chunks/3rzoxv6mptymf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3v9y00cvllbth.js\" async=\"\"></script><script src=\"/_next/static/chunks/2c6yuf4ws-3vx.js\" async=\"\"></script><script src=\"/_next/static/chunks/0-ff8t3raoby_.js\" async=\"\"></script><script src=\"/_next/static/chunks/1gyxhvytacbec.js\" async=\"\"></script><script src=\"/_next/static/chunks/2xc38__2v4io8.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-1o_ikm4ma0ktf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3efolnnrblqbl.js\" async=\"\"></script><script src=\"/_next/static/chunks/02-n0qjx0_brk.js\" async=\"\"></script><script src=\""
+          }
+        }
+      ],
+      "setup": {
+        "sentAt": "2026-10-18T14:21:17.667Z",
+        "receivedAt": "2026-10-18T14:21:23.386Z",
+        "durationMs": 5719,
+        "status": 200,
+        "body": {
+          "nonJson": "<!DOCTYPE html><html lang=\"en\" class=\"h-full antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/1zp0_8pq4rwua.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/1e32e_r8dyuvo.js\"/><script src=\"/_next/static/chunks/3rzoxv6mptymf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3v9y00cvllbth.js\" async=\"\"></script><script src=\"/_next/static/chunks/2c6yuf4ws-3vx.js\" async=\"\"></script><script src=\"/_next/static/chunks/0-ff8t3raoby_.js\" async=\"\"></script><script src=\"/_next/static/chunks/1gyxhvytacbec.js\" async=\"\"></script><script src=\"/_next/static/chunks/2xc38__2v4io8.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-1o_ikm4ma0ktf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3efolnnrblqbl.js\" async=\"\"></script><script src=\"/_next/static/chunks/02-n0qjx0_brk.js\" async=\"\"></script><script src=\""
+        }
+      }
+    }
+  ],
+  "ownedSessionId": "sess_3Ks572L16f1KK6KOHqHWce2vTK4",
+  "auth": [
+    {
+      "target": "candidate",
+      "sentAt": "2026-10-18T14:21:04.035Z",
+      "receivedAt": "2026-10-18T14:21:10.689Z",
+      "durationMs": 6654,
+      "status": 200,
+      "body": {
+        "nonJson": "<!DOCTYPE html><html lang=\"en\" class=\"h-full antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/1zp0_8pq4rwua.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/1e32e_r8dyuvo.js\"/><script src=\"/_next/static/chunks/3rzoxv6mptymf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3v9y00cvllbth.js\" async=\"\"></script><script src=\"/_next/static/chunks/2c6yuf4ws-3vx.js\" async=\"\"></script><script src=\"/_next/static/chunks/0-ff8t3raoby_.js\" async=\"\"></script><script src=\"/_next/static/chunks/1gyxhvytacbec.js\" async=\"\"></script><script src=\"/_next/static/chunks/2xc38__2v4io8.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-1o_ikm4ma0ktf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3efolnnrblqbl.js\" async=\"\"></script><script src=\"/_next/static/chunks/02-n0qjx0_brk.js\" async=\"\"></script><script src=\""
+      }
+    },
+    {
+      "target": "v8",
+      "sentAt": "2026-10-18T14:21:10.859Z",
+      "receivedAt": "2026-10-18T14:21:17.496Z",
+      "durationMs": 6637,
+      "status": 200,
+      "body": {
+        "nonJson": "<!DOCTYPE html><html lang=\"en\" class=\"h-full antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/chunks/1zp0_8pq4rwua.css\" data-precedence=\"next\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/1e32e_r8dyuvo.js\"/><script src=\"/_next/static/chunks/3rzoxv6mptymf.js\" async=\"\"></script><script src=\"/_next/static/chunks/3v9y00cvllbth.js\" async=\"\"></script><script src=\"/_next/static/chunks/2c6yuf4ws-3vx.js\" async=\"\"></script><script src=\"/_next/static/chunks/0-ff8t3raoby_.js\" async=\"\"></script><script src=\"/_next/static/chunks/1gyxhvytacbec.js\" async=\"\"></script><script src=\"/_next/static/chunks/0tcfg49y6wgp0.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-3mi0zt-epv4kc.js\" async=\"\"></script><script src=\"/_next/static/chunks/0q74p-hsp16hh.js\" async=\"\"></script><script src=\"/_next/static/chunks/02-n0qjx0_brk.js\" async=\"\"></script><script src=\""
+      }
+    }
+  ],
+  "exactOwnedSessionRevoked": true
+}

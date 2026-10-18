@@ -1,0 +1,55 @@
+{
+  "method": "Same-host local production builds with separate databases, sequential alternating target order. All first attempts included. Latency excludes authentication token acquisition. No production writes.",
+  "targets": {
+    "candidate": {
+      "scenarios": 12,
+      "structurallyClear": 12,
+      "requests": 56,
+      "all": {
+        "n": 56,
+        "medianMs": 565.5,
+        "p95Ms": 888
+      },
+      "consent": {
+        "n": 10,
+        "medianMs": 567,
+        "p95Ms": 605
+      },
+      "modelHttpAttempts": 58,
+      "modelKinds": {
+        "classifier": 44,
+        "generation": 14
+      },
+      "upstreamNon200": 0
+    },
+    "v8": {
+      "scenarios": 12,
+      "structurallyClear": 2,
+      "requests": 56,
+      "all": {
+        "n": 56,
+        "medianMs": 770,
+        "p95Ms": 2105
+      },
+      "consent": {
+        "n": 10,
+        "medianMs": 1406.5,
+        "p95Ms": 2183
+      },
+      "modelHttpAttempts": 87,
+      "modelKinds": {
+        "classifier": 44,
+        "generation": 43
+      },
+      "upstreamNon200": 0
+    }
+  },
+  "models": [
+    "granite-3.3-8b-instruct"
+  ],
+  "freeze": {
+    "commit": "c0394fd838ebe8995507a7305004735f53524b6f",
+    "files": 229,
+    "mismatches": []
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "scope": "Human/agent semantic review of exact final responses against full stored contexts and authoritative Case 3 facts; no regrading original failures to PASS",
+  "rows": [
+    {
+      "scenario": "original-1",
+      "encounterId": "28ab5e95-f08b-4698-8d0d-e80036b9dd77",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-original-1-141f26c1-0f84-4e46-842d-0cb0e47f5e88"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-original-1-027ae761-95bb-4fe2-9c24-b69d1a7e8b87"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-original-1-4513c85f-bce3-4381-8552-5cf030a55889"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-original-1-f148cbcf-673d-4c24-994e-e521e6144804"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-original-1-21ae6024-d4a1-4b2d-b97f-14c7dbada022"
+        }
+      ]
+    },
+    {
+      "scenario": "original-2",
+      "encounterId": "7154c484-a4c7-4edd-8547-fa4478220dec",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-original-2-b4182add-3d89-4859-bb0a-ef04fc25caaa"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-original-2-086621f1-1126-44f3-8910-1303ab37289d"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-original-2-8b9da72a-a99e-4fdb-940f-6ef30fe34ab2"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-original-2-1ffe6218-947c-4854-a3f0-5d9a98fca6f8"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-original-2-b8443a21-8b82-41ca-ae0f-5957d4abfbc2"
+        }
+      ]
+    },
+    {
+      "scenario": "original-3",
+      "encounterId": "89eaa068-138a-4437-8532-75cfae798da2",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-original-3-9ca469df-7ada-43d5-ae64-ba91a5e36ce3"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-original-3-03753ab4-1500-470c-9036-8ef3ea646359"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-original-3-0ff02efb-7b4c-465e-b8a2-173815a4cfcc"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-original-3-9bf5ad2b-fe7e-4be4-af88-6433fffd2f1a"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-original-3-c26a2f72-abb6-44e5-82df-82ba6f14dde4"
+        }
+      ]
+    },
+    {
+      "scenario": "original-4",
+      "encounterId": "f2baba0e-497d-4848-b04a-8563a4856bc5",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-original-4-bbec9f4c-5a9d-4aad-b86c-9134c0fab528"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-original-4-b867a03a-fc7a-4b1d-87c6-0b95f1b2ad51"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-original-4-5f96c39b-5911-4c44-8cb4-b79444965a70"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-original-4-08ca9264-0b01-49ab-89cb-9d8a8ab5a8fd"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-original-4-8cf65b84-1ddc-4742-9742-991df1ca21fd"
+        }
+      ]
+    },
+    {
+      "scenario": "original-5",
+      "encounterId": "332869a5-ec0e-436a-9786-a7fc5251990e",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-original-5-66b5c6a2-fc16-46b7-832f-babd4efe274b"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-original-5-0960ea97-66a3-4805-ab2e-db42cf2a52b7"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-original-5-8f18b48c-ed68-42f6-8118-bdf597ae858c"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-original-5-40bf735d-d0b0-445b-b0b3-a136427c6a89"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-original-5-d42cd220-a077-4d2e-8345-8a48864c01f6"
+        }
+      ]
+    },
+    {
+      "scenario": "short",
+      "encounterId": "9da9d1bc-45d6-44d7-b202-49b563bbf42e",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-short-817b0d3d-b190-4946-8aaa-321f089411be"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-short-0c82a81b-9f6f-45f5-a7e9-d9af3d44b8fe"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend an I&D for the abscess. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-short-779d198f-1843-48ed-b5ab-31ae7f50818d"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend an I&D for the abscess. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-short-08982d1d-1b09-4745-90de-db81ca91adda"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-short-68568443-6051-4e23-9226-40648e7b832d"
+        }
+      ]
+    },
+    {
+      "scenario": "spelled",
+      "encounterId": "6a7a5b63-9573-46b3-8da3-89925a8de88e",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-spelled-f1e5ac39-cb14-4b9c-9f3f-1b52e5d92f82"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-spelled-062eaff9-b785-47b8-83ef-60c8dcd8838d"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend incision and drainage for the abscess. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-spelled-e6f6ab52-8ab0-474f-b083-a34a42d8a52f"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend incision and drainage for the abscess. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-spelled-d45cdf85-7889-4cc5-ace1-f3cfb3eb7655"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-spelled-40a2bac2-c484-47ee-a687-08204fb6e36d"
+        }
+      ]
+    },
+    {
+      "scenario": "drain",
+      "encounterId": "1179d05e-8c11-4e1e-88f7-da18d6283ea0",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-drain-f9302737-2a64-441d-a3a0-068954613067"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-drain-facbeb52-f518-4a6f-b0f0-6e9f1af461d2"
+        },
+        {
+          "label": "consent",
+          "question": "We need to drain the abscess. Do you agree?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-drain-e59ea542-6267-41fe-8014-d76232c4ded8"
+        },
+        {
+          "label": "repeat",
+          "question": "We need to drain the abscess. Do you agree?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-drain-f4501f18-4941-4d76-acca-e231a902b71c"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-drain-5a9a3a54-fa51-4ef3-a031-3c05330ffde4"
+        }
+      ]
+    },
+    {
+      "scenario": "numb-drain",
+      "encounterId": "2c5c0aeb-b26c-4de4-90f0-5301bd2ed3ff",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "Relevant opening, acknowledgment of earlier explanation, explicit consent plus authorized first question, once-only repetition and appropriate closure.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-numb-drain-18ec7cd8-0736-4c6a-b595-6c775498675b"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-numb-drain-b91b50e2-9a60-45f4-878f-e5b456a53e5f"
+        },
+        {
+          "label": "consent",
+          "question": "I'd like to numb the area and drain the abscess. Is that okay?",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "requestId": "consent-only-candidate-numb-drain-d7b43f49-026c-4906-b352-e370ac36340f"
+        },
+        {
+          "label": "repeat",
+          "question": "I'd like to numb the area and drain the abscess. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-numb-drain-470d0135-1511-4767-888d-b88792aa8df9"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-numb-drain-d2405aca-69a4-4631-b326-667d331c0177"
+        }
+      ]
+    },
+    {
+      "scenario": "opening-pus",
+      "encounterId": "f0d11b10-f813-429b-9001-ab86186adc38",
+      "originalStructuralVerdict": "FAIL",
+      "verdict": "FAIL",
+      "reason": "The opening-to-let-pus-out proposal received consent but omitted the eligible first follow-up. This remains FAIL; subsequent code revision is separately labeled.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-opening-pus-d2f9d0c7-f7fa-4944-b95c-88d11ed5e90c"
+        },
+        {
+          "label": "prior-explanation",
+          "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "response": "Okay, thank you.",
+          "requestId": "consent-only-candidate-opening-pus-3e18ac1f-2cc1-4dae-926e-47206969d2bb"
+        },
+        {
+          "label": "consent",
+          "question": "I recommend making a small opening to let the pus out of the abscess. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-opening-pus-2b3aa3f2-aef6-412b-b8a7-ee002d6ec0ba"
+        },
+        {
+          "label": "repeat",
+          "question": "I recommend making a small opening to let the pus out of the abscess. Is that okay?",
+          "response": "Yes, that’s okay.",
+          "requestId": "consent-only-candidate-opening-pus-4e21b43e-dc61-4d8f-ad26-8b7bd76d4382"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-opening-pus-36d2a35b-d4d3-4eb9-8106-cda3e7646cf8"
+        }
+      ]
+    },
+    {
+      "scenario": "root-canal-history",
+      "encounterId": "2159a520-6fd5-4f45-b1b8-30f5c89ef298",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "History answer preserves uncertainty about root canal and confirms no prior extraction, consistent with source facts.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-root-canal-history-5ccbe5d9-abe9-4a49-b722-80669decdb00"
+        },
+        {
+          "label": "history",
+          "question": "Did that tooth have a root canal before?",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed.",
+          "requestId": "consent-only-candidate-root-canal-history-f0597b6e-bea2-4095-bdaa-ba2d00098dae"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-root-canal-history-fb280fb9-a003-468e-951a-ef6d8c96eded"
+        }
+      ]
+    },
+    {
+      "scenario": "extraction-history",
+      "encounterId": "c9260506-cca4-4a4c-99db-807387021b0e",
+      "originalStructuralVerdict": "REVIEW",
+      "verdict": "PASS",
+      "reason": "History answer preserves uncertainty about root canal and confirms no prior extraction, consistent with source facts.",
+      "attempts": [
+        {
+          "label": "opening",
+          "question": "What brings you in today?",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "requestId": "consent-only-candidate-extraction-history-b03da69e-62ed-4cfe-a3dc-701cb4095eb5"
+        },
+        {
+          "label": "history",
+          "question": "Was the painful tooth extracted before?",
+          "response": "No, it's still there.",
+          "requestId": "consent-only-candidate-extraction-history-39d87649-d090-4199-b2fe-8155e3ec0b37"
+        },
+        {
+          "label": "closure",
+          "question": "Thank you.",
+          "response": "You're welcome.",
+          "requestId": "consent-only-candidate-extraction-history-2350e828-5eb0-446f-9328-8d6d2fed1666"
+        }
+      ]
+    }
+  ]
+}

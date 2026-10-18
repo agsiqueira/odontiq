@@ -1,0 +1,635 @@
+{
+  "ownedSessionId": "sess_3Ks5Yc4dq43lBL9W2n5nsTXaqVG",
+  "attempts": [
+    {
+      "label": "opening",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-4c36eac8-87eb-4fd0-9526-7e7db1babab6",
+        "studentMessageId": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+        "message": "What brings you in today?",
+        "conversation": [],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:43.418Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "governed-patient-core",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-4c36eac8-87eb-4fd0-9526-7e7db1babab6",
+        "patientMessageId": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+        "patientQuestionStateVersion": 1
+      },
+      "durationMs": 649,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 1,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": false,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": []
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:44.196Z"
+      },
+      "emissions": []
+    },
+    {
+      "label": "prior-explanation",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-b24d184e-850e-4caa-92c8-bfa835906234",
+        "studentMessageId": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+        "message": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:44.379Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "Okay, thank you.",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-b24d184e-850e-4caa-92c8-bfa835906234",
+        "patientMessageId": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+        "patientQuestionStateVersion": 1
+      },
+      "durationMs": 842,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 2,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": false,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": []
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:45.351Z"
+      },
+      "emissions": []
+    },
+    {
+      "label": "injected-classifier-failure",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-a6299219-da1d-4749-9357-a42c71f03d2f",
+        "studentMessageId": "9411d85e-cbeb-400d-9a50-e8e8e0b1b49a",
+        "message": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T14:24:45.362Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:45.366Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "Yes, that’s okay.",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-a6299219-da1d-4749-9357-a42c71f03d2f",
+        "patientMessageId": "c417973e-c8d6-4573-8073-1c9533a3eb50",
+        "patientQuestionStateVersion": 1
+      },
+      "durationMs": 285,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 3,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": false,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": []
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:45.785Z"
+      },
+      "emissions": []
+    },
+    {
+      "label": "planned-new-turn-recovery",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-59d3b898-a998-4b02-9b4b-0bd4cc3d8837",
+        "studentMessageId": "242f3196-9e67-4262-9a7d-3acc9763d05b",
+        "message": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T14:24:45.362Z"
+          },
+          {
+            "id": "9411d85e-cbeb-400d-9a50-e8e8e0b1b49a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.366Z"
+          },
+          {
+            "id": "c417973e-c8d6-4573-8073-1c9533a3eb50",
+            "role": "patient",
+            "text": "Yes, that’s okay.",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:45.794Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-59d3b898-a998-4b02-9b4b-0bd4cc3d8837",
+        "patientMessageId": "1e702204-3419-4247-9047-e023d83c9a15",
+        "selectedQuestionId": "c3-follow-up-needed-question",
+        "patientQuestionStateVersion": 2
+      },
+      "durationMs": 510,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 4,
+        "state": {
+          "version": 2,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": true,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": true,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:46.440Z"
+      },
+      "emissions": [
+        {
+          "id": "e0e91c4e-9a80-4685-85bb-656edd4d4707",
+          "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "43f9473c-598b-499e-a22d-dbbb4495f902",
+          "emittedAt": "2026-10-18T14:24:46.441Z"
+        }
+      ]
+    },
+    {
+      "label": "same-request-replay",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-59d3b898-a998-4b02-9b4b-0bd4cc3d8837",
+        "studentMessageId": "242f3196-9e67-4262-9a7d-3acc9763d05b",
+        "message": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T14:24:45.362Z"
+          },
+          {
+            "id": "9411d85e-cbeb-400d-9a50-e8e8e0b1b49a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.366Z"
+          },
+          {
+            "id": "c417973e-c8d6-4573-8073-1c9533a3eb50",
+            "role": "patient",
+            "text": "Yes, that’s okay.",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:46.451Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-59d3b898-a998-4b02-9b4b-0bd4cc3d8837",
+        "patientMessageId": "1e702204-3419-4247-9047-e023d83c9a15",
+        "selectedQuestionId": "c3-follow-up-needed-question",
+        "patientQuestionStateVersion": 2
+      },
+      "durationMs": 10,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 4,
+        "state": {
+          "version": 2,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": true,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": true,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:46.440Z"
+      },
+      "emissions": [
+        {
+          "id": "e0e91c4e-9a80-4685-85bb-656edd4d4707",
+          "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "43f9473c-598b-499e-a22d-dbbb4495f902",
+          "emittedAt": "2026-10-18T14:24:46.441Z"
+        }
+      ]
+    },
+    {
+      "label": "new-turn-repeat",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-0c576c4f-dbc1-44bd-9bc0-818e04e88194",
+        "studentMessageId": "4649fb67-16ed-49a3-b729-ca9216612c98",
+        "message": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T14:24:45.362Z"
+          },
+          {
+            "id": "9411d85e-cbeb-400d-9a50-e8e8e0b1b49a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.366Z"
+          },
+          {
+            "id": "c417973e-c8d6-4573-8073-1c9533a3eb50",
+            "role": "patient",
+            "text": "Yes, that’s okay.",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          },
+          {
+            "id": "242f3196-9e67-4262-9a7d-3acc9763d05b",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          },
+          {
+            "id": "1e702204-3419-4247-9047-e023d83c9a15",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T14:24:46.451Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:46.602Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "Yes, that’s okay.",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-0c576c4f-dbc1-44bd-9bc0-818e04e88194",
+        "patientMessageId": "f9b88b34-196e-419a-9718-ab434fa9b315",
+        "patientQuestionStateVersion": 3
+      },
+      "durationMs": 828,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 5,
+        "state": {
+          "version": 3,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": true,
+            "promptDentalFollowUpConfirmed": true,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": true,
+            "patientAgreedToIncisionAndDrainage": true,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": true,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:47.553Z"
+      },
+      "emissions": [
+        {
+          "id": "e0e91c4e-9a80-4685-85bb-656edd4d4707",
+          "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "43f9473c-598b-499e-a22d-dbbb4495f902",
+          "emittedAt": "2026-10-18T14:24:46.441Z"
+        }
+      ]
+    },
+    {
+      "label": "closure",
+      "payload": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "caseId": "case-03",
+        "requestId": "consent-fault-ff783490-073d-4921-9f5b-17daf008d997",
+        "studentMessageId": "fbdf6ca4-5185-44f3-97b3-fe9ba001ccc1",
+        "message": "Thank you.",
+        "conversation": [
+          {
+            "id": "26513f2c-da56-4b9f-944e-ee93cb18a918",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T14:24:43.418Z"
+          },
+          {
+            "id": "ee7d7002-7694-431c-8f77-a6fed97e8331",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "593ea308-6b34-4ca6-8deb-73d8da1d8a2d",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T14:24:44.379Z"
+          },
+          {
+            "id": "a7f19301-16fa-40a3-8db6-995b61e5c0eb",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T14:24:45.362Z"
+          },
+          {
+            "id": "9411d85e-cbeb-400d-9a50-e8e8e0b1b49a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.366Z"
+          },
+          {
+            "id": "c417973e-c8d6-4573-8073-1c9533a3eb50",
+            "role": "patient",
+            "text": "Yes, that’s okay.",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          },
+          {
+            "id": "242f3196-9e67-4262-9a7d-3acc9763d05b",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:45.794Z"
+          },
+          {
+            "id": "1e702204-3419-4247-9047-e023d83c9a15",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T14:24:46.451Z"
+          },
+          {
+            "id": "4649fb67-16ed-49a3-b729-ca9216612c98",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T14:24:46.602Z"
+          },
+          {
+            "id": "f9b88b34-196e-419a-9718-ab434fa9b315",
+            "role": "patient",
+            "text": "Yes, that’s okay.",
+            "timestamp": "2026-10-18T14:24:47.565Z"
+          }
+        ],
+        "coveredChecklistItems": []
+      },
+      "sentAt": "2026-10-18T14:24:47.565Z",
+      "status": 200,
+      "body": {
+        "success": true,
+        "provider": "navigator",
+        "response": "You're welcome.",
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "requestId": "consent-fault-ff783490-073d-4921-9f5b-17daf008d997",
+        "patientMessageId": "80c5a0e5-30d1-4313-8eaa-f7f537d50e52",
+        "patientQuestionStateVersion": 3
+      },
+      "durationMs": 25,
+      "state": {
+        "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+        "version": 6,
+        "state": {
+          "version": 3,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": true,
+            "promptDentalFollowUpConfirmed": true,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": true,
+            "patientAgreedToIncisionAndDrainage": true,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": true,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T14:24:44.196Z",
+        "updatedAt": "2026-10-18T14:24:47.706Z"
+      },
+      "emissions": [
+        {
+          "id": "e0e91c4e-9a80-4685-85bb-656edd4d4707",
+          "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "43f9473c-598b-499e-a22d-dbbb4495f902",
+          "emittedAt": "2026-10-18T14:24:46.441Z"
+        }
+      ]
+    }
+  ],
+  "setup": {
+    "status": 200,
+    "body": {
+      "id": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+      "caseId": "case-03",
+      "status": "ACTIVE",
+      "version": 1,
+      "createdAt": "2026-10-18T14:24:43.409Z",
+      "updatedAt": "2026-10-18T14:24:43.409Z",
+      "fresh": true
+    },
+    "durationMs": 19
+  },
+  "encounterId": "670bdd0b-e3ed-4b8b-8c78-806b875fb9db",
+  "outcome": "PASS",
+  "exactOwnedSessionRevoked": true
+}

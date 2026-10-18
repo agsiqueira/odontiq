@@ -6,9 +6,7 @@ const CURRENT_PROPOSAL_PATTERN =
 
 const ABSCESS_CONTEXT_PATTERN = /\b(?:abscess|infection|pus|pressure)\b/i;
 const DRAINAGE_ACTION_PATTERN =
-  /\b(?:incision and drainage|i\s*(?:&|and)\s*d|drain(?:age|ing)?|allow (?:the )?(?:infection|pus) to drain|make (?:a )?(?:small )?(?:opening|incision))\b/i;
-const EXPLANATION_PATTERN =
-  /\b(?:drain|release|relieve|remove|let out|allow)\w*\b.{0,45}\b(?:infection|pus|pressure)\b|\b(?:infection|pus|pressure)\b.{0,45}\b(?:drain|release|relieve|remove|let out)\w*\b/i;
+  /\b(?:incision and drainage|i\s*(?:&|and)\s*d|drain(?:age|ing)?|allow (?:the )?(?:infection|pus) to drain|mak(?:e|ing) (?:a )?(?:small )?(?:opening|incision))\b/i;
 const TENTATIVE_OR_DEFERRED_PATTERN =
   /\b(?:may|might|could|possibly|perhaps|consider|later|eventually|in the future|if (?:it|things|the swelling)|depending on)\b/i;
 const HISTORICAL_PATTERN =
@@ -21,7 +19,7 @@ export const CASE_3_CONSENT_RESPONSE = "Yes, that’s okay.";
 export function isTreatmentConsentRequest(message: string): boolean {
   return CONSENT_REQUEST_PATTERN.test(message) &&
     CURRENT_PROPOSAL_PATTERN.test(message) &&
-    TREATMENT_SUBJECT_PATTERN.test(message) &&
+    (TREATMENT_SUBJECT_PATTERN.test(message) || DRAINAGE_ACTION_PATTERN.test(message)) &&
     !HISTORICAL_PATTERN.test(message);
 }
 
@@ -30,7 +28,6 @@ export function case3ConsentResponse(caseId: string, message: string): string | 
   if (!isTreatmentConsentRequest(message)) return undefined;
   if (!ABSCESS_CONTEXT_PATTERN.test(message)) return undefined;
   if (!DRAINAGE_ACTION_PATTERN.test(message)) return undefined;
-  if (!EXPLANATION_PATTERN.test(message)) return undefined;
   if (TENTATIVE_OR_DEFERRED_PATTERN.test(message)) return undefined;
   if (HISTORICAL_PATTERN.test(message)) return undefined;
   return CASE_3_CONSENT_RESPONSE;

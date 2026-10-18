@@ -10,10 +10,13 @@ import {
   buildPatientDisclosureState,
   classifyProviderMessageIntent,
 } from "../src/lib/patientDisclosure";
+import { requiredFactsForTurn } from "../src/lib/patientTurnFacts";
+import { patientFactFallback } from "../src/lib/patientFactFallback";
 import { patientImmediateResponse } from "../src/lib/patientImmediateResponse";
 import { assessPatientOutputIntegrity } from "../src/lib/patientOutputGuard";
 import { getPatientQuestion } from "../src/lib/patientQuestions/catalog";
 import { classifyPatientQuestionTrigger } from "../src/lib/patientQuestions/classifier";
+import { parsePatientQuestionClassification } from "../src/lib/patientQuestions/schema";
 import { applyPatientQuestionClassification } from "../src/lib/patientQuestions/stateMachine";
 import {
   createEmptyPatientQuestionState,
@@ -24,7 +27,36 @@ import {
 const case3 = loadCase("case-03");
 assert(case3);
 
+for (const [message, expected] of [
+  ["I recommend making a small opening to let the pus out of the abscess. Is that okay?", true],
+  ["I recommend making a small incision in the abscess. Is that okay?", true],
+  ["I recommend not making a small opening in the abscess. Is that okay?", false],
+  ["I might recommend making a small opening in the abscess later. Is that okay?", false],
+  ["Have you ever had a small opening made in the abscess before?", false],
+  ["I recommend a root canal. Is that okay?", false],
+] as const) {
+  const events = { temporaryTreatmentActive: true, incisionAndDrainageProposed: true,
+    patientAgreedToIncisionAndDrainage: true };
+  const parsed = parsePatientQuestionClassification({
+    text: JSON.stringify({schemaVersion: 1, caseId: "case-03", events, confidence: 1,
+      evidence: ["student-current", "patient-draft"]}),
+    caseId: "case-03", studentMessageId: "current",
+    allowedEvents: ["temporaryTreatmentActive", "incisionAndDrainageProposed", "patientAgreedToIncisionAndDrainage"],
+    evidenceAliases: [
+      {alias: "student-current", messageId: "current", role: "student", content: message},
+      {alias: "patient-draft", messageId: "draft", role: "patient", content: "Yes, that’s okay."},
+    ],
+  });
+  assert.equal(parsed.success, expected, message);
+}
+
 const positiveMessages = [
+  "I recommend making a small opening to let the pus out of the abscess. Is that okay?",
+  "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+  "I recommend an I&D for the abscess. Is that okay?",
+  "I recommend incision and drainage for the abscess. Is that okay?",
+  "We need to drain the abscess. Do you agree?",
+  "I'd like to numb the area and drain the abscess. Is that okay?",
   "You have an abscess. I'd like to numb the area, make a small opening, and let the infection drain. Is that okay?",
   "You have an abscess. I’d like to numb the area, make a small opening, and let the infection drain. Is that okay?",
   "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
@@ -43,6 +75,7 @@ for (const message of positiveMessages) {
   });
   assert.equal(state.providerMessageIntent, "treatment_consent", message);
   assert.deepEqual(state.allowedThisTurn, [], message);
+  assert.deepEqual(requiredFactsForTurn(state,message,case3.supportingInfo.patientFacts ?? []),[],message);
   const response = patientImmediateResponse({
     caseId: "case-03",
     message,
@@ -53,6 +86,10 @@ for (const message of positiveMessages) {
 }
 
 const negativeMessages = [
+  "Have you ever had an I&D for an abscess?",
+  "Have you ever had incision and drainage for an abscess?",
+  "If the swelling worsens, we might consider draining the abscess later. Is that okay?",
+  "I recommend root canal treatment for this abscess. Is that okay?",
   "We should do an I&D.",
   "We may need to consider drainage later.",
   "I'm going to numb the area. Is that okay?",
@@ -78,6 +115,15 @@ for (const message of negativeMessages) {
   );
 }
 
+for (const message of ["Did that tooth have a root canal before?", "Was the painful tooth extracted before?"]) {
+  const state=buildPatientDisclosureState({caseData:case3,conversation:[],latestStudentMessage:message});
+  assert.equal(state.providerMessageIntent,"question",message);
+  assert.equal(case3ConsentResponse("case-03",message),undefined,message);
+  assert(state.allowedThisTurn.length>0,"real history questions must retain authoritative facts");
+  const fallback=patientFactFallback(state,message,case3.supportingInfo.patientFacts??[]);
+  assert(fallback && fallback!==CASE_3_CONSENT_RESPONSE,"history answers must not become consent");
+}
+
 for (const caseId of ["case-01", "case-02", "case-04", "case-05"]) {
   assert.equal(case3ConsentResponse(caseId, positiveMessages[0]), undefined, caseId);
 }
@@ -100,7 +146,7 @@ function classification(events: Partial<PatientQuestionEvents>): PatientQuestion
   };
 }
 
-const clearProposal = positiveMessages[1];
+const clearProposal = positiveMessages[0];
 const draftAgreement = case3ConsentResponse("case-03", clearProposal);
 assert.equal(draftAgreement, "Yes, that’s okay.");
 const classified = await classifyPatientQuestionTrigger({
