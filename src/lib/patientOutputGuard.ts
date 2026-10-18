@@ -59,12 +59,12 @@ export function expressesRequiredFact(response: string, fact: PatientDisclosureF
     "c5.constant": /\b(?:constant|all the time|won't go away|doesn't go away)\b/i,
     "c5.quality": /\b(?:deep|throbbing)\b/i,
     "c5.severity": /\b(?:nine|9)\s*(?:\/|out of)\s*(?:ten|10)\b|^\s*(?:nine|9)[.!]?\s*$|\bsevere\b/i,
-    "c5.spontaneous": /\b(?:spontaneous|on its own|without (?:a )?(?:trigger|reason)|starts? (?:by )?itself)\b/i,
+    "c5.spontaneous": /\b(?:spontaneous\w*|on its own|without (?:a )?(?:trigger|reason)|starts? (?:by )?itself)\b/i,
     "c5.nocturnal": /\b(?:wak\w*|sleep\w*|night)\b/i,
     "c5.cold": /\b(?:hurts?|painful)\b.{0,15}\b(?:when|with)\b.{0,25}\bcold\b|\bcold(?: drinks?| water| food)?\b.{0,20}\b(?:worsen\w*|hurts?|causes? pain|makes? (?:it|(?:the|my) (?:pain|tooth)) (?:worse|hurt))\b|\b(?:pain|it)\b.{0,20}\b(?:worse|worsen\w*)\b.{0,35}\bcold\b/i,
     "c5.lingering": /\b(?:linger\w*|doesn't (?:stop|go away)|does not (?:stop|go away)|keeps? hurting|persists?)\b/i,
-    "c5.chewing": /\bchew\w*\b.{0,35}\b(?:uncomfortable|hurt|pain)\b|\b(?:uncomfortable|hurt|pain)\b.{0,35}\bchew\w*\b/i,
-    "c5.biting": /\b(?:bit\w*|tap\w*)\b.{0,35}\b(?:hurt|pain|tender)\b|\b(?:hurt|pain|tender)\b.{0,35}\b(?:bit\w*|tap\w*)\b/i,
+    "c5.chewing": /\bchew\w*\b.{0,35}\b(?:uncomfortable|hurt\w*|pain)\b|\b(?:uncomfortable|hurt\w*|pain)\b.{0,35}\bchew\w*\b/i,
+    "c5.biting": /\b(?:bit\w*|tap\w*|percussion)\b.{0,35}\b(?:hurt\w*|pain|tender|discomfort|uncomfortable)\b|\b(?:hurt\w*|pain|tender|discomfort|uncomfortable)\b.{0,35}\b(?:bit\w*|tap\w*|percussion)\b/i,
     "c2.duration": /\b(?:seven|7)\s+days?\b|\b(?:about |around |approximately |roughly )?(?:a|one)\s+week\b/i,
     "c3.duration": /\b(?:three|3)\s+days?\b/i,
     "c4.duration": /\b(?:five|5)\s+days?\b/i,
@@ -134,7 +134,7 @@ export function expressesRequiredFact(response: string, fact: PatientDisclosureF
     "c3.pain-severity": /\b(?:eight|8)\s*(?:\/|out of)\s*(?:ten|10)\b|^\s*(?:eight|8)[.!]?\s*$/i,
     "c3.radiation": /\bright ear\b/i,
     "c3.biting": /\b(?:biting|bite|chewing|chew)\b.{0,35}\b(?:hurt|pain|sharp|tender)\b|\b(?:hurt|pain|sharp|tender)\b.{0,35}\b(?:biting|bite|chewing|chew)\b/i,
-    "c3.percussion": /\b(?:tap|tapping|percussion)\b.{0,35}\b(?:hurt|pain|tender)\b|\b(?:hurt|pain|tender)\b.{0,35}\b(?:tap|tapping|percussion)\b/i,
+    "c3.percussion": /\b(?:tap|tapping|percussion)\b.{0,35}\b(?:hurt\w*|pain|tender|discomfort|uncomfortable)\b|\b(?:hurt\w*|pain|tender|discomfort|uncomfortable)\b.{0,35}\b(?:tap|tapping|percussion)\b/i,
     "c3.gum-palpation": /\b(?:yes\b.{0,20})?(?:hurt|pain|tender)\w*\b.{0,35}\b(?:press|pressure|palpat|touch)\w*\b|\b(?:press|pressure|palpat|touch)\w*\b.{0,35}\b(?:hurt|pain|tender)\w*\b/i,
     "c3.cold": /\b(?:cold|cold drinks?|cold water)\b.{0,35}\b(?:does not|doesn't|not|no)\b.{0,20}\b(?:hurt|painful|pain)\b|\b(?:no|not|doesn't|does not)\b.{0,35}\b(?:hurt|painful|pain)\b.{0,25}\bcold\b/i,
     "c3.swelling": /\b(?:face|lower[- ]right side)\b.{0,30}\b(?:puffy|swollen|swelling)\b|\b(?:puffy|swollen|swelling)\b.{0,30}\b(?:face|lower[- ]right side)\b/i,
@@ -343,7 +343,7 @@ function findCase3Contradiction(response: string): string | undefined {
   if (/\b(?:[0-7]|9|10)\s*(?:\/|out of)\s*10\b/i.test(response) && /\b(?:now|current|currently|pain is|rate)\b/i.test(response)) return "contradiction of Case 3 current 8/10 severity";
   if (/\bleft ear\b/i.test(response)) return "contradiction of Case 3 right-ear radiation";
   if (/\bcold\b.{0,30}\b(?:hurt|hurts|painful|worse|sensitive|lingers?)\b/i.test(response) && !/\b(?:no|not|doesn't|does not)\b/i.test(response)) return "contradiction of Case 3 no cold pain";
-  if (/\b(?:no|not|doesn't|does not)\b.{0,30}\b(?:bite|biting|chew|chewing|tap|tapping|percussion)\b.{0,30}\b(?:hurt|pain|tender)\b/i.test(response)) return "contradiction of Case 3 biting or percussion pain";
+  if (/\b(?:no|not|doesn't|does not)\b.{0,30}\b(?:bite|biting|chew|chewing|tap|tapping|percussion)\b.{0,30}\b(?:hurt\w*|pain|tender|discomfort|uncomfortable)\b/i.test(response)) return "contradiction of Case 3 biting or percussion pain";
   if (/\b(?:i(?:'ve| have| am|'m)|feeling)\b.{0,20}\bfever(?:ish)?\b/i.test(response) && !/\b(?:no|not|haven't|have not|don't|do not)\b.{0,30}\bfever(?:ish)?\b/i.test(response)) return "contradiction of Case 3 no-fever history";
   if (/\b(?:i have|i'm having|i am having)\b\s+(?!no\b|not\b).{0,25}\b(?:trouble|difficulty)\b.{0,15}\b(?:breathing|swallowing)\b|\bmy voice\b.{0,20}\b(?:muffled|changed)\b|\b(?:cannot|can't|unable to)\b.{0,20}\bopen\b.{0,15}\bmouth\b/i.test(response)) return "contradiction of Case 3 airway or mouth-opening negatives";
   if (/\b(?:i have|my)\b.{0,20}\b(?:chest pain|stiff neck|neck stiffness|neck is stiff)\b/i.test(response)) return "contradiction of Case 3 chest or neck negatives";

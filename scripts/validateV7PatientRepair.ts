@@ -5,6 +5,7 @@ import { buildPatientDisclosureState, type PatientDisclosureFact } from '../src/
 import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
 import { patientImmediateResponse, planOnlyAcknowledgment } from '../src/lib/patientImmediateResponse';
 import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
+import { expressesRequiredFact } from '../src/lib/patientOutputGuard';
 import { requiredFactsForTurn } from '../src/lib/patientTurnFacts';
 import { patientAnswerWithoutQuestions, constrainQuestionClassification } from '../src/lib/patientQuestions/eligibility';
 import { applyPatientQuestionClassification } from '../src/lib/patientQuestions/stateMachine';
@@ -54,6 +55,9 @@ for(const question of ['Where does it hurt?','Is it on the right or left?','Whic
  const s=buildPatientDisclosureState({caseData:loadCase('case-05')!,conversation:[],latestStudentMessage:question});
  assert(requiredFactsForTurn(s,question,facts('case-05')).some(f=>f.id==='c5.location'),question);
 }
+for(const fact of facts('case-05').filter(f=>/^c5\.(?:location|duration|constant|quality|severity|spontaneous|nocturnal|cold|lingering|chewing|biting)$/.test(f.id)))assert(expressesRequiredFact(fact.text,fact), `Canonical positive attribute rejected: ${fact.id}`);
+const bitingFact=facts('case-05').find(f=>f.id==='c5.biting')!;
+for(const text of ['There is a little discomfort when I bite or tap the tooth.','Tapping causes slight discomfort.'])assert(expressesRequiredFact(text,bitingFact),text);
 const coldFact=facts('case-05').find(f=>f.id==='c5.cold')!;
 const lingerFact=facts('case-05').find(f=>f.id==='c5.lingering')!;
 assert(!validatePatientFinalResponse('The pain lingers after I remove the cold drink.',{canonicalFacts:facts('case-05'),visibleFacts:[coldFact,lingerFact],requiredFacts:[coldFact,lingerFact]}).valid,'Cold/pain co-occurrence is not an assertion that cold worsens pain');

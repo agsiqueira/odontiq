@@ -1,0 +1,57 @@
+[
+  {
+    "id": "c5.duration",
+    "source": "The pain has worsened over four days.",
+    "recognized": true
+  },
+  {
+    "id": "c5.location",
+    "source": "The pain is in the lower-left jaw; the patient does not know which tooth is causing it.",
+    "recognized": true
+  },
+  {
+    "id": "c5.constant",
+    "source": "The pain is now constant.",
+    "recognized": true
+  },
+  {
+    "id": "c5.quality",
+    "source": "The pain feels deep and throbbing.",
+    "recognized": true
+  },
+  {
+    "id": "c5.severity",
+    "source": "The pain is severe, rated 9/10 (nine out of ten).",
+    "recognized": true
+  },
+  {
+    "id": "c5.spontaneous",
+    "source": "The pain occurs spontaneously without anything touching the tooth.",
+    "recognized": false
+  },
+  {
+    "id": "c5.nocturnal",
+    "source": "The pain wakes the patient at night and interrupts sleep.",
+    "recognized": true
+  },
+  {
+    "id": "c5.cold",
+    "source": "Cold drinks worsen the pain.",
+    "recognized": true
+  },
+  {
+    "id": "c5.lingering",
+    "source": "The pain does not stop immediately after the cold is removed; it lingers for a little while afterward.",
+    "recognized": true
+  },
+  {
+    "id": "c5.chewing",
+    "source": "Chewing on the affected side is uncomfortable.",
+    "recognized": true
+  },
+  {
+    "id": "c5.biting",
+    "source": "There is slight biting and percussion discomfort.",
+    "recognized": false
+  }
+]

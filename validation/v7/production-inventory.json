@@ -584,6 +584,36 @@
       "groupId": "SMOKE",
       "expectedMeaning": "Current admission/surgery permits extraction question.",
       "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-BITING",
+      "caseId": "case-05",
+      "question": "Does it hurt when you bite or tap the tooth?",
+      "expectedMeaning": "Slight biting/percussion discomfort; substantive attribute permits request.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-SPONTANEOUS",
+      "caseId": "case-05",
+      "question": "Does the pain happen on its own without touching the tooth?",
+      "expectedMeaning": "Spontaneous current pain is supported and permits request.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
+    },
+    {
+      "testId": "FOCUS-C5-TRIGGERS",
+      "caseId": "case-05",
+      "question": "What makes the pain worse?",
+      "expectedMeaning": "Cold worsens pain, chewing is uncomfortable, slight biting/percussion discomfort; do not omit requested factors.",
+      "setupQuestions": [],
+      "cohort": "production-smoke",
+      "groupId": "SMOKE",
+      "contextRequirement": "None"
     }
   ]
 }

@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {loadCase} from '../../src/data/cases';import {expressesRequiredFact} from '../../src/lib/patientOutputGuard';
+const rows=loadCase('case-05')!.supportingInfo.patientFacts!.filter(f=>/^c5\.(?:location|duration|constant|quality|severity|spontaneous|nocturnal|cold|lingering|chewing|biting)$/.test(f.id)).map(f=>({id:f.id,source:f.text,recognized:expressesRequiredFact(f.text,f)}));fs.writeFileSync('validation/v7/source-positive-first-probe.json',JSON.stringify(rows,null,2));
