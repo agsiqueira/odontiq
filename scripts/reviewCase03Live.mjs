@@ -28,16 +28,17 @@ export function reviewCase03Live(report) {
     if (failed) {
       if (failed.emissions.some(e => e.questionId === "c3-follow-up-why") || JSON.stringify(failed.persistedState?.state) !== JSON.stringify(consent.persistedState?.state)) failures.push("Failed attempt changed eligibility or consumed question");
       if (test.id.includes("generation") && (failed.status !== 502 || failed.persistedTurn !== null)) failures.push("Injected generation failure did not fail without persisting a turn");
-      if (test.id.includes("classifier") && (failed.status !== 200 || failed.body.selectedQuestionId)) failures.push("Classifier failure did not fail closed");
+      if ((test.id.includes("classifier") || test.id.includes("failed-explanation")) && (failed.status !== 200 || failed.body.selectedQuestionId)) failures.push("Classifier/verifier failure did not fail closed");
     }
-    // Additional whole-conversation probe. Keep this distinct from the unchanged
-    // current-turn rubric: it intentionally exposes the unresolved authority gap.
-    if (!test.expectedWhy && repeated?.body.selectedQuestionId === "c3-follow-up-why") findings.push("A later bare confirmation asks Why even though both reasons were already explained on the previous turn; current-turn executable rule permits this");
-    if (test.id === "prior-explanation-current-confirmation" && answer?.body.selectedQuestionId === "c3-follow-up-why") findings.push("Both reasons were provided during consent, yet a later bare confirmation asks Why; existing current-turn contract permits this, while the whole conversation already contains the answer");
+    if (!test.expectedWhy && why.length !== 0) failures.push("Already-answered Why was emitted despite two validated explanations");
+    if (!test.expectedWhy) {
+      const remembered = answer?.persistedState?.state?.case3Explanations;
+      if (!remembered?.temporary?.quote || !remembered?.definitive?.quote) failures.push("Suppression lacks separately persisted explanation evidence");
+    }
     return { id: test.id, contractOutcome: failures.length ? "FAIL" : "PASS",
       outcome: failures.length || findings.length ? "FAIL" : "PASS", failures, findings };
   });
-  return { reviewedAt: new Date().toISOString(), rubric: "Unchanged V7/V8 current-turn contract; separate whole-conversation already-answered probe", rows,
+  return { reviewedAt: new Date().toISOString(), rubric: "PR3 user-authorized durable validated explanations; independent witnesses required; historical verdicts preserved", rows,
     counts: Object.fromEntries(["PASS", "FAIL", "ERROR"].map(k => [k, rows.filter(r => r.outcome === k).length])),
     note: "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger." };
 }

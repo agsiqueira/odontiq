@@ -12,7 +12,7 @@ http.createServer(async (req, res) => {
   let body = ""; for await (const chunk of req) body += chunk;
   const record = { at: new Date().toISOString(), path: req.url, request: JSON.parse(body) };
   const classification = body.includes("schemaVersion") && body.includes("student-current");
-  record.kind = classification ? "classifier" : "generation";
+  record.kind = body.includes("Verify two independent clinical explanations") ? "explanation" : classification ? "classifier" : "generation";
   try {
     if (fault && (!fault.kind || fault.kind === record.kind)) {
       record.injected = true; record.status = fault.status; record.response = "injected local verification failure";

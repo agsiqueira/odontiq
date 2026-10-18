@@ -1,6 +1,7 @@
 import type { AIProvider } from "@/lib/ai/provider";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import { constrainQuestionClassification } from "./eligibility";
+import { verifyCase3Explanations } from "./explanationScope";
 import { loadCase } from "../../data/cases";
 import { buildPatientQuestionClassifierPrompt } from "./prompt";
 import { parsePatientQuestionClassification } from "./schema";
@@ -32,6 +33,11 @@ export async function classifyPatientQuestionTrigger(input: {
       allowedEvents: prompt.allowedEvents,
       evidenceAliases: prompt.evidenceAliases,
     });
+    if (parsed.success && input.caseId === "case-03") {
+      parsed.classification.case3Explanations = await verifyCase3Explanations(input.provider, input.studentMessage, input.studentMessageId);
+      parsed.classification.detectedEvents.drainageTemporaryOrNondefinitiveExplained = Boolean(parsed.classification.case3Explanations.temporary);
+      parsed.classification.detectedEvents.definitiveDentalTreatmentExplained = Boolean(parsed.classification.case3Explanations.definitive);
+    }
     return parsed.success ? { success: true, classification: constrainQuestionClassification({
       classification: parsed.classification,
       studentMessage: input.studentMessage,

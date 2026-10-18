@@ -129,7 +129,7 @@ Use only the allowed event definitions for this case; never add a field for anot
 ${input.caseId === "case-03" && allowedEvents.includes("promptDentalFollowUpConfirmed") ? `The three follow-up events refer ONLY to student-current. Cite student-current for any true follow-up event.
 Confirming a prompt dentist appointment does not explain definitive treatment, even when earlier messages describe drainage.
 Do not copy an explanation from student-prior or patient messages into a current explanation flag.
-Suppressing Why requires BOTH an actual explanation of drainage's limited effect AND an explanation of root canal, extraction or equivalent definitive care. Generic advice to see a dentist is not the latter.` : ""}
+These are current-turn labels, not the final question decision. Application code separately validates each explanation and remembers it across turns. Generic advice to see a dentist is not a definitive-treatment explanation.` : ""}
 ${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
 A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Example: patient says tooth pain keeps waking me => patientPainDescribed=true.

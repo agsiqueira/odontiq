@@ -20,7 +20,7 @@ const events = { promptDentalFollowUpConfirmed: true, drainageTemporaryOrNondefi
 const classified = await classifyPatientQuestionTrigger({ caseId:"case-03", state:prior,
   studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",
   draftPatientResponse:"Okay, I'll keep my appointment.", conversation:[],
-  provider:{name:"synthetic-false-explanation-classifier",generateText:async () => ({text:JSON.stringify({schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
+  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("Verify two independent") ? {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
 });
 assert(classified.success);
 assert.deepEqual(classified.classification.detectedEvents,{...events,drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false});
@@ -39,7 +39,13 @@ assert.equal(JSON.stringify(repository.saved),snapshot);
 const later=await service.finalizeTurn({...input,requestId:"later"});
 assert.equal(later.selectedQuestionId,undefined);assert.equal(repository.saved.emissions.length,1);
 repository.reset(prior);
-const alreadyAnswered=await service.finalizeTurn({...input,questionEvidence:{studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",conversation:[]}});
+const proof={temporary:{messageId:"current",quote:"Drainage is temporary."},definitive:{messageId:"current",quote:"You still need root canal treatment or extraction."}};
+const explainedInput={...input,classification:{...raw,case3Explanations:proof}};
+await assert.rejects(service.finalizeTurn({...explainedInput,questionEvidence:{studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",conversation:[]},validateFinalResponse:()=>{throw Error("reject explanations");}}));
+assert.equal(repository.saved.state.case3Explanations,undefined,"rejected explanations must not become durable");
+const alreadyAnswered=await service.finalizeTurn({...explainedInput,questionEvidence:{studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",conversation:[]}});
 assert.equal(alreadyAnswered.selectedQuestionId,undefined,"genuinely answered Why remains suppressed");
 assert.equal(repository.saved.emissions.length,0);
+const remembered=await service.finalizeTurn({...input,requestId:"after-explanation"});
+assert.equal(remembered.selectedQuestionId,undefined,"validated reasons survive bare confirmation");
 console.log("Case3 classifier and real final-assembly service: false flags, validation rejection, retry, idempotency, once-only and answered control passed (in-memory repository, no DB).");

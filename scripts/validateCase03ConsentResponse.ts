@@ -107,7 +107,8 @@ const classified = await classifyPatientQuestionTrigger({
   provider: {
     name: "case-03-consent-validator",
     generateConversationResponse: async () => ({ text: "unused" }),
-    generateText: async ({ messages }) => {
+    generateText: async ({ messages, systemPrompt }) => {
+      if (systemPrompt.startsWith("Verify two independent")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
       assert(messages[0]?.content.includes(clearProposal));
       assert(messages[0]?.content.includes(draftAgreement));
       return {
@@ -185,11 +186,11 @@ assert.equal(whyRepeat.selectedQuestionId, undefined);
 const completeExplanation = applyPatientQuestionClassification({
   caseId: "case-03",
   state: initial.state,
-  classification: classification({
+  classification: {...classification({
     promptDentalFollowUpConfirmed: true,
     drainageTemporaryOrNondefinitiveExplained: true,
     definitiveDentalTreatmentExplained: true,
-  }),
+  }),case3Explanations:{temporary:{messageId:"student-current-id",quote:"Drainage is temporary."},definitive:{messageId:"student-current-id",quote:"You need root canal treatment."}}},
 });
 assert.equal(completeExplanation.selectedQuestionId, undefined);
 

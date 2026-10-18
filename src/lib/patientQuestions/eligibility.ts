@@ -1,5 +1,5 @@
 import { assessClinicalPlanWitness } from "./clinicalPlan";
-import { currentCase3Explanations } from "./explanationScope";
+import { currentExplanationWitness } from "./explanationScope";
 import { type PatientDisclosureFact } from "../patientDisclosure";
 import { isPatientConversationClosure } from "../patientConversationClosure";
 import { expressesRequiredFact } from "../patientOutputGuard";
@@ -29,13 +29,13 @@ export function constrainQuestionClassification(input: {
     // borrowed as an explanation. Keep the independently supported confirmation.
     const currentProviderEvidence = result.evidenceMessageIds.includes(result.analyzedStudentMessageId)
       && result.evidenceAliases.includes("student-current");
-    const explanations = currentCase3Explanations(input.studentMessage);
+    const temporary = currentExplanationWitness(result.case3Explanations, "temporary", input.studentMessage, result.analyzedStudentMessageId);
+    const definitive = currentExplanationWitness(result.case3Explanations, "definitive", input.studentMessage, result.analyzedStudentMessageId);
+    result.case3Explanations = { ...(temporary ? { temporary } : {}), ...(definitive ? { definitive } : {}) };
     if (result.detectedEvents.promptDentalFollowUpConfirmed && !currentProviderEvidence)
       result.detectedEvents.promptDentalFollowUpConfirmed = false;
-    if (result.detectedEvents.drainageTemporaryOrNondefinitiveExplained && (!currentProviderEvidence || !explanations.temporary))
-      result.detectedEvents.drainageTemporaryOrNondefinitiveExplained = false;
-    if (result.detectedEvents.definitiveDentalTreatmentExplained && (!currentProviderEvidence || !explanations.definitive))
-      result.detectedEvents.definitiveDentalTreatmentExplained = false;
+    result.detectedEvents.drainageTemporaryOrNondefinitiveExplained = Boolean(temporary);
+    result.detectedEvents.definitiveDentalTreatmentExplained = Boolean(definitive);
   }
   // Case 4's prerequisite is a provider act, not a topic. Preserve the model's
   // explicit act and verbatim current-message witness through final assembly.

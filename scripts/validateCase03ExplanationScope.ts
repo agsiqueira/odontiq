@@ -1,65 +1,52 @@
 import assert from "node:assert/strict";
+import { verifyCase3Explanations } from "../src/lib/patientQuestions/explanationScope";
 import { constrainQuestionClassification } from "../src/lib/patientQuestions/eligibility";
 import { applyPatientQuestionClassification } from "../src/lib/patientQuestions/stateMachine";
-import { createEmptyPatientQuestionState, type PatientQuestionClassification } from "../src/lib/patientQuestions/types";
-
+import { createEmptyPatientQuestionState, type Case3Explanations, type PatientQuestionClassification } from "../src/lib/patientQuestions/types";
+import type { AIProvider } from "../src/lib/ai/provider";
 const prior = createEmptyPatientQuestionState();
-prior.version = 4;
 prior.detectedEvents.temporaryTreatmentActive = true;
 prior.emittedQuestionIds = ["c3-follow-up-needed-question"];
-// Reconstructed production flags, not a claim to have retained the raw model JSON.
-const asserted: PatientQuestionClassification = {
-  schemaVersion: 1, caseId: "case-03", analyzedStudentMessageId: "current",
-  detectedEvents: { promptDentalFollowUpConfirmed: true,
-    drainageTemporaryOrNondefinitiveExplained: true, definitiveDentalTreatmentExplained: true },
-  confidence: 0.99, evidenceAliases: ["student-current"], evidenceMessageIds: ["current"],
-};
-function classify(message: string, classification = asserted) {
-  return constrainQuestionClassification({ classification, studentMessage: message,
-    patientResponse: "Okay, I'll keep my appointment.", facts: [], conversation: [
-      { id: "prior-plan", role: "student", text: "I recommend drainage to relieve the pressure.", timestamp: "2026-10-18T00:00:00Z" },
-      { id: "prior-patient", role: "patient", text: "Even with this treatment, do I still need to see my dentist soon?", timestamp: "2026-10-18T00:00:01Z" },
-    ] });
-}
-function selected(message: string, classification = asserted) {
-  return applyPatientQuestionClassification({ caseId: "case-03", state: prior,
-    classification: classify(message, classification) });
-}
 const bare = "Yes, you still need to see your dentist promptly.";
-assert.equal(selected(bare).selectedQuestionId, "c3-follow-up-why", "production omission must reproduce before the fix");
-for (const message of [bare, "Please arrange an urgent dental appointment.",
-  "Yes, please keep that appointment.", "You need dental follow-up as soon as possible.",
-  "Drainage only relieves pressure. You still need to see a dentist.",
-  "You still need a root canal. Please see your dentist soon.",
-  "You need to see your dentist. Have you had a root canal before?",
-  "You still need prompt dental care. In the past, extraction was discussed.",
-  "You still need a dentist. If it gets worse, you might need an extraction.",
-  "You still need a dentist. You do not need a root canal.",
-  "Drainage is temporary. Your dentist can discuss root canal treatment with you.",
-  "Drainage is temporary. A root canal is not required.",
-  "Drainage only relieves pressure. No root canal is needed.",
-]) assert.equal(selected(message).selectedQuestionId, "c3-follow-up-why", message);
-
-for (const message of [
-  "Drainage only relieves pressure. You still need root canal treatment or extraction.",
-  "The I&D is temporary; definitive dental treatment is still required.",
-  "Draining the abscess does not fix the tooth. Your dentist must treat the underlying cause.",
-  "Drainage does not replace the need for a root canal. You still need definitive treatment.",
-]) assert.equal(selected(message).selectedQuestionId, undefined, message);
-
-// A prior complete explanation must not masquerade as a CURRENT explanation.
-const contaminated = { ...prior, detectedEvents: { ...prior.detectedEvents,
-  definitiveDentalTreatmentExplained: true, drainageTemporaryOrNondefinitiveExplained: true } };
-assert.equal(applyPatientQuestionClassification({caseId:"case-03", state:contaminated,
-  classification:classify(bare)}).selectedQuestionId,"c3-follow-up-why");
-const why = selected(bare);
-assert.equal(applyPatientQuestionClassification({caseId:"case-03",state:why.state,
-  classification:classify(bare)}).selectedQuestionId,undefined,"once-only emission");
-assert.equal(selected(bare,{...asserted,detectedEvents:{...asserted.detectedEvents,
-  promptDentalFollowUpConfirmed:false}}).selectedQuestionId,undefined,"do not grant an unclassified prerequisite");
-assert.equal(selected("Thank you for explaining that.").selectedQuestionId,undefined,"closure stays closed");
-assert.equal(selected(bare,{...asserted,evidenceAliases:["student-prior-1"],
-  evidenceMessageIds:["prior-plan"]}).selectedQuestionId,undefined,"prior evidence cannot confirm the current follow-up");
-assert.deepEqual(asserted.detectedEvents,{promptDentalFollowUpConfirmed:true,
-  drainageTemporaryOrNondefinitiveExplained:true,definitiveDentalTreatmentExplained:true},"input immutable");
-console.log("Case3 explanation scope: production replay, paraphrases, suppression controls, provenance and once-only checks passed.");
+function classified(message: string, proof: Case3Explanations = {}): PatientQuestionClassification {
+  return constrainQuestionClassification({studentMessage:message, patientResponse:"Okay.",facts:[],conversation:[],classification:{
+    schemaVersion:1,caseId:"case-03",analyzedStudentMessageId:"current",confidence:1,
+    evidenceAliases:["student-current"],evidenceMessageIds:["current"],case3Explanations:proof,
+    detectedEvents:{promptDentalFollowUpConfirmed:true,drainageTemporaryOrNondefinitiveExplained:true,definitiveDentalTreatmentExplained:true},
+  }});
+}
+const apply = (classification: PatientQuestionClassification, state = prior) => applyPatientQuestionClassification({caseId:"case-03",state,classification});
+assert.equal(apply(classified(bare)).selectedQuestionId,"c3-follow-up-why","bare confirmation cannot invent explanations");
+const contaminated={...prior,detectedEvents:{...prior.detectedEvents,drainageTemporaryOrNondefinitiveExplained:true,definitiveDentalTreatmentExplained:true}};
+assert.equal(apply(classified(bare),contaminated).selectedQuestionId,"c3-follow-up-why","legacy booleans are not validated evidence");
+const temporary={messageId:"current",quote:"Drainage only eases pressure."};
+const definitive={messageId:"current",quote:"Your dentist still has to take that tooth out."};
+const full=`${temporary.quote} ${definitive.quote}`;
+const answered=apply(classified(full,{temporary,definitive}));
+assert.equal(answered.selectedQuestionId,undefined);
+assert.equal(apply(classified(bare),answered.state).selectedQuestionId,undefined,"durable answered knowledge");
+assert.equal(apply(classified(temporary.quote,{temporary})).selectedQuestionId,"c3-follow-up-why","temporary does not establish definitive care");
+assert.equal(apply(classified(definitive.quote,{definitive})).selectedQuestionId,"c3-follow-up-why","definitive does not establish temporary explanation");
+const first=apply({...classified(temporary.quote,{temporary}),detectedEvents:{drainageTemporaryOrNondefinitiveExplained:true}});
+const second=apply(classified(definitive.quote,{definitive}),first.state);
+assert.equal(second.selectedQuestionId,undefined,"separate supported explanations accumulate");
+assert.equal(first.state.case3Explanations?.definitive,undefined,"do not mutate prior state");
+assert.equal(apply(classified(bare,{temporary:{...temporary,messageId:"old"},definitive})).selectedQuestionId,"c3-follow-up-why","wrong source or nonverbatim quote vetoed");
+const emitted=apply(classified(bare));
+assert.equal(apply(classified(bare),emitted.state).selectedQuestionId,undefined,"once only");
+assert.equal(apply(classified("Thank you for explaining that.")).selectedQuestionId,undefined,"closure stays closed");
+// Unit stubs test verifier contract/isolation, not language comprehension. The
+// permanent live suite supplies real semantic coverage for these clinical equivalents.
+for (const quote of [definitive.quote,"The affected tooth must come out.","You still require removal of the source tooth.","Root canal treatment remains necessary."]) {
+  const provider={name:"fixture",generateText:async(input)=>{
+    assert.deepEqual(JSON.parse(input.messages[0].content),{currentProviderMessage:quote});
+    return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:true,quote},confidence:1})};
+  }} as AIProvider;
+  assert.deepEqual(await verifyCase3Explanations(provider,quote,"current"),{definitive:{messageId:"current",quote}});
+}
+for (const output of [
+  {temporary:{explained:false,quote:""},definitive:{explained:true,quote:"invented extraction"},confidence:1},
+  {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:0.2},
+  {temporary:{explained:false,quote:""},definitive:{explained:true,quote:""},confidence:1},
+]) await assert.rejects(verifyCase3Explanations({generateText:async()=>({text:JSON.stringify(output)})},bare,"current"));
+console.log("Case3 evidence isolation, verbatim witnesses, independent reasons, durable state, legacy flags, closure and once-only checks passed.");
