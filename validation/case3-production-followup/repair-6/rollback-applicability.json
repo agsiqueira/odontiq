@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "artifact": "../repair-5/database-rollback.json",
+  "fixtureEncounters": 2,
+  "sameFinalImplementation": true,
+  "componentHashes": {
+    "src/lib/persistence/services/patientQuestionService.ts": "a2fe916c013fdf3790843d1c1deb37869cd4ce5ce0a80ca69128ece7d9af2ef6",
+    "src/lib/patientQuestions/eligibility.ts": "512c13dbc536ee28bc1f34cd4089a52b99680cf70f0e4783552782db7a7f50f2",
+    "src/lib/patientQuestions/stateMachine.ts": "316d06b141e164e9509b73490480480fd5d94bdbfa1a16480bfff7bfa45d5239",
+    "src/lib/patientQuestions/explanationScope.ts": "96207528acec98078cc5f57cf4a9f65848b893615f465cfb5010c164fa80f1c6"
+  },
+  "scope": "real local PostgreSQL; rejection and idempotency fixtures, not Navigator semantic tests"
+}

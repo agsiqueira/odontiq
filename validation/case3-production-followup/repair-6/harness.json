@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "scripts/liveCase03FollowUp.mjs": "86912faf5b45e122c49f07abf5dffd788500a38752be9f9916d0b798622c2b9b",
+    "scripts/reviewCase03Live.mjs": "4a9d56404f9986640222c6b5c87d389c8ba9af71110839b24b3fabe4d602a73c",
+    "scripts/case3NavigatorCapture.mjs": "2ae51cf72bfcc449753a6e9ff9f71db00cf85a35aabeb1d661d150a60305bc2c"
+  },
+  "applicationSourceDiffDuringRun": "empty",
+  "scenarioRetries": 0,
+  "faultRetries": "one planned new turn per injected scenario; all initial outcomes preserved",
+  "clerkCleanup": "own exact created session IDs only; historical interrupted session untouched"
+}
