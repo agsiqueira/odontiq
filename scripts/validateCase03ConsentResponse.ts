@@ -10,6 +10,8 @@ import {
   buildPatientDisclosureState,
   classifyProviderMessageIntent,
 } from "../src/lib/patientDisclosure";
+import { requiredFactsForTurn } from "../src/lib/patientTurnFacts";
+import { patientFactFallback } from "../src/lib/patientFactFallback";
 import { patientImmediateResponse } from "../src/lib/patientImmediateResponse";
 import { assessPatientOutputIntegrity } from "../src/lib/patientOutputGuard";
 import { getPatientQuestion } from "../src/lib/patientQuestions/catalog";
@@ -25,6 +27,11 @@ const case3 = loadCase("case-03");
 assert(case3);
 
 const positiveMessages = [
+  "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+  "I recommend an I&D for the abscess. Is that okay?",
+  "I recommend incision and drainage for the abscess. Is that okay?",
+  "We need to drain the abscess. Do you agree?",
+  "I'd like to numb the area and drain the abscess. Is that okay?",
   "You have an abscess. I'd like to numb the area, make a small opening, and let the infection drain. Is that okay?",
   "You have an abscess. I’d like to numb the area, make a small opening, and let the infection drain. Is that okay?",
   "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
@@ -43,6 +50,7 @@ for (const message of positiveMessages) {
   });
   assert.equal(state.providerMessageIntent, "treatment_consent", message);
   assert.deepEqual(state.allowedThisTurn, [], message);
+  assert.deepEqual(requiredFactsForTurn(state,message,case3.supportingInfo.patientFacts ?? []),[],message);
   const response = patientImmediateResponse({
     caseId: "case-03",
     message,
@@ -53,6 +61,10 @@ for (const message of positiveMessages) {
 }
 
 const negativeMessages = [
+  "Have you ever had an I&D for an abscess?",
+  "Have you ever had incision and drainage for an abscess?",
+  "If the swelling worsens, we might consider draining the abscess later. Is that okay?",
+  "I recommend root canal treatment for this abscess. Is that okay?",
   "We should do an I&D.",
   "We may need to consider drainage later.",
   "I'm going to numb the area. Is that okay?",
@@ -76,6 +88,15 @@ for (const message of negativeMessages) {
     undefined,
     message,
   );
+}
+
+for (const message of ["Did that tooth have a root canal before?", "Was the painful tooth extracted before?"]) {
+  const state=buildPatientDisclosureState({caseData:case3,conversation:[],latestStudentMessage:message});
+  assert.equal(state.providerMessageIntent,"question",message);
+  assert.equal(case3ConsentResponse("case-03",message),undefined,message);
+  assert(state.allowedThisTurn.length>0,"real history questions must retain authoritative facts");
+  const fallback=patientFactFallback(state,message,case3.supportingInfo.patientFacts??[]);
+  assert(fallback && fallback!==CASE_3_CONSENT_RESPONSE,"history answers must not become consent");
 }
 
 for (const caseId of ["case-01", "case-02", "case-04", "case-05"]) {
