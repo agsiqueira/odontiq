@@ -13,7 +13,7 @@ http.createServer(async (req, res) => {
   const started = performance.now();
   const record = { at: new Date().toISOString(), path: req.url, request: JSON.parse(body) };
   const classification = body.includes("schemaVersion") && body.includes("student-current");
-  record.kind = body.includes("currentProviderMessage") ? "explanation" : classification ? "classifier" : "generation";
+  record.kind = classification ? "classifier" : body.includes("currentProviderMessage") ? "explanation" : "generation";
   try {
     const corruptExplanation = fault?.kind === "explanation" && record.kind === "classifier";
     if (fault && !corruptExplanation && (!fault.kind || fault.kind === record.kind)) {

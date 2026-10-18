@@ -26,20 +26,20 @@ const opening = ["What brings you in today?", "Does your daughter have Medicaid 
 const tests = [
   ...Array.from({ length: 5 }, (_, i) => ({ id: `original-fresh-${i + 1}`, opening, answer: confirm, why: true })),
   { id: "confirmation-paraphrase", answer: "Yes, please see your dentist as soon as possible.", why: true },
-  { id: "temporary-only", answer: "Yes, see your dentist promptly. Drainage only relieves the pressure.", why: true },
-  { id: "definitive-only", answer: "Yes, see your dentist promptly. You still need a root canal or extraction.", why: false },
-  { id: "definitive-without-temporary", consent: "I recommend an I&D for the abscess. Is that okay?", answer: "Yes, see your dentist promptly. You still need a root canal or extraction.", why: true },
-  { id: "complete-explanation", answer: "Yes, see your dentist promptly. Drainage only relieves the pressure; you still need root canal treatment or extraction to treat the tooth.", why: false },
-  { id: "complete-paraphrase", answer: "Yes, see your dentist soon. The I&D is temporary. Definitive dental treatment is still required.", why: false },
-  { id: "extraction-paraphrase", answer: "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.", why: false },
-  { id: "extraction-equivalent", answer: "Yes, see your dentist promptly. The I&D is not a cure. The affected tooth must come out.", why: false },
-  { id: "source-treatment-equivalent", answer: "Yes, see your dentist promptly. This drainage is a temporary measure. Your dentist must eliminate the source of the infection by treating the tooth.", why: false },
+  { id: "temporary-only", answerEvidence: [true,false], answer: "Yes, see your dentist promptly. Drainage only relieves the pressure.", why: true },
+  { id: "definitive-only", answerEvidence: [false,true], answer: "Yes, see your dentist promptly. You still need a root canal or extraction.", why: false },
+  { id: "definitive-without-temporary", consentEvidence: [false,false], answerEvidence: [false,true], consent: "I recommend an I&D for the abscess. Is that okay?", answer: "Yes, see your dentist promptly. You still need a root canal or extraction.", why: true },
+  { id: "complete-explanation", answerEvidence: [true,true], answer: "Yes, see your dentist promptly. Drainage only relieves the pressure; you still need root canal treatment or extraction to treat the tooth.", why: false },
+  { id: "complete-paraphrase", answerEvidence: [true,true], answer: "Yes, see your dentist soon. The I&D is temporary. Definitive dental treatment is still required.", why: false },
+  { id: "extraction-paraphrase", answerEvidence: [true,true], answer: "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.", why: false },
+  { id: "extraction-equivalent", answerEvidence: [true,true], answer: "Yes, see your dentist promptly. The I&D is not a cure. The affected tooth must come out.", why: false },
+  { id: "source-treatment-equivalent", answerEvidence: [true,true], answer: "Yes, see your dentist promptly. This drainage is a temporary measure. Your dentist must eliminate the source of the infection by treating the tooth.", why: false },
   { id: "hypothetical-not-explained", answer: "Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.", why: true },
   { id: "negated-not-explained", answer: "Yes, see your dentist promptly. You do not need a root canal or extraction.", why: true },
   { id: "question-not-explained", answer: "Yes, see your dentist promptly. Have you ever had a root canal before?", why: true },
-  { id: "prior-explanation-current-confirmation", answer: confirm, why: false,
+  { id: "prior-explanation-current-confirmation", consentEvidence: [true,true], answer: confirm, why: false,
     consent: "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. This is temporary; you still need root canal treatment or extraction. Is that okay?" },
-  { id: "split-explanations-before-confirmation", beforeConsent: ["Draining the infection only relieves pressure; it does not provide definitive tooth treatment."], consent: "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?", answer: confirm, why: false },
+  { id: "split-explanations-before-confirmation", consentEvidence: [false,true], beforeConsent: ["Draining the infection only relieves pressure; it does not provide definitive tooth treatment."], consent: "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?", answer: confirm, why: false },
   { id: "failed-classifier-does-not-consume", answer: confirm, why: true, fault: "classifier" },
   { id: "failed-explanation-does-not-consume", answer: confirm, why: true, fault: "explanation" },
   { id: "failed-generation-does-not-consume", answer: confirm, why: true, fault: "generation" },
@@ -62,7 +62,7 @@ async function api(url, body) {
 try {
   save();
   for (const scenario of tests.filter(test => !process.env.CASE3_IDS || process.env.CASE3_IDS.split(",").includes(test.id))) {
-    const row = { id: scenario.id, expectedWhy: scenario.why, attempts: [], outcome: "REVIEW" };
+    const row = { id: scenario.id, expectedWhy: scenario.why, expectedEvidence: {consent: scenario.consentEvidence ?? [true,false], "pre-consent-explanation": [true,false], "follow-up-confirmation": scenario.answerEvidence ?? [false,false], "planned-retry": scenario.answerEvidence ?? [false,false]}, attempts: [], outcome: "REVIEW" };
     report.tests.push(row); save();
     const started = await api("/api/encounters/start", { caseId: "case-03", fresh: true });
     if (started.status !== 200) { row.setupError = started; row.outcome = "ERROR"; save(); continue; }

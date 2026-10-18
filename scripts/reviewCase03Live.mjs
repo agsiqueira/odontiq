@@ -20,6 +20,16 @@ export function reviewCase03Live(report) {
         || attempt.persistedTurn?.requestId !== attempt.requestId
         || (attempt.persistedTurn?.selectedQuestionId ?? undefined) !== attempt.body.selectedQuestionId) failures.push(`${attempt.label}: API/storage/correlation mismatch`);
     }
+    for (const attempt of test.attempts.filter(a => a.persistedTurn)) {
+      const expected = test.expectedEvidence?.[attempt.label] ?? (test.expectedEvidence ? [false,false] : undefined);
+      if (!expected) continue; // Historical ledgers retain their original grading; corrections are separate artifacts.
+      const proof = attempt.persistedState?.state?.case3Explanations;
+      for (const [index,kind] of ["temporary","definitive"].entries()) {
+        const current = proof?.[kind]?.messageId === attempt.persistedTurn.studentMessageId;
+        if (current !== expected[index]) failures.push(`${attempt.label}: current ${kind} evidence disagrees with independently specified fixture meaning`);
+        if (current && (!proof[kind].quote?.trim() || !attempt.question.includes(proof[kind].quote))) failures.push(`${attempt.label}: unsupported ${kind} quote`);
+      }
+    }
     const why = test.finalEmissions.filter(e => e.questionId === "c3-follow-up-why");
     if (why.length > 1) failures.push("Why durably emitted more than once");
     if (test.expectedWhy && (why.length !== 1 || repeated?.body.selectedQuestionId)) failures.push("Expected exactly one Why and none on repeated confirmation");
