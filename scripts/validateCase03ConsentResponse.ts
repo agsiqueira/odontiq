@@ -16,6 +16,7 @@ import { patientImmediateResponse } from "../src/lib/patientImmediateResponse";
 import { assessPatientOutputIntegrity } from "../src/lib/patientOutputGuard";
 import { getPatientQuestion } from "../src/lib/patientQuestions/catalog";
 import { classifyPatientQuestionTrigger } from "../src/lib/patientQuestions/classifier";
+import { parsePatientQuestionClassification } from "../src/lib/patientQuestions/schema";
 import { applyPatientQuestionClassification } from "../src/lib/patientQuestions/stateMachine";
 import {
   createEmptyPatientQuestionState,
@@ -25,6 +26,29 @@ import {
 
 const case3 = loadCase("case-03");
 assert(case3);
+
+for (const [message, expected] of [
+  ["I recommend making a small opening to let the pus out of the abscess. Is that okay?", true],
+  ["I recommend making a small incision in the abscess. Is that okay?", true],
+  ["I recommend not making a small opening in the abscess. Is that okay?", false],
+  ["I might recommend making a small opening in the abscess later. Is that okay?", false],
+  ["Have you ever had a small opening made in the abscess before?", false],
+  ["I recommend a root canal. Is that okay?", false],
+] as const) {
+  const events = { temporaryTreatmentActive: true, incisionAndDrainageProposed: true,
+    patientAgreedToIncisionAndDrainage: true };
+  const parsed = parsePatientQuestionClassification({
+    text: JSON.stringify({schemaVersion: 1, caseId: "case-03", events, confidence: 1,
+      evidence: ["student-current", "patient-draft"]}),
+    caseId: "case-03", studentMessageId: "current",
+    allowedEvents: ["temporaryTreatmentActive", "incisionAndDrainageProposed", "patientAgreedToIncisionAndDrainage"],
+    evidenceAliases: [
+      {alias: "student-current", messageId: "current", role: "student", content: message},
+      {alias: "patient-draft", messageId: "draft", role: "patient", content: "Yes, that’s okay."},
+    ],
+  });
+  assert.equal(parsed.success, expected, message);
+}
 
 const positiveMessages = [
   "I recommend making a small opening to let the pus out of the abscess. Is that okay?",
@@ -122,7 +146,7 @@ function classification(events: Partial<PatientQuestionEvents>): PatientQuestion
   };
 }
 
-const clearProposal = positiveMessages[1];
+const clearProposal = positiveMessages[0];
 const draftAgreement = case3ConsentResponse("case-03", clearProposal);
 assert.equal(draftAgreement, "Yes, that’s okay.");
 const classified = await classifyPatientQuestionTrigger({
