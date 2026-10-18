@@ -1,0 +1,509 @@
+{
+  "baseCommit": "69a24fe9fb6d1121e67da8d2ce70cc02b574266c",
+  "rows": [
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-7/paired-latency.json",
+      "encounterId": "1eb532a9-6f4e-4898-81a0-c92ecf34a471",
+      "requestId": "pr3-repair7-latency-production-v8-split-1-d8327a7f-d75b-4702-85a9-46b6581f26ee",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "cabba24e-26ad-4fb2-bf01-7be73d259431",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:22:32.890Z"
+        },
+        {
+          "id": "b22d07d5-0653-4f90-b3fe-5bc70ea5acd6",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:22:33.905Z"
+        },
+        {
+          "id": "1f9bae5b-2ba7-4296-ad2f-d5131bf383f9",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:22:34.046Z"
+        },
+        {
+          "id": "3c790e77-b6b6-4201-9436-22c3f4605254",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:22:35.205Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    },
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-8/paired-latency.json",
+      "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+      "requestId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:38:26.227Z"
+        },
+        {
+          "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:38:26.995Z"
+        },
+        {
+          "id": "2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:38:27.159Z"
+        },
+        {
+          "id": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:38:28.382Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    },
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-8/paired-latency.json",
+      "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+      "requestId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:41:03.865Z"
+        },
+        {
+          "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:41:04.604Z"
+        },
+        {
+          "id": "8350a18c-49ab-4b89-9752-cd2c831dce99",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:41:04.736Z"
+        },
+        {
+          "id": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:41:05.665Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    },
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-8/paired-latency.json",
+      "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+      "requestId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:42:21.058Z"
+        },
+        {
+          "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:42:21.805Z"
+        },
+        {
+          "id": "dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:42:21.958Z"
+        },
+        {
+          "id": "bb26a847-45b8-44a2-b13c-da3c46271050",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:42:23.056Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    },
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-8/paired-latency.json",
+      "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+      "requestId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "89006c9b-012d-40ee-8145-32519871c9be",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:44:48.853Z"
+        },
+        {
+          "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:44:49.537Z"
+        },
+        {
+          "id": "e45fbacf-45eb-44b3-9261-25eb2f574af5",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:44:49.689Z"
+        },
+        {
+          "id": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:44:51.403Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    },
+    {
+      "source": "../case3-followup-evidence/validation/case3-production-followup/repair-8/paired-latency.json",
+      "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+      "requestId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+      "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+      "context": [
+        {
+          "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+          "role": "student",
+          "text": "What brings you in today?",
+          "timestamp": "2026-10-18T13:46:06.201Z"
+        },
+        {
+          "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+          "role": "patient",
+          "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "timestamp": "2026-10-18T13:46:06.916Z"
+        },
+        {
+          "id": "483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+          "role": "student",
+          "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+          "timestamp": "2026-10-18T13:46:07.067Z"
+        },
+        {
+          "id": "f361156b-9c0d-4525-8872-4d2239180121",
+          "role": "patient",
+          "text": "Okay, thank you.",
+          "timestamp": "2026-10-18T13:46:09.009Z"
+        }
+      ],
+      "actualResponse": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+      "providerIntent": "question",
+      "consentRequest": false,
+      "consentResponse": null,
+      "immediateResponse": null,
+      "allowedFacts": [
+        {
+          "id": "c3.crown",
+          "text": "The affected right mandibular posterior tooth has a crown."
+        },
+        {
+          "id": "c3.rct",
+          "text": "The patient is not sure whether the crowned tooth previously had root-canal treatment."
+        },
+        {
+          "id": "c3.dental-work",
+          "text": "The patient has had a lot of dental work in the past."
+        },
+        {
+          "id": "c3.treated-teeth-unknown",
+          "text": "The patient does not remember exactly which teeth were treated."
+        },
+        {
+          "id": "c3.painful-tooth-not-extracted",
+          "text": "The currently painful crowned lower-right back tooth is present, so that same tooth was not previously extracted."
+        },
+        {
+          "id": "c3.dentist-contact",
+          "text": "The patient called the dentist a couple of days ago."
+        },
+        {
+          "id": "c3.appointment",
+          "text": "The patient has a dental appointment scheduled for next week and still plans to obtain definitive dental care."
+        }
+      ],
+      "requiredFacts": [
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment",
+        "c3.crown",
+        "c3.rct",
+        "c3.dental-work",
+        "c3.treated-teeth-unknown",
+        "c3.painful-tooth-not-extracted",
+        "c3.dentist-contact",
+        "c3.appointment"
+      ],
+      "fallback": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago."
+    }
+  ]
+}

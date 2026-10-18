@@ -40,5 +40,3 @@ try{
  }
  report.finished=new Date().toISOString();save();
 }finally{for(const db of Object.values(databases))await db.$disconnect();await clerk.sessions.revokeSession(session.id);report.exactOwnedSessionRevoked=true;save();}
-
-

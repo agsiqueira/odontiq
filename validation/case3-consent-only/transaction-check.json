@@ -1,0 +1,77 @@
+{
+  "outcome": "PASS",
+  "encounterId": "0cae384c-7cbc-4296-84bc-b83d897f49cc",
+  "requestId": "rollback-f2d5414d-27da-420e-b754-1ae90e93982d",
+  "before": {
+    "encounterId": "0cae384c-7cbc-4296-84bc-b83d897f49cc",
+    "version": 0,
+    "state": {
+      "version": 0,
+      "schemaVersion": 1,
+      "detectedEvents": {
+        "patientPainDescribed": false,
+        "antibioticsRecommended": false,
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": false,
+        "promptDentalFollowUpConfirmed": false,
+        "antibioticsNotIndicatedExplained": false,
+        "definitiveDentalTreatmentExplained": false,
+        "patientAgreedToIncisionAndDrainage": false,
+        "antibioticsRecommendedAsCurrentPlan": false,
+        "painManagementOrDispositionDiscussed": false,
+        "drainageTemporaryOrNondefinitiveExplained": false,
+        "hospitalAdmissionOrSurgicalManagementDiscussed": false
+      },
+      "emittedQuestionIds": []
+    },
+    "createdAt": "2026-10-18T14:33:16.017Z",
+    "updatedAt": "2026-10-18T14:33:16.017Z"
+  },
+  "after": {
+    "encounterId": "0cae384c-7cbc-4296-84bc-b83d897f49cc",
+    "version": 0,
+    "state": {
+      "version": 0,
+      "schemaVersion": 1,
+      "detectedEvents": {
+        "patientPainDescribed": false,
+        "antibioticsRecommended": false,
+        "temporaryTreatmentActive": false,
+        "incisionAndDrainageProposed": false,
+        "promptDentalFollowUpConfirmed": false,
+        "antibioticsNotIndicatedExplained": false,
+        "definitiveDentalTreatmentExplained": false,
+        "patientAgreedToIncisionAndDrainage": false,
+        "antibioticsRecommendedAsCurrentPlan": false,
+        "painManagementOrDispositionDiscussed": false,
+        "drainageTemporaryOrNondefinitiveExplained": false,
+        "hospitalAdmissionOrSurgicalManagementDiscussed": false
+      },
+      "emittedQuestionIds": []
+    },
+    "createdAt": "2026-10-18T14:33:16.017Z",
+    "updatedAt": "2026-10-18T14:33:16.017Z"
+  },
+  "accepted": {
+    "requestId": "rollback-f2d5414d-27da-420e-b754-1ae90e93982d",
+    "patientMessageId": "draft",
+    "responseText": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+    "providerName": "transaction-fixture",
+    "selectedQuestionId": "c3-follow-up-needed-question",
+    "stateVersion": 1
+  },
+  "repeat": {
+    "requestId": "repeat-12f83d92-4217-4254-93ab-1b2065d4c3cf",
+    "patientMessageId": "534c1131-ba2e-40b6-aa71-a7d95fc08e4b",
+    "responseText": "Yes, that’s okay.",
+    "providerName": "transaction-fixture",
+    "stateVersion": 2
+  },
+  "checks": [
+    "final rejection rolls back state, turn, emission",
+    "same-request recovery emits once",
+    "same-request replay idempotent",
+    "new-turn repeat does not emit again"
+  ],
+  "modelRequests": 0
+}
