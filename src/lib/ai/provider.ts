@@ -44,6 +44,8 @@ export type AIProviderResponse = {
 };
 
 export type AITextGenerationInput = {
+  /** Internal task-specific model override; never sourced from the public request. */
+  model?: string;
   requestId?: string;
   systemPrompt: string;
   messages: ConversationChatMessage[];

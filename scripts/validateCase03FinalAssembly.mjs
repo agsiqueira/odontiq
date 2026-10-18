@@ -20,7 +20,7 @@ const events = { promptDentalFollowUpConfirmed: true, drainageTemporaryOrNondefi
 const classified = await classifyPatientQuestionTrigger({ caseId:"case-03", state:prior,
   studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",
   draftPatientResponse:"Okay, I'll keep my appointment.", conversation:[],
-  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("Verify two independent") ? {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
+  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("Decide whether the CURRENT") ? {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
 });
 assert(classified.success);
 assert.deepEqual(classified.classification.detectedEvents,{...events,drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false});

@@ -4,17 +4,16 @@ import type { Case3Explanations } from "./types";
 /** Isolated semantic entailment: no case facts, patient draft or prior context.
  * Accepted current-message witnesses provide auditable, durable answered knowledge.
  */
-export async function verifyCase3Explanations(provider: Pick<AIProvider, "generateText">, message: string, messageId: string): Promise<Case3Explanations> {
+export async function verifyCase3Explanations(provider: Pick<AIProvider, "generateText" | "name">, message: string, messageId: string): Promise<Case3Explanations> {
   const result = await provider.generateText({
-    systemPrompt: `Verify two independent clinical explanations in the supplied CURRENT provider message.
-Use meaning, including ordinary paraphrases and equivalent clinical language. Do not require specific words.
-temporary: the provider explains drainage relieves pressure, drains infection, or is temporary/nondefinitive rather than the definitive cure. Merely proposing/naming a procedure does not explain its purpose or limitation.
-definitive: the provider explains that root canal, extraction/removing the affected tooth, or equivalent definitive treatment of the underlying dental cause is still required. Merely instructing a dentist visit, keeping an appointment or receiving care does NOT explain definitive treatment.
-Keep these explanations distinct. One does not imply the other. Do not infer missing reasons from clinical knowledge.
-Questions, hypothetical possibilities, negated requirements and historical treatment are not present explanations of what this patient needs.
-Accept genuine explanations even within a mixed message that also asks consent or a background question.
-For each true explanation quote the smallest verbatim supporting assertion from the current message. Never invent or alter the quote. For false use an empty quote.
-Return ONLY JSON: {"temporary":{"explained":boolean,"quote":string},"definitive":{"explained":boolean,"quote":string},"confidence":number}. Confidence must reflect both decisions. No other fields.`,
+    model: provider.name === "navigator" ? process.env.NAVIGATOR_EXPLANATION_MODEL ?? "llama-3.3-70b-instruct" : undefined,
+    systemPrompt: `Decide whether the CURRENT clinician message explicitly provides each of two different explanations. Use only this message, not clinical knowledge or prior dialogue.
+TEMPORARY: drainage relieves pressure, drains infection/pus, or is temporary/nondefinitive. An explicit purpose/limitation within a consent message counts. Merely naming/proposing I&D without its effect does not count.
+DEFINITIVE: the patient still requires a root canal, removal of the affected tooth, or equivalent curative treatment of the underlying dental cause. Accept natural clinical paraphrases. Access instructions (seeing a dentist, keeping/arranging an appointment, contacting a clinic) NEVER count. Drainage alone is not definitive care.
+These are independent facts. Do not infer one from the other. Hypotheticals, negations, historical questions and mere possibilities do not establish a present requirement. A message may ask consent while actually providing explanations in other clauses.
+For each fact return explained true/false and a short supporting verbatim quote. Use empty quote for false. Never alter the words or invent a quote.
+Output ONLY one JSON object: {"temporary":{"explained":boolean,"quote":string},"definitive":{"explained":boolean,"quote":string},"confidence":number}.
+Confidence is a decimal fraction from 0 to 1 (never a percentage).`,
     messages: [{ role: "user", content: JSON.stringify({ currentProviderMessage: message }) }],
     temperature: 0, maxTokens: 400,
   });

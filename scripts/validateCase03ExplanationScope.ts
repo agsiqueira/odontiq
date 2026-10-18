@@ -48,5 +48,10 @@ for (const output of [
   {temporary:{explained:false,quote:""},definitive:{explained:true,quote:"invented extraction"},confidence:1},
   {temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:0.2},
   {temporary:{explained:false,quote:""},definitive:{explained:true,quote:""},confidence:1},
-]) await assert.rejects(verifyCase3Explanations({generateText:async()=>({text:JSON.stringify(output)})},bare,"current"));
+]) await assert.rejects(verifyCase3Explanations({name:"fixture",generateText:async()=>({text:JSON.stringify(output)})},bare,"current"));
 console.log("Case3 evidence isolation, verbatim witnesses, independent reasons, durable state, legacy flags, closure and once-only checks passed.");
+const configuredVerifier = process.env.NAVIGATOR_EXPLANATION_MODEL ?? "llama-3.3-70b-instruct";
+await verifyCase3Explanations({name:"navigator",generateText:async input=>{
+  assert.equal(input.model,configuredVerifier,"independent verifier uses explicit task model, not the patient model");
+  return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
+}},bare,"current");

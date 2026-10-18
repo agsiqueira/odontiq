@@ -1,0 +1,282 @@
+{
+  "started": "2026-10-18T06:22:44.955Z",
+  "base": "http://localhost:3009",
+  "applicationCommit": "0f51ade79005493a78b6c07294df1e18ebc0444c",
+  "applicationSourceDiff": "",
+  "buildId": "8gRw1uTavCZMemR05LQca",
+  "configuration": {
+    "node": "v24.14.1",
+    "mode": "production",
+    "model": "granite-3.3-8b-instruct",
+    "navigator": "https://api.ai.it.ufl.edu via loopback capture/fault proxy",
+    "database": "isolated loopback PostgreSQL",
+    "auth": "existing Clerk test user, backend test session"
+  },
+  "tests": [
+    {
+      "id": "original-fresh-1",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "original-fresh-2",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "original-fresh-3",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "original-fresh-4",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "original-fresh-5",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "temporary-only",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "definitive-only",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "definitive-without-temporary",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "complete-explanation",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "complete-paraphrase",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "extraction-paraphrase",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "extraction-equivalent",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "source-treatment-equivalent",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "hypothetical-not-explained",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "negated-not-explained",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "question-not-explained",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "prior-explanation-current-confirmation",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "failed-classifier-does-not-consume",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "failed-explanation-does-not-consume",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    },
+    {
+      "id": "failed-generation-does-not-consume",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "body": {
+          "nonJson": ""
+        }
+      }
+    }
+  ],
+  "finished": "2026-10-18T06:23:33.032Z"
+}

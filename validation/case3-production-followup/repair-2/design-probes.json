@@ -1,0 +1,104 @@
+[
+  {
+    "label": "repair-3-extraction-design-probe",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-addd9ae000ba32fc",
+      "created": 1792304733,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": false,\n    \"quote\": \"Yes, you still need to see your dentist promptly.\"\n  },\n  \"definitive\": {\n    \"action\": \"see_dentist\",\n    \"required\": true,\n    \"quote\": \"Yes, you still need to see your dentist promptly.\",\n    \"actionQuote\": \"see your dentist\",\n    \"targetQuote\": \"your dentist\"\n  },\n  \"confidence\": 1\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 430,
+        "total_tokens": 540
+      }
+    }
+  },
+  {
+    "label": "repair-3-extraction-design-probe",
+    "question": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-9e1a7e80302ac08f",
+      "created": 1792304734,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": true,\n    \"quote\": \"The drainage only eases pressure\"\n  },\n  \"definitive\": {\n    \"action\": \"tooth_removal\",\n    \"required\": true,\n    \"quote\": \"Your dentist still has to take that tooth out\",\n    \"actionQuote\": \"take that tooth out\",\n    \"targetQuote\": \"that tooth\"\n  },\n  \"confidence\": 1\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 102,
+        "prompt_tokens": 447,
+        "total_tokens": 549
+      }
+    }
+  },
+  {
+    "label": "repair-3-extraction-design-probe",
+    "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-963abb577aa82875",
+      "created": 1792304735,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": true,\n    \"quote\": \"to drain the infection and relieve the pressure\"\n  },\n  \"definitive\": {\n    \"action\": \"source_treatment\",\n    \"required\": true,\n    \"quote\": \"an I&D to drain the infection\",\n    \"actionQuote\": \"an I&D to drain\",\n    \"targetQuote\": \"the infection\"\n  },\n  \"confidence\": 1\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 104,
+        "prompt_tokens": 445,
+        "total_tokens": 549
+      }
+    }
+  }
+]

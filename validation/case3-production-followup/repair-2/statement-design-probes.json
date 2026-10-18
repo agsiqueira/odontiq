@@ -1,0 +1,104 @@
+[
+  {
+    "label": "repair-3-statement-design-probe",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-bc2047f837acc0d6",
+      "created": 1792304826,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "[\n  {\n    \"kind\": \"definitive\",\n    \"mode\": \"assertion\",\n    \"quote\": \"you still need to see your dentist promptly\",\n    \"confidence\": 0.9\n  }\n]",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 49,
+        "prompt_tokens": 479,
+        "total_tokens": 528
+      }
+    }
+  },
+  {
+    "label": "repair-3-statement-design-probe",
+    "question": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-9cc95cb5007e4e1d",
+      "created": 1792304826,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "[\n  {\n    \"kind\": \"definitive\",\n    \"mode\": \"assertion\",\n    \"quote\": \"Your dentist still has to take that tooth out.\"\n  },\n  {\n    \"kind\": \"limited_relief\",\n    \"mode\": \"assertion\",\n    \"quote\": \"The drainage only eases pressure.\"\n  }\n]\n\nConfidence: 1",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 82,
+        "prompt_tokens": 496,
+        "total_tokens": 578
+      }
+    }
+  },
+  {
+    "label": "repair-3-statement-design-probe",
+    "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-9a04645ff3a1e16e",
+      "created": 1792304827,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "[\n  {\n    \"kind\": \"definitive\",\n    \"mode\": \"assertion\",\n    \"quote\": \"I recommend an I&D to drain the infection and relieve the pressure\",\n    \"confidence\": 0.9\n  }\n]",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 55,
+        "prompt_tokens": 494,
+        "total_tokens": 549
+      }
+    }
+  }
+]

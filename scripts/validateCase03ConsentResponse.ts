@@ -108,7 +108,7 @@ const classified = await classifyPatientQuestionTrigger({
     name: "case-03-consent-validator",
     generateConversationResponse: async () => ({ text: "unused" }),
     generateText: async ({ messages, systemPrompt }) => {
-      if (systemPrompt.startsWith("Verify two independent")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
+      if (systemPrompt.startsWith("Decide whether the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{explained:false,quote:""},confidence:1})};
       assert(messages[0]?.content.includes(clearProposal));
       assert(messages[0]?.content.includes(draftAgreement));
       return {

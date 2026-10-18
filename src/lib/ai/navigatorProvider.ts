@@ -53,7 +53,7 @@ export class NavigatorProvider implements AIProvider {
   async generateText(input: AITextGenerationInput): Promise<AIProviderResponse> {
     const apiKey = getRequiredEnv("NAVIGATOR_API_KEY");
     const baseUrl = getNavigatorBaseUrl();
-    const model = getRequiredEnv("NAVIGATOR_MODEL");
+    const model = input.model ?? getRequiredEnv("NAVIGATOR_MODEL");
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), NAVIGATOR_TIMEOUT_MS);
 
