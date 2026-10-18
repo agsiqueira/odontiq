@@ -1,0 +1,1789 @@
+{
+  "service": "srv-d9a2aq3eo5us739be670",
+  "productionCommit": "69a24fe9fb6d1121e67da8d2ce70cc02b574266c",
+  "start": "2026-10-18T13:37:18.754Z",
+  "end": "2026-10-18T13:47:02.297Z",
+  "hasMore": false,
+  "loggedAttemptsWithinRequestWindows": 110,
+  "loggedAttemptsOutsideRequestWindows": 0,
+  "unrelatedNamedOperationsWithinWindows": [],
+  "model": "granite-3.3-8b-instruct",
+  "modelIdentityEvidence": "Previously verified live configuration and deployed V8 provider source; logs themselves omit model names",
+  "attributionLimitation": "Production UUID-only classifier operation IDs have no encounter/request parent. Counts use non-overlapping client request windows; no unrelated named operations observed is not proof of absence of concurrent classifier-only traffic.",
+  "windows": [
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-1-a16112c9-3044-4518-a23e-13d97dc1f96e",
+      "label": "opening",
+      "start": "2026-10-18T13:37:21.011Z",
+      "end": "2026-10-18T13:37:22.282Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-1-5e135382-a6df-4b73-95d3-49ec37da02aa",
+      "label": "consent",
+      "start": "2026-10-18T13:37:22.396Z",
+      "end": "2026-10-18T13:37:23.185Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-1-57986378-3f3c-4676-b676-c6c8aeb1f650",
+      "label": "confirmation",
+      "start": "2026-10-18T13:37:23.452Z",
+      "end": "2026-10-18T13:37:24.912Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-1-03adb272-8b73-4dac-af17-0a495e616a60",
+      "label": "repeat",
+      "start": "2026-10-18T13:37:25.045Z",
+      "end": "2026-10-18T13:37:26.232Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-1-ec1e251d-bacb-43c4-a909-3e9cc235d3f4",
+      "label": "closure",
+      "start": "2026-10-18T13:37:26.345Z",
+      "end": "2026-10-18T13:37:26.477Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-1-3b3fb791-19f3-4879-a751-830a699f6ddb",
+      "label": "opening",
+      "start": "2026-10-18T13:37:47.433Z",
+      "end": "2026-10-18T13:37:48.189Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-1-4dd9113a-73e5-45f5-8b18-8861bcf1ee7b",
+      "label": "consent",
+      "start": "2026-10-18T13:37:48.348Z",
+      "end": "2026-10-18T13:37:49.209Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-1-2e9f8079-f44c-456d-aa47-a13828f08851",
+      "label": "confirmation",
+      "start": "2026-10-18T13:37:49.333Z",
+      "end": "2026-10-18T13:37:50.282Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-1-dabdb5da-8ef9-464d-a64c-c6de038f1682",
+      "label": "repeat",
+      "start": "2026-10-18T13:37:50.415Z",
+      "end": "2026-10-18T13:37:51.476Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-1-74dde252-c651-4aa0-9578-06c9235b476e",
+      "label": "closure",
+      "start": "2026-10-18T13:37:51.614Z",
+      "end": "2026-10-18T13:37:51.731Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-e37d22df-22f8-4d10-a22f-d4b78831398b",
+      "label": "opening",
+      "start": "2026-10-18T13:38:26.227Z",
+      "end": "2026-10-18T13:38:26.995Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+      "label": "prior-explanation",
+      "start": "2026-10-18T13:38:27.159Z",
+      "end": "2026-10-18T13:38:28.382Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+      "label": "consent",
+      "start": "2026-10-18T13:38:28.511Z",
+      "end": "2026-10-18T13:38:30.636Z",
+      "modelHttpAttempts": 3
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-9917e12d-74fb-4c9a-b9f4-c180f2d3ef98",
+      "label": "confirmation",
+      "start": "2026-10-18T13:38:30.758Z",
+      "end": "2026-10-18T13:38:31.621Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd",
+      "label": "repeat",
+      "start": "2026-10-18T13:38:31.747Z",
+      "end": "2026-10-18T13:38:32.719Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-1-383f232a-5142-49d6-a875-4deb3195fed2",
+      "label": "closure",
+      "start": "2026-10-18T13:38:32.846Z",
+      "end": "2026-10-18T13:38:32.954Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-2-13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+      "label": "opening",
+      "start": "2026-10-18T13:39:49.669Z",
+      "end": "2026-10-18T13:39:50.530Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-2-0c639de3-46be-474e-ab68-b7dbc0f748da",
+      "label": "consent",
+      "start": "2026-10-18T13:39:50.666Z",
+      "end": "2026-10-18T13:39:51.968Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-2-816f8957-33bb-4c7f-940f-fee1fed524e6",
+      "label": "confirmation",
+      "start": "2026-10-18T13:39:52.108Z",
+      "end": "2026-10-18T13:39:53.275Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-2-bdbec347-b6ca-4a81-af16-ffc6eec0ba7c",
+      "label": "repeat",
+      "start": "2026-10-18T13:39:53.414Z",
+      "end": "2026-10-18T13:39:55.349Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-2-89e70159-cc0b-4e86-b639-c736df4fc2fc",
+      "label": "closure",
+      "start": "2026-10-18T13:39:55.493Z",
+      "end": "2026-10-18T13:39:55.624Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-2-1497a73f-847c-4bc3-9d31-0071e5973a09",
+      "label": "opening",
+      "start": "2026-10-18T13:40:26.309Z",
+      "end": "2026-10-18T13:40:27.030Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-2-42d66b83-67ed-4b9d-a769-a2301bd98b2f",
+      "label": "consent",
+      "start": "2026-10-18T13:40:27.163Z",
+      "end": "2026-10-18T13:40:27.781Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-2-52e2e8f6-58ce-45f8-9705-c6a5f3f7d4ee",
+      "label": "confirmation",
+      "start": "2026-10-18T13:40:27.906Z",
+      "end": "2026-10-18T13:40:29.298Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-2-4319dce3-5437-48f1-9b27-20c1f0a19925",
+      "label": "repeat",
+      "start": "2026-10-18T13:40:29.427Z",
+      "end": "2026-10-18T13:40:30.543Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-2-2b6a66a8-64f2-48f2-b2ad-fb7454be8403",
+      "label": "closure",
+      "start": "2026-10-18T13:40:30.678Z",
+      "end": "2026-10-18T13:40:30.786Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-dd726a3d-821a-4861-96bd-89192b99b3c8",
+      "label": "opening",
+      "start": "2026-10-18T13:41:03.865Z",
+      "end": "2026-10-18T13:41:04.604Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-8350a18c-49ab-4b89-9752-cd2c831dce99",
+      "label": "prior-explanation",
+      "start": "2026-10-18T13:41:04.736Z",
+      "end": "2026-10-18T13:41:05.665Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+      "label": "consent",
+      "start": "2026-10-18T13:41:05.900Z",
+      "end": "2026-10-18T13:41:07.317Z",
+      "modelHttpAttempts": 3
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-0c951a0e-fc69-4ad7-85c0-8df585bb20c8",
+      "label": "confirmation",
+      "start": "2026-10-18T13:41:07.445Z",
+      "end": "2026-10-18T13:41:08.366Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-6d83f7fe-5e6c-4f69-9679-0706e00dc936",
+      "label": "repeat",
+      "start": "2026-10-18T13:41:08.493Z",
+      "end": "2026-10-18T13:41:09.341Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-2-d1866a69-97de-4fd7-b281-c8c2311bab70",
+      "label": "closure",
+      "start": "2026-10-18T13:41:09.470Z",
+      "end": "2026-10-18T13:41:09.574Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-3-4844c8c4-c673-4100-b69a-1e6f35c82497",
+      "label": "opening",
+      "start": "2026-10-18T13:41:09.938Z",
+      "end": "2026-10-18T13:41:11.265Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-3-b09b2090-552b-40c0-a415-37b7372b003b",
+      "label": "consent",
+      "start": "2026-10-18T13:41:11.388Z",
+      "end": "2026-10-18T13:41:12.049Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-3-4963934b-7868-4cdd-a377-495a1a388291",
+      "label": "confirmation",
+      "start": "2026-10-18T13:41:12.182Z",
+      "end": "2026-10-18T13:41:13.202Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-3-b2e05c7b-acad-4253-823f-b320bbc10b79",
+      "label": "repeat",
+      "start": "2026-10-18T13:41:13.335Z",
+      "end": "2026-10-18T13:41:14.430Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-3-ad3d09a9-3a8c-4163-a2cc-4bf545b485d4",
+      "label": "closure",
+      "start": "2026-10-18T13:41:14.555Z",
+      "end": "2026-10-18T13:41:14.660Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-3-9138bce4-927a-479a-9803-3cc4bc4136b6",
+      "label": "opening",
+      "start": "2026-10-18T13:41:43.558Z",
+      "end": "2026-10-18T13:41:44.348Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-3-ca649129-d05b-47bb-928c-eac4abafa3e3",
+      "label": "consent",
+      "start": "2026-10-18T13:41:44.474Z",
+      "end": "2026-10-18T13:41:45.136Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-3-1530c469-48ee-4374-a8b6-fbc15f2c7abe",
+      "label": "confirmation",
+      "start": "2026-10-18T13:41:45.260Z",
+      "end": "2026-10-18T13:41:47.184Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-3-081a9197-cbe7-4f06-b2d3-d26c14d8aed9",
+      "label": "repeat",
+      "start": "2026-10-18T13:41:47.318Z",
+      "end": "2026-10-18T13:41:48.721Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-3-e7e733cc-2e59-432d-804c-fb6d6921d867",
+      "label": "closure",
+      "start": "2026-10-18T13:41:48.852Z",
+      "end": "2026-10-18T13:41:48.978Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-5147348d-752e-4450-ba5f-2d5d79d0f5db",
+      "label": "opening",
+      "start": "2026-10-18T13:42:21.058Z",
+      "end": "2026-10-18T13:42:21.805Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+      "label": "prior-explanation",
+      "start": "2026-10-18T13:42:21.958Z",
+      "end": "2026-10-18T13:42:23.056Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0",
+      "label": "consent",
+      "start": "2026-10-18T13:42:23.191Z",
+      "end": "2026-10-18T13:42:24.605Z",
+      "modelHttpAttempts": 3
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-1b613427-5ce5-4fd2-bb48-367771e6f891",
+      "label": "confirmation",
+      "start": "2026-10-18T13:42:24.749Z",
+      "end": "2026-10-18T13:42:25.632Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-c56b4db5-d77d-49a4-beb1-bf21461bb199",
+      "label": "repeat",
+      "start": "2026-10-18T13:42:25.767Z",
+      "end": "2026-10-18T13:42:26.807Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-3-879e0085-c492-42f1-a817-ffa190e4d1d0",
+      "label": "closure",
+      "start": "2026-10-18T13:42:26.976Z",
+      "end": "2026-10-18T13:42:27.216Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-4-3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+      "label": "opening",
+      "start": "2026-10-18T13:43:21.986Z",
+      "end": "2026-10-18T13:43:22.736Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-4-20c5636f-ce97-4809-84d0-cedecb3d85e5",
+      "label": "consent",
+      "start": "2026-10-18T13:43:22.880Z",
+      "end": "2026-10-18T13:43:23.712Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-4-5302777a-46b8-49bd-8a61-cbcd73233bd9",
+      "label": "confirmation",
+      "start": "2026-10-18T13:43:23.850Z",
+      "end": "2026-10-18T13:43:25.850Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-4-5e8e60d8-222e-4d5f-88f6-ef52d58a4d47",
+      "label": "repeat",
+      "start": "2026-10-18T13:43:26.005Z",
+      "end": "2026-10-18T13:43:28.060Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-4-b720e278-0024-487b-b9ff-145eb0115b33",
+      "label": "closure",
+      "start": "2026-10-18T13:43:28.201Z",
+      "end": "2026-10-18T13:43:28.305Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-4-dfe207f6-431e-4e5f-b2fd-05ca34b69777",
+      "label": "opening",
+      "start": "2026-10-18T13:44:01.854Z",
+      "end": "2026-10-18T13:44:02.624Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-4-19d1a131-f1f8-4cd1-842a-0c710083bd00",
+      "label": "consent",
+      "start": "2026-10-18T13:44:02.774Z",
+      "end": "2026-10-18T13:44:03.433Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-4-bf8511c9-d0c7-471d-a2d2-940dfd09f431",
+      "label": "confirmation",
+      "start": "2026-10-18T13:44:03.567Z",
+      "end": "2026-10-18T13:44:04.685Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-4-6072f0a1-3a9f-4431-8211-91fea65dfeb0",
+      "label": "repeat",
+      "start": "2026-10-18T13:44:04.819Z",
+      "end": "2026-10-18T13:44:06.249Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-4-1c36303f-975f-4fea-b1df-614363ddcd88",
+      "label": "closure",
+      "start": "2026-10-18T13:44:06.390Z",
+      "end": "2026-10-18T13:44:06.500Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-89006c9b-012d-40ee-8145-32519871c9be",
+      "label": "opening",
+      "start": "2026-10-18T13:44:48.853Z",
+      "end": "2026-10-18T13:44:49.537Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-e45fbacf-45eb-44b3-9261-25eb2f574af5",
+      "label": "prior-explanation",
+      "start": "2026-10-18T13:44:49.689Z",
+      "end": "2026-10-18T13:44:51.403Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a",
+      "label": "consent",
+      "start": "2026-10-18T13:44:51.552Z",
+      "end": "2026-10-18T13:44:52.836Z",
+      "modelHttpAttempts": 3
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-911ed3af-4220-4e9a-b1ea-16fba63f87d5",
+      "label": "confirmation",
+      "start": "2026-10-18T13:44:53.000Z",
+      "end": "2026-10-18T13:44:54.407Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-54461ebb-a419-4fdc-88c1-3eca1a7de751",
+      "label": "repeat",
+      "start": "2026-10-18T13:44:54.561Z",
+      "end": "2026-10-18T13:44:55.944Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-4-7f62641c-63fe-47bd-9824-25f8ed7f66fc",
+      "label": "closure",
+      "start": "2026-10-18T13:44:56.096Z",
+      "end": "2026-10-18T13:44:56.206Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-5-d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+      "label": "opening",
+      "start": "2026-10-18T13:44:56.617Z",
+      "end": "2026-10-18T13:44:57.218Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-5-7d88fa68-c06f-4623-b915-e9de2504ee9c",
+      "label": "consent",
+      "start": "2026-10-18T13:44:57.361Z",
+      "end": "2026-10-18T13:44:58.720Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-5-dcb68324-1065-462b-a478-0d153c139bbf",
+      "label": "confirmation",
+      "start": "2026-10-18T13:44:58.861Z",
+      "end": "2026-10-18T13:45:00.521Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-5-4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4",
+      "label": "repeat",
+      "start": "2026-10-18T13:45:00.672Z",
+      "end": "2026-10-18T13:45:01.718Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-original-5-310520f7-2721-4f99-b377-b41fdd90010a",
+      "label": "closure",
+      "start": "2026-10-18T13:45:01.888Z",
+      "end": "2026-10-18T13:45:01.993Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-5-e1004c63-c985-41e1-900f-6c781b83f437",
+      "label": "opening",
+      "start": "2026-10-18T13:45:30.722Z",
+      "end": "2026-10-18T13:45:31.476Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-5-89310298-9c95-4219-979a-69c64cecaa37",
+      "label": "consent",
+      "start": "2026-10-18T13:45:31.626Z",
+      "end": "2026-10-18T13:45:32.258Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-5-4e651848-6f12-4988-b6de-4d7056564920",
+      "label": "confirmation",
+      "start": "2026-10-18T13:45:32.406Z",
+      "end": "2026-10-18T13:45:33.836Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-5-45df8216-75b6-4c9d-8dd1-6eeaf6aeb5b8",
+      "label": "repeat",
+      "start": "2026-10-18T13:45:33.977Z",
+      "end": "2026-10-18T13:45:35.113Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-complete-5-f444d80f-ca1e-4d3b-84a8-b0c92a21bfff",
+      "label": "closure",
+      "start": "2026-10-18T13:45:35.257Z",
+      "end": "2026-10-18T13:45:35.365Z",
+      "modelHttpAttempts": 0
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+      "label": "opening",
+      "start": "2026-10-18T13:46:06.201Z",
+      "end": "2026-10-18T13:46:06.916Z",
+      "modelHttpAttempts": 1
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+      "label": "prior-explanation",
+      "start": "2026-10-18T13:46:07.067Z",
+      "end": "2026-10-18T13:46:09.009Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+      "label": "consent",
+      "start": "2026-10-18T13:46:09.170Z",
+      "end": "2026-10-18T13:46:10.571Z",
+      "modelHttpAttempts": 3
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9",
+      "label": "confirmation",
+      "start": "2026-10-18T13:46:10.775Z",
+      "end": "2026-10-18T13:46:12.808Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-86f43a62-3914-4e35-839e-4707b2a35aa9",
+      "label": "repeat",
+      "start": "2026-10-18T13:46:12.950Z",
+      "end": "2026-10-18T13:46:13.986Z",
+      "modelHttpAttempts": 2
+    },
+    {
+      "requestId": "pr3-repair7-latency-production-v8-split-5-4e964992-f5a6-4c8f-a880-75637f9f1d28",
+      "label": "closure",
+      "start": "2026-10-18T13:46:14.136Z",
+      "end": "2026-10-18T13:46:14.236Z",
+      "modelHttpAttempts": 0
+    }
+  ],
+  "logs": [
+    {
+      "id": "e4d84c05-e8a6-42eb-9e45-7b09957b54ef",
+      "timestamp": "2026-10-18T13:37:22.097404656Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "e485727a-f008-4b46-8f50-2518cd816ad8",
+      "timestamp": "2026-10-18T13:37:22.928686837Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "4b949679-6767-42d1-a63d-ffba22a23e2f",
+      "timestamp": "2026-10-18T13:37:23.882742098Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "560a5f74-b3c1-43f3-89a0-99fa64bf1141",
+      "timestamp": "2026-10-18T13:37:24.732773034Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "d898f53d-1721-4711-903e-5b39ac59675d",
+      "timestamp": "2026-10-18T13:37:25.343103691Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "78e6862d-a4b0-4604-8acb-f055c6b5780a",
+      "timestamp": "2026-10-18T13:37:26.043791358Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "c5e686af-4cd9-4e3c-a100-9081495121e5",
+      "timestamp": "2026-10-18T13:37:48.030030558Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "429e4c91-7dd0-48db-9c87-d417acb3851e",
+      "timestamp": "2026-10-18T13:37:49.043821134Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "03a39f97-0239-448b-b7df-1c0a222653e6",
+      "timestamp": "2026-10-18T13:37:49.513149977Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "0bec887e-fe31-402c-8087-138724acf88f",
+      "timestamp": "2026-10-18T13:37:50.128559461Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8bbdded2-3a39-485f-b704-04b1530afe0f",
+      "timestamp": "2026-10-18T13:37:50.555133966Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "181df800-c770-4a79-b8b5-601d925f5e83",
+      "timestamp": "2026-10-18T13:37:51.306795364Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "899769bb-892b-4695-bbbe-58936fa9494e",
+      "timestamp": "2026-10-18T13:38:26.837321096Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "cf15aff4-553e-4c0a-bcee-c2d263eb0094",
+      "timestamp": "2026-10-18T13:38:27.657804389Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "24efaf2e-18fa-46c2-87b0-d6c31410c16e",
+      "timestamp": "2026-10-18T13:38:28.230932753Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "c900f93e-3e30-4a2e-8161-dd2ecd6cddb9",
+      "timestamp": "2026-10-18T13:38:28.869406631Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "78ff7a7c-71ba-497f-b9db-dae12bd657e3",
+      "timestamp": "2026-10-18T13:38:29.235910513Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "9fa6aca5-6164-4865-b499-93fbeb45aedd",
+      "timestamp": "2026-10-18T13:38:30.478567858Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "0d91af32-742b-4310-b16f-23dfd09a05fe",
+      "timestamp": "2026-10-18T13:38:30.921958395Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "31f2ef25-087b-4613-aa32-6e741de7d1a4",
+      "timestamp": "2026-10-18T13:38:31.467291486Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "9509a2a9-30ed-47eb-b990-54d413c629ed",
+      "timestamp": "2026-10-18T13:38:31.977337145Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "1b521252-69aa-443d-b8f4-b290744d9116",
+      "timestamp": "2026-10-18T13:38:32.564457413Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "c1e2aac4-b4f1-4c31-8d17-02494d4abe9f",
+      "timestamp": "2026-10-18T13:39:50.365027038Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "14fe06b5-8484-4f2e-b587-bff0f093d5c0",
+      "timestamp": "2026-10-18T13:39:51.805053857Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "cd228af7-3fb8-4569-889e-d39776724aeb",
+      "timestamp": "2026-10-18T13:39:52.360192482Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "dd3c364f-b8a6-4d7c-a1bb-b79dbf2a046d",
+      "timestamp": "2026-10-18T13:39:53.119105499Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "62dc0b9e-23fb-49cc-a6c0-e2783d2c3476",
+      "timestamp": "2026-10-18T13:39:53.8987175Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "eac71119-269c-4254-804f-99acff08b6cc",
+      "timestamp": "2026-10-18T13:39:55.188921171Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "ede9a0ce-a7c8-4f16-a739-970175b5727b",
+      "timestamp": "2026-10-18T13:40:26.873486972Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "44d7f811-d3dd-4385-9f2a-6780112cf4d0",
+      "timestamp": "2026-10-18T13:40:27.602117322Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "19172367-1ecf-46c7-bfed-57b3c522f87c",
+      "timestamp": "2026-10-18T13:40:28.158210456Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "88758288-40ba-4a29-943d-9a90bcdbc659",
+      "timestamp": "2026-10-18T13:40:29.141587919Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "7c8ff8dc-ebee-4719-8bd7-531a8b2ed354",
+      "timestamp": "2026-10-18T13:40:29.666482247Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "6b3fee1e-ebd8-49c6-8db0-3a90872b3646",
+      "timestamp": "2026-10-18T13:40:30.387325183Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "e2bc7561-392b-49fd-afd2-c931e8ea2e41",
+      "timestamp": "2026-10-18T13:41:04.450025827Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "f32d39f3-ca29-47d2-ac7b-9d96dd93af91",
+      "timestamp": "2026-10-18T13:41:04.926064039Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "ac05f787-d5e5-471e-9659-041ad7326931",
+      "timestamp": "2026-10-18T13:41:05.508907835Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "2d6fe54b-c053-4fba-9b1c-12f4513f92b7",
+      "timestamp": "2026-10-18T13:41:06.326530484Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "55c64de1-bf92-48ba-9b85-44e6bb30cbfa",
+      "timestamp": "2026-10-18T13:41:06.659627182Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "02909f9e-1225-40d2-b4fb-4fe1ea4f3760",
+      "timestamp": "2026-10-18T13:41:07.161813244Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "005f4b42-7b77-41f2-a96f-75de51e74e6f",
+      "timestamp": "2026-10-18T13:41:07.639104292Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "db954490-d804-447d-8184-bd8d41522af6",
+      "timestamp": "2026-10-18T13:41:08.208692139Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "9aa51a97-6ca4-4be0-984c-96bfe3dca69f",
+      "timestamp": "2026-10-18T13:41:08.613405742Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "846aa8d7-7e49-4afe-b0a5-97f713136057",
+      "timestamp": "2026-10-18T13:41:09.184229615Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "e6258857-5ad2-424f-a827-5147bdb203dd",
+      "timestamp": "2026-10-18T13:41:11.10680936Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "1c03a726-dc88-4db4-8906-fb0317956f68",
+      "timestamp": "2026-10-18T13:41:11.884866687Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "fcd6798f-0356-4dfd-915b-87a3b805a43b",
+      "timestamp": "2026-10-18T13:41:12.387806944Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "11259eab-3bee-47a2-9710-9cfef088456e",
+      "timestamp": "2026-10-18T13:41:13.038480635Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "5904a8ed-2e9a-451e-9557-fea1683a24f3",
+      "timestamp": "2026-10-18T13:41:13.51945627Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "290e6d3f-37c2-4c9e-80ae-811dda1f2974",
+      "timestamp": "2026-10-18T13:41:14.273605755Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "de1ad7cd-a07c-4ee3-882c-866cd2796b6d",
+      "timestamp": "2026-10-18T13:41:44.189906222Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "b9784661-2a34-402c-9227-bd1d7375d068",
+      "timestamp": "2026-10-18T13:41:44.975278972Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8ad80ed4-e962-4af1-a8d8-45097da79907",
+      "timestamp": "2026-10-18T13:41:46.299675917Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "e1e3b972-8016-4177-882a-d84184169e92",
+      "timestamp": "2026-10-18T13:41:47.02327969Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "d27f09a5-1a90-4f9a-88a9-8462b03241bb",
+      "timestamp": "2026-10-18T13:41:47.509938044Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "b93695a5-6100-4dbf-87c4-c1558f06d0be",
+      "timestamp": "2026-10-18T13:41:48.552038638Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "149bef41-4aef-4afc-bec6-70ffa99f93d7",
+      "timestamp": "2026-10-18T13:42:21.647519324Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "b2d507ab-b6bb-4bd0-93f9-1f96f9ad54c9",
+      "timestamp": "2026-10-18T13:42:22.204407743Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "cf3b9257-4e41-4d17-8a61-6f47aeda2c73",
+      "timestamp": "2026-10-18T13:42:22.855001991Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "2b61b797-1a93-47c2-bf11-9d868a484228",
+      "timestamp": "2026-10-18T13:42:23.542965653Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "372e5dbc-85da-40f0-9a0b-c26b438b165f",
+      "timestamp": "2026-10-18T13:42:23.941081107Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "bfc45941-03cd-4bff-8e1b-4f494fcd8a3f",
+      "timestamp": "2026-10-18T13:42:24.45246144Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "f8b8e628-0e02-44f7-bff3-9c93240baddf",
+      "timestamp": "2026-10-18T13:42:24.920495173Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "6e2d1fd4-b18b-43c2-a719-883ac7d90444",
+      "timestamp": "2026-10-18T13:42:25.465198916Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "a1c7d253-b4c3-4884-8115-05c068dc6533",
+      "timestamp": "2026-10-18T13:42:26.079384189Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "4a40a2b9-8115-4637-8a4c-832f8724f0a2",
+      "timestamp": "2026-10-18T13:42:26.638304791Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8ad1f4dc-99cf-4017-ae78-d5513fa88e91",
+      "timestamp": "2026-10-18T13:43:22.570972192Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "7e2dd032-3e50-4892-95c4-6721762aad52",
+      "timestamp": "2026-10-18T13:43:23.542472809Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "fd24c803-123f-408f-b001-a0f747fdfd4f",
+      "timestamp": "2026-10-18T13:43:24.207171952Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "a3e3df9f-b3cb-4125-a85f-42345c90ac7e",
+      "timestamp": "2026-10-18T13:43:25.695902625Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "c61a7dcd-edee-416d-aaaf-9dce434ff070",
+      "timestamp": "2026-10-18T13:43:26.214464729Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "405ed876-449f-4a48-a3a4-86895a974c6c",
+      "timestamp": "2026-10-18T13:43:27.903812036Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "6fcf753b-7116-4987-a9fa-28aa8b276a54",
+      "timestamp": "2026-10-18T13:44:02.466625461Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "a0e9ee6b-7559-4406-9a53-9ab3b172e317",
+      "timestamp": "2026-10-18T13:44:03.261751653Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "0b3a7a00-19ed-44a9-9e26-bf5d2d401d1f",
+      "timestamp": "2026-10-18T13:44:03.766139988Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "7ea24976-0a3c-4458-acdf-a5aa9c20f183",
+      "timestamp": "2026-10-18T13:44:04.529471702Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8b86b1f3-c6b8-40c7-8720-7661d35ba9ce",
+      "timestamp": "2026-10-18T13:44:05.131186102Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "1d942535-f56d-4fe5-99fb-09b181000c41",
+      "timestamp": "2026-10-18T13:44:06.097877758Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "15e61bb0-16ee-4422-8b5f-de9c58a5afc4",
+      "timestamp": "2026-10-18T13:44:49.380434878Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8429621e-552e-4f2c-acec-5a63c63eb6dd",
+      "timestamp": "2026-10-18T13:44:50.715796596Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "56a9becd-a4d4-4ac1-ad81-030c7b879da8",
+      "timestamp": "2026-10-18T13:44:51.250535047Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "696f5205-17d5-44b9-a6ab-4bd5b0012304",
+      "timestamp": "2026-10-18T13:44:51.75720957Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "726b7db9-2fc3-4462-851d-6d752bdfcd6a",
+      "timestamp": "2026-10-18T13:44:52.097032367Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "1628911b-8685-4dcc-9e2b-954d61ae72aa",
+      "timestamp": "2026-10-18T13:44:52.675653241Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "a7c45d54-ece2-4ab7-bab2-2c03681aec7f",
+      "timestamp": "2026-10-18T13:44:53.573559731Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "3bbfee02-5ebb-4383-a270-eaa39f86107a",
+      "timestamp": "2026-10-18T13:44:54.255371181Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "171ea554-a828-45f6-a76c-ab454aaf3a6a",
+      "timestamp": "2026-10-18T13:44:54.715850993Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "54e44ebe-180c-41cd-bfea-456c75ff1c23",
+      "timestamp": "2026-10-18T13:44:55.789092306Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "554fca83-24f1-4114-816c-907367cd44f1",
+      "timestamp": "2026-10-18T13:44:57.057229372Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "3c5f8a18-aec5-416a-9a07-7f2bfa23e07f",
+      "timestamp": "2026-10-18T13:44:58.551326834Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "ba73d1a8-cb5d-4650-bc3a-d96140ecba2b",
+      "timestamp": "2026-10-18T13:44:59.282109473Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "a5cbae9d-3769-4441-8237-4cbd6cea490e",
+      "timestamp": "2026-10-18T13:45:00.365297904Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "56c55a4b-1d8b-4bc7-9e7a-0e8a7a1fe5e3",
+      "timestamp": "2026-10-18T13:45:00.798229207Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "bb46e302-4a6c-48cd-ab77-8f2852a7071b",
+      "timestamp": "2026-10-18T13:45:01.547003434Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "c7ff48a7-0123-46d7-b77f-6cac627eb6f6",
+      "timestamp": "2026-10-18T13:45:31.313580534Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "472c29f8-8f81-491e-b606-7ffac67af13d",
+      "timestamp": "2026-10-18T13:45:32.094377174Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "93e974f3-b43f-4266-b424-e757a48c0486",
+      "timestamp": "2026-10-18T13:45:32.968541653Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "4c6b694c-39c6-4953-8a67-481e51f8ef6d",
+      "timestamp": "2026-10-18T13:45:33.680049937Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "fe5550e8-1970-44f5-9b52-b909d2d6ef38",
+      "timestamp": "2026-10-18T13:45:34.161957469Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "aa5be0a0-b3fd-4c15-85fb-6c4719c60751",
+      "timestamp": "2026-10-18T13:45:34.956317593Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "8c379ab9-faae-4a9a-b28d-30c670d914d6",
+      "timestamp": "2026-10-18T13:46:06.756806772Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "e8f6ad1b-485a-4af4-901a-d36598388155",
+      "timestamp": "2026-10-18T13:46:07.288797175Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "38405d49-450c-49b7-b8d6-0fe73595895a",
+      "timestamp": "2026-10-18T13:46:08.858728577Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "ff291fbd-5210-4f52-8976-143a7db8be9c",
+      "timestamp": "2026-10-18T13:46:09.426620944Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "6147c1ad-b20b-4554-bd92-277c8679491e",
+      "timestamp": "2026-10-18T13:46:09.787977833Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "0990d5be-83e2-4881-9ca6-51cf30a3f6c4",
+      "timestamp": "2026-10-18T13:46:10.415552813Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "2b561328-9a96-470e-bbcf-708d1bdbffac",
+      "timestamp": "2026-10-18T13:46:11.078813513Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "bf9bdf3f-ad99-4d41-a346-c34945ac4734",
+      "timestamp": "2026-10-18T13:46:12.646994468Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "2d03095c-eecf-44a9-badc-0ea5bc68d31c",
+      "timestamp": "2026-10-18T13:46:13.195853785Z",
+      "message": "navigator_http_attempt {"
+    },
+    {
+      "id": "110880ee-9ec5-46d6-8572-669eaadd242d",
+      "timestamp": "2026-10-18T13:46:13.809291839Z",
+      "message": "navigator_http_attempt {"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1221a391-dee2-4d77-8b41-457b8fa05199",
+      "timestamp": "2026-10-18T13:37:22.098074039Z",
+      "message": "  operationId: '6db95a24-d7fc-4115-9877-fb60f9500ea6',",
+      "operationId": "6db95a24-d7fc-4115-9877-fb60f9500ea6"
+    },
+    {
+      "id": "86048f8e-e962-4e75-9fcf-7bf5f693c839",
+      "timestamp": "2026-10-18T13:37:22.928714897Z",
+      "message": "  operationId: '59523266-2555-43ff-919f-4f64b458e280',",
+      "operationId": "59523266-2555-43ff-919f-4f64b458e280"
+    },
+    {
+      "id": "56f287fa-202b-48eb-b627-5301e047c7ea",
+      "timestamp": "2026-10-18T13:37:23.882766429Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-1-57986378-3f3c-4676-b676-c6c8aeb1f650',",
+      "operationId": "pr3-repair7-latency-production-v8-original-1-57986378-3f3c-4676-b676-c6c8aeb1f650"
+    },
+    {
+      "id": "25a21ead-1c37-4c61-be82-4aa6fcfa1e71",
+      "timestamp": "2026-10-18T13:37:24.732809204Z",
+      "message": "  operationId: 'c9359012-e4f6-4838-b29d-91f6f9652917',",
+      "operationId": "c9359012-e4f6-4838-b29d-91f6f9652917"
+    },
+    {
+      "id": "ea250087-6a56-4f08-af9d-3923a7fac974",
+      "timestamp": "2026-10-18T13:37:25.343130862Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-1-03adb272-8b73-4dac-af17-0a495e616a60',",
+      "operationId": "pr3-repair7-latency-production-v8-original-1-03adb272-8b73-4dac-af17-0a495e616a60"
+    },
+    {
+      "id": "f8cc066b-de5f-418f-bcb1-da3b016b2c2f",
+      "timestamp": "2026-10-18T13:37:26.043826718Z",
+      "message": "  operationId: 'a87fc424-61a5-4006-ae2c-8238b277aca9',",
+      "operationId": "a87fc424-61a5-4006-ae2c-8238b277aca9"
+    },
+    {
+      "id": "fbbcac37-a4b0-4a76-8e02-f72f7e640c6b",
+      "timestamp": "2026-10-18T13:37:48.030055568Z",
+      "message": "  operationId: '3e9709cc-7a3b-4dd1-955d-6c27e95df8fa',",
+      "operationId": "3e9709cc-7a3b-4dd1-955d-6c27e95df8fa"
+    },
+    {
+      "id": "57148268-cfcb-4dea-9c15-341dff8124d2",
+      "timestamp": "2026-10-18T13:37:49.043836884Z",
+      "message": "  operationId: '9e5e7877-066d-46cf-b0ae-4caf15187626',",
+      "operationId": "9e5e7877-066d-46cf-b0ae-4caf15187626"
+    },
+    {
+      "id": "28a49e17-a16d-4969-a972-8926e26dca0b",
+      "timestamp": "2026-10-18T13:37:49.513171798Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-1-2e9f8079-f44c-456d-aa47-a13828f08851',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-1-2e9f8079-f44c-456d-aa47-a13828f08851"
+    },
+    {
+      "id": "4fd8995a-5ad0-4a75-80d3-dcd81b744b5e",
+      "timestamp": "2026-10-18T13:37:50.128576732Z",
+      "message": "  operationId: '19897b24-5873-47ed-bfc1-22a654a9afaa',",
+      "operationId": "19897b24-5873-47ed-bfc1-22a654a9afaa"
+    },
+    {
+      "id": "05e9a973-7d79-40c5-8a0b-b6b2f38ae151",
+      "timestamp": "2026-10-18T13:37:50.555157267Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-1-dabdb5da-8ef9-464d-a64c-c6de038f1682',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-1-dabdb5da-8ef9-464d-a64c-c6de038f1682"
+    },
+    {
+      "id": "547225d2-dc64-4b3d-b1c4-4c5abfa31b63",
+      "timestamp": "2026-10-18T13:37:51.306815404Z",
+      "message": "  operationId: '626f2784-df63-4160-93d0-ecc7e11c65a0',",
+      "operationId": "626f2784-df63-4160-93d0-ecc7e11c65a0"
+    },
+    {
+      "id": "a7c4dca5-38a6-492c-8953-13791191427a",
+      "timestamp": "2026-10-18T13:38:26.837346227Z",
+      "message": "  operationId: '25378b8b-d4f3-46ec-a976-37bb0265b269',",
+      "operationId": "25378b8b-d4f3-46ec-a976-37bb0265b269"
+    },
+    {
+      "id": "f9e7be4e-1116-469c-8d4f-b66c4b34a456",
+      "timestamp": "2026-10-18T13:38:27.657830769Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-1-2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf',",
+      "operationId": "pr3-repair7-latency-production-v8-split-1-2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf"
+    },
+    {
+      "id": "6deb5554-48bb-4cc3-a124-a1d5ef326942",
+      "timestamp": "2026-10-18T13:38:28.230977104Z",
+      "message": "  operationId: 'e3a419c3-43ed-48ca-ba19-1adf3b9357fe',",
+      "operationId": "e3a419c3-43ed-48ca-ba19-1adf3b9357fe"
+    },
+    {
+      "id": "fe90da36-bc95-45bb-b025-da5c10336a60",
+      "timestamp": "2026-10-18T13:38:28.869432281Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e',",
+      "operationId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e"
+    },
+    {
+      "id": "03a4f479-5be3-41d3-b32d-b1ec925acc7f",
+      "timestamp": "2026-10-18T13:38:29.235936154Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e',",
+      "operationId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e"
+    },
+    {
+      "id": "42b1e24e-dc5a-4e9f-b13f-1f25da19dfa4",
+      "timestamp": "2026-10-18T13:38:30.478597128Z",
+      "message": "  operationId: '201ebafa-e8ab-4886-9775-4eb1c124e571',",
+      "operationId": "201ebafa-e8ab-4886-9775-4eb1c124e571"
+    },
+    {
+      "id": "88478198-46f4-45a7-966c-0e2db16cef25",
+      "timestamp": "2026-10-18T13:38:30.921976576Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-1-9917e12d-74fb-4c9a-b9f4-c180f2d3ef98',",
+      "operationId": "pr3-repair7-latency-production-v8-split-1-9917e12d-74fb-4c9a-b9f4-c180f2d3ef98"
+    },
+    {
+      "id": "ab2cea32-b29b-4abe-b402-bbe312635ee5",
+      "timestamp": "2026-10-18T13:38:31.467328627Z",
+      "message": "  operationId: 'd89a1cb6-333d-4ea4-be29-03f683739c3a',",
+      "operationId": "d89a1cb6-333d-4ea4-be29-03f683739c3a"
+    },
+    {
+      "id": "c57a812a-adfa-47cc-81cb-2ba2ce7f148b",
+      "timestamp": "2026-10-18T13:38:31.977353565Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-1-a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd',",
+      "operationId": "pr3-repair7-latency-production-v8-split-1-a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd"
+    },
+    {
+      "id": "e396fc27-c7f0-48d9-810a-86878fc4eb32",
+      "timestamp": "2026-10-18T13:38:32.564475873Z",
+      "message": "  operationId: '6553970d-cf56-430a-8473-9ea16b0d3e3e',",
+      "operationId": "6553970d-cf56-430a-8473-9ea16b0d3e3e"
+    },
+    {
+      "id": "3bb60266-7ed3-443d-a153-46c351f2e49a",
+      "timestamp": "2026-10-18T13:39:50.365059709Z",
+      "message": "  operationId: 'e662edf9-bb72-4eea-8b7a-41eff9845133',",
+      "operationId": "e662edf9-bb72-4eea-8b7a-41eff9845133"
+    },
+    {
+      "id": "cedc96c5-a4f8-4aec-a0a0-8e6343d41d57",
+      "timestamp": "2026-10-18T13:39:51.805075007Z",
+      "message": "  operationId: '10c79bfb-331d-4056-9759-ba4e5c7eb006',",
+      "operationId": "10c79bfb-331d-4056-9759-ba4e5c7eb006"
+    },
+    {
+      "id": "a50c955e-b923-4cf4-954e-34dabe3831fa",
+      "timestamp": "2026-10-18T13:39:52.360223892Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-2-816f8957-33bb-4c7f-940f-fee1fed524e6',",
+      "operationId": "pr3-repair7-latency-production-v8-original-2-816f8957-33bb-4c7f-940f-fee1fed524e6"
+    },
+    {
+      "id": "f042a8e0-41e2-4c28-9cdd-fab838dee330",
+      "timestamp": "2026-10-18T13:39:53.119134039Z",
+      "message": "  operationId: 'b3b82572-3752-456f-9c5e-1ec9732765a0',",
+      "operationId": "b3b82572-3752-456f-9c5e-1ec9732765a0"
+    },
+    {
+      "id": "bd87e000-e81d-4c46-b321-0d996331908c",
+      "timestamp": "2026-10-18T13:39:53.898742081Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-2-bdbec347-b6ca-4a81-af16-ffc6eec0ba7c',",
+      "operationId": "pr3-repair7-latency-production-v8-original-2-bdbec347-b6ca-4a81-af16-ffc6eec0ba7c"
+    },
+    {
+      "id": "eabef952-846e-491c-b2ec-9a987e2c493e",
+      "timestamp": "2026-10-18T13:39:55.188978462Z",
+      "message": "  operationId: '5a902813-ea5c-4d73-b5b6-0042db7e4230',",
+      "operationId": "5a902813-ea5c-4d73-b5b6-0042db7e4230"
+    },
+    {
+      "id": "447b01ad-24c9-412f-934d-a889785acbb3",
+      "timestamp": "2026-10-18T13:40:26.873517343Z",
+      "message": "  operationId: 'a7767cb6-c6c6-4670-a98b-7dc69a226229',",
+      "operationId": "a7767cb6-c6c6-4670-a98b-7dc69a226229"
+    },
+    {
+      "id": "4abfb5e5-24e3-4b8f-8054-c68ea39e7409",
+      "timestamp": "2026-10-18T13:40:27.602139082Z",
+      "message": "  operationId: '1bdd15be-174e-4ca3-aebf-6350bc14ac80',",
+      "operationId": "1bdd15be-174e-4ca3-aebf-6350bc14ac80"
+    },
+    {
+      "id": "894a2507-8447-4df2-aa05-b4659a20ac84",
+      "timestamp": "2026-10-18T13:40:28.158235917Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-2-52e2e8f6-58ce-45f8-9705-c6a5f3f7d4ee',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-2-52e2e8f6-58ce-45f8-9705-c6a5f3f7d4ee"
+    },
+    {
+      "id": "f5edbecc-ff12-4040-b9a5-8ca5db869f0b",
+      "timestamp": "2026-10-18T13:40:29.141612169Z",
+      "message": "  operationId: '1ee72b2c-d154-4238-ac10-77c46ee784c8',",
+      "operationId": "1ee72b2c-d154-4238-ac10-77c46ee784c8"
+    },
+    {
+      "id": "2f3bbf08-94b9-4741-98b7-b1715ddc0ebd",
+      "timestamp": "2026-10-18T13:40:29.666513638Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-2-4319dce3-5437-48f1-9b27-20c1f0a19925',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-2-4319dce3-5437-48f1-9b27-20c1f0a19925"
+    },
+    {
+      "id": "ed9c118a-85ba-4aa1-932f-30a0f4b99e9b",
+      "timestamp": "2026-10-18T13:40:30.387344764Z",
+      "message": "  operationId: '5c49a2be-cc67-4bc0-8d32-c97a01aed6ad',",
+      "operationId": "5c49a2be-cc67-4bc0-8d32-c97a01aed6ad"
+    },
+    {
+      "id": "0e1db65c-70fd-435e-861e-b15774615a41",
+      "timestamp": "2026-10-18T13:41:04.450676671Z",
+      "message": "  operationId: '75273177-19ae-4d81-bb0a-3e6cae7c75e0',",
+      "operationId": "75273177-19ae-4d81-bb0a-3e6cae7c75e0"
+    },
+    {
+      "id": "c4a07e16-ee61-4f98-a44f-fd50a74c53e6",
+      "timestamp": "2026-10-18T13:41:04.926080219Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-2-8350a18c-49ab-4b89-9752-cd2c831dce99',",
+      "operationId": "pr3-repair7-latency-production-v8-split-2-8350a18c-49ab-4b89-9752-cd2c831dce99"
+    },
+    {
+      "id": "2a17bc34-86c0-4c33-9e22-9b98e9f78614",
+      "timestamp": "2026-10-18T13:41:05.508921725Z",
+      "message": "  operationId: '3f9a5622-f320-4afe-a888-8f1b5f117101',",
+      "operationId": "3f9a5622-f320-4afe-a888-8f1b5f117101"
+    },
+    {
+      "id": "6dfab7b5-59e1-42b8-b047-0c9e9f47e250",
+      "timestamp": "2026-10-18T13:41:06.326546324Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7',",
+      "operationId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7"
+    },
+    {
+      "id": "d43430de-1409-464d-9f75-44e96dfedefb",
+      "timestamp": "2026-10-18T13:41:06.659643993Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7',",
+      "operationId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7"
+    },
+    {
+      "id": "9d05387f-2575-42d5-a213-515d0b21c60b",
+      "timestamp": "2026-10-18T13:41:07.161829474Z",
+      "message": "  operationId: 'c48baeba-2d69-48e2-a9cf-83fe77771f74',",
+      "operationId": "c48baeba-2d69-48e2-a9cf-83fe77771f74"
+    },
+    {
+      "id": "c9407ff1-03ac-439b-8b17-5715eed1ddc7",
+      "timestamp": "2026-10-18T13:41:07.639118692Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-2-0c951a0e-fc69-4ad7-85c0-8df585bb20c8',",
+      "operationId": "pr3-repair7-latency-production-v8-split-2-0c951a0e-fc69-4ad7-85c0-8df585bb20c8"
+    },
+    {
+      "id": "ee6ba449-ec24-45c0-a38b-4f9fb339167c",
+      "timestamp": "2026-10-18T13:41:08.208723089Z",
+      "message": "  operationId: 'cab253a8-8533-4482-8979-2a49087942c9',",
+      "operationId": "cab253a8-8533-4482-8979-2a49087942c9"
+    },
+    {
+      "id": "2c7faa60-d219-40ae-ab4e-b0e27ce2010c",
+      "timestamp": "2026-10-18T13:41:08.613423212Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-2-6d83f7fe-5e6c-4f69-9679-0706e00dc936',",
+      "operationId": "pr3-repair7-latency-production-v8-split-2-6d83f7fe-5e6c-4f69-9679-0706e00dc936"
+    },
+    {
+      "id": "749f0e97-a1b9-4c09-8d6b-09a0d0168a34",
+      "timestamp": "2026-10-18T13:41:09.184244796Z",
+      "message": "  operationId: 'ab94f137-72c2-4f41-9b3a-35d0e70049cd',",
+      "operationId": "ab94f137-72c2-4f41-9b3a-35d0e70049cd"
+    },
+    {
+      "id": "5a494c6a-a04e-4d18-b3c4-69ccca630b98",
+      "timestamp": "2026-10-18T13:41:11.10682515Z",
+      "message": "  operationId: 'f6906174-2468-419a-9f6f-8e4192d219c8',",
+      "operationId": "f6906174-2468-419a-9f6f-8e4192d219c8"
+    },
+    {
+      "id": "fbae717e-0098-437c-80d8-1d4ae2b3c235",
+      "timestamp": "2026-10-18T13:41:11.884882377Z",
+      "message": "  operationId: 'b413e50a-1a0e-40ef-988c-1793645498d4',",
+      "operationId": "b413e50a-1a0e-40ef-988c-1793645498d4"
+    },
+    {
+      "id": "8361011b-6e13-4a97-ba19-6781d67f961d",
+      "timestamp": "2026-10-18T13:41:12.387835704Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-3-4963934b-7868-4cdd-a377-495a1a388291',",
+      "operationId": "pr3-repair7-latency-production-v8-original-3-4963934b-7868-4cdd-a377-495a1a388291"
+    },
+    {
+      "id": "599d1848-0bf2-4728-8b62-a088574d3524",
+      "timestamp": "2026-10-18T13:41:13.038498835Z",
+      "message": "  operationId: '3a565a05-7da9-44dc-8210-204c8433458f',",
+      "operationId": "3a565a05-7da9-44dc-8210-204c8433458f"
+    },
+    {
+      "id": "43b8f476-f89e-4db9-96ce-bc5fcfbd55cd",
+      "timestamp": "2026-10-18T13:41:13.519480961Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-3-b2e05c7b-acad-4253-823f-b320bbc10b79',",
+      "operationId": "pr3-repair7-latency-production-v8-original-3-b2e05c7b-acad-4253-823f-b320bbc10b79"
+    },
+    {
+      "id": "978cf272-315f-4c39-8786-c56923aadd8f",
+      "timestamp": "2026-10-18T13:41:14.273622586Z",
+      "message": "  operationId: 'fae0eeec-e16e-4f32-9514-87cc7cf3575a',",
+      "operationId": "fae0eeec-e16e-4f32-9514-87cc7cf3575a"
+    },
+    {
+      "id": "a5e4ad69-7a29-413d-9e02-516d195dd12a",
+      "timestamp": "2026-10-18T13:41:44.189933613Z",
+      "message": "  operationId: '96e8650c-5d3f-412b-a82e-d021f2ef63d3',",
+      "operationId": "96e8650c-5d3f-412b-a82e-d021f2ef63d3"
+    },
+    {
+      "id": "68d16ba0-6e16-49f4-896a-3a9e9d198be4",
+      "timestamp": "2026-10-18T13:41:44.975305723Z",
+      "message": "  operationId: '0bf610a2-ab87-415e-ba5e-40ffb63d7d78',",
+      "operationId": "0bf610a2-ab87-415e-ba5e-40ffb63d7d78"
+    },
+    {
+      "id": "2a53054b-866f-4bd5-a3d4-d9bbf6c85e69",
+      "timestamp": "2026-10-18T13:41:46.299699468Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-3-1530c469-48ee-4374-a8b6-fbc15f2c7abe',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-3-1530c469-48ee-4374-a8b6-fbc15f2c7abe"
+    },
+    {
+      "id": "53d748c8-99d3-48e5-af88-18adcdf8d614",
+      "timestamp": "2026-10-18T13:41:47.02329951Z",
+      "message": "  operationId: '3678a784-b0db-4a82-8cbb-8add17b96047',",
+      "operationId": "3678a784-b0db-4a82-8cbb-8add17b96047"
+    },
+    {
+      "id": "7acb1275-8b3f-4ace-9ee3-5c1d29bd3656",
+      "timestamp": "2026-10-18T13:41:47.511003516Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-3-081a9197-cbe7-4f06-b2d3-d26c14d8aed9',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-3-081a9197-cbe7-4f06-b2d3-d26c14d8aed9"
+    },
+    {
+      "id": "fa04bba0-d6fa-48f8-911c-2f3ea1e55adc",
+      "timestamp": "2026-10-18T13:41:48.552058768Z",
+      "message": "  operationId: '4089a246-42fd-47d6-8183-3a24680f892b',",
+      "operationId": "4089a246-42fd-47d6-8183-3a24680f892b"
+    },
+    {
+      "id": "0bea858e-837c-477b-a7f9-732bb4c07ed4",
+      "timestamp": "2026-10-18T13:42:21.647549824Z",
+      "message": "  operationId: 'f9f5a437-bcf2-4458-8a49-42191c1fb1d0',",
+      "operationId": "f9f5a437-bcf2-4458-8a49-42191c1fb1d0"
+    },
+    {
+      "id": "5f727a62-c774-418b-8ae8-7b39f8d77aed",
+      "timestamp": "2026-10-18T13:42:22.204424383Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-3-dc24d105-dca6-43a9-ba26-cbac3c22caaf',",
+      "operationId": "pr3-repair7-latency-production-v8-split-3-dc24d105-dca6-43a9-ba26-cbac3c22caaf"
+    },
+    {
+      "id": "23fcd20f-04e4-4d67-a884-22b377e2510c",
+      "timestamp": "2026-10-18T13:42:22.855030181Z",
+      "message": "  operationId: '4c212b88-a714-4e0c-b74d-53d1f91b0bbd',",
+      "operationId": "4c212b88-a714-4e0c-b74d-53d1f91b0bbd"
+    },
+    {
+      "id": "99ca53c3-fba2-4630-ae4b-e1e7d3c5f09f",
+      "timestamp": "2026-10-18T13:42:23.542996684Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0',",
+      "operationId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0"
+    },
+    {
+      "id": "0c21bd43-143d-4eec-9f5c-ce2bb2988f57",
+      "timestamp": "2026-10-18T13:42:23.941099608Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0',",
+      "operationId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0"
+    },
+    {
+      "id": "58ed7650-04d9-4f41-927a-8e7b9e99308a",
+      "timestamp": "2026-10-18T13:42:24.452484661Z",
+      "message": "  operationId: '7f4ed9a1-7341-4b93-8e7e-d7bf46d362bc',",
+      "operationId": "7f4ed9a1-7341-4b93-8e7e-d7bf46d362bc"
+    },
+    {
+      "id": "0a9ec54a-7618-449e-b972-46c373bd87d7",
+      "timestamp": "2026-10-18T13:42:24.920528334Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-3-1b613427-5ce5-4fd2-bb48-367771e6f891',",
+      "operationId": "pr3-repair7-latency-production-v8-split-3-1b613427-5ce5-4fd2-bb48-367771e6f891"
+    },
+    {
+      "id": "99d7f296-1140-4877-9eca-02826dcb9c0a",
+      "timestamp": "2026-10-18T13:42:25.465238317Z",
+      "message": "  operationId: '290bc566-bfe5-48fa-8f4f-5469b8019002',",
+      "operationId": "290bc566-bfe5-48fa-8f4f-5469b8019002"
+    },
+    {
+      "id": "5e9be30e-ffae-414c-81ca-4645814df8dc",
+      "timestamp": "2026-10-18T13:42:26.07940877Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-3-c56b4db5-d77d-49a4-beb1-bf21461bb199',",
+      "operationId": "pr3-repair7-latency-production-v8-split-3-c56b4db5-d77d-49a4-beb1-bf21461bb199"
+    },
+    {
+      "id": "d823a074-6bf5-43b1-9370-39bd2acd9fdf",
+      "timestamp": "2026-10-18T13:42:26.638329662Z",
+      "message": "  operationId: '0959c8d9-c0ba-47f1-9009-051c03ea6116',",
+      "operationId": "0959c8d9-c0ba-47f1-9009-051c03ea6116"
+    },
+    {
+      "id": "b57153a0-6c58-44ee-8b5e-b7c026e49707",
+      "timestamp": "2026-10-18T13:43:22.571797119Z",
+      "message": "  operationId: '391da4c4-b23a-48f4-91ef-b1cdd2bea6a6',",
+      "operationId": "391da4c4-b23a-48f4-91ef-b1cdd2bea6a6"
+    },
+    {
+      "id": "09d60d04-af3a-4889-aca5-70cebaf52c5f",
+      "timestamp": "2026-10-18T13:43:23.542535291Z",
+      "message": "  operationId: 'ca37d4ac-9403-4238-9f97-f46d6f0760e1',",
+      "operationId": "ca37d4ac-9403-4238-9f97-f46d6f0760e1"
+    },
+    {
+      "id": "13f477a0-119e-4bde-93be-517a84c93529",
+      "timestamp": "2026-10-18T13:43:24.207190883Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-4-5302777a-46b8-49bd-8a61-cbcd73233bd9',",
+      "operationId": "pr3-repair7-latency-production-v8-original-4-5302777a-46b8-49bd-8a61-cbcd73233bd9"
+    },
+    {
+      "id": "4f54b3f8-23aa-487a-8f3e-cba5e3b0b7af",
+      "timestamp": "2026-10-18T13:43:25.695927846Z",
+      "message": "  operationId: '838c5223-048f-4fcc-b6b5-952083b9c1ff',",
+      "operationId": "838c5223-048f-4fcc-b6b5-952083b9c1ff"
+    },
+    {
+      "id": "d175c0c7-b9b7-4fe8-a7e6-35c85576ece7",
+      "timestamp": "2026-10-18T13:43:26.214489699Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-4-5e8e60d8-222e-4d5f-88f6-ef52d58a4d47',",
+      "operationId": "pr3-repair7-latency-production-v8-original-4-5e8e60d8-222e-4d5f-88f6-ef52d58a4d47"
+    },
+    {
+      "id": "5f008568-4573-4f85-bd5d-ee5ff9693847",
+      "timestamp": "2026-10-18T13:43:27.903833126Z",
+      "message": "  operationId: '2f047e2d-d8ab-4bb7-af51-7362c40eb773',",
+      "operationId": "2f047e2d-d8ab-4bb7-af51-7362c40eb773"
+    },
+    {
+      "id": "9f596020-95f0-4dd7-9a36-9b8865ef2e8f",
+      "timestamp": "2026-10-18T13:44:02.466655792Z",
+      "message": "  operationId: '1d4807f7-de45-44ea-a0b1-0f0c22b0f458',",
+      "operationId": "1d4807f7-de45-44ea-a0b1-0f0c22b0f458"
+    },
+    {
+      "id": "70eb18c6-7c86-4381-96e2-451137188c93",
+      "timestamp": "2026-10-18T13:44:03.261778354Z",
+      "message": "  operationId: 'd5ecd707-14b2-4294-8e81-91c516015ea0',",
+      "operationId": "d5ecd707-14b2-4294-8e81-91c516015ea0"
+    },
+    {
+      "id": "1aeb3390-e6c6-4ddb-956c-68ab98ddac7b",
+      "timestamp": "2026-10-18T13:44:03.766163439Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-4-bf8511c9-d0c7-471d-a2d2-940dfd09f431',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-4-bf8511c9-d0c7-471d-a2d2-940dfd09f431"
+    },
+    {
+      "id": "fb35fcc9-7ac1-4efc-87c9-85e7013d4f66",
+      "timestamp": "2026-10-18T13:44:04.529499513Z",
+      "message": "  operationId: 'baa1c401-3f47-4ecc-9266-f8bfc8cfe752',",
+      "operationId": "baa1c401-3f47-4ecc-9266-f8bfc8cfe752"
+    },
+    {
+      "id": "34364957-5551-4f97-81b7-759c43c2947c",
+      "timestamp": "2026-10-18T13:44:05.131208612Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-4-6072f0a1-3a9f-4431-8211-91fea65dfeb0',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-4-6072f0a1-3a9f-4431-8211-91fea65dfeb0"
+    },
+    {
+      "id": "b84dee45-f253-4af6-9e61-e48aa55d8b26",
+      "timestamp": "2026-10-18T13:44:06.097896188Z",
+      "message": "  operationId: 'ab64951e-4b4b-4be7-b5c5-e2a597b79dec',",
+      "operationId": "ab64951e-4b4b-4be7-b5c5-e2a597b79dec"
+    },
+    {
+      "id": "3fc3cecf-9d22-415d-b150-d2f79fca3650",
+      "timestamp": "2026-10-18T13:44:49.380463458Z",
+      "message": "  operationId: '14d08233-dd11-46d9-8d86-f0da88f022f8',",
+      "operationId": "14d08233-dd11-46d9-8d86-f0da88f022f8"
+    },
+    {
+      "id": "5c32007a-adfc-4914-9850-a1d1b27b18f2",
+      "timestamp": "2026-10-18T13:44:50.715816016Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-4-e45fbacf-45eb-44b3-9261-25eb2f574af5',",
+      "operationId": "pr3-repair7-latency-production-v8-split-4-e45fbacf-45eb-44b3-9261-25eb2f574af5"
+    },
+    {
+      "id": "968d6852-74c9-48f6-9e92-9b2c201a12d3",
+      "timestamp": "2026-10-18T13:44:51.250555598Z",
+      "message": "  operationId: '54143244-fe91-4543-94fd-6d73d4613990',",
+      "operationId": "54143244-fe91-4543-94fd-6d73d4613990"
+    },
+    {
+      "id": "05cc9046-d409-43b1-841c-025793e0fbd1",
+      "timestamp": "2026-10-18T13:44:51.75723389Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a',",
+      "operationId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a"
+    },
+    {
+      "id": "f98cd543-0379-418c-b83c-7a0f774ab2e6",
+      "timestamp": "2026-10-18T13:44:52.097056258Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a',",
+      "operationId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a"
+    },
+    {
+      "id": "52bc4782-6b9e-41a0-91be-a70d8d189bd0",
+      "timestamp": "2026-10-18T13:44:52.675670501Z",
+      "message": "  operationId: '6122606a-34b5-4f2a-89f6-b4b0b659b89b',",
+      "operationId": "6122606a-34b5-4f2a-89f6-b4b0b659b89b"
+    },
+    {
+      "id": "5e2ebaab-0471-49a5-9563-bc837bd80a43",
+      "timestamp": "2026-10-18T13:44:53.573581401Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-4-911ed3af-4220-4e9a-b1ea-16fba63f87d5',",
+      "operationId": "pr3-repair7-latency-production-v8-split-4-911ed3af-4220-4e9a-b1ea-16fba63f87d5"
+    },
+    {
+      "id": "1e6793d5-fa6f-4560-a035-9653edff4389",
+      "timestamp": "2026-10-18T13:44:54.255403742Z",
+      "message": "  operationId: '58f2c983-e702-46f4-bcca-551dc97e5f3b',",
+      "operationId": "58f2c983-e702-46f4-bcca-551dc97e5f3b"
+    },
+    {
+      "id": "6b4edc1b-245b-45ca-9e42-65ec8ed7c280",
+      "timestamp": "2026-10-18T13:44:54.715876184Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-4-54461ebb-a419-4fdc-88c1-3eca1a7de751',",
+      "operationId": "pr3-repair7-latency-production-v8-split-4-54461ebb-a419-4fdc-88c1-3eca1a7de751"
+    },
+    {
+      "id": "57fd0927-f840-472c-9534-cdc41a520d40",
+      "timestamp": "2026-10-18T13:44:55.789123756Z",
+      "message": "  operationId: 'ff591387-0eee-48a5-a088-840bb131460f',",
+      "operationId": "ff591387-0eee-48a5-a088-840bb131460f"
+    },
+    {
+      "id": "4e01dde7-e9ff-4924-bbb7-7f9df26eb689",
+      "timestamp": "2026-10-18T13:44:57.057252032Z",
+      "message": "  operationId: 'b26b7752-4af3-4367-989c-1bdb587325b2',",
+      "operationId": "b26b7752-4af3-4367-989c-1bdb587325b2"
+    },
+    {
+      "id": "47d5755f-f0af-412a-9685-f982af6415ba",
+      "timestamp": "2026-10-18T13:44:58.551350024Z",
+      "message": "  operationId: '42b738cf-4ccb-4a95-bca4-68d334639e90',",
+      "operationId": "42b738cf-4ccb-4a95-bca4-68d334639e90"
+    },
+    {
+      "id": "432615b2-ba51-4951-b2ab-c7f5dbf3fff4",
+      "timestamp": "2026-10-18T13:44:59.282135914Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-5-dcb68324-1065-462b-a478-0d153c139bbf',",
+      "operationId": "pr3-repair7-latency-production-v8-original-5-dcb68324-1065-462b-a478-0d153c139bbf"
+    },
+    {
+      "id": "c428e970-871c-4c6a-886f-451532848e23",
+      "timestamp": "2026-10-18T13:45:00.365323814Z",
+      "message": "  operationId: '0cc32207-36fc-4336-94a4-6eec851956b4',",
+      "operationId": "0cc32207-36fc-4336-94a4-6eec851956b4"
+    },
+    {
+      "id": "27091462-4a53-4770-8009-45b1b469da10",
+      "timestamp": "2026-10-18T13:45:00.798248268Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-original-5-4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4',",
+      "operationId": "pr3-repair7-latency-production-v8-original-5-4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4"
+    },
+    {
+      "id": "71247e0e-aff4-44a1-8674-5e9fef15a8a9",
+      "timestamp": "2026-10-18T13:45:01.547026715Z",
+      "message": "  operationId: '14b8fa38-4f55-4cdc-baeb-bdf7bc9d7958',",
+      "operationId": "14b8fa38-4f55-4cdc-baeb-bdf7bc9d7958"
+    },
+    {
+      "id": "87e26e0b-3cf1-43a9-be2b-4ca70e5e8dfb",
+      "timestamp": "2026-10-18T13:45:31.313599625Z",
+      "message": "  operationId: 'dd7ddfa9-20f6-44c0-9fc1-7899d980d75a',",
+      "operationId": "dd7ddfa9-20f6-44c0-9fc1-7899d980d75a"
+    },
+    {
+      "id": "0b815c88-2d4e-46a9-bf82-880408d635c4",
+      "timestamp": "2026-10-18T13:45:32.094398594Z",
+      "message": "  operationId: 'a437353f-79a6-452a-8951-7fa2ce687d78',",
+      "operationId": "a437353f-79a6-452a-8951-7fa2ce687d78"
+    },
+    {
+      "id": "4e4a860d-c460-4b05-946d-0ba19ddead22",
+      "timestamp": "2026-10-18T13:45:32.968560694Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-5-4e651848-6f12-4988-b6de-4d7056564920',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-5-4e651848-6f12-4988-b6de-4d7056564920"
+    },
+    {
+      "id": "62146f45-ccae-4e5c-b0da-b4470f8eb4f4",
+      "timestamp": "2026-10-18T13:45:33.680069998Z",
+      "message": "  operationId: 'aaffd770-2b5d-493f-9a10-3f4bd5636e6c',",
+      "operationId": "aaffd770-2b5d-493f-9a10-3f4bd5636e6c"
+    },
+    {
+      "id": "9d4c46b7-372f-4e07-8e1e-97075b3b4c61",
+      "timestamp": "2026-10-18T13:45:34.161986629Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-complete-5-45df8216-75b6-4c9d-8dd1-6eeaf6aeb5b8',",
+      "operationId": "pr3-repair7-latency-production-v8-complete-5-45df8216-75b6-4c9d-8dd1-6eeaf6aeb5b8"
+    },
+    {
+      "id": "43f1cd30-a1a9-4bb0-9526-febef6f9a639",
+      "timestamp": "2026-10-18T13:45:34.956336243Z",
+      "message": "  operationId: '51b9578d-52e1-41a0-b4a5-f53583b3e755',",
+      "operationId": "51b9578d-52e1-41a0-b4a5-f53583b3e755"
+    },
+    {
+      "id": "426ab3e2-7102-4ffb-b0df-9daed27a0676",
+      "timestamp": "2026-10-18T13:46:06.756827533Z",
+      "message": "  operationId: '257f7432-01f0-4b0d-8d03-3a06a262e79b',",
+      "operationId": "257f7432-01f0-4b0d-8d03-3a06a262e79b"
+    },
+    {
+      "id": "17bef5b7-1c90-4885-8e19-9423a17e8bf6",
+      "timestamp": "2026-10-18T13:46:07.288816276Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-5-483a6d2f-e26b-4cfd-a554-cfca98172cb7',",
+      "operationId": "pr3-repair7-latency-production-v8-split-5-483a6d2f-e26b-4cfd-a554-cfca98172cb7"
+    },
+    {
+      "id": "4dac49cf-7f58-4718-a6f4-368eeb72de41",
+      "timestamp": "2026-10-18T13:46:08.858759608Z",
+      "message": "  operationId: '2d1e4675-8f7d-4e88-a840-7bfb88ee859c',",
+      "operationId": "2d1e4675-8f7d-4e88-a840-7bfb88ee859c"
+    },
+    {
+      "id": "a014af4b-08e2-420f-b88a-94231a6787a6",
+      "timestamp": "2026-10-18T13:46:09.426649265Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f',",
+      "operationId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f"
+    },
+    {
+      "id": "4984f000-3d45-4c24-947e-083ecf229fb4",
+      "timestamp": "2026-10-18T13:46:09.787995784Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f',",
+      "operationId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f"
+    },
+    {
+      "id": "d6456b68-82be-457e-9b7b-1f186ac2fd59",
+      "timestamp": "2026-10-18T13:46:10.415577134Z",
+      "message": "  operationId: 'dd965d9c-0d65-4aec-918a-669a3a283cfb',",
+      "operationId": "dd965d9c-0d65-4aec-918a-669a3a283cfb"
+    },
+    {
+      "id": "999fc331-4dc0-4e88-9a9e-1cc6211ca78b",
+      "timestamp": "2026-10-18T13:46:11.078835394Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-5-2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9',",
+      "operationId": "pr3-repair7-latency-production-v8-split-5-2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9"
+    },
+    {
+      "id": "c47c2bf2-4edb-413b-bdf8-8a052f0664b4",
+      "timestamp": "2026-10-18T13:46:12.647021959Z",
+      "message": "  operationId: '0566a9b4-8cff-4b3f-ab4c-085065ca3ce2',",
+      "operationId": "0566a9b4-8cff-4b3f-ab4c-085065ca3ce2"
+    },
+    {
+      "id": "1d4e98cd-ac18-4e1f-94e2-afef05aeeef8",
+      "timestamp": "2026-10-18T13:46:13.195879826Z",
+      "message": "  operationId: 'pr3-repair7-latency-production-v8-split-5-86f43a62-3914-4e35-839e-4707b2a35aa9',",
+      "operationId": "pr3-repair7-latency-production-v8-split-5-86f43a62-3914-4e35-839e-4707b2a35aa9"
+    },
+    {
+      "id": "53260684-8e8c-4302-a412-ab0ca292e2ca",
+      "timestamp": "2026-10-18T13:46:13.809317069Z",
+      "message": "  operationId: 'dd466f01-0e4f-4ec7-91f0-bbcc4355c93e',",
+      "operationId": "dd466f01-0e4f-4ec7-91f0-bbcc4355c93e"
+    }
+  ]
+}

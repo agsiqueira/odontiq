@@ -1,0 +1,14 @@
+{
+  "releaseHead":"da32681a6bd8ca2db32d5250e8a7f13a24444adb",
+  "testedApplication":"f389347590c92f1cfeb1f7425bd48950bfd243fb",
+  "frozenFiles":229,"hashMismatches":[],"subsequentApplicationChanges":false,
+  "prDraft":true,"githubCheckRollup":[],
+  "productionProbe":{"credentialLocation":"Render process environment; not extracted","model":"gpt-oss-120b","status":200,"durationMs":3725,"valid":true,"response":{"temporary":{"explained":true,"quote":"Drainage relieves pressure but does not cure the tooth."},"definitive":{"required":true,"quote":"You need root canal treatment to treat the underlying cause."},"confidence":0.99}},
+  "productionNode":"v24.14.1","productionPatientModel":"granite-3.3-8b-instruct","explicitExplanationOverride":false,
+  "timeoutTest":{"transport":"synthetic hung fetch, actual candidate provider","durationMs":30006,"attempts":1,"category":"timeout","pass":true},
+  "migrationLedger":{"local":5,"applied":5,"pending":[],"unfinished":[],"checksumMismatches":[]},
+  "productionDeploy":"dep-dba5dmajnfac73ee9hkg","productionCommit":"69a24fe9fb6d1121e67da8d2ce70cc02b574266c","productionStatus":"live","autoDeploy":"off",
+  "rollback":"Current successful artifact remains listed and its detail/logs accessible; future rollback target captured. Rollback was not executed and its post-release action availability must be rechecked immediately before deployment.",
+  "mutations":{"application":false,"productionSettings":false,"database":false,"markReady":false,"merge":false,"deploy":false},
+  "limitations":["One synthetic production-credential model sample is not a latency distribution or production application smoke test","Timeout and fail-closed fault checks used local synthetic transport; no production outage injected","No new full-suite, rendered UI or speech tests","No GitHub check runs are attached; retained local 45/45 automated evidence is distinct"]
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "attempt": 1,
+    "context": [
+      {
+        "id": "6224253b-b21b-4778-b2ed-44a7af866fe9",
+        "role": "student",
+        "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      },
+      {
+        "id": "8a3ac2da-a7ca-4c25-9b40-79d095e1b01f",
+        "role": "patient",
+        "text": "Okay, thank you.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      }
+    ],
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "result": {
+      "success": true,
+      "classification": {
+        "schemaVersion": 1,
+        "caseId": "case-03",
+        "analyzedStudentMessageId": "fresh-current-0",
+        "detectedEvents": {
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "patientAgreedToIncisionAndDrainage": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "definitiveDentalTreatmentExplained": true
+        },
+        "confidence": 0.99,
+        "evidenceAliases": [
+          "student-current",
+          "patient-draft"
+        ],
+        "evidenceMessageIds": [
+          "fresh-current-0",
+          "fresh-draft-0"
+        ],
+        "case3Explanations": {
+          "definitive": {
+            "messageId": "fresh-current-0",
+            "quote": "Your dentist still needs to remove the affected tooth."
+          }
+        }
+      }
+    },
+    "durationMs": 6920,
+    "pass": true
+  },
+  {
+    "attempt": 2,
+    "context": [
+      {
+        "id": "6224253b-b21b-4778-b2ed-44a7af866fe9",
+        "role": "student",
+        "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      },
+      {
+        "id": "8a3ac2da-a7ca-4c25-9b40-79d095e1b01f",
+        "role": "patient",
+        "text": "Okay, thank you.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      }
+    ],
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "result": {
+      "success": true,
+      "classification": {
+        "schemaVersion": 1,
+        "caseId": "case-03",
+        "analyzedStudentMessageId": "fresh-current-1",
+        "detectedEvents": {
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "patientAgreedToIncisionAndDrainage": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "definitiveDentalTreatmentExplained": true
+        },
+        "confidence": 0.99,
+        "evidenceAliases": [
+          "student-current",
+          "patient-draft"
+        ],
+        "evidenceMessageIds": [
+          "fresh-current-1",
+          "fresh-draft-1"
+        ],
+        "case3Explanations": {
+          "definitive": {
+            "messageId": "fresh-current-1",
+            "quote": "Your dentist still needs to remove the affected tooth."
+          }
+        }
+      }
+    },
+    "durationMs": 5301,
+    "pass": true
+  },
+  {
+    "attempt": 3,
+    "context": [
+      {
+        "id": "6224253b-b21b-4778-b2ed-44a7af866fe9",
+        "role": "student",
+        "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      },
+      {
+        "id": "8a3ac2da-a7ca-4c25-9b40-79d095e1b01f",
+        "role": "patient",
+        "text": "Okay, thank you.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      }
+    ],
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "result": {
+      "success": true,
+      "classification": {
+        "schemaVersion": 1,
+        "caseId": "case-03",
+        "analyzedStudentMessageId": "fresh-current-2",
+        "detectedEvents": {
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "patientAgreedToIncisionAndDrainage": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "definitiveDentalTreatmentExplained": true
+        },
+        "confidence": 0.99,
+        "evidenceAliases": [
+          "student-current",
+          "patient-draft"
+        ],
+        "evidenceMessageIds": [
+          "fresh-current-2",
+          "fresh-draft-2"
+        ],
+        "case3Explanations": {
+          "definitive": {
+            "messageId": "fresh-current-2",
+            "quote": "Your dentist still needs to remove the affected tooth."
+          }
+        }
+      }
+    },
+    "durationMs": 6498,
+    "pass": true
+  },
+  {
+    "attempt": 4,
+    "context": [
+      {
+        "id": "6224253b-b21b-4778-b2ed-44a7af866fe9",
+        "role": "student",
+        "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      },
+      {
+        "id": "8a3ac2da-a7ca-4c25-9b40-79d095e1b01f",
+        "role": "patient",
+        "text": "Okay, thank you.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      }
+    ],
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "result": {
+      "success": true,
+      "classification": {
+        "schemaVersion": 1,
+        "caseId": "case-03",
+        "analyzedStudentMessageId": "fresh-current-3",
+        "detectedEvents": {
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "patientAgreedToIncisionAndDrainage": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "definitiveDentalTreatmentExplained": true
+        },
+        "confidence": 0.99,
+        "evidenceAliases": [
+          "student-current",
+          "patient-draft"
+        ],
+        "evidenceMessageIds": [
+          "fresh-current-3",
+          "fresh-draft-3"
+        ],
+        "case3Explanations": {
+          "definitive": {
+            "messageId": "fresh-current-3",
+            "quote": "Your dentist still needs to remove the affected tooth."
+          }
+        }
+      }
+    },
+    "durationMs": 14269,
+    "pass": true
+  },
+  {
+    "attempt": 5,
+    "context": [
+      {
+        "id": "6224253b-b21b-4778-b2ed-44a7af866fe9",
+        "role": "student",
+        "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      },
+      {
+        "id": "8a3ac2da-a7ca-4c25-9b40-79d095e1b01f",
+        "role": "patient",
+        "text": "Okay, thank you.",
+        "timestamp": "2026-10-18T13:19:50.384Z"
+      }
+    ],
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "result": {
+      "success": true,
+      "classification": {
+        "schemaVersion": 1,
+        "caseId": "case-03",
+        "analyzedStudentMessageId": "fresh-current-4",
+        "detectedEvents": {
+          "temporaryTreatmentActive": true,
+          "incisionAndDrainageProposed": true,
+          "patientAgreedToIncisionAndDrainage": true,
+          "drainageTemporaryOrNondefinitiveExplained": false,
+          "definitiveDentalTreatmentExplained": true
+        },
+        "confidence": 0.99,
+        "evidenceAliases": [
+          "student-current",
+          "patient-draft"
+        ],
+        "evidenceMessageIds": [
+          "fresh-current-4",
+          "fresh-draft-4"
+        ],
+        "case3Explanations": {
+          "definitive": {
+            "messageId": "fresh-current-4",
+            "quote": "Your dentist still needs to remove the affected tooth."
+          }
+        }
+      }
+    },
+    "durationMs": 7768,
+    "pass": true
+  }
+]

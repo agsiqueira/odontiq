@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-10-18T13:47:25.536Z",
+  "reviewer": "Assistant review of every exact question, context and delivered response, plus independently specified per-turn source evidence expectations",
+  "scenarios": 22,
+  "conversationAttempts": 107,
+  "deliveredResponses": 106,
+  "counts": {
+    "PASS": 22,
+    "FAIL": 0,
+    "ERROR": 0
+  },
+  "findings": [],
+  "notes": [
+    "Temporary and definitive explanations checked separately, including earlier turns; current source IDs and verbatim witnesses verified",
+    "Question/history replies answer the clinician rather than asserting unspecified dental history",
+    "Future intent to arrange care is not represented as an already completed booking",
+    "Some acknowledgment-plus-Why phrasing remains formulaic; no new naturalness rewrite was introduced",
+    "Three intentionally failed attempts remain separate from their three planned new-turn recoveries"
+  ],
+  "source": "live-results.json",
+  "grading": "Final response criteria unchanged. Evidence integrity checks expose the masked repair-7 failure; its original verdict is preserved separately."
+}

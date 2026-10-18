@@ -1,0 +1,2717 @@
+[
+  {
+    "target": "production-v8",
+    "scenario": "original",
+    "repeat": 1,
+    "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+    "failures": [
+      "Confirmation disagrees with explanation eligibility"
+    ],
+    "manualFinding": "Bare confirmation omits the eligible Why question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-original-1-a16112c9-3044-4518-a23e-13d97dc1f96e",
+        "sentAt": "2026-10-18T13:37:21.011Z",
+        "receivedAt": "2026-10-18T13:37:22.282Z",
+        "durationMs": 1271,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+          "requestId": "pr3-repair7-latency-production-v8-original-1-a16112c9-3044-4518-a23e-13d97dc1f96e",
+          "patientMessageId": "a93676c8-3711-48d0-8373-f42f1d7872a7",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "context": [
+          {
+            "id": "a16112c9-3044-4518-a23e-13d97dc1f96e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:37:21.011Z"
+          },
+          {
+            "id": "a93676c8-3711-48d0-8373-f42f1d7872a7",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:37:22.282Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-1-5e135382-a6df-4b73-95d3-49ec37da02aa",
+        "sentAt": "2026-10-18T13:37:22.396Z",
+        "receivedAt": "2026-10-18T13:37:23.185Z",
+        "durationMs": 789,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+          "requestId": "pr3-repair7-latency-production-v8-original-1-5e135382-a6df-4b73-95d3-49ec37da02aa",
+          "patientMessageId": "63349b57-2671-441d-b883-804cc255278a",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "patientQuestionStateVersion": 2
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "a16112c9-3044-4518-a23e-13d97dc1f96e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:37:21.011Z"
+          },
+          {
+            "id": "a93676c8-3711-48d0-8373-f42f1d7872a7",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:37:22.282Z"
+          },
+          {
+            "id": "5e135382-a6df-4b73-95d3-49ec37da02aa",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:37:22.396Z"
+          },
+          {
+            "id": "63349b57-2671-441d-b883-804cc255278a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:37:23.185Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-1-57986378-3f3c-4676-b676-c6c8aeb1f650",
+        "sentAt": "2026-10-18T13:37:23.452Z",
+        "receivedAt": "2026-10-18T13:37:24.912Z",
+        "durationMs": 1460,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I'll make an appointment as soon as possible.",
+          "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+          "requestId": "pr3-repair7-latency-production-v8-original-1-57986378-3f3c-4676-b676-c6c8aeb1f650",
+          "patientMessageId": "c993742d-1a06-4386-b867-99fb49379985",
+          "patientQuestionStateVersion": 3
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "a16112c9-3044-4518-a23e-13d97dc1f96e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:37:21.011Z"
+          },
+          {
+            "id": "a93676c8-3711-48d0-8373-f42f1d7872a7",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:37:22.282Z"
+          },
+          {
+            "id": "5e135382-a6df-4b73-95d3-49ec37da02aa",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:37:22.396Z"
+          },
+          {
+            "id": "63349b57-2671-441d-b883-804cc255278a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:37:23.185Z"
+          },
+          {
+            "id": "57986378-3f3c-4676-b676-c6c8aeb1f650",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:37:23.452Z"
+          },
+          {
+            "id": "c993742d-1a06-4386-b867-99fb49379985",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make an appointment as soon as possible.",
+            "timestamp": "2026-10-18T13:37:24.912Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-1-03adb272-8b73-4dac-af17-0a495e616a60",
+        "sentAt": "2026-10-18T13:37:25.045Z",
+        "receivedAt": "2026-10-18T13:37:26.232Z",
+        "durationMs": 1187,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I'll make an appointment as soon as possible.",
+          "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+          "requestId": "pr3-repair7-latency-production-v8-original-1-03adb272-8b73-4dac-af17-0a495e616a60",
+          "patientMessageId": "4ebf2c3c-b8cb-4719-9609-05ee0787fe42",
+          "patientQuestionStateVersion": 4
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "a16112c9-3044-4518-a23e-13d97dc1f96e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:37:21.011Z"
+          },
+          {
+            "id": "a93676c8-3711-48d0-8373-f42f1d7872a7",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:37:22.282Z"
+          },
+          {
+            "id": "5e135382-a6df-4b73-95d3-49ec37da02aa",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:37:22.396Z"
+          },
+          {
+            "id": "63349b57-2671-441d-b883-804cc255278a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:37:23.185Z"
+          },
+          {
+            "id": "57986378-3f3c-4676-b676-c6c8aeb1f650",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:37:23.452Z"
+          },
+          {
+            "id": "c993742d-1a06-4386-b867-99fb49379985",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make an appointment as soon as possible.",
+            "timestamp": "2026-10-18T13:37:24.912Z"
+          },
+          {
+            "id": "03adb272-8b73-4dac-af17-0a495e616a60",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:37:25.045Z"
+          },
+          {
+            "id": "4ebf2c3c-b8cb-4719-9609-05ee0787fe42",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make an appointment as soon as possible.",
+            "timestamp": "2026-10-18T13:37:26.232Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-1-ec1e251d-bacb-43c4-a909-3e9cc235d3f4",
+        "sentAt": "2026-10-18T13:37:26.345Z",
+        "receivedAt": "2026-10-18T13:37:26.477Z",
+        "durationMs": 132,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "dc71b306-66cb-40e3-a0b0-c07a0a8927f9",
+          "requestId": "pr3-repair7-latency-production-v8-original-1-ec1e251d-bacb-43c4-a909-3e9cc235d3f4",
+          "patientMessageId": "4849363f-12e3-42e0-8692-9bb10a9691e0",
+          "patientQuestionStateVersion": 4
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "split",
+    "repeat": 1,
+    "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+    "failures": [
+      "Consent missing first follow-up"
+    ],
+    "manualFinding": "Consent response is an unrelated dental-history dump and omits the authorized follow-up question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-e37d22df-22f8-4d10-a22f-d4b78831398b",
+        "sentAt": "2026-10-18T13:38:26.227Z",
+        "receivedAt": "2026-10-18T13:38:26.995Z",
+        "durationMs": 767,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-e37d22df-22f8-4d10-a22f-d4b78831398b",
+          "patientMessageId": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "prior-explanation",
+        "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "context": [
+          {
+            "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:38:26.227Z"
+          },
+          {
+            "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:38:26.995Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+        "sentAt": "2026-10-18T13:38:27.159Z",
+        "receivedAt": "2026-10-18T13:38:28.382Z",
+        "durationMs": 1223,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+          "patientMessageId": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "context": [
+          {
+            "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:38:26.227Z"
+          },
+          {
+            "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:38:26.995Z"
+          },
+          {
+            "id": "2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:38:27.159Z"
+          },
+          {
+            "id": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:38:28.382Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+        "sentAt": "2026-10-18T13:38:28.511Z",
+        "receivedAt": "2026-10-18T13:38:30.636Z",
+        "durationMs": 2125,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+          "patientMessageId": "a827ab05-acb4-43dd-bc27-db23e232b0bb",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:38:26.227Z"
+          },
+          {
+            "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:38:26.995Z"
+          },
+          {
+            "id": "2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:38:27.159Z"
+          },
+          {
+            "id": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:38:28.382Z"
+          },
+          {
+            "id": "7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:38:28.511Z"
+          },
+          {
+            "id": "a827ab05-acb4-43dd-bc27-db23e232b0bb",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:38:30.636Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-9917e12d-74fb-4c9a-b9f4-c180f2d3ef98",
+        "sentAt": "2026-10-18T13:38:30.758Z",
+        "receivedAt": "2026-10-18T13:38:31.621Z",
+        "durationMs": 863,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I'll make sure to keep that appointment.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-9917e12d-74fb-4c9a-b9f4-c180f2d3ef98",
+          "patientMessageId": "8fe83489-735b-48e0-8786-6afbfb1daec0",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:38:26.227Z"
+          },
+          {
+            "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:38:26.995Z"
+          },
+          {
+            "id": "2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:38:27.159Z"
+          },
+          {
+            "id": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:38:28.382Z"
+          },
+          {
+            "id": "7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:38:28.511Z"
+          },
+          {
+            "id": "a827ab05-acb4-43dd-bc27-db23e232b0bb",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:38:30.636Z"
+          },
+          {
+            "id": "9917e12d-74fb-4c9a-b9f4-c180f2d3ef98",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:38:30.758Z"
+          },
+          {
+            "id": "8fe83489-735b-48e0-8786-6afbfb1daec0",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:38:31.621Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd",
+        "sentAt": "2026-10-18T13:38:31.747Z",
+        "receivedAt": "2026-10-18T13:38:32.719Z",
+        "durationMs": 972,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "I understand, I'll be there next week.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd",
+          "patientMessageId": "090e139d-91d3-41f4-bb46-9649d5a3a38f",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "e37d22df-22f8-4d10-a22f-d4b78831398b",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:38:26.227Z"
+          },
+          {
+            "id": "728fc5dc-1ee6-4c20-a7db-7812fdf2c303",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:38:26.995Z"
+          },
+          {
+            "id": "2bf4f9d3-9f55-4d33-ab49-d0ed766aedcf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:38:27.159Z"
+          },
+          {
+            "id": "f2495dec-9fb1-4aa1-b09d-00cd57dc758a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:38:28.382Z"
+          },
+          {
+            "id": "7e1c3ee5-d8cc-41f9-a4ca-faeff4cb8c9e",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:38:28.511Z"
+          },
+          {
+            "id": "a827ab05-acb4-43dd-bc27-db23e232b0bb",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:38:30.636Z"
+          },
+          {
+            "id": "9917e12d-74fb-4c9a-b9f4-c180f2d3ef98",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:38:30.758Z"
+          },
+          {
+            "id": "8fe83489-735b-48e0-8786-6afbfb1daec0",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:38:31.621Z"
+          },
+          {
+            "id": "a4fcb9ed-b8df-4d88-928b-cbfbcc8925fd",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:38:31.747Z"
+          },
+          {
+            "id": "090e139d-91d3-41f4-bb46-9649d5a3a38f",
+            "role": "patient",
+            "text": "I understand, I'll be there next week.",
+            "timestamp": "2026-10-18T13:38:32.719Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-1-383f232a-5142-49d6-a875-4deb3195fed2",
+        "sentAt": "2026-10-18T13:38:32.846Z",
+        "receivedAt": "2026-10-18T13:38:32.954Z",
+        "durationMs": 108,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "48377920-3cfa-4877-ae64-6da311453c31",
+          "requestId": "pr3-repair7-latency-production-v8-split-1-383f232a-5142-49d6-a875-4deb3195fed2",
+          "patientMessageId": "7143b867-e765-4bbb-9532-cdac62881d26",
+          "patientQuestionStateVersion": 1
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "original",
+    "repeat": 2,
+    "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+    "failures": [
+      "Confirmation disagrees with explanation eligibility"
+    ],
+    "manualFinding": "Bare confirmation omits the eligible Why question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-original-2-13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+        "sentAt": "2026-10-18T13:39:49.669Z",
+        "receivedAt": "2026-10-18T13:39:50.530Z",
+        "durationMs": 861,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+          "requestId": "pr3-repair7-latency-production-v8-original-2-13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+          "patientMessageId": "9cde5093-cc12-4e89-93db-d61f579d82e1",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "context": [
+          {
+            "id": "13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:39:49.669Z"
+          },
+          {
+            "id": "9cde5093-cc12-4e89-93db-d61f579d82e1",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:39:50.530Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-2-0c639de3-46be-474e-ab68-b7dbc0f748da",
+        "sentAt": "2026-10-18T13:39:50.666Z",
+        "receivedAt": "2026-10-18T13:39:51.968Z",
+        "durationMs": 1302,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+          "requestId": "pr3-repair7-latency-production-v8-original-2-0c639de3-46be-474e-ab68-b7dbc0f748da",
+          "patientMessageId": "a90073c8-136c-43d7-b7e9-d3014d25284a",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "patientQuestionStateVersion": 2
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:39:49.669Z"
+          },
+          {
+            "id": "9cde5093-cc12-4e89-93db-d61f579d82e1",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:39:50.530Z"
+          },
+          {
+            "id": "0c639de3-46be-474e-ab68-b7dbc0f748da",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:39:50.666Z"
+          },
+          {
+            "id": "a90073c8-136c-43d7-b7e9-d3014d25284a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:39:51.968Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-2-816f8957-33bb-4c7f-940f-fee1fed524e6",
+        "sentAt": "2026-10-18T13:39:52.108Z",
+        "receivedAt": "2026-10-18T13:39:53.275Z",
+        "durationMs": 1167,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+          "requestId": "pr3-repair7-latency-production-v8-original-2-816f8957-33bb-4c7f-940f-fee1fed524e6",
+          "patientMessageId": "3a20bb4f-b354-409f-a1a8-9bf984131e23",
+          "patientQuestionStateVersion": 3
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:39:49.669Z"
+          },
+          {
+            "id": "9cde5093-cc12-4e89-93db-d61f579d82e1",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:39:50.530Z"
+          },
+          {
+            "id": "0c639de3-46be-474e-ab68-b7dbc0f748da",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:39:50.666Z"
+          },
+          {
+            "id": "a90073c8-136c-43d7-b7e9-d3014d25284a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:39:51.968Z"
+          },
+          {
+            "id": "816f8957-33bb-4c7f-940f-fee1fed524e6",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:39:52.108Z"
+          },
+          {
+            "id": "3a20bb4f-b354-409f-a1a8-9bf984131e23",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:39:53.275Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-2-bdbec347-b6ca-4a81-af16-ffc6eec0ba7c",
+        "sentAt": "2026-10-18T13:39:53.414Z",
+        "receivedAt": "2026-10-18T13:39:55.349Z",
+        "durationMs": 1936,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+          "requestId": "pr3-repair7-latency-production-v8-original-2-bdbec347-b6ca-4a81-af16-ffc6eec0ba7c",
+          "patientMessageId": "658b363f-f294-4870-8bf8-42b42188da10",
+          "patientQuestionStateVersion": 4
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "13622528-0eee-4eba-b93e-6fb8e6eeeec0",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:39:49.669Z"
+          },
+          {
+            "id": "9cde5093-cc12-4e89-93db-d61f579d82e1",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:39:50.530Z"
+          },
+          {
+            "id": "0c639de3-46be-474e-ab68-b7dbc0f748da",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:39:50.666Z"
+          },
+          {
+            "id": "a90073c8-136c-43d7-b7e9-d3014d25284a",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:39:51.968Z"
+          },
+          {
+            "id": "816f8957-33bb-4c7f-940f-fee1fed524e6",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:39:52.108Z"
+          },
+          {
+            "id": "3a20bb4f-b354-409f-a1a8-9bf984131e23",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:39:53.275Z"
+          },
+          {
+            "id": "bdbec347-b6ca-4a81-af16-ffc6eec0ba7c",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:39:53.414Z"
+          },
+          {
+            "id": "658b363f-f294-4870-8bf8-42b42188da10",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:39:55.349Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-2-89e70159-cc0b-4e86-b639-c736df4fc2fc",
+        "sentAt": "2026-10-18T13:39:55.493Z",
+        "receivedAt": "2026-10-18T13:39:55.624Z",
+        "durationMs": 130,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "5c2425df-2686-411e-aa26-6a371dd8041c",
+          "requestId": "pr3-repair7-latency-production-v8-original-2-89e70159-cc0b-4e86-b639-c736df4fc2fc",
+          "patientMessageId": "1aa18b41-a4bf-45a7-9b44-a7060170e7cc",
+          "patientQuestionStateVersion": 4
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "split",
+    "repeat": 2,
+    "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+    "failures": [
+      "Consent missing first follow-up"
+    ],
+    "manualFinding": "Consent response is an unrelated dental-history dump and omits the authorized follow-up question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-dd726a3d-821a-4861-96bd-89192b99b3c8",
+        "sentAt": "2026-10-18T13:41:03.865Z",
+        "receivedAt": "2026-10-18T13:41:04.604Z",
+        "durationMs": 740,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-dd726a3d-821a-4861-96bd-89192b99b3c8",
+          "patientMessageId": "216061b8-7660-4acd-8d79-f88014bfe566",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "prior-explanation",
+        "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "context": [
+          {
+            "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:03.865Z"
+          },
+          {
+            "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:04.604Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-8350a18c-49ab-4b89-9752-cd2c831dce99",
+        "sentAt": "2026-10-18T13:41:04.736Z",
+        "receivedAt": "2026-10-18T13:41:05.665Z",
+        "durationMs": 929,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-8350a18c-49ab-4b89-9752-cd2c831dce99",
+          "patientMessageId": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "context": [
+          {
+            "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:03.865Z"
+          },
+          {
+            "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:04.604Z"
+          },
+          {
+            "id": "8350a18c-49ab-4b89-9752-cd2c831dce99",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:41:04.736Z"
+          },
+          {
+            "id": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:05.665Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+        "sentAt": "2026-10-18T13:41:05.900Z",
+        "receivedAt": "2026-10-18T13:41:07.317Z",
+        "durationMs": 1417,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+          "patientMessageId": "7a4291bc-77df-4936-8135-f44b51029ff8",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:03.865Z"
+          },
+          {
+            "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:04.604Z"
+          },
+          {
+            "id": "8350a18c-49ab-4b89-9752-cd2c831dce99",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:41:04.736Z"
+          },
+          {
+            "id": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:05.665Z"
+          },
+          {
+            "id": "cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:41:05.900Z"
+          },
+          {
+            "id": "7a4291bc-77df-4936-8135-f44b51029ff8",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:41:07.317Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-0c951a0e-fc69-4ad7-85c0-8df585bb20c8",
+        "sentAt": "2026-10-18T13:41:07.445Z",
+        "receivedAt": "2026-10-18T13:41:08.366Z",
+        "durationMs": 921,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-0c951a0e-fc69-4ad7-85c0-8df585bb20c8",
+          "patientMessageId": "33cd0a2f-d741-404b-8521-06316331bd7a",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:03.865Z"
+          },
+          {
+            "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:04.604Z"
+          },
+          {
+            "id": "8350a18c-49ab-4b89-9752-cd2c831dce99",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:41:04.736Z"
+          },
+          {
+            "id": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:05.665Z"
+          },
+          {
+            "id": "cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:41:05.900Z"
+          },
+          {
+            "id": "7a4291bc-77df-4936-8135-f44b51029ff8",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:41:07.317Z"
+          },
+          {
+            "id": "0c951a0e-fc69-4ad7-85c0-8df585bb20c8",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:07.445Z"
+          },
+          {
+            "id": "33cd0a2f-d741-404b-8521-06316331bd7a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:08.366Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-6d83f7fe-5e6c-4f69-9679-0706e00dc936",
+        "sentAt": "2026-10-18T13:41:08.493Z",
+        "receivedAt": "2026-10-18T13:41:09.341Z",
+        "durationMs": 848,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-6d83f7fe-5e6c-4f69-9679-0706e00dc936",
+          "patientMessageId": "806e0772-273b-4edf-bfe1-a5942bf11f19",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "dd726a3d-821a-4861-96bd-89192b99b3c8",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:03.865Z"
+          },
+          {
+            "id": "216061b8-7660-4acd-8d79-f88014bfe566",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:04.604Z"
+          },
+          {
+            "id": "8350a18c-49ab-4b89-9752-cd2c831dce99",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:41:04.736Z"
+          },
+          {
+            "id": "c1c30b2e-4ffc-4424-8700-72cd64ee4337",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:05.665Z"
+          },
+          {
+            "id": "cfe3d3e3-d2b4-4ead-ad16-20f174ef03f7",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:41:05.900Z"
+          },
+          {
+            "id": "7a4291bc-77df-4936-8135-f44b51029ff8",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:41:07.317Z"
+          },
+          {
+            "id": "0c951a0e-fc69-4ad7-85c0-8df585bb20c8",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:07.445Z"
+          },
+          {
+            "id": "33cd0a2f-d741-404b-8521-06316331bd7a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:08.366Z"
+          },
+          {
+            "id": "6d83f7fe-5e6c-4f69-9679-0706e00dc936",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:08.493Z"
+          },
+          {
+            "id": "806e0772-273b-4edf-bfe1-a5942bf11f19",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:41:09.341Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-2-d1866a69-97de-4fd7-b281-c8c2311bab70",
+        "sentAt": "2026-10-18T13:41:09.470Z",
+        "receivedAt": "2026-10-18T13:41:09.574Z",
+        "durationMs": 104,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "6f1b3ab6-5dcb-4d24-aa05-8f9144206347",
+          "requestId": "pr3-repair7-latency-production-v8-split-2-d1866a69-97de-4fd7-b281-c8c2311bab70",
+          "patientMessageId": "e23d7a77-a116-46ae-8955-3f86faa1edb4",
+          "patientQuestionStateVersion": 1
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "original",
+    "repeat": 3,
+    "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+    "failures": [
+      "Confirmation disagrees with explanation eligibility"
+    ],
+    "manualFinding": "Bare confirmation omits the eligible Why question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-original-3-4844c8c4-c673-4100-b69a-1e6f35c82497",
+        "sentAt": "2026-10-18T13:41:09.938Z",
+        "receivedAt": "2026-10-18T13:41:11.265Z",
+        "durationMs": 1327,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+          "requestId": "pr3-repair7-latency-production-v8-original-3-4844c8c4-c673-4100-b69a-1e6f35c82497",
+          "patientMessageId": "2ccdb167-d8b2-4897-bd2e-591bef20e4ad",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "context": [
+          {
+            "id": "4844c8c4-c673-4100-b69a-1e6f35c82497",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:09.938Z"
+          },
+          {
+            "id": "2ccdb167-d8b2-4897-bd2e-591bef20e4ad",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:11.265Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-3-b09b2090-552b-40c0-a415-37b7372b003b",
+        "sentAt": "2026-10-18T13:41:11.388Z",
+        "receivedAt": "2026-10-18T13:41:12.049Z",
+        "durationMs": 661,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+          "requestId": "pr3-repair7-latency-production-v8-original-3-b09b2090-552b-40c0-a415-37b7372b003b",
+          "patientMessageId": "77093a34-67b0-4b36-a987-a1ad052fdd5b",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "patientQuestionStateVersion": 2
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "4844c8c4-c673-4100-b69a-1e6f35c82497",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:09.938Z"
+          },
+          {
+            "id": "2ccdb167-d8b2-4897-bd2e-591bef20e4ad",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:11.265Z"
+          },
+          {
+            "id": "b09b2090-552b-40c0-a415-37b7372b003b",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:41:11.388Z"
+          },
+          {
+            "id": "77093a34-67b0-4b36-a987-a1ad052fdd5b",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:41:12.049Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-3-4963934b-7868-4cdd-a377-495a1a388291",
+        "sentAt": "2026-10-18T13:41:12.182Z",
+        "receivedAt": "2026-10-18T13:41:13.202Z",
+        "durationMs": 1019,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+          "requestId": "pr3-repair7-latency-production-v8-original-3-4963934b-7868-4cdd-a377-495a1a388291",
+          "patientMessageId": "689fb05b-c127-4bfb-9826-80d4daea69d3",
+          "patientQuestionStateVersion": 3
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "4844c8c4-c673-4100-b69a-1e6f35c82497",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:09.938Z"
+          },
+          {
+            "id": "2ccdb167-d8b2-4897-bd2e-591bef20e4ad",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:11.265Z"
+          },
+          {
+            "id": "b09b2090-552b-40c0-a415-37b7372b003b",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:41:11.388Z"
+          },
+          {
+            "id": "77093a34-67b0-4b36-a987-a1ad052fdd5b",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:41:12.049Z"
+          },
+          {
+            "id": "4963934b-7868-4cdd-a377-495a1a388291",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:12.182Z"
+          },
+          {
+            "id": "689fb05b-c127-4bfb-9826-80d4daea69d3",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:41:13.202Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-3-b2e05c7b-acad-4253-823f-b320bbc10b79",
+        "sentAt": "2026-10-18T13:41:13.335Z",
+        "receivedAt": "2026-10-18T13:41:14.430Z",
+        "durationMs": 1095,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I'll make an appointment right away.",
+          "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+          "requestId": "pr3-repair7-latency-production-v8-original-3-b2e05c7b-acad-4253-823f-b320bbc10b79",
+          "patientMessageId": "fa66c0bf-0064-4fa4-9a25-81fb2787d3b7",
+          "patientQuestionStateVersion": 4
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "4844c8c4-c673-4100-b69a-1e6f35c82497",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:41:09.938Z"
+          },
+          {
+            "id": "2ccdb167-d8b2-4897-bd2e-591bef20e4ad",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:41:11.265Z"
+          },
+          {
+            "id": "b09b2090-552b-40c0-a415-37b7372b003b",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:41:11.388Z"
+          },
+          {
+            "id": "77093a34-67b0-4b36-a987-a1ad052fdd5b",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:41:12.049Z"
+          },
+          {
+            "id": "4963934b-7868-4cdd-a377-495a1a388291",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:12.182Z"
+          },
+          {
+            "id": "689fb05b-c127-4bfb-9826-80d4daea69d3",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:41:13.202Z"
+          },
+          {
+            "id": "b2e05c7b-acad-4253-823f-b320bbc10b79",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:41:13.335Z"
+          },
+          {
+            "id": "fa66c0bf-0064-4fa4-9a25-81fb2787d3b7",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make an appointment right away.",
+            "timestamp": "2026-10-18T13:41:14.430Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-3-ad3d09a9-3a8c-4163-a2cc-4bf545b485d4",
+        "sentAt": "2026-10-18T13:41:14.555Z",
+        "receivedAt": "2026-10-18T13:41:14.660Z",
+        "durationMs": 105,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "5fc25381-48c1-4490-b3bc-10ab08519ee4",
+          "requestId": "pr3-repair7-latency-production-v8-original-3-ad3d09a9-3a8c-4163-a2cc-4bf545b485d4",
+          "patientMessageId": "c09308a6-f16a-4d60-bff2-315bec70eb6a",
+          "patientQuestionStateVersion": 4
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "split",
+    "repeat": 3,
+    "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+    "failures": [
+      "Consent missing first follow-up"
+    ],
+    "manualFinding": "Consent response is an unrelated dental-history dump and omits the authorized follow-up question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-5147348d-752e-4450-ba5f-2d5d79d0f5db",
+        "sentAt": "2026-10-18T13:42:21.058Z",
+        "receivedAt": "2026-10-18T13:42:21.805Z",
+        "durationMs": 747,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-5147348d-752e-4450-ba5f-2d5d79d0f5db",
+          "patientMessageId": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "prior-explanation",
+        "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "context": [
+          {
+            "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:42:21.058Z"
+          },
+          {
+            "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:42:21.805Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+        "sentAt": "2026-10-18T13:42:21.958Z",
+        "receivedAt": "2026-10-18T13:42:23.056Z",
+        "durationMs": 1098,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+          "patientMessageId": "bb26a847-45b8-44a2-b13c-da3c46271050",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "context": [
+          {
+            "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:42:21.058Z"
+          },
+          {
+            "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:42:21.805Z"
+          },
+          {
+            "id": "dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:42:21.958Z"
+          },
+          {
+            "id": "bb26a847-45b8-44a2-b13c-da3c46271050",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:42:23.056Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0",
+        "sentAt": "2026-10-18T13:42:23.191Z",
+        "receivedAt": "2026-10-18T13:42:24.605Z",
+        "durationMs": 1414,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-01fc787a-90a5-49ba-a671-416b2a3652f0",
+          "patientMessageId": "53ec9e61-ab13-4dbd-b147-5ade32420c56",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:42:21.058Z"
+          },
+          {
+            "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:42:21.805Z"
+          },
+          {
+            "id": "dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:42:21.958Z"
+          },
+          {
+            "id": "bb26a847-45b8-44a2-b13c-da3c46271050",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:42:23.056Z"
+          },
+          {
+            "id": "01fc787a-90a5-49ba-a671-416b2a3652f0",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:42:23.191Z"
+          },
+          {
+            "id": "53ec9e61-ab13-4dbd-b147-5ade32420c56",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:42:24.605Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-1b613427-5ce5-4fd2-bb48-367771e6f891",
+        "sentAt": "2026-10-18T13:42:24.749Z",
+        "receivedAt": "2026-10-18T13:42:25.632Z",
+        "durationMs": 882,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I'll make sure to keep that appointment.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-1b613427-5ce5-4fd2-bb48-367771e6f891",
+          "patientMessageId": "80b17c84-5811-4a76-b3c1-6ce7ba8519de",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:42:21.058Z"
+          },
+          {
+            "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:42:21.805Z"
+          },
+          {
+            "id": "dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:42:21.958Z"
+          },
+          {
+            "id": "bb26a847-45b8-44a2-b13c-da3c46271050",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:42:23.056Z"
+          },
+          {
+            "id": "01fc787a-90a5-49ba-a671-416b2a3652f0",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:42:23.191Z"
+          },
+          {
+            "id": "53ec9e61-ab13-4dbd-b147-5ade32420c56",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:42:24.605Z"
+          },
+          {
+            "id": "1b613427-5ce5-4fd2-bb48-367771e6f891",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:42:24.749Z"
+          },
+          {
+            "id": "80b17c84-5811-4a76-b3c1-6ce7ba8519de",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:42:25.632Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-c56b4db5-d77d-49a4-beb1-bf21461bb199",
+        "sentAt": "2026-10-18T13:42:25.767Z",
+        "receivedAt": "2026-10-18T13:42:26.807Z",
+        "durationMs": 1040,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "I understand, I'll be there next week. Thank you.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-c56b4db5-d77d-49a4-beb1-bf21461bb199",
+          "patientMessageId": "673ce6f6-b7bd-4ff0-b8c3-0f1bc43409ca",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "5147348d-752e-4450-ba5f-2d5d79d0f5db",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:42:21.058Z"
+          },
+          {
+            "id": "00647191-9d81-4f7f-98fe-623fc6be83c9",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:42:21.805Z"
+          },
+          {
+            "id": "dc24d105-dca6-43a9-ba26-cbac3c22caaf",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:42:21.958Z"
+          },
+          {
+            "id": "bb26a847-45b8-44a2-b13c-da3c46271050",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:42:23.056Z"
+          },
+          {
+            "id": "01fc787a-90a5-49ba-a671-416b2a3652f0",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:42:23.191Z"
+          },
+          {
+            "id": "53ec9e61-ab13-4dbd-b147-5ade32420c56",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:42:24.605Z"
+          },
+          {
+            "id": "1b613427-5ce5-4fd2-bb48-367771e6f891",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:42:24.749Z"
+          },
+          {
+            "id": "80b17c84-5811-4a76-b3c1-6ce7ba8519de",
+            "role": "patient",
+            "text": "Okay, thank you. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:42:25.632Z"
+          },
+          {
+            "id": "c56b4db5-d77d-49a4-beb1-bf21461bb199",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:42:25.767Z"
+          },
+          {
+            "id": "673ce6f6-b7bd-4ff0-b8c3-0f1bc43409ca",
+            "role": "patient",
+            "text": "I understand, I'll be there next week. Thank you.",
+            "timestamp": "2026-10-18T13:42:26.807Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-3-879e0085-c492-42f1-a817-ffa190e4d1d0",
+        "sentAt": "2026-10-18T13:42:26.976Z",
+        "receivedAt": "2026-10-18T13:42:27.216Z",
+        "durationMs": 240,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "6de2a809-424c-4243-93b2-da5c6573fc9b",
+          "requestId": "pr3-repair7-latency-production-v8-split-3-879e0085-c492-42f1-a817-ffa190e4d1d0",
+          "patientMessageId": "587a4258-429c-4b73-a1dc-1111b61b3aea",
+          "patientQuestionStateVersion": 1
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "original",
+    "repeat": 4,
+    "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+    "failures": [
+      "Confirmation disagrees with explanation eligibility"
+    ],
+    "manualFinding": "Bare confirmation omits the eligible Why question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-original-4-3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+        "sentAt": "2026-10-18T13:43:21.986Z",
+        "receivedAt": "2026-10-18T13:43:22.736Z",
+        "durationMs": 750,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+          "requestId": "pr3-repair7-latency-production-v8-original-4-3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+          "patientMessageId": "95c939ff-2059-494b-9f68-b4f1c5d59c85",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "context": [
+          {
+            "id": "3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:43:21.986Z"
+          },
+          {
+            "id": "95c939ff-2059-494b-9f68-b4f1c5d59c85",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:43:22.736Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-4-20c5636f-ce97-4809-84d0-cedecb3d85e5",
+        "sentAt": "2026-10-18T13:43:22.880Z",
+        "receivedAt": "2026-10-18T13:43:23.712Z",
+        "durationMs": 831,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+          "requestId": "pr3-repair7-latency-production-v8-original-4-20c5636f-ce97-4809-84d0-cedecb3d85e5",
+          "patientMessageId": "73fbbb24-aa80-44ee-a3bc-3fd19571a516",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "patientQuestionStateVersion": 2
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:43:21.986Z"
+          },
+          {
+            "id": "95c939ff-2059-494b-9f68-b4f1c5d59c85",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:43:22.736Z"
+          },
+          {
+            "id": "20c5636f-ce97-4809-84d0-cedecb3d85e5",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:43:22.880Z"
+          },
+          {
+            "id": "73fbbb24-aa80-44ee-a3bc-3fd19571a516",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:43:23.712Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-4-5302777a-46b8-49bd-8a61-cbcd73233bd9",
+        "sentAt": "2026-10-18T13:43:23.850Z",
+        "receivedAt": "2026-10-18T13:43:25.850Z",
+        "durationMs": 2000,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+          "requestId": "pr3-repair7-latency-production-v8-original-4-5302777a-46b8-49bd-8a61-cbcd73233bd9",
+          "patientMessageId": "a78ff292-eacf-4a65-8a5a-11259110412b",
+          "patientQuestionStateVersion": 3
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:43:21.986Z"
+          },
+          {
+            "id": "95c939ff-2059-494b-9f68-b4f1c5d59c85",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:43:22.736Z"
+          },
+          {
+            "id": "20c5636f-ce97-4809-84d0-cedecb3d85e5",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:43:22.880Z"
+          },
+          {
+            "id": "73fbbb24-aa80-44ee-a3bc-3fd19571a516",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:43:23.712Z"
+          },
+          {
+            "id": "5302777a-46b8-49bd-8a61-cbcd73233bd9",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:43:23.850Z"
+          },
+          {
+            "id": "a78ff292-eacf-4a65-8a5a-11259110412b",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:43:25.850Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-4-5e8e60d8-222e-4d5f-88f6-ef52d58a4d47",
+        "sentAt": "2026-10-18T13:43:26.005Z",
+        "receivedAt": "2026-10-18T13:43:28.060Z",
+        "durationMs": 2055,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+          "requestId": "pr3-repair7-latency-production-v8-original-4-5e8e60d8-222e-4d5f-88f6-ef52d58a4d47",
+          "patientMessageId": "a4357a65-90eb-4c4e-8355-cf4209db6462",
+          "patientQuestionStateVersion": 4
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "3e7d3de3-b8a1-4147-9b2e-dee11ba1499e",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:43:21.986Z"
+          },
+          {
+            "id": "95c939ff-2059-494b-9f68-b4f1c5d59c85",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:43:22.736Z"
+          },
+          {
+            "id": "20c5636f-ce97-4809-84d0-cedecb3d85e5",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:43:22.880Z"
+          },
+          {
+            "id": "73fbbb24-aa80-44ee-a3bc-3fd19571a516",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:43:23.712Z"
+          },
+          {
+            "id": "5302777a-46b8-49bd-8a61-cbcd73233bd9",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:43:23.850Z"
+          },
+          {
+            "id": "a78ff292-eacf-4a65-8a5a-11259110412b",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:43:25.850Z"
+          },
+          {
+            "id": "5e8e60d8-222e-4d5f-88f6-ef52d58a4d47",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:43:26.005Z"
+          },
+          {
+            "id": "a4357a65-90eb-4c4e-8355-cf4209db6462",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:43:28.060Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-4-b720e278-0024-487b-b9ff-145eb0115b33",
+        "sentAt": "2026-10-18T13:43:28.201Z",
+        "receivedAt": "2026-10-18T13:43:28.305Z",
+        "durationMs": 104,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "db3c31ae-c781-4a14-83a0-e3f72ca2cea0",
+          "requestId": "pr3-repair7-latency-production-v8-original-4-b720e278-0024-487b-b9ff-145eb0115b33",
+          "patientMessageId": "a38101f5-33e8-4bdb-b437-d94f145280f0",
+          "patientQuestionStateVersion": 4
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "split",
+    "repeat": 4,
+    "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+    "failures": [
+      "Consent missing first follow-up"
+    ],
+    "manualFinding": "Consent response is an unrelated dental-history dump and omits the authorized follow-up question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-89006c9b-012d-40ee-8145-32519871c9be",
+        "sentAt": "2026-10-18T13:44:48.853Z",
+        "receivedAt": "2026-10-18T13:44:49.537Z",
+        "durationMs": 684,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-89006c9b-012d-40ee-8145-32519871c9be",
+          "patientMessageId": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "prior-explanation",
+        "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "context": [
+          {
+            "id": "89006c9b-012d-40ee-8145-32519871c9be",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:48.853Z"
+          },
+          {
+            "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:49.537Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-e45fbacf-45eb-44b3-9261-25eb2f574af5",
+        "sentAt": "2026-10-18T13:44:49.689Z",
+        "receivedAt": "2026-10-18T13:44:51.403Z",
+        "durationMs": 1714,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-e45fbacf-45eb-44b3-9261-25eb2f574af5",
+          "patientMessageId": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "context": [
+          {
+            "id": "89006c9b-012d-40ee-8145-32519871c9be",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:48.853Z"
+          },
+          {
+            "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:49.537Z"
+          },
+          {
+            "id": "e45fbacf-45eb-44b3-9261-25eb2f574af5",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:44:49.689Z"
+          },
+          {
+            "id": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:51.403Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a",
+        "sentAt": "2026-10-18T13:44:51.552Z",
+        "receivedAt": "2026-10-18T13:44:52.836Z",
+        "durationMs": 1284,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-32820d29-4c25-4973-984a-14b4211e576a",
+          "patientMessageId": "965e7e13-9ae7-4168-b278-c8b70c6bb746",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "89006c9b-012d-40ee-8145-32519871c9be",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:48.853Z"
+          },
+          {
+            "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:49.537Z"
+          },
+          {
+            "id": "e45fbacf-45eb-44b3-9261-25eb2f574af5",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:44:49.689Z"
+          },
+          {
+            "id": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:51.403Z"
+          },
+          {
+            "id": "32820d29-4c25-4973-984a-14b4211e576a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:44:51.552Z"
+          },
+          {
+            "id": "965e7e13-9ae7-4168-b278-c8b70c6bb746",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:44:52.836Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-911ed3af-4220-4e9a-b1ea-16fba63f87d5",
+        "sentAt": "2026-10-18T13:44:53.000Z",
+        "receivedAt": "2026-10-18T13:44:54.407Z",
+        "durationMs": 1406,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-911ed3af-4220-4e9a-b1ea-16fba63f87d5",
+          "patientMessageId": "f15eb6f5-c334-4cd0-ba4e-1fbfc3584c2a",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "89006c9b-012d-40ee-8145-32519871c9be",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:48.853Z"
+          },
+          {
+            "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:49.537Z"
+          },
+          {
+            "id": "e45fbacf-45eb-44b3-9261-25eb2f574af5",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:44:49.689Z"
+          },
+          {
+            "id": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:51.403Z"
+          },
+          {
+            "id": "32820d29-4c25-4973-984a-14b4211e576a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:44:51.552Z"
+          },
+          {
+            "id": "965e7e13-9ae7-4168-b278-c8b70c6bb746",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:44:52.836Z"
+          },
+          {
+            "id": "911ed3af-4220-4e9a-b1ea-16fba63f87d5",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:44:53.000Z"
+          },
+          {
+            "id": "f15eb6f5-c334-4cd0-ba4e-1fbfc3584c2a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:54.407Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-54461ebb-a419-4fdc-88c1-3eca1a7de751",
+        "sentAt": "2026-10-18T13:44:54.561Z",
+        "receivedAt": "2026-10-18T13:44:55.944Z",
+        "durationMs": 1383,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Alright, I'll make sure to keep that appointment.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-54461ebb-a419-4fdc-88c1-3eca1a7de751",
+          "patientMessageId": "e1510653-ba2b-427d-a77c-4de1b30ef38b",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "89006c9b-012d-40ee-8145-32519871c9be",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:48.853Z"
+          },
+          {
+            "id": "9fa04d0f-fe74-4dea-b8b5-5d829dedaa4b",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:49.537Z"
+          },
+          {
+            "id": "e45fbacf-45eb-44b3-9261-25eb2f574af5",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:44:49.689Z"
+          },
+          {
+            "id": "0b3b690d-b94c-4b4f-9d63-14df03b5aa17",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:51.403Z"
+          },
+          {
+            "id": "32820d29-4c25-4973-984a-14b4211e576a",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:44:51.552Z"
+          },
+          {
+            "id": "965e7e13-9ae7-4168-b278-c8b70c6bb746",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:44:52.836Z"
+          },
+          {
+            "id": "911ed3af-4220-4e9a-b1ea-16fba63f87d5",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:44:53.000Z"
+          },
+          {
+            "id": "f15eb6f5-c334-4cd0-ba4e-1fbfc3584c2a",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:44:54.407Z"
+          },
+          {
+            "id": "54461ebb-a419-4fdc-88c1-3eca1a7de751",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:44:54.561Z"
+          },
+          {
+            "id": "e1510653-ba2b-427d-a77c-4de1b30ef38b",
+            "role": "patient",
+            "text": "Alright, I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:44:55.944Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-4-7f62641c-63fe-47bd-9824-25f8ed7f66fc",
+        "sentAt": "2026-10-18T13:44:56.096Z",
+        "receivedAt": "2026-10-18T13:44:56.206Z",
+        "durationMs": 110,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "18c13977-974b-4794-ab4a-70087b234e1d",
+          "requestId": "pr3-repair7-latency-production-v8-split-4-7f62641c-63fe-47bd-9824-25f8ed7f66fc",
+          "patientMessageId": "4b3e6401-3361-435c-a581-6de1bd2d5524",
+          "patientQuestionStateVersion": 1
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "original",
+    "repeat": 5,
+    "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+    "failures": [
+      "Confirmation disagrees with explanation eligibility"
+    ],
+    "manualFinding": "Bare confirmation omits the eligible Why question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-original-5-d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+        "sentAt": "2026-10-18T13:44:56.617Z",
+        "receivedAt": "2026-10-18T13:44:57.218Z",
+        "durationMs": 600,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+          "requestId": "pr3-repair7-latency-production-v8-original-5-d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+          "patientMessageId": "5088908f-6fa2-42fa-9e9b-4cf22261b366",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "context": [
+          {
+            "id": "d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:56.617Z"
+          },
+          {
+            "id": "5088908f-6fa2-42fa-9e9b-4cf22261b366",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:57.218Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-5-7d88fa68-c06f-4623-b915-e9de2504ee9c",
+        "sentAt": "2026-10-18T13:44:57.361Z",
+        "receivedAt": "2026-10-18T13:44:58.720Z",
+        "durationMs": 1359,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+          "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+          "requestId": "pr3-repair7-latency-production-v8-original-5-7d88fa68-c06f-4623-b915-e9de2504ee9c",
+          "patientMessageId": "0e5f037f-503c-4907-9f6e-fbe33cd94715",
+          "selectedQuestionId": "c3-follow-up-needed-question",
+          "patientQuestionStateVersion": 2
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:56.617Z"
+          },
+          {
+            "id": "5088908f-6fa2-42fa-9e9b-4cf22261b366",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:57.218Z"
+          },
+          {
+            "id": "7d88fa68-c06f-4623-b915-e9de2504ee9c",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:44:57.361Z"
+          },
+          {
+            "id": "0e5f037f-503c-4907-9f6e-fbe33cd94715",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:44:58.720Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-5-dcb68324-1065-462b-a478-0d153c139bbf",
+        "sentAt": "2026-10-18T13:44:58.861Z",
+        "receivedAt": "2026-10-18T13:45:00.521Z",
+        "durationMs": 1660,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+          "requestId": "pr3-repair7-latency-production-v8-original-5-dcb68324-1065-462b-a478-0d153c139bbf",
+          "patientMessageId": "c4754b12-97ae-4760-8e36-77daea52c0b1",
+          "patientQuestionStateVersion": 3
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:56.617Z"
+          },
+          {
+            "id": "5088908f-6fa2-42fa-9e9b-4cf22261b366",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:57.218Z"
+          },
+          {
+            "id": "7d88fa68-c06f-4623-b915-e9de2504ee9c",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:44:57.361Z"
+          },
+          {
+            "id": "0e5f037f-503c-4907-9f6e-fbe33cd94715",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:44:58.720Z"
+          },
+          {
+            "id": "dcb68324-1065-462b-a478-0d153c139bbf",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:44:58.861Z"
+          },
+          {
+            "id": "c4754b12-97ae-4760-8e36-77daea52c0b1",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:45:00.521Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-5-4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4",
+        "sentAt": "2026-10-18T13:45:00.672Z",
+        "receivedAt": "2026-10-18T13:45:01.718Z",
+        "durationMs": 1046,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, I understand. Thank you.",
+          "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+          "requestId": "pr3-repair7-latency-production-v8-original-5-4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4",
+          "patientMessageId": "a597381b-f3ee-4400-b8fa-e7040f1b399c",
+          "patientQuestionStateVersion": 4
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "d6bdda02-a61e-4523-bdf8-f5c1d2029744",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:44:56.617Z"
+          },
+          {
+            "id": "5088908f-6fa2-42fa-9e9b-4cf22261b366",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:44:57.218Z"
+          },
+          {
+            "id": "7d88fa68-c06f-4623-b915-e9de2504ee9c",
+            "role": "student",
+            "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+            "timestamp": "2026-10-18T13:44:57.361Z"
+          },
+          {
+            "id": "0e5f037f-503c-4907-9f6e-fbe33cd94715",
+            "role": "patient",
+            "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "timestamp": "2026-10-18T13:44:58.720Z"
+          },
+          {
+            "id": "dcb68324-1065-462b-a478-0d153c139bbf",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:44:58.861Z"
+          },
+          {
+            "id": "c4754b12-97ae-4760-8e36-77daea52c0b1",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:45:00.521Z"
+          },
+          {
+            "id": "4a5a6b2b-d14a-4063-87cb-20d21ef3e9c4",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:45:00.672Z"
+          },
+          {
+            "id": "a597381b-f3ee-4400-b8fa-e7040f1b399c",
+            "role": "patient",
+            "text": "Okay, I understand. Thank you.",
+            "timestamp": "2026-10-18T13:45:01.718Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-original-5-310520f7-2721-4f99-b377-b41fdd90010a",
+        "sentAt": "2026-10-18T13:45:01.888Z",
+        "receivedAt": "2026-10-18T13:45:01.993Z",
+        "durationMs": 105,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "0bfd5bb9-7784-48b2-a5b0-3e2a819f3320",
+          "requestId": "pr3-repair7-latency-production-v8-original-5-310520f7-2721-4f99-b377-b41fdd90010a",
+          "patientMessageId": "a53a150e-8756-4952-aeb6-bb2188ee68f3",
+          "patientQuestionStateVersion": 4
+        }
+      }
+    ]
+  },
+  {
+    "target": "production-v8",
+    "scenario": "split",
+    "repeat": 5,
+    "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+    "failures": [
+      "Consent missing first follow-up"
+    ],
+    "manualFinding": "Consent response is an unrelated dental-history dump and omits the authorized follow-up question.",
+    "attempts": [
+      {
+        "label": "opening",
+        "question": "What brings you in today?",
+        "context": [],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+        "sentAt": "2026-10-18T13:46:06.201Z",
+        "receivedAt": "2026-10-18T13:46:06.916Z",
+        "durationMs": 715,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "governed-patient-core",
+          "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+          "patientMessageId": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "prior-explanation",
+        "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+        "context": [
+          {
+            "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:46:06.201Z"
+          },
+          {
+            "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:46:06.916Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+        "sentAt": "2026-10-18T13:46:07.067Z",
+        "receivedAt": "2026-10-18T13:46:09.009Z",
+        "durationMs": 1942,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+          "patientMessageId": "f361156b-9c0d-4525-8872-4d2239180121",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "consent",
+        "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+        "context": [
+          {
+            "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:46:06.201Z"
+          },
+          {
+            "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:46:06.916Z"
+          },
+          {
+            "id": "483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:46:07.067Z"
+          },
+          {
+            "id": "f361156b-9c0d-4525-8872-4d2239180121",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:46:09.009Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+        "sentAt": "2026-10-18T13:46:09.170Z",
+        "receivedAt": "2026-10-18T13:46:10.571Z",
+        "durationMs": 1401,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+          "patientMessageId": "5ebb2c99-b139-4b64-bc72-71c9de3feeaa",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "confirmation",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:46:06.201Z"
+          },
+          {
+            "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:46:06.916Z"
+          },
+          {
+            "id": "483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:46:07.067Z"
+          },
+          {
+            "id": "f361156b-9c0d-4525-8872-4d2239180121",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:46:09.009Z"
+          },
+          {
+            "id": "174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:46:09.170Z"
+          },
+          {
+            "id": "5ebb2c99-b139-4b64-bc72-71c9de3feeaa",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:46:10.571Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9",
+        "sentAt": "2026-10-18T13:46:10.775Z",
+        "receivedAt": "2026-10-18T13:46:12.808Z",
+        "durationMs": 2033,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "Okay, thank you. I understand. I'll make sure to keep that appointment.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9",
+          "patientMessageId": "9e728bca-7ffd-4537-a2c0-10e7a1e24349",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "repeat",
+        "question": "Yes, you still need to see your dentist promptly.",
+        "context": [
+          {
+            "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:46:06.201Z"
+          },
+          {
+            "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:46:06.916Z"
+          },
+          {
+            "id": "483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:46:07.067Z"
+          },
+          {
+            "id": "f361156b-9c0d-4525-8872-4d2239180121",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:46:09.009Z"
+          },
+          {
+            "id": "174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:46:09.170Z"
+          },
+          {
+            "id": "5ebb2c99-b139-4b64-bc72-71c9de3feeaa",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:46:10.571Z"
+          },
+          {
+            "id": "2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:46:10.775Z"
+          },
+          {
+            "id": "9e728bca-7ffd-4537-a2c0-10e7a1e24349",
+            "role": "patient",
+            "text": "Okay, thank you. I understand. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:46:12.808Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-86f43a62-3914-4e35-839e-4707b2a35aa9",
+        "sentAt": "2026-10-18T13:46:12.950Z",
+        "receivedAt": "2026-10-18T13:46:13.986Z",
+        "durationMs": 1037,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "I will, thank you. I appreciate it.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-86f43a62-3914-4e35-839e-4707b2a35aa9",
+          "patientMessageId": "4ec81627-e0b2-4bad-9a94-c03ff2fbbe51",
+          "patientQuestionStateVersion": 1
+        }
+      },
+      {
+        "label": "closure",
+        "question": "Thank you for explaining that.",
+        "context": [
+          {
+            "id": "19ba33bf-1da4-4f06-9b3d-65b6227c6bc7",
+            "role": "student",
+            "text": "What brings you in today?",
+            "timestamp": "2026-10-18T13:46:06.201Z"
+          },
+          {
+            "id": "3cc1a88f-15cd-4528-9716-8a352600cbf4",
+            "role": "patient",
+            "text": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+            "timestamp": "2026-10-18T13:46:06.916Z"
+          },
+          {
+            "id": "483a6d2f-e26b-4cfd-a554-cfca98172cb7",
+            "role": "student",
+            "text": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+            "timestamp": "2026-10-18T13:46:07.067Z"
+          },
+          {
+            "id": "f361156b-9c0d-4525-8872-4d2239180121",
+            "role": "patient",
+            "text": "Okay, thank you.",
+            "timestamp": "2026-10-18T13:46:09.009Z"
+          },
+          {
+            "id": "174be2b0-35a9-48df-8f0f-d2d22ffb7c1f",
+            "role": "student",
+            "text": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+            "timestamp": "2026-10-18T13:46:09.170Z"
+          },
+          {
+            "id": "5ebb2c99-b139-4b64-bc72-71c9de3feeaa",
+            "role": "patient",
+            "text": "That lower-right back tooth has a crown or cap. I'm not sure whether that tooth had a root canal or its nerve removed. I have an appointment with my dentist next week, and I still plan to go. Yes, I have had a lot of dental work in the past. I don't remember exactly which teeth were treated. No, that tooth is still there and has a crown on it. I called my dentist a couple of days ago.",
+            "timestamp": "2026-10-18T13:46:10.571Z"
+          },
+          {
+            "id": "2b82f7dc-1f73-4e34-9819-a5ee9a6b37f9",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:46:10.775Z"
+          },
+          {
+            "id": "9e728bca-7ffd-4537-a2c0-10e7a1e24349",
+            "role": "patient",
+            "text": "Okay, thank you. I understand. I'll make sure to keep that appointment.",
+            "timestamp": "2026-10-18T13:46:12.808Z"
+          },
+          {
+            "id": "86f43a62-3914-4e35-839e-4707b2a35aa9",
+            "role": "student",
+            "text": "Yes, you still need to see your dentist promptly.",
+            "timestamp": "2026-10-18T13:46:12.950Z"
+          },
+          {
+            "id": "4ec81627-e0b2-4bad-9a94-c03ff2fbbe51",
+            "role": "patient",
+            "text": "I will, thank you. I appreciate it.",
+            "timestamp": "2026-10-18T13:46:13.986Z"
+          }
+        ],
+        "requestId": "pr3-repair7-latency-production-v8-split-5-4e964992-f5a6-4c8f-a880-75637f9f1d28",
+        "sentAt": "2026-10-18T13:46:14.136Z",
+        "receivedAt": "2026-10-18T13:46:14.236Z",
+        "durationMs": 100,
+        "status": 200,
+        "body": {
+          "success": true,
+          "provider": "navigator",
+          "response": "You're welcome.",
+          "encounterId": "842871fd-dc91-4e94-8d0a-57297f5d4024",
+          "requestId": "pr3-repair7-latency-production-v8-split-5-4e964992-f5a6-4c8f-a880-75637f9f1d28",
+          "patientMessageId": "c12e82b7-8f7d-4d29-8660-8fb283abfd1a",
+          "patientQuestionStateVersion": 1
+        }
+      }
+    ]
+  }
+]

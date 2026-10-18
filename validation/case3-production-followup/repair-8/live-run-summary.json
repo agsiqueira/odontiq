@@ -1,0 +1,39 @@
+{
+  "apiAttempts": 107,
+  "apiStatuses": {
+    "200": 106,
+    "502": 1
+  },
+  "upstreamAttempts": 120,
+  "byModel": {
+    "gpt-oss-120b": 71,
+    "granite-3.3-8b-instruct": 49
+  },
+  "byKind": {
+    "classifier": 71,
+    "generation": 49
+  },
+  "injected": [
+    {
+      "kind": "classifier",
+      "status": 503
+    },
+    {
+      "kind": "classifier",
+      "status": 503
+    },
+    {
+      "kind": "classifier",
+      "status": 200
+    },
+    {
+      "kind": "generation",
+      "status": 503
+    },
+    {
+      "kind": "generation",
+      "status": 503
+    }
+  ],
+  "realNon200": 0
+}

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "scripts/liveCase03FollowUp.mjs": "18849d43539409b98a200d192639ef5fddf6cad87a57de89f9acc7231cab69b1",
+    "scripts/reviewCase03Live.mjs": "631bf5e9892b909003f023f353595e117dd662c90952195e8bb6cb241f1b3c09",
+    "scripts/case3NavigatorCapture.mjs": "272e7362a71dde00392175284e84bf100ce21db439e3e845272f612cb97310c1",
+    "scripts/benchmarkCase03Latency.mjs": "0e002aa66b50076e4dbbe72a63a77ab2e6dfbe685a52525ba8237b1230b09107",
+    "scripts/summarizeCase03Latency.mjs": "8766534fc1d336e75487872afb87321954fec796df16cbb83247b3fe5c9e6f87"
+  },
+  "grader": "Per-turn explanation predicates independently annotated in fixture metadata; final response rubric unchanged",
+  "faultControlChange": "The former separate-verifier network fault is now malformed explanation evidence within a successful shared classifier response. Shared classifier 503 control covers the single request transport failure; both fail closed without consuming question state.",
+  "requestIds": "Stable pr3-repair7-latency fixture prefix retained across versions; manifest commit and unique user/encounter/request IDs identify the tested revision",
+  "cleanup": "Only each newly created exact session was revoked. No historical session or timestamp cleanup."
+}

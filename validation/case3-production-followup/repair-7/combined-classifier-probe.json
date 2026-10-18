@@ -1,0 +1,212 @@
+[
+  {
+    "id": "consent",
+    "message": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "status": 200,
+    "durationMs": 1090,
+    "response": {
+      "id": "chatcmpl-bcb53f9d9f62c9a7",
+      "created": 1792328467,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"temporaryTreatmentActive\": true,\n    \"incisionAndDrainageProposed\": true,\n    \"patientAgreedToIncisionAndDrainage\": true\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\", \"patient-draft\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": true,\n      \"quote\": \"I recommend an I&D to drain the infection and relieve the pressure.\"\n    },\n    \"definitive\": {\n      \"required\": true,\n      \"quote\": \"an I&D to drain the infection\"\n    },\n    \"confidence\": 1\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 169,
+        "prompt_tokens": 922,
+        "total_tokens": 1091
+      }
+    }
+  },
+  {
+    "id": "bare",
+    "message": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "durationMs": 770,
+    "response": {
+      "id": "chatcmpl-a69ccc535ba0f514",
+      "created": 1792328468,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"promptDentalFollowUpConfirmed\": true,\n    \"drainageTemporaryOrNondefinitiveExplained\": false,\n    \"definitiveDentalTreatmentExplained\": false\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": false,\n      \"quote\": \"\"\n    },\n    \"definitive\": {\n      \"required\": false,\n      \"quote\": \"\"\n    },\n    \"confidence\": 1\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 139,
+        "prompt_tokens": 963,
+        "total_tokens": 1102
+      }
+    }
+  },
+  {
+    "id": "equivalent",
+    "message": "Yes, see your dentist promptly. The I&D is not a cure. The affected tooth must come out.",
+    "status": 200,
+    "durationMs": 852,
+    "response": {
+      "id": "chatcmpl-884e6dfc877099d4",
+      "created": 1792328469,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"promptDentalFollowUpConfirmed\": true,\n    \"drainageTemporaryOrNondefinitiveExplained\": true,\n    \"definitiveDentalTreatmentExplained\": true\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": true,\n      \"quote\": \"The I&D is not a cure.\"\n    },\n    \"definitive\": {\n      \"required\": true,\n      \"quote\": \"The affected tooth must come out.\"\n    },\n    \"confidence\": 1\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 157,
+        "prompt_tokens": 977,
+        "total_tokens": 1134
+      }
+    }
+  },
+  {
+    "id": "hypothetical",
+    "message": "Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.",
+    "status": 200,
+    "durationMs": 785,
+    "response": {
+      "id": "chatcmpl-a33d7c60bbf137a2",
+      "created": 1792328470,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"promptDentalFollowUpConfirmed\": false,\n    \"drainageTemporaryOrNondefinitiveExplained\": false,\n    \"definitiveDentalTreatmentExplained\": true\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": false,\n      \"quote\": \"\"\n    },\n    \"definitive\": {\n      \"required\": true,\n      \"quote\": \"If things get worse, you might need the tooth taken out.\"\n    }\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 973,
+        "total_tokens": 1120
+      }
+    }
+  },
+  {
+    "id": "split",
+    "message": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "status": 200,
+    "durationMs": 1038,
+    "response": {
+      "id": "chatcmpl-9caf23fa8e30327e",
+      "created": 1792328471,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"temporaryTreatmentActive\": true,\n    \"incisionAndDrainageProposed\": true\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": true,\n      \"quote\": \"I recommend an I&D for the abscess.\"\n    },\n    \"definitive\": {\n      \"required\": true,\n      \"quote\": \"Your dentist still needs to remove the affected tooth.\"\n    },\n    \"confidence\": 1\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 146,
+        "prompt_tokens": 922,
+        "total_tokens": 1068
+      }
+    }
+  },
+  {
+    "id": "negated",
+    "message": "Yes, see your dentist promptly. You do not need a root canal or extraction.",
+    "status": 200,
+    "durationMs": 818,
+    "response": {
+      "id": "chatcmpl-a6d938264423ea50",
+      "created": 1792328471,
+      "model": "granite-3.3-8b-instruct",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"schemaVersion\": 1,\n  \"caseId\": \"case-03\",\n  \"events\": {\n    \"promptDentalFollowUpConfirmed\": false,\n    \"drainageTemporaryOrNondefinitiveExplained\": false,\n    \"definitiveDentalTreatmentExplained\": true\n  },\n  \"confidence\": 1,\n  \"evidence\": [\"student-current\"],\n  \"explanations\": {\n    \"temporary\": {\n      \"explained\": false,\n      \"quote\": \"\"\n    },\n    \"definitive\": {\n      \"required\": true,\n      \"quote\": \"You do not need a root canal or extraction.\"\n    },\n    \"confidence\": 1\n  }\n}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 150,
+        "prompt_tokens": 970,
+        "total_tokens": 1120
+      }
+    }
+  }
+]
