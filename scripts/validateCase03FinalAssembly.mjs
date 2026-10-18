@@ -20,7 +20,7 @@ const events = { promptDentalFollowUpConfirmed: true, drainageTemporaryOrNondefi
 const classified = await classifyPatientQuestionTrigger({ caseId:"case-03", state:prior,
   studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",
   draftPatientResponse:"Okay, I'll keep my appointment.", conversation:[],
-  provider:{name:"synthetic-false-explanation-classifier",generateText:async ({systemPrompt}) => ({text:JSON.stringify(systemPrompt.startsWith("From the CURRENT") ? {temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1} : {schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"]})})},
+  provider:{name:"synthetic-false-explanation-classifier",generateText:async () => ({text:JSON.stringify({schemaVersion:1,caseId:"case-03",events,confidence:0.99,evidence:["student-current"],explanations:{temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1}})})},
 });
 assert(classified.success);
 assert.deepEqual(classified.classification.detectedEvents,{...events,drainageTemporaryOrNondefinitiveExplained:false,definitiveDentalTreatmentExplained:false});
@@ -51,8 +51,8 @@ assert.equal(remembered.selectedQuestionId,undefined,"validated reasons survive 
 repository.reset(prior);
 const independentlyKnown=await classifyPatientQuestionTrigger({caseId:"case-03",state:prior,studentMessageId:"current",
   studentMessage:"Drainage is temporary. You still need root canal treatment or extraction.",draftPatientMessageId:"draft",
-  draftPatientResponse:"Okay.",conversation:[],provider:{name:"fixture",generateText:async({systemPrompt})=>({text:systemPrompt.startsWith("From the CURRENT")
-    ? JSON.stringify({temporary:{explained:true,quote:proof.temporary.quote},definitive:{required:true,quote:proof.definitive.quote},confidence:1}) : "invalid trigger JSON"})}});
+  draftPatientResponse:"Okay.",conversation:[],provider:{name:"fixture",generateText:async()=>({text:JSON.stringify({schemaVersion:1,caseId:"case-03",events:{},confidence:1,evidence:[],explanations:{temporary:{explained:true,quote:proof.temporary.quote},definitive:{required:true,quote:proof.definitive.quote},confidence:1}})})}});
+
 assert(independentlyKnown.success);
 assert.equal(independentlyKnown.classification.questionDecisionVerified,false);
 const independentTurn=await service.finalizeTurn({...explainedInput,classification:independentlyKnown.classification,
@@ -60,3 +60,18 @@ const independentTurn=await service.finalizeTurn({...explainedInput,classificati
 assert.equal(independentTurn.selectedQuestionId,undefined,"failed trigger must not emit/consume a question");
 assert(repository.saved.state.case3Explanations.definitive,"validated independent knowledge persists");
 console.log("Case3 classifier and real final-assembly service: false flags, validation rejection, retry, idempotency, once-only and answered control passed (in-memory repository, no DB).");
+
+// Sharing the transport does not share the trust boundary: bad explanation evidence
+// cannot inherit valid trigger confidence or consume a question.
+for (const invalid of [undefined, {temporary:{explained:false,quote:""},definitive:{required:true,quote:"invented"},confidence:1}, {temporary:{explained:false,quote:""},definitive:{required:true,quote:message},confidence:.2}]) {
+  let calls=0;
+  const rejected=await classifyPatientQuestionTrigger({caseId:"case-03",state:prior,studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",draftPatientResponse:"Okay.",conversation:[],provider:{name:"navigator",generateText:async input=>{
+    calls++;assert.equal(input.model,process.env.NAVIGATOR_CASE3_CLASSIFIER_MODEL??"gpt-oss-120b");
+    return {text:JSON.stringify({schemaVersion:1,caseId:"case-03",events,confidence:1,evidence:["student-current"],explanations:invalid})};
+  }}});
+  assert.equal(calls,1,"exactly one classifier request even when evidence fails");assert.equal(rejected.success,false);
+}
+for (const caseId of ["case-01","case-02","case-04","case-05"]) {
+ let calls=0;await classifyPatientQuestionTrigger({caseId,state:createEmptyPatientQuestionState(),studentMessageId:"current",studentMessage:message,draftPatientMessageId:"draft",draftPatientResponse:"Okay.",conversation:[],provider:{name:"navigator",generateText:async input=>{calls++;assert.equal(input.model,undefined);return {text:"{}"}}}});assert.equal(calls,1);
+}
+console.log("Combined classifier: one call, independent evidence failure, task-model isolation across all cases passed.");

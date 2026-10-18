@@ -48,14 +48,16 @@ const report = { started: new Date().toISOString(), base, applicationCommit: exe
   applicationSourceDiff: execFileSync("git", ["diff", "--name-only", "HEAD", "--", "src", "prisma", "next.config.ts"], { encoding: "utf8" }).trim(),
   buildId: fs.readFileSync(".next/BUILD_ID", "utf8").trim(),
   configuration: { node: process.version, mode: "production", model: process.env.NAVIGATOR_MODEL,
-    explanationModel: process.env.NAVIGATOR_EXPLANATION_MODEL ?? "gpt-oss-120b",
+    case3ClassifierModel: process.env.NAVIGATOR_CASE3_CLASSIFIER_MODEL ?? "gpt-oss-120b",
+    explanationVerification: "same classifier request, independent evidence fields",
     navigator: "https://api.ai.it.ufl.edu via loopback capture/fault proxy", database: "isolated loopback PostgreSQL", auth: "existing Clerk test user, backend test session" }, tests: [] };
 const save = () => { fs.mkdirSync(path.dirname(output), { recursive: true }); fs.writeFileSync(output, JSON.stringify(report, null, 2)); };
 async function api(url, body) {
   const token = await clerk.sessions.getToken(session.id);
+  const fetchStarted = performance.now();
   const response = await fetch(base + url, { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${token.jwt}` }, body: JSON.stringify(body), signal: AbortSignal.timeout(120000) });
   const text = await response.text(); let data; try { data = JSON.parse(text); } catch { data = { nonJson: text.slice(0, 500) }; }
-  return { status: response.status, body: data };
+  return { status: response.status, durationMs: Math.round(performance.now() - fetchStarted), body: data };
 }
 try {
   save();
@@ -86,7 +88,7 @@ try {
     for (const question of scenario.beforeConsent ?? []) await turn(question, "pre-consent-explanation");
     await turn(scenario.consent ?? consent, "consent");
     if (scenario.fault) {
-      await fetch("http://127.0.0.1:3011/__fault", { method: "POST", body: JSON.stringify({ kind: scenario.fault, remaining: 2, status: 503 }) });
+      await fetch("http://127.0.0.1:3011/__fault", { method: "POST", body: JSON.stringify({ kind: scenario.fault, remaining: scenario.fault === "explanation" ? 1 : 2, status: 503 }) });
       await turn(scenario.answer, "intentional-failed-attempt");
       // Always disarm before the single planned retry; every attempt remains recorded.
       await fetch("http://127.0.0.1:3011/__fault", { method: "POST", body: JSON.stringify(null) });

@@ -1,9 +1,8 @@
 import assert from "node:assert/strict";
-import { verifyCase3Explanations } from "../src/lib/patientQuestions/explanationScope";
+import { parseCase3Explanations } from "../src/lib/patientQuestions/explanationScope";
 import { constrainQuestionClassification } from "../src/lib/patientQuestions/eligibility";
 import { applyPatientQuestionClassification } from "../src/lib/patientQuestions/stateMachine";
 import { createEmptyPatientQuestionState, type Case3Explanations, type PatientQuestionClassification } from "../src/lib/patientQuestions/types";
-import type { AIProvider } from "../src/lib/ai/provider";
 const prior = createEmptyPatientQuestionState();
 prior.detectedEvents.temporaryTreatmentActive = true;
 prior.emittedQuestionIds = ["c3-follow-up-needed-question"];
@@ -38,27 +37,16 @@ assert.equal(apply(classified("Thank you for explaining that.")).selectedQuestio
 // Unit stubs test verifier contract/isolation, not language comprehension. The
 // permanent live suite supplies real semantic coverage for these clinical equivalents.
 for (const quote of [definitive.quote,"The affected tooth must come out.","You still require removal of the source tooth.","Root canal treatment remains necessary."]) {
-  const provider={name:"fixture",generateText:async(input)=>{
-    assert.deepEqual(JSON.parse(input.messages[0].content),{currentProviderMessage:quote});
-    return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:true,quote},confidence:1})};
-  }} as AIProvider;
-  assert.deepEqual(await verifyCase3Explanations(provider,quote,"current"),{definitive:{messageId:"current",quote}});
+  assert.deepEqual(parseCase3Explanations({temporary:{explained:false,quote:""},definitive:{required:true,quote},confidence:1},quote,"current"),{definitive:{messageId:"current",quote}});
 }
+
 for (const output of [
   {temporary:{explained:false,quote:""},definitive:{required:true,quote:"invented extraction"},confidence:1},
   {temporary:{explained:false,quote:""},definitive:{required:true,quote:bare},confidence:0.2},
   {temporary:{explained:false,quote:""},definitive:{required:true,quote:""},confidence:1},
-]) await assert.rejects(verifyCase3Explanations({name:"fixture",generateText:async()=>({text:JSON.stringify(output)})},bare,"current"));
-assert.deepEqual(await verifyCase3Explanations({name:"fixture",generateText:async()=>({text:JSON.stringify({
-  temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:0.2,
-})})},bare,"current"),{},"no accepted reasons cannot suppress an independently eligible question");
-console.log("Case3 evidence isolation, verbatim witnesses, independent reasons, durable state, legacy flags, closure and once-only checks passed.");
-const configuredVerifier = process.env.NAVIGATOR_EXPLANATION_MODEL ?? "gpt-oss-120b";
-await verifyCase3Explanations({name:"navigator",generateText:async input=>{
-  assert.equal(input.model,configuredVerifier,"independent verifier uses explicit task model, not the patient model");
-  return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
-}},bare,"current");
-
+]) assert.throws(()=>parseCase3Explanations(output,bare,"current"));
+assert.deepEqual(parseCase3Explanations({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:0.2},bare,"current"),{},"no accepted reasons cannot suppress an independently eligible question");
+console.log("Case3 independent evidence, verbatim witnesses, durable state, closure and once-only checks passed.");
 const rejectedTrigger=apply({...classified(full,{temporary,definitive}),questionDecisionVerified:false});
 assert.equal(rejectedTrigger.selectedQuestionId,undefined,"rejected trigger cannot consume a question");
 assert(rejectedTrigger.state.case3Explanations?.definitive,"independent validated knowledge survives");

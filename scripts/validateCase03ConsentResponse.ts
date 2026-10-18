@@ -109,12 +109,12 @@ const classified = await classifyPatientQuestionTrigger({
   provider: {
     name: "case-03-consent-validator",
     generateConversationResponse: async () => ({ text: "unused" }),
-    generateText: async ({ messages, systemPrompt }) => {
-      if (systemPrompt.startsWith("From the CURRENT")) return {text:JSON.stringify({temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1})};
+    generateText: async ({ messages }) => {
       assert(messages[0]?.content.includes(clearProposal));
       assert(messages[0]?.content.includes(draftAgreement));
       return {
         text: JSON.stringify({
+          explanations: {temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1},
           schemaVersion: 1,
           caseId: "case-03",
           events: {

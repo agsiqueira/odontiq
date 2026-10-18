@@ -10,11 +10,13 @@ http.createServer(async (req, res) => {
     fault = JSON.parse(body); res.end("armed"); return;
   }
   let body = ""; for await (const chunk of req) body += chunk;
+  const started = performance.now();
   const record = { at: new Date().toISOString(), path: req.url, request: JSON.parse(body) };
   const classification = body.includes("schemaVersion") && body.includes("student-current");
   record.kind = body.includes("currentProviderMessage") ? "explanation" : classification ? "classifier" : "generation";
   try {
-    if (fault && (!fault.kind || fault.kind === record.kind)) {
+    const corruptExplanation = fault?.kind === "explanation" && record.kind === "classifier";
+    if (fault && !corruptExplanation && (!fault.kind || fault.kind === record.kind)) {
       record.injected = true; record.status = fault.status; record.response = "injected local verification failure";
       if (--fault.remaining <= 0) fault = null;
     } else {
@@ -22,7 +24,17 @@ http.createServer(async (req, res) => {
         method: "POST", headers: { "content-type": "application/json", authorization: req.headers.authorization }, body,
       });
       record.status = upstream.status; record.response = await upstream.text();
+      if (corruptExplanation && upstream.ok) {
+        record.injected = true; record.originalResponse = record.response;
+        const envelope = JSON.parse(record.response);
+        const combined = JSON.parse(envelope.choices[0].message.content.trim().replace(/^```(?:json)?\s*/i, "").replace(/```$/, ""));
+        combined.explanations.confidence = "invalid injected explanation evidence";
+        envelope.choices[0].message.content = JSON.stringify(combined);
+        record.response = JSON.stringify(envelope);
+        if (--fault.remaining <= 0) fault = null;
+      }
     }
+    record.durationMs = Math.round(performance.now() - started);
     fs.appendFileSync(output, JSON.stringify(record) + "\n");
     res.writeHead(record.status, { "content-type": "application/json" }); res.end(record.response);
   } catch (error) {

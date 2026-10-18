@@ -1,3 +1,4 @@
+import { CASE3_EXPLANATION_INSTRUCTIONS } from "./explanationScope";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import type {
   PatientQuestionEventId,
@@ -145,6 +146,9 @@ Return exactly these top-level fields:
 - events: an object containing every allowed event name exactly once, each with a boolean value
 - confidence: a number from 0 to 1 representing confidence in the event determinations
 - evidence: an array containing only supplied short message aliases that support asserted true events
+${input.caseId === "case-03" ? `- explanations: an independent object with exactly temporary, definitive and confidence. This evidence concerns ONLY student-current, never prior dialogue or patient-draft. It is independent of the allowed trigger event names and must be supplied at every stage.
+${CASE3_EXPLANATION_INSTRUCTIONS.replace('Return only JSON', 'For the explanations field return')}
+Do not place explanation evidence inside events. Return all five ordinary trigger fields AND the explanations field in the same JSON object.` : ""}
 ${input.caseId === "case-04" ? `- currentProviderAct: exactly one of current_plan, history_or_symptom_question, background_screening, care_search_offer, explanation, other
 - currentPlanEvidence: a verbatim quote from student-current that actually gives a current pain-treatment or disposition/follow-up plan, or an empty string if none.
 A current_plan chooses a specific current treatment or follow-up action. An access-screening question, county for referral, acceptable fees or offering to look for options does not choose a plan. A symptom-history question is not a plan. Do not use patient-draft or prior context as the current plan witness.
