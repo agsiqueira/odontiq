@@ -1,6 +1,5 @@
 {
   "createdAt": "2026-10-17T18:48:28.888Z",
-  "implementationFrozenAt": "2026-10-17T18:47:57.588Z",
   "tests": [
     {
       "testId": "C01-G01-Q01",
@@ -6217,5 +6216,8 @@
       "cohort": "fresh-holdout",
       "setupQuestions": []
     }
-  ]
+  ],
+  "version": "V7",
+  "source": "Exact V6 546-item scored questions and setup inventory; grading contract validation/v7/CONTRACT.md",
+  "preparedAt": "2026-10-18T00:35:55.289Z"
 }

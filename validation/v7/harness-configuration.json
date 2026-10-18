@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/browser/patient-v7-verification.spec.ts",
+      "sha256": "e33b54c286f0d4baed97d94acc4a9f3a3dc3100b6cc1b572743bf6efcd10c9a7"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/tests/auth/v7.global.setup.ts",
+      "sha256": "6e429398020afd8bf16d5549c4e2abbe34578ce4d12d6c10048256788a586aa0"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/playwright.v7.config.ts",
+      "sha256": "05b1e055234f19d853bfbd26f89bd2cf281c3f9fbdb952bc3a3d61ec67d5e99c"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/src/clients/odontiqBrowserClient.ts",
+      "sha256": "c9294e05bf6af7e43f6fa4526dac5cbc55b6c72234b7337e3ffd905901cd2741"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/src/config/environment.ts",
+      "sha256": "34dd5b3593808eb2468becd83e5ef4a9cc14dfbf6d6bda1cfd5cf5294030f8f0"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/package.json",
+      "sha256": "7386622d19015ab4ea5719d69560e2e159f0c999e3cadb47d1fc4a579cda0711"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/package-lock.json",
+      "sha256": "1f89ca7a5b7ce1f0b300a0a6e6629cdc2864f4255e928f35b0c8675c50390ac1"
+    },
+    {
+      "path": "C:/240 - odontIQ/odontiq-phase-t/.env",
+      "sha256": "911f1ed6ea9fc9a43c7b8a6a40086fc06c2f26477790a91bf49e3dd12e4eaed9"
+    }
+  ]
+}

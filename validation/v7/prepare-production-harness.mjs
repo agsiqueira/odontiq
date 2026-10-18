@@ -1,0 +1,3 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const h='C:/240 - odontIQ/odontiq-phase-t';const files=['tests/browser/patient-v7-production.spec.ts','tests/auth/v7-production.global.setup.ts','playwright.v7-production.config.ts','src/clients/odontiqBrowserClient.ts','src/config/environment.ts','package.json','package-lock.json','.env'].map(p=>({path:`${h}/${p}`,sha256:crypto.createHash('sha256').update(fs.readFileSync(`${h}/${p}`)).digest('hex')}));fs.writeFileSync('validation/v7/production-harness.json',JSON.stringify({baseUrl:'http://localhost:3005',workers:1,retries:0,browser:'chromium',headless:true,files},null,2));
+

@@ -1,0 +1,222 @@
+[
+  {
+    "variantKey": "[\"case-03\",\"Do you have any children?\",\"Yes, I have a young daughter.\"]",
+    "reviewedAt": "2026-10-18T01:44:58.385Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"I'm looking into dental care options for you and your daughter.\",\"Thank you for helping me find dental care. I'd prefer the same clinic for my daughter and me.\"]",
+    "reviewedAt": "2026-10-18T01:44:58.385Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each actual production question/context/final inspected. No insurance and payment-arrangement uncertainty are source-correct; same-clinic preference and both child/setup acknowledgments introduce no condition/provider/history. No premature question/leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-01\",\"What brings you here today?\",\"I have a bad toothache and swelling, and swallowing is hard. I feel short of breath if I lie down.\"]",
+    "reviewedAt": "2026-10-18T01:47:01.679Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-02\",\"What brings you here today?\",\"My upper-right tooth hurts badly, my cheek is swelling, and I feel feverish, weak, and sick.\"]",
+    "reviewedAt": "2026-10-18T01:47:01.679Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-03\",\"What brings you here today?\",\"My lower-right back tooth hurts all the time, and I can't chew on it.\"]",
+    "reviewedAt": "2026-10-18T01:47:01.679Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"What brings you here today?\",\"My left lower back tooth hurts really badly when I bite, and it is hard to chew.\"]",
+    "reviewedAt": "2026-10-18T01:47:01.679Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What brings you here today?\",\"This tooth pain won't go away, and it keeps waking me up at night. I can barely sleep. Can I get an antibiotic? It has helped in the past when I had a toothache.\"]",
+    "reviewedAt": "2026-10-18T01:47:01.679Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Individually inspected all five actual chief-complaint setups and closure finals: canonical symptoms and opening Case5 eligible request are grounded; thank-yous receive acknowledgment without restarting. Actual Case4 plan permits antibiotic-needed question, compound Case5 pain answer covers quality/triggers before eligible request. No invented facts/leakage, UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"What is your name?\",\"My name is Sofia Williams.\"]",
+    "reviewedAt": "2026-10-18T01:48:34.503Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-04\",\"We will manage your pain with ibuprofen and refer you to a dentist.\",\"Okay, thank you. Do I need an antibiotic?\"]",
+    "reviewedAt": "2026-10-18T01:48:34.503Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each production final and new setup individually inspected: unknown household, zero-payment/free preference, canonical pain/identity facts are grounded. Case5 opening/later substantive pain permits request; Case4 actual plan permits question but descriptive symptom prompt does not. Thanks after plan closes without repeat. Care-search grounded, no leakage; exact UI/API and IDs match."
+      }
+    }
+  },
+  {
+    "variantKey": "[\"case-05\",\"Does your tooth hurt?\",\"Yes, it hurts.\"]",
+    "reviewedAt": "2026-10-18T01:50:12.082Z",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Every exact production final/context individually inspected. Antibiotics-not-indicated explanation blocks question; historical antibiotic question grants no plan eligibility. Generic pain alone gives no request, later quality does. Cold answers retain worsening and lingering after removal, no false location/negation; hospital paraphrase adds no unsupported inability. Grounded/relevant, UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Every exact production final/context individually inspected. Antibiotics-not-indicated explanation blocks question; historical antibiotic question grants no plan eligibility. Generic pain alone gives no request, later quality does. Cold answers retain worsening and lingering after removal, no false location/negation; hospital paraphrase adds no unsupported inability. Grounded/relevant, UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "PASS",
+        "reason": "Every exact production final/context individually inspected. Antibiotics-not-indicated explanation blocks question; historical antibiotic question grants no plan eligibility. Generic pain alone gives no request, later quality does. Cold answers retain worsening and lingering after removal, no false location/negation; hospital paraphrase adds no unsupported inability. Grounded/relevant, UI/API and IDs match."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Every exact production final/context individually inspected. Antibiotics-not-indicated explanation blocks question; historical antibiotic question grants no plan eligibility. Generic pain alone gives no request, later quality does. Cold answers retain worsening and lingering after removal, no false location/negation; hospital paraphrase adds no unsupported inability. Grounded/relevant, UI/API and IDs match."
+      }
+    }
+  }
+]

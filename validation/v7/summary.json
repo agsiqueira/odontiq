@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-10-18T01:43:28.962Z",
+  "planned": 546,
+  "realAttempted": 546,
+  "delivered": 546,
+  "reviewed": 546,
+  "rawRecords": 546,
+  "counts": {
+    "PASS": 545,
+    "FAIL": 1,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "cohorts": {
+    "primary": {
+      "total": 340,
+      "outcomes": {
+        "PASS": 339,
+        "FAIL": 1,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "pain-context": {
+      "total": 20,
+      "outcomes": {
+        "PASS": 20,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "former-holdout-regression": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 51,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "targeted-live": {
+      "total": 30,
+      "outcomes": {
+        "PASS": 30,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "v3-holdout-regression": {
+      "total": 54,
+      "outcomes": {
+        "PASS": 54,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    },
+    "fresh-holdout": {
+      "total": 51,
+      "outcomes": {
+        "PASS": 51,
+        "FAIL": 0,
+        "REVIEW": 0,
+        "ERROR": 0,
+        "BLOCKED": 0
+      }
+    }
+  },
+  "v6Counts": {
+    "PASS": 456,
+    "FAIL": 88,
+    "REVIEW": 2,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "regressionsFromV6Pass": [],
+  "unreviewedDelivered": [],
+  "unreviewedSetups": [],
+  "parseErrors": []
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "testId": "C04-G14-Q19",
+    "question": "Is sliding scale payment something you open to?",
+    "caseId": "case-04",
+    "groupId": "G14",
+    "groupTitle": "Sliding-scale payment",
+    "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+    "contextRequirement": "None required.",
+    "cohort": "primary",
+    "setupQuestions": [],
+    "runId": "1b1f9183-096e-4f47-ae69-f8ae1e79f068",
+    "attempt": 1,
+    "attemptKind": "first-run",
+    "priorAttemptRunIds": [],
+    "startedAt": "2026-10-18T01:12:09.352Z",
+    "setupTurns": [],
+    "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+    "apiFinalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+    "outcome": "FAIL",
+    "reason": "relevance: Fresh encounter: only fee openness is asked, no current treatment/disposition plan. Actual response: I'm open to paying a sliding-scale fee. Do I need an antibiotic? The appended question is premature under CONTRACT.md.",
+    "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+    "requestId": "case-04-1792285932503-1-response",
+    "provider": "navigator",
+    "apiAttempts": [
+      {
+        "httpStatus": 200,
+        "requestId": "case-04-1792285932503-1-response",
+        "encounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+        "requestMessage": "Is sliding scale payment something you open to?",
+        "provider": "navigator",
+        "selectedQuestionId": "c4-antibiotic-needed-question",
+        "patientQuestionStateVersion": 1,
+        "patientMessageId": "253837b8-ce6c-476c-9d24-3c56e8054816",
+        "finalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+        "responseRequestId": "case-04-1792285932503-1-response",
+        "responseEncounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+        "error": null,
+        "retryAfter": null
+      }
+    ],
+    "screenshot": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v7-2026-10-17\\screenshots\\C04-G14-Q19_1b1f9183-096e-4f47-ae69-f8ae1e79f068.png",
+    "trace": "C:\\240 - odontIQ\\odontiq-phase-t\\artifacts\\reports\\odontiq-v7-2026-10-17\\traces\\C04-G14-Q19_1b1f9183-096e-4f47-ae69-f8ae1e79f068.zip",
+    "freshState": {
+      "boundEncounterId": "a98f46b5-8b86-4f84-877c-0cb01ee7b33d",
+      "patientCount": 0,
+      "studentCount": 0,
+      "transcriptCount": 0
+    },
+    "httpStatus": 200,
+    "correlationMatched": true,
+    "uiApiMatch": true,
+    "elapsedMs": 2398,
+    "visibleApplicationError": "",
+    "completedAt": "2026-10-18T01:12:15.408Z",
+    "privateRawPath": "C:/240 - odontIQ/odontiq-phase-t/artifacts/reports/odontiq-v7-2026-10-17/raw/C04-G14-Q19_1b1f9183-096e-4f47-ae69-f8ae1e79f068.json",
+    "lastAttemptedTurn": {
+      "question": "Is sliding scale payment something you open to?",
+      "requestId": "case-04-1792285932503-1-response",
+      "httpStatus": 200,
+      "apiFinalResponse": "I'm open to paying a sliding-scale fee. Do I need an antibiotic?",
+      "error": null
+    },
+    "implementationVersion": "V7",
+    "setupOutcome": "NOT_APPLICABLE",
+    "dimensions": {
+      "factualCorrectness": {
+        "status": "PASS",
+        "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+      },
+      "completeness": {
+        "status": "PASS",
+        "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+      },
+      "relevance": {
+        "status": "FAIL",
+        "reason": "Fresh encounter: only fee openness is asked, no current treatment/disposition plan. Actual response: I'm open to paying a sliding-scale fee. Do I need an antibiotic? The appended question is premature under CONTRACT.md."
+      },
+      "leakage": {
+        "status": "PASS",
+        "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+      }
+    },
+    "originalRecorderOutcome": "REVIEW",
+    "allAttemptRunIds": [
+      "1b1f9183-096e-4f47-ae69-f8ae1e79f068"
+    ]
+  }
+]

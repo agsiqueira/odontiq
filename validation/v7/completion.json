@@ -1,0 +1,132 @@
+{
+  "completedAt": "2026-10-18T01:52:33.150Z",
+  "version": "V7",
+  "complete": true,
+  "applicationCommit": "b159cd03a768bf2416d4e3ce19074ee6debf62ba",
+  "applicationFreeze": "2026-10-18T00:41:40.453Z",
+  "frozenFileCount": 372,
+  "applicationHashesUnchanged": true,
+  "scored": {
+    "planned": 546,
+    "recorded": 546,
+    "reviewed": 546,
+    "counts": {
+      "PASS": 545,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  },
+  "firstAttempt": {
+    "PASS": 545,
+    "FAIL": 1,
+    "REVIEW": 0,
+    "ERROR": 0,
+    "BLOCKED": 0
+  },
+  "setup": {
+    "reviewed": 119,
+    "counts": {
+      "PASS": 119,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    }
+  },
+  "production": {
+    "planned": 57,
+    "counts": {
+      "PASS": 57,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "nonpass": 0,
+    "scoredUiApiCorrelated": 57,
+    "setupUiApiCorrelated": 20,
+    "setupOutcomes": [
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "setupOutcomeCounts": {
+      "PASS": 20,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "setupNonpass": 0
+  },
+  "comparison": {
+    "v5Corrected": {
+      "PASS": 448,
+      "FAIL": 95,
+      "REVIEW": 3,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "v6": {
+      "PASS": 456,
+      "FAIL": 88,
+      "REVIEW": 2,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "v7": {
+      "PASS": 545,
+      "FAIL": 1,
+      "REVIEW": 0,
+      "ERROR": 0,
+      "BLOCKED": 0
+    },
+    "regressionsAgainstCorrectedV6": [],
+    "newPriorVersionGradingChanges": []
+  },
+  "automatedChecksPassed": 40,
+  "integrityChecks": 35,
+  "allIntegrityChecksPassed": true,
+  "uiApi": {
+    "scoredMatched": 546,
+    "setupMatched": 119,
+    "productionScoredMatched": 57,
+    "productionSetupMatched": 20
+  },
+  "speech": {
+    "automatedPlayback": "Tested in retained V6 evidence; not repeated because no relevant code change",
+    "humanAudibility": "UNVERIFIED"
+  },
+  "recommendation": "Another labeled repair cycle for remaining semantic failures; no changes during frozen verification.",
+  "merged": false,
+  "deployed": false,
+  "artifacts": {
+    "report": "validation/v7/REPORT.md",
+    "results": "validation/v7/results.json",
+    "unresolved": "validation/v7/unresolved-items.json",
+    "setup": "validation/v7/setup-adjudications.json",
+    "production": "validation/v7/production-smoke.json",
+    "freeze": "validation/v7/implementation-freeze.json",
+    "configuration": "validation/v7/production-configuration.json",
+    "integrity": "validation/v7/verification.json"
+  }
+}

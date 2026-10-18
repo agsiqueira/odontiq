@@ -644,6 +644,18 @@
       "cohort": "production-smoke",
       "groupId": "SMOKE",
       "contextRequirement": "None"
+    },
+    {
+      "testId": "C04-G14-Q19",
+      "question": "Is sliding scale payment something you open to?",
+      "caseId": "case-04",
+      "groupId": "SMOKE",
+      "groupTitle": "Sliding-scale payment",
+      "expectedMeaning": "Patient is open to paying for dental care on a sliding-scale fee. Do not answer with pain severity or invent income, eligibility, or a dollar limit.",
+      "contextRequirement": "None required.",
+      "cohort": "v7-production",
+      "setupQuestions": []
     }
-  ]
+  ],
+  "note": "Frozen production smoke includes the 56 focused cases plus the remaining development timing FAIL C04-G14-Q19. No application change."
 }

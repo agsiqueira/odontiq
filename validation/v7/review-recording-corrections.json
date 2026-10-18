@@ -1,0 +1,59 @@
+[
+  {
+    "testId": "C04-G14-Q19",
+    "originalRecordedDecision": {
+      "testId": "C04-G14-Q19",
+      "runId": "1b1f9183-096e-4f47-ae69-f8ae1e79f068",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31",
+      "reviewedAt": "2026-10-18T01:13:31.900Z",
+      "outcome": "PASS",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        },
+        "relevance": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        }
+      },
+      "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric."
+    },
+    "correctedDecision": {
+      "testId": "C04-G14-Q19",
+      "runId": "1b1f9183-096e-4f47-ae69-f8ae1e79f068",
+      "responseSha256": "695f45d49f1ce92ee2c10126ab9b57aa817222ae7061182524e077d0b40dca31",
+      "reviewedAt": "2026-10-18T01:13:31.900Z",
+      "outcome": "FAIL",
+      "dimensions": {
+        "factualCorrectness": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        },
+        "completeness": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        },
+        "relevance": {
+          "status": "FAIL",
+          "reason": "Fresh encounter: only fee openness is asked, no current treatment/disposition plan. Actual response: I'm open to paying a sliding-scale fee. Do I need an antibiotic? The appended question is premature under CONTRACT.md."
+        },
+        "leakage": {
+          "status": "PASS",
+          "reason": "Each exact final inspected: sourced fee willingness or Marion residence answers are correct/relevant; no unsupported personal details. C04-G14-Q19 retains explicit timing FAIL override for its premature antibiotic question. Other items have no patient question. UI/API and IDs match."
+        }
+      },
+      "method": "Individual assistant review of exact saved question/context/final response, authoritative case facts and fixed CONTRACT rubric.",
+      "correctedAt": "2026-10-18T01:13:44.388Z"
+    },
+    "reason": "The intended FAIL override command failed because the empty overrides file had not been initialized. Subsequent batch recording wrote a default PASS despite the assistant already judging FAIL. Corrected immediately; no grading-policy change or behavioral improvement claimed."
+  }
+]
