@@ -27,6 +27,7 @@ const case3 = loadCase("case-03");
 assert(case3);
 
 const positiveMessages = [
+  "I recommend making a small opening to let the pus out of the abscess. Is that okay?",
   "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
   "I recommend an I&D for the abscess. Is that okay?",
   "I recommend incision and drainage for the abscess. Is that okay?",

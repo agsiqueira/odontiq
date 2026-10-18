@@ -24,9 +24,9 @@ const variants=[...Array.from({length:5},(_,i)=>({id:`original-${i+1}`,message:e
  {id:'root-canal-history',history:true,message:'Did that tooth have a root canal before?'},
  {id:'extraction-history',history:true,message:'Was the painful tooth extracted before?'}];
 try{
- report.auth=[];for(const target of ['candidate','v8']){const check=await api(target,'/api/me');report.auth.push({target,...check});save();if(check.status!==200)throw Error('Authentication preflight failed');}
+ report.auth=[];for(const target of ['candidate','v8']){const check=await api(target,'/api/me');report.auth.push({target,...check});save();if(check.status!==200||!check.body?.clerkUserId)throw Error('Authentication preflight failed');}
  for(const[index,scenario]of variants.entries())for(const target of index%2?['v8','candidate']:['candidate','v8']){
-  const row={scenario:scenario.id,target,history:!!scenario.history,attempts:[]};report.tests.push(row);save();row.setup=await api(target,'/api/encounters/start',{caseId:'case-03',fresh:true});save();if(row.setup.status!==200){row.outcome='ERROR';continue;}row.encounterId=row.setup.body.id;const conversation=[];
+  const row={scenario:scenario.id,target,history:!!scenario.history,attempts:[]};report.tests.push(row);save();row.setup=await api(target,'/api/encounters/start',{caseId:'case-03',fresh:true});save();if(row.setup.status!==200||!row.setup.body?.id){row.outcome='ERROR';continue;}row.encounterId=row.setup.body.id;const conversation=[];
   for(const[label,message]of [['opening','What brings you in today?'],...(!scenario.history?[['prior-explanation','Draining the infection only relieves pressure; it does not provide definitive tooth treatment.']]:[]),[scenario.history?'history':'consent',scenario.message],...(!scenario.history?[['repeat',scenario.message]]:[]),['closure','Thank you.']]){
    const id=randomUUID(),requestId=`consent-only-${target}-${scenario.id}-${id}`,payload={encounterId:row.encounterId,caseId:'case-03',requestId,studentMessageId:id,conversation:structuredClone(conversation),coveredChecklistItems:[],message};
    const attempt={label,question:message,context:structuredClone(conversation),requestId,payload};row.attempts.push(attempt);save();Object.assign(attempt,await api(target,'/api/conversation',payload));
@@ -40,4 +40,5 @@ try{
  }
  report.finished=new Date().toISOString();save();
 }finally{for(const db of Object.values(databases))await db.$disconnect();await clerk.sessions.revokeSession(session.id);report.exactOwnedSessionRevoked=true;save();}
+
 

@@ -6,7 +6,7 @@ const CURRENT_PROPOSAL_PATTERN =
 
 const ABSCESS_CONTEXT_PATTERN = /\b(?:abscess|infection|pus|pressure)\b/i;
 const DRAINAGE_ACTION_PATTERN =
-  /\b(?:incision and drainage|i\s*(?:&|and)\s*d|drain(?:age|ing)?|allow (?:the )?(?:infection|pus) to drain|make (?:a )?(?:small )?(?:opening|incision))\b/i;
+  /\b(?:incision and drainage|i\s*(?:&|and)\s*d|drain(?:age|ing)?|allow (?:the )?(?:infection|pus) to drain|mak(?:e|ing) (?:a )?(?:small )?(?:opening|incision))\b/i;
 const TENTATIVE_OR_DEFERRED_PATTERN =
   /\b(?:may|might|could|possibly|perhaps|consider|later|eventually|in the future|if (?:it|things|the swelling)|depending on)\b/i;
 const HISTORICAL_PATTERN =
