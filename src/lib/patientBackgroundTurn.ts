@@ -169,7 +169,12 @@ export function assessBackgroundAnswer(text: string, turn: BackgroundTurn): { va
     && expressesRequest(s.split(/\bbut\b/)[0], turn.requests[0])
     && /\b(?:not sure|don't know|do not know)\b.{0,20}\b(?:if|whether)\b.{0,25}\b(?:can|could|would|will|meet|cover|treat|accept|provide)\b/.test(s)
     && !/\b(?:not sure|don't know|do not know)\b.{0,25}\b(?:prefer|want|easier|convenient)\b/.test(s);
-  const scopedUnknown = turn.requests.some(r => r.value === "unknown" && (r.concept === "attendance" || r.concept === "payment_activity" || r.concept === "provider_identity"))
+  // Uncertainty about one requested proposition must not negate another sentence's
+  // explicit sourced answer. Evaluate child coverage within its own clause below.
+  const childScopedUnknown = turn.requests.some(r => r.value === "unknown" && (r.concept === "child_condition" || r.concept === "child_provider"))
+    && s.split(/[.!?;]|\bbut\b/).some(clause => /\b(?:not sure|don't know|do not know|don't remember)\b/.test(clause)
+      && /\b(?:condition|dental provider|tooth\w*|teeth|cavities|dentist)\b/.test(clause));
+  const scopedUnknown = childScopedUnknown || turn.requests.some(r => r.value === "unknown" && (r.concept === "attendance" || r.concept === "payment_activity" || r.concept === "provider_identity"))
     && /\b(?:not sure|don't know|do not know|don't remember)\b.{0,30}\b(?:how often|frequency|regularly|payment|paying|arrangement|name)\b/.test(s);
   if (known && !clinicCapabilityCaveat && !scopedUnknown && /\b(?:not sure|don't know|do not know|never considered|depends on|have to think|hope so|haven't checked)\b/.test(s)) return { valid: false, reason: "uncertainty about known background facts" };
   if (turn.requests.some(r => r.concept === "shared_clinic" && r.value === "same_clinic")
@@ -202,7 +207,8 @@ function expressesRequest(s: string, r: BackgroundRequest): boolean {
     case "household": return false; // Only an explicit unknown household answer is sourced above.
     case "residence": return s.includes(r.value.toLowerCase()) && !/\b(?:not|don't|do not)\b.{0,20}\blive\b/.test(s);
     case "residency": return /\b(?:not|haven't|have not)\b.{0,25}\bestablished?\b/.test(s) && !/\b(?:completed|already) established\b/.test(s);
-    case "insurance": return r.subject === "daughter" ? /\b(?:daughter|she|her)\b.{0,35}\bmedicaid\b|\bmedicaid\b.{0,25}\b(?:daughter|her)\b/.test(s) && !/\b(?:she|daughter)\b.{0,20}\b(?:not|no|doesn't)\b/.test(s) : /\buninsured\b|\b(?:don't|do not|no|without)\b.{0,20}\b(?:dental )?(?:insurance|coverage)\b/.test(s) && !/\bi (?:have|am on|am covered by) (?:dental )?(?:insurance|medicaid)\b/.test(s);
+    case "insurance": return r.subject === "daughter" ? s.split(/[.!?;,]|\bbut\b/).some(clause => /\b(?:daughter|she|her)\b.{0,35}\bmedicaid\b|\bmedicaid\b.{0,25}\b(?:daughter|her)\b/.test(clause)
+      && !/\b(?:not|no|doesn't|does not|not sure|don't know|do not know)\b/.test(clause)) : /\buninsured\b|\b(?:don't|do not|no|without)\b.{0,20}\b(?:dental )?(?:insurance|coverage)\b/.test(s) && !/\bi (?:have|am on|am covered by) (?:dental )?(?:insurance|medicaid)\b/.test(s);
     case "coverage_timing": return /\b(?:past|last|within)\b.{0,20}\b(?:year|twelve months|12 months)\b/.test(s) && !/\b(?:more than|over|two|2|six|6|about|around|approximately)\b.{0,10}\b(?:years?|months?)\b/.test(s);
     case "dentist": return r.value === "has_dentist" ? /\b(?:have|see|got)\b.{0,20}\b(?:own |regular |usual |a |my )*(?:dentist|dental provider|dental professional)\b/.test(s) && !deniesCurrentDentist(s) : deniesCurrentDentist(s);
     case "child": return /\b(?:have|my)\b.{0,15}\b(?:young )?daughter\b/.test(s) && !/\b(?:no|don't|do not)\b.{0,20}\b(?:kids|children|daughter)\b/.test(s);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { loadCase } from '../src/data/cases';
 import { buildPatientDisclosureState, type PatientDisclosureFact } from '../src/lib/patientDisclosure';
-import { interpretBackgroundTurn } from '../src/lib/patientBackgroundTurn';
+import { interpretBackgroundTurn, assessBackgroundAnswer, backgroundFallback } from '../src/lib/patientBackgroundTurn';
 import { patientImmediateResponse, planOnlyAcknowledgment } from '../src/lib/patientImmediateResponse';
 import { validatePatientFinalResponse } from '../src/lib/patientFinalResponse';
 import { patientFactFallback, patientFactSentence } from '../src/lib/patientFactFallback';
@@ -92,4 +92,11 @@ fs.writeFileSync('validation/v7/focused-regressions.json',JSON.stringify({at:new
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
 
+
+
+const compoundChild = interpretBackgroundTurn("Does your daughter have Medicaid, and does she have a toothache?", [], facts('case-03'))!;
+assert(assessBackgroundAnswer(backgroundFallback(compoundChild), compoundChild).valid, 'Known coverage plus unknown child condition survives separate clauses');
+assert(assessBackgroundAnswer("My daughter has Medicaid. I'm not sure whether she has cavities.", compoundChild).valid);
+assert(!assessBackgroundAnswer("My daughter does not have Medicaid. I'm not sure about her dental condition.", compoundChild).valid);
+assert(!assessBackgroundAnswer("I'm not sure whether my daughter has Medicaid. I'm not sure about her dental condition.", compoundChild).valid);
 
