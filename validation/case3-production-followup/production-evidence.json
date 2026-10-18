@@ -1,0 +1,56 @@
+{
+  "encounterId": "f11436df-fe40-4569-8202-50edc554eba5",
+  "state": {
+    "version": 5,
+    "schemaVersion": 1,
+    "detectedEvents": {
+      "patientPainDescribed": false,
+      "antibioticsRecommended": false,
+      "temporaryTreatmentActive": true,
+      "incisionAndDrainageProposed": true,
+      "promptDentalFollowUpConfirmed": true,
+      "antibioticsNotIndicatedExplained": false,
+      "definitiveDentalTreatmentExplained": true,
+      "patientAgreedToIncisionAndDrainage": true,
+      "antibioticsRecommendedAsCurrentPlan": false,
+      "painManagementOrDispositionDiscussed": false,
+      "drainageTemporaryOrNondefinitiveExplained": true,
+      "hospitalAdmissionOrSurgicalManagementDiscussed": false
+    },
+    "emittedQuestionIds": [
+      "c3-follow-up-needed-question"
+    ]
+  },
+  "emitted": [
+    "c3-follow-up-needed-question"
+  ],
+  "turn": {
+    "id": "85fd207a-a69c-4526-ab8b-302e69ea641a",
+    "encounterId": "f11436df-fe40-4569-8202-50edc554eba5",
+    "requestId": "case-03-1792301155660-5-response",
+    "studentMessageId": "case-03-1792301155660-5",
+    "patientMessageId": "deda30e8-11cd-404a-8a72-a6c4f9474751",
+    "responseText": "Okay, I'll make sure to keep that appointment. Thank you.",
+    "providerName": "navigator",
+    "selectedQuestionId": null,
+    "behaviorIntentId": null,
+    "behaviorAnswerClear": false,
+    "stateVersion": 5,
+    "createdAt": "2026-10-18T05:25:56.947Z"
+  },
+  "eventTypes": [
+    "student_message_sent",
+    "patient_response_generated",
+    "student_message_sent",
+    "patient_response_generated",
+    "student_message_sent",
+    "patient_response_generated",
+    "student_message_sent",
+    "patient_response_generated",
+    "student_message_sent",
+    "patient_response_generated",
+    "student_message_sent",
+    "patient_response_generated"
+  ],
+  "classifierTracePersisted": false
+}

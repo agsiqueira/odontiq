@@ -126,6 +126,10 @@ Looking/searching for care options is NOT giving a plan. A plan chooses an actua
 A patient answer about county, insurance, payment or preferences is NOT a pain description.
 Do not infer events from the case scenario, intended future care or a patient's appended question.
 Use only the allowed event definitions for this case; never add a field for another case.
+${input.caseId === "case-03" && allowedEvents.includes("promptDentalFollowUpConfirmed") ? `The three follow-up events refer ONLY to student-current. Cite student-current for any true follow-up event.
+Confirming a prompt dentist appointment does not explain definitive treatment, even when earlier messages describe drainage.
+Do not copy an explanation from student-prior or patient messages into a current explanation flag.
+Suppressing Why requires BOTH an actual explanation of drainage's limited effect AND an explanation of root canal, extraction or equivalent definitive care. Generic advice to see a dentist is not the latter.` : ""}
 ${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
 A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Example: patient says tooth pain keeps waking me => patientPainDescribed=true.

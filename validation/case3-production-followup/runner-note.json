@@ -1,0 +1,14 @@
+{
+  "checks": 43,
+  "allExitCodesZero": true,
+  "runnerExitIssue": "Console print of Unicode build output failed under cp1252 after successful build was persisted; this is a reporting failure, not a build failure.",
+  "preservedPriorEvidenceRestoredFromHEAD": [
+    "validation/shared-conversation-followup-2026-10-17/final-v4/v3-failure-replays.json",
+    "validation/shared-conversation-repair-2026-10-17/deterministic-contract-replay.json",
+    "validation/v8/focused-regressions.json",
+    "validation/v8/focused-replays.json",
+    "validation/v8/prior-v5-focused-replays.json",
+    "validation/v8/prior-v7-regressions.json"
+  ],
+  "generatedReplaysKeptIn": "dev-output/case3-production-followup/validation-reruns"
+}
