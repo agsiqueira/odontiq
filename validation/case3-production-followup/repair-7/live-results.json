@@ -1,0 +1,116 @@
+{
+  "started": "2026-10-18T13:09:33.360Z",
+  "base": "http://127.0.0.1:3009",
+  "applicationCommit": "f7ac54b7e70792c18c39e0e8f71445a27c89d07a",
+  "applicationSourceDiff": "",
+  "buildId": "Ueve2kjmGlbcRvh50Etoa",
+  "configuration": {
+    "node": "v24.14.1",
+    "mode": "production",
+    "model": "granite-3.3-8b-instruct",
+    "case3ClassifierModel": "gpt-oss-120b",
+    "explanationVerification": "same classifier request, independent evidence fields",
+    "navigator": "https://api.ai.it.ufl.edu via loopback capture/fault proxy",
+    "database": "isolated loopback PostgreSQL",
+    "auth": "existing Clerk test user, backend test session"
+  },
+  "tests": [
+    {
+      "id": "original-fresh-1",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 30370,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-2",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 18729,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-3",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 14843,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-4",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 14887,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "original-fresh-5",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 14350,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 13215,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "temporary-only",
+      "expectedWhy": true,
+      "attempts": [],
+      "outcome": "ERROR",
+      "setupError": {
+        "status": 500,
+        "durationMs": 12139,
+        "body": {
+          "nonJson": "Internal Server Error"
+        }
+      }
+    },
+    {
+      "id": "definitive-only",
+      "expectedWhy": false,
+      "attempts": [],
+      "outcome": "REVIEW"
+    }
+  ]
+}

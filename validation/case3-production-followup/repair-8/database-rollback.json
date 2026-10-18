@@ -1,0 +1,142 @@
+{
+  "scope": "real isolated PostgreSQL and actual final-assembly service; deterministic fixtures, no Navigator calls",
+  "records": [
+    {
+      "kind": "emission",
+      "encounterId": "0006f403-93db-4dc1-bc82-720314f0ead7",
+      "requestId": "rollback-154ea4b4-a5bb-46f5-9ee0-c5efa9f7867a",
+      "rejectedAttempt": "intentional final validation rejection",
+      "before": {
+        "encounterId": "0006f403-93db-4dc1-bc82-720314f0ead7",
+        "version": 1,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T13:29:13.060Z",
+        "updatedAt": "2026-10-18T13:29:13.060Z"
+      },
+      "after": {
+        "encounterId": "0006f403-93db-4dc1-bc82-720314f0ead7",
+        "version": 1,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T13:29:13.060Z",
+        "updatedAt": "2026-10-18T13:29:13.060Z"
+      },
+      "accepted": {
+        "requestId": "rollback-154ea4b4-a5bb-46f5-9ee0-c5efa9f7867a",
+        "patientMessageId": "15417e4d-cdd5-45db-b7ed-583cd4b29e64",
+        "responseText": "Okay. Why?",
+        "providerName": "local-transaction-fixture",
+        "selectedQuestionId": "c3-follow-up-why",
+        "stateVersion": 2
+      },
+      "outcome": "PASS"
+    },
+    {
+      "kind": "explanation",
+      "encounterId": "b2917aef-ad75-4901-8e02-59260a294548",
+      "requestId": "rollback-02635a3a-3a5e-4471-8042-0e14b2cb0c54",
+      "rejectedAttempt": "intentional final validation rejection",
+      "before": {
+        "encounterId": "b2917aef-ad75-4901-8e02-59260a294548",
+        "version": 1,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T13:29:13.168Z",
+        "updatedAt": "2026-10-18T13:29:13.168Z"
+      },
+      "after": {
+        "encounterId": "b2917aef-ad75-4901-8e02-59260a294548",
+        "version": 1,
+        "state": {
+          "version": 1,
+          "schemaVersion": 1,
+          "detectedEvents": {
+            "patientPainDescribed": false,
+            "antibioticsRecommended": false,
+            "temporaryTreatmentActive": true,
+            "incisionAndDrainageProposed": false,
+            "promptDentalFollowUpConfirmed": false,
+            "antibioticsNotIndicatedExplained": false,
+            "definitiveDentalTreatmentExplained": false,
+            "patientAgreedToIncisionAndDrainage": false,
+            "antibioticsRecommendedAsCurrentPlan": false,
+            "painManagementOrDispositionDiscussed": false,
+            "drainageTemporaryOrNondefinitiveExplained": false,
+            "hospitalAdmissionOrSurgicalManagementDiscussed": false
+          },
+          "emittedQuestionIds": [
+            "c3-follow-up-needed-question"
+          ]
+        },
+        "createdAt": "2026-10-18T13:29:13.168Z",
+        "updatedAt": "2026-10-18T13:29:13.168Z"
+      },
+      "accepted": {
+        "requestId": "rollback-02635a3a-3a5e-4471-8042-0e14b2cb0c54",
+        "patientMessageId": "e6784d36-056e-4efe-95c1-93456f0db757",
+        "responseText": "Okay.",
+        "providerName": "local-transaction-fixture",
+        "stateVersion": 2
+      },
+      "outcome": "PASS"
+    }
+  ]
+}

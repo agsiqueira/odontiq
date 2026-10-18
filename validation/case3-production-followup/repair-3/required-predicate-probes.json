@@ -1,0 +1,182 @@
+[
+  {
+    "label": "repair-4-required-predicate-probe",
+    "question": "Yes, see your dentist promptly. You do not need a root canal or extraction.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-84286872cb48a60c",
+      "created": 1792305454,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":false,\"quote\":\"\"},\"definitive\":{\"required\":false,\"quote\":\"\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 375,
+        "total_tokens": 403
+      }
+    }
+  },
+  {
+    "label": "repair-4-required-predicate-probe",
+    "question": "Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-ac89f81f99539b88",
+      "created": 1792305455,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":false,\"quote\":\"\"},\"definitive\":{\"required\":false,\"quote\":\"\"},\"confidence\":0.8}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 378,
+        "total_tokens": 406
+      }
+    }
+  },
+  {
+    "label": "repair-4-required-predicate-probe",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-a4ed30e13ee1039d",
+      "created": 1792305456,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":false,\"quote\":\"\"},\"definitive\":{\"required\":false,\"quote\":\"\"},\"confidence\":0.5}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 369,
+        "total_tokens": 397
+      }
+    }
+  },
+  {
+    "label": "repair-4-required-predicate-probe",
+    "question": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-85c7158db7f8b704",
+      "created": 1792305457,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":true,\"quote\":\"The drainage only eases pressure\"},\"definitive\":{\"required\":true,\"quote\":\"Your dentist still has to take that tooth out\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "routed_experts": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_tokens": 382,
+        "total_tokens": 425
+      }
+    }
+  },
+  {
+    "label": "repair-4-required-predicate-probe",
+    "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-b29ea31dd796f1f7",
+      "created": 1792305459,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":true,\"quote\":\"drain the infection and relieve the pressure\"},\"definitive\":{\"required\":false,\"quote\":\"\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 36,
+        "prompt_tokens": 382,
+        "total_tokens": 418
+      }
+    }
+  }
+]

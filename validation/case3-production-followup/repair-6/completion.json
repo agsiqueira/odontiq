@@ -1,0 +1,110 @@
+{
+  "complete": true,
+  "testedApplicationCommit": "f389347590c92f1cfeb1f7425bd48950bfd243fb",
+  "buildId": "vgAU3DiNCrJlofz2Iyfsa",
+  "configuration": {
+    "node": "v24.14.1",
+    "mode": "production",
+    "model": "granite-3.3-8b-instruct",
+    "explanationModel": "gpt-oss-120b",
+    "navigator": "https://api.ai.it.ufl.edu via loopback capture/fault proxy",
+    "database": "isolated loopback PostgreSQL",
+    "auth": "existing Clerk test user, backend test session"
+  },
+  "automated": {
+    "checks": 45,
+    "passed": 45,
+    "includes": [
+      "typecheck",
+      "lint",
+      "production build",
+      "provider model isolation"
+    ]
+  },
+  "fullSuite": {
+    "freshEncounters": 22,
+    "counts": {
+      "PASS": 22,
+      "FAIL": 0,
+      "ERROR": 0
+    },
+    "conversationAttempts": 107,
+    "successfulFinalResponses": 106,
+    "ordinaryFirstAttemptScenarios": {
+      "total": 19,
+      "PASS": 19,
+      "FAIL": 0
+    },
+    "originalFreshRepetitions": {
+      "total": 5,
+      "PASS": 5
+    },
+    "automaticScenarioRetries": 0,
+    "plannedFaultRetries": [
+      {
+        "id": "failed-classifier-does-not-consume",
+        "encounterId": "b2493af1-592e-4544-9784-b57afae5b3b9",
+        "initialRequestId": "case3-live-failed-classifier-does-not-consume-4feb013a-53bd-465c-8230-45c48cc123e1",
+        "initialStatus": 200,
+        "initialResponse": "Okay, I'll make an appointment as soon as I can. Thank you, doctor.",
+        "initialQuestionEmitted": null,
+        "plannedNewTurnRequestId": "case3-live-failed-classifier-does-not-consume-070725a3-2fad-42b9-bf4a-a2def3c37b61",
+        "plannedNewTurnStatus": 200,
+        "plannedNewTurnResponse": "Okay, I'll make an appointment as soon as I can. Thank you, doctor. Why?",
+        "outcome": "PASS: intentional failure did not consume question; planned new-turn retry emitted exactly once",
+        "initialOutcome": "EXPECTED_FAIL_CLOSED",
+        "plannedNewTurnOutcome": "PASS"
+      },
+      {
+        "id": "failed-explanation-does-not-consume",
+        "encounterId": "797dde8b-ff5d-418b-b621-f11074d7a16f",
+        "initialRequestId": "case3-live-failed-explanation-does-not-consume-b9c341be-c15c-41f9-84de-c6d3daad5aa7",
+        "initialStatus": 200,
+        "initialResponse": "Alright, thank you, doctor. I'll make an appointment right away.",
+        "initialQuestionEmitted": null,
+        "plannedNewTurnRequestId": "case3-live-failed-explanation-does-not-consume-e6938361-bf8a-4e31-813b-79fe923a8969",
+        "plannedNewTurnStatus": 200,
+        "plannedNewTurnResponse": "Alright, thank you, doctor. I'll make an appointment right away. Why?",
+        "outcome": "PASS: intentional failure did not consume question; planned new-turn retry emitted exactly once",
+        "initialOutcome": "EXPECTED_FAIL_CLOSED",
+        "plannedNewTurnOutcome": "PASS"
+      },
+      {
+        "id": "failed-generation-does-not-consume",
+        "encounterId": "74191300-a7a2-4d31-9602-508dcb332707",
+        "initialRequestId": "case3-live-failed-generation-does-not-consume-e0887f9d-8eed-4b45-9510-f8403437be66",
+        "initialStatus": 502,
+        "initialResponse": "Navigator request failed with status 503",
+        "initialQuestionEmitted": null,
+        "plannedNewTurnRequestId": "case3-live-failed-generation-does-not-consume-8605074a-fef9-4620-ab4e-c8e836f5e7e5",
+        "plannedNewTurnStatus": 200,
+        "plannedNewTurnResponse": "Okay, thank you, doctor. I'll make an appointment as soon as I can. Why?",
+        "outcome": "PASS: intentional failure did not consume question; planned new-turn retry emitted exactly once",
+        "initialOutcome": "EXPECTED_ERROR",
+        "plannedNewTurnOutcome": "PASS"
+      }
+    ]
+  },
+  "separatePreflight": {
+    "freshEncounters": 2,
+    "PASS": 2,
+    "conversationAttempts": 12
+  },
+  "upstreamCaptureIncludingPreflight": {
+    "attempts": 214,
+    "realUpstream": 208,
+    "intentional503s": 6,
+    "unexpectedNon200": 0,
+    "models": {
+      "gpt-oss-120b": 77,
+      "granite-3.3-8b-instruct": 131
+    }
+  },
+  "freeze": {
+    "files": 229,
+    "changed": []
+  },
+  "remainingNonPasses": [],
+  "interruptedHistoricalSession": "unchanged; no timestamp cleanup attempted",
+  "productionChanges": false
+}

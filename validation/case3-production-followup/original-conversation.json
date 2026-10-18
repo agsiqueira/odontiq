@@ -1,0 +1,127 @@
+[
+  {
+    "caseId": "case-03",
+    "question": "What brings you in today?",
+    "context": [],
+    "response": "My lower-right back tooth hurts all the time, and I can't chew on it.",
+    "outcome": "PASS",
+    "reason": "Supported constant lower-right tooth pain and chewing impairment; no premature follow-up question.",
+    "at": "2026-10-18T05:25:30.686Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  },
+  {
+    "caseId": "case-03",
+    "question": "Does your daughter have Medicaid and a toothache?",
+    "context": [
+      {
+        "question": "What brings you in today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it."
+      }
+    ],
+    "response": "My daughter has Medicaid. I'm not sure about my daughter's dental condition.",
+    "outcome": "PASS",
+    "reason": "Answers supported Medicaid fact and explicitly leaves unspecified daughter condition unknown.",
+    "at": "2026-10-18T05:25:37.743Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  },
+  {
+    "caseId": "case-03",
+    "question": "Do you already see a dentist regularly?",
+    "context": [
+      {
+        "question": "What brings you in today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it."
+      },
+      {
+        "question": "Does your daughter have Medicaid and a toothache?",
+        "response": "My daughter has Medicaid. I'm not sure about my daughter's dental condition."
+      }
+    ],
+    "response": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist.",
+    "outcome": "PASS",
+    "reason": "Preserves own dentist and appointment; does not assert unsupported attendance frequency.",
+    "at": "2026-10-18T05:25:47.947Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  },
+  {
+    "caseId": "case-03",
+    "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "context": [
+      {
+        "question": "What brings you in today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it."
+      },
+      {
+        "question": "Does your daughter have Medicaid and a toothache?",
+        "response": "My daughter has Medicaid. I'm not sure about my daughter's dental condition."
+      },
+      {
+        "question": "Do you already see a dentist regularly?",
+        "response": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist."
+      }
+    ],
+    "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+    "outcome": "PASS",
+    "reason": "Agreement and follow-up question follow current drainage proposal, matching faculty example.",
+    "at": "2026-10-18T05:25:55.421Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  },
+  {
+    "caseId": "case-03",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "context": [
+      {
+        "question": "What brings you in today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it."
+      },
+      {
+        "question": "Does your daughter have Medicaid and a toothache?",
+        "response": "My daughter has Medicaid. I'm not sure about my daughter's dental condition."
+      },
+      {
+        "question": "Do you already see a dentist regularly?",
+        "response": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist."
+      },
+      {
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?"
+      }
+    ],
+    "response": "Okay, I'll make sure to keep that appointment. Thank you.",
+    "outcome": "FAIL",
+    "reason": "Supported appointment acknowledgment, but expected contingent Why question absent under documented manual contract; pending state/classifier diagnosis.",
+    "at": "2026-10-18T05:26:19.646Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  },
+  {
+    "caseId": "case-03",
+    "question": "Thank you for explaining that.",
+    "context": [
+      {
+        "question": "What brings you in today?",
+        "response": "My lower-right back tooth hurts all the time, and I can't chew on it."
+      },
+      {
+        "question": "Does your daughter have Medicaid and a toothache?",
+        "response": "My daughter has Medicaid. I'm not sure about my daughter's dental condition."
+      },
+      {
+        "question": "Do you already see a dentist regularly?",
+        "response": "I have my own dentist and an appointment next week. I'm not sure how often I've been going to the dentist."
+      },
+      {
+        "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+        "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?"
+      },
+      {
+        "question": "Yes, you still need to see your dentist promptly.",
+        "response": "Okay, I'll make sure to keep that appointment. Thank you."
+      }
+    ],
+    "response": "You're welcome.",
+    "outcome": "PASS",
+    "reason": "Closure acknowledgement without reopening complaint.",
+    "at": "2026-10-18T05:26:23.551Z",
+    "deployId": "dep-dba5dmajnfac73ee9hkg"
+  }
+]

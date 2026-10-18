@@ -1,0 +1,41 @@
+{
+  "baseCommit": "69a24fe9fb6d1121e67da8d2ce70cc02b574266c",
+  "branch": "codex/case3-followup-evidence",
+  "checks": {
+    "passed": 43,
+    "total": 43
+  },
+  "node": "v24.14.1",
+  "next": "16.2.10",
+  "buildId": "zSWm2Jqeeb7eHh-8jJUvQ",
+  "configuration": {
+    "providerCalls": "synthetic only; no live Navigator requests",
+    "database": "unreachable local dummy URLs; no production writes",
+    "clerk": "existing public local-build settings",
+    "productionUntouched": true
+  },
+  "files": {
+    "package.json": "b18d6fc90f77ca9cfe426dab9d45a2d94bd8dc629403c6a1788ee04455653c5c",
+    "src/lib/patientQuestions/eligibility.ts": "055a38ad114489fd1fc29fa4bf690c7503bac0cf91585e5a373c44e6c3bd4b2a",
+    "src/lib/patientQuestions/explanationScope.ts": "60ac12aff13c49bb25204f407b328872411cbb971afd3b3b208b85f42f458eb8",
+    "src/lib/patientQuestions/prompt.ts": "bdb7bfe909359b3a331c6343acf519c04fc18a8dcfd454e6be82475162282967",
+    "scripts/validateCase03ExplanationScope.ts": "e0509355a9b29f4d05d634db6cbe5254ca0282ca43498b403a7940255faea0c2",
+    "scripts/validateCase03FinalAssembly.mjs": "a5c62d9118313c2cd5de0898fce1972796ff897472f120ffff3eaf27931ce07b",
+    "scripts/fixtures/case3QuestionStore.mjs": "31ac4bf4c1c63679c7eb96bbd435a2f7c93b17ccb92ab78379c3fc2505838065",
+    "scripts/fixtures/serverOnlyStub.mjs": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+  },
+  "restoredHistoricalEvidence": [
+    "validation/shared-conversation-followup-2026-10-17/final-v4/targeted-replays.json",
+    "validation/shared-conversation-followup-2026-10-17/final-v4/v3-failure-replays.json",
+    "validation/shared-conversation-repair-2026-10-17/deterministic-contract-replay.json",
+    "validation/v8/focused-regressions.json",
+    "validation/v8/focused-replays.json",
+    "validation/v8/prior-v5-focused-replays.json",
+    "validation/v8/prior-v7-regressions.json"
+  ],
+  "productionDeployReadOnlyCheck": {
+    "deployId": "dep-dba5dmajnfac73ee9hkg",
+    "status": "live",
+    "commit": "69a24fe9fb6d1121e67da8d2ce70cc02b574266c"
+  }
+}

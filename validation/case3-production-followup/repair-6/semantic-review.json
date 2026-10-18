@@ -1,0 +1,177 @@
+{
+  "reviewedAt": "2026-10-18T07:17:24.642406+00:00",
+  "reviewer": "Codex",
+  "everyFinalResponseRead": true,
+  "witnessOccurrencesMatchedToActualClinicianMessages": 130,
+  "rows": [
+    {
+      "id": "original-fresh-1",
+      "encounterId": "7724aa04-405c-424e-9668-13f407dfcad0",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "original-fresh-2",
+      "encounterId": "bb7071ce-934d-4849-82cd-97c581caec4b",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "original-fresh-3",
+      "encounterId": "6bac5592-a4a0-48a8-9b03-0618d15159a6",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "original-fresh-4",
+      "encounterId": "11130720-adb2-4a94-b798-5a08787a86f3",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "original-fresh-5",
+      "encounterId": "a3f15d8f-d259-4e1d-b075-6217c729076d",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "encounterId": "6468af58-614f-4bcd-aeda-f507145c2009",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "temporary-only",
+      "encounterId": "a2e0b9aa-7435-4a5d-ac79-a420e99b1490",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "definitive-only",
+      "encounterId": "eaf72124-15c2-4da3-9cbf-2ef4ac924721",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "definitive-without-temporary",
+      "encounterId": "89a1a51b-fae9-483b-b25c-f7713fd4a691",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "complete-explanation",
+      "encounterId": "1b030453-08a0-4737-84f0-13616e154fc8",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "complete-paraphrase",
+      "encounterId": "0f3a4fd9-1e34-4494-9953-512cd0f02a7b",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "extraction-paraphrase",
+      "encounterId": "29e02fbc-cc5e-4dae-9af6-f0b65b3fc91e",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "extraction-equivalent",
+      "encounterId": "f6071718-80b1-4dd4-bea3-e046e7208222",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "source-treatment-equivalent",
+      "encounterId": "a9ba3feb-af99-4c2c-838d-1929227262fb",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "hypothetical-not-explained",
+      "encounterId": "a8c5640d-906d-4a91-8091-30a2da1f0ec7",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "negated-not-explained",
+      "encounterId": "54ffc80a-ebbe-4ff8-843c-4c16f787252e",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "question-not-explained",
+      "encounterId": "c9f7559e-c617-42e4-a181-72f0cabb9525",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "prior-explanation-current-confirmation",
+      "encounterId": "389330ab-c2f9-402b-8da4-8360fc2a634b",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "encounterId": "4dc06f0c-1888-4d67-8117-dd0523f97a7a",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "failed-classifier-does-not-consume",
+      "encounterId": "b2493af1-592e-4544-9784-b57afae5b3b9",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "failed-explanation-does-not-consume",
+      "encounterId": "797dde8b-ff5d-418b-b621-f11074d7a16f",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "failed-generation-does-not-consume",
+      "encounterId": "74191300-a7a2-4d31-9602-508dcb332707",
+      "scope": "full-suite",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "original-fresh-1",
+      "encounterId": "657c627f-cb41-4c8b-81f5-eedddd85ac91",
+      "scope": "preflight",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "encounterId": "4e4eb4e0-f421-4866-8939-9e921f927a74",
+      "scope": "preflight",
+      "outcome": "PASS",
+      "semanticReason": "Final answers reviewed against full recorded context: consent and follow-up timing correct; supported case facts retained; independent explanations and source witnesses match; no unsupported reason inferred from access instructions; closure relevant."
+    }
+  ],
+  "limits": "No human speech, rendered UI or full 546-item suite in this focused run. Some thank-you-plus-Why phrasing remains formulaic."
+}

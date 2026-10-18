@@ -1,0 +1,23 @@
+[
+  {
+    "name": "navigator-task-model",
+    "command": [
+      "node",
+      "scripts/validateNavigatorTaskModel.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "navigator_http_attempt {\n  operationId: 'ab8870c4-fac6-4235-b86a-eddb85e5ecda',\n  attempt: 1,\n  status: 200,\n  outcome: 'success',\n  durationMs: 14,\n  retryable: false\n}\nnavigator_http_attempt {\n  operationId: 'ff3d625f-9e59-4132-80ba-8738b602f7a5',\n  attempt: 1,\n  status: 200,\n  outcome: 'success',\n  durationMs: 0,\n  retryable: false\n}\nnavigator_http_attempt {\n  operationId: 'test',\n  attempt: 1,\n  status: 200,\n  outcome: 'success',\n  durationMs: 1,\n  retryable: false\n}\nInternal model override honored; default and patient conversation model unchanged; public-like override not forwarded.\n",
+    "stderr": ""
+  },
+  {
+    "name": "additional-lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "scripts/validateNavigatorTaskModel.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

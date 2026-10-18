@@ -155,7 +155,7 @@ const whyComplete = applyPatientQuestionClassification({
     definitiveDentalTreatmentExplained: true,
   }),
 });
-assert.equal(whyComplete.selectedQuestionId, undefined);
+assert.equal(whyComplete.selectedQuestionId, "c3-follow-up-why", "legacy flags without validated witnesses cannot suppress Why");
 
 const productionStudentId = "case-05-1784904859139-1";
 const productionPatientId = "1ae30f2a-6630-4ef5-b7b4-0fe44364a6d4";

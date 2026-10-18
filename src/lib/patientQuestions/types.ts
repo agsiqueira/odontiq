@@ -24,7 +24,10 @@ export type PatientQuestionEventId =
 
 export type PatientQuestionEvents = Record<PatientQuestionEventId, boolean>;
 
+export type Case3Explanations = Partial<Record<"temporary" | "definitive", { messageId: string; quote: string }>>;
+
 export type PatientQuestionState = {
+  case3Explanations?: Case3Explanations;
   schemaVersion: 1;
   version: number;
   detectedEvents: PatientQuestionEvents;
@@ -32,6 +35,10 @@ export type PatientQuestionState = {
 };
 
 export type PatientQuestionClassification = {
+  /** Valid independent knowledge can survive a rejected trigger classification,
+   * but that attempt must never select/consume a patient question. */
+  questionDecisionVerified?: boolean;
+  case3Explanations?: Case3Explanations;
   schemaVersion: 1;
   caseId: string;
   analyzedStudentMessageId: string;

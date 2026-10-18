@@ -1,0 +1,212 @@
+[
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-8e4a62a5edf3f00e",
+      "created": 1792305983,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": false,\n    \"quote\": \"\"\n  },\n  \"definitive\": {\n    \"required\": false,\n    \"quote\": \"\"\n  },\n  \"confidence\": 0.99\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, you still need to see your dentist promptly.\"\n\nWe need to see if there is any temporary measure explained. The message says you need to see dentist promptly. That's a recommendation, not a temporary measure. No explanation of drainage etc. So temporary.explained = false, quote empty.\n\nDefinitive: Does it state a definitive treatment required? It says you need to see dentist promptly, which is not definitive treatment. It does not specify root canal, extraction, etc. So definitive.required = false, quote empty.\n\nConfidence high, maybe 0.99.\n\nReturn JSON accordingly.",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, you still need to see your dentist promptly.\"\n\nWe need to see if there is any temporary measure explained. The message says you need to see dentist promptly. That's a recommendation, not a temporary measure. No explanation of drainage etc. So temporary.explained = false, quote empty.\n\nDefinitive: Does it state a definitive treatment required? It says you need to see dentist promptly, which is not definitive treatment. It does not specify root canal, extraction, etc. So definitive.required = false, quote empty.\n\nConfidence high, maybe 0.99.\n\nReturn JSON accordingly."
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 194,
+        "prompt_tokens": 292,
+        "total_tokens": 486
+      }
+    }
+  },
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "The drainage only eases pressure. Your dentist still has to take that tooth out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-a883f93a35e06f25",
+      "created": 1792305986,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": true,\n    \"quote\": \"The drainage only eases pressure.\"\n  },\n  \"definitive\": {\n    \"required\": true,\n    \"quote\": \"Your dentist still has to take that tooth out.\"\n  },\n  \"confidence\": 0.99\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"The drainage only eases pressure. Your dentist still has to take that tooth out.\"\n\nTemporary: drainage only eases pressure => drainage is temporary, it only eases pressure (relieves pressure). That's an explanation of temporary relief. So temporary.explained = true, quote = \"The drainage only eases pressure.\"\n\nDefinitive: dentist has to take that tooth out => definitive treatment required is extraction. So definitive.required = true, quote = \"Your dentist still has to take that tooth out.\"\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+            "provider_specific_fields": {
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"The drainage only eases pressure. Your dentist still has to take that tooth out.\"\n\nTemporary: drainage only eases pressure => drainage is temporary, it only eases pressure (relieves pressure). That's an explanation of temporary relief. So temporary.explained = true, quote = \"The drainage only eases pressure.\"\n\nDefinitive: dentist has to take that tooth out => definitive treatment required is extraction. So definitive.required = true, quote = \"Your dentist still has to take that tooth out.\"\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 206,
+        "prompt_tokens": 298,
+        "total_tokens": 504
+      }
+    }
+  },
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "Draining the infection only relieves pressure; it does not provide definitive tooth treatment.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-bf0287bdf8a77a51",
+      "created": 1792305987,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": true,\n    \"quote\": \"Draining the infection only relieves pressure\"\n  },\n  \"definitive\": {\n    \"required\": false,\n    \"quote\": \"\"\n  },\n  \"confidence\": 0.99\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Draining the infection only relieves pressure; it does not provide definitive tooth treatment.\"\n\nTemporary: Does it explain temporary? It says draining infection only relieves pressure. That's an explanation of temporary measure: draining relieves pressure (temporary). So temporary explained = true, quote = \"Draining the infection only relieves pressure\". That is an explanation of temporary measure.\n\nDefinitive: Does it state a requirement for definitive treatment? It says \"it does not provide definitive tooth treatment.\" That's a negation, not a positive requirement. So definitive required = false, quote empty.\n\nConfidence high, maybe 0.99.\n\nReturn JSON.",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Draining the infection only relieves pressure; it does not provide definitive tooth treatment.\"\n\nTemporary: Does it explain temporary? It says draining infection only relieves pressure. That's an explanation of temporary measure: draining relieves pressure (temporary). So temporary explained = true, quote = \"Draining the infection only relieves pressure\". That is an explanation of temporary measure.\n\nDefinitive: Does it state a requirement for definitive treatment? It says \"it does not provide definitive tooth treatment.\" That's a negation, not a positive requirement. So definitive required = false, quote empty.\n\nConfidence high, maybe 0.99.\n\nReturn JSON."
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 212,
+        "prompt_tokens": 298,
+        "total_tokens": 510
+      }
+    }
+  },
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-a5d09dfb8320c16c",
+      "created": 1792305989,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": false,\n    \"quote\": \"\"\n  },\n  \"definitive\": {\n    \"required\": true,\n    \"quote\": \"Your dentist still needs to remove the affected tooth.\"\n  },\n  \"confidence\": 0.99\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?\"\n\nTemporary: I&D (incision and drainage) is a temporary measure. Does it explain? It says \"I recommend an I&D for the abscess.\" That's a recommendation of a procedure that drains. Does it explain that it relieves pressure/drains infection? The statement itself is a recommendation, not an explanation. However the instruction: \"Temporary means an actual explanation of drainage relieving pressure/draining infection or being nondefinitive; merely naming a procedure is not an explanation.\" So we need an explanation, not just naming. The message does not explain why I&D is temporary; it just recommends it. So temporary.explained = false, quote empty.\n\nDefinitive: \"Your dentist still needs to remove the affected tooth.\" That's a positive requirement for definitive treatment (removal of tooth). So definitive.required = true, quote that sentence.\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+            "provider_specific_fields": {
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?\"\n\nTemporary: I&D (incision and drainage) is a temporary measure. Does it explain? It says \"I recommend an I&D for the abscess.\" That's a recommendation of a procedure that drains. Does it explain that it relieves pressure/drains infection? The statement itself is a recommendation, not an explanation. However the instruction: \"Temporary means an actual explanation of drainage relieving pressure/draining infection or being nondefinitive; merely naming a procedure is not an explanation.\" So we need an explanation, not just naming. The message does not explain why I&D is temporary; it just recommends it. So temporary.explained = false, quote empty.\n\nDefinitive: \"Your dentist still needs to remove the affected tooth.\" That's a positive requirement for definitive treatment (removal of tooth). So definitive.required = true, quote that sentence.\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 294,
+        "prompt_tokens": 305,
+        "total_tokens": 599
+      }
+    }
+  },
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-bad65e9947f67404",
+      "created": 1792305992,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": false,\n    \"quote\": \"\"\n  },\n  \"definitive\": {\n    \"required\": false,\n    \"quote\": \"\"\n  },\n  \"confidence\": 0.95\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.\"\n\nTemporary: Is there an explanation of temporary measure? The message says \"see your dentist promptly\" - that's a recommendation to see dentist, not a temporary measure like drainage. No explanation of temporary measure. So temporary.explained = false, quote empty.\n\nDefinitive: Does it state a definitive treatment required? It says \"If things get worse, you might need the tooth taken out.\" That's a conditional, not a positive requirement. It's not a definitive requirement, it's a possibility. So definitive.required = false, quote empty.\n\nConfidence high, maybe 0.95.\n\nReturn JSON.",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, see your dentist promptly. If things get worse, you might need the tooth taken out.\"\n\nTemporary: Is there an explanation of temporary measure? The message says \"see your dentist promptly\" - that's a recommendation to see dentist, not a temporary measure like drainage. No explanation of temporary measure. So temporary.explained = false, quote empty.\n\nDefinitive: Does it state a definitive treatment required? It says \"If things get worse, you might need the tooth taken out.\" That's a conditional, not a positive requirement. It's not a definitive requirement, it's a possibility. So definitive.required = false, quote empty.\n\nConfidence high, maybe 0.95.\n\nReturn JSON."
+            }
+          },
+          "provider_specific_fields": {
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 214,
+        "prompt_tokens": 301,
+        "total_tokens": 515
+      }
+    }
+  },
+  {
+    "label": "repair-5-oss-independent-probe",
+    "question": "Yes, see your dentist promptly. You do not need a root canal or extraction.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-b107bcd000f3ba7d",
+      "created": 1792305996,
+      "model": "gpt-oss-120b",
+      "object": "chat.completion",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\n  \"temporary\": {\n    \"explained\": false,\n    \"quote\": \"\"\n  },\n  \"definitive\": {\n    \"required\": false,\n    \"quote\": \"You do not need a root canal or extraction.\"\n  },\n  \"confidence\": 0.99\n}",
+            "role": "assistant",
+            "reasoning_content": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, see your dentist promptly. You do not need a root canal or extraction.\"\n\nTemporary: Does it mention any temporary measure? It says see dentist promptly, but no temporary measure like drainage. So temporary explained? No. So temporary.explained = false, quote empty.\n\nDefinitive: It says \"You do not need a root canal or extraction.\" That is a statement about definitive treatment: it says you do NOT need root canal or extraction. The question: we need to determine if definitive required? The fact is that definitive treatment is NOT required. The schema: definitive.required is boolean indicating if definitive treatment is required. Here it's false (no definitive required). So definitive.required = false, quote should be the supporting assertion: \"You do not need a root canal or extraction.\"\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+            "provider_specific_fields": {
+              "reasoning": "We need to extract two independent facts: temporary and definitive.\n\nMessage: \"Yes, see your dentist promptly. You do not need a root canal or extraction.\"\n\nTemporary: Does it mention any temporary measure? It says see dentist promptly, but no temporary measure like drainage. So temporary explained? No. So temporary.explained = false, quote empty.\n\nDefinitive: It says \"You do not need a root canal or extraction.\" That is a statement about definitive treatment: it says you do NOT need root canal or extraction. The question: we need to determine if definitive required? The fact is that definitive treatment is NOT required. The schema: definitive.required is boolean indicating if definitive treatment is required. Here it's false (no definitive required). So definitive.required = false, quote should be the supporting assertion: \"You do not need a root canal or extraction.\"\n\nConfidence: high, maybe 0.99.\n\nReturn JSON.",
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 257,
+        "prompt_tokens": 298,
+        "total_tokens": 555
+      }
+    }
+  }
+]

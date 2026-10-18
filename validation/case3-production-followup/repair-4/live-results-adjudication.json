@@ -1,0 +1,171 @@
+{
+  "reviewedAt": "2026-10-18T06:43:42.816Z",
+  "rubric": "PR3 user-authorized durable validated explanations; independent witnesses required; historical verdicts preserved",
+  "rows": [
+    {
+      "id": "original-fresh-1",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-2",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-3",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-4",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-5",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "temporary-only",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "definitive-only",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "definitive-without-temporary",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "complete-explanation",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "complete-paraphrase",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "extraction-paraphrase",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "extraction-equivalent",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "source-treatment-equivalent",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "hypothetical-not-explained",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "negated-not-explained",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "question-not-explained",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "prior-explanation-current-confirmation",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Already-answered Why was emitted despite two validated explanations",
+        "Suppression lacks separately persisted explanation evidence"
+      ],
+      "findings": []
+    },
+    {
+      "id": "failed-classifier-does-not-consume",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "failed-explanation-does-not-consume",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "failed-generation-does-not-consume",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    }
+  ],
+  "counts": {
+    "PASS": 21,
+    "FAIL": 1,
+    "ERROR": 0
+  },
+  "note": "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger."
+}

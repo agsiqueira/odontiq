@@ -1,0 +1,658 @@
+Attention: Clerk collects telemetry data from its SDKs when connected to development instances.
+The data collected is used to inform Clerk's product roadmap.
+To learn more, including how to opt-out from the telemetry program, visit: https://clerk.com/docs/telemetry.
+
+navigator_http_attempt {
+  operationId: '8c8fd583-4bdd-4126-8ed6-955e1c86f40e',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 829,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'eb013b9d-efd3-4f95-a47b-2bd4a7b0a79f',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 633,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'de436818-8bd3-4e79-ba37-2c60873024ea',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 545,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'c77bb298-8c66-4d9d-a061-a1620b41a527',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 559,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-1-be8d906b-c8a4-4689-86d2-4d585db73fd1',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 531,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'c1828d30-2642-4592-89b1-7e897cb82655',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 874,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-1-585abe8e-f825-4e94-89b9-d8261bbd588a',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 351,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '5e12e3c2-8e7d-444f-924d-3b616059f98e',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 503,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '36ba01fc-3346-4335-b06d-de3a7c221481',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 606,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'e15ec1ec-d489-409c-bf32-c9d30ecbed29',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1430,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '0d0c73bc-49fb-42db-9eb5-2409aa3a52e1',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 561,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-2-fa4d405f-1742-47be-beab-17d3c2d95cfb',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 250,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '49f3a292-fb3f-4336-bad7-a6b538390cc3',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1886,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-2-7c4eee0d-67e3-423b-95b4-125f1e5c518a',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 251,
+  retryable: false
+}
+Patient-output validation rejected unsafe dialogue. {
+  event: 'patient_output_validation_failed',
+  caseId: 'case-03',
+  encounterId: '785cb221-9479-428b-b678-e337e70f5410',
+  correlationId: 'case3-live-original-fresh-2-7c4eee0d-67e3-423b-95b4-125f1e5c518a'
+}
+Patient-role corrective retry started. {
+  event: 'patient_role_corrective_retry',
+  caseId: 'case-03',
+  encounterId: '785cb221-9479-428b-b678-e337e70f5410',
+  correlationId: 'case3-live-original-fresh-2-7c4eee0d-67e3-423b-95b4-125f1e5c518a'
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-2-7c4eee0d-67e3-423b-95b4-125f1e5c518a',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 330,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '4eee1e99-0ad7-486b-a18a-3063e12cd61c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 537,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '25129827-abdf-4830-a26e-fa9de187cf5d',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 605,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'c97df7e4-1c5f-4e06-9cc3-d4772dc472d6',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 521,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '8fb1ed6c-8742-41bc-9614-7fbeb5549d9e',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 624,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-3-4d6e03f7-28d1-4314-8e4b-9bf0acacc0a6',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 261,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '77076e3f-cbf6-4506-be58-f7a755923b3c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 814,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-3-2e35f50e-378c-4287-98dd-36c5148c1ab7',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 269,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'ad0cbe2b-6003-4ad2-b7f2-049d02ffc900',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 518,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '914d91d1-7026-440f-b99a-190a711dad9a',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 607,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '0f63e128-9f8f-4971-886b-f487bcfea53c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1310,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '845a28c0-e011-46b7-a5db-74b71b1eef48',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 539,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-4-dc64eef3-81c9-424c-8bcc-dca844625ca3',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 276,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '98003009-b938-4773-9d6a-8d7460e9c2ae',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 937,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-4-e69da4eb-3ccb-426a-875b-7279f9d0f97e',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 253,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '9df1946b-96d3-483c-9a82-eb8bac39b5f7',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 554,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '0c205751-6ab5-4cf3-97fa-eb464c7fcc30',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1498,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'e9bc8cf3-e6d3-4f8a-92ad-2fc60dc89301',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 454,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'b7c82729-9277-49e8-834a-fc1c4ee5a15d',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 515,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-5-b52b3504-188e-4264-8e41-60020c1dfc40',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 241,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '56fc0091-efda-4e1b-b05c-28ba3cfa42c5',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 892,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-original-fresh-5-7f4dfbfe-b5ba-4e3a-a9e9-c091c33b625f',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 209,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '66b17d54-da00-4347-b42d-a874eb551fc1',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 586,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-confirmation-paraphrase-1d167c70-f663-4068-9cc9-86d84aa9908c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 296,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'd0a86312-6098-48dd-83a8-de54f0568844',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1187,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-confirmation-paraphrase-ea06576d-ac89-4d00-9f4c-326665ca9a03',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1006,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'a507cd75-b29d-4ba7-b354-81daeae117f9',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 548,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-temporary-only-c449b031-c16a-492e-a6e2-e5909d6e95da',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 294,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '266a2eb4-c9f8-460e-bbc2-04f2445f3923',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 632,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-temporary-only-2e0ad8c1-704f-4f6f-b50e-c03cfd24e028',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 416,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'eaf2bc0a-9c52-4965-8249-e553b1db2dfb',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 527,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-definitive-only-6a820e35-22e6-4c46-b550-82a6435f7761',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 297,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '991b3d1d-8e49-4f20-9da4-ac6f53e8c47c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 582,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-definitive-only-9906db32-a2fb-4fcc-9fcb-849d244289d5',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 263,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'dd4fda92-7da0-4824-8166-b4a70d8acf0c',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 884,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-complete-explanation-7759aff9-5812-4073-80a4-d48fb7ac0060',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 356,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '8338950e-7493-415e-9e99-fac2abace800',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 648,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-complete-explanation-6e4af34e-0c32-46e5-8a77-f9fdc5b731e9',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 231,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '88f1ce6d-6912-4503-8e9b-69ce7b63d2c2',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 649,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'c029d480-867d-4c2e-a275-b9effebb9429',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1239,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-complete-paraphrase-e2daed3f-2d06-40cb-b805-368a6aa7884e',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1096,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'bc4258d7-52b8-47e7-9f0d-60e0c67086e1',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 658,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-complete-paraphrase-db9f79f5-1c9d-4a36-872a-705c91e87ffa',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 237,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '46d4194b-bbc4-4633-b463-bedb8581f7a4',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 696,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '399ef1bb-9993-4855-ba3e-03abeb7c1bc2',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 517,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-prior-explanation-current-confirmation-346e5bc5-87a2-4f68-b69b-aa3f1c1c920d',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 294,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '4bc30ea4-6be2-45b5-a698-f7b16f0e9e93',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 674,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-prior-explanation-current-confirmation-04fe2777-dc70-4618-a7c9-ea5a635cd83a',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 326,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '15311dc7-7e69-4a80-a67d-466081b7e764',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 683,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-classifier-does-not-consume-82d9145a-fc0c-4ec2-9bb7-75a8468f0010',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 280,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '2eb26e7a-0df0-40ce-82a3-2980d7ba1de2',
+  attempt: 1,
+  status: 503,
+  outcome: 'http-error',
+  durationMs: 4,
+  retryable: true
+}
+navigator_http_attempt {
+  operationId: '2eb26e7a-0df0-40ce-82a3-2980d7ba1de2',
+  attempt: 2,
+  status: 503,
+  outcome: 'http-error',
+  durationMs: 4,
+  retryable: true
+}
+Patient-question semantic classification failed closed. {
+  event: 'patient_question_classification_failed',
+  caseId: 'case-03',
+  correlationId: 'case3-live-failed-classifier-does-not-consume-82d9145a-fc0c-4ec2-9bb7-75a8468f0010',
+  provider: 'navigator',
+  model: 'granite-3.3-8b-instruct',
+  reason: 'provider-failure',
+  providerErrorCategory: 'unknown',
+  providerStatus: 503
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-classifier-does-not-consume-85ea57dc-303e-4ffd-9be4-97602edafa49',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 325,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'fa80b432-4bf8-4a77-814a-a47b91d52908',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 581,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-classifier-does-not-consume-c984e922-0c88-4f68-bdfc-0b6cd3d828e6',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 339,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'bbe94415-3afb-47a4-82da-90c08b798565',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 569,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-generation-does-not-consume-d39d715f-d770-43a9-896c-c33efab421f6',
+  attempt: 1,
+  status: 503,
+  outcome: 'http-error',
+  durationMs: 4,
+  retryable: true
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-generation-does-not-consume-d39d715f-d770-43a9-896c-c33efab421f6',
+  attempt: 2,
+  status: 503,
+  outcome: 'http-error',
+  durationMs: 6,
+  retryable: true
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-generation-does-not-consume-61716dc6-6522-487d-bca2-f0c378e3ab35',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 334,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'e6f8dfea-75c2-49a4-8345-a9c8f32a8c5d',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 608,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-failed-generation-does-not-consume-91e958a4-ac49-4ec5-a973-be873302467d',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 360,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'ab7ce980-94fd-41f5-aa84-768855b6a167',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 697,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-extraction-paraphrase-6413ecc5-9db0-404f-ab06-bfe2852e1207',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 286,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: '079c5089-eafc-4828-b996-75400c4063ad',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 645,
+  retryable: false
+}
+navigator_http_attempt {
+  operationId: 'case3-live-extraction-paraphrase-a86ba102-f217-4321-9d39-a27b46a43620',
+  attempt: 1,
+  status: 200,
+  outcome: 'success',
+  durationMs: 1180,
+  retryable: false
+}

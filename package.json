@@ -71,6 +71,7 @@
     "validate:case03-allergy-response-relevance": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03AllergyResponseRelevance.ts",
     "validate:case03-contextual-dialogue": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ContextualDialogue.ts",
     "validate:case03-follow-up-evidence": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03FollowUpQuestionEvidence.ts",
+    "validate:case03-explanation-scope": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ExplanationScope.ts && node scripts/validateCase03FinalAssembly.mjs",
     "validate:case03-temporary-treatment-question": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03TemporaryTreatmentQuestion.ts",
     "validate:case03-consent": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase03ConsentResponse.ts",
     "validate:case04-necrotic-pulp": "node node_modules/jiti/lib/jiti-cli.mjs scripts/validateCase04NecroticPulp.ts",
@@ -97,7 +98,8 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:studio": "prisma studio",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate:case03-live": "node --env-file=.env.local scripts/liveCase03FollowUp.mjs"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.5.17",

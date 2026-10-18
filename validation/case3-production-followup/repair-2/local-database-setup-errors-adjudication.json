@@ -1,0 +1,122 @@
+{
+  "reviewedAt": "2026-10-18T06:23:33.039Z",
+  "rubric": "PR3 user-authorized durable validated explanations; independent witnesses required; historical verdicts preserved",
+  "rows": [
+    {
+      "id": "original-fresh-1",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "original-fresh-2",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "original-fresh-3",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "original-fresh-4",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "original-fresh-5",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "temporary-only",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "definitive-only",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "definitive-without-temporary",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "complete-explanation",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "complete-paraphrase",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "extraction-paraphrase",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "extraction-equivalent",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "source-treatment-equivalent",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "hypothetical-not-explained",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "negated-not-explained",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "question-not-explained",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "prior-explanation-current-confirmation",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "failed-classifier-does-not-consume",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "failed-explanation-does-not-consume",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    },
+    {
+      "id": "failed-generation-does-not-consume",
+      "outcome": "ERROR",
+      "reason": "Setup or execution incomplete; inspect original attempts"
+    }
+  ],
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "ERROR": 22
+  },
+  "note": "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger."
+}

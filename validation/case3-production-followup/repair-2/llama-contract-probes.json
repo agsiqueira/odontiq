@@ -1,0 +1,110 @@
+[
+  {
+    "label": "repair-3-llama-contract-probe",
+    "question": "Yes, you still need to see your dentist promptly.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-81694b3eb36c5521",
+      "created": 1792304903,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":false,\"quote\":\"\"},\"definitive\":{\"explained\":false,\"quote\":\"\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null,
+            "routed_experts": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 318,
+        "total_tokens": 346
+      }
+    }
+  },
+  {
+    "label": "repair-3-llama-contract-probe",
+    "question": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-9810db34b5cac54c",
+      "created": 1792304904,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":true,\"quote\":\"The drainage only eases pressure\"},\"definitive\":{\"explained\":true,\"quote\":\"Your dentist still has to take that tooth out\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "refusal": null,
+              "reasoning": null
+            }
+          },
+          "provider_specific_fields": {
+            "token_ids": null,
+            "stop_reason": null,
+            "routed_experts": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_tokens": 331,
+        "total_tokens": 374
+      }
+    }
+  },
+  {
+    "label": "repair-3-llama-contract-probe",
+    "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+    "status": 200,
+    "response": {
+      "id": "chatcmpl-ba109cfb50dc010a",
+      "created": 1792304906,
+      "model": "llama-3.3-70b-instruct",
+      "object": "chat.completion",
+      "system_fingerprint": "vllm-0.22.1-tp2-111bd163",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"temporary\":{\"explained\":true,\"quote\":\"to drain the infection and relieve the pressure\"},\"definitive\":{\"explained\":false,\"quote\":\"\"},\"confidence\":1.0}",
+            "role": "assistant",
+            "provider_specific_fields": {
+              "reasoning": null,
+              "refusal": null
+            }
+          },
+          "provider_specific_fields": {
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 36,
+        "prompt_tokens": 331,
+        "total_tokens": 367
+      }
+    }
+  }
+]

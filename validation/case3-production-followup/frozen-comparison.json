@@ -1,0 +1,25 @@
+{
+  "focused-candidate-4-results.json": [
+    {
+      "testId": "V8-C3-CONSENT",
+      "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+      "setupQuestions": [],
+      "finalResponse": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+      "outcome": "PASS",
+      "encounterId": "301e3835-1fb8-441e-b314-8ad2cdeb9021",
+      "requestId": "case-03-1792292187828-1-response"
+    }
+  ],
+  "production-smoke.json": [
+    {
+      "testId": "V8-C3-CONSENT",
+      "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+      "setupQuestions": [],
+      "finalResponse": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+      "outcome": "PASS",
+      "encounterId": "b5afa4d1-5034-4a38-aec2-e4038cb48ca3",
+      "requestId": "case-03-1792296415737-1-response"
+    }
+  ],
+  "finding": "Passing frozen live controls end after consent/first follow-up question; no subsequent clinician confirmation or Why assertion. Consent text equals the original production consent response; no behavioral improvement is claimed for identical text."
+}

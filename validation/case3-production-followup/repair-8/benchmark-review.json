@@ -1,0 +1,27 @@
+{
+  "reviewedAt": "2026-10-18T13:52:28.856Z",
+  "review": "Assistant reviewed every exact delivered response and prior conversation; identical clinician scripts with each version retaining its own actual response history",
+  "candidateFinalResponses": {
+    "PASS": 15,
+    "FAIL": 0,
+    "ERROR": 0
+  },
+  "candidateEvidenceIntegrity": {
+    "PASS": 15,
+    "FAIL": 0
+  },
+  "productionFinalResponses": {
+    "PASS": 5,
+    "FAIL": 10,
+    "ERROR": 0
+  },
+  "productionEvidenceIntegrity": "Not inspected in database; final responses and provider log metadata only",
+  "notes": [
+    "V8 original omitted Why in all five attempts",
+    "V8 split omitted consent follow-up and delivered an irrelevant history dump in all five attempts",
+    "Complete explanation suppressed Why on both versions in all five attempts; identical text is not an improvement",
+    "All 160 conversation HTTP responses were 200; correctness was graded separately",
+    "No benchmark-driven request/scenario reruns; built-in application repair and retry behavior remains enabled and counted"
+  ],
+  "nonpassEvidence": "benchmark-nonpasses.json"
+}

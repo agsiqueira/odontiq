@@ -30,6 +30,8 @@ const positiveMessages = [
   "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
   "I’d like to numb the area and drain the abscess so the pressure can be released. Do you agree?",
   "We need to make a small opening and allow the pus to drain. Are you comfortable proceeding?",
+  "I recommend an I&D for the abscess. Is that okay?",
+  "I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?",
 ] as const;
 
 for (const message of positiveMessages) {
@@ -112,6 +114,7 @@ const classified = await classifyPatientQuestionTrigger({
       assert(messages[0]?.content.includes(draftAgreement));
       return {
         text: JSON.stringify({
+          explanations: {temporary:{explained:false,quote:""},definitive:{required:false,quote:""},confidence:1},
           schemaVersion: 1,
           caseId: "case-03",
           events: {
@@ -185,11 +188,11 @@ assert.equal(whyRepeat.selectedQuestionId, undefined);
 const completeExplanation = applyPatientQuestionClassification({
   caseId: "case-03",
   state: initial.state,
-  classification: classification({
+  classification: {...classification({
     promptDentalFollowUpConfirmed: true,
     drainageTemporaryOrNondefinitiveExplained: true,
     definitiveDentalTreatmentExplained: true,
-  }),
+  }),case3Explanations:{temporary:{messageId:"student-current-id",quote:"Drainage is temporary."},definitive:{messageId:"student-current-id",quote:"You need root canal treatment."}}},
 });
 assert.equal(completeExplanation.selectedQuestionId, undefined);
 

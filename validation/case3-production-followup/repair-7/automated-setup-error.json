@@ -1,0 +1,548 @@
+[
+  {
+    "name": "validateV8PatientRepair",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateV8PatientRepair.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 152,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateV7PatientRepair",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateV7PatientRepairForV8.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 138,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateV6PatientRepair",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateV6PatientRepairForV8.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "next-typegen",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/next/dist/bin/next",
+      "typegen"
+    ],
+    "exitCode": 1,
+    "durationMs": 178,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateV5PatientRepair",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateV5PatientRepairForV8.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 143,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateSharedConversationFollowup",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateSharedConversationFollowup.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 141,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase01FacultyFacts",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase01FacultyFacts.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 131,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase01PlanAcknowledgement",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase01PlanAcknowledgement.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 184,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase03ConsentResponse",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03ConsentResponse.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 140,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientCoreResponses",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientCoreResponses.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 132,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientLanguageGovernance",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientLanguageGovernance.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateAmaraBehavioralRepetition",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateAmaraBehavioralRepetition.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 128,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase04DentistStatus",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase04DentistStatus.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 173,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase04ClosingPhraseConsistency",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase04ClosingPhraseConsistency.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase05LingeringCold",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase05LingeringCold.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 138,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase01PenicillinConsistency",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase01PenicillinConsistency.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 134,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase03AllergyResponseRelevance",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03AllergyResponseRelevance.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 175,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateSharedBackgroundTurn",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateSharedBackgroundTurn.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientBackground",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBackground.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 137,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientBackgroundConflicts",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBackgroundConflicts.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 137,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientTravel",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientTravel.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 217,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientResidence",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientResidence.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 161,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateResidenceRecovery",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateResidenceRecovery.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 127,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientInstructionLeakage",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientInstructionLeakage.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 132,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientOutputIntegrity",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientOutputIntegrity.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 127,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientInitiatedQuestions",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientInitiatedQuestions.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 166,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientBehavioralStages",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBehavioralStages.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 135,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientBehavioralPhraseDiversity",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientBehavioralPhraseDiversity.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 124,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateBehavioralPhraseGovernance",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateBehavioralPhraseGovernance.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 127,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientMessageIntent",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientMessageIntent.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 170,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePatientResponseRetry",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePatientResponseRetry.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 133,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validatePhase5ProgressiveDisclosure",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validatePhase5ProgressiveDisclosure.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 133,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase01Ludwigs",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase01Ludwigs.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 135,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase02SystemicInfection",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase02SystemicInfection.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 172,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase03PeriapicalAbscess",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03PeriapicalAbscess.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 132,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase04NecroticPulp",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase04NecroticPulp.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 129,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCase05IrreversiblePulpitis",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase05IrreversiblePulpitis.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 131,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "validateCanonicalCases",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCanonicalCases.ts",
+      "--strict"
+    ],
+    "exitCode": 1,
+    "durationMs": 165,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "case3-explanation-scope",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03ExplanationScope.ts"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "case3-final-assembly",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "scripts/validateCase03FinalAssembly.mjs"
+    ],
+    "exitCode": 1,
+    "durationMs": 127,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exitCode": 1,
+    "durationMs": 129,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "lint",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/eslint/bin/eslint.js",
+      "src",
+      "scripts/validateCase03ExplanationScope.ts",
+      "scripts/validateCase03FinalAssembly.mjs",
+      "scripts/fixtures/case3QuestionStore.mjs",
+      "scripts/fixtures/serverOnlyStub.mjs",
+      "scripts/liveCase03FollowUp.mjs",
+      "scripts/reviewCase03Live.mjs",
+      "scripts/case3NavigatorCapture.mjs"
+    ],
+    "exitCode": 1,
+    "durationMs": 166,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "build",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/next/dist/bin/next",
+      "build"
+    ],
+    "exitCode": 1,
+    "durationMs": 130,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "navigator-task-model",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "scripts/validateNavigatorTaskModel.mjs"
+    ],
+    "exitCode": 1,
+    "durationMs": 141,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  },
+  {
+    "name": "additional-lint",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "node_modules/eslint/bin/eslint.js",
+      "scripts/validateNavigatorTaskModel.mjs"
+    ],
+    "exitCode": 1,
+    "durationMs": 132,
+    "stdout": "",
+    "stderr": "node:internal/modules/cjs/loader:1459\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:240 - odontIQodontiq.cachecase3-followup-evidencedev-outputredirect-validation.cjs'\r\nRequire stack:\r\n- internal/preload\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\r\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\r\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.require (node:internal/modules/cjs/loader:1556:12)\r\n    at node:internal/modules/cjs/loader:2104:12\r\n    at loadPreloadModules (node:internal/process/pre_execution:698:5)\r\n    at initializeModuleLoaders (node:internal/process/pre_execution:238:5)\r\n    at prepareExecution (node:internal/process/pre_execution:166:5) {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: [ 'internal/preload' ]\r\n}\r\n\r\nNode.js v24.14.1\r\n"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "explanation-scope",
+    "command": [
+      "node",
+      "node_modules/jiti/lib/jiti-cli.mjs",
+      "scripts/validateCase03ExplanationScope.ts"
+    ],
+    "exitCode": 0,
+    "stdout": "Case3 explanation scope: production replay, paraphrases, suppression controls, provenance and once-only checks passed.\n",
+    "stderr": ""
+  },
+  {
+    "name": "final-assembly",
+    "command": [
+      "node",
+      "scripts/validateCase03FinalAssembly.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "Case3 classifier and real final-assembly service: false flags, validation rejection, retry, idempotency, once-only and answered control passed (in-memory repository, no DB).\n",
+    "stderr": ""
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "src",
+      "scripts/liveCase03FollowUp.mjs",
+      "scripts/reviewCase03Live.mjs",
+      "scripts/case3NavigatorCapture.mjs",
+      "scripts/validateCase03ExplanationScope.ts",
+      "scripts/validateCase03FinalAssembly.mjs",
+      "scripts/fixtures/case3QuestionStore.mjs",
+      "scripts/fixtures/serverOnlyStub.mjs"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

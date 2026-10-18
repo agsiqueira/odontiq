@@ -41,11 +41,18 @@ export function applyPatientQuestionClassification(input: {
     detectedEvents,
     emittedQuestionIds: [...previous.emittedQuestionIds],
   };
+  if (input.caseId === "case-03") {
+    // Legacy event booleans are not proof of an explanation. Preserve only
+    // validated witnesses, independently for the two reasons and across turns.
+    next.case3Explanations = { ...previous.case3Explanations, ...input.classification.case3Explanations };
+  }
+  if (input.classification.questionDecisionVerified === false) return { state: next };
   const id = deriveEligibleQuestionId({
     caseId: input.caseId,
     previous,
     currentEvents: input.classification.detectedEvents,
     accumulatedEvents: detectedEvents,
+    case3Explanations: next.case3Explanations,
   });
   if (!id || next.emittedQuestionIds.includes(id)) return { state: next };
   const definition = getPatientQuestion(id);
@@ -70,6 +77,7 @@ function deriveEligibleQuestionId(input: {
   previous: PatientQuestionState;
   currentEvents: PatientQuestionClassification["detectedEvents"];
   accumulatedEvents: PatientQuestionState["detectedEvents"];
+  case3Explanations?: PatientQuestionState["case3Explanations"];
 }): PatientQuestionId | undefined {
   switch (input.caseId) {
     case "case-01":
@@ -91,8 +99,8 @@ function deriveEligibleQuestionId(input: {
       if (
         input.currentEvents.promptDentalFollowUpConfirmed &&
         !(
-          input.currentEvents.drainageTemporaryOrNondefinitiveExplained &&
-          input.currentEvents.definitiveDentalTreatmentExplained
+          input.case3Explanations?.temporary &&
+          input.case3Explanations?.definitive
         )
       ) {
         return "c3-follow-up-why";

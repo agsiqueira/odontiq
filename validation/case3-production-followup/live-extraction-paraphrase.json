@@ -1,0 +1,409 @@
+{
+  "started": "2026-10-18T06:05:38.256Z",
+  "base": "http://localhost:3009",
+  "applicationCommit": "3a7b37b1d33a12db20be90ee7b24261faa4558be",
+  "configuration": {
+    "node": "v24.14.1",
+    "mode": "production",
+    "model": "granite-3.3-8b-instruct",
+    "navigator": "https://api.ai.it.ufl.edu via loopback capture/fault proxy",
+    "database": "isolated loopback PostgreSQL",
+    "auth": "existing Clerk test user, backend test session"
+  },
+  "tests": [
+    {
+      "id": "extraction-paraphrase",
+      "expectedWhy": false,
+      "attempts": [
+        {
+          "label": "consent",
+          "question": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+          "context": [],
+          "requestId": "case3-live-extraction-paraphrase-c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+          "sentAt": "2026-10-18T06:05:38.402Z",
+          "status": 200,
+          "body": {
+            "success": true,
+            "provider": "navigator",
+            "response": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+            "patientMessageId": "7b937998-6979-42f5-ab3b-03664bbbec69",
+            "selectedQuestionId": "c3-follow-up-needed-question",
+            "patientQuestionStateVersion": 1
+          },
+          "persistedState": {
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "version": 1,
+            "state": {
+              "version": 1,
+              "schemaVersion": 1,
+              "detectedEvents": {
+                "patientPainDescribed": false,
+                "antibioticsRecommended": false,
+                "temporaryTreatmentActive": true,
+                "incisionAndDrainageProposed": true,
+                "promptDentalFollowUpConfirmed": false,
+                "antibioticsNotIndicatedExplained": false,
+                "definitiveDentalTreatmentExplained": false,
+                "patientAgreedToIncisionAndDrainage": true,
+                "antibioticsRecommendedAsCurrentPlan": false,
+                "painManagementOrDispositionDiscussed": false,
+                "drainageTemporaryOrNondefinitiveExplained": false,
+                "hospitalAdmissionOrSurgicalManagementDiscussed": false
+              },
+              "emittedQuestionIds": [
+                "c3-follow-up-needed-question"
+              ]
+            },
+            "createdAt": "2026-10-18T06:05:39.255Z",
+            "updatedAt": "2026-10-18T06:05:39.255Z"
+          },
+          "emissions": [
+            {
+              "id": "a06bb10e-1137-4502-a3a2-b85dc04446a2",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-needed-question",
+              "turnId": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+              "emittedAt": "2026-10-18T06:05:39.261Z"
+            }
+          ],
+          "persistedTurn": {
+            "id": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+            "studentMessageId": "c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+            "patientMessageId": "7b937998-6979-42f5-ab3b-03664bbbec69",
+            "responseText": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+            "providerName": "navigator",
+            "selectedQuestionId": "c3-follow-up-needed-question",
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 1,
+            "createdAt": "2026-10-18T06:05:39.258Z"
+          }
+        },
+        {
+          "label": "follow-up-confirmation",
+          "question": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+          "context": [
+            {
+              "id": "c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+              "role": "student",
+              "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            },
+            {
+              "id": "7b937998-6979-42f5-ab3b-03664bbbec69",
+              "role": "patient",
+              "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            }
+          ],
+          "requestId": "case3-live-extraction-paraphrase-6413ecc5-9db0-404f-ab06-bfe2852e1207",
+          "sentAt": "2026-10-18T06:05:39.491Z",
+          "status": 200,
+          "body": {
+            "success": true,
+            "provider": "navigator",
+            "response": "Alright, I understand. Thank you, doctor. Why?",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-6413ecc5-9db0-404f-ab06-bfe2852e1207",
+            "patientMessageId": "68fa8b61-0690-4006-b9af-b7b9859f1c53",
+            "selectedQuestionId": "c3-follow-up-why",
+            "patientQuestionStateVersion": 2
+          },
+          "persistedState": {
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "version": 2,
+            "state": {
+              "version": 2,
+              "schemaVersion": 1,
+              "detectedEvents": {
+                "patientPainDescribed": false,
+                "antibioticsRecommended": false,
+                "temporaryTreatmentActive": true,
+                "incisionAndDrainageProposed": true,
+                "promptDentalFollowUpConfirmed": true,
+                "antibioticsNotIndicatedExplained": false,
+                "definitiveDentalTreatmentExplained": false,
+                "patientAgreedToIncisionAndDrainage": true,
+                "antibioticsRecommendedAsCurrentPlan": false,
+                "painManagementOrDispositionDiscussed": false,
+                "drainageTemporaryOrNondefinitiveExplained": true,
+                "hospitalAdmissionOrSurgicalManagementDiscussed": false
+              },
+              "emittedQuestionIds": [
+                "c3-follow-up-needed-question",
+                "c3-follow-up-why"
+              ]
+            },
+            "createdAt": "2026-10-18T06:05:39.255Z",
+            "updatedAt": "2026-10-18T06:05:40.531Z"
+          },
+          "emissions": [
+            {
+              "id": "a06bb10e-1137-4502-a3a2-b85dc04446a2",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-needed-question",
+              "turnId": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+              "emittedAt": "2026-10-18T06:05:39.261Z"
+            },
+            {
+              "id": "288f6ae9-d61f-4e0f-85e7-b01195bccc0e",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-why",
+              "turnId": "e25564fd-425c-4e93-89e7-ebcb39fbcf2b",
+              "emittedAt": "2026-10-18T06:05:40.532Z"
+            }
+          ],
+          "persistedTurn": {
+            "id": "e25564fd-425c-4e93-89e7-ebcb39fbcf2b",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-6413ecc5-9db0-404f-ab06-bfe2852e1207",
+            "studentMessageId": "6413ecc5-9db0-404f-ab06-bfe2852e1207",
+            "patientMessageId": "68fa8b61-0690-4006-b9af-b7b9859f1c53",
+            "responseText": "Alright, I understand. Thank you, doctor. Why?",
+            "providerName": "navigator",
+            "selectedQuestionId": "c3-follow-up-why",
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 2,
+            "createdAt": "2026-10-18T06:05:40.532Z"
+          }
+        },
+        {
+          "label": "repeated-confirmation",
+          "question": "Yes, you still need to see your dentist promptly.",
+          "context": [
+            {
+              "id": "c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+              "role": "student",
+              "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            },
+            {
+              "id": "7b937998-6979-42f5-ab3b-03664bbbec69",
+              "role": "patient",
+              "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            },
+            {
+              "id": "6413ecc5-9db0-404f-ab06-bfe2852e1207",
+              "role": "student",
+              "text": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+              "timestamp": "2026-10-18T06:05:40.537Z"
+            },
+            {
+              "id": "68fa8b61-0690-4006-b9af-b7b9859f1c53",
+              "role": "patient",
+              "text": "Alright, I understand. Thank you, doctor. Why?",
+              "timestamp": "2026-10-18T06:05:40.537Z"
+            }
+          ],
+          "requestId": "case3-live-extraction-paraphrase-a86ba102-f217-4321-9d39-a27b46a43620",
+          "sentAt": "2026-10-18T06:05:40.546Z",
+          "status": 200,
+          "body": {
+            "success": true,
+            "provider": "navigator",
+            "response": "Alright, I understand. Thank you, doctor.",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-a86ba102-f217-4321-9d39-a27b46a43620",
+            "patientMessageId": "18790f21-22b0-412f-9edb-bf4f83a7d351",
+            "patientQuestionStateVersion": 2
+          },
+          "persistedState": {
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "version": 3,
+            "state": {
+              "version": 2,
+              "schemaVersion": 1,
+              "detectedEvents": {
+                "patientPainDescribed": false,
+                "antibioticsRecommended": false,
+                "temporaryTreatmentActive": true,
+                "incisionAndDrainageProposed": true,
+                "promptDentalFollowUpConfirmed": true,
+                "antibioticsNotIndicatedExplained": false,
+                "definitiveDentalTreatmentExplained": false,
+                "patientAgreedToIncisionAndDrainage": true,
+                "antibioticsRecommendedAsCurrentPlan": false,
+                "painManagementOrDispositionDiscussed": false,
+                "drainageTemporaryOrNondefinitiveExplained": true,
+                "hospitalAdmissionOrSurgicalManagementDiscussed": false
+              },
+              "emittedQuestionIds": [
+                "c3-follow-up-needed-question",
+                "c3-follow-up-why"
+              ]
+            },
+            "createdAt": "2026-10-18T06:05:39.255Z",
+            "updatedAt": "2026-10-18T06:05:41.841Z"
+          },
+          "emissions": [
+            {
+              "id": "a06bb10e-1137-4502-a3a2-b85dc04446a2",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-needed-question",
+              "turnId": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+              "emittedAt": "2026-10-18T06:05:39.261Z"
+            },
+            {
+              "id": "288f6ae9-d61f-4e0f-85e7-b01195bccc0e",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-why",
+              "turnId": "e25564fd-425c-4e93-89e7-ebcb39fbcf2b",
+              "emittedAt": "2026-10-18T06:05:40.532Z"
+            }
+          ],
+          "persistedTurn": {
+            "id": "db77ace7-b8fb-4ac6-96d2-e99f29d1dbe8",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-a86ba102-f217-4321-9d39-a27b46a43620",
+            "studentMessageId": "a86ba102-f217-4321-9d39-a27b46a43620",
+            "patientMessageId": "18790f21-22b0-412f-9edb-bf4f83a7d351",
+            "responseText": "Alright, I understand. Thank you, doctor.",
+            "providerName": "navigator",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 2,
+            "createdAt": "2026-10-18T06:05:41.842Z"
+          }
+        },
+        {
+          "label": "closure",
+          "question": "Thank you for explaining that.",
+          "context": [
+            {
+              "id": "c6ba8f49-eae4-45b5-aeb8-5217ef001a27",
+              "role": "student",
+              "text": "You have an abscess. I recommend an I&D to drain the infection and relieve the pressure. Is that okay?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            },
+            {
+              "id": "7b937998-6979-42f5-ab3b-03664bbbec69",
+              "role": "patient",
+              "text": "Yes, that’s okay. Even with this treatment, do I still need to see my dentist soon?",
+              "timestamp": "2026-10-18T06:05:39.484Z"
+            },
+            {
+              "id": "6413ecc5-9db0-404f-ab06-bfe2852e1207",
+              "role": "student",
+              "text": "Yes, see your dentist promptly. The drainage only eases pressure. Your dentist still has to take that tooth out.",
+              "timestamp": "2026-10-18T06:05:40.537Z"
+            },
+            {
+              "id": "68fa8b61-0690-4006-b9af-b7b9859f1c53",
+              "role": "patient",
+              "text": "Alright, I understand. Thank you, doctor. Why?",
+              "timestamp": "2026-10-18T06:05:40.537Z"
+            },
+            {
+              "id": "a86ba102-f217-4321-9d39-a27b46a43620",
+              "role": "student",
+              "text": "Yes, you still need to see your dentist promptly.",
+              "timestamp": "2026-10-18T06:05:41.848Z"
+            },
+            {
+              "id": "18790f21-22b0-412f-9edb-bf4f83a7d351",
+              "role": "patient",
+              "text": "Alright, I understand. Thank you, doctor.",
+              "timestamp": "2026-10-18T06:05:41.848Z"
+            }
+          ],
+          "requestId": "case3-live-extraction-paraphrase-f066c887-156a-4abd-841c-826366ae0ec0",
+          "sentAt": "2026-10-18T06:05:41.857Z",
+          "status": 200,
+          "body": {
+            "success": true,
+            "provider": "navigator",
+            "response": "You're welcome.",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-f066c887-156a-4abd-841c-826366ae0ec0",
+            "patientMessageId": "119e38fc-bf72-4766-b5a7-f5b85e8beb2a",
+            "patientQuestionStateVersion": 2
+          },
+          "persistedState": {
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "version": 4,
+            "state": {
+              "version": 2,
+              "schemaVersion": 1,
+              "detectedEvents": {
+                "patientPainDescribed": false,
+                "antibioticsRecommended": false,
+                "temporaryTreatmentActive": true,
+                "incisionAndDrainageProposed": true,
+                "promptDentalFollowUpConfirmed": true,
+                "antibioticsNotIndicatedExplained": false,
+                "definitiveDentalTreatmentExplained": false,
+                "patientAgreedToIncisionAndDrainage": true,
+                "antibioticsRecommendedAsCurrentPlan": false,
+                "painManagementOrDispositionDiscussed": false,
+                "drainageTemporaryOrNondefinitiveExplained": true,
+                "hospitalAdmissionOrSurgicalManagementDiscussed": false
+              },
+              "emittedQuestionIds": [
+                "c3-follow-up-needed-question",
+                "c3-follow-up-why"
+              ]
+            },
+            "createdAt": "2026-10-18T06:05:39.255Z",
+            "updatedAt": "2026-10-18T06:05:41.975Z"
+          },
+          "emissions": [
+            {
+              "id": "a06bb10e-1137-4502-a3a2-b85dc04446a2",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-needed-question",
+              "turnId": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+              "emittedAt": "2026-10-18T06:05:39.261Z"
+            },
+            {
+              "id": "288f6ae9-d61f-4e0f-85e7-b01195bccc0e",
+              "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+              "questionId": "c3-follow-up-why",
+              "turnId": "e25564fd-425c-4e93-89e7-ebcb39fbcf2b",
+              "emittedAt": "2026-10-18T06:05:40.532Z"
+            }
+          ],
+          "persistedTurn": {
+            "id": "9dd76528-e2db-4e9e-bec4-04224838ee0c",
+            "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+            "requestId": "case3-live-extraction-paraphrase-f066c887-156a-4abd-841c-826366ae0ec0",
+            "studentMessageId": "f066c887-156a-4abd-841c-826366ae0ec0",
+            "patientMessageId": "119e38fc-bf72-4766-b5a7-f5b85e8beb2a",
+            "responseText": "You're welcome.",
+            "providerName": "navigator",
+            "selectedQuestionId": null,
+            "behaviorIntentId": null,
+            "behaviorAnswerClear": false,
+            "stateVersion": 2,
+            "createdAt": "2026-10-18T06:05:41.976Z"
+          }
+        }
+      ],
+      "outcome": "REVIEW",
+      "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+      "finalEmissions": [
+        {
+          "id": "a06bb10e-1137-4502-a3a2-b85dc04446a2",
+          "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+          "questionId": "c3-follow-up-needed-question",
+          "turnId": "8b05f5f1-a3cb-49c4-8baa-75945530df32",
+          "emittedAt": "2026-10-18T06:05:39.261Z"
+        },
+        {
+          "id": "288f6ae9-d61f-4e0f-85e7-b01195bccc0e",
+          "encounterId": "88297251-7ee1-49f0-bd9c-7a003cd907f7",
+          "questionId": "c3-follow-up-why",
+          "turnId": "e25564fd-425c-4e93-89e7-ebcb39fbcf2b",
+          "emittedAt": "2026-10-18T06:05:40.532Z"
+        }
+      ]
+    }
+  ],
+  "finished": "2026-10-18T06:05:41.999Z"
+}

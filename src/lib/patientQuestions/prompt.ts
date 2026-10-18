@@ -1,3 +1,4 @@
+import { CASE3_EXPLANATION_INSTRUCTIONS } from "./explanationScope";
 import type { ConversationMessage } from "@/lib/conversationEngine";
 import type {
   PatientQuestionEventId,
@@ -126,6 +127,10 @@ Looking/searching for care options is NOT giving a plan. A plan chooses an actua
 A patient answer about county, insurance, payment or preferences is NOT a pain description.
 Do not infer events from the case scenario, intended future care or a patient's appended question.
 Use only the allowed event definitions for this case; never add a field for another case.
+${input.caseId === "case-03" && allowedEvents.includes("promptDentalFollowUpConfirmed") ? `The three follow-up events refer ONLY to student-current. Cite student-current for any true follow-up event.
+Confirming a prompt dentist appointment does not explain definitive treatment, even when earlier messages describe drainage.
+Do not copy an explanation from student-prior or patient messages into a current explanation flag.
+These are current-turn labels, not the final question decision. Application code separately validates each explanation and remembers it across turns. Generic advice to see a dentist is not a definitive-treatment explanation.` : ""}
 ${input.caseId === "case-05" ? `Generic tooth pain without a substantive attribute is NOT patientPainDescribed.
 A substantive pain description may occur in an opening complaint or later answer; never use turn count.
 Example: patient says tooth pain keeps waking me => patientPainDescribed=true.
@@ -141,6 +146,9 @@ Return exactly these top-level fields:
 - events: an object containing every allowed event name exactly once, each with a boolean value
 - confidence: a number from 0 to 1 representing confidence in the event determinations
 - evidence: an array containing only supplied short message aliases that support asserted true events
+${input.caseId === "case-03" ? `- explanations: an independent object with exactly temporary, definitive and confidence. This evidence concerns ONLY student-current, never prior dialogue or patient-draft. It is independent of the allowed trigger event names and must be supplied at every stage.
+${CASE3_EXPLANATION_INSTRUCTIONS.replace('Return only JSON', 'For the explanations field return')}
+Do not place explanation evidence inside events. Return all five ordinary trigger fields AND the explanations field in the same JSON object.` : ""}
 ${input.caseId === "case-04" ? `- currentProviderAct: exactly one of current_plan, history_or_symptom_question, background_screening, care_search_offer, explanation, other
 - currentPlanEvidence: a verbatim quote from student-current that actually gives a current pain-treatment or disposition/follow-up plan, or an empty string if none.
 A current_plan chooses a specific current treatment or follow-up action. An access-screening question, county for referral, acceptable fees or offering to look for options does not choose a plan. A symptom-history question is not a plan. Do not use patient-draft or prior context as the current plan witness.
@@ -160,6 +168,7 @@ ${eventDefinitions}`,
         role,
         content,
       })),
+      ...(input.caseId === "case-03" ? { currentProviderMessage: input.studentMessage } : {}),
     }),
     allowedEvents,
     evidenceAliases: evidence,

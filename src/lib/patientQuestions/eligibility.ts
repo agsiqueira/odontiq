@@ -1,4 +1,5 @@
 import { assessClinicalPlanWitness } from "./clinicalPlan";
+import { currentExplanationWitness } from "./explanationScope";
 import { type PatientDisclosureFact } from "../patientDisclosure";
 import { isPatientConversationClosure } from "../patientConversationClosure";
 import { expressesRequiredFact } from "../patientOutputGuard";
@@ -21,6 +22,20 @@ export function constrainQuestionClassification(input: {
   if (isPatientConversationClosure(input.studentMessage)) {
     for (const event of Object.keys(result.detectedEvents)) result.detectedEvents[event as keyof typeof result.detectedEvents] = false;
     return result;
+  }
+  if (result.caseId === "case-03") {
+    // Follow-up confirmation and the reasons that suppress Why are current-turn
+    // provider events. A prior proposal, patient reply or appointment cannot be
+    // borrowed as an explanation. Keep the independently supported confirmation.
+    const currentProviderEvidence = result.evidenceMessageIds.includes(result.analyzedStudentMessageId)
+      && result.evidenceAliases.includes("student-current");
+    const temporary = currentExplanationWitness(result.case3Explanations, "temporary", input.studentMessage, result.analyzedStudentMessageId);
+    const definitive = currentExplanationWitness(result.case3Explanations, "definitive", input.studentMessage, result.analyzedStudentMessageId);
+    result.case3Explanations = { ...(temporary ? { temporary } : {}), ...(definitive ? { definitive } : {}) };
+    if (result.detectedEvents.promptDentalFollowUpConfirmed && !currentProviderEvidence)
+      result.detectedEvents.promptDentalFollowUpConfirmed = false;
+    result.detectedEvents.drainageTemporaryOrNondefinitiveExplained = Boolean(temporary);
+    result.detectedEvents.definitiveDentalTreatmentExplained = Boolean(definitive);
   }
   // Case 4's prerequisite is a provider act, not a topic. Preserve the model's
   // explicit act and verbatim current-message witness through final assembly.

@@ -1,0 +1,257 @@
+{
+  "method": "Five repetitions per scenario, paired alternating target order, fresh encounters, sequential requests; no retries; API wall time excluding Clerk token acquisition; production V8 vs local candidate is confounded by host/network/DB differences",
+  "percentile": "nearest rank; median is middle or mean of middle pair; every first attempt retained",
+  "targets": {
+    "production-v8": {
+      "outcomes": {
+        "PASS": 5,
+        "FAIL": 10,
+        "ERROR": 0
+      },
+      "apiAttempts": 80,
+      "httpStatus": {
+        "200": 80
+      },
+      "allTurns": {
+        "n": 80,
+        "medianMs": 925,
+        "p95Ms": 1942,
+        "minMs": 100,
+        "maxMs": 2125
+      },
+      "excludingClosure": {
+        "n": 65,
+        "medianMs": 1060,
+        "p95Ms": 2000,
+        "minMs": 600,
+        "maxMs": 2125
+      },
+      "labels": {
+        "opening": {
+          "n": 15,
+          "medianMs": 754,
+          "p95Ms": 1327,
+          "minMs": 600,
+          "maxMs": 1327
+        },
+        "consent": {
+          "n": 15,
+          "medianMs": 861,
+          "p95Ms": 2125,
+          "minMs": 619,
+          "maxMs": 2125
+        },
+        "confirmation": {
+          "n": 15,
+          "medianMs": 1392,
+          "p95Ms": 2033,
+          "minMs": 863,
+          "maxMs": 2033
+        },
+        "repeat": {
+          "n": 15,
+          "medianMs": 1116,
+          "p95Ms": 2055,
+          "minMs": 848,
+          "maxMs": 2055
+        },
+        "closure": {
+          "n": 15,
+          "medianMs": 108,
+          "p95Ms": 240,
+          "minMs": 100,
+          "maxMs": 240
+        },
+        "prior-explanation": {
+          "n": 5,
+          "medianMs": 1223,
+          "p95Ms": 1942,
+          "minMs": 929,
+          "maxMs": 1942
+        }
+      },
+      "observedModelCalls": {
+        "total": 110,
+        "model": "granite-3.3-8b-instruct",
+        "identity": "deployed source and previously verified live configuration",
+        "attribution": "Render metadata within request windows; UUID-only classifier operations lack parent request IDs",
+        "statuses": {
+          "200": 110
+        }
+      }
+    },
+    "local-candidate": {
+      "outcomes": {
+        "PASS": 15,
+        "FAIL": 0,
+        "ERROR": 0
+      },
+      "apiAttempts": 80,
+      "httpStatus": {
+        "200": 80
+      },
+      "allTurns": {
+        "n": 80,
+        "medianMs": 6453,
+        "p95Ms": 13052,
+        "minMs": 16,
+        "maxMs": 15949
+      },
+      "excludingClosure": {
+        "n": 65,
+        "medianMs": 7031,
+        "p95Ms": 13359,
+        "minMs": 262,
+        "maxMs": 15949
+      },
+      "labels": {
+        "opening": {
+          "n": 15,
+          "medianMs": 4655,
+          "p95Ms": 8465,
+          "minMs": 2560,
+          "maxMs": 8465
+        },
+        "consent": {
+          "n": 15,
+          "medianMs": 10353,
+          "p95Ms": 15949,
+          "minMs": 5052,
+          "maxMs": 15949
+        },
+        "confirmation": {
+          "n": 15,
+          "medianMs": 8995,
+          "p95Ms": 13359,
+          "minMs": 3418,
+          "maxMs": 13359
+        },
+        "repeat": {
+          "n": 15,
+          "medianMs": 7061,
+          "p95Ms": 10871,
+          "minMs": 262,
+          "maxMs": 10871
+        },
+        "closure": {
+          "n": 15,
+          "medianMs": 19,
+          "p95Ms": 28,
+          "minMs": 16,
+          "maxMs": 28
+        },
+        "prior-explanation": {
+          "n": 5,
+          "medianMs": 5906,
+          "p95Ms": 7031,
+          "minMs": 3963,
+          "maxMs": 7031
+        }
+      },
+      "capturedModelCalls": {
+        "total": 95,
+        "byModel": {
+          "gpt-oss-120b": 60,
+          "granite-3.3-8b-instruct": 35
+        },
+        "byKind": {
+          "classifier": 60,
+          "generation": 35
+        },
+        "httpNon200": 0
+      }
+    }
+  },
+  "scenarios": {
+    "original": {
+      "production-v8": {
+        "counts": {
+          "PASS": 0,
+          "FAIL": 5,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 25,
+          "medianMs": 1046,
+          "p95Ms": 2000,
+          "minMs": 104,
+          "maxMs": 2055
+        }
+      },
+      "local-candidate": {
+        "counts": {
+          "PASS": 5,
+          "FAIL": 0,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 25,
+          "medianMs": 3632,
+          "p95Ms": 13052,
+          "minMs": 18,
+          "maxMs": 13359
+        }
+      }
+    },
+    "complete": {
+      "production-v8": {
+        "counts": {
+          "PASS": 5,
+          "FAIL": 0,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 25,
+          "medianMs": 770,
+          "p95Ms": 1430,
+          "minMs": 108,
+          "maxMs": 1924
+        }
+      },
+      "local-candidate": {
+        "counts": {
+          "PASS": 5,
+          "FAIL": 0,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 25,
+          "medianMs": 6586,
+          "p95Ms": 11775,
+          "minMs": 19,
+          "maxMs": 13498
+        }
+      }
+    },
+    "split": {
+      "production-v8": {
+        "counts": {
+          "PASS": 0,
+          "FAIL": 5,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 30,
+          "medianMs": 950.5,
+          "p95Ms": 2033,
+          "minMs": 100,
+          "maxMs": 2125
+        }
+      },
+      "local-candidate": {
+        "counts": {
+          "PASS": 5,
+          "FAIL": 0,
+          "ERROR": 0
+        },
+        "latency": {
+          "n": 30,
+          "medianMs": 6768.5,
+          "p95Ms": 15411,
+          "minMs": 16,
+          "maxMs": 15949
+        }
+      }
+    }
+  }
+}

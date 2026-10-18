@@ -1,0 +1,8 @@
+{
+ "candidate":"f7ac54b7e70792c18c39e0e8f71445a27c89d07a",
+ "originalFinalResponseContract":{"PASS":22,"FAIL":0},
+ "semanticEvidenceReview":{"PASS":21,"FAIL":1},
+ "failure":{"scenario":"split-explanations-before-confirmation","turn":"consent","question":"I recommend an I&D for the abscess. Your dentist still needs to remove the affected tooth. Is that okay?","actualTemporaryWitness":"Your dentist still needs to remove the affected tooth.","reason":"The quote establishes definitive treatment, not an explanation of the temporary procedure. Prior valid temporary evidence masked the error in final output. The new source span improperly replaced that prior witness."},
+ "gradingCorrection":"The original response verdict remains preserved. Additional evidence inspection revealed a previously missed semantic invariant failure; no identical final text is counted as behavioral improvement.",
+ "benchmark":"paired-latency.json is an interrupted exploratory run of this candidate; all completed and pending attempts retained, exact owned test session revoked. It is not the final candidate performance result."
+}

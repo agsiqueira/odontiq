@@ -1,0 +1,220 @@
+{
+  "reviewedAt": "2026-10-18T06:57:37.080Z",
+  "rubric": "PR3 user-authorized durable validated explanations; independent witnesses required; historical verdicts preserved",
+  "rows": [
+    {
+      "id": "original-fresh-1",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-2",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-3",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-4",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "original-fresh-5",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "confirmation-paraphrase",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "temporary-only",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "definitive-only",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "definitive-without-temporary",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "complete-explanation",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "complete-paraphrase",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "extraction-paraphrase",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "extraction-equivalent",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "source-treatment-equivalent",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content"
+      ],
+      "findings": []
+    },
+    {
+      "id": "hypothetical-not-explained",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "negated-not-explained",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "question-not-explained",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "prior-explanation-current-confirmation",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "split-explanations-before-confirmation",
+      "contractOutcome": "PASS",
+      "outcome": "PASS",
+      "failures": [],
+      "findings": []
+    },
+    {
+      "id": "failed-classifier-does-not-consume",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "failed-explanation-does-not-consume",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    },
+    {
+      "id": "failed-generation-does-not-consume",
+      "contractOutcome": "FAIL",
+      "outcome": "FAIL",
+      "failures": [
+        "Consent did not emit first follow-up question",
+        "Confirmation eligibility disagrees with expected explanation content",
+        "Expected exactly one Why and none on repeated confirmation"
+      ],
+      "findings": []
+    }
+  ],
+  "counts": {
+    "PASS": 7,
+    "FAIL": 15,
+    "ERROR": 0
+  },
+  "note": "Structural/state checks are not a substitute for semantic review of every exact response. Raw responses and first failures remain in the source ledger."
+}
